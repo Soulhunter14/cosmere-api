@@ -22,6 +22,9 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+Resources/pdfextract
+Resources/parsed
+Resources/CaminaPiedras
 
 # .NET Core
 project.lock.json
