@@ -32,13 +32,29 @@ public static class SeedData
 
     private static void SeedUsers(CosmereContext db)
     {
-        if (db.Users.Any(u => u.Username == "soul")) return;
-        db.Users.Add(new UserEntity
+        var users = new[]
         {
-            Username = "soul",
-            PasswordHash = BCrypt.Net.BCrypt.HashPassword("Soul"),
-            DisplayName = "Soul"
-        });
+            ("soul",        "Soul",        "Soul"),
+            ("albert",      "Albert",      "Albert"),
+            ("guizmo",      "Guizmo",      "Guizmo"),
+            ("kaligula",    "Kaligula",    "Kaligula"),
+            ("hanol",       "Hanol",       "Hanol"),
+            ("raito",       "Raito",       "Raito"),
+            ("rocapequena", "Rocapequena", "Roca Pequena"),
+        };
+
+        foreach (var (username, password, displayName) in users)
+        {
+            if (!db.Users.Any(u => u.Username == username))
+            {
+                db.Users.Add(new UserEntity
+                {
+                    Username = username,
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(password),
+                    DisplayName = displayName
+                });
+            }
+        }
     }
 
     // ── Catalog Options ───────────────────────────────────────────────────────
