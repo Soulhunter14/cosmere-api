@@ -4,6 +4,7 @@ using Services.Campaigns;
 using Services.Catalog;
 using Services.Characters;
 using Services.Matches;
+using Services.Notes;
 using Services.Npcs;
 using Services.Sessions;
 using Services.SideQuests;
@@ -22,6 +23,7 @@ public static class Bootstrap
         services.AddScoped<ISideQuestService, SideQuestService>();
         services.AddScoped<ISessionService, SessionService>();
         services.AddScoped<ICatalogService, CatalogService>();
+        services.AddScoped<INoteService, NoteService>();
         return services;
     }
 }

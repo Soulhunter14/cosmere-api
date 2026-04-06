@@ -13,6 +13,7 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
     public DbSet<SceneEntity> Scenes { get; set; }
     public DbSet<SideQuestEntity> SideQuests { get; set; }
     public DbSet<SessionEntity> Sessions { get; set; }
+    public DbSet<NoteEntity> Notes { get; set; }
     public DbSet<WeaponCatalogEntity> WeaponCatalog { get; set; }
     public DbSet<ArmorCatalogEntity> ArmorCatalog { get; set; }
     public DbSet<GearItemEntity> GearItems { get; set; }
@@ -88,6 +89,25 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
             .HasForeignKey(c => c.OwnerId)
             .OnDelete(DeleteBehavior.SetNull)
             .IsRequired(false);
+
+        // Campaign → Notes
+        modelBuilder.Entity<NoteEntity>()
+            .HasOne(n => n.Campaign)
+            .WithMany()
+            .HasForeignKey(n => n.CampaignId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<NoteEntity>()
+            .HasOne(n => n.FromUser)
+            .WithMany()
+            .HasForeignKey(n => n.FromUserId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<NoteEntity>()
+            .HasOne(n => n.ToUser)
+            .WithMany()
+            .HasForeignKey(n => n.ToUserId)
+            .OnDelete(DeleteBehavior.Restrict);
 
         // InviteCode unique index
         modelBuilder.Entity<CampaignEntity>()
