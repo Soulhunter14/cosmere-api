@@ -166,8 +166,8 @@ public class CharacterService(CosmereContext db) : ICharacterService
         c.Fuerza = r.Fuerza; c.Velocidad = r.Velocidad; c.Intelecto = r.Intelecto;
         c.Voluntad = r.Voluntad; c.Discernimiento = r.Discernimiento; c.Presencia = r.Presencia;
         c.Health = r.Health; c.MaxHealth = r.MaxHealth;
-        c.Concentration = r.Concentration; c.MaxConcentration = r.MaxConcentration;
-        c.Investiture = r.Investiture; c.MaxInvestiture = r.MaxInvestiture; c.Desvio = r.Desvio;
+        c.MaxConcentration = r.MaxConcentration;
+        c.MaxInvestiture = r.MaxInvestiture; c.Desvio = r.Desvio;
         c.MarcosInfusas = r.MarcosInfusas; c.MarcosOpacas = r.MarcosOpacas;
         c.Agilidad = r.Agilidad; c.ArmasLigeras = r.ArmasLigeras; c.ArmasPesadas = r.ArmasPesadas;
         c.Atletismo = r.Atletismo; c.Hurto = r.Hurto; c.Sigilo = r.Sigilo; c.Deduccion = r.Deduccion;
@@ -181,6 +181,7 @@ public class CharacterService(CosmereContext db) : ICharacterService
         c.Proposito = r.Proposito; c.Obstaculo = r.Obstaculo; c.Metas = r.Metas;
         c.Talentos = r.Talentos; c.Apariencia = r.Apariencia; c.Notas = r.Notas; c.Conexiones = r.Conexiones;
         c.Weapons = r.Weapons; c.Armor = r.Armor; c.Spells = r.Spells; c.Equipment = r.Equipment;
+        c.EquippedArmor = r.Armor.Contains(r.EquippedArmor) ? r.EquippedArmor : string.Empty;
     }
 
     internal static CharacterResponse MapToResponse(CharacterEntity c) => new()
@@ -192,8 +193,8 @@ public class CharacterService(CosmereContext db) : ICharacterService
         Fuerza = c.Fuerza, Velocidad = c.Velocidad, Intelecto = c.Intelecto,
         Voluntad = c.Voluntad, Discernimiento = c.Discernimiento, Presencia = c.Presencia,
         Health = c.Health, MaxHealth = c.MaxHealth,
-        Concentration = c.Concentration, MaxConcentration = c.MaxConcentration,
-        Investiture = c.Investiture, MaxInvestiture = c.MaxInvestiture, Desvio = c.Desvio,
+        MaxConcentration = c.MaxConcentration,
+        MaxInvestiture = c.MaxInvestiture, Desvio = c.Desvio,
         MarcosInfusas = c.MarcosInfusas, MarcosOpacas = c.MarcosOpacas,
         Agilidad = c.Agilidad, ArmasLigeras = c.ArmasLigeras, ArmasPesadas = c.ArmasPesadas,
         Atletismo = c.Atletismo, Hurto = c.Hurto, Sigilo = c.Sigilo, Deduccion = c.Deduccion,
@@ -207,6 +208,7 @@ public class CharacterService(CosmereContext db) : ICharacterService
         Proposito = c.Proposito, Obstaculo = c.Obstaculo, Metas = c.Metas, Talentos = c.Talentos,
         Apariencia = c.Apariencia, Notas = c.Notas, Conexiones = c.Conexiones,
         Weapons = c.Weapons, Armor = c.Armor, Spells = c.Spells, Equipment = c.Equipment,
+        EquippedArmor = c.EquippedArmor,
         CreatedAt = c.CreatedAt, UpdatedAt = c.UpdatedAt
     };
 }

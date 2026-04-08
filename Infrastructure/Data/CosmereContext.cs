@@ -10,6 +10,7 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
     public DbSet<CampaignMemberEntity> CampaignMembers { get; set; }
     public DbSet<CharacterEntity> Characters { get; set; }
     public DbSet<GlobalNpcEntity> GlobalNpcs { get; set; }
+    public DbSet<NpcNoteEntity> NpcNotes { get; set; }
     public DbSet<SessionEntity> Sessions { get; set; }
     public DbSet<NoteEntity> Notes { get; set; }
     public DbSet<WeaponCatalogEntity> WeaponCatalog { get; set; }
@@ -50,6 +51,19 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
             .HasOne(c => c.Campaign)
             .WithMany(c => c.Characters)
             .HasForeignKey(c => c.CampaignId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        // Campaign → NpcNotes
+        modelBuilder.Entity<NpcNoteEntity>()
+            .HasOne(n => n.Campaign)
+            .WithMany()
+            .HasForeignKey(n => n.CampaignId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<NpcNoteEntity>()
+            .HasOne(n => n.Author)
+            .WithMany()
+            .HasForeignKey(n => n.AuthorId)
             .OnDelete(DeleteBehavior.Cascade);
 
         // Campaign → Sessions

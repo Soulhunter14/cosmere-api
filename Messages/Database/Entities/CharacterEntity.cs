@@ -30,9 +30,7 @@ public class CharacterEntity
     // Resources
     public int Health { get; set; } = 10;
     public int MaxHealth { get; set; } = 10;
-    public int Concentration { get; set; } = 0;
     public int MaxConcentration { get; set; } = 0;
-    public int Investiture { get; set; } = 0;
     public int MaxInvestiture { get; set; } = 0;
     public int Desvio { get; set; } = 0;
     public int MarcosInfusas { get; set; } = 0;
@@ -81,6 +79,7 @@ public class CharacterEntity
     public List<string> Armor { get; set; } = [];
     public List<string> Spells { get; set; } = [];
     public List<string> Equipment { get; set; } = [];
+    public string EquippedArmor { get; set; } = string.Empty;
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;

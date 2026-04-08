@@ -22,9 +22,7 @@ public class CharacterResponse
 
     public int Health { get; set; }
     public int MaxHealth { get; set; }
-    public int Concentration { get; set; }
     public int MaxConcentration { get; set; }
-    public int Investiture { get; set; }
     public int MaxInvestiture { get; set; }
     public int Desvio { get; set; }
     public int MarcosInfusas { get; set; }
@@ -70,6 +68,7 @@ public class CharacterResponse
     public List<string> Armor { get; set; } = [];
     public List<string> Spells { get; set; } = [];
     public List<string> Equipment { get; set; } = [];
+    public string EquippedArmor { get; set; } = string.Empty;
 
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
