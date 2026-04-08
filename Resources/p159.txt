@@ -1,0 +1,83 @@
+﻿
+--- Página 159 ---
+Plebeyo
+Vigía de los Ojos de Pala
+Los plebeyos son los ciudadanos típicos de cualquier nación
+Rival de rango 2 – Humanoide Mediano
+de Roshar. Son quienes trabajan en el campo, en panaderías,
+Físico Cognitivo Espiritual
+en telares, como escribas o cualquier otra persona que lleva
+fue def vel int def vol dis def pre
+una vida sencilla.
+2 15 3 2 15 3 4 16 2
+Salud: 42 (34 a 50) Concentración: 5 Investidura: 0
+Tácticas del plebeyo
+Movimiento: 9 m
+En combate, un plebeyo generalmente huirá y buscará un lu-
+Sentidos: 6 m (oído)
+gar seguro, a menos que sus seres queridos corran peligro in-
+Habilidades físicas: Atletismo +4, Armamento ligero +5,
+minente. Al verse obligado a luchar, puede recurrir a un Arma
+Armamento pesado +4, Sigilo +6
+improvisada o Distraer para ayudar a un aliado más capaz. En
+las conversaciones, suele ceder ante quienes considera más
+Habilidades cognitivas: Disciplina +6, Intimidación +5
+competentes.
+Habilidades espirituales: Percepción +7, Perspicacia +7
+Idiomas: según la cultura
+acciones
+Plebeyo
+▶ Acometida: Espada larga . Ataque +5, cercanía 1,5 m, un
+Secuaz de rango 1 – Humanoide Mediano
+objetivo. Rasguño: 4 (1d8) por laceración. Impacto: 11 (1d8 + 7)
+Físico Cognitivo Espiritual
+por laceración y el objetivo queda Ralentizado hasta el final del
+fue def vel int def vol dis def pre
+siguiente turno del vigía.
+2 15 3 2 15 3 4 16 2
+2 Abanico de hojas (Cuesta 2 puntos de concentración) .
+Salud: 10 (8 a 12) Concentración: 2 Investidura: 0
+Ataque +5, cercanía 1,5 m, uno o más objetivos elegidos por el
+vigía. Rasguño: 4 (1d8) por laceración. Impacto: 9 (1d8 + 5) por
+Movimiento: 7,5 m
+laceración y el objetivo queda Afligido [1d8 vital] hasta que recu-
+Sentidos: 3 m (vista)
+pera al menos 1 de salud.
+Habilidades físicas: Atletismo +1
+0 Defensa perspicaz . El vigía hace una prueba de Perspicacia
+Habilidades cognitivas: Manufactura +2
+contra la Defensa espiritual de un personaje al que puede sentir
+Habilidades espirituales: Perspicacia +2, Percepción +2
+situado 18 metros o menos. Si la supera, el objetivo no puede
+Idiomas: según la cultura
+obtener ventajas en los ataques contra el vigía durante 1 minuto
+rasgos
+o hasta que el vigía usa esta acción contra otro objetivo.
+Secuaz . El plebeyo es derrotado inmediatamente cuando sufre
+r Huida oportunista . Después de que un enemigo situado a
+una lesión y sus ataques no pueden provocar impactos críticos.
+1,5 metros o menos del vigía le cause un rasguño con un ataque,
+Competencia . El plebeyo tiene experiencia práctica en una
+el vigía hará una Acometida contra el atacante (no requiere ac-
+profesión y obtiene una ventaja en las pruebas de habilidad
+ción) y luego se moverá hasta la mitad de su valor de movimiento
+relacionadas ella.
+sin activar Acometidas reactivas.
+acciones
+▶ Acometida: Arma improvisada . Ataque +1, cercanía 1,5
+Vigía de los Ojos de Pala
+m, un objetivo. Con una Complicación, esta arma improvisada
+Los vigías de los Ojos de Pala son agentes diestros y de
+se rompe. Rasguño: 2 (1d4) por golpe. Impacto: 3 (1d4 + 1)
+toda confianza, que persiguen tercamente los objetivos de la
+por golpe.
+Heraldo Pailiah. Todos ellos lucen una venda de ojos cere-
+r Distraer (Coste: 1 punto de concentración) . Cuando un alia-
+monial de color verde, que denota su rango y que significa
+do hace una prueba contra un enemigo que está en su cercanía,
+que su aguda perspicacia trasciende la necesidad de la vista.
+el plebeyo le confiere una ventaja en esa prueba.
+La verdad, el conocimiento y el sabio liderazgo son su voca-
+ción y empuñan tanto una intuición afinada como una gran
+pericia en combate para obtener resultados.
+Apéndice A: Adversarios 155

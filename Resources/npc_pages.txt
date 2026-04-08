@@ -1,0 +1,2630 @@
+﻿
+--- Página 136 ---
+ADVENTURE VERSION NOI SREV ERUT NEVDA
+apéndice A
+Adversarios
+Este apéndice enumera todos los adversarios que aparecen
+en la aventura Caminapiedras, presentándolos en orden
+Anguila aérea
+alfabético.
+Secuaz de rango 1 – Animal Mediano
+Físico Cognitivo Espiritual
+Anguila aérea
+fue def vel int def vol dis def pre
+2 15 3 0 11 1 3 13 0
+Las anguilas aéreas son criaturas anfibias que se sienten
+tan cómodas en el aire como en el agua. Son largas y del-
+Salud: 12 (9 a 15) Concentración: 3 Investidura: 0
+gadas, con una aleta dorsal que recorre todo su cuerpo,
+Movimiento: 3 m, volar 9 m, nadar 12 m
+acompañada de aletas similares a alas a cada lado. Fuera
+Sentidos: 6 m (vista)
+del agua, se mantienen en el aire gracias a bolsas de gas
+Habilidades físicas: Agilidad +4, Sigilo +4
+hinchables bajo las aletas laterales. La mayoría de las an-
+Habilidades espirituales: Percepción +5, Supervivencia +4
+guilas aéreas adultas alcanzan los 1,20 o 1,50 metros de
+Idiomas: ninguno
+largo, pero las anguilas aéreas mayores, muy raras, pueden
+alcanzar los 2,10 o 2,40 metros. Si bien son carnívoras, se
+rasgos
+alimentan principalmente de pequeños mamíferos terres-
+Sentidos mejorados . La anguila aérea obtiene una ventaja en
+tres y peces, y rara vez atacan a los humanos. Viajan solas
+pruebas basadas en la vista que no son ataques.
+o en manada y cazan desde el aire, vaciando sus bolsas
+Secuaz . La anguila aérea es derrotada inmediatamente cuando
+de gas y lanzándose en picado hacia sus presas. Después
+sufre una lesión y sus ataques no pueden provocar impactos críticos.
+de lanzarse, las anguilas aéreas deben dedicar tiempo a
+Resbaladiza . La anguila aérea no provoca Acometidas reactivas
+digerir a sus presas y rellenar sus bolsas antes de poder
+mientras nada
+volver a volar.
+Las anguilas aéreas suelen estar acompañadas por suer-
+acciones
+tespren en forma de punta de flecha blanca que nadan en
+1 Mordisco . Ataque +4, cercanía 1,5 m, un objetivo. Rasguño: 2
+bancos a su alrededor.
+(1d4) por laceración. Impacto: 6 (1d4 + 4) por laceración y si el ob-
+jetivo es Mediano o menor, la anguila aérea puede gastar 1 punto
+de concentración para envolverse en el cuerpo del objetivo. Si lo
+hace, este queda Retenido, la anguila aérea se aferra al objetivo y
+Las anguilas aéreas se
+no puede usar su Mordisco contra otro objetivo hasta que suelta
+elevan por encima de
+al actual. Como 1, el objetivo Retenido o un personaje situado a
+1,5 metros o menos de la anguila aérea puede realizar una prueba
+los mares de Roshar.
+de Atletismo CD 12 para obligarla a soltar al objetivo si la supera.
+2 Bomba en picado . La anguila aérea se desplaza volando
+hasta 18 metros en dirección a un objetivo que puede sentir en
+tierra y luego usa su Mordisco contra él. Este ataque obtiene una
+ventaja. Después de usar esta acción, no puede volver a volar
+hasta el final de la escena.
+N
+E
+N
+Ö
+K
+T
+Y
+R
+I
+M
+A
+S
+Y
+Y
+E
+N
+E
+E
+W
+S
+C
+M
+N
+E
+B
+132 Apéndice A: Adversarios
+
+--- Página 137 ---
+acciones
+Anguila aérea mayor
+1 Mordisco . Ataque +5, cercanía 1,5 m, un objetivo. Rasguño:
+Rival de rango 1 – Animal Mediano
+3 (1d6) por laceración. Impacto: 9 (1d8 + 5) por laceración y si el
+Físico Cognitivo Espiritual
+objetivo es Mediano o menor, puede gastar 1 punto de concen-
+fue def vel int def vol dis def pre
+tración para envolverse en el cuerpo del objetivo. Si lo hace, este
+3 16 3 0 11 1 3 13 0
+queda Retenido, la anguila aérea se aferra al objetivo y no puede
+Salud: 24 (19 a 29) Concentración: 3 Investidura: 0
+usar su Mordisco contra otro objetivo hasta que suelta al actual.
+Como [1 action], el objetivo Retenido o un personaje situado a 1,5
+Movimiento: 3 m, volar 9 m, nadar 12 m
+metros o menos de la anguila aérea puede realizar una prueba
+Sentidos: 6 m (vista)
+de Atletismo CD 14 para obligarla a soltar al objetivo si la supera.
+Habilidades físicas: Agilidad +5, Atletismo +3, Sigilo +4
+Habilidades espirituales: Percepción +5, Supervivencia +4
+2 Bomba en picado . La anguila aérea mayor se desplaza
+Idiomas: ninguno
+volando hasta 18 metros en dirección a un objetivo que puede
+sentir en tierra, sin activar Acometidas de reacción, y luego usa
+rasgos
+su Mordisco contra él. Este ataque obtiene una ventaja. Después
+Sentidos aumentados . La anguila aérea obtiene una ventaja en
+de usar esta acción, la anguila aérea no puede volver a volar
+pruebas basadas en la vista que no son ataques.
+hasta el final de la escena.
+Resbaladiza . La anguila aérea no provoca Acometidas reactivas
+3 Constreñir . La anguila aérea mayor estruja a un enemigo al
+mientras nada.
+que tiene Retenido, infligiendo 15 (3d6 + 5) de daño por golpe.
+Tácticas de la Anguila aérea
+Una anguila aérea permanece en vuelo y oculta hasta que
+elige un objetivo. Entonces, usa Bomba en picado para mor-
+der y sujetar a su presa. En el raro caso de que una anguila
+aérea mayor ataque a un objetivo más grande, usará Bomba
+en picado y luego Constreñir contra su presa Retenida, con la
+esperanza de obtener una cena fácil.
+En circunstancias normales,
+Z
+T
+I
+las anguilas aéreas nunca
+T
+S
+N
+A
+atacan a los humanos.
+I
+R
+O
+L
+F
+Apéndice A: Adversarios 133
+
+--- Página 138 ---
+Arquero
+Arquero
+Se pueden encontrar arqueros por todo Roshar, desde las fi-
+Secuaz de Rango 1 – Humanoide Mediano
+las de los conflictos militares hasta los grupos más pequeños
+Físico Cognitivo Espiritual
+de mercenarios.
+fue def vel int def vol dis def pre
+2 13 1 2 13 1 2 13 1
+Salud: 12 (9 a 15) Concentración: 3 Investidura: 0
+Desvío: 1 (cuero)
+Movimiento: 7,5 m
+Sentidos: 3 m (vista)
+Habilidades físicas: Agilidad +3, Armamento ligero +3,
+Armamento pesado +4
+Habilidades cognitivas: Disciplina +3
+Habilidades espirituales: Percepción +4, Supervivencia +3
+Idiomas: según la cultura
+rasgos
+Secuaz . El arquero es derrotado inmediatamente cuando sufre
+una lesión y sus ataques no pueden provocar impactos críticos.
+acciones
+▶ Acometida: Cuchillo . Ataque +3, cercanía 1,5 m, un objetivo.
+Rasguño: 2 (1d4) por laceración. Impacto: 5 (1d4 + 3) por
+laceración.
+▶ Acometida: Arco largo . Ataque +4, alcance 45/180 m, un
+objetivo. Rasguño: 3 (1d6) por laceración. Impacto: 7 (1d6 + 4)
+por laceración.
+▷ Apuntar . En el primer turno del arquero de cada escena, si no
+está Sorprendido, puede usar la acción Obtener ventaja como 0.
+↻ Disparo paralizante (Coste: 1 punto de concentración) . Si
+un enemigo al que el arquero puede sentir se mueve mientras
+está a menos de 45 metros, sufre un ataque con el Arco largo.
+Si impacta, el objetivo sufre los efectos correspondientes y
+también queda Inmovilizado hasta el final del siguiente turno
+del arquero.
+Tácticas del arquero
+Los soldados están entrenados para ser eficaces en el campo
+de batalla con sus funciones especializadas. Un arquero com-
+bate a distancia, utilizando Disparo paralizante para conseguir
+superioridad inmediatamente y luego sigue con el Arco largo.
+O
+T
+L
+A
+T
+N
+O
+M
+I
+R
+O
+T
+N
+E
+T
+A
+E
+R
+D
+N
+A
+134 Apéndice A: Adversarios
+
+--- Página 139 ---
+Axies
+Rival de rango 3 – Humanoide Mediano
+Físico Cognitivo Espiritual
+fue def vel int def vol dis def pre
+3 17 4 6 20 4 6 19 3
+Salud: 60 (40 a 72) Concentración: 6 Investidura: 0
+Movimiento: 9 m
+Inmunidades: Afligido, Agotado, Aturdido, Inconsciente
+Sentidos: 15 m (vista)
+Habilidades físicas: Agilidad +6, Hurto +8, Sigilo +8
+Habilidades cognitivas: Deducción +8, Disciplina +5, Saber +10
+Habilidades espirituales: Engaño +5, Percepción +10,
+Perspicacia +10
+Idiomas: todos
+rasgos
+Inmortal . Axies no puede morir por envejecimiento, causas
+naturales ni lesiones físicas. Si su salud se reduce a 0, no
+sufre lesiones y recupera 20 (5d8) de salud al comienzo de su
+siguiente turno.
+Maldición de la amabilidad . Axies tiene que subir la apuesta al
+realizar una prueba de habilidad arriesgada o difícil, y sufre una
+desventaja en todas las tiradas del dado de trama.
+acciones
+▶ Acometida: Sin armas . Ataque +3, cercanía 1,5 m, un objeti-
+vo. Rasguño: 2 (1d4) por golpe. Impacto: 5 (1d4 + 3) por golpe.
+▶ Dato curioso (Cuesta 1 punto de concentración) . Axies elige
+un aliado al que puede influir situado a 6 metros o menos, hace
+una prueba de Saber CD 15 y sube la apuesta. Si la supera, el
+aliado elegido obtiene 2 puntos de concentración. Tanto si la
+O
+prueba tiene éxito como si falla, con , la siguiente prueba de
+C
+ese aliado obtiene una ventaja, y con , su siguiente prueba
+sufre una desventaja.
+2 Cambiar de forma (Cuesta 1 punto de concentración) .
+Axies cambia sus rasgos para ocultar su identidad. Mientras
+está disfrazado de esta manera, cualquier prueba que trata de
+ver a través de su forma alterada sufre una desventaja. Este dis-
+fraz termina cuando Axies lo decide o cuando su concentración
+se reduce a 0.
+Axies
+Axies, el Coleccionista, es un siah aimiano, una misteriosa
+especie de humanoides que antaño poblaron la nación in- Tácticas de Axies
+sular de Aimia. Axies puede cambiar de forma sutilmente,
+A pesar de su inmortalidad, Axies es un erudito que prefiere
+lo que le permite “tatuarse” notas de investigación en su
+evitar cualquier tipo de conflicto físico. Si se ve envuelto en
+propio cuerpo. No envejece y es difícil de matar físicamen-
+una pelea, generalmente no ayuda en nada. Siempre está
+te. Para más información sobre Axies, consulta “Personajes
+dispuesto a aportar su Dato curioso para compartir cono-
+principales” en la introducción de este libro.
+cimientos arcanos sobre los spren, pero es probable que su
+rasgo Maldición de la amabilidad haga que sus palabras pue-
+V
+E
+N
+dan distraer a sus aliados.
+E
+P
+R
+A
+T
+E
+P
+Apéndice A: Adversarios 135
+
+--- Página 140 ---
+Bandido
+Bandido
+Los bandidos son una amenaza constante en las Montañas
+Secuaz de Rango 1 – Humanoide Mediano
+Irreclamadas, y suelen atacar a las caravanas de mercaderes
+Físico Cognitivo Espiritual
+que se dirigen a los campamentos de guerra alezi. Tras el
+fue def vel int def vol dis def pre
+derrocamiento de la Reina Bandida en Rathalas por parte de
+1 12 1 1 11 0 2 13 1
+Ylt, sus ataques se han vuelto más violentos.
+Salud: 11 (8 a 14) Concentración: 2 Investidura: 0
+Desvío: 1 (cuero)
+Tácticas del bandido
+Movimiento: 7,5 m
+Un bandido es un atacante sencillo pero eficaz. Utiliza el
+Sentidos: 3 m (vista)
+Arco corto desde lejos para mermar la salud de los carava-
+Habilidades físicas: Agilidad +3, Armamento ligero +2,
+neros desprevenidos a medida que se acerca. Cuando llega
+Atletismo +3
+a la distancia adecuada, carga contra su objetivo para ob-
+Habilidades cognitivas: Disciplina +1, Intimidación +3
+tener Inercia y luego lo debilita sin piedad con la Maza. Tras
+Habilidades espirituales: Percepción +3, Supervivencia +3
+derrotar a los civiles (y, por lo general, acabar con su vida),
+se marcha con el botín.
+Idiomas: según la cultura
+rasgos
+Secuaz . El bandido es derrotado inmediatamente cuando sufre
+una lesión y sus ataques no pueden provocar impactos críticos.
+Inercia . Si el bandido se mueve al menos 3 metros en línea
+recta hacia un objetivo y luego le ataca con la Maza en ese turno,
+obtiene una ventaja en el ataque.
+acciones
+▶ Acometida: Maza . Ataque +2, cercanía 1,5 m, un objeti-
+vo. Rasguño: 3 (1d6) por golpe. Impacto: 5 (1d6 + 2)
+por golpe.
+▶ Acometida: Arco corto . Ataque +2, alcance
+24/96 m, un objetivo. Rasguño: 3 (1d6) por lacera-
+ción. Impacto: 5 (1d6 + 2) por laceración.
+▶ Derribar (Coste: 1 punto de concentración) . El
+bandido hace una prueba de Atletismo contra un
+objetivo que se encuentra a 1,5 metros o menos,
+enfrentándose a Atletismo o Agilidad, a elección
+del objetivo. Si el bandido supera la prueba, el
+objetivo queda Tumbado.
+)
+A
+H
+C
+E
+R
+E
+D
+(
+I
+R
+A
+A
+S
+O
+K
+A
+H
+I
+T
+T
+N
+A
+;
+)
+A
+D
+R
+E
+I
+U
+Q
+Z
+I
+(
+A
+C
+S
+Ó
+M
+R
+U
+T
+R
+A
+136 Apéndice A: Adversarios
+
+--- Página 141 ---
+Bersérker de la Emoción
+Bersérker de la Emoción
+La Emoción es un fenómeno descrito como una voluntad
+Rival de rango 1 – Humanoide Mediano
+intensa de competir y ganar. Los soldados alezi son las per-
+Físico Cognitivo Espiritual
+sonas que más la buscan y experimentan. Quienes se entre-
+fue def vel int def vol dis def pre
+gan a la Emoción en el fragor de la batalla son bersérkers de
+2 14 2 1 14 3 2 14 2
+la Emoción.
+Salud: 22 (18 a 26) Concentración: 5 Investidura: 0
+Tácticas del bersérker de la Emoción
+Desvío: 2 (coraza)
+Movimiento: 7,5 m
+Un bersérker de la Emoción se lanza a la batalla sin inmutar-
+Sentidos: 3 m (vista)
+se ante enemigos formidables y estructuras defensivas.
+Habilidades físicas: Atletismo +4, Armamento ligero +3,
+Lucha con una ferocidad alarmante, utilizando Furia
+Armamento pesado +4
+bersérker y Golpe con escudo para abrirse camino, sin
+Habilidades cognitivas: Intimidación +5
+preocuparse de si hay amigos o enemigos a su paso.
+Habilidades espirituales: Liderazgo +3, Percepción +4
+Idiomas: según la cultura
+rasgos
+C
+Emoción infecciosa . Cuando un enemigo saca en una prueba
+de ataque contra el bersérker, dicho enemigo obtiene una
+bonificación de +3 a esa tirada de d20. Independientemente
+de si el ataque impacta o falla, si hay otros personajes situados
+a 1,5 metros o menos del bersérker, el enemigo debe elegir uno.
+El ataque del enemigo también provoca un rasguño al personaje
+elegido (sin gastar concentración).
+acciones
+1 Acometida: Espada larga . Ataque +4, cercanía 1,5 m, un
+objetivo. Rasguño: 4 (1d8) por laceración. Impacto: 8 (1d8 + 4)
+por laceración y, si el objetivo está Tumbado, sufre 4 (1d8) de
+daño adicional.
+1 Acometida: Daga . Ataque +3, alcance 6/18 m, un objetivo.
+Rasguño: 2 (1d4) por laceración. Impacto: 5 (1d4+ 3) por laceración.
+1 Golpe con escudo (Coste: 1 punto de concentración) . El ber-
+sérker hace una prueba de Atletismo contra la Defensa física de
+un personaje Grande o de menor tamaño situado a 1,5 metros o
+menos, dejándolo Tumbado si tiene éxito.
+0 Furia bersérker (Coste: 2 puntos de concentración) . La
+Emoción impulsa al bersérker. Su siguiente Acometida tiene
+como objetivo a todos los personajes que están a 1,5 metros o
+menos e inflige 3 (1d6) de daño adicional con un impacto.
+r Arremeter (Coste: 1 punto de concentración) . Después de
+ser atacado por un enemigo situado a 1,5 metros o menos, el
+bersérker inflige 4 (1d8) de daño por laceración al atacante.
+Apéndice A: Adversarios 137
+
+--- Página 142 ---
+Cantor en forma de guerra
+Rival de rango 1 – Humanoide Mediano
+Físico Cognitivo Espiritual
+fue def vel int def vol dis def pre
+3 14 1 1 13 2 2 14 2
+Salud: 24 (20 a 28) Concentración: 4 Investidura: 0
+Desvío: 2 (caparazón)
+Movimiento: 7,5 m
+Sentidos: 3 m (vista)
+Cantor en forma de guerra
+Habilidades físicas: Atletismo +5, Armamento ligero +3,
+En los brutales enfrentamientos en las Llanuras Quebradas,
+Armamento pesado +4
+la mayoría de los cantores han adoptado la forma de guerra,
+Habilidades cognitivas: Disciplina +5, Intimidación +4
+una forma de cantor adecuada para la brutalidad del com-
+Habilidades espirituales: Liderazgo +4, Percepción +4
+bate. Los cantores en forma de guerra tienen una gruesa
+Idiomas: según la cultura
+armadura de caparazón y su fuerza y resistencia son mayores
+rasgos
+que las de los cantores en otras formas.
+Caparazón externo . La forma de guerra puede emplear su capa-
+razón como escudo, lo que le permite usar la acción Prevenirse.
+Tácticas del cantor en forma de guerra
+Experiencia marcial . El cantor en forma de guerra puede usar la
+Un cantor de forma de guerra es un combatiente de una
+acción Acometida dos veces en su turno.
+eficacia brutal, especialmente cuando lucha junto a su pareja
+acciones
+de guerra, que tiene la misma forma. Las parejas de guerra
+1 Acometida: Hacha . Ataque +4, cercanía 1,5 m, un objetivo. El
+se lanzan sobre un objetivo usando Coordinación en pareja
+cantor en forma de guerra puede saltar hasta 3 metros antes o
+de guerra y Experiencia marcial, lanzando varios ataques de
+Hacha contra un solo enemigo para abatirle. En un aprieto,
+después de realizar este ataque. Rasguño: 3 (1d6) por laceración.
+confía en su Caparazón externo para protegerse de una em-
+Impacto: 7 (1d6+ 4) por laceración.
+bestida mientras su pareja de guerra sigue luchando.
+1 Acometida: Arco corto . Ataque +3, alcance 24/96 m, un
+S
+O
+objetivo. Rasguño: 3 (1d6) por laceración. Impacto: 6 (1d6 + 3)
+T
+N
+por laceración.
+A
+S
+O
+r Coordinación en pareja de guerra (Coste: 1 punto de
+D
+R
+concentración) . Después de que otro cantor en forma de guerra
+A
+U
+D
+situado a 1,5 metros o menos realice la acción Moverse, este
+E
+O
+cantor se desplazará hasta su valor de movimiento, terminándo-
+I
+A
+C
+lo a 1,5 metros del primero.
+138 Apéndice A: Adversarios
+
+--- Página 143 ---
+Cantor en forma diestra
+Cantor en forma diestra
+La forma diestra es una forma de cantor adecuada para ta-
+Rival de Rango 1 – Humanoide Mediano
+reas que requieren concentración, velocidad y destreza. Los
+Físico Cognitivo Espiritual
+cantores en esta forma son ágiles, carecen de caparazón y
+fue def vel int def vol dis def pre
+tienen mechones de pelo más largos.
+1 14 3 3 15 2 3 15 2
+Salud: 20 (15 a 25) Concentración: 4 Investidura: 0
+Movimiento: 9 m
+Sentidos: 6 m (vista)
+Habilidades físicas: Agilidad +5, Armamento ligero +5, Sigilo +4
+Habilidades cognitivas: Deducción +5, Manufactura
++4, Saber +4
+Habilidades espirituales: Percepción +5, Supervivencia +5
+Idiomas: según la cultura
+rasgos
+Velocidad letal . Al inicio de cada escena, si el cantor en forma
+diestra no está Sorprendido, puede jugar un turno rápido antes
+que cualquier otro personaje (no cuenta como su turno en
+esta ronda).
+Sentidos agudos . El cantor en forma diestra puede gastar 1
+punto de concentración para obtener una ventaja en una prueba
+de Percepción (no requiere acción).
+acciones
+▶ Acometida: Maza . Ataque +5, cercanía 1,5 m, un objetivo.
+Rasguño: 3 (1d6) por golpe. Impacto: 8 (1d6 + 5) por golpe.
+▶ Acometida: Arco corto . Ataque +5, alcance 24/96 m, un
+objetivo. Rasguño: 3 (1d6) por laceración. Impacto: 8 (1d6 + 5)
+por laceración.
+2 Objetivo marcado (Coste: 2 puntos de concentración) . El
+cantor en forma diestra elige a un enemigo al que puede sentir
+situado a 36 metros o menos. Durante 1 hora, cuando impacta
+al enemigo elegido con un ataque con arma, inflige 3 (1d6) de
+daño adicional. Además, obtiene una ventaja en las pruebas de
+Supervivencia para rastrear a dicho enemigo.
+Tácticas del cantor en forma diestra
+Aunque los cantores en forma diestra rara vez luchan, son
+expertos en rastrear criaturas y reconocer el terreno, y pue-
+den explotar fácilmente la debilidad de un enemigo usando la
+acción Objetivo marcado.
+A
+N
+I
+T
+S
+O
+K
+A
+N
+A
+L
+T
+E
+V
+S
+Apéndice A: Adversarios 139
+
+--- Página 144 ---
+Caparácaro
+Caparácaro
+Los caparácaros son crustáceos que viven en grandes nidos,
+Secuaz de Rango 1 – Animal Pequeño
+cooperando para mantener su colonia. Recuerdan a cangre-
+Físico Cognitivo Espiritual
+jos del tamaño de un plato con un caparazón rocoso, pero al
+fue def vel int def vol dis def pre
+retraer sus extremidades se camuflan casi perfectamente con
+2 13 1 0 11 1 2 12 0
+las rocas. Los diferentes caparácaros desempeñan funciones
+Salud: 9 (7 a 11) Concentración: 3 Investidura: 0
+especializadas para mantener su nido, desde los obreros de
+caparazón ligero hasta los soldados que lo tienen afilado. Un
+Movimiento: 7,5 m
+individuo en solitario representa poca amenaza y su exoes-
+Sentidos: 3 m (vista)
+queleto contiene carne suculenta, pero un grupo puede ser
+Habilidades físicas: Sigilo +3
+una trampa mortal, por lo que los cazadores marcan los ni-
+Habilidades espirituales: Percepción +4
+dos sospechosos con pintura roja brillante como advertencia
+Idiomas: ninguno
+para que nadie se acerque.
+rasgos
+Secuaz . El caparácaro es derrotado inmediatamente cuando
+Tácticas del caparácaro
+sufre una lesión y sus ataques no pueden provocar impactos
+Un caparácaro utiliza su Camuflaje agreste para esconderse
+críticos.
+entre las rocas. Cuando los viajeros desafortunados se topan
+Camuflaje agreste . Un caparácaro al que no se ha detectado
+con un nido de caparácaros, estos crustáceos atacan rápida-
+obtiene una ventaja en las pruebas de ataque. Mientras está
+mente con las Pinzas, obteniendo una ventaja en su primer
+inmóvil, es casi indistinguible de una roca normal, por lo que
+ataque. Entonces utilizan Frenesí voraz para abrumar a los
+identificarle requiere superar una prueba de Supervivencia CD
+intrusos, desgarrando la ropa y la armadura con sus fuertes
+pinzas, mientras se unen para aprovechar su número.
+14. Esta prueba sufre una desventaja cuando el caparácaro está
+Se basan en la sorpresa, así que intenta colocar a varios
+a cubierto o en un área donde el sentido principal de quien lo
+ocultos en una misma zona para mantener a los PJs en alerta.
+busca está ofuscado.
+acciones
+2 Acometida: Pinzas . Ataque +2, cercanía 1,5 m, un objetivo.
+Rasguño: 2 (1d4) por laceración. Impacto: 4 (1d4 + 2) por
+laceración.
+Notas de Shallan
+2 Frenesí voraz (Coste: 2 puntos de concentra-
+sobre la ecología
+ción) . El caparácaro se enfurece contra un enemigo
+situado a 1,5 metros o menos. Todos los caparáca-
+de los chulls.
+)
+ros situados a 1,5 metros o menos del objetivo pue-
+A
+H
+C
+den usar ↻ para unirse al frenesí. El objetivo
+E
+R
+E
+sufre 2 (1d4) de daño por laceración por
+D
+(
+cada caparácaro enfurecido.
+T
+R
+E
+V
+L
+A
+C
+N
+E
+R
+R
+A
+D
+Y
+Y
+E
+N
+E
+E
+W
+S
+C
+M
+N
+E
+B
+;
+)
+A
+D
+R
+E
+I
+U
+Q
+Z
+I
+(
+Y
+E
+B
+B
+A
+B
+M
+O
+T
+140 Apéndice A: Adversarios
+
+--- Página 145 ---
+
+--- Página 146 ---
+Chull
+Presentes en todo Roshar, los chulls son una especie de
+crustáceos enormes que se utilizan comúnmente como
+animales de carga. Estas dóciles criaturas tienen un gran
+caparazón poroso y parecido a una piedra, en el que pueden
+retraer la cabeza y las gruesas patas. Tienen antenas en for-
+ma de látigo y dos grandes garras.
+Espinablanca joven
+En poder del comerciante thayleño Ryvlk en los campa-
+mentos de guerra, estos jóvenes espinablancas pueden ser
+Chull
+pequeños, pero aun así son peligrosos. Estos depredadores
+Rival de Rango 1 – Animal Grande o Enorme
+del tamaño de una persona reciben su nombre por la hilera
+Físico Cognitivo Espiritual
+de púas que recorre el caparazón de su espalda. Se mueven
+fue def vel int def vol dis def pre
+sobre dos patas y tienen dos pares de brazos con largas y
+4 14 0 0 11 1 3 13 0
+afiladas garras.
+Salud: 30 (23 a 37) Concentración: 3 Investidura: 0
+Desvío: 2 (caparazón)
+Tácticas del espinablanca
+Movimiento: 3 m
+Enojado por estar en cautiverio, un espinablanca joven ataca
+Sentidos: 6 m (vista)
+a cualquiera que se le pone por delante. Prefiere cargar contra
+Habilidades físicas: Atletismo +6
+los oponentes débiles y distantes, infligiendo daño adicional
+Habilidades espirituales: Percepción +5
+con sus Colmillos empalantes y luego les abre en canal con
+Idiomas: ninguno
+sus Garras para que se desangren. No teme salir de la cerca-
+rasgos
+nía de un enemigo para cargar contra otro con sus Colmillos
+empalantes para infligir más daño adicional. Cuando una
+Bestia de carga . La capacidad de carga del chull es de 750 kg.
+pelea se tuerce, usa Liberar feromonas para embotar a sus
+Avance lento . El chull solo puede usar una acción de Moverse
+oponentes y poder retirarse o abrumarles.
+por turno.
+acciones
+▶ Acometida: Pinza . Ataque +4, cercanía 3 m, un objetivo.
+Rasguño: 3 (1d6) por laceración. Impacto: 9 (1d6 + 6) por
+laceración.
+2 Retraerse . El chull retrae la cabeza y las patas
+para defenderse hasta el inicio de su siguiente
+turno. Mientras está retraído, su valor de
+desvío aumenta a 6 y puede usar la acción
+Prevenirse como si estuviera a cubierto. Al
+inicio de sus turnos, puede gastar 1 punto de
+concentración para mantener este efecto
+durante una ronda adicional.
+Tácticas del chull
+Los chulls son extremadamente dóciles y casi siempre se
+refugian en su caparazón con Retraerse durante el combate.
+Aun así, cuando alguien los empuja al límite, usan sus grandes
+garras para defenderse; un pellizco de chull duele.
+Z
+T
+I
+T
+S
+N
+A
+I
+R
+O
+L
+F
+142 Apéndice A: Adversarios
+
+--- Página 147 ---
+Experto
+Espinablanca joven
+Los expertos son aquellos que destacan entre la multitud
+Rival de Rango 1 –Animal Mediano
+por sus competencias o convicciones únicas. Pueden ser lí-
+Físico Cognitivo Espiritual
+deres locales, jóvenes con iniciativa o comerciantes astutos.
+fue def vel int def vol dis def pre
+2 15 3 0 12 2 3 13 0
+Tácticas del experto
+Salud: 23 (19 a 27) Concentración: 4 Investidura: 0
+Un experto suele luchar con cautela con su Arma improvisa-
+Desvío: 1 (caparazón)
+da, pero a diferencia de la mayoría de los plebeyos, podría
+Movimiento: 12 m
+dirigirse directamente hacia el peligro si cree en una causa o
+Sentidos: 6 m (olfato)
+ve una oportunidad de gloria. En las conversaciones, es más
+Habilidades físicas: Agilidad +6, Atletismo +5, Sigilo +6
+probable que se mantenga firme que los plebeyos. Si un PJ de-
+Habilidades cognitivas: Intimidación +4
+safía las creencias de un experto, es habitual que este gaste
+Habilidades espirituales: Percepción +5, Supervivencia +5
+concentración para resistirse a la influencia. Si se le provoca lo
+suficiente, puede usar Contraargumento y Rostro severo para
+Idiomas: ninguno
+ponerle las cosas difíciles a su oponente.
+rasgos
+Sentidos mejorados . El espinablanca obtiene una ventaja en las
+pruebas que no son de ataque y se basan en el olfato.
+Experto
+Caparazón espinoso . Si un enemigo situado a 1,5 metros o
+Rival de Rango 1 – Humanoide Mediano
+menos causa un rasguño al espinablanca con un ataque de arma,
+Físico Cognitivo Espiritual
+sufre 3 (1d6) por laceración.
+fue def vel int def vol dis def pre
+acciones
+1 12 1 1 13 2 2 13 1
+1 Acometida: Garras . Ataque +5, cercanía 1,5 m, un objetivo.
+Salud: 18 (15 a 21) Concentración: 4 Investidura: 0
+Rasguño: 3 (1d6) por laceración. Impacto: 8 (1d6 + 5) por lace-
+Movimiento: 7,5 m
+ración y el espinablanca podrá gastar 1 punto de concentración
+Sentidos: 3 m (vista)
+para que el objetivo quede Afligido [1d4 vital] hasta que recupere
+Habilidades físicas: Agilidad +2, Armamento ligero +2,
+al menos 1 punto de salud.
+Atletismo +2
+1 Colmillos empalantes . Ataque +5, cercanía 1,5 m, un obje-
+Habilidades cognitivas: Deducción +2, Manufactura +2
+tivo. Rasguño: 4 (1d8) por golpe. Impacto: 9 (1d8 + 5) por golpe.
+Habilidades espirituales: Engaño +2, Percepción +4,
+Si el espinablanca impacta con este ataque inmediatamente
+Perspicacia +4, Persuasión +3
+después de moverse al menos 4,5 metros, el objetivo sufre 4
+Idiomas: según la cultura
+(1d8) de daño por golpe adicional y debe superar una prueba de
+rasgos
+Atletismo CD 12 o queda Tumbado.
+Competencia . El experto tiene experiencia práctica en una
+2 Liberar feromonas (Coste: 1 punto de concentración) . El
+profesión y obtiene una ventaja en las pruebas de habilidad
+espinablanca libera unas feromonas nauseabundas. Todos
+relacionadas con ella.
+los personajes que no sean espinablancas y se encuentren a 3
+Rostro severo . Después de que el experto gaste concentración
+metros o menos deberán superar una prueba de Disciplina CD
+para resistirse a la influencia de un personaje, este perderá 1
+13 o quedarán Aturdidos hasta el final del siguiente turno del
+punto de concentración.
+espinablanca.
+acciones
+▶ Acometida: Arma improvisada . Ataque +2, cercanía 1,5 m, un
+objetivo. Con una Complicación, esta arma improvisada se rompe.
+Rasguño: 2 (1d4) por golpe. Impacto: 3 (1d4 + 2) por golpe.
+▶ Contraargumento . Durante una conversación, el experto
+realiza una prueba de Persuasión contra la Defensa espiritual
+de un personaje. Si la supera, el objetivo pierde 3 puntos de
+concentración.
+Apéndice A: Adversarios 143
+
+--- Página 148 ---
+Fanático
+Fanático
+Cuando Ylt derrocó a la Reina Bandida, exigió que todos sus
+Secuaz de rango 1 – Humanoide Mediano
+súbditos de Rathalas le juraran lealtad. Algunos lo hicieron
+Físico Cognitivo Espiritual
+a regañadientes, pero otros lo siguieron con fervor fanático.
+fue def vel int def vol dis def pre
+Estos fanáticos susurran que ha sido bendecido por los mis-
+3 14 1 1 13 2 1 13 2
+mísimos Heraldos y que, obedeciendo sus órdenes, pueden
+Salud: 12 (9 a 14) Concentración: 4 Investidura: 0
+obtener poderes increíbles como los suyos. Vistiendo túnicas
+verdes y portando espadas, normalmente prohibidas para los
+Movimiento: 7,5 m
+ciudadanos de a pie de Alezkar, los fanáticos veneran a Ylt y
+Sentidos: 3 m (vista)
+obedecen sus órdenes sin rechistar.
+Habilidades físicas: Agilidad +3, Armamento pesado +4
+Habilidades cognitivas: Intimidación +3
+Habilidades espirituales: Percepción +3, Supervivencia +3
+Tácticas del fanático
+Idiomas: según la cultura
+Un fanático lucha con exaltación. Él y sus compañeros se api-
+rasgos
+ñan alrededor de los enemigos y atacan imprudentemente con
+la Espada larga. A medida que la batalla se vuelve más violenta
+Secuaz . El fanático es derrotado inmediatamente cuando sufre
+y sus compañeros se enfurecen, un fanático usa Inspirar fana-
+una lesión y sus ataques no pueden provocar impactos críticos.
+tismo para fomentar el coraje y la brutalidad ante la muerte.
+Exaltación . Las pruebas de Intimidación y Persuasión contra el
+fanático sufren una desventaja.
+Enajenación . Mientras al fanático le queda la mitad de su salud
+o menos, no puede usar la acción Prevenirse, pero su valor de
+movimiento aumenta en 3 metros y sus tiradas de daño obtie-
+nen una ventaja.
+acciones
+1 Acometida: Espada larga . Ataque +4, cercanía 1,5 m, un
+objetivo. Rasguño: 4 (1d8) por laceración. Impacto: 8 (1d8 + 4)
+por laceración.
+1 Prevenirse . El fanático alza su escudo y los ataques en
+su contra sufren una desventaja hasta el inicio de su si-
+guiente turno.
+1 Inspirar fanatismo (Coste: 1 punto de concentración) . El
+fanático inspira a un aliado al que pueda influir situado a 6 me-
+tros o menos. Ese aliado puede usar inmediatamente la acción
+Acometida como r .
+A
+C
+S
+Ó
+M
+R
+U
+T
+R
+A
+144 Apéndice A: Adversarios
+
+--- Página 149 ---
+está acción si está en una zona oscura o si ha usado su acción
+Fanático en forma sombría
+gratuita Manifestarse en este turno. Rasguño: 4 (1d8) espiritual.
+Rival de rango 1 – Humanoide Mediano
+Impacto: 10 (1d8 + 6) espiritual.
+Físico Cognitivo Espiritual
+1 Arrastre por las sombras (Coste: 1 punto de Investidura) . El
+fue def vel int def vol dis def pre
+fanático en forma sombría se transporta a una zona oscura que
+1 15 4 1 14 3 2 14 2
+puede sentir a 9 metros o menos. Este movimiento no activa
+Salud: 22 (17 a 27) Concentración: 5 Investidura: 4
+Acometidas reactivas.
+Cuando el fanático en forma sombría usa esta acción, tam-
+Movimiento: 9 m
+bién puede transportar a un personaje que está a 1,5 metros
+Sentidos: 3 m (vista); 12 m en la oscuridad
+o menos. Si el objetivo es reticente, debe superar primero
+Habilidades físicas: Agilidad +5, Armamento ligero +6, Sigilo +7
+una prueba de Agilidad contra su Defensa física. Un objetivo
+Habilidades cognitivas: Intimidación +5
+transportado aparece en un espacio desocupado a elección del
+Habilidades espirituales: Percepción +4, Supervivencia +4
+fanático en forma sombría, a 1,5 metros o menos del lugar al que
+Idiomas: canto del alba, iriali
+él mismo se ha transportado.
+rasgos
+1 Canto de duelo (Coste: 1 punto de Investidura) . El fanático
+Incorporal . Todos los ataques contra la Defensa física del
+en forma sombría hace una prueba de Intimidación contra la
+fanático en forma sombría sufren una desventaja. Además,
+Defensa espiritual de un objetivo al que puede influir situado 9
+ignora el terreno difícil y puede atravesar cualquier hueco con un
+metros o menos. Si la supera, el objetivo queda Agotado [−1].
+diámetro de 15 cm o más.
+0 Manifestarse . El fanático en forma sombría se fusiona
+acciones
+brevemente en una forma más sólida. Hasta el comienzo de su si-
+1 Acometida: Garras sombrías . Ataque +6, cercanía 1,5 m,
+guiente turno, no puede beneficiarse de su rasgo Incorporal, pero
+un objetivo. El fanático en forma sombría solo puede usar
+puede usar la acción Acometida incluso en zonas muy iluminadas.
+Fanático en forma sombría
+Atrapados entre los Reinos Físico y Cognitivo, los regios en
+forma sombría fueron el resultado de un plan de Ba-Ado-
+Mishram para crear poderosos asesinos. Cada uno de ellos
+vinculó un sombraspren a su gema corazón, y se volvieron
+incorporales; sin embargo, de manera inesperada, sus gemas
+corazón permanecieron en estado sólido. Desde entonces,
+los cantores en forma sombría han estado divididos entre
+dos reinos y han soportado milenios de tormento.
+Cuando la tormenta eterna reavivó estas gemas corazón
+con la luz del vacío, los fanáticos de Ylt reconocieron el po-
+tencial de la forma sombría como arma. Los fanáticos en
+forma sombría se crean cuando un humano se atraviesa el
+corazón con una gema en forma sombría afilada, lo que per-
+mite que su cuerpo sea consumido. Los seres resultantes son
+impulsados por los recuerdos fragmentados y las pasiones de
+los antiguos cantores. Cantan colectivamente un canto fú-
+nebre condenatorio mientras se lanzan a aniquilar humanos,
+especialmente a los Caballeros Radiantes.
+Tácticas del fanático en forma sombría
+Un fanático en forma sombría es un enemigo escurridizo que
+aprovecha el posicionamiento táctico. Mueve a sus oponentes
+a zonas de sombra usando Arrastre por las sombras y luego
+se abalanza sobre ellos para atacar con las Garras sombrías.
+O
+I
+R
+Desgasta a las amenazas importantes con su Canto de duelo
+E
+S
+y, si necesita posicionarse o escapar, recurre a Incorporal y
+A
+S
+I
+Arrastre por las sombras.
+L
+E
+Apéndice A: Adversarios 145
+
+--- Página 150 ---
+Guardia
+Guardia
+Los guardias son una pieza clave en la defensa de núcleos
+Rival de Rango 1 – Humanoide Mediano
+de civilización y personas poderosas en todo Roshar. En una
+Físico Cognitivo Espiritual
+ciudad, los guardias disciplinados y bien entrenados pueden
+fue def vel int def vol dis def pre
+marcar la diferencia entre el orden y la anarquía. Para la per-
+3 14 1 1 13 2 3 14 1
+sona a la que protegen, pueden suponer la diferencia entre
+Salud: 24 (19 a 29) Concentración: 4 Investidura: 0
+la vida y la muerte.
+Desvío: 2 (cota de malla)
+Movimiento: 7,5 m
+Sentidos: 6 m (vista)
+Habilidades físicas: Armamento pesado +5, Atletismo +5
+Habilidades cognitivas: Disciplina +4, Intimidación +4
+Habilidades espirituales: Percepción +5, Perspicacia +4
+Idiomas: según la cultura
+rasgos
+¡A las armas! Después de que un guardia sienta a un enemigo
+situado a 18 metros o menos que falle una prueba de Sigilo, o
+después de que el guardia supere una prueba para detectar
+a ese enemigo, este guardia y todos los guardias aliados que
+puedan sentir a ese enemigo obtendrán el estado Concentrado
+hasta el final de la escena.
+acciones
+▶ Acometida: Lanza larga . Ataque +5, cercanía 1,5 m, un ob-
+jetivo. Rasguño: 4 (1d8) por laceración. Impacto: 9 (1d8 + 5) por
+laceración y el guardia puede gastar 1 punto de concentración
+para dejar Tumbado al objetivo.
+2 Debilitar (Coste: 2 puntos de concentración) . Ataque
++5, cercanía 1,5 m, un objetivo Tumbado. Rasguño: 9 (2d8) por
+golpe. Impacto: 14 (2d8 + 5) por golpe.
+▷ Coordinación (Coste: 1 punto de concentración) . Después
+de que el guardia impacta con un ataque, elige a un aliado
+al que pueda influir, instándolo a avanzar. Ese aliado puede
+Destrabarse inmediatamente (no requiere acción).
+Tácticas del guardia
+Un guardia incapacita rápidamente a sus objetivos, especial-
+mente a aquellos a los que descubre cometiendo un delito. Su
+objetivo es derribar a un oponente con su Lanza larga y luego
+usar Debilitar para infligir un daño significativo. Cuando está
+acompañado por otros guardias o aliados, usa Coordinación,
+organizándose de forma rápida y eficiente para someter a los
+oponentes.
+N
+A
+M
+Z
+T
+L
+O
+H
+M
+I
+A
+H
+C
+L
+E
+O
+J
+146 Apéndice A: Adversarios
+
+--- Página 151 ---
+Kaiana
+Kaiana es una humana reshi y una Vigilante de la Verdad
+vinculada a la brumaspren Horizontes-Siempre-A-La-
+Deriva. Es la aprendiz de Ylt y se ha aliado con Pailiah. Para
+quienes se ganan su lealtad, es una aliada muy útil. Para más
+información sobre Kaiana, consulta la sección “Personajes
+principales” en la introducción de este libro.
+Tácticas de Kaiana
+Kaiana es particularmente hábil con la Progresión y la usa
+para apoyar a sus aliados: su Crecimiento espontáneo disuade
+a los atacantes y, cuando es necesario, cura a sus aliados con
+Regeneración. Mientras tanto, su Ilusión distractiva puede
+proteger a los aliados más débiles o heridos. Cuando no nece-
+sita reaccionar y proteger (o cuando se queda sin Investidura),
+usa Aliada apasionada para darles una oportunidad a sus alia-
+dos y su Cuchillo para obstaculizar a los enemigos.
+Kaiana
+1 Ilusión distractiva (Coste: 1 punto de Investidura) . Kaiana
+Rival de rango 1 – Humanoide Mediano
+crea un duplicado ilusorio de sí misma o de un aliado al que
+Físico Cognitivo Espiritual
+puede sentir situado a 9 metros o menos. La ilusión aparece
+fue def vel int def vol dis def pre
+en el espacio de ese personaje y se mueve con él. Los ataques
+1 14 3 1 13 2 3 16 3
+contra ese personaje sufren una desventaja y no pueden ras-
+guñar. La ilusión termina si un ataque contra ese personaje
+Salud: 34 (28 a 40) Concentración: 4 Investidura: 5
+falla o al final de la escena.
+Movimiento: 9 m
+2 Destello desorientador (Coste: 1 punto de Investidura) .
+Sentidos: 6 m (vista)
+Kaiana proyecta luz, realizando una prueba de Iluminación
+Habilidades físicas: Agilidad +5, Armamento ligero +5
+contra la Defensa cognitiva de los personajes situados a 1,5
+Habilidades cognitivas: Disciplina +4, Medicina +3
+metros o menos. Aquellos contra los que tiene éxito quedan
+Habilidades espirituales: Liderazgo +4, Perspicacia +5,
+Desorientados hasta el final de su siguiente turno.
+Percepción +5
+2 Regeneración (Coste: 1 punto de Investidura) . Kaiana se
+Habilidades de potencia: Iluminación +4 (1 grado), Progresión
+restablece 8 (1d6 + 5) de salud a sí misma o a otro personaje
++5 (2 grados)
+al que pueda tocar.
+Idiomas: alezi, reshi
+0 Revitalizar (Coste: 1 punto de Investidura) . Kaiana recupera
+rasgos
+4 (1d6+1) de salud. Puede usar esta acción gratuita incluso si
+está Inconsciente o no puede realizar acciones.
+Aliada apasionada (Coste: 1 punto de concentración) . Cuando
+r Crecimiento espontáneo (Coste: 1 punto de Investidura) .
+Kaiana usa con éxito la acción Obtener ventaja, podrá elegir un
+Antes de que Kaiana o un aliado al que pueda sentir situado
+aliado al que pueda influir situado a 18 metros o menos. Ese
+a 6 metros o menos sufra el impacto de un ataque cuerpo a
+aliado también obtendrá una ventaja en la siguiente prueba que
+cuerpo, lanzará una semilla de su bolsa y hará una prueba de
+realice contra el objetivo de Kaiana.
+Progresión contra la Defensa física del atacante. Si la supera,
+Huida rápida . Una vez por escena, Kaiana puede usar Destello
+una planta crece rápidamente alrededor del objetivo; este
+desorientador como 0. A continuación, obtiene inmediata-
+queda Inmovilizado (lo que añade una desventaja a su prue-
+mente 2 que solo puede usar con las acciones Interactuar,
+ba, pudiendo hacer que el impacto falle) y no puede realizar
+Destrabarse y Moverse.
+Acometidas reactivas hasta el final de su siguiente turno.
+acciones
+acciones del cuchillo de raysio
+1 Acometida: Cuchillo . Ataque +5, cercanía 1,5 m, o alcance
+Si Kaiana empuña el cuchillo de raysio en el capítulo 4, obtiene la
+6/18 m, un objetivo. Rasguño: 1 (1d4) por laceración. Impacto:
+siguiente acción:
+U
+7 (1d4 + 5) por laceración y Kaiana podrá gastar 1 punto de
+I
+L
+1 Acometida: Cuchillo de raysio . Kaiana hace un ataque con
+A
+concentración para hacer que el objetivo quede Ralentizado
+C
+Cuchillo (no requiere acción). Si impacta, el objetivo también
+I
+S
+hasta el final del siguiente turno del objetivo.
+S
+pierde 1 punto de Investidura.
+E
+J
+Apéndice A: Adversarios 147
+
+--- Página 152 ---
+Khornak
+Tácticas del khornak
+Los khornaks, que acechan en las aguas poco profundas de
+Un khornak es un enemigo temible y mortal que primero
+las zonas costeras, son cazadores brutales que viven en ma-
+atrapa a su presa y la despedaza con la Mandíbula aplastan-
+nadas, pero incluso uno solo puede ser aterrador. Son más
+te, reforzada por Emboscada aterradora. Mientras sujeta al
+peligrosos a corta distancia, donde revelan su arma princi-
+enemigo con las mandíbulas, repele a cualquier otro oponente
+pal: una enorme mandíbula con múltiples hileras de dientes
+con Coletazo y Arrastra a la presa para darse un festín. Si su
+afilados, diseñados para desgarrar a sus víctimas, aferrarse presa logra escapar, el khornak persigue a sus enemigos con
+Depredador implacable.
+a su piel y arrastrarlas al agua. Los khornak tienen extre-
+midades palmeadas protegidas por un caparazón, además
+de ocho ojos brillantes y colas aserradas. El vínculo de los
+khornak con los spren les permite deslizarse fácilmente por
+el agua en busca de presas.
+Khornak
+Rival de Rango 1 – Animal Mediano
+acciones
+Físico Cognitivo Espiritual
+▶ Acometida: Mandíbula aplastante . Ataque +5, cercanía 1,5
+fue def vel int def vol dis def pre
+m, un objetivo. Rasguño: 4 (1d8) por golpe. Impacto: 9 (1d8 + 5)
+3 15 2 0 12 2 2 12 0
+por golpe y el objetivo queda Retenido por la mandíbula del khor-
+nak mientras este permanece a 1,5 metros o menos. El khornak
+Salud: 26 (20 a 32) Concentración: 4 Investidura: 0
+podrá gastar 1 punto de concentración para hacer que el objetivo
+Desvío: 2 (caparazón)
+quede también Afligido [1d4 vital] hasta que recupere al menos
+Movimiento: 7,5 m, nadar 9 m
+1 punto de salud. Con 2, el objetivo o un personaje que le tenga
+Sentidos: 3 m (vista)
+en su cercanía podrá realizar una prueba de Agilidad o Atletismo
+Habilidades físicas: Atletismo +5, Sigilo +4
+CD 16, que eliminará el estado Retenido si tiene éxito.
+Habilidades espirituales: Percepción +3, Supervivencia +4
+Mientras el khornak sujeta a este objetivo, no puede llevar a
+Idiomas: ninguno
+cabo más ataques de Mandíbula aplastante.
+rasgos
+▶ Coletazo . Ataque +5, cercanía 1,5 m, un objetivo. El khornak
+Emboscada aterradora . Al comienzo de cada escena, todos los
+puede gastar hasta 2 puntos de concentración para afectar
+enemigos que puedan sentir al khornak deberán realizar una
+a ese mismo número de objetivos adicionales con el mismo
+prueba de Disciplina CD 14 (no requiere acción). Los que fallen
+ataque. Rasguño: 3 (1d6) por golpe. Impacto: 8 (1d6 + 5) por
+no podrán jugar un turno rápido en esta ronda a menos que
+golpe y el objetivo debe superar una prueba de Atletismo CD 15 o
+gasten 2 puntos de concentración.
+queda Tumbado.
+Y
+E
+B
+B
+Depredador implacable . Cuando el khornak ataca e impacta a
+▶ Arrastrar . El khornak se mueve hasta 4,5 metros en
+A
+B
+un enemigo que aún no ha llevado a cabo ningún turno en esta
+cualquier dirección mientras arrastra consigo a un enemigo que
+M
+O
+ronda, el ataque inflige 1d8 de daño adicional.
+tiene Retenido.
+T
+148 Apéndice A: Adversarios
+
+--- Página 153 ---
+Ladrón
+En las sombras de los centros urbanos de Roshar se escon-
+den muchos delincuentes comunes, incluidos ladrones y
+cortabolsas.
+Tácticas del ladrón
+Un ladrón suele iniciar el combate con Desorientar y, si in-
+tenta evitar una pelea, lo sigue inmediatamente con Hurtar
+para apropiarse del botín. En una pelea, Desorientar también
+resulta útil para que la Daga sea más letal. Si le acorralan, usa
+Resbaladizo para huir.
+acciones
+Ladrón
+1 Acometida: Daga . Ataque +5, cercanía 1,5 m o alcance 6/18
+Rival de rango 1 – Humanoide Mediano
+m, un objetivo. Rasguño: 2 (1d4) por laceración. Impacto: 7 (1d4
+Físico Cognitivo Espiritual
++ 5) por laceración.
+fue def vel int def vol dis def pre
+Con un impacto o rasguño, si el objetivo está Desorientado,
+1 14 3 2 13 1 2 13 1
+sufre 2 (1d4) de daño por laceración adicional.
+Salud: 20 (16 a 24) Concentración: 3 Investidura: 0
+1 Desorientar (Coste: 1 punto de concentración) . El ladrón
+Desvío: 1 (cuero)
+arroja arena, harina u otra sustancia similar para distraer y
+Movimiento: 9 m
+confundir. Todos los enemigos que se encuentren a 3 metros o
+Sentidos: 6 m (vista)
+menos deben superar una prueba de Agilidad CD 13 o quedan
+Habilidades físicas: Agilidad +5, Armamento ligero +5, Hurto
+Desorientados hasta el final del siguiente turno del ladrón.
++5, Sigilo +5
+2 Hurtar (Coste: 2 puntos de concentración) . El ladrón in-
+Habilidades espirituales: Engaño +3, Percepción +4,
+tenta fisgonear entre las pertenencias de un humanoide situado
+Persuasión +3
+a 1,5 metros o menos, llevando a cabo una prueba de Hurto
+Idiomas: según la cultura
+enfrentada contra la Percepción del objetivo. Si el objetivo está
+rasgos
+Desorientado, sufre una desventaja en la prueba. Si el ladrón
+supera la prueba, puede robar hasta 50 marcos o un objeto que
+Manos rápidas . Cuando un personaje provoca una Acometida
+el objetivo no está empuñando ni lleva puesto.
+reactiva del ladrón, este puede usar Hurtar como r en su lugar
+(sin gastar concentración para una Acometida reactiva).
+r Resbaladizo . Después de que un enemigo finalice una
+acción de Moverse a 1,5 metros o menos del ladrón, este podrá
+Desaparecer . Al final del turno del ladrón, si tiene cobertura o
+usar la acción Destrabarse como r . Si el ladrón finaliza este
+se encuentra en una zona en la que el sentido principal de su
+movimiento con cobertura o en un área donde el sentido prin-
+enemigo está ofuscado, puede efectuar una prueba de Sigilo
+cipal de un enemigo está ofuscado, los enemigos afectados por
+(no requiere acción) con ventaja contra la Defensa espiritual
+E
+esa cobertura o con sentidos ofuscados sufren una desventaja
+de todos los enemigos que puedan sentirle. Cualquier enemigo
+P
+M
+en los ataques contra el ladrón hasta el final del siguiente
+contra el que tenga éxito perderá su rastro y ya no podrá sentirle
+U
+L
+K
+turno de este.
+hasta que ataque o lleve a cabo otra acción que le exponga.
+E
+L
+E
+N
+Apéndice A: Adversarios 149
+
+--- Página 154 ---
+Lancero Maestro lancero
+Los lanceros son combatientes rasos que aparecen en in- En las naciones Vorin, donde a los soldados rasos se les pro-
+numerables ejércitos, desde los alezi que compiten por las híbe usar espadas, el dominio de la lanza se ha convertido
+Llanuras Quebradas hasta las fuerzas emuli que luchan en la en un arte.
+Guerra de los Ochenta.
+Tácticas del maestro lancero
+Tácticas del lancero
+Un maestro lancero es un combatiente hábil y cuidadoso, que
+juega turnos lentos para poder realizar múltiples ataques.
+Un lancero derriba a sus enemigos con Golpe con escudo y
+Dedica su concentración a dejar a sus objetivos Tumbados
+luego ataca con la Lanza corta. Puede utilizar Tácticas milita-
+con la Lanza larga y luego prioriza atacarles para aprovechar
+res para frenar a los objetivos que huyen o para reforzar a sus
+su rasgo Sin piedad. Si un enemigo se acerca demasiado,
+compañeros, según el desarrollo de la batalla.
+intenta alejarlo con una Patada y preparar un ataque para
+Atravesar. Cuando disponga de una acción adicional, la gasta-
+rá en Obtener ventaja o Prevenirse, según esté a la ofensiva o
+a la defensiva.
+I
+R
+A
+A
+S
+O
+K
+A
+H
+I
+T
+T
+N
+A
+150 Apéndice A: Adversarios
+
+--- Página 155 ---
+Lancero Maestro lancero
+Secuaz de Rango 1 – Humanoide Mediano Rival de rango 2 – Humanoide Mediano
+Físico Cognitivo Espiritual Físico Cognitivo Espiritual
+fue def vel int def vol dis def pre fue def vel int def vol dis def pre
+2 14 2 1 12 1 2 13 1 3 15 2 1 14 3 2 13 1
+Salud: 14 (11 a 17) Concentración: 3 Investidura: 0 Salud: 38 (30 a 46) Concentración: 5 Investidura: 0
+Desvío: 2 (malla) Desvío: 1 (cuero)
+Movimiento: 7,5 m Movimiento: 7,5 m
+Sentidos: 3 m (vista) Sentidos: 3 m (vista)
+Habilidades físicas: Atletismo +4, Armamento ligero +3, Habilidades físicas: Agilidad +5, Atletismo +4, Armamento
+Armamento pesado +4 ligero +4, Armamento pesado +6
+Habilidades cognitivas: Disciplina +2, Intimidación +3 Habilidades cognitivas: Disciplina +4, Intimidación +4
+Habilidades espirituales: Percepción +4 Habilidades espirituales: Percepción +5, Supervivencia +3
+Idiomas: según la cultura Idiomas: según la cultura
+rasgos rasgos
+Secuaz . El lancero es derrotado inmediatamente cuando sufre Floritura defensiva . El maestro lancero puede blandir su lanza
+una lesión y sus ataques no pueden provocar impactos críticos. larga a la defensiva, lo que le permite usar la acción Prevenirse
+como si tuviera un escudo.
+Adiestramiento marcial . Al inicio de cada escena, si el lancero
+tiene su escudo y no está Sorprendido, obtiene los beneficios de Sin piedad . El maestro lancero obtiene una ventaja adicional en
+la acción Prevenirse hasta el inicio de su primer turno. los ataques contra objetivos Tumbados.
+Tácticas militares . Una vez por ronda, el lancero puede gastar 1
+acciones
+punto de concentración adicional para usar la reacción Ayudar o
+▶ Acometida: Lanza larga . Ataque +6, cercanía 3 m, un obje-
+Acometida reactiva sin usar su r .
+tivo. Rasguño: 4 (1d8) por laceración. Impacto: 10 (1d8 + 6) por
+acciones laceración y el maestro lancero puede gastar 1 punto de concen-
+tración para hacer que el objetivo quede Tumbado.
+▶ Acometida: Lanza corta . Ataque +3, cercanía 1,5 m, un ob-
+jetivo. Rasguño: 4 (1d8) por laceración. Impacto: 7 (1d8 + 3) por ▶ Patada . Ataque +4, cercanía 1,5 m, un objetivo. Rasguño: 2
+laceración y, si el objetivo está Tumbado, sufre 4 (1d8) de daño (1d4) por golpe. Impacto: 6 (1d4 + 4) por golpe y si el objetivo es
+por laceración adicional. Mediano o menor, el maestro lancero puede gastar 1 punto de
+concentración para empujarlo 1,5 metros.
+▶ Acometida: Arco corto . Ataque +3, alcance 24/96 m, un
+objetivo. Rasguño: 3 (1d6) por laceración. Impacto: 6 (1d6 + 3) 2 Atravesar (Coste: 1 punto de concentración) . Ataque +6,
+por laceración. cercanía 3 m, hasta dos objetivos a 1,5 m o menos el uno del
+otro. Rasguño: 4 (1d8) por laceración. Impacto: 10 (1d8 + 6) por
+▶ Golpe con escudo . El lancero hace una prueba de Atletismo
+laceración.
+contra la Defensa física del objetivo, dejándolo Tumbado si
+tiene éxito.
+Apéndice A: Adversarios 151
+
+--- Página 156 ---
+I
+K
+S
+E
+2 Potencia de División (Coste: 2 puntos de Investidura) .
+H
+Lilinum
+S
+A
+Lilinum elige un objeto Grande (3 metros) situado a 9 metros o
+R
+Rival de rango 2 – Humanoide Mediano
+F
+menos que nadie lleva puesto o sostiene, o una parte de dicho
+D
+I
+Físico Cognitivo Espiritual
+V
+objeto, destruyéndolo a su antojo.
+A
+D
+fue def vel int def vol dis def pre
+Según la naturaleza de la destrucción, esta puede causar un
+Y
+2 16 4 6 19 3 4 15 1
+A
+N
+efecto como oscurecer el área con polvo, abrir un pasadizo en
+I
+T
+S
+Salud: 41 (34 a 48) Concentración: 5 Investidura: 6
+una pared, provocar un desprendimiento de rocas que causa
+O
+K
+daño o aplica el estado Retenido, o electrificar el área con una
+A
+Desvío: 2 (caparazón)
+N
+A
+explosión de luz y calor que aplica el estado Desorientado.
+L
+Movimiento: 9 m
+T
+Todos los personajes potencialmente afectados por esa destruc-
+E
+V
+Sentidos: 6 m (vista)
+S
+ción deben efectuar una prueba de Agilidad o Atletismo CD 15. Si
+Habilidades físicas: Agilidad +7, Atletismo +5,
+falla, un personaje sufre 13 (3d8) de daño de un tipo apropiado,
+Armamento ligero +7
+o se le aplica algún otro efecto que se ajuste a la destrucción. Si
+Habilidades cognitivas: Disciplina +7, Intimidación +7
+supera la prueba, no sufre daño ni ningún otro efecto.
+Habilidades espirituales: Percepción +6, Supervivencia +6
+0 Revitalizar (Coste: 1 punto de Investidura) . Lilinum recupera
+Habilidades de potencia: División +9 (3 grados)
+5 (1d6 + 2) de salud. Puede usar esta acción gratuita incluso
+Idiomas: alezi, canto del alba, iriali
+si está Inconsciente o no puede usar acciones por cualquier
+rasgos
+otro motivo.
+Agresión instintiva . Lilinum no tiene que gastar puntos de con-
+r Descomponer arma . Después de que Lilinum sufra un
+centración para usar Acometidas reactivas.
+impacto o un rasguño por un arma que no esté Investida, podrá
+Mortaja de polvo . Cuando un enemigo lleva a cabo un ataque
+convertir esa arma en polvo.
+a distancia u otra prueba contra Lilinum desde al menos 7,5
+oportunidades y complicaciones
+metros de distancia, si esa prueba se basa en la vista o el olfato,
+Las opciones siguientes están disponibles cuando un enemigo
+sufre una desventaja.
+obtiene una Oportunidad o sufre una Complicación durante una
+acciones
+escena con Lilinum:
+1 Acometida: Garras . Ataque +7, cercanía 1,5 m, un objetivo.
+◆
+O
+Oportunidad . Un enemigo podrá gastar para desactivar el
+Rasguño: 2 (1d4) por laceración. Impacto: 9 (1d4 + 7) por lacera-
+rasgo Mortaja de polvo de Lilinum y evitar que use sus acciones
+ción y 3 (1d6) espiritual.
+Potencia de División y Revitalizar hasta el final del siguiente
+1 Acometida: Hoja esquirlada . Ataque +7, cercanía 1,5 m, un
+turno de Lilinum.
+objetivo. Rasguño: 8 (2d8) espiritual. Impacto: 15 (2d8 + 7)
+◆
+O
+Complicación . La DJ podrá gastar de la prueba de un
+espiritual.
+enemigo para que Lilinum use las Garras o la Hoja esquirlada
+como r. Cuando lo hace, obtiene una ventaja en esa prueba
+2 Toque devastador . Ataque +9, cercanía 1,5 m, un objetivo.
+de ataque.
+Rasguño: 10 (3d6) espiritual. Impacto: 19 (3d6 + 9) espiritual.
+Lilinum, la Devastadora
+Tácticas de Lilinum
+Lilinum es una Devastadora que empuña una hoja esquir-
+Lilinum lucha con temeridad juguetona, enfrentándose a sus
+lada y una de las dos ejecutoras Fusionadas enviadas para
+enemigos para sembrar la destrucción y el caos, sin preocu-
+subyugar a Rall Elorim. Su caparazón presenta una vorá-
+parse por su seguridad ni la de sus aliados. En combate, usa la
+gine de rayas blancas y rojas, y su estilo de lucha refleja su
+Hoja esquirlada, seguida del Toque devastador o las Garras. Si
+preferencia por el caos. Dada su condición de Devastadora,
+un grupo de personajes se encuentra dentro de una construc-
+Lilinum es experta en la potencia de División; se deleita en ción, usa Potencia de División para derrumbarla sobre ellos.
+convertir objetos y construcciones en escombros sin esfuer-
+zo, dejando una constante estela de fino polvo a su paso.
+Lilinum y su hoja
+esquirlada en el Hueco
+Funesto
+152 Apéndice A: Adversarios
+
+--- Página 157 ---
+
+--- Página 158 ---
+Ojos de Pala, Agente de los
+Tácticas de los Ojos de Pala
+Los agentes de los Ojos de Pala son astutos y metódicos.
+Un agente de los Ojos de Pala usa su intuición perfeccionada
+Al servicio de la Heraldo del Conocimiento, buscan las
+para desenvolverse en el campo de batalla. Identifica la mayor
+verdades fundamentales del universo y se aseguran de que
+amenaza y usa Defensa perspicaz contra ese objetivo para
+quienes ostentan el poder comparten la verdad con su pue-
+evitar ataques mortales. Trabajando juntos, los agentes que
+blo. Mediante el razonamiento y una perspicacia penetrante,
+prefieren el arco corto y los que prefieren la espada pueden
+derribar a sus oponentes y reducir su concentración. Si es
+estos agentes aplican una gran agudeza al enfrentarse a otros
+necesario, los agentes se coordinan con sus aliados, usando
+en combate.
+Huida rápida para retirarse cuando un compañero les da una
+oportunidad.
+Un vigía de los Ojos de Pala usa Defensa perspicaz al inicio
+Agente de los Ojos de Pala
+o en medio del combate para obtener ventaja sobre un opo-
+Rival de rango 1 – Humanoide Mediano
+nente. La Huida oportunista le permite retirarse tras un paso
+Físico Cognitivo Espiritual
+en falso del enemigo y luego moverse a una posición oportuna
+fue def vel int def vol dis def pre
+para golpear a varios enemigos con un Abanico de hojas.
+2 14 2 1 13 2 3 15 2
+Salud: 25 (20 a 30) Concentración: 4 Investidura: 0
+Movimiento: 7,5 m
+Sentidos: 6 m (vista)
+Habilidades físicas: Armamento ligero +4, Atletismo
++4, Sigilo +4
+Habilidades cognitivas: Disciplina +4
+Habilidades espirituales: Percepción +5, Perspicacia +5
+Idiomas: según la cultura
+acciones
+1 Acometida: Espada lateral . Ataque +4, cercanía 1,5 m, un
+objetivo. Rasguño: 3 (1d6) por laceración. Impacto: 7
+(1d6 + 4) por laceración y, si el objetivo está Tumbado,
+pierde 1 punto de concentración.
+1 Acometida: Arco corto . Ataque +4, alcance
+24/96 m, un objetivo. Rasguño: 3 (1d6) por laceración.
+Impacto: 7 (1d6 + 4) por laceración y el agente podrá
+gastar 1 punto de concentración para hacer que el
+objetivo quede Tumbado.
+0 Defensa perspicaz . El agente hace una prueba
+de Perspicacia contra la Defensa espiritual de un perso-
+naje al que puede sentir situado 18 metros o menos. Si
+la supera, el objetivo no puede obtener ventajas en los
+ataques contra el agente durante 1 minuto o hasta que el
+agente usa esta acción contra otro objetivo.
+r Aprovechar la brecha . Después de que un enemigo
+situado a 1,5 metros o menos del agente le rasguñe con
+un ataque, el agente hará una Acometida reactiva (no
+requiere acción) contra ese enemigo como si hubiera
+abandonado voluntariamente su cercanía.
+AGENTE (ARRIBA)
+Y VIGÍA (ABAJO)
+r Huida rápida . Después de que un aliado situado a
+DE LOS OJOS DE PALA
+1,5 metros o menos del agente impacte a un objetivo con
+E
+un ataque cuerpo a cuerpo, el agente se moverá hasta la
+L
+A
+S
+mitad de su valor de movimiento sin activar Acometidas
+A
+C
+reactivas.
+A
+I
+R
+E
+L
+A
+V
+154 Apéndice A: Adversarios
+
+--- Página 159 ---
+Plebeyo
+Vigía de los Ojos de Pala
+Los plebeyos son los ciudadanos típicos de cualquier nación
+Rival de rango 2 – Humanoide Mediano
+de Roshar. Son quienes trabajan en el campo, en panaderías,
+Físico Cognitivo Espiritual
+en telares, como escribas o cualquier otra persona que lleva
+fue def vel int def vol dis def pre
+una vida sencilla.
+2 15 3 2 15 3 4 16 2
+Salud: 42 (34 a 50) Concentración: 5 Investidura: 0
+Tácticas del plebeyo
+Movimiento: 9 m
+En combate, un plebeyo generalmente huirá y buscará un lu-
+Sentidos: 6 m (oído)
+gar seguro, a menos que sus seres queridos corran peligro in-
+Habilidades físicas: Atletismo +4, Armamento ligero +5,
+minente. Al verse obligado a luchar, puede recurrir a un Arma
+Armamento pesado +4, Sigilo +6
+improvisada o Distraer para ayudar a un aliado más capaz. En
+las conversaciones, suele ceder ante quienes considera más
+Habilidades cognitivas: Disciplina +6, Intimidación +5
+competentes.
+Habilidades espirituales: Percepción +7, Perspicacia +7
+Idiomas: según la cultura
+acciones
+Plebeyo
+▶ Acometida: Espada larga . Ataque +5, cercanía 1,5 m, un
+Secuaz de rango 1 – Humanoide Mediano
+objetivo. Rasguño: 4 (1d8) por laceración. Impacto: 11 (1d8 + 7)
+Físico Cognitivo Espiritual
+por laceración y el objetivo queda Ralentizado hasta el final del
+fue def vel int def vol dis def pre
+siguiente turno del vigía.
+2 15 3 2 15 3 4 16 2
+2 Abanico de hojas (Cuesta 2 puntos de concentración) .
+Salud: 10 (8 a 12) Concentración: 2 Investidura: 0
+Ataque +5, cercanía 1,5 m, uno o más objetivos elegidos por el
+vigía. Rasguño: 4 (1d8) por laceración. Impacto: 9 (1d8 + 5) por
+Movimiento: 7,5 m
+laceración y el objetivo queda Afligido [1d8 vital] hasta que recu-
+Sentidos: 3 m (vista)
+pera al menos 1 de salud.
+Habilidades físicas: Atletismo +1
+0 Defensa perspicaz . El vigía hace una prueba de Perspicacia
+Habilidades cognitivas: Manufactura +2
+contra la Defensa espiritual de un personaje al que puede sentir
+Habilidades espirituales: Perspicacia +2, Percepción +2
+situado 18 metros o menos. Si la supera, el objetivo no puede
+Idiomas: según la cultura
+obtener ventajas en los ataques contra el vigía durante 1 minuto
+rasgos
+o hasta que el vigía usa esta acción contra otro objetivo.
+Secuaz . El plebeyo es derrotado inmediatamente cuando sufre
+r Huida oportunista . Después de que un enemigo situado a
+una lesión y sus ataques no pueden provocar impactos críticos.
+1,5 metros o menos del vigía le cause un rasguño con un ataque,
+Competencia . El plebeyo tiene experiencia práctica en una
+el vigía hará una Acometida contra el atacante (no requiere ac-
+profesión y obtiene una ventaja en las pruebas de habilidad
+ción) y luego se moverá hasta la mitad de su valor de movimiento
+relacionadas ella.
+sin activar Acometidas reactivas.
+acciones
+▶ Acometida: Arma improvisada . Ataque +1, cercanía 1,5
+Vigía de los Ojos de Pala
+m, un objetivo. Con una Complicación, esta arma improvisada
+Los vigías de los Ojos de Pala son agentes diestros y de
+se rompe. Rasguño: 2 (1d4) por golpe. Impacto: 3 (1d4 + 1)
+toda confianza, que persiguen tercamente los objetivos de la
+por golpe.
+Heraldo Pailiah. Todos ellos lucen una venda de ojos cere-
+r Distraer (Coste: 1 punto de concentración) . Cuando un alia-
+monial de color verde, que denota su rango y que significa
+do hace una prueba contra un enemigo que está en su cercanía,
+que su aguda perspicacia trasciende la necesidad de la vista.
+el plebeyo le confiere una ventaja en esa prueba.
+La verdad, el conocimiento y el sabio liderazgo son su voca-
+ción y empuñan tanto una intuición afinada como una gran
+pericia en combate para obtener resultados.
+Apéndice A: Adversarios 155
+
+--- Página 160 ---
+Portador de esquirlada
+Portador de esquirlada duelista
+duelista
+Rival de rango 2 – Humanoide Mediano
+Los Portadores de esquirlada duelistas se han vinculado a
+Físico Cognitivo Espiritual
+una hoja esquirlada y están entrenados en su uso. Pueden
+fue def vel int def vol dis def pre
+3 17 4 2 15 3 2 16 4
+invocar la hoja en tan solo diez latidos de corazón, lo cual
+resulta útil tanto dentro como fuera del campo de batalla.
+Salud: 40 (31 a 49) Concentración: 5 Investidura: 0
+Movimiento: 9 m
+Tácticas del portador de esquirlada duelista
+Sentidos: 3 m (vista)
+Los portadores de esquirlada son guerreros increíbles que
+Habilidades físicas: Agilidad +6, Armamento ligero +7,
+controlan el campo de batalla. Un portador de esquirlada due-
+Armamento pesado +6
+lista interrumpe a sus oponentes con Finta y utiliza su excep-
+Habilidades cognitivas: Disciplina +4, Intimidación +5
+cional movilidad para adoptar la posición de fuego o de viento.
+Habilidades espirituales: Liderazgo +6, Perspicacia +4,
+Gracias a su Perspicacia brutal, es una amenaza para los pla-
+Persuasión +6
+nes de su oponente tanto dentro como fuera del combate.
+Idiomas: según la cultura
+rasgos
+Liderazgo inspirador . Cuando el portador de esquirlada duelis-
+ta utiliza con éxito la acción Obtener ventaja, elige a un aliado al
+que puede influir. Ese aliado también obtiene una ventaja en la
+siguiente prueba que hace contra el objetivo del duelista.
+acciones
+1 Acometida: Hoja esquirlada . Ataque +6, cercanía 1,5 m, un
+objetivo. Rasguño: 9 (2d8) espiritual. Impacto: 22 (2d8 + 6)
+espiritual.
+1 Cambio de posición (Coste: 1 punto de concentración) . El
+portador de esquirlada duelista adopta una de las siguientes
+posiciones, perdiendo los efectos de cualquier posición anterior
+y obteniendo los de la nueva:
+Posición de fuego . Mientras haya un solo enemigo situado a
+1,5 metros o menos y ningún aliado a 1,5 metros o menos de
+ambos, el portador de esquirlada de élite podrá usar 0 para
+obtener 1, que solo podrá gastar en la acción Obtener venta-
+ja o en una acción que incluya una prueba de ataque.
+Posición de viento . Mientras haya dos o más enemigos situados a
+1,5 metros o menos del portador de esquirlada duelista, podrá
+usar 0 para obtener 1, que podrá gastar solo en la acción
+Destrabarse o en una acción que incluya una prueba de ataque.
+1 Finta (Coste: 1 punto de concentración) . El portador de
+esquirlada duelista hace una prueba de Armamento pesado
+contra la Defensa cognitiva de un objetivo situado a 1,5 metros
+o menos. Si la supera, el objetivo pierde r y 1d4 puntos de
+concentración. Si falla la prueba, el objetivo pierde 1 punto de
+O
+concentración. Puede gastar de esta prueba para usar la
+acción Cambio de posición como 0 sin gastar concentración.
+1 Perspicacia brutal . El portador de esquirlada duelista es
+capaz de interpretar a su enemigo con facilidad, haciendo prue-
+bas de Perspicacia enfrentadas a la Disciplina del objetivo. Si
+tiene éxito, el objetivo pierde una 1 al comienzo de su siguiente
+turno, o si se trata de una conversación, el objetivo sufre una
+E
+L
+desventaja en su siguiente contribución.
+G
+N
+E
+r Reposicionarse (Coste: 1 punto de concentración) . Antes
+N
+O
+de que desplacen al portador de esquirlada duelista contra su
+S
+A
+J
+voluntad, ignora ese efecto y usa la acción Destrabarse como 0.
+156 Apéndice A: Adversarios
+
+--- Página 161 ---
+Portador del Polvo
+Portador del polvo
+del Segundo Ideal
+del Segundo Ideal
+Los Portadores del Polvo son una orden de los Caballeros
+Rival de rango 2 - Humanoide Mediano
+Radiantes, vinculados a los cenizaspren y con acceso a las
+Físico Cognitivo Espiritual
+potencias de División y Abrasión.
+fue def vel int def vol dis def pre
+2 15 3 3 15 2 3 14 1
+Tácticas del Portador del Polvo
+Salud: 40 (30 a 50) Concentración: 4 Investidura: 5
+Un Portador del Polvo del Segundo Ideal se abre camino de
+Desvío: 2 (malla)
+forma destructiva en el cuerpo a cuerpo contra sus enemigos.
+Movimiento: 12 m (9 m con Investidura 0)
+Usa Patinar para acortar distancias, ataca con la Espada y lue-
+Sentidos: 6 m (vista)
+go se destraba. Explosión ardiente es su principal táctica con-
+Habilidades físicas: Agilidad +6, Armamento ligero +6, Sigilo +6
+tra grupos de enemigos y Putridez ineludible debilita a los más
+Habilidades cognitivas: Disciplina +4, Intimidación +4
+corpulentos. En última instancia, devasta un área y es difícil
+Habilidades espirituales: Liderazgo +3, Percepción +5
+de atrapar, usando Fuga erosionada para conseguirlo.
+Habilidades de potencia: Abrasión +5 (2 grados), División +6
+(3 grados)
+Idiomas: según la cultura
+acciones
+▶ Acometida: Espada . Ataque +6, cercanía 1,5 m, un objetivo.
+Rasguño: 3 (1d6) por laceración. Impacto: 9 (1d6 + 6) por lacera-
+ción y el Portador del Polvo puede gastar 1 punto de concentra-
+ción para usar la acción Destrabarse como 0.
+▶ Acometida: Arco corto . Ataque +6, alcance 24/96 m, un
+objetivo. Rasguño: 3 (1d6) por laceración. Impacto: 9 (1d6 + 6)
+por laceración.
+▶ Putridez ineludible (Coste: 1 punto de Investidura) . Ataque
++6 contra espiritual, cercanía 1,5 m, un objetivo. Rasguño: 13
+(3d8) espiritual. Impacto: 19 (3d8 + 6) espiritual y el objetivo
+debe superar una prueba de Agilidad CD 14 o su armadura se
+oxida y se deteriora, disminuyendo permanentemente su valor
+de desvío en 1. Las armaduras dañadas de este modo pueden
+repararse con materiales adecuados como actividad de reposo.
+3 Explosión ardiente (Coste: 2 puntos de Investidura) . El
+Portador del Polvo lanza un estallido de fuego que inflige 4 (1d8)
+por energía a todos los personajes situados a 3 metros o menos
+y prende fuego a los objetos desatendidos en esa zona. Además,
+puede gastar 1 punto de concentración o más para arrojar chis-
+pas a todos los enemigos situados a 9 metros o menos; todos los
+objetivos deben superar una prueba de Agilidad CD 14 o pierden
+una 1 en su siguiente turno.
+▶ Fuga erosionada (Coste: 1 punto de Investidura) . El
+Portador del Polvo se elige a sí mismo o a un aliado en su cerca-
+nía y elimina el estado Inmovilizado, el estado Retenido o una
+desventaja en una prueba física.
+0 Revitalizar (Coste: 1 punto de Investidura) . El Portador del
+Polvo recupera 5 (1d6 + 2) puntos de salud. Puede usar esta
+R
+E
+D
+acción gratuita incluso si está Inconsciente o no puede usar
+A
+R
+acciones por cualquier otro motivo.
+H
+C
+S
+0 Patinar (Coste: 2 puntos de concentración) . El Portador del
+R
+E
+H
+Polvo se mueve en línea recta hasta su valor de movimiento.
+T
+S
+E
+
+--- Página 162 ---
+Profundo
+Tácticas del Profundo
+También conocidos como makay-im (“Aquellos de las
+Los Profundos son enemigos siniestros, inquietantes y des-
+Profundidades” en el canto del alba), los Profundos son
+piadados. Pueden moverse libremente a través de superficies
+la marca de Fusionados que dominan la potencia de
+sólidas y golpear con Uñas de caparazón o Derribo mientras
+la Cohesión.
+permanecen protegidos. Son capaces de remodelar el campo
+Los Profundos tienen la piel lisa y carecen por completo
+de batalla con su Potencia de Cohesión, obstaculizar a sus
+de pelo. Su escaso caparazón solo cubre los genitales y la enemigos con Atrapar o asfixiar a un enemigo con Aferrar, es-
+pecialmente si ya lo han tumbado con Derribo.
+cabeza. Tienen un cuerpo sinuoso con extremidades largas,
+aunque no son excepcionalmente altos, y unos inquietantes
+ojos blancos con un brillo rojo por detrás.
+Profundo permanece a 1,5 metros o menos. Si el objetivo
+Profundo
+Retenido también está Tumbado, empieza a asfixiarse y
+Rival de rango 2 – Humanoide Mediano
+está Afligido [2d10 vital] hasta que deja de estar Retenido
+Físico Cognitivo Espiritual
+o Tumbado.
+fue def vel int def vol dis def pre
+Con 2, el objetivo Retenido puede efectuar una prueba de
+3 18 5 1 17 6 4 16 2
+Agilidad CD 17, eliminando el estado Retenido si tiene éxito. Si el
+Salud: 45 (39 a 51) Concentración: 8 Investidura: 6
+Profundo sufre al menos 20 de daño en un solo turno, el objeti-
+vo escapa y deja de estar Retenido.
+Movimiento: 12 m
+1 Potencia de Cohesión (Coste: 1 punto de Investidura) . El
+Sentidos: 6 m (vista y, mientras está sumergido, oído)
+Profundo elige una zona u objeto Grande (3 metros) o de menor
+Habilidades físicas: Agilidad +7, Armamento ligero +8, Sigilo +7
+tamaño situado a 9 metros o menos que está hecho de piedra
+Habilidades cognitivas: Disciplina +9
+o tierra y que nadie lleva puesto ni sostiene. Ese objeto o zona
+Habilidades espirituales: Percepción +7, Perspicacia +6,
+cambia de forma según su voluntad, aunque no con la suficiente
+Supervivencia +6
+violencia como para causar daño.
+Habilidades de potencia: Cohesión +9 (3 grados)
+Según la naturaleza del cambio de forma, puede causar un
+Idiomas: canto del alba
+efecto como crear o eliminar cobertura o terreno difícil, o aplicar
+rasgos
+el estado Retenido a los personajes de esa zona. Si el efecto
+Tonos puros . El Profundo ignora el estado Desorientado mien-
+aplica un estado, un personaje puede evitarlo superando una
+tras está sobre piedra sólida o sumergido en ella.
+prueba de Agilidad o Atletismo CD 15.
+Nadar por la piedra . El Profundo puede moverse a través de
+0 Revitalizar (Coste: 1 punto de Investidura) . El Profundo
+superficies sólidas como si caminara por el suelo, ignorando el
+recupera 5 (1d6 + 2) puntos de salud. Puede usar esta acción
+terreno difícil. Mientras está completamente sumergido, debe
+gratuita incluso si está Inconsciente o no puede usar acciones
+gastar 1 punto de concentración cada vez que usa una acción
+por cualquier otro motivo.
+que no sea Moverse o la acción gratuita Revitalizar. No puede
+r Atrapar . Cuando un enemigo provoca una Acometida reac-
+usar este rasgo en superficies de madera.
+tiva del Profundo mientras este está sumergido, el Profundo
+Forma fundida (Coste: 1 punto de concentración) . Antes de
+puede usar Aferrar como r , gastando concentración como si
+que el Profundo sufra daño por golpe o laceración de una fuente
+hiciera una Acometida reactiva.
+que no sea de madera, podrá aumentar su valor de desvío a 6
+oportunidades y complicaciones
+contra ese daño (no requiere acción).
+Las opciones siguientes están disponibles cuando un enemigo
+acciones
+obtiene una Oportunidad o sufre una Complicación durante una
+1 Acometida: Uñas de caparazón . Ataque +8, cercanía 1,5 m,
+escena con el Profundo:
+un objetivo. Rasguño: 7 (2d6) por laceración. Impacto: 15 (2d6 +
+◆
+O
+Oportunidad . Un enemigo puede gastar para evitar que el
+8) por laceración.
+Profundo use sus acciones Potencia de Cohesión y Revitalizar
+1 Acometida: Derribo . Ataque +8, cercanía 1,5 m, un objetivo.
+hasta el final del siguiente turno de este. Además, si está su-
+Rasguño: 3 (1d6) por golpe. Impacto: 11 (1d6 + 8) por golpe y el
+mergido, emerge inmediatamente de esa superficie.
+Profundo deja Tumbado al objetivo.
+◆
+O
+Complicación . La DJ puede gastar de la prueba de un ene-
+migo para que el Profundo use sus habilidades con mayor efi-
+2 Aferrar . El Profundo estrangula a un objetivo al que puede
+ciencia. Hasta el final de su próximo turno, está Concentrado y
+sentir situado a 1,5 metros o menos. El objetivo debe superar
+no necesita gastar Investidura para usar sus rasgos o acciones.
+una prueba de Agilidad CD 17 o queda Retenido mientras el
+158 Apéndice A: Adversarios
+
+--- Página 163 ---
+Regio en forma funesta
+Regio en forma funesta
+Los cantores que se unen a los desalmaspren se convierten
+Rival de Rango 2 – Humanoide Mediano
+en regios en forma funesta, que a menudo miden más de
+Físico Cognitivo Espiritual
+dos metros de altura. Tienen un caparazón similar a una
+fue def vel int def vol dis def pre
+armadura, casi tan resistente como una armadura esquir-
+5 18 3 1 14 3 3 14 1
+lada, que les cubre la cabeza, dejando solo el rostro visible.
+Salud: 42 (33 a 51) Concentración: 5 Investidura: 5
+Mediante el uso de la luz del vacío para aumentar su fuerza
+y velocidad, los regios en forma funesta son de los luchado-
+Desvío: 4 (caparazón)
+res más temibles de Odium.
+Movimiento: 9 m
+Sentidos: 6 m (vista)
+Tácticas del regio en forma funesta
+Habilidades físicas: Agilidad +5, Armamento ligero +6,
+Armamento pesado +8, Atletismo +8
+Un regio en forma funesta es un enemigo brutal cuyo objetivo
+Habilidades cognitivas: Disciplina +6, Intimidación +6
+es dominar en el combate cuerpo a cuerpo. Hasta que los ene-
+Habilidades espirituales: Percepción +5
+migos se acercan lo suficiente para cargar con su Martillo, les
+acribilla con el Arco largo. Cuando un enemigo está cerca, el
+Idiomas: según la cultura
+regio en forma funesta acorta distancias, usa Mejora investida
+rasgos
+y comienza a golpear, usando la acción Prevenirse para apro-
+Experiencia marcial . El regio puede usar la acción Acometida
+vechar su Caparazón con púas. Cuando un enemigo debilitado
+intenta huir, usa Placaje para impedírselo.
+dos veces en su turno.
+Vigilancia marcial . Al regio le cuesta 1 punto menos de concen-
+tración resistirse a la influencia de un enemigo.
+Caparazón con púas . El regio puede usar su caparazón como es-
+cudo, lo que le permite recurrir a la acción Prevenirse. Mientras
+se beneficia de Prevenirse, la primera vez en cada turno que
+sufre un impacto o un rasguño en un ataque cuerpo a cuerpo o
+que un enemigo usa Agarrar o Empujar con éxito, ese enemigo
+sufre 3 (1d6) por laceración.
+acciones
+▶ Acometida: Martillo . Ataque +8, cercanía 1,5 m, un objetivo.
+El regio obtiene una ventaja en este ataque si se ha movido al
+menos 3 metros en línea recta hacia el objetivo en este turno.
+Rasguño: 5 (1d10) por golpe. Impacto: 13 (1d10 + 8) por golpe.
+▶ Acometida: Arco largo . Ataque +8, alcance 45/180 m, un
+objetivo. Rasguño: 3 (1d6) por laceración. Impacto: 11 (1d6 + 8)
+por laceración.
+▶ Mejora investida (Coste: 1 punto de Investidura) . El regio
+está Mejorado [Fuerza +1] y Mejorado [Velocidad +1] hasta el
+final de su siguiente turno. Esto incrementa temporalmente sus
+habilidades físicas en 1, incluidas las tiradas de ataque y daño de
+sus acciones Martillo y Arco largo. Al final de sus turnos, puede
+gastar 1 punto de Investidura para mantener este efecto duran-
+te una ronda adicional.
+↻ Firmeza (Coste: 1 punto de concentración) . Si alguien
+intenta desplazar o dejar Tumbado al regio, ignora ese efecto.
+↻ Placaje . Cuando un enemigo desencadena una Acometida
+reactiva del regio, en lugar de ello, este puede Agarrar al ene-
+N
+migo como ↻ , gastando concentración como si realizara una
+E
+I
+R
+Acometida reactiva. Si Agarrar tiene éxito, el enemigo también
+B
+’
+O
+sufre 3 (1d6) de daño por laceración de las púas del caparazón
+L
+L
+I
+W
+del regio.
+Apéndice A: Adversarios 159
+
+--- Página 164 ---
+Regio en forma tormenta
+Rival de Rango 2 – Humanoide Mediano
+Físico Cognitivo Espiritual
+fue def vel int def vol dis def pre
+2 16 4 2 16 4 1 14 3
+Salud: 40 (30 a 50) Concentración: 6 Investidura: 5
+Desvío: 1 (caparazón)
+Movimiento: 9 m
+Sentidos: 3 m (vista)
+Habilidades físicas: Agilidad +7, Armamento ligero +6,
+Atletismo +5
+Habilidades cognitivas: Disciplina +6, Intimidación +7
+Habilidades espirituales: Percepción +4
+Idiomas: según la cultura
+rasgos
+Debilidad ante el agua . Mientras el regio está empapado, no
+puede usar Lanzar relámpago ni Carga eléctrica.
+Caparazón punzante . Mientras el regio está Retenido por la ac-
+ción Agarrar o un efecto similar, el personaje que limita al regio
+queda Afligido [1d8 por laceración].
+acciones
+▶ Acometida: Lanza corta . Ataque +6, cercanía 1,5 m, un
+objetivo. Rasguño: 4 (1d8) por laceración. Impacto: 10 (1d8 + 6)
+por laceración.
+2 Lanzar relámpago (Coste: 1 punto de Investidura) . Ataque
++7, alcance 18 m, un objetivo. Este ataque sufrirá una desventaja
+a menos que el regio gaste 1 punto de concentración para
+ignorarla. Rasguño: 8 (2d8) por energía. Impacto: 15 (2d8 + 7)
+por energía.
+▶ Salto de tormenta (Coste: 1 punto de Investidura) . El regio
+Regio en forma tormenta
+salta hasta 18 metros. Si aterriza a 1,5 metros o menos de un
+enemigo, puede usar la acción Obtener ventaja como ▷.
+Un cantor puede adoptar la forma tormenta, una forma de
+poder Regia, al unirse con un tormentaspren. Los regios en
+▷ Carga eléctrica . Tras usar la acción Moverse, el regio se
+forma tormenta tienen una armadura sutil y un caparazón
+carga eléctricamente hasta el comienzo de su siguiente turno.
+con púas. El aire que los rodea se electrifica frecuentemente
+Mientras está cargado, es inmune al daño por energía y cuando
+con destellos de relámpagos rojos.
+le impacta el ataque de un enemigo situado a 1,5 metros o
+La forma tormenta es notablemente vulnerable al agua.
+menos, el atacante sufre 4 (1d8) de daño por energía.
+El contacto con una pequeña cantidad solo disminuye su
+control sobre sus poderes de relámpago, pero si un cantor
+en forma tormenta queda empapado, no puede invocar re-
+Tácticas del regio en forma tormenta
+lámpagos hasta que se seca.
+Un regio en forma tormenta es un enemigo astuto, espe-
+cializado en acortar distancias y defenderse. Utiliza Salto de
+tormenta para lanzarse sobre un enemigo de aspecto débil,
+con la esperanza de incitarle a sufrir el daño de Carga eléctri-
+ca. Mientras tanto, alterna el uso de la Lanza corta y Lanzar
+L
+O
+relámpago para golpear a los enemigos heridos.
+S
+D
+R
+O
+N
+A
+N
+I
+R
+I
+160 Apéndice A: Adversarios
+
+--- Página 165 ---
+▶ Gravitación ofensiva (Coste: 1 punto de Investidura) . El
+Rompedor del Cielo del Segundo Ideal
+Rompedor del Cielo hace una prueba de Gravitación contra
+Rival de Rango 2 – Humanoide Mediano
+la Defensa física de un objetivo en su cercanía. Si tiene éxito,
+Físico Cognitivo Espiritual
+desplaza al objetivo hasta 7,5 metros en cualquier dirección y lo
+fue def vel int def vol dis def pre
+deja Retenido hasta el inicio del siguiente turno del Rompedor
+2 15 3 2 15 3 4 15 1
+del Cielo. Si el objetivo golpea un objeto o superficie, sufre
+Salud: 40 (30 a 50) Concentración: 5 Investidura: 6
+9 (2d8) de daño por golpe. Si se cruza con un objeto en su
+cercanía al que no va a golpear, puede superar una prueba de
+Movimiento: 9 m
+Agilidad CD 16 para aferrarse al objeto y detener este movi-
+Sentidos: 6 m (vista)
+miento forzado.
+Habilidades físicas: Agilidad +6, Armamento ligero +6,
+▶ Soporte gravitacional (Coste: 1 punto de Investidura) . El
+Armamento pesado +5
+Rompedor del Cielo obtiene un valor de vuelo de 7,5 metros
+Habilidades cognitivas: Deducción +5, Disciplina +6,
+hasta el inicio de su siguiente turno. Al inicio de su turno, puede
+Intimidación +6, Saber +4
+gastar 1 punto de Investidura para mantener este efecto duran-
+Habilidades espirituales: Percepción +6, Perspicacia +7
+te una ronda adicional.
+Habilidades de potencia: Gravitación +6 (2 grados)
+Alternativamente, puede infundir a un aliado un valor de vuelo
+Idiomas: según la cultura
+de 7,5 metros hasta el final del siguiente turno del aliado. En
+rasgos
+este caso, el Rompedor del Cielo puede gastar Investidura adi-
+Búsqueda de la verdad . El Rompedor del Cielo obtiene una
+cional para extender este efecto durante un número de rondas
+ventaja en las pruebas de Deducción y Perspicacia realizadas
+igual a los puntos de Investidura empleados.
+para determinar la verdad.
+▷ Revitalizar (Coste: 1 punto de Investidura) . El Rompedor
+acciones
+del Cielo recupera 5 (1d6 + 2) puntos de salud. Puede usar esta
+acción gratuita incluso si está Inconsciente o no puede usar
+▶ Acometida: Espada . Ataque +6, cercanía 1,5 m, un objetivo.
+acciones por cualquier otro motivo.
+Rasguño: 3 (1d6) por laceración. Impacto: 9 (1d6 + 6) por laceración.
+↻ Amenaza . Tras sufrir un ataque, el Rompedor del Cielo
+▶ Disparo con Enlace (Coste: 1 punto de Investidura) . Ataque
+hace una prueba de Intimidación contra la Defensa cognitiva
++6, alcance 9 m, un objetivo. El Rompedor del Cielo toca un ob-
+del atacante. Si tiene éxito, el atacante pierde 1 punto de
+jeto desatendido Mediano o de menor tamaño y lo lanza contra
+concentración.
+el objetivo. Rasguño: 9 (2d8) por golpe o laceración. Impacto: 15
+(2d8 + 6) por golpe o laceración.
+por las paredes, o incluso para lanzar a otras personas y ob-
+Rompedor del Cielo
+jetos por los aires.
+del Segundo Ideal
+Mediante la potencia de División, pueden tocar un obje-
+to y hacer que este (o parte de él) arda, se convierta en pol-
+Los miembros de la orden de Caballeros Radiantes de los
+vo o se descomponga, como al quemar un diseño en un
+Rompedores del Cielo, a los que mucha gente considera fa-
+trozo de madera.
+náticos, creen en un estricto código moral y defienden la ley
+por encima de casi todo lo demás. No solo fueron la única
+orden que no abandonó sus juramentos durante la Traición,
+Tácticas del Rompedor del Cielo
+sino que actuaron en secreto durante milenios bajo la di-
+Un Rompedor del Cielo del Segundo Ideal es un combatiente
+rección de Nale, el Heraldo de la Justicia. Tras la tormenta
+aéreo que emplea la Gravitación con efectos devastadores.
+eterna, Nale y la mayoría de los Rompedores del Cielo han
+Inicia el combate con Soporte gravitacional para tener supe-
+optado por seguir a los cantores, creyendo que tienen dere-
+rioridad táctica y luego Gravitación ofensiva y Disparo con
+cho a Roshar como propietarios originales de la tierra.
+Enlace contra enemigos cercanos y lejanos, además de usar
+Amenaza de forma habitual.
+Potenciación
+Los Rompedores del Cielo se dedican a aplicar la justicia.
+Debido a ello, suelen dar prioridad a los enemigos que consi-
+Los Rompedores del Cielo utilizan las potencias de
+deran delincuentes, ignorando inicialmente a otros a los que
+Gravitación y División, que reciben al vincularse con los
+en principio no creen necesario detener y castigar.
+altospren.
+Mediante la potencia de Gravitación, los Rompedores del
+Cielo pueden cambiar la dirección y la fuerza de la atracción
+gravitatoria de un objeto; pueden usarla para volar y trepar
+Apéndice A: Adversarios 161
+
+--- Página 166 ---
+Sabueso-hacha
+Sabueso-hacha
+Los sabuesos-hacha son una especie heterogénea de depre-
+Secuaz de Rango 1 – Animal Pequeño
+dadores domésticos nativos de Roshar. Los más grandes
+Físico Cognitivo Espiritual
+alcanzan la altura de la cintura de un humano promedio o
+fue def vel int def vol dis def pre
+de un cantor. Tienen seis patas, cola similar a la de un pez,
+2 14 2 0 10 0 3 13 0
+antenas plumosas y una piel compuesta de segmentos lisos
+Salud: 12 (9 a 15) Concentración: 2 Investidura: 0
+entrelazados. Las mandíbulas del sabueso-hacha le permiten
+vocalizar barritando, una llamada única que suena como dos
+Movimiento: 12 m
+voces superpuestas y en eco. Cuando están contentos, su
+Sentidos: 12 m (olfato)
+barritar resuena como un zumbido, pero este se reduce a un
+Habilidades físicas: Agilidad +4, Atletismo +4, Sigilo +3
+bramido cuando sienten dolor o están furiosos.
+Habilidades espirituales: Percepción +5, Supervivencia +4
+Idiomas: ninguno
+Tácticas del sabueso-hacha
+rasgos
+Sentidos mejorados . El sabueso-hacha obtiene una ventaja en
+Un sabueso-hacha rara vez se encuentra solo, ya que caza
+mejor en manada. Su objetivo inmediato es derribar a la presa
+las pruebas que no son de ataque y que se basan en el olfato.
+con el Mordisco (con la ventaja de Instintos de manada, si es
+Secuaz . El sabueso-hacha queda derrotado inmediatamente
+posible), lo que permite que otros sabuesos-hacha se acer-
+cuando sufre una lesión y sus ataques no pueden provocar
+quen para matarla con la reacción A la caza. Suelen atacar
+impactos críticos.
+juntos a un solo enemigo en lugar de dispersarse entre un
+grupo, y a menudo apartan a un enemigo desprevenido de sus
+acciones
+aliados para derrotarle más fácilmente.
+▶ Acometida: Mordisco . Ataque +4, cercanía 1,5 m, un
+objetivo. Rasguño: 2 (1d4) por laceración. Impacto: 6 (1d4 + 4)
+por laceración y si el objetivo es Mediano o de menor tamaño,
+el sabueso-hacha puede gastar 1 punto de concentración para
+derribar al objetivo dejándole Tumbado, y luego moverse hasta 3
+metros arrastrándolo.
+▷ Instintos de manada . Mientras está a 1,5 metros o menos
+de un aliado, el sabueso-hacha puede usar la acción Obtener
+ventaja como ▷.
+↻ A la caza . Después de que un enemigo situado a 9 metros o
+menos caiga Tumbado, el sabueso-hacha se moverá hasta 4,5
+metros en su dirección.
+
+--- Página 167 ---
+Taszo-hijo-Clutio
+Tácticas de Taszo
+Taszo es un humano shin serio e inquisitivo. Dada su con-
+Taszo trata de ayudar, aunque no está acostumbrado a luchar
+dición de chamán de piedra, Taszo es experto en combate y
+con el brazo roto. Ayuda a quien se ve más amenazado, gas-
+defensa personal. Partió de Shinovar con un convoy en una
+tando su concentración en Amistad en apuros para ayudar a
+misión crucial para recuperar la hoja de Honor de Taln. Tras
+sus aliados en situaciones difíciles.
+un ataque mortal a su convoy, Taszo se convirtió en el único
+superviviente de su grupo original.
+Taszo
+Rival de rango 1 – Humanoide Mediano
+Físico Cognitivo Espiritual
+fue def vel int def vol dis def pre
+0 13 3 1 13 2 2 13 1
+Salud: 17 (14 a 20) Concentración: 4 Investidura: 0
+Movimiento: 9 m
+Sentidos: 3 m (vista)
+Habilidades físicas: Agilidad +3, Armamento ligero +3
+Habilidades cognitivas: Deducción +2, Disciplina +4, Saber +2
+Habilidades espirituales: Percepción +4, Perspicacia +4,
+Persuasión +3
+Idiomas: alezi, shin
+rasgos
+Determinado . Después de que Taszo gaste concentración para
+resistirse a la influencia de un personaje, dicho personaje perde-
+rá 1 punto de concentración.
+Brazo roto . Taszo solo puede usar una mano.
+acciones
+1 Acometida: Espada lateral . Ataque +3, cercanía 1,5 m, un
+objetivo. Rasguño: 3 (1d6) por laceración. Impacto: 8 (1d6 + 3)
+por laceración.
+r Amistad en apuros (Coste: 1 punto de concentración) .
+)
+Cuando un aliado situado a 1,5 metros o menos falla una
+A
+H
+C
+prueba, Taszo añade una Oportunidad al resultado de esta.
+E
+R
+E
+D
+(
+C
+I
+V
+O
+N
+A
+J
+O
+T
+S
+O
+K
+R
+A
+D
+;
+)
+A
+D
+R
+E
+I
+U
+Q
+Z
+I
+(
+T
+T
+E
+N
+N
+E
+B
+E
+G
+R
+O
+E
+G
+
+--- Página 168 ---
+Veth
+Veth
+Veth es un humano alezi que presenció el ascenso de Ylt en-
+Jefe de rango 1 – Humanoide Mediano
+tre los discípulos de Pailiah y juró ayudar en la recuperación
+Físico Cognitivo Espiritual
+de la hoja de Honor. Cree firmemente en la visión de Ylt
+fue def vel int def vol dis def pre
+para el futuro de los Ojos de Pala.
+2 14 2 1 12 1 3 15 2
+Ha dedicado años a perfeccionar un estilo de lucha que
+Salud: 40 (32 a 48) Concentración: 3 Investidura: 0
+emplea sus reflejos ultrarrápidos y su capacidad para leer
+a sus oponentes, lo que le convierte en un enemigo mortal
+Movimiento: 7,5 m
+incluso en inferioridad numérica.
+Sentidos: 6 m (vista)
+Habilidades físicas: Armamento ligero +3, Atletismo
++3, Sigilo +4
+Tácticas de Veth
+Habilidades cognitivas: Disciplina +3
+Veth usa Defensa perspicaz contra la amenaza marcial más
+Habilidades espirituales: Percepción +5, Perspicacia +5
+obvia y luego se le enfrenta en combate cuerpo a cuerpo.
+Idiomas: alezi, iriali
+Gasta concentración rápidamente para obtener turnos adicio-
+nales y cambia a objetivos secundarios mediante Aprovechar
+rasgos
+ventaja. Para beneficiarse de sus Acometidas dirigidas, prio-
+Jefe . Veth puede jugar un turno rápido y un turno lento en cada
+riza a los objetivos contra los que tiene ventaja, como los que
+ronda. Después de que un enemigo acabe un turno, podrá gastar
+están Tumbados. Si se viera acosado por ataques a distancia,
+1 punto de concentración para usar inmediatamente 1 o 0
+usaría Redirección intuitiva para que cualquier ataque fallido
+adicional. Además, podrá gastar 1 punto de concentración en su
+impactara contra sus enemigos.
+turno para eliminar un estado que le afecte.
+Acometidas dirigidas . Mientras Veth disponga de una ventaja al
+atacar, ignorará el desvío cuando inflija daño.
+acciones
+1 Acometida: Espada lateral . Ataque +3, cercanía 1,5 m, un
+objetivo. Rasguño: 3 (1d6) por laceración. Impacto: 6 (1d6 + 3)
+por laceración.
+1 Aprovechar ventaja . Veth se mueve hasta su valor de movi-
+miento. Si se mueve al menos 3 metros y termina este movimien-
+to a 1,5 metros o menos de un enemigo al que no ha atacado en
+esta ronda, ese movimiento no activa Acometidas reactivas y
+hace una prueba de Percepción contra la Defensa espiritual del
+objetivo. Si la supera, Veth obtiene una ventaja en su próximo
+ataque contra dicho objetivo.
+0 Defensa perspicaz . Veth hace una prueba de Perspicacia
+contra la Defensa espiritual de un personaje al que puede sentir
+situado 18 metros o menos. Si la supera, el objetivo no puede
+obtener ventajas en los ataques contra Veth durante 1 minuto o
+hasta que Veth usa esta acción contra otro objetivo.
+r Redirección intuitiva (Coste: 1 punto de concentración) .
+Antes de que un ataque falle contra Veth, este puede hacer que
+impacte contra un objetivo situado a 1,5 metros o menos. Dicho
+objetivo no puede ser el personaje que le atacó.
+V
+E
+N
+E
+P
+R
+A
+T
+E
+P
+164 Apéndice A: Adversarios
+
+--- Página 169 ---
+Ylt
+Tácticas de Ylt
+Ylt es un arrogante Vigilante de la Verdad iriali vinculado
+Antes de la batalla final del capítulo 7, Ylt usa su Floritura
+al brumaspren Iluminado Tyche. Como líder influyente de
+ilusoria, Piedra de salto y Parada de Tensión para mantenerse
+los Ojos de Pala, colabora estrechamente con Pailiah para
+a salvo. Puede usar Piedra de salto para acercarse a objetivos
+conseguir la hoja de Honor de Taln; sin embargo, su visión
+más débiles o atacar a distancia con Lanza de Piedra.
+del futuro ha dado lugar a planes mucho más ambiciosos,
+En combate cuerpo a cuerpo, ataca con la hoja de Honor,
+y ahora se atreve a soñar con suplantar a la Heraldo. Para
+usa Floritura Ilusoria para desorientar a los oponentes y luego
+se retira a una distancia segura. Si el curso de la batalla cam-
+más información sobre Ylt, consulta la sección “Personajes
+bia, se cura con Regeneración, pero no ofrece la misma ayuda
+principales” en la introducción de este libro.
+a sus aliados.
+V
+E
+N
+E
+P
+R
+A
+T
+E
+P
+Apéndice A: Adversarios 165
+
+--- Página 170 ---
+1 Visión repulsiva (Coste: 1 punto de Investidura) . Ylt se
+Ylt
+rodea de una visión en la que brilla con una iluminación dorada.
+Jefe de rango 1 – Humanoide Mediano
+Al recordar su potencial ilimitado, recupera 1d4 puntos de
+Físico Cognitivo Espiritual
+concentración.
+fue def vel int def vol dis def pre
+1 Piedra de salto (Coste: 1 punto de Investidura) . Ylt usa la
+2 15 3 3 16 3 3 17 4
+Cohesión para crear un pilar de piedra que lo impulsa a él, o a
+Salud: 80 (66 a 94) Concentración: 5 Investidura: 6
+un personaje dispuesto situado a 4,5 metros o menos, por los
+aires. Ese personaje aterriza en un espacio a hasta 4,5 metros
+Movimiento: 9 m
+de distancia sin activar Acometidas reactivas, y si su siguiente
+Sentidos: 6 m (vista)
+acción en este turno es un ataque cuerpo a cuerpo, ese ataque
+Habilidades físicas: Armamento ligero +5
+obtiene una ventaja.
+Habilidades cognitivas: Deducción +6, Disciplina +6
+Habilidades espirituales: Liderazgo +6, Percepción +5,
+2 Regeneración (Coste: 1 punto de Investidura) . Ylt se
+Perspicacia +5
+restablece 1d6 + 5 de salud a sí mismo o a otro personaje al que
+Potencias: Cohesión +6 (3 grados), Iluminación +6 (2 grados),
+puede tocar.
+Progresión +5 (2 grados), Tensión +5 (3 grados)
+0 Revitalizar (Coste: 1 punto de Investidura) . Ylt recupera 4
+Idiomas: alezi, iriali
+(1d6+1) de salud. Puede usar esta acción gratuita incluso estan-
+do Inconsciente o si no puede realizar acciones.
+rasgos
+r Parada de tensión (Coste: 1 punto de Investidura) . Antes
+Jefe . Ylt puede jugar un turno rápido y un turno lento en cada
+de que Ylt sufra el impacto o el rasguño de un ataque contra
+ronda. Después de que un enemigo acabe un turno, podrá
+su Defensa física, podrá infundir Tensión sobre su ropa para
+gastar 1 punto de concentración para usar inmediatamente 1 o
+aumentar su Defensa física en 2 hasta el inicio de su siguiente
+0adicional. Además, podrá gastar 1 punto de concentración en
+turno, incluso contra el ataque desencadenante. Si el ataque
+su turno para eliminar un estado que le afecte.
+impacta, este aumento puede convertirlo en un fallo, y si hace un
+Tierra fluida . Después de que Ylt use la potencia de Cohesión,
+rasguño, ignora sus efectos.
+podrá usar inmediatamente Piedra de salto sobre sí mismo (no
+requiere acción ni investidura requeridas), pero no le otorgará
+acciones del tercer ideal
+ventaja en su siguiente ataque.
+Cuando Ylt jura el Tercer Ideal en el capítulo 7, obtiene el estado
+Hoja de Honor de Taln . Ylt está vinculado a la hoja de Honor
+Empoderado, lo que le otorga una ventaja en todas las pruebas y
+del Heraldo Taln. Si pierde el arma, puede invocarla como 1 y
+recarga su Investidura al máximo al inicio de sus turnos rápidos.
+reaparece en su mano al comienzo de su siguiente turno rápido.
+Además, obtiene la siguiente acción:
+Mientras no la empuñe, no podrá usar las potencias de Cohesión
+1 Acometida con mano secundaria (Coste: 1 punto de
+y Tensión (incluyendo Piedra de salto, Lanza de piedra y Parada
+Investidura) . Ataque +5, cercanía 1,5 m, un objetivo. Rasguño: 11
+de tensión).
+(2d10) espiritual. Impacto: 16 (2d10 + 5) espiritual.
+acciones
+oportunidades y complicaciones
+1 Acometida: Hoja de Honor . Ataque +5, cercanía 1,5 m, un
+Las siguientes opciones están disponibles cuando un enemigo
+objetivo. Rasguño: 11 (2d10) espiritual. Impacto: 16 (2d10 + 5)
+obtiene una Oportunidad o sufre una Complicación durante una
+espiritual.
+escena con Ylt:
+2 Lanza de piedra (Coste: 1 punto de Investidura) . Ataque
+◆
+O
+Oportunidad . Un enemigo podrá gastar para que Ylt con-
+de Cohesión +6, alcance 18 m, un objetivo. Rasguño: 9 (2d8) por
+suma su luz tormentosa demasiado rápido. Hasta el final del
+golpe. Impacto: 15 (2d8 + 6) por golpe e Ylt podrá gastar una
+siguiente turno de Ylt, duplica el coste de Investidura de las
+Oportunidad para hacer que el objetivo quede Tumbado.
+capacidades de Tensión y Cohesión que usa.
+◆
+1 Floritura ilusoria (Coste: 1 punto de Investidura) . Ylt selec-
+Complicación . Cuando un atacante sufre una Complicación
+ciona a un enemigo al que ha impactado con un ataque cuerpo a
+mientras hace un ataque cuerpo a cuerpo contra Ylt con un
+C
+cuerpo desde el final de su último turno, haciendo una prueba de
+arma no especial, la DJ puede gastar para destruir esa arma
+Iluminación contra su Defensa espiritual. Si la supera, el objetivo
+con la hoja de Honor de Ylt.
+queda Desorientado hasta el final de su siguiente turno.
+166 Apéndice A: Adversarios
+
+--- Página 171 ---
+ADVENTURE VERSION NOI SREV ERUT NEVDA
+apéndice B
+Objetos
+Este apéndice detalla los objetos singulares que aparecen en personaje Mediano o de menor tamaño. Se puede escapar
+la aventura Caminapiedras. Los demás objetos mencionados de estos grilletes con una prueba de Agilidad CD 25, rom-
+en esta aventura se describen en el capítulo 7 del Manual del perlos con una prueba de Atletismo CD 20, infligiéndoles
+Archivo de las Tormentas. 10 puntos de daño, o forzando la cerradura con una prueba
+de Hurto CD 20.
+Cuchillo de raysio
+Arma especial, 500 g. Hoja de Honor de Taln
+Arma especial, 2 kg.
+Habilidad: Armamento Ligero
+Daño: 1d4 por laceración Habilidad: Armamento ligero o Armamento pesado
+Alcance: Cuerpo a cuerpo Daño: 2d10 espiritual
+Rasgos: Discreta, Única Rasgos: Mortífera, Peligrosa, Única
+Rasgos de experto: Arrojadiza [20/60], Mano secundaria Rasgos de experto: Única (pierde el rasgo Peligrosa)
+Este cuchillo está forjado en un metal blanco dorado: raysio, La hoja de Honor de Taln es una de las diez armas úni-
+el metal divino de Odium. En el pomo del cuchillo hay una cas creadas por Honor para fortalecer a los Heraldos en
+esmeralda perfecta engastada. su batalla contra las fuerzas de Odium. Quien se vincula
+Rasgos únicos. El cuchillo de raysio tiene los siguientes con esta legendaria hoja obtiene acceso a las potencias de
+rasgos únicos: los Custodios de la Piedra. Al igual que las hojas esquir-
+ladas vinculadas comunes, su portador puede invocarla o
+Drenar Investidura. Al impactar, el objetivo pierde 1 pun-
+descartarla, por lo que no se podrá empuñar a menos que
+to de Investidura.
+este muera.
+Extraer alma. Esta arma puede matar permanentemente
+Rasgos únicos. Mientras estás vinculado a la hoja de
+a una sombra cognitiva en un cuerpo físico (como un
+Honor de Taln, tiene los mismos rasgos únicos que una hoja
+Heraldo o un Fusionado). Si dicho personaje queda
+esquirlada (consulta el capítulo 7 del Manual del Archivo
+reducido a 0 puntos de salud por esta arma y sufre una
+de las Tormentas), además de los siguientes rasgos únicos:
+lesión, muere inmediatamente y el raysio conduce su
+alma hacia la esmeralda. Su alma queda atrapada en la Heraldo de los Custodios de la Piedra. Tus grados en
+gema y, mientras permanezca así, no podrá renacer en las habilidades de Cohesión y Tensión aumentan a 3. Si
+otro cuerpo ni escapar al Reino Cognitivo. Este proceso ya tienes 3 grados o más en una habilidad, esta aumenta
+es lo suficientemente traumático como para separar a un en 1 grado, hasta un máximo de 5. Sin embargo, si sufres
+Heraldo del Juramento. Cualquier sombra cognitiva cap- una Complicación al realizar una prueba de Cohesión
+turada con este cuchillo se desvanecerá, y se acabará des- o Tensión, debes duplicar el coste de Investidura de di-
+truyendo de manera permanente, aunque la rapidez con cha prueba.
+la que se desvanezca el alma depende de la DJ. Un alma Manejar Investidura. Si aún no cuentas con una reserva
+capturada también es destruida si se expone a la antiluz de Investidura, obtienes una, y tu Investidura máxima es
+correspondiente. igual a 2 + tu Discernimiento o tu Presencia (el que sea
+mayor). Puedes usar las acciones Absorber luz tormento-
+Grilletes de aluminio
+sa, Aumentar y Revitalizar.
+Equipo, 1,5 kg.
+Talentos de potencia. Obtienes el talento Lanza de piedra
+del árbol de talentos de Cohesión y el talento Parada de
+Estos grilletes están forjados con aluminio de moldeado de
+tensión del árbol de talentos de Tensión. Cuando subas
+almas, un metal plateado conocido por los cantores como
+de nivel y, por lo tanto, obtengas un nuevo talento, po-
+ralkalest. El aluminio es mágicamente inerte y puede blo-
+drás elegirlo de los caminos de Cohesión y Tensión.
+quear la Investidura. Por lo tanto, estos grilletes no se pue-
+den cortar con una hoja esquirlada ni se ven afectados por la
+Si pierdes tu vínculo con la hoja de Honor de Taln, perderás
+potenciación u otras capacidades Investidas.
+todas las habilidades y talentos que te otorga. Si ya no cum-
+Los grilletes incluyen una llave y funcionan como unos
+ples los prerrequisitos de los talentos de Cohesión o Tensión
+grilletes comunes, solo que más ligeros y algo menos re-
+que elegiste al subir de nivel, puedes reemplazarlos usando
+sistentes: pueden atar las muñecas o los tobillos de un
+la actividad de reposo Autorreflexión (consulta el capítulo 9
+del Manual del Archivo de las Tormentas).
+Apéndice B: Objetos 167
+
+--- Página 172 ---
+ADVENTURE VERSION NOI SREV ERUT NEVDA
+Agradecimientos
+Expresamos nuestra más sincera gratitud a todas las personas que dedicaron parte de su tiempo a hacer prue-
+bas para la aventura Caminapiedras. Al ser la primera gran aventura del JdR del Cosmere, requirió especial aten-
+ción, cuidado y constantes iteraciones. Con la ayuda de estos jugadores y directoras de juego, logramos encontrar el
+equilibrio entre nuestra voluntad de contar una historia canónica y la necesidad de ofrecer una experiencia de juego
+rica con elecciones divergentes. ¡Gracias a todas estas personas por ser los caminapiedras originales!
+Aaron Dukes, Abby Daniel, Adam Lane, ADHD_Projects, Adrian
+Nick White, Nico “Nikuma” Fernandez, Oliver Markham, Ozan
+Dole, Alex Allen, Alexander White, Andrea Urosevic, Andrew
+Demir, Patrick McGean, Peter R Jordahl, Phenrix, Poet C,
+Martin, Ángel Lorenzo Garrido, Audrey, Azure Markham,
+Polina Savitch, Porter Biehler, Pratt Despain, R.J. Day, Raphaël
+Billy Burnley, Blake Romrell, Braeden O’Quinn, Branden Day,
+Thivierge, Ray Lawler, Richard Allred, Rick Cook, Riley Parrott,
+Brandon “Colevander” Cole, Brandon Butler, Bransen Angeley,
+Robert Rollins, Robyn Cook, Ryan Apigian, Seren W, Seth Tye,
+Brian Nulle, Charles O’Brien, Chip Willesen, Chris Nowack,
+Stelios Ansley, Steve Adams, Tamara Tonetti Buono, Tera
+Christopher Lagoda, Cierra Wilson, Coincidence Cosplay,
+Freeman, Thomas Wack, Tim Lam, Timothy Hanyes, Walker
+Cormroc, Craig Schwartz, Cryptic Panda, DaKota Greer, Darci
+Byrnes, Whitney White, William Guyaux, William White, Willie
+Cole, Dave “Dr. Hirsute” Burrow, David Holland, Dax Levine,
+Ann Goodrode, Xander Hacking, Xathien, Zachary Anderson y
+Devin Preston, Elanor Markham, Emily Adams, Eric Cockman,
+Zankas.
+PhD, Eric Gallo, Erik Xavier, Forrest Lefebvre, Fran “Hotfix”
+Mazufri, Garrison Bouchard-Ferdon, Giovanni Tavaniello,
+Grant S. Hoskins, Greg Fox, Greg Martin, Heather Claridge,
+Henry Markham, Ian McNatt, Jacob LeFevre, James Kauffman,
+Jameson O’Quinn, Jen Moir, Jesse Michael, Jillian “Lead”
+Schumacher, Joanna Peluffo Velarde, Jofwu, John Bohman,
+John Korsavidis, John Markham IV, John Markham V, Johnathan
+Bailey, Jonna Coombs, Josep Famadas, Joseph Pagan, Joseph
+RowenStipe Krieger, Joshua Burnley, Joshua Wade, Juan
+Manuel Ronchetti, Justin Finger, Kisei Silverwater, Kyle Claridge,
+Kyle Ontiveros, LauchaBOT, Lena Caride, Leo Linning III, Lexy
+Moddle, Lily Lyn-Marie Varner, Lisa Dukes, Lizzy Burton, Lydia
+Suen, Marie Seeberger, Mark Hoffman III, Matt Golino, Matt
+Nulle, Meail Flowers, Mel Walton, Melissa Frost, Meric Moir,
+Messy Burrow, Michael Ansley, Mikah Kilgore, Nathan
+Goodrich, Ned Hunter, Neil Sorensen, Nicholas Workman,
+UN FERVOROSO ATRAE
+A LOS SINCERISPREN
+R
+E
+G
+R
+E
+B
+E
+E
+S
+E
+I
+R
+A
+M
+168 Agradecimientos

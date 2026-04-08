@@ -45,4 +45,5 @@ public class NpcsController(INpcService npcService) : ControllerBase
         await npcService.DeleteNpcAsync(npcId, campaignId, JwtHelper.GetUserId(User));
         return NoContent();
     }
+
 }

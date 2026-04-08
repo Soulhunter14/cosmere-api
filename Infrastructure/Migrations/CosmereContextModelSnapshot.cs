@@ -402,7 +402,7 @@ namespace Infrastructure.Migrations
                     b.ToTable("GearItems");
                 });
 
-            modelBuilder.Entity("Messages.Database.Entities.MatchEntity", b =>
+            modelBuilder.Entity("Messages.Database.Entities.GlobalNpcEntity", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -410,27 +410,130 @@ namespace Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
-                    b.Property<long>("CampaignId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("Agilidad")
+                        .HasColumnType("integer");
 
-                    b.Property<DateTime?>("CompletedAt")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<string>("Apariencia")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("ArmasLigeras")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ArmasPesadas")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Ascendencia")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Atletismo")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Conocimiento")
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<bool>("IsCompleted")
-                        .HasColumnType("boolean");
+                    b.Property<int>("Deduccion")
+                        .HasColumnType("integer");
 
-                    b.Property<string>("Resolution")
+                    b.Property<int>("Discernimiento")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Disciplina")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Engano")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Fuerza")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Hurto")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Intelecto")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Intimidacion")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Liderazgo")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Manufactura")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("MaxConcentration")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("MaxHealth")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("MaxInvestiture")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Medicina")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("Notas")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Percepcion")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Perspicacia")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Persuasion")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Presencia")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Sigilo")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Source")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Supervivencia")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Talentos")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Tipo")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("Velocidad")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Voluntad")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("CampaignId");
-
-                    b.ToTable("Matches");
+                    b.ToTable("GlobalNpcs");
                 });
 
             modelBuilder.Entity("Messages.Database.Entities.NoteEntity", b =>
@@ -471,31 +574,6 @@ namespace Infrastructure.Migrations
                     b.ToTable("Notes");
                 });
 
-            modelBuilder.Entity("Messages.Database.Entities.SceneEntity", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<long>("MatchId")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("OrderIndex")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MatchId");
-
-                    b.ToTable("Scenes");
-                });
-
             modelBuilder.Entity("Messages.Database.Entities.SessionEntity", b =>
                 {
                     b.Property<long>("Id")
@@ -530,58 +608,6 @@ namespace Infrastructure.Migrations
                     b.HasIndex("CampaignId");
 
                     b.ToTable("Sessions");
-                });
-
-            modelBuilder.Entity("Messages.Database.Entities.SideQuestEntity", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
-
-                    b.Property<List<string>>("Acts")
-                        .IsRequired()
-                        .HasColumnType("text[]");
-
-                    b.Property<List<string>>("Benefits")
-                        .IsRequired()
-                        .HasColumnType("text[]");
-
-                    b.Property<long>("CampaignId")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Notes")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<List<string>>("Rewards")
-                        .IsRequired()
-                        .HasColumnType("text[]");
-
-                    b.Property<bool>("Started")
-                        .HasColumnType("boolean");
-
-                    b.Property<string>("Summary")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CampaignId");
-
-                    b.ToTable("SideQuests");
                 });
 
             modelBuilder.Entity("Messages.Database.Entities.UserEntity", b =>
@@ -704,17 +730,6 @@ namespace Infrastructure.Migrations
                     b.Navigation("Campaign");
                 });
 
-            modelBuilder.Entity("Messages.Database.Entities.MatchEntity", b =>
-                {
-                    b.HasOne("Messages.Database.Entities.CampaignEntity", "Campaign")
-                        .WithMany("Matches")
-                        .HasForeignKey("CampaignId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Campaign");
-                });
-
             modelBuilder.Entity("Messages.Database.Entities.NoteEntity", b =>
                 {
                     b.HasOne("Messages.Database.Entities.CampaignEntity", "Campaign")
@@ -742,17 +757,6 @@ namespace Infrastructure.Migrations
                     b.Navigation("ToUser");
                 });
 
-            modelBuilder.Entity("Messages.Database.Entities.SceneEntity", b =>
-                {
-                    b.HasOne("Messages.Database.Entities.MatchEntity", "Match")
-                        .WithMany("Scenes")
-                        .HasForeignKey("MatchId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Match");
-                });
-
             modelBuilder.Entity("Messages.Database.Entities.SessionEntity", b =>
                 {
                     b.HasOne("Messages.Database.Entities.CampaignEntity", "Campaign")
@@ -764,33 +768,13 @@ namespace Infrastructure.Migrations
                     b.Navigation("Campaign");
                 });
 
-            modelBuilder.Entity("Messages.Database.Entities.SideQuestEntity", b =>
-                {
-                    b.HasOne("Messages.Database.Entities.CampaignEntity", "Campaign")
-                        .WithMany("SideQuests")
-                        .HasForeignKey("CampaignId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Campaign");
-                });
-
             modelBuilder.Entity("Messages.Database.Entities.CampaignEntity", b =>
                 {
                     b.Navigation("Characters");
 
-                    b.Navigation("Matches");
-
                     b.Navigation("Members");
 
                     b.Navigation("Sessions");
-
-                    b.Navigation("SideQuests");
-                });
-
-            modelBuilder.Entity("Messages.Database.Entities.MatchEntity", b =>
-                {
-                    b.Navigation("Scenes");
                 });
 
             modelBuilder.Entity("Messages.Database.Entities.UserEntity", b =>

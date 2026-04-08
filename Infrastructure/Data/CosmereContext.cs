@@ -9,9 +9,7 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
     public DbSet<CampaignEntity> Campaigns { get; set; }
     public DbSet<CampaignMemberEntity> CampaignMembers { get; set; }
     public DbSet<CharacterEntity> Characters { get; set; }
-    public DbSet<MatchEntity> Matches { get; set; }
-    public DbSet<SceneEntity> Scenes { get; set; }
-    public DbSet<SideQuestEntity> SideQuests { get; set; }
+    public DbSet<GlobalNpcEntity> GlobalNpcs { get; set; }
     public DbSet<SessionEntity> Sessions { get; set; }
     public DbSet<NoteEntity> Notes { get; set; }
     public DbSet<WeaponCatalogEntity> WeaponCatalog { get; set; }
@@ -52,27 +50,6 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
             .HasOne(c => c.Campaign)
             .WithMany(c => c.Characters)
             .HasForeignKey(c => c.CampaignId)
-            .OnDelete(DeleteBehavior.Cascade);
-
-        // Campaign → Matches
-        modelBuilder.Entity<MatchEntity>()
-            .HasOne(m => m.Campaign)
-            .WithMany(c => c.Matches)
-            .HasForeignKey(m => m.CampaignId)
-            .OnDelete(DeleteBehavior.Cascade);
-
-        // Match → Scenes
-        modelBuilder.Entity<SceneEntity>()
-            .HasOne(s => s.Match)
-            .WithMany(m => m.Scenes)
-            .HasForeignKey(s => s.MatchId)
-            .OnDelete(DeleteBehavior.Cascade);
-
-        // Campaign → SideQuests
-        modelBuilder.Entity<SideQuestEntity>()
-            .HasOne(sq => sq.Campaign)
-            .WithMany(c => c.SideQuests)
-            .HasForeignKey(sq => sq.CampaignId)
             .OnDelete(DeleteBehavior.Cascade);
 
         // Campaign → Sessions

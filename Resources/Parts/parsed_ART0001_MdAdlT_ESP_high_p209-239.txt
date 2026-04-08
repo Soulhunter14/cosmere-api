@@ -1,0 +1,2604 @@
+﻿
+--- Página 209 ---
+Buscar en el pasado Vistazo al futuro
+Prerrequisito: pronunciar el Primer Ideal; talento princi- Prerrequisito: pronunciar el Primer Ideal; talento princi-
+pal Visión del futuro pal Visión del futuro
+Activación: * Activación: *
+Puedes intentar dirigir tus visiones para ver sucesos pasados; Tienes vagas visiones de posibilidades futuras, lo cual te permite
+cuanto más atrás mires, más difícil será vislumbrarlos. ejercer algo de influencia para desviar tu fortuna.
+Después de un descanso largo, podrás elegir un suceso del Una vez por ronda, después de tirar los dados para una prue-
+pasado del que hayas oído hablar o hayas experimentado, y ba, puedes gastar 1 o más puntos de Investidura para volver
+luego hacer una prueba de Saber. La CD se determina se- a tirar esa misma cantidad de dados de la prueba. Las tiradas
+gún el tiempo transcurrido desde que dicho suceso tuvo lu- originales no tienen efecto y debes usar el nuevo resultado.
+gar, como se muestra en la tabla CD de visiones del pasado.
+Vacío de visión
+Esta CD se reduce en 10 si has experimentado el suceso con
+Prerrequisito: talento Vistazo al futuro o Buscar en el pasado
+anterioridad, ya sea en persona o a través de una visión.
+Activación: 8
+CD de visiones del pasado
+Gracias a tu capacidad para ver el futuro y cambiar su curso,
+tus aliados cercanos y tú creáis un punto negro en las visiones
+Tiempo máximo desde el suceso CD de la prueba
+futuras de los demás.
+1 día CD 10
+Tú y tus aliados dentro del alcance de tu vínculo spren sois
+10 días CD 13
+inmunes a cualquier efecto enemigo que repita o reemplace
+50 días CD 16
+el resultado de cualquier dado que tiréis.
+1 año CD 19
+Además, si estás presente o ejerces una fuerte influencia
+10 años CD 22
+en un suceso, ningún enemigo puede tener visiones de dicho
+100 años CD 25
+suceso, tanto si lo ven como futuro o como pasado.
+1000 años CD 30
+10 000 años CD 35
+* Visión del futuro (principal de Iluminado)
+Si superas la prueba, experimentas una visión de 10 mi-
+Prerrequisito: vínculo con un brumaspren iluminado
+nutos del suceso como si estuvieras allí. Si el suceso es uno
+Pídele a la DJ una visión del futuro. Si la visión requiere ser in-
+C
+terpretada, realiza una prueba de Deducción; si sacas una , la
+que ya has experimentado con anterioridad, puedes elegir
+visión podría ser poco fiable.
+aparecer en un lugar o momento específico diferente dentro
+del suceso. Eres un observador pasivo en la visión, invisible,
+intangible y, por lo demás, incapaz de alterar el curso de los
+iluminado
+acontecimientos de ninguna manera.
+★ Vistazo al futuro ★ Buscar en el pasado
+Prerrequisito: pronunciar el Prerrequisito: pronunciar el
+Primer Ideal Primer Ideal
+Gasta 1 o más puntos de Elige un suceso pasado que
+Investidura para volver a tirar la conozcas y haz una prueba de
+misma cantidad de dados de tu Saber (la CD se determina según
+prueba. el tiempo que haya transcurri-
+do). Si la superas, tienes una
+visión de 10 minutos de dicho
+suceso.
+↻ Alterar la fortuna ∞ Vacío de visión
+Prerrequisito: pronunciar el Prerrequisito: pronunciar el
+Primer Ideal Primer Ideal
+Tira con antelación tantos d20 Tú y tus aliados dentro del alcan-
+como 1 o más tu rango. Puedes ce de tu vínculo spren sois inmu-
+reemplazar resultados de d20 nes a los efectos de enemigos
+N
+E
+de enemigos y aliados con tus que repiten tiradas de vuestros
+N
+Ö
+resultados. dados, y los enemigos no pueden
+K
+T
+tener visiones de sucesos sobre
+Y
+R
+los que influyes.
+I
+M
+UN BRUMASPREN ILUMINADO
+A
+S
+EN EL REINO FíSIcO
+Capítulo 5: Caminos radiantes 205
+
+--- Página 210 ---
+Cada Forjador de Vínculos está asociado con uno de los
+grandes spren: el Padre Tormenta, el Hermano o la Vigilante
+Nocturna. Cada uno de ellos cuenta con capacidades úni-
+cas, muchas de las cuales otorgan a su Forjador de Vínculos.
+Por ejemplo, el del Padre Tormenta puede “cabalgar” la alta
+tormenta junto a él para obtener una vista táctica del paisaje
+en el que se encuentra la alta tormenta en ese momento. Por
+otra parte, el Forjador de Vínculos del Hermano es cons-
+ciente y puede controlar con precisión los sistemas dentro
+de la ciudad-torre de Urithiru. El spren vinculado también
+determina el tipo de luz Investida que el Forjador de Vínculos
+usa para potenciar sus capacidades y puede otorgar a otros:
+Forjadores
+luz tormentosa para el Padre Tormenta, luz de torre para el
+Hermano y luz de vida para la Vigilante Nocturna.
+de Vínculos
+Los Forjadores de Vínculos también pueden combinar
+Orden Radiante
+sus poderes con los de otras órdenes Radiantes de formas es-
+peciales. Por ejemplo, pueden mejorar las capacidades de un
+Nominador de lo Otro para permitir que muchas personas se
+muevan entre planetas. O cuando trabaja junto a un Tejedor de
+Luz, el Forjador de Vínculos del Padre Tormenta puede crear un
+La ceniza flota sobre el campo de batalla en ruinas. Soldados con
+mapa holográfico para mostrar la ubicación precisa de las tropas
+los ojos vidriosos de muchas culturas diferentes escarban entre los
+tal y como estaban la última vez que pasó la alta tormenta.
+escombros frente a un palacio destruido, cuya fachada fue destro-
+A pesar de sus extraordinarios poderes, los Forjadores de
+zada horas antes por una monstruosidad de piedra. De entre las
+Vínculos no son tan aptos para el combate como otras órde-
+cenizas emerge una figura majestuosa; pone su mano sobre cada
+nes; no pueden invocar una hoja esquirlada ni una armadura
+soldado, uno por uno, hablando en sus lenguas nativas y asegu-
+esquirlada, y sus poderes son mucho más adecuados para unir
+rándoles que la victoria está verdaderamente al alcance de la
+a los demás en lugar de dividirlos.
+mano. Luego avanza a grandes zancadas hacia el palacio, donde
+un soldado está reconstruyendo solemnemente la destrozada puer-
+Filosofía de los
+ta de piedra. La Forjadora de Vínculos coloca sus manos sobre los
+Forjadores de Vínculos
+fragmentos y, lentamente, la entrada del palacio, en otros tiempos
+gloriosa, comienza a unirse nuevamente. Los frisos intrincada-
+“Uniré”.
+mente tallados que una vez adornaron su superficie se reforman
+La llamada principal de cualquier Forjador de Vínculos es
+una vez más, un símbolo de que, tal vez, después de todo lo acon-
+fomentar la unidad y unificar a la gente. A veces, esto puede
+tecido, el pueblo aún puede volver a empezar de cero.
+manifestarse como la búsqueda del fin de un conflicto bélico
+Nunca hay más de tres Forjadores de Vínculos completos a
+y la facilitación de eras de paz, o como la reunión de una
+la vez, cada uno de ellos vinculado con uno de los tres spren
+coalición de facciones dispares para un objetivo compartido
+únicos. Estos Radiantes tan excepcionales son el corazón, el
+(como derrotar a un enemigo común). Aunque los temas ge-
+alma y los comandantes de los Caballeros Radiantes, y sue-
+nerales de los juramentos de cada Forjador de Vínculos son
+len ser la más protegida y respetada de las órdenes.
+más o menos los mismos, sus tres spren son tan diferentes
+Los Forjadores de Vínculos usan las potencias de Tensión
+en naturaleza y personalidad que las palabras individuales
+y Adhesión, que generalmente alteran la rigidez de los ob-
+de sus Ideales pueden presentarse de manera completamen-
+jetos y los unen entre sí. Sin embargo, ejercen estos poderes
+te distinta. (Consulta “Juramento de Ideales” antes en este
+en un grado mucho mayor y con propiedades ligeramente
+capítulo para obtener detalles sobre el Primer Ideal).
+diferentes de las otras órdenes que los usan. Como resulta-
+El Segundo Ideal
+do, son capaces de hacer cosas increíbles con la naturaleza
+“Uniré en lugar de dividir. Unificaré a la gente”.
+de los juramentos, los vínculos y el poder. En particular,
+pueden alterar y forjar una Conexión espiritual; este poder
+El Segundo Ideal obliga al Forjador de Vínculos a buscar la
+puede ser tan inocuo como Conectarse con alguien para
+paz y la cooperación, a resolver los conflictos de la manera me-
+hablar un idioma no compartido, pero en Ideales más eleva-
+nos violenta posible y a mediar en las disputas lo mejor posi-
+dos, puede drenar la luz tormentosa del cuerpo de un ene-
+ble. Estos conceptos se aplican a la creación de unidad a todos
+migo o alterar por la fuerza el vínculo entre un Radiante y su
+los niveles, desde los individuos hasta los reinos. Este Ideal re-
+spren. Los Forjadores de Vínculos también pueden moldear
+quiere que considere la metodología de cómo se involucra en
+el Reino Espiritual para crear visiones a las que pueden
+los conflictos y que comprenda la importancia del servicio.
+atraer a otros.
+206 Capítulo 5: Caminos radiantes
+
+--- Página 211 ---
+hacían juramentos Radiantes para demostrar lealtad, aunque
+El Tercer Ideal
+no tenían expectativas de obtener poderes propios. Algunos
+“Asumiré la responsabilidad de mis actos. Si debo caer, me le-
+antiguos Radiantes veían estos juramentos como la forma
+vantaré siendo cada vez mejor persona”.
+más pura de Radianza, y dichos asistentes pasaban a ser
+En términos generales, el Tercer Ideal trata de convertirse considerados miembros de la Orden a pesar de su carencia
+en mejor persona y líder con el tiempo. Requiere que el de poderes Radiantes.
+Forjador de Vínculos reconozca los errores que ha cometido En tiempos de paz y de guerra, los Forjadores de
+y aprenda de ellos para servir mejor a su gente y cumplir Vínculos comandaban a los Caballeros Radiantes, resolvían
+con sus juramentos. disputas entre naciones y ayudaban a establecer gobiernos
+funcionales en lugares que aún no los tenían o que habían
+El Cuarto Ideal
+perdido su liderazgo en la guerra. También mediaban en
+No importa lo hábil que sea una persona como mediadora:
+los conflictos entre las diversas órdenes Radiantes, ya que
+el conflicto es inevitable y, con demasiada frecuencia, ter-
+a menudo chocaban y discutían entre sí (especialmente los
+mina en derramamiento de sangre. Si las negociaciones fra-
+Rompedores del Cielo, que vigilaban a las demás órdenes).
+casan y el Forjador de Vínculos necesita reunir sus efectivos
+En los miles de años transcurridos desde la Traición,
+y luchar, el Cuarto Ideal requiere el reconocimiento de que
+solo han aparecido dos Forjadores de Vínculos. El prime-
+toda vida es preciosa. Las personas tienen su propia vida y
+ro de ellos fue Dalinar Kholin, antiguo alto príncipe de
+otros que se preocupan por ellas, y dejarán un vacío cuando
+Alezkar, ahora rey de Urithiru y comandante supremo de
+se vayan. Esto es cierto no solo para las personas a su servi-
+los Caballeros Radiantes modernos. Durante la Guerra de
+cio, sino también para el enemigo contra el que lucha. Un
+la Venganza en las Llanuras Quebradas, Dalinar comenzó a
+Forjador de Vínculos no puede permitirse que su enemigo
+experimentar extrañas visiones durante las altas tormentas,
+no tenga rostro; debe tener en cuenta el coste de cada movi-
+lo que le otorgó el conocimiento perdido de los antiguos
+miento que hace en pos de minimizar la pérdida de la vida y
+Radiantes. Visualizó la amenaza de un enemigo horrible
+arruinar cuantas menos, mejor.
+que exigiría la unión de todas las naciones de Roshar para
+derrotarlo. Cuando los oyentes fueron engañados para desa-
+Historia de los Forjadores
+tar la tormenta eterna y comenzar la Verdadera Desolación,
+de Vínculos
+Dalinar supo reconocer qué era lo que le habían advertido
+El término “Forjador de Vínculos” es anterior incluso a los
+las visiones. Demostró su compromiso con la unidad al es-
+antiguos Radiantes; originalmente se refería a una persona
+tablecer la coalición de monarcas, y formó un vínculo Nahel
+que podía manipular vínculos y Conexiones. Así es como
+con el Padre Tormenta.
+descubrió y facilitó los primeros vínculos spren, lo que final-
+mente resultó en la fundación de los Caballeros Radiantes.
+Consejo para la DJ: cómo jugar con Forjadores
+Sin embargo, la Esquirla Honor quiso aplicar restricciones
+de Vínculos
+razonables a la potenciación; creía que era necesario con-
+Solo existen tres Forjadores de Vínculos en un momento
+tar con los poderosos Forjadores de Vínculos como una
+dado, y manipular sus extraordinarios poderes como persona-
+orden Radiante, pero se aseguró de que estuvieran limita-
+je jugador desequilibraría el juego. En consecuencia, este libro
+dos en número. Honor solo otorgó la capacidad de crear
+no permite jugar con Forjadores de Vínculos. Sin embargo, si
+un Forjador de Vínculos con su vínculo Nahel a tres spren
+quieres que tus jugadores experimenten esos poderes, pue-
+inusualmente poderosos: el Padre Tormenta (que era la
+des hacerlo recompensándolos con un patrocinador (consulta
+propia Astilla de Honor), la Vigilante Nocturna (Astilla de
+el capítulo 8, “Metas y recompensas”) con el beneficio deta-
+Cultivación) y el Hermano (un spren hecho a partes iguales
+llado a continuación.
+de ambos poderes de las Esquirlas). En los siglos previos a la
+Escudero de Forjador de Vínculos . Si tu patrocinador es
+un Forjador de Vínculos, puedes convertirte en su escudero
+Traición, el número de Forjadores de Vínculos varió, a veces
+(consulta “Escuderos” antes en este capítulo) con acceso a las
+llegando a ser hasta tan solo uno.
+potencias de Adhesión y Tensión.
+A pesar de que los Forjadores de Vínculos estaban limi-
+Debido a los poderes de tu Forjador de Vínculos sobre la
+tados a tres Radiantes completos, podían adoptar escuderos,
+Conexión, mantienes tus capacidades de escudero durante
+a quienes normalmente elegían de la unidad de guerreros
+mucho más tiempo cuando estás lejos de tu patrocinador.
+de élite asignada para protegerlos. Estos escuderos maneja-
+Mientras estás a 80 kilómetros o más de distancia, mantie-
+ban las dos potencias de la orden (pero sin las capacidades
+nes tus capacidades de escudero durante una cantidad de
+únicas de sus superiores). Además de los escuderos, los
+meses equivalente al rango de tu patrocinador.
+Forjadores de Vínculos normalmente también contaban
+con séquitos de asistentes y guardias, muchos de los cuales
+Capítulo 5: Caminos radiantes 207
+
+--- Página 212 ---
+
+--- Página 213 ---
+CORE RULEBOOK VERSION NOI SREV K OOBEL UR ER OC
+capítulo 6
+Potencias
+n Roshar, la luz tormentosa alimenta unas in-
+Cómo obtener grados en potencia
+creíbles capacidades Investidas que se conocen
+A diferencia de las habilidades normales, no puedes acceder
+EE
+como potenciación. En total existen diez poten-
+a una potencia hasta que tu camino Radiante (u otra regla)
+cias, y cada una de ellas controla una fuerza fundamental de
+te otorga al menos 1 grado en ella. Una vez que esto suce-
+la Naturaleza. Al ejercer la Investidura en forma de luz tor-
+de, puedes usar la versión básica de la potencia. Durante el
+mentosa, los potenciadores pueden realizar hazañas maravi-
+progreso del personaje, puedes obtener grados adicionales
+llosas como desafiar la ley de la gravedad, derretir la
+en tus habilidades de potencia de la misma manera que lo
+mismísima piedra de la tierra o crear ilusiones de la nada.
+haces con las demás.
+Si quieres ejercer estos poderes, tendrás que convertirte
+En tu hoja de personaje. Cuando obtengas tu primer
+en un Radiante (consulta el capítulo 5) estableciendo un vín-
+grado en una habilidad de potencia, añádela a la hoja de
+culo con un spren, eligiendo talentos de un camino Radiante
+personaje en las líneas en blanco debajo de tus habilidades,
+y haciendo juramentos para seguir los Ideales de tu orden.
+y luego anota el modificador de habilidad al lado.
+Cómo usar las potencias
+Efectos de potencia
+Tu camino Radiante otorga acceso a las dos potencias que
+Las potencias suelen seguir las mismas reglas que los talen-
+manipula tu orden (consulta la tabla Órdenes Radiantes en
+tos (ver “Cómo usar los caminos y talentos” en el capítulo
+el capítulo 5). Por ejemplo, cuando un Danzante del Filo
+4 y “Cómo usar los caminos Radiantes” en el capítulo 5).
+pronuncia el Primer Ideal, obtiene las habilidades de poten-
+Cuando usas una potencia, las reglas adicionales que siguen
+cia Abrasión y Progresión. Este capítulo presenta la versión
+determinan lo grande y poderosa que es, así como cuánto
+básica de cada una de las potencias, así como los árboles de
+duran sus efectos.
+talentos para mejorarlas.
+Escalado de potencias
+A medida que obtienes más grados en una habilidad de
+Habilidades de potencia
+potencia, esto no solo aumenta tu modificador de habilidad
+Cuando pronuncias el Primer Ideal de tu orden, obtienes
+para las pruebas, sino que también incrementa los efectos de
+sus dos potencias y las añades a las líneas de habilidad en
+tu potencia.
+blanco de la hoja de personaje. Las habilidades de poten-
+cia funcionan de forma muy similar a las demás habilidades:
+Dados de potencia
+Al usar potencias (o sus talentos), a veces tirarás dados para
+◆
+Cada potencia tiene un atributo asociado (indicado entre
+determinar efectos como el daño infligido o la salud recu-
+paréntesis en su título). Como es habitual, este atributo
+perada. Cuando se indique, la magnitud de estos dados de
+determina si una habilidad de potencia se clasifica como
+potencia se escalará con tus grados en esa potencia, como
+física, cognitiva o espiritual.
+se muestra en la tabla Escalado de potencias.
+◆
+Para determinar tu modificador de habilidad para una
+habilidad de potencia, combina tus grados en ella con el
+valor del atributo correspondiente.
+◆
+Cuando hagas una prueba con una potencia, usa su habi-
+lidad de potencia (por ejemplo, haciendo una prueba de
+Abrasión como lo harías con una de Agilidad).
+“Y ahora —dijo Jasnah, con
+voz dura y sombría—, la
+R
+E
+lección. Se quitó el guante”.
+N
+N
+A
+Y
+N
+A
+R
+E
+I
+K
+Capítulo 6: Potencias 209
+
+--- Página 214 ---
+A medida que infundes Investidura y luego drenas esa
+Magnitud de potencia
+infusión con tu potencia, asegúrate de llevar el control de
+Muchas potencias solo pueden afectar a personajes y objetos
+cuánta Investidura queda infundida para saber cuándo ter-
+de hasta un cierto tamaño (consulta “Tamaño y espacio”
+minará el efecto.
+en el capítulo 10), o a una zona de hasta ese mismo tamaño
+(ver “Efectos de zona” en el capítulo 10). La magnitud de
+Cómo infundirte a ti mismo
+potencia aumenta con tus grados en la misma, como se
+Si una potencia te permite infundirte a ti mismo, no ne-
+muestra en la tabla Escalado de potencias.
+cesitas gastar Investidura adicional por adelantado para
+Si no se especifica lo contrario, no puedes infundir un
+mantener la potencia activa durante más de una ronda.
+objeto si su ancho, largo o alto exceden la magnitud de
+Simplemente gasta la cantidad necesaria para la ronda
+tu potencia.
+actual y la potencia la consume automáticamente de tu
+Investidura actual en rondas posteriores hasta que eliges dar
+Escalado de potencias
+el efecto por concluido (no requiere acción).
+Magnitud
+Grados del dado Tamaño
+Cómo gastar investidura infundida
+Independientemente de si una potencia se basa en tu propia
+1 d4 Pequeño (0,75 m)
+Investidura o si has infundido un objeto, normalmente gasta
+2 d6 Mediano (1,5 m)
+1 punto de Investidura al comienzo de cada uno de tus tur-
+3 d8 Grande (3 m)
+nos. Incluso si quedas Inconsciente, tus potencias pueden
+4 d10 Enorme (4,5 m)
+continuar gastando Investidura a medida que pasa el tiempo.
+5 d12 Gargantuesco (6 m)
+Algunas potencias pueden gastar Investidura adicional
+para efectos intensificados. Cuando lo hacen, tu Investidura
+Ataques de potencia
+actual (o la Investidura infundida en un objeto) se reduce
+Si tu potencia te permite hacer un ataque, este sigue las re-
+en esa cantidad. Esto puede ser poderoso, pero también
+glas estándar de la sección “Ataques” del capítulo 10. Ten en
+drena la luz tormentosa más rápidamente y pone fin antes a
+cuenta las siguientes reglas:
+la infusión.
+Por el contrario, algunos talentos permiten que tus
+◆
+Si no puedes sentir al objetivo, tu prueba sufre una
+potencias usen luz tormentosa de manera más eficiente.
+desventaja.
+Por ejemplo, el talento Maestro de los cielos te permite
+◆
+En caso de impacto, suma tu modificador de habilidad
+usar Gravitación para volar indefinidamente sin gastar
+O
+de potencia al daño. Si quieres, puedes gastar para
+Investidura adicional en cada turno.
+convertir tu impacto en un impacto crítico.
+◆
+En caso de fallo, puedes gastar 1 punto de concentración
+Poner fin a una potencia
+por objetivo para hacer un rasguño.
+Cuando una potencia se queda sin Investidura (ya sea por-
+que se alimenta de tu propia Investidura o de un objeto
+Infusión y duración de las potencias
+infundido), o cuando eliges dar por concluida una potencia
+Algunas potencias tienen efectos permanentes que se
+sobre ti mismo (no requiere acción), esa infusión y sus efec-
+mantienen hasta que la luz tormentosa que las alimenta
+tos terminan. Por ejemplo, si usas la potencia de Gravitación
+se agota. Las que se aplican a ti mismo se nutren de tu
+para infundir un objeto con 1 punto de Investidura, esta
+Investidura actual, mientras que las que se aplican a otros
+se agota una ronda más tarde, al comienzo de tu siguiente
+objetos requerirán que las infundas con luz tormentosa
+turno y, cuando lo hace, la potencia termina. Pero si, en
+(lo que permite que la potencia continúe actuando sin
+cambio, infundes ese objeto con 2 puntos de Investidura, la
+tu presencia inmediata). Puedes tener varias infusiones
+potencia permanece activa dos rondas.
+activas a la vez.
+Cómo añadir investidura a una infusión
+Cómo infundir un objeto
+Al inicio de tu turno, pero antes de que tus infusiones gasten
+Cuando una potencia requiere que infundas un objeto, gasta
+Investidura (y potencialmente terminen), podrás usar 1 para
+la cantidad de Investidura indicada, restándola de tu valor
+infundir cualquier cantidad de Investidura adicional a una
+de Investidura actual. Esa misma cantidad se infunde sobre
+infusión y prolongar su efecto. Para hacerlo, debes estar den-
+el efecto de la potencia, lo cual le permite mantener sus
+tro del alcance requerido para crear esa infusión.
+efectos hasta que se gasta toda la Investidura infundida.
+210 Capítulo 6: Potencias
+
+--- Página 215 ---
+Duración fuera del combate
+Anatomía de una potencia
+Aunque las reglas de potencia utilizan un lenguaje centrado
+Las secciones restantes de este capítulo describen las habili-
+en el combate (como, por ejemplo, “ronda”) para describir
+dades de potencia, incluyendo la siguiente información:
+cuánto duran los efectos, también puedes usar esas poten-
+Título (atributo). El título de cada entrada indica el nom-
+cias fuera del combate. En aras de mantener la narrativa
+bre de esa habilidad de potencia, luego, entre paréntesis,
+simplificada en diferentes tipos de escenas, supongamos que
+el atributo asociado a dicha habilidad (que usarás para
+“una ronda” representa lo siguiente:
+calcular tu modificador de habilidad).
+Combate. Una potencia gasta Investidura una vez por
+Potencia. Cada potencia otorga una habilidad básica que
+ronda de combate, al inicio de tu turno, es decir, una vez
+funciona de manera muy similar a un talento. Esta habili-
+cada 10 segundos.
+dad indica las dos órdenes de Radiantes que pueden usar
+Conversación. Una potencia gasta Investidura una vez por
+dicha potencia y la cantidad de acciones necesarias para
+ronda de contribuciones, es decir, aproximadamente una
+activarla, seguido de las reglas básicas para su uso. Los
+vez por minuto.
+Radiantes pueden otorgar estas potencias básicas a sus
+Empeño. Una potencia gasta Investidura una vez por ronda
+escuderos (aunque ellos no pueden usar los talentos que
+de contribuciones; este tiempo varía drásticamente según
+las mejoran).
+el empeño, de 1 a 10 minutos.
+Cómo usar la potencia. Después de las reglas básicas de
+Fuera de las escenas. Si no te encuentras en una escena, su-
+cada potencia, esta sección proporciona más orientación
+pón que cada “ronda” de Investidura dura unos 10 minutos.
+sobre las diversas formas en que puedes usarla.
+Talentos. Finalmente, cada entrada presenta una lista de
+Si una potencia continúa a lo largo de varias escenas, será
+talentos que puedes usar para mejorar esa potencia. No
+la DJ quien decida cuánto tiempo dura en la narrativa. Esto
+podrás elegirlos hasta que pronuncies el Primer Ideal para
+depende en gran medida de lo importante que es la potencia
+ese camino Radiante. Estos talentos siguen las reglas de la
+en la nueva escena. Por ejemplo, si usas Adhesión para pegar
+sección “Cómo usar los caminos y talentos” del capítulo 4.
+un libro al techo, y luego estalla una pelea al final del pasillo,
+la duración de la potencia no es inmediatamente relevante
+para la narrativa; en tal caso, la DJ podría permitir que gaste
+Investidura solo una vez cada 10 minutos (para que todas
+las personas que juegan puedan concentrarse en la pelea en
+lugar de prestar atención a una potencia no relacionada). No
+obstante, si estalla una pelea en la misma habitación que el
+libro, o si el conflicto se centra en la gente que quiere apode-
+rarse de él, la duración de la potencia pasa a tener un peso
+fundamental en la narrativa; en tal caso, la DJ podría decidir
+que la potencia gasta Investidura en cada ronda de combate.
+Uso creativo de potencias
+La descripción de cada habilidad de potencia enumera sus
+capacidades básicas y proporciona mecánicas para usos co-
+munes. A la vez, los talentos de potencia amplían tus opciones
+para las técnicas de potencia específicas. Sin embargo, ¡no es-
+tás limitado a estas reglas! Con la aprobación de la DJ, puedes
+usar tus potencias para hacer casi cualquier cosa.
+Para estos usos más abiertos de las potencias, aún nece-
+sitarás realizar una prueba de habilidad y gastar Investidura
+(en una cantidad determinada por la DJ). Al determinar el re-
+sultado, la DJ debe consultar la tabla Escalado de potencias al
+principio de este capítulo; dicha tabla proporciona orientación
+sobre cómo de extensa es la zona que puedes afectar con tus
+grados actuales, así como la fuerza relativa de tus tiradas de
+A
+N
+daño o efectos similares.
+U
+L
+C Al igual que con cualquier prueba de habilidad, la DJ esta-
+I
+C
+blece la CD, sube la apuesta cuando resulta apropiado y narra
+S
+A
+R
+los resultados de la prueba. ¡Improvisar técnicas creativas de
+D
+N
+potenciación puede ser uno de los momentos más memora-
+A
+E
+bles en una sesión del Archivo de las Tormentas!
+D
+
+--- Página 216 ---
+Potencias
+Abrasión
+Abrasión
+velocidad
+velocidad
+La potencia de Abrasión altera la fuerza de fricción en la
+superficie de un objeto, generalmente eliminándola casi
+Adhesión
+por completo.
+presencia
+Potencia de Abrasión
+Órdenes Radiantes: Danzantes del Filo,
+Portadores del Polvo
+Cohesión
+Activación: 1
+voluntad
+Gasta 1 o más puntos de Investidura para infundir un objeto
+o parte de una superficie en tu cercanía, eliminando casi
+toda su fricción; para hacerlo, debes tener una mano libre
+y tocar el objetivo. Esta infusión usa 1 punto de Investidura
+División
+por ronda y, mientras dura, el objeto o la superficie se desli-
+intelecto
+zan libremente.
+El objetivo no puede superar la magnitud de la potencia
+para tus grados en Abrasión (consulta la tabla Escalado de
+potencias al principio de este capítulo).
+Gravitación
+No puedes usar esta potencia en otros personajes, objetos
+discernimiento
+Investidos (como una armadura esquirlada) u objetos que
+han sido infundidos con luz tormentosa (como esferas infu-
+sas u objetos afectados por potencias).
+Iluminación
+Alternativamente, puedes infundir tu propio cuerpo con
+Abrasión, independientemente de tu tamaño, gastando 1
+presencia
+punto de Investidura por ronda para mantener la potencia.
+Mientras estás infundido, puedes cambiar libremente qué
+partes de tu cuerpo no tienen fricción, y puedes usar Patinar
+Progresión
+y Deslizarse hasta que la potencia termine:
+discernimiento
+0 Patinar . Puedes patinar sobre el suelo como si fuera hielo.
+Gasta 2 puntos de concentración para moverte (como 0) en
+línea recta sobre el suelo. Puedes moverte de esta manera sin
+haber practicado antes, ¡aunque necesitarás experiencia para
+Tensión
+hacerlo con gracia!
+fuerza
+8 Deslizarse . Eliminas instintivamente la fricción de partes
+de tu cuerpo para deslizarte más fácilmente sobre obstáculos o
+escapar de ataduras. Se considera que eres de un tamaño más
+pequeño cuando te escabulles por espacios y obtienes una ven-
+Transformación
+taja en las pruebas para escapar de las ataduras que te sujetan
+voluntad
+por fricción o presión.
+Cómo usar la Abrasión
+Transportación
+Además de las reglas básicas de potencia mencionadas ante-
+intelecto
+riormente, esta sección ofrece más orientación sobre cómo
+usar o interactuar con esta potencia en el juego.
+212 Capítulo 6: Potencias
+
+--- Página 217 ---
+La Abrasión sobre los demás
+abrasión
+Si bien no puedes elegir a otros personajes como objetivos
+directos de la Abrasión, sí puedes elegir los objetos que es-
+tán sosteniendo o vistiendo. Si un personaje está dispuesto,
+8 M ovimiento sin * Abrasión inversa
+fricción Prerrequisito: pronunciar el
+puedes infundir fácilmente sus objetos.
+Prerrequisito: pronunciar el Primer Ideal
+Para infundir un objeto que sostiene un personaje reti-
+Primer Ideal Puedes aumentar la fricción de
+cente, o para infundir una superficie que soporta la mayor
+Mientras estás infuso con un objeto o zona, cancelando el
+parte de su peso (como el suelo sobre el que está de pie o
+Abrasión, aumenta tu movimien- terreno difícil y otorgando una
+un muro que escala), debes tener éxito en una prueba de
+to en 3 e ignora Ralentizado. ventaja para interactuar con él.
+Abrasión contra la Defensa física del objetivo. Si fallas, no
+infundes ese objeto y no gastas Investidura en el intento.
+8 P atinaje grácil 0 R eclamación de luz
+Cuando usas Patinar y su acción tormentosa
+Interacción con superficies
+gratuita de Movimiento, no es- Al inicio de tu turno, puedes
+resbaladizas
+tás obligado a moverte en línea poner fin a cualquier número
+Cuando otro personaje pise o interactúe de cualquier otra
+recta. de infusiones para recuperar su
+manera con una superficie u objeto que hayas vuelto res-
+Investidura restante.
+baladizo con Abrasión, será difícil que se mantenga en pie
+o se aferre a dicho objeto. El personaje debe realizar una
+* Objetivo resbaladizo 8 P otenciación
+prueba de Agilidad enfrentada a tu Abrasión. Si tiene éxito,
+Mientras estás infuso con distante
+se mantiene en pie o se aferra al objeto; de lo contrario, cae
+Abrasión, los ataques no pue- Usas tus potencias y sus talentos
+Tumbado o deja caer el objeto.
+den hacerte un rasguño y las como si tu cercanía fuera de 6
+Acometidas reactivas contra ti metros.
+sufren una desventaja.
+Talentos de abrasión
+Los talentos que siguen, presentados en orden alfabético,
+* Combatiente 8 P atinaje fluido
+escurridizo Mientras tienes Investidura, es-
+aparecen en el árbol de talentos de Abrasión para los cami-
+Mientras estás infuso con tás infuso con Abrasión y Patinar
+nos de Danzante del Filo y Portador del Polvo.
+Abrasión, puedes interrumpir una te cuesta 1 punto menos de
+Abrasión inversa
+acción de Moverse con otras ac- concentración.
+ciones. Infliges daño adicional si
+Prerrequisito: pronunciar el Primer Ideal
+atacas cuando te estás moviendo.
+Activación: *
+En lugar de usar Abrasión para hacer que los objetos no ten-
+gan fricción, ahora puedes hacerlo también para aumentar
+dicha fricción.
+Cuando infundes Abrasión en un objeto o superficie, puedes
+aumentar la fricción del objetivo en lugar de reducirla, lo
+que hace que sea más fácil de agarrar y atravesar. Cuando
+un personaje interactúa con un objeto afectado, obtiene una
+ventaja en las pruebas de Agilidad y Atletismo realizadas
+para dicha interacción. Cuando un personaje se mueve por
+una superficie afectada, ignora el estado Ralentizado que la
+superficie normalmente aplicaría (como por ejemplo debido
+al escalar o cuando se mueve por terreno difícil).
+Combatiente escurridizo
+Prerrequisito: Talento Objetivo resbaladizo
+Activación: *
+Eres poesía en movimiento, capaz de realizar casi cualquier
+hazaña sin disminuir la velocidad.
+A
+N
+Cuando patinas, o te mueves de otra manera, mientras
+U
+L
+C
+estás infundido con Abrasión, puedes interrumpir tu des-
+I
+C
+S
+plazamiento en uno o más puntos, usar otras acciones como
+A
+R
+si hubieras terminado tu acción Moverse, y luego usar el
+D
+N
+A
+movimiento restante como si todavía estuvieras en medio
+E
+D
+de esa acción.
+
+--- Página 218 ---
+Una vez por ronda, cuando haces un ataque con arma Mientras tengas 1 o más puntos de Investidura, obten-
+cuerpo a cuerpo después de comenzar la acción Moverse, drás los beneficios de estar infundido con Abrasión sin
+pero antes de terminarla, puedes tirar 1d4 de daño adicional gastar Investidura, y Patinar te costará 1 punto menos de
+para ese ataque. La magnitud de este dado aumenta con tus concentración.
+grados en Abrasión: con 2 grados, tira 1d6 de daño adicio-
+Patinaje grácil
+nal (en lugar de 1d4), y así sucesivamente. Sin embargo, si
+Prerrequisito: talento Movimiento sin fricción
+C
+añades este dado de daño, la DJ puede gastar de la prue-
+Activación: 8
+ba de ataque para hacer que quedes Tumbado y termines
+Te desplazas de forma dinámica por el campo de batalla, librán-
+inmediatamente la acción Moverse.
+dote de tus enemigos con facilidad.
+Movimiento sin fricción
+Cuando Patinas, no estás obligado a moverte en línea recta.
+Prerrequisito: pronunciar el Primer Ideal
+Potenciación distante
+Activación: 8
+Prerrequisito: talento Abrasión inversa
+Te vuelves cada vez más hábil en el uso de Abrasión para desli-
+Activación: 8
+zarte por tu entorno.
+Puedes infundir objetivos a mayor distancia.
+Mientras estás infundido con Abrasión, tu valor de
+Puedes usar tus potencias y sus talentos como si tu cercanía
+movimiento aumenta en 3 metros e ignoras el estado
+fuera de 6 metros y no necesitas tocar al objetivo.
+Ralentizado cuando te lo impone el terreno difícil, trepar,
+arrastrarte y nadar.
+Reclamación de luz tormentosa
+Prerrequisito: talento Abrasión inversa
+Objetivo resbaladizo
+Activación: 0
+Prerrequisito: talento Patinaje grácil
+Activación: 8
+Puedes recuperar luz tormentosa de las infusiones activas.
+Te vuelves tan resbaladizo que los golpes rápidos y los de refilón
+Después de que tus infusiones gasten su Investidura
+te pasan de largo.
+infundida al inicio de tu turno, podrás poner fin a cualquier
+cantidad de esas infusiones dentro de tu cercanía, y
+Mientras estás infundido con Abrasión, los ataques no pue-
+recuperar toda la Investidura restante con la que fueron
+den hacerte un rasguño y las Acometidas reactivas contra ti
+infundidas.
+sufren una desventaja.
+Patinaje fluido
+Prerrequisito: talento Potenciación distante u Objetivo
+resbaladizo
+Activación: 8
+Sus poderes se manifestaban como
+Te has vuelto tan eficiente al infundirte con Abrasión que se con-
+la capacidad de resbalar sobre
+vierte en un acto reflejo, lo cual te permite deslizarte con gracia
+objetos sin tocarlos realmente. Podía
+y sin esfuerzo.
+hacerse muy resbaladiza, lo cual
+era muy conveniente porque los
+soldados intentaron agarrarla
+mientras rodeaba el ejército alezi.
+Echaron mano a su sobrecamisa
+desabrochada, a su brazo, a su pelo.
+No podían retenerla. Se les resbalaba
+sin más. Era como si intentaran
+contener una canción.
+214 Capítulo 6: Potencias
+
+--- Página 219 ---
+Adhesión
+presencia
+La potencia de Adhesión une cosas. Estas pueden ser ob-
+jetos físicos o, para los potenciadores más avanzados como
+los Forjadores de Vínculos, Conexiones espirituales. El uso
+más común de las infusiones de Adhesión se da para crear
+un Enlace completo, mediante el cual el potenciador adhiere
+dos objetos físicos entre sí manipulando la presión y la resis-
+tencia del aire.
+Potencia de Adhesión
+Órdenes Radiantes: Corredores del Viento, Forjadores
+de Vínculos
+Activación: 1
+Para llevar a cabo un Enlace completo, gasta 1 o más puntos
+de Investidura, infundiéndola en dos objetos no fijados en
+tu cercanía y situados a 1,5 metros o menos el uno del otro;
+debes tener una mano libre y tocar los objetivos. La infusión
+usa 1 punto de Investidura por ronda y los dos objetos que-
+dan pegados entre sí a lo largo de su duración.
+Los objetivos no pueden superar la magnitud de la
+potencia para tus grados en Adhesión (consulta la tabla
+Escalado de potencias al principio de este capítulo).
+Si quieres, uno de estos dos objetos puede ser el suelo, la
+pared, el techo o una superficie similar; puedes designar esta
+superficie como objetivo independientemente de su tamaño.
+No puedes usar esta potencia en otros personajes, objetos
+Investidos (como una armadura esquirlada) u objetos que
+Puedes usar esta potencia de incontables maneras crea-
+han sido infundidos con luz tormentosa (como esferas infu-
+tivas, y depende de la DJ y de ti decidir cómo resolver cada
+sas u objetos afectados por potencias).
+situación. Por ejemplo, si Enlazas la bota de tu oponente al
+suelo, puede quedar Inmovilizado hasta que logra quitarse
+Cómo usar la Adhesión
+la bota. O si Enlazas su brazal a sus pantalones, puede sufrir
+Además de las reglas básicas de potencia mencionadas ante-
+una desventaja en las pruebas que utilizan ese brazo hasta
+riormente, esta sección ofrece más orientación sobre cómo
+que se desenreda.
+usar o interactuar con esta potencia en el juego.
+Cómo romper un Enlace completo
+La adhesión sobre los demás
+Un Enlace completo es bastante fuerte y los objetos
+Si bien no puedes elegir a otros personajes como objetivos
+Enlazados suelen romperse antes de que lo haga el vínculo.
+directos de la Adhesión, sí puedes elegir los objetos que es-
+Un usuario hábil de la Adhesión sabe qué objetos (y qué
+tán sosteniendo o vistiendo. Si un personaje está dispuesto,
+partes) resisten mejor los intentos de separarlos.
+puedes infundir fácilmente los objetos que tiene.
+Un personaje puede intentar separar dos objetos que has
+Para realizar un Enlace completo sobre uno o más obje-
+Enlazado. Para hacerlo, Usa una habilidad para realizar una
+tos que un personaje reticente está sosteniendo o usando,
+A
+prueba de Atletismo enfrentada a tu Adhesión. Si tiene éxi-
+R
+debes superar una prueba de Adhesión contra la Defensa
+R
+A
+to, rompe el Enlace (o el objeto, a discreción de la DJ) y la
+B
+física del objetivo. Si fallas, no infundes esos objetos y no
+I
+I
+infusión termina.
+R
+gastas Investidura en el intento.
+A
+Capítulo 6: Potencias 215
+
+--- Página 220 ---
+Talentos de Adhesión
+adhesión
+Los talentos que siguen, presentados en orden alfabético,
+aparecen en el árbol de talentos de Adhesión para el camino
+▷ Reclamación de luz * Acometida vinculante
+de Corredor del Viento.
+tormentosa Prerrequisito: pronunciar el
+Prerrequisito: pronunciar el Primer Ideal
+Acometida vinculante
+Primer Ideal Cuando impactas con un ataque
+Prerrequisito: pronunciar el Primer Ideal
+O
+cuerpo a cuerpo, gasta o 2
+Acabas las infusiones de
+Activación: *
+puntos de concentración para
+Adhesión a tu alcance y recupe-
+Puedes usar Adhesión sin complicaciones mientras haces tus
+infundir Adhesión en un objeto
+ras su Investidura restante.
+ataques cuerpo a cuerpo.
+que el objetivo esté sosteniendo
+o usando.
+Después de impactar con un ataque cuerpo a cuerpo,
+O
+puedes gastar o 2 puntos de concentración para usar
+Adhesión, lo que infunde Investidura como siempre, pero
+∞ Potenciación * Disparo vinculante
+sin gastar una acción. Al menos uno de los objetivos debe
+distante Puedes usar Acometida vincu-
+ser un objeto que el objetivo está sosteniendo o vistiendo, y
+Usas tus potencias y sus talentos lante cuando impactas con un
+como si tu cercanía fuera de 6 ataque a distancia.
+automáticamente tienes éxito en la prueba para infundirlo.
+metros.
+Como es habitual, el otro objeto o superficie debe estar a
+1,5 metros o menos del primer objeto, pero no necesitas to-
+carlo ni tener una mano libre.
+∞ Adhesión extendida * Trampa adhesiva
+Tus Enlaces completos solo gas- Puedes infundir Adhesión a
+Adhesión extendida
+tan 1 punto de Investidura duran- superficies. Los personajes que
+Prerrequisito: talento Potenciación distante
+te un número de rondas igual a tocan dicha superficie pasan a
+Activación: 8
+tus grados en Adhesión. Enlazarse completamente a ella.
+Tus Enlaces completos consumen menos luz tormentosa, lo que
+les permite ser mucho más duraderos.
+∞ Adhesión viviente ∞ Vínculo superior
+Cuando haces un Enlace completo, en lugar de que la infu-
+Puedes usar Adhesión sobre Superas automáticamente una
+sión utilice 1 punto de Investidura por ronda, gasta 1 punto
+personajes. Cuando están prueba enfrentada para mante-
+de Investidura por un número de rondas igual a tus grados
+Enlazados a un objeto mayor ner los Enlaces completos sobre
+en Adhesión. Por ejemplo, si tienes 3 grados en Adhesión,
+quedan Retenidos, sus pruebas personajes cuya Fuerza no supe-
+físicas sufren una desventaja y ra tus grados en Adhesión.
+esas infusiones gastan Investidura una vez cada 3 rondas.
+los ataques contra ellos obtienen
+Adhesión viviente
+una ventaja.
+Prerrequisito: talento Adhesión extendida
+Activación: 8
+Puedes aplicar Adhesión directamente a otros seres vivos, y pe-
+gar sus cuerpos a superficies.
+Puedes usar Adhesión en personajes, realizando una prueba
+“Bueno, gancho. ¿Puedes pegarme
+como si el objetivo fuera un objeto en su posesión. Cuando
+a la pared?”
+Enlazas a un personaje a un objeto o superficie más grande
+que él, ese personaje queda Retenido, sufre una desventaja
+“Yo… no lo sé —dijo Kaladin”.
+en todas las pruebas físicas y todas las pruebas de ataque en
+“Convendría averiguarlo”.
+su contra obtienen una ventaja.
+Disparo vinculante
+Prerrequisito: talento Acometida vinculante
+Activación: *
+“Pintas” tu munición con Adhesión antes de lanzarla o dispa-
+rarla contra un objetivo, transfiriendo la infusión a una de sus
+posesiones.
+Puedes usar Acometida vinculante cuando impactas con un
+ataque a distancia a cualquier distancia, y no necesitas tocar
+a los objetivos infundidos ni tener una mano libre.
+216 Capítulo 6: Potencias
+
+--- Página 221 ---
+Potenciación distante
+Prerrequisito: talento Reclamación de luz tormentosa
+Activación: 8
+Puedes infundir objetivos a mayor distancia.
+Puedes usar tus potencias y sus talentos como si tu cercanía
+fuera de 6 metros y no necesitas tocar al objetivo. (Como de
+costumbre, si adhieres dos objetos, deben estar a menos de
+1,5 metros el uno del otro).
+Cohesión
+Reclamación de luz tormentosa
+voluntad
+Prerrequisito: pronunciar el Primer Ideal
+La potencia de Cohesión te permite alterar objetos hasta
+Activación: 0
+sus mismísimos ejes, las partículas que componen toda la
+Puedes recuperar luz tormentosa de las infusiones activas.
+materia. Conocida a menudo como escultura de piedra, la
+Después de que tus infusiones gasten su Investidura
+Cohesión permite que incluso sus usuarios más inexpertos
+infundida al inicio de tu turno, podrás poner fin a cualquier
+moldeen la piedra como si fuera arcilla blanda.
+cantidad de esas infusiones dentro de tu cercanía, y
+recuperar toda la Investidura restante con la que fueron
+Potencia de Cohesión
+infundidas.
+Órdenes Radiantes: Custodios de la Piedra, Escultores
+de Voluntad
+Trampa adhesiva
+Activación: 1
+Prerrequisito: talento Disparo vinculante
+Infunde 1 o más puntos de Investidura sobre un objeto no
+Activación: *
+supervisado o sobre una parte de una superficie en tu cerca-
+Puedes infundir Adhesión en superficies, lo que hace que cual-
+nía que esté hecha de piedra; para hacerlo, debes tener una
+quiera que las toca queda atrapado.
+mano libre y tocar el objetivo. Esta infusión usa 1 punto de
+Cuando usas Adhesión, puedes no infundir ningún objeto y,
+Investidura por ronda y, mientras dura, la piedra se vuelve
+en su lugar, solo infundir una parte de una superficie, hasta
+moldeable y suave como la arcilla. Cuando activas esta po-
+el tamaño que puedes afectar con tus grados en Adhesión.
+tencia, puedes darle forma a la piedra inmediatamente como
+Cuando otro personaje toca esta zona infundida, queda
+parte de dicha acción, pero cualquier moldeado elaborado
+sujeto a un Enlace completo con esa superficie durante la
+requiere más tiempo (consulta “Cómo moldear la piedra”).
+duración de la infusión y tu prueba para Enlazarlo de esta
+Los objetivos o superficies no pueden superar la magni-
+manera tiene éxito automáticamente. Por ejemplo, un perso-
+tud de la potencia para tus grados en Cohesión (consulta la
+naje queda Enlazado a la superficie si la está tocando cuan-
+tabla Escalado de potencias al principio de este capítulo).
+do la infundes, si la toca más adelante mientras se mueve
+No puedes usar esta potencia en otros personajes, objetos
+por ella o si es movido a la fuerza hacia ella (como con un
+Investidos (como una armadura esquirlada) u objetos que
+Enlace gravitacional).
+han sido infundidos con luz tormentosa (como esferas infu-
+sas u objetos afectados por potencias).
+Vínculo superior
+Prerrequisito: talento Trampa adhesiva o
+Cómo usar la Cohesión
+Adhesión extendida
+Además de las reglas básicas de potencia mencionadas ante-
+Activación: 8
+riormente, esta sección ofrece más orientación sobre cómo
+Solo los individuos más fuertes pueden romper tus Enlaces
+usar o interactuar con esta potencia en el juego.
+completos.
+Cuando un personaje intenta romper uno de tus Enlaces
+Cómo moldear la piedra
+completos, si su atributo Fuerza es menor o igual a tus gra-
+Podrás tocar piedra infundida con Cohesión y moldearla de
+dos en Adhesión, tienes éxito automáticamente en la prueba
+cualquier forma que desees; cuando esa infusión termina, la
+enfrentada sin necesidad de hacer una tirada.
+piedra se solidifica nuevamente con su nueva forma y vuelve
+a ser dura como antes. Cuando activas la potencia, puedes
+darle forma brevemente a la piedra, pero una remodelación
+más elaborada requiere tiempo adicional. En combate, esto
+generalmente requiere una acción adicional para Interactuar
+(para una remodelación moderada) o Usar una habilidad
+(si tu creación es lo suficientemente detallada como para re-
+querir una prueba de habilidad de Cohesión; la DJ establece
+Capítulo 6: Potencias 217
+
+--- Página 222 ---
+la CD en función de lo elaborado que es el objeto que estás untar piedra blanda sobre un arma que está sosteniendo,
+creando). A discreción de la DJ, algunas tareas de modelado otorgándole el rasgo Pesada con un valor igual a tus grados
+podrían llevar mucho más tiempo, lo que potencialmente en Cohesión.
+podría requerir trabajar en ellas fuera del combate.
+Cómo escapar de piedra sólida
+La Cohesión sobre los demás Cuando se agota la infusión de Cohesión, la piedra vuelve
+Aunque resulta sencillo derretir y remodelar piedra no su- a su estado rígido habitual. Cuando esto sucede, cualquier
+pervisada, tratar de usarla contra oponentes es más difícil. personaje u objeto que se encuentra al menos parcialmente
+Para infundir un objeto sostenido por un personaje reticen- dentro de ella queda Inmovilizado; si una parte suficiente de
+te, o para infundir una superficie que soporta la mayor parte su cuerpo queda atrapada, también puede quedar Retenido.
+de su peso (como el suelo sobre el que está de pie), debes Para liberar a dicho personaje u objeto, el personaje atrapa-
+superar una prueba de Cohesión contra la Defensa física do (u otro personaje que se encuentre en su cercanía) debe
+del objetivo. Si fallas, no infundes ese objeto y no gastas Usar una habilidad, realizando una prueba de Atletismo a la
+Investidura en el intento. que se enfrenta tu Cohesión. Si la supera, se escabulle. De lo
+Puedes usar esta potencia de incontables formas creati- contrario, debe ser desenterrado, lo que puede requerir 10
+vas, y de la DJ y de ti depende el decidir cómo resolver cada minutos o mucho más, según la situación.
+situación. Por ejemplo, puedes infundir el suelo bajo los pies
+Talentos de Cohesión
+de tu oponente, haciendo que se hunda en la tierra y quede
+Ralentizado por el lodazal; o puedes ablandar una parte de
+Los talentos que siguen, presentados en orden alfabético,
+un muro de piedra, derrumbándolo sobre él. Incluso podrías
+aparecen en el árbol de talentos de Adhesión para los cami-
+nos de Custodio de la Piedra y Escultor de Voluntad.
+A través de la piedra
+Prerrequisito: talento Socavón
+cohesión
+Activación: 8
+Cuando tocas piedra, puedes sentir y usar tu Cohesión a través
+2 Lanza de piedra 2 Recuerdos de piedra
+de ella desde una distancia mucho mayor.
+Prerrequisito: pronunciar el Prerrequisito: pronunciar el
+Primer Ideal Primer Ideal
+Podrás usar tus potencias y sus talentos como si tu cercanía
+Gasta 1 punto de Investidura Gasta 1 punto de Investidura
+fuera de 6 metros, siempre que haya una superficie de pie-
+para hacer un ataque a distancia para comunicarte con piedra que
+dra que puedas tocar entre tú y tu objetivo.
+de Cohesión contra Física de estés tocando. Si requiere inter-
+un objetivo situado a 18 metros pretación, realiza una prueba de
+Cohesión suelta
+o menos, tira 2d4 de daño por Cohesión (CD determinada por
+Prerrequisito: Cohesión 4 o más; talento A través
+golpe. la DJ).
+de la piedra
+Activación: 8
+1 Socavón 1 Excavar túnel
+Tu habilidad para esculpir piedra trasciende un medio singular,
+Gastas 1 punto de Investidura y Gastas 1 punto de Investidura
+lo que te permite suavizar y moldear casi cualquier material.
+haces una prueba de Cohesión para moverte a través de la pie-
+Puedes usar Cohesión y sus talentos no solo en piedra, sino
+contra Cognitiva de los objetivos dra como si fuera terreno difícil,
+que eliges que se encuentran dejando un túnel de 1,5 metros en cualquier material sólido que no está vivo, o ya Investido
+sobre un suelo de piedra. Si la detrás de ti.
+o infundido con luz tormentosa.
+superas, el objetivo se hunde en
+Escultura de piedra verdadera
+el suelo y queda Inmovilizado.
+Prerrequisito: Cohesión 2 o más; talento Excavar túnel
+8 Escultura de piedra
+Activación: 8
+8 A través de la piedra
+verdadera
+Usas tus potencias y sus talentos
+Ya no solo te limitas a ablandar la piedra, sino que impones tu
+Prerrequisito: Cohesión 2 o
+como si tu cercanía fuera de 6
+más
+voluntad sobre ella y la moldeas en formas complejas con una
+metros.
+Esculpes piedra profusa y deta-
+simple orden.
+lladamente sin gastar acciones
+Cuando usas Cohesión para dar forma a un objeto o una
+ni tiempo adicional.
+superficie, puedes remodelarlo automáticamente a tu volun-
+tad sin usar ni tiempo ni acciones adicionales. Por ejemplo,
+8 Cohesión suelta ★ Tierra fluida
+puedes aumentar o reducir la elevación instantáneamente,
+Prerrequisito: Cohesión 4 o Después de usar Cohesión, es-
+formar muros o pilares, crear o eliminar terreno difícil, o
+más culpes la piedra bajo tus pies y te
+crear formas o imágenes intrincadas.
+Usas Cohesión sobre cualquier propulsas en cualquier dirección
+material sólido que no está hasta 1,5 metros x tus grados en
+vivo, Investido, o infuso con luz Cohesión.
+tormentosa.
+218 Capítulo 6: Potencias
+
+--- Página 223 ---
+Gasta 1 punto de Investidura y elige una zona de suelo de
+Excavar túnel
+piedra de un tamaño que puedas afectar con tus grados
+Prerrequisito: talento Socavón
+en Cohesión. Luego elige uno o más personajes que estén
+Activación: 1
+tocando el suelo en esa zona. Haz una prueba de Cohesión
+Te infundes Cohesión a ti mismo para apartar piedras de tu ca-
+y compara el resultado con la Defensa cognitiva de los
+mino a medida que te mueves.
+personajes elegidos. Si tienes éxito contra un objetivo, se
+Gasta 1 punto de Investidura para infundirte Cohesión.
+hunde en el suelo y queda Inmovilizado mientras vuelves a
+Mientras dura su efecto, puedes moverte a través de super-
+solidificar la roca. (Consulta “Cómo usar la Cohesión” para
+ficies de piedra y objetos como si estuvieras atravesando un
+conocer las reglas de cómo escapar).
+terreno difícil. Dejas un túnel de 1,5 metros de radio a tu
+Tierra fluida
+paso por el que otros pueden seguirte. Al inicio de cada uno
+Prerrequisito: talento Escultura de piedra verdadera
+de tus turnos, puedes gastar 1 punto de Investidura como 0
+Activación: *
+para mantener esta infusión.
+Si creas túneles cerca de la superficie, un personaje ob-
+Dar forma a la piedra con Cohesión se ha vuelto algo tan na-
+servador podría detectar ondas del material desviado, por lo
+tural que puedes moldear el suelo bajo tus pies mientras esculpes
+que podría llegar a sentir tu presencia.
+activamente otra piedra.
+Después de usar Cohesión, o gastar al menos 1 en uno
+Lanza de piedra
+de sus talentos, puedes dar forma a la piedra bajo tus pies
+Prerrequisito: pronunciar el Primer Ideal
+sin gastar Investidura adicional para hacerlo. La piedra te
+Activación: 2
+empuja hasta 1,5 metros x tus grados en Cohesión, y pue-
+Haces que la superficie de la piedra salga disparada hacia de-
+des elegir que te empuje en cualquier dirección, como, por
+lante en forma de pilares, solidificándose en pleno vuelo antes de
+ejemplo, elevarte hacia arriba en un pilar. Este movimiento
+estrellarse contra tu objetivo.
+no activa Acometidas reactivas.
+Gasta 1 punto de Investidura para realizar un ataque de
+Cohesión a distancia contra la Defensa física de un objetivo
+situado a 18 metros o menos, tirando 2d4 de daño por gol-
+O
+pe. Si impactas, también puedes gastar para dejar al ob-
+jetivo Tumbado. La magnitud de los dados de daño de este
+ataque aumenta con tus grados en Cohesión; con 2 grados,
+tira 2d6 (en lugar de 2d4), y así sucesivamente.
+Recuerdos de piedra
+Prerrequisito: pronunciar el Primer Ideal
+Activación: 2
+Tu conocimiento cada vez más profundo de la tierra te per-
+mite comunicarte con la piedra misma, y tienes visiones de
+cosas que la piedra ha visto.
+Gasta 1 punto de Investidura para comunicarte duran-
+te 1 ronda con la piedra que estás tocando. El conoci-
+miento de la tierra llega lejos, incluida la historia de la
+zona y los recuerdos de sucesos cercanos, pero se co-
+munica en imágenes esculpidas y susurros débiles que
+pueden ser crípticos o incompletos. Para interpretar
+estas comunicaciones, la DJ puede requerir que superes
+una prueba de Cohesión (CD determinada por la DJ).
+Para comunicarte con la piedra durante más de 1 ron-
+da, debes usar este talento varias veces.
+Socavón
+Prerrequisito: talento Lanza de piedra
+Activación: 1
+Haces que el suelo se ablande tan rápido que puede pillar por
+F
+H
+sorpresa a cualquiera que está de pie en él.
+H
+L
+U
+R
+I
+M
+A
+Capítulo 6: Potencias 219
+
+--- Página 224 ---
+División
+intelecto
+La potencia de División te permite destruir y descomponer,
+haciendo que tu objetivo se atrofie, se desmorone o se haga
+pedazos de otras maneras.
+Potencia de División
+Órdenes Radiantes: Portadores del Polvo,
+Rompedores del Cielo
+Activación: 2
+Puedes usar esta potencia para desintegrar a un persona-
+je, objeto o zona que está en tu cercanía. Debes tener una
+mano libre y tocar el objetivo.
+Apuntar a un personaje. Puedes apuntar a un perso-
+naje independientemente de su tamaño. Gasta 1 punto de
+Investidura para realizar un ataque de División cuerpo a
+cuerpo contra la Defensa espiritual del objetivo, tirando 3d4
+de daño espiritual. Si esto reduce la salud del objetivo a 0,
+se desmorona y muere. La magnitud de los dados de daño
+de este ataque aumenta con tus grados en División; con
+2 grados, tira 3d6 (en lugar de 3d4), y así sucesivamente.
+Como de costumbre, con un impacto suma tu modificador
+de División al daño, y si fallas puedes gastar 1 punto de con-
+centración para hacer un rasguño con el ataque.
+Apuntar a un objeto o zona. Para destruir un objeto o
+el contenido de una zona, gasta una cantidad de Investidura
+igual al número de grados de potencia necesarios para afec-
+tar a un objetivo de ese tamaño: 1 para Pequeño, 2 para
+Mediano, y así sucesivamente. Como es habitual, este ob-
+jeto o zona no pueden superar la magnitud de la potencia
+El humo surgía de los pocos arbustos o
+para tus grados en Cohesión (consulta la tabla Escalado
+de los montones de cadáveres ardientes.
+de potencias al principio de este capítulo), incluso si tienes
+Investidura de más.
+Incluso algunas secciones de roca
+Si estás en combate u otra situación tensa, debes superar
+humeaban. Los Portadores del Polvo
+una prueba de División (consulta “División bajo presión”
+habían hecho bien su trabajo.
+para determinar la CD). Si tienes éxito (o si no estás bajo
+presión), tu objetivo se desintegra de la manera elegida por
+ti. Por ejemplo, puedes desmenuzar el objeto hasta conver-
+tirlo en polvo, grabar escritos o figuras artísticas en él, des-
+truir partes de un objeto para formar otro más pequeño o
+crear una cortina de humo que dura 1 ronda en la zona del
+A
+objeto destruido.
+R
+U
+D
+A
+N
+Y
+T
+S
+U
+J
+220 Capítulo 6: Potencias
+
+--- Página 225 ---
+Si intentas realizar grabados o formas elaboradas de
+división
+esta manera, necesitas más tiempo y acciones adicionales.
+Dependiendo de la complejidad, la DJ también podría re-
+querir una prueba de habilidad de División (o aumentar la
+* Deterioro corporal 1 F uga erosionada
+CD para dicha prueba).
+Prerrequisito: pronunciar el Prerrequisito: pronunciar el
+Primer Ideal Primer Ideal
+No puedes usar esta potencia en objetos Investidos
+Cuando impactas con un ataque Gasta 1 o más puntos de
+(como una armadura esquirlada) u objetos que han sido in-
+O
+de División, puedes gastar Investidura para poner fin a la
+fundidos con luz tormentosa (como esferas infusas u objetos
+para hacer que un objetivo de misma cantidad de efectos que
+afectados por potencias).
+ese ataque sufra una lesión. estén provocando los estados
+Retenido o Inmovilizado.
+Cómo usar la División
+Además de las reglas básicas de potencia mencionadas ante-
+* División inflamable 8 M andar chispas
+riormente, esta sección ofrece más orientación sobre cómo
+Cuando usas División, gasta 1 o Cuando hay una superficie só-
+usar o interactuar con esta potencia en el juego.
+más puntos de Investidura para lida entre tu objetivo y tú, usa
+prender fuego al espacio del División como si tu cercanía fue-
+División bajo presión
+objetivo, infligiendo una canti- ra de 6 metros.
+Se requiere una concentración y precisión considerables
+dad daño permanente igual a tu
+para usar División mientras te mueves, trabajas rápidamente
+modificador de División.
+o evitas amenazas. Mientras estés en combate u otra situa-
+ción tensa (como una Misión o una Persecución), deberás
+2 Ráfaga de llamas 8 C hispa ineludible
+superar una prueba de División antes de destruir un objeto
+Gastas 3 puntos de Investidura El alcance de Mandar chispas
+o zona. La CD para dicha prueba está determinada por el
+para realizar un ataque de aumenta al de tu vínculo spren.
+División contra Física que afecta No necesitas línea de efecto
+material al que eliges como objetivo, como se muestra en la
+a todos los objetivos situados en cuando puedes sentir a tu
+tabla División bajo presión.
+una zona de hasta un tamaño objetivo y este no puede usar
+No puedes elegir como objetivo de este modo materiales
+mayor del normal. Prevenirse contra tu División.
+existentes en el cuerpo de un personaje vivo reticente; en su
+lugar, apunta a su Defensa espiritual como se describe en la
+8 D ivisión * Entropía desatada
+potencia de División.
+devastadora Usar la habilidad División te
+Cuando tiras por daño con cuesta una 1 menos. La CD de
+División bajo presión
+División, tira un dado de daño División bajo presión se reduce
+Material CD
+adicional. en 5.
+Aire limpio CD 0
+Vapores como humo y gas CD 5
+Líquidos como sangre, agua y aceite CD 10
+Talentos de División
+Orgánicos como carne, hueso y pulpa CD 15
+Los talentos que siguen, presentados en orden alfabético,
+Sólidos como metal, piedra y cristal CD 20
+aparecen en el árbol de talentos de División para los cami-
+nos de Portador del Polvo y Rompedor del Cielo.
+La División contra los demás
+Chispa ineludible
+Si un personaje está dispuesto, puedes destruir fácilmente
+Prerrequisito: talento Mandar chispas
+un objeto en su posesión. Sin embargo, para destruir un
+Activación: 8
+objeto que sujeta un personaje reticente, o para destruir
+Puedes enviar tu chispa a distancias mucho mayores, buscando
+parte de una superficie que soporta la mayor parte de su
+objetivos doblando esquinas y a través de paredes.
+peso (como el suelo sobre el que se encuentra o una pared
+Puedes usar División y sus talentos como si tu cercanía fuera
+que está escalando), debes superar una prueba de División
+igual al alcance de tu vínculo spren. Sigues necesitando una
+contra su Defensa física o la CD correspondiente de la ta-
+superficie sólida desde ti hasta tu objetivo (como una pared
+bla División bajo presión, la mayor de las dos. Si fallas, no
+o el suelo) a lo largo de la cual puedes enviar una chispa
+destruyes ese objeto y no gastas Investidura en el intento.
+entrópica, pero no necesitarás una línea de efecto hacia tu
+objetivo mientras puedas sentirlo.
+Además, tu objetivo no puede beneficiarse de la acción
+Prevenirse contra ninguno de tus ataques de División.
+Capítulo 6: Potencias 221
+
+--- Página 226 ---
+Gasta 1 o más puntos de Investidura para terminar con
+Deterioro corporal
+esa misma cantidad de efectos sobre ti o un aliado en
+Prerrequisito: pronunciar el Primer Ideal
+tu cercanía. Los efectos elegidos deben aplicar el estado
+Activación: *
+Inmovilizado o Retenido, o añadir una desventaja a una o
+Atrofias los cuerpos de tus enemigos, lo cual les provoca heridas
+más pruebas físicas.
+debilitantes.
+Dependiendo de la fuente del efecto, este talento podría
+Cuando impactas mediante un ataque de División, puedes
+no destruirla completamente a discreción de la DJ, pero
+O
+gastar para infligir una lesión a un objetivo de ese ataque.
+crear espacio u oportunidad para que tu objetivo se moviera
+alrededor de ella o se liberara de su limitación. Si la fuente
+División devastadora
+del efecto permanece al final del siguiente turno del objetivo
+Prerrequisito: talento Ráfaga de llamas
+(como al nadar o cuando usa una armadura con el rasgo
+Activación: 8
+Voluminosa), el efecto se reafirma.
+Tu División es especialmente potente y destructiva.
+Cuando tiras por daño para División o sus talentos, tira un
+Mandar chispas
+dado de daño adicional de la misma magnitud.
+Prerrequisito: talento Deterioro corporal o Fuga
+erosionada
+División inflamable
+Activación: 8
+Prerrequisito: talento Deterioro corporal
+Aniquilas a tus objetivos desde la distancia enviando tu chispa
+Activación: *
+entrópica a través de un objeto físico, lo cual crea una reacción
+Puedes hacer que cualquier cosa arda, incluso materiales que
+en cadena en su destino.
+normalmente no son inflamables.
+Podrás usar División y sus talentos como si tu cercanía fuera
+Cuando afectas a un objetivo con División, puedes gastar 1
+de 6 metros, siempre que haya una superficie sólida desde ti
+o más puntos de Investidura adicionales para hacer que di-
+hasta tu objetivo (como una pared o el suelo) a lo largo de la
+cho objetivo arda durante una cantidad de rondas igual a la
+cual puedas enviar una chispa entrópica.
+Investidura gastada. Si no tuviste que realizar una prueba de
+División cuando afectaste a ese objetivo (consulta “División
+Ráfaga de llamas
+bajo presión”), deberás superar una ahora para hacerlo.
+Prerrequisito: talento División inflamable
+Mientras el efecto persiste, el objetivo queda Afligido, y la
+Activación: 2
+zona a 1,5 metros del objetivo se incendia y se convierte en
+Te vales de División para esparcir calor y llamas sobre una
+terreno peligroso. Ambos efectos infligen un daño por ener-
+zona extensa.
+gía igual a tu modificador de División. A discreción de la DJ,
+Gasta 3 puntos de Investidura y elige una zona de hasta un
+el terreno peligroso puede extenderse en rondas siguientes.
+tamaño mayor que el que normalmente puedes afectar con
+El objetivo o un personaje que se encuentre en su cer-
+tus grados en División; si ya tienes 5 grados en División,
+canía podrán Usar una habilidad para hacer una prueba de
+puedes afectar una zona de hasta 7,5 metros en cada
+Agilidad o Atletismo enfrentada a tu División. Si la supera,
+dimensión.
+el estado Afligido del objetivo termina antes de tiempo, pero
+Realiza un ataque de División contra la Defensa física de
+la zona en llamas sigue ardiendo.
+cada objetivo que se encuentre, al menos parcialmente, den-
+tro de la zona elegida, tirando 3d4 de daño por energía. La
+Entropía desatada
+magnitud de estos dados de daño aumenta con tus grados
+Prerrequisito: talento Mandar chispas o Ráfaga de llamas
+en División; con 2 grados, tira 3d6 (en lugar de 3d4), y así
+Activación: 8
+sucesivamente.
+Te has vuelto tan poderoso que la capacidad de destruir todo lo
+que te rodea se te antoja alarmantemente fácil.
+Te cuesta una 1 menos usar División (pero no sus talen-
+tos). Además, tus CD en la tabla División bajo presión se
+Exhaló una fuerte bocanada de luz
+reducen en 5.
+tormentosa, infundiendo la piedra
+Fuga erosionada
+que lo rodeaba de una creciente
+Prerrequisito: pronunciar el Primer Ideal
+destrucción. La columna se carbonizó,
+Activación: 1
+la misma piedra encendida en llamas.
+Tu capacidad para descomponer lo que tocas asegura que no
+Szeth se arrancó a sí mismo de ella,
+puedes ser contenido por mucho tiempo.
+dejando una estela de ceniza.
+222 Capítulo 6: Potencias
+
+--- Página 227 ---
+Gravitación
+discernimiento
+La potencia de Gravitación puede cambiar la dirección y
+la magnitud de la atracción gravitatoria de un objeto. Las
+infusiones de Gravitación atraen temporalmente un objeto a
+otro punto en lugar del centro de gravedad del planeta. Esto
+se conoce como Enlace básico.
+Potencia de Gravitación
+Órdenes Radiantes: Corredores del Viento,
+Rompedores del Cielo
+Activación: 1
+Para llevar a cabo un Enlace básico, gasta 1 o más puntos de
+Investidura para infundir a un personaje u objeto en tu cerca-
+nía; debes tener una mano libre y tocar el objetivo. Tu objetivo
+no puede superar la magnitud de la potencia para tus grados
+en Cohesión (consulta la tabla Escalado de potencias al prin-
+cipio de este capítulo), incluso si tienes Investidura de más.
+La infusión usa 1 punto de Investidura por ronda y,
+mientras dura, la gravedad del objetivo cambia de dirección
+(como se describe a continuación en “Apuntar a un perso-
+naje” y “Apuntar a un objeto”). Este cambio usa tu valor de
+gravitación, que empieza a los 7,5 metros.
+Tu objetivo no se mueve lo suficientemente rápido como
+para causarle daño al impactar contra un obstáculo. Sin
+embargo, si está en el aire cuando la potencia termina, cae y
+sufre el daño habitual de la caída (consulta “Movimiento y
+posicionamiento” en el capítulo 10).
+Apuntar a un personaje. Puedes apuntar a un perso-
+naje dispuesto, otorgándole un valor de vuelo equivalente a
+tu valor de gravitación durante la duración del efecto. (Para
+Cómo usar la Gravitación
+conocer las reglas sobre el vuelo, consulta “Movimiento y
+Además de las reglas básicas de potencia mencionadas ante-
+posicionamiento” en el capítulo 10).
+riormente, esta sección ofrece más orientación sobre cómo
+Alternativamente, puedes infundirte Gravitación a ti mis-
+usar o interactuar con esta potencia en el juego.
+mo, independientemente de tu tamaño, y obtener el mismo
+valor de vuelo y gastando 1 punto de Investidura por ronda
+La Gravitación sobre los demás
+para mantener la potencia activa.
+Ejecutar un Enlace básico sobre un personaje reticente es
+Para apuntar a un personaje reticente, consulta “La
+todo un desafío. Para ello, haz una prueba de Gravitación
+Gravitación sobre los demás”.
+contra la Defensa física del objetivo. Si la superas, gasta 1
+Apuntar a un objeto. Puedes apuntar a un objeto y de-
+punto de Investidura para moverlo hasta tu valor de gravita-
+clarar una nueva dirección para su atracción gravitatoria. Al
+ción en una dirección elegida por ti.
+inicio de cada uno de tus turnos, después de que la infusión
+Cuando mueves a un objetivo reticente de esta manera,
+gaste otro punto de Investidura, mueve dicho objeto en línea
+queda Inmovilizado hasta el inicio de tu siguiente turno.
+recta hasta tu valor de gravitación.
+V
+E
+Durante este movimiento, si pasa por la cercanía de un ob-
+N
+No puedes usar esta potencia en objetos Investidos
+E
+P
+jeto o superficie al menos un tamaño mayor que él, puede
+(como una armadura esquirlada) u objetos que han sido in-
+R
+A
+intentar agarrarse usando la reacción Evitar peligro para rea-
+T
+fundidos con luz tormentosa (como esferas infusas u objetos
+E
+P
+lizar una prueba de Agilidad enfrentada a tu Gravitación (su
+afectados por potencias).
+Capítulo 6: Potencias
+223
+
+--- Página 228 ---
+estado Inmovilizado no impone una desventaja sobre esta
+gravitación
+prueba). Si tiene éxito, deja de moverse y, mientras continúe
+agarrándose, no podrás moverlo más con esta infusión.
+1 As del vuelo ∞ Impacto
+Maniobras complicadas
+Prerrequisito: pronunciar el gravitacional
+Al volar o mover algo con un Enlace básico, normalmente
+Primer Ideal Prerrequisito: pronunciar el
+no necesitas realizar una prueba. Sin embargo, si estás tra-
+Vuelas hasta tu valor de gravi- Primer Ideal
+tando de hacer algo particularmente peligroso o complica-
+tación, que se incrementa de Usas un Enlace básico para ha-
+do, como volar a través de una alta tormenta o hacer pasar
+manera permanente a 12 me- cer que un objetivo golpee una
+tros. Puedes gastar 1 punto de superficie sólida, infligiendo 1d4
+un objeto a través de un espacio estrecho, tienes que superar
+concentración para realizar un de daño por golpe por cada 3
+una prueba de Gravitación para que dicho Enlace surta
+ataque con arma cuerpo a cuer- metros que se ha movido. El ob-
+efecto (la CD queda a discreción de la DJ).
+po durante este vuelo. jetivo puede Evitar peligro para
+reducir el daño a la mitad.
+Talentos de Gravitación
+Los talentos que siguen, presentados en orden alfabético,
+∞ Vuelo estable ★ Enlaces múltiples
+aparecen en el árbol de talentos de Gravitación para los ca-
+Mientras mantienes un Enlace Cuando desplazas a un persona-
+minos de Corredor del Viento y Rompedor del Cielo.
+básico sobre ti mismo, tus ata- je no dispuesto con Gravitación,
+ques a distancia no sufren una puedes infundir Investidura has-
+As del vuelo
+desventaja por estar volando ta tus grados en Gravitación para
+Prerrequisito: pronunciar el Primer Ideal
+ni por tener un punto de apoyo prolongar el efecto.
+Activación: 1
+inestable.
+Eres un maestro de los cielos y manejas tu arma con destreza
+mientras vuelas.
+∞ Vuelo en grupo 2 Disparo con Enlace
+Cuando usas un Enlace básico Propulsas un objeto hacia un ob-
+Mientras mantienes un Enlace básico sobre ti, vuelas una
+fuera del combate, puedes jetivo, gastando una cantidad de
+distancia igual a tu valor de gravitación. Una vez durante
+infundir a tantos personajes Investidura igual a la distancia di-
+este movimiento, puedes gastar 1 punto de concentración
+adicionales como tus grados vidida por el valor de gravitación.
+para realizar un ataque con un arma cuerpo a cuerpo como
+en Gravitación sin gastar Haz un ataque de Gravitación a
+parte de la misma acción. Después de resolver este ataque,
+Investidura adicional. distancia contra Física y tira 2d4
+puedes continuar tu movimiento.
+de daño por golpe.
+Además, cuando adquieres este talento, tu valor de gravi-
+tación aumenta a 12 metros.
+∞ Escuadrón aéreo ∞ Maestro de los cielos
+Prerrequisito: Gravitación 3 Mientras tengas Investidura,
+Disparo con Enlace
+o más siempre estarás infuso con
+Prerrequisito: talento Impacto gravitacional
+Puedes usar Vuelo en grupo en Gravitación.
+Activación: 2
+combate.
+Aplicas múltiples Enlaces básicos a un objeto, impulsándolo a
+varias veces la fuerza de la gravedad.
+Tocas un objeto no supervisado de un tamaño que
+Los Enlaces no eran como el vuelo de
+puedes afectar con tus grados en Gravitación y luego lo
+una golondrina, sino más bien como
+impulsas hacia un objetivo en tu línea de efecto, gastando
+estar atado a cuerdas, zarandeado
+una cantidad de Investidura igual a la distancia a ese
+objetivo dividida por tu valor de gravitación (redondeando
+como una marioneta. Era fácil perder
+hacia arriba).
+el control.
+Haz un ataque de Gravitación a distancia contra la
+Defensa física de ese objetivo, tirando 2d4 de daño por gol-
+pe. La magnitud de estos dados de daño aumenta con tus
+grados en Gravitación; con 2 grados, tira 2d6 (en lugar de
+2d4), y así sucesivamente.
+224 Capítulo 6: Potencias
+
+--- Página 229 ---
+Enlaces múltiples Vuelo en grupo
+Prerrequisito: talento Impacto gravitacional Prerrequisito: talento Vuelo estable
+Activación: * Activación: 8
+Puedes aplicar varios Enlaces básicos sobre un enemigo. Puedes infundir Gravitación a varios aliados a la vez.
+Después de superar una prueba de Gravitación para mover Cuando no estés en combate y gastes 1 o más puntos de
+a un personaje reticente, puedes infundirle una cantidad Investidura para infundirte a ti mismo o a un personaje dispues-
+de Investidura igual a tus grados en Gravitación (en lugar to con un Enlace básico, también podrás infundir Gravitación
+de solo 1 punto de Investidura). Cuando lo hagas, el efecto a una cantidad adicional de personajes dispuestos, hasta tus
+continuará hasta que la infusión finalice (en lugar de hasta el grados en Gravitación. Cada objetivo debe estar en tu cercanía.
+inicio de tu siguiente turno). Estas infusiones duran lo mismo que la infusión original y no
+requieren Investidura adicional para crearlas o mantenerlas.
+Escuadrón aéreo
+Prerrequisito: Gravitación 3 o más; talento Vuelo en grupo Vuelo estable
+Activación: 8 Prerrequisito: talento As del vuelo
+Activación: 8
+Has entrenado a tus aliados en escenarios de combate aéreo,
+preparándolos para volar juntos en cualquier momento. Eres un experto en lanzar ataques desde lejos en pleno vuelo.
+Puedes usar Vuelo en grupo durante el combate. Mientras mantienes un Enlace básico sobre ti, tus ataques a
+distancia no sufren desventajas debido al vuelo u otras causas
+Impacto gravitacional
+provocadas por el punto de apoyo inestable.
+Prerrequisito: pronunciar el Primer Ideal
+Activación: 8
+Tus Enlaces básicos se vuelven más poderosos y potencialmente
+peligrosos al impactar.
+Cuando usas un Enlace básico para mover a una criatura
+reticente o un objeto hacia una superficie sólida, la colisión
+detiene ese movimiento antes de tiempo, y podrás elegir que
+el objetivo Enlazado sufra 1d4 de daño por golpe por cada
+3 metros que se haya movido con ese Enlace en este turno.
+Por ejemplo, si lo mueves 7,5 metros y luego choca contra
+una pared, sufre 2d4 de daño por golpe.
+Tu objetivo puede usar la reacción Evitar peligro para
+realizar una prueba de Agilidad enfrentada a tu Gravitación,
+sufriendo la mitad de daño en caso de éxito.
+La magnitud de estos dados de daño aumenta con tus
+grados en Gravitación; con 2 grados, tira 1d6 (en lugar de
+1d4), y así sucesivamente.
+Maestro de los cielos
+Prerrequisito: talento Vuelo en grupo o Disparo
+con Enlace
+Activación: 8
+Te has vuelto tan eficiente al infundirte Gravitación que pasa a
+ser un acto subconsciente, lo cual te permite volar sin fin.
+Mientras tengas 1 o más puntos de Investidura, obtendrás
+los beneficios de estar infundido con Gravitación sin gastar
+Investidura.
+I
+R
+A
+A
+S
+O
+K
+A
+H
+I
+T
+T
+N
+A
+
+--- Página 230 ---
+Un personaje puede Usar una habilidad para examinar
+tu ilusión con atención, especialmente si fallas la prueba
+de Iluminación anterior o si tus aliados o tú sufrís una
+Complicación en una prueba relacionada. En este caso, rea-
+liza una prueba de Iluminación enfrentada a la prueba de
+Percepción del personaje. Si el resultado de su prueba supe-
+ra al tuyo, detecta la ilusión (consulta “Detectar ilusiones”
+para conocer los efectos).
+Puedes hacer estas pruebas para engañar a los personajes
+Iluminación
+incluso si esa ilusión está actualmente fuera del alcance de
+presencia
+tu vínculo spren.
+La potencia de Iluminación puede crear ilusiones convin-
+centes, tanto visuales como auditivas. Esta capacidad se
+Cómo usar la Iluminación
+suele conocer como tejer luz, aunque tanto los Tejedores
+Además de las reglas básicas de potencia mencionadas ante-
+de Luz como los Vigilantes de la Verdad pueden usar
+riormente, esta sección ofrece más orientación sobre cómo
+esta potencia.
+usar o interactuar con esta potencia en el juego.
+Potencia de Iluminación
+Imaginar ilusiones
+Órdenes Radiantes: Tejedores de Luz, Vigilantes
+Tejer luz resulta más fácil cuando se replica algo con lo que
+de la Verdad
+estás familiarizado. Si tienes buena memoria o si haces refe-
+Activación: 1
+rencia a un material creado por ti (como un boceto, una pin-
+Para tejer una ilusión con luz, gasta 1 o más puntos de
+tura o un pasaje escrito), es posible que puedas tejer con luz
+Investidura para infundirla en el aire en un espacio dentro
+algo que solo hayas visto unas pocas veces, pero tus pruebas
+del alcance de tu vínculo spren. Esta ilusión no puede exce-
+de Iluminación para engañar a los espectadores probable-
+der el tamaño de la potencia para tus grados en Iluminación
+mente sufrirán una desventaja.
+(consulta la tabla Escalado de potencias al principio de este
+Es muy difícil tejer con luz algo que solo has visto en
+capítulo).
+dibujos o en tu imaginación. La DJ será quien decida la
+Los Tejidos de Luz suelen adoptar la forma de un holo-
+dificultad de esta tarea, pero podrías enfrentarte a dificulta-
+grama tridimensional que representa un personaje, objeto
+des como una magnitud de potencia reducida, un coste de
+o fenómeno con el que estás familiarizado. Esta ilusión está
+Investidura adicional, un coste en concentración, una CD
+compuesta de luz, está animada y va acompañada de soni-
+aumentada o una desventaja en la tirada de d20.
+dos producidos por las vibraciones de tu spren vinculado.
+Controlar ilusiones
+Ilusiones simples y complejas. Si la ilusión representa
+Puedes controlar todas tus ilusiones complejas que están
+un objeto simple sin sonido ni animaciones, la infusión usa 1
+dentro del alcance de tu vínculo spren. Cada una de ellas
+punto de Investidura cada 10 minutos. Si representa un per-
+puede simular que interactúa con su entorno; por ejemplo,
+sonaje o un objeto más complejo, en su lugar usa 1 punto de
+puedes hacer que un árbol ilusorio se mueva con el vien-
+Investidura por ronda. A lo largo de su duración, la ilusión
+to, o hacer que un niño ilusorio intente atrapar una pelota
+permanece activa incluso si te mueves fuera de su alcance.
+(pero que no lo consiga intencionadamente). Sin embargo,
+Puedes mover y controlar una ilusión compleja, como se de-
+tu ilusión no tiene sentidos propios, por lo que no puedes
+talla en “Cómo controlar ilusiones”.
+asignarle tareas que requieren sentidos o conocimientos que
+Cómo ocultarte. Alternativamente, si tienes 1 punto de
+no tienes.
+Investidura o más, puedes usar la Iluminación para crear un
+En tu turno, una ilusión puede moverse, de una manera
+engaño ilusorio sobre ti mismo sin gastar Investidura. Este
+razonable, hasta tu valor de movimiento. Puedes usar 0 para
+engaño dura hasta que le pones fin como 0 o te quedas sin
+que una o más de tus ilusiones lleven a cabo tareas simples
+Investidura.
+y que no requieran esfuerzo, como cruzar la calle o decir
+Cómo engañar a otros personajes. Si tu ilusión es
+algo con un grito. Podrás usar 1 para asignarle a una de tus
+un objeto simple o un medio para ocultarte, consigues en-
+ilusiones algo que requiera tu atención, como conversar de
+gañar automáticamente a todos los personajes si no tienen
+manera convincente con alguien.
+una razón para sospechar de ti. Si creas una ilusión más
+Si te mueves fuera del alcance, tus ilusiones solo podrán
+compleja (como ocultar a otro personaje), la DJ podrá
+realizar las últimas tareas simples y que no requieran es-
+requerir que hagas una prueba de Iluminación contra la
+fuerzo que les hayas asignado, como, por ejemplo, quedarse
+Defensa cognitiva de cualquier personaje que sea un ob-
+mirando fijamente una estantería llena de libros con actitud
+servador pasivo de dicha ilusión; si la superas, tu ilusión le
+pensativa.
+resulta convincente.
+226 Capítulo 6: Potencias
+
+--- Página 231 ---
+Mantener ilusiones Iluminación espiritual
+Cuando tus ilusiones comiencen a quedarse sin luz tormen- Prerrequisito: talento Destello desorientador
+tosa, podrás mantenerlas sin problemas alimentándolas con Activación: 1
+Investidura de tu propio suministro. Podrás usar 0 para
+Usas el tejido de luz para mostrar a tus aliados posibilidades
+infundir 1 o más puntos de Investidura sobre cualquier ilu-
+inspiradoras de en qué podrían convertirse.
+sión que elijas dentro del alcance de tu vínculo spren (gas-
+Gasta 2 puntos de Investidura para crear un tejido de luz
+tando un punto de Investidura por cada una de ellas).
+momentáneo cerca de un aliado al que puedas sentir dentro
+del alcance de tu vínculo spren. Ese aliado está Resuelto y
+Detectar ilusiones
+Concentrado hasta el final de su próximo turno.
+Una prueba de Iluminación fallida o una Complicación
+desafortunada pueden hacer que un objetivo detecte que
+una ilusión es artificial. Sin embargo, cuando esto sucede,
+iluminación
+la ilusión en sí persiste, e incluso podría continuar ocultan-
+do algo más en las circunstancias adecuadas. Por ejemplo,
+si tejes con luz un pedrusco a tu alrededor, una prueba de
+1 Ilusión distractiva ★ Tejidos de luz
+Prerrequisito: pronunciar el persistentes
+Percepción superada puede alertar a un enemigo de que
+Primer Ideal Prerrequisito: pronunciar el
+algo va mal; no obstante, no podrá ver lo que se esconde en
+Gastas 1 punto de Investidura Primer Ideal
+su interior. (Sin embargo, ¡tú tampoco puedes ver a través
+para tejer con luz una ilusión de Puedes infundir una ilusión en
+de tu pedrusco ilusorio!)
+ti mismo o un aliado. Hasta que una esfera. Dicha ilusión se
+Las pruebas no son la única forma de detectar una ilu-
+un ataque falla contra su obje- mueve con la esfera, gastando
+sión (o de sospechar de una). Si un personaje detecta una,
+tivo, los ataques contra dicho 1 punto de Investidura por una
+puede alertar a sus aliados de que no es real. Y si un objeto
+objetivo sufren una desventaja y cantidad de rondas igual a tus
+físico atraviesa una ilusión, aparece un borrón blanco en la
+no pueden hacer un rasguño. grados en Iluminación.
+intersección, y un personaje familiarizado con el tejido de
+luz podría reconocer estos signos reveladores. Estos sucesos
+2 Destello ▷ R eclamación de luz
+pueden delatar la presencia del tejido de luz, y cualquier
+desorientador tormentosa
+personaje que quiera determinar los límites o la fuente
+Gasta 1 punto de Investidura Finalizas las infusiones de
+para proyectar luz sobre una Iluminación dentro del alcance
+de una ilusión podrá realizar una prueba de Deducción o
+zona y realizar una prueba de de tu vínculo spren y recuperas
+Percepción enfrentada a tu Iluminación.
+Iluminación contra Cognitiva de su Investidura restante.
+los personajes que se encuen-
+Talentos de Iluminación
+tren en dicha zona para dejarles
+Los talentos que siguen, presentados en orden alfabético,
+Desorientados.
+aparecen en el árbol de talentos de Iluminación para los ca-
+minos de Tejedor de Luz y Vigilante de la Verdad.
+1 Iluminación espiritual ∞ Tejido de luz
+Gasta 2 puntos de Investidura multiplicador
+Destello desorientador
+para hacer que un aliado esté Puedes tejer con luz una can-
+Prerrequisito: talento Ilusión distractiva
+Resuelto y Concentrado. tidad de ilusiones adicionales
+Activación: 2
+igual a tus grados en Iluminación
+Creas una breve explosión de luz y sonido que asalta los senti-
+sin gastar más Investidura.
+dos de los objetivos cercanos a ti.
+Gasta 1 punto de Investidura para proyectar una explosión
+1 Verdad dolorosa ∞ Ilusiones infinitas
+de luz en una zona en tu cercanía, hasta el tamaño que
+Gasta 2 puntos de Investidura y Puedes mantener las ilusiones
+puedas crear con tus grados en Iluminación. Haz una prue-
+haz una prueba de Iluminación de manera indefinida. Mientras
+ba de Iluminación y compara el resultado con la Defensa
+contra Espiritual de un objetivo. te quede Investidura, las infu-
+Si la superas, queda Ralentizado siones de Iluminación dentro del
+cognitiva de los personajes en esa zona. Si tienes éxito
+y debe Moverse, alejándose de alcance de tu vínculo spren no
+contra un objetivo, queda Desorientado hasta el final de su
+ti en su siguiente turno, o gastar gastarán Investidura.
+siguiente turno.
+concentración para no tener que
+hacerlo.
+Capítulo 6: Potencias 227
+
+--- Página 232 ---
+Investidura por ronda, gasta 1 punto de Investidura durante
+Ilusión distractiva
+un número de rondas igual a tus grados en Iluminación; por
+Prerrequisito: pronunciar el Primer Ideal
+ejemplo, si tienes 3 grados en Iluminación, tus infusiones en
+Activación: 1
+esferas gastan Investidura una vez cada 3 rondas.
+Creas una copia ilusoria en movimiento de alguien para dis-
+traer a tus enemigos.
+Verdad dolorosa
+Prerrequisito: talento Iluminación espiritual
+Gasta 1 punto de Investidura para tejer con luz un duplicado
+Activación: 1
+ilusorio, ya sea de ti mismo o de un aliado al que puedas sen-
+tir dentro del alcance de tu vínculo spren. La ilusión aparece
+Creas una imagen perturbadora de en qué podría haberse conver-
+en el espacio de ese personaje y se mueve con él. Los ataques
+tido un enemigo si hubiera tomado un mejor camino en la vida.
+contra ese personaje sufren una desventaja y no pueden ha-
+Gasta 2 puntos de Investidura y haz una prueba de
+cer un rasguño. La ilusión termina después de que un ataque
+Iluminación contra la Defensa espiritual de un objetivo al
+falla contra ese personaje o al final de la escena.
+que puedes sentir dentro del alcance de tu vínculo spren.
+Si la superas, el objetivo queda conmocionado y está
+Ilusiones infinitas
+Ralentizado hasta el final de su siguiente turno.
+Prerrequisito: talento Tejido de luz multiplicador o
+Al inicio de su siguiente turno, el objetivo debe
+Iluminación espiritual
+gastar una cantidad de concentración igual a tus
+Activación: 8
+grados en Iluminación para poner fin a este efecto
+Te has vuelto tan eficiente a la hora de potenciar tus ilusiones
+como 0, o usar inmediatamente la acción Moverse
+que puedes mantenerlas indefinidamente.
+para alejarse de ti lo máximo posible.
+Mientras tengas 1 o más puntos de Investidura, tus infusio-
+nes de Iluminación dentro del alcance de tu vínculo spren
+no gastarán la Investidura infundida al inicio de tu turno.
+UNA HOJA ESQUIRLADA ILUSORIA
+SIgUE SIENDO IgUAL DE IMPONENTE
+Reclamación de luz tormentosa
+Prerrequisito: talento Ilusión distractiva
+Activación: 0
+Puedes recuperar luz tormentosa de las ilusiones activas.
+Después de que tus infusiones gasten su Investidura infun-
+dida al inicio de tu turno, podrás poner fin a cualquier can-
+tidad de esas infusiones en tu cercanía, recuperando toda la
+Investidura restante con la que fueron infundidas.
+Tejido de luz multiplicador
+Prerrequisito: talento Reclamación de luz tormentosa
+Activación: 8
+Puedes crear múltiples ilusiones a la vez sin esfuerzo.
+Cuando creas una ilusión con tejido de luz, puedes formar
+una cantidad de ilusiones adicionales hasta alcanzar tus
+grados en Iluminación. Estas infusiones duran lo mis-
+mo que la infusión original y no requieren de ninguna
+Investidura adicional para crearlas o mantenerlas.
+Tejidos de luz persistentes
+Prerrequisito: pronunciar el Primer Ideal
+Activación: *
+Infundes esferas con tu Iluminación, creando ilusiones que
+perduran mucho tiempo después de que te has alejado.
+Cuando creas una ilusión con tejido de luz, en lugar de
+crearla en el aire, puedes infundir su Investidura en una es-
+fera o gema sin recubrimiento situada a 1,5 metros o menos
+Z
+T
+de esa ilusión. A lo largo de la duración, la ilusión se mueve
+I
+T
+S
+con la gema; por ejemplo, un aliado podría llevar esta gema
+N
+A
+consigo para alargar la duración de un disfraz ilusorio que
+I
+R
+O
+L
+has creado. En lugar de que la infusión gaste 1 punto de
+F
+228 Capítulo 6: Potencias
+
+--- Página 233 ---
+Regeneración
+La Regeneración cura transformando la forma Física
+del objetivo para que encaje mejor con su yo Cognitivo y
+Espiritual. Por lo tanto, el efecto narrativo de la sanación de
+cada personaje depende de su esencia y de cómo se ve a sí
+mismo. Cuando usas Progresión para curar a un personaje,
+es este (y no tú) quien determina, probablemente de forma
+subconsciente, qué se cura y cómo.
+Progresión
+progresión
+discernimiento
+La potencia de Progresión controla el crecimiento y la cu-
+2 Regeneración de 2 Crecimiento
+ración de los seres vivos. Sus dos efectos principales son el
+lesión explosivo
+Crecimiento (que puede hacer que las plantas broten y
+Prerrequisito: pronunciar el Prerrequisito: pronunciar el
+Primer Ideal Primer Ideal
+maduren rápidamente) y la Regeneración (que puede cu-
+Gasta 2 puntos de Investidura Gasta 1 punto de Investidura
+rar el cuerpo y el alma de un personaje).
+para hacer que un objetivo se para hacer que en una zona crez-
+Potencia de Progresión
+recupere de una lesión temporal, can plantas de manera inmedia-
+o gasta 3 puntos para que se re- ta. Haz un ataque de Progresión
+Órdenes Radiantes: Danzantes del Filo, Vigilantes
+cupere de una permanente. contra Física de los personajes
+de la Verdad
+que elijas y tira 2d4 de daño por
+Activación: 2
+golpe o laceración.
+Infundes vida en un ser vivo que no eres tú y que está en tu
+cercanía; debes tener una mano libre y tocar al objetivo.
+★ Revitalización rápida ∞ Crecimiento
+Crecimiento de plantas. Si eliges una planta viva (o
+Prerrequisito: Progresión 2 o desmesurado
+su semilla) como objetivo de Crecimiento, gasta 1 punto de
+más Cuando infundes Crecimiento en
+Investidura para hacer que crezca rápidamente hasta alcan-
+Cuando usas Revitalizar, recu- una planta, haz una prueba de
+zar el tamaño que elijas. Esto no puede superar la magnitud
+peras una cantidad de salud Progresión (CD 15) para hacer
+de potencia para tus grados en Progresión (consulta la tabla
+igual a 1d6 + tu modificador de que crezca muy por encima de
+Progresión. Mientras tengas los límites de tamaño y fortaleza
+Escalado de potencias al principio de este capítulo), ni los
+Investidura, tú y los objetivos de de su especie.
+límites normales de las plantas más grandes de su especie.
+Regeneración podréis añadir tu
+Regeneración de personajes. Si eliges a un personaje
+modificador de Progresión a las
+vivo como objetivo de Regeneración, infúndele 1 o más pun-
+tiradas de lesión.
+tos de Investidura. La infusión usa 1 punto de Investidura
+por ronda y, a lo largo de su duración, ese personaje recu-
+∞ Regeneración ★ Progresión fiable
+pera una cantidad de salud igual a 1d4 + tu modificador de
+extendida Prerrequisito: Progresión 2 o
+Progresión al inicio de cada uno de sus turnos. La magnitud
+Tus infusiones de Regeneración más
+de este dado aumenta con tus grados en Progresión: con 2
+solo gastan 1 punto de Cuando realices una tirada de
+grados, tira 1d6 al recuperar salud (en lugar de 1d4), y así
+Investidura durante un número Progresión, podrás hacer que el
+sucesivamente.
+de rondas igual a tus grados en resultado sea igual a tus grados
+Progresión. en Progresión.
+Cómo usar la Progresión
+Además de las reglas básicas de potencia mencionadas ante-
+3 Desde el abismo ∞ Fuente de vida
+riormente, esta sección ofrece más orientación sobre cómo
+Prerrequisito: Progresión 3 o Te cuesta una 1 menos usar la
+más Progresión y sus talentos.
+usar o interactuar con esta potencia en el juego.
+Gasta 3 puntos de Investidura
+Crecimiento
+para devolver a la vida a un
+El Crecimiento se puede utilizar de muchas maneras y de
+personaje dispuesto, que
+haya muerto durante el último
+forma creativa. Puedes hacer crecer un camino sobre un
+minuto.
+obstáculo o crear una ocultación discreta. Puedes bloquear
+la línea de efecto, crear cobertura o terreno difícil, o erigir
+obstáculos que hay que escalar. De la DJ y de ti depende
+cómo resolver estos usos creativos.
+Capítulo 6: Potencias 229
+
+--- Página 234 ---
+cambiar el resultado para hacerlo igual a tus grados en
+Talentos de Progresión
+Progresión (no requiere acción).
+Los talentos que siguen, presentados en orden alfabético,
+aparecen en el árbol de talentos de Progresión para los ca-
+Regeneración de lesión
+minos de Danzante del Filo y Vigilante de la Verdad.
+Prerrequisito: pronunciar el Primer Ideal
+Activación: 2
+Crecimiento explosivo
+Usas la Regeneración para recuperarte rápidamente de lesiones,
+Prerrequisito: pronunciar el Primer Ideal
+incluidas las permanentes y las partes del cuerpo que faltan.
+Activación: 2
+Gasta 2 puntos de Investidura para hacer que un personaje
+Haces crecer plantas de forma explosiva, golpeando y atrapando
+dispuesto al que toques o tú mismo os recuperéis instantá-
+a tus enemigos.
+neamente de una lesión temporal elegida por el objetivo, o
+Gasta 1 punto de Investidura para usar Crecimiento sobre una
+gasta 3 puntos para curar una lesión permanente.
+zona de hasta el tamaño que puedas afectar con tus grados
+en Progresión. Realiza un ataque de Progresión y compara el
+Regeneración extendida
+resultado de la prueba con la Defensa física de los personajes
+Prerrequisito: talento Revitalización rápida
+de tu elección en esa zona. Tira 2d4 de daño, infligiendo daño
+Activación: 8
+por golpe o por laceración (lo que sea lógico dependiendo de
+Tus infusiones de Regeneración consumen luz tormentosa con
+las plantas implicadas). La magnitud de los dados de daño de
+mucha menos rapidez.
+este ataque aumenta con tus grados en Progresión; con 2 gra-
+Cuando infundes Regeneración en un personaje, en lugar de
+dos, tira 2d6 (en lugar de 2d4), y así sucesivamente.
+gastar 1 punto de Investidura por ronda, gasta 1 punto de
+O
+Podrás gastar para hacer que cualquier número de ob-
+Investidura durante un número de rondas igual a tus grados
+jetivos que impactes queden Inmovilizados hasta el final de
+en Progresión. Por ejemplo, si tienes 3 grados en Progresión,
+tu próximo turno.
+esas infusiones gastan Investidura una vez cada 3 rondas.
+Desde el abismo
+Revitalización rápida
+Prerrequisito: Progresión 3 o más; talento
+Prerrequisito: Progresión 2 o más; talento
+Regeneración extendida
+Regeneración de lesión
+Activación: 3
+Activación: *
+Usas la Regeneración para rescatar a alguien de las garras de
+Puedes curarte a ti mismo con mayor eficiencia y hacer que
+la muerte.
+los infundidos con tu Regeneración sean más resistentes a
+Gasta 3 puntos de Investidura y toca el cuerpo de un per-
+las lesiones.
+sonaje que haya muerto durante el último minuto. Si el
+Cuando usas Revitalizar, en lugar de recuperar la cantidad
+objetivo está dispuesto, vuelve a la vida Inconsciente y con 0
+normal de salud, puedes recuperar una cantidad de salud
+puntos de salud.
+igual a 1d6 + tu modificador de Progresión. La magnitud de
+este dado aumenta con tus grados en Progresión; con 3 gra-
+Fuente de vida
+dos, tira 1d8 (en lugar de 1d6), y así sucesivamente.
+Prerrequisito: talento Regeneración extendida o
+Además, mientras tengas 1 o más puntos de Investidura,
+Progresión fiable
+cualquier personaje infundido con tu Regeneración y tú
+Activación: 8
+mismo podréis agregar tu modificador de Progresión a las
+Te has vuelto tan poderoso que el crecimiento y la sanación flu-
+tiradas de lesión.
+yen de ti con una velocidad increíble.
+Te cuesta una 1 menos usar Progresión y sus talentos.
+Crecimiento desmesurado
+Prerrequisito: talento Crecimiento explosivo
+Progresión fiable
+Activación: 8
+Prerrequisito: Progresión 2 o más; talento Crecimiento
+Convences a las plantas para que crezcan por encima de su ta-
+desmesurado
+maño y forma normales.
+Activación: *
+Cuando infundes Crecimiento en una planta, puedes hacer
+Gracias al control experto de la luz tormentosa, tu Crecimiento
+una prueba de Progresión CD 15 como parte de esa acción.
+y Regeneración se vuelven aún más fiables.
+Si la superas, haces que la planta crezca más allá de los lími-
+Cuando tiras un dado cuya magnitud aumenta con tus
+tes normales de su especie, hasta la magnitud de potencia
+grados en Progresión (como cuando usas los talentos
+para tus grados en Progresión, y la salud actual y total de la
+Crecimiento explosivo, Revitalización rápida y Crecimiento
+planta aumenta en 2d4. La magnitud de estos dados aumen-
+desmesurado), o cuando un personaje dispuesto tira un
+ta con tus grados en Progresión; con 2 grados, tira 2d6 (en
+dado para recuperar salud a partir de tu Regeneración,
+lugar de 2d4), y así sucesivamente.
+si arroja un resultado menor que dichos grados, puedes
+230 Capítulo 6: Potencias
+
+--- Página 235 ---
+Tensión
+fuerza
+La potencia de Tensión altera la rigidez de los objetos. Esto
+te permite reforzar materiales flexibles como la tela, volvién-
+dolos firmes y fuertes como el acero.
+Potencia de Tensión
+Órdenes Radiantes: Custodios de la Piedra, Forjadores
+de Vínculos
+Activación: 1
+Para usar esta potencia, gasta 1 o más puntos de Investidura
+para infundir un objeto blando a tu alcance; debes tener una
+mano libre y tocar al objetivo. La infusión usa 1 punto de
+Investidura por ronda y, a lo largo de su duración, el objeto
+se vuelve completamente rígido.
+Este objeto no puede superar la magnitud de potencia
+para tus grados en Tensión (consulta la tabla Escalado de
+potencias al principio de este capítulo).
+Cuando activas esta potencia, primero puedes dar forma
+al material blando de manera aproximada como parte de
+esa acción, pero cualquier moldeado elaborado requiere más
+tiempo (consulta “Creación de objetos y armas”).
+No puedes usar esta potencia en otros personajes, objetos
+Investidos (como una armadura esquirlada) u objetos que
+han sido infundidos con luz tormentosa (como esferas infu-
+sas u objetos afectados por potencias).
+Defensa endurecida. Cuando infundes un material blan-
+do que un personaje dispuesto o tú lleváis puesto, puedes au-
+elaborada requiere tiempo adicional. En combate, esto suele
+mentar la Defensa física del portador en 2. Alternativamente,
+requerir una acción adicional de Interactuar (para una re-
+antes de infundir un material, puedes envolverlo alrededor
+modelación moderada) o la acción Usar una habilidad (si tu
+de un personaje como parte de esa acción, lo que le otorga el
+creación es lo suficientemente intrincada como para requerir
+mismo efecto. La Defensa física de un personaje no puede be-
+una prueba de habilidad de Tensión). La DJ establece la CD
+neficiarse de más de una potencia de Tensión a la vez.
+de esta prueba en función de la complejidad del objeto que
+estás creando.
+Cómo usar la Tensión
+A discreción de la DJ, puedes usar creativamente la Tensión
+Además de las reglas básicas de potencia mencionadas ante-
+para crear casi cualquier objeto sólido de un tamaño apro-
+riormente, esta sección ofrece más orientación sobre cómo
+piado. Por ejemplo, puedes colocar una lona sobre una caja y
+usar o interactuar con esta potencia en el juego.
+luego infundirla para usarla como taburete. Puedes introducir
+un pañuelo en el ojo de una cerradura y luego infundirlo para
+A
+Creación de objetos y armas
+N
+I
+conformar una llave capaz de abrirla. Un trozo de cuerda in-
+T
+Puedes moldear tela, cuerda u otros materiales blandos en
+S
+O
+cluso podría servir como una vara resistente o un arma similar.
+una forma específica y luego infundirles Tensión para en-
+K
+A
+Al usar Tensión para crear temporalmente un arma, trátala
+N
+durecerlos temporalmente hasta convertirlos en un objeto
+A
+L
+como un arma improvisada no especial, pero elimina su atri-
+que se puede utilizar. Cuando activas la potencia, puedes
+T
+E
+V
+buto Frágil (consulta “Armas improvisadas” en el capítulo 7).
+moldear brevemente el material, pero una remodelación más
+S
+Capítulo 6: Potencias 231
+
+--- Página 236 ---
+La Tensión sobre los oponentes
+tensión
+Aunque es sencillo moldear una tela no supervisada, envol-
+ver a tu oponente en ella o infundir algo que ya está usando
+↻ Parada de tensión ▷ Reclamación de luz
+es todo un desafío. Para infundir un objeto que un objetivo
+Prerrequisito: pronunciar el tormentosa
+reticente viste o usa, haz una prueba de Tensión contra su
+Primer Ideal Prerrequisito: pronunciar el
+Defensa física. Si fallas, no infundes ese objeto y no gastas
+Antes de que tú o un aliado Primer Ideal
+Investidura en el intento. Si la superas, el objetivo tiene di-
+sufráis un rasguño o un impacto Finalizas las infusiones de
+ficultad para moverse a lo largo de la duración del efecto,
+de un ataque, gasta Investidura Tensión en tu cercanía y recupe-
+quedando Ralentizado y sufriendo una desventaja en todas
+para infundir la ropa del objetivo, ras su Investidura restante.
+las pruebas físicas.
+incrementar su Defensa física en
+Un personaje puede intentar doblar un objeto que has
+2 y, potencialmente, hacer que el
+ataque falle.
+endurecido con tu Tensión. Para hacerlo, Usa una habili-
+dad para realizar una prueba de Atletismo enfrentada a tu
+Tensión. Si la supera, la infusión termina.
+★ Armamento trucado ∞ Tensión extendida
+Gastas 1 punto de Investidura Tus infusiones de Tensión solo
+Talentos de Tensión
+para incrementar la cercanía gastan 1 punto de Investidura
+de tu arma cuerpo a cuerpo a 3 por un número rondas equiva-
+Los talentos que siguen, presentados en orden alfabético,
+metros. Cuando impactas con un lente a tus grados en Tensión.
+aparecen en el árbol de talentos de Tensión para el camino
+ataque cuerpo a cuerpo, gasta Mientras tengas Investidura,
+de Custodio de la Piedra.
+O
+o 2 puntos de concentración podrás mantener libremente las
+para infundir Tensión a un objeto infusiones de Tensión sobre los
+Armamento trucado
+que el objetivo esté sujetando. objetos que sujetes.
+Prerrequisito: talento Parada de tensión
+Activación: *
+∞ Maestría de tejidos ∞ Tensión superficial
+El uso dinámico de la Tensión sobre tela o cuerda te permite au-
+Prerrequisito: Tensión 2 o más Usas Tensión para incrementar
+mentar tu destreza marcial.
+Usas Tensión para crear objetos la tensión superficial de un líqui-
+Mientras empuñas un arma cuerpo a cuerpo y sostienes
+complejos y detallados. do y caminar sobre él como si
+tela u otro objeto flexible de, al menos, 3 metros de largo,
+fuera terreno sólido.
+puedes gastar 1 punto de Investidura como 0 para aumen-
+tar la cercanía del arma en 3 metros hasta el final de tu
+2 Control delicado ∞ Urdidor
+siguiente turno.
+Gastas Investidura para infundir Tu efecto Defensa endurecida
+Además, después de impactar a un personaje con un
+un objeto que puedes controlar aumenta la Defensa física de
+O
+ataque cuerpo a cuerpo, puedes gastar o 2 puntos de con-
+con 1 mientras lo tocas. Puede tu objetivo en 4 en lugar de 2.
+moverse hasta 7,5 metros por Cuando creas un arma temporal-
+centración para usar Tensión en un objeto que el objetivo
+superficies, llevar a cabo tareas mente con Tensión, obtiene un
+está sosteniendo o usando, infundiéndole Investidura como
+y realizar ataques usando tu d4 de daño adicional.
+de costumbre pero sin gastar una acción. Superas automáti-
+Tensión.
+camente la prueba para infundirla.
+Control delicado
+Prerrequisito: talento Maestría de tejidos
+Activación: 2
+Unas coloridas cintas atadas a
+Tu práctica cuidadosa te permite cambiar selectivamente la rigi-
+sus muñecas, que se extendían por
+dez de las partes de un objeto, lo cual permite un control delica-
+do muy similar al movimiento de músculos y tendones.
+toda la armadura, empezaron a
+Infunde 1 o más puntos de Investidura en un objeto no
+moverse por sí mismas, trazando
+supervisado en tu cercanía que sea de un tamaño que pue-
+espirales crecientes alrededor de su
+das afectar con Tensión. Aunque el objeto infundido no es
+puño y volviéndose como hojas.
+un personaje, a lo largo de la duración del efecto, su salud
+actual y máxima aumentan a 5 × tus grados en Tensión, y
+cada una de sus defensas es igual a 10 + tu modificador de
+Tensión. Si la salud del objeto infundido cae a 0, la infusión
+termina antes y el objeto se rompe.
+Muchos usuarios de Tensión infunden trozos largos de
+tela, cuerda u otro material flexible que pueden controlar, lo
+que efectivamente extiende su alcance. En cada uno de tus
+232 Capítulo 6: Potencias
+
+--- Página 237 ---
+turnos a lo largo de la duración del efecto, si tocas parte de
+Reclamación de luz tormentosa
+un objeto que hayas infundido usando este talento, puedes
+Prerrequisito: pronunciar el Primer Ideal
+moverlo hasta 7,5 metros a lo largo de superficies (incluidos
+Activación: 0
+los techos) y puedes usarlo para interactuar con personajes
+Puedes recuperar luz tormentosa de las infusiones activas.
+y otros objetos. Podrás usar 0 para que un objeto infundido
+Después de que tus infusiones gasten su Investidura infun-
+realice tareas simples como trepar un árbol o abrir una puer-
+dida al inicio de tu turno, podrás poner fin a cualquier can-
+ta. Puedes usar 1 para asignarle a un objeto infundido algo
+tidad de esas infusiones en tu cercanía, recuperando toda la
+que requiere una prueba o tu atención cuidadosa, como ata-
+Investidura restante con la que fueron infundidas.
+car a alguien o escribir un mensaje. El objeto no tiene senti-
+dos propios y no puede actuar sin tu toque y control directo,
+Tensión superficial
+por lo que no puedes asignarle tareas que requieren sentidos
+Prerrequisito: talento Tensión extendida
+o conocimientos de los que no dispones.
+Activación: 8
+Si la tarea del objeto requiere una prueba (como una
+Usas Tensión para solidificar la superficie de los líquidos y con-
+prueba de ataque o de Atletismo), debes poder sentir su ob-
+vertirlos en suelo transitable.
+jetivo y usar tu Tensión en lugar de la habilidad habitual de
+Puedes usar la Tensión sobre líquidos, lo cual afecta a una
+dicha prueba.
+zona hasta el doble del tamaño que normalmente puedes
+El objeto puede hacer un ataque cuerpo a cuerpo usando
+afectar con tus grados en Tensión. Mientras dura el efecto, la
+Tensión contra la Defensa física de un objetivo situado a
+tensión superficial de este líquido aumenta y los personajes
+1,5 metros o menos de él, tirando 2d4 de daño por golpe.
+pueden caminar sobre él como si fuera suelo sólido.
+La magnitud de estos dados aumenta con tus grados en
+Tensión; con 2 grados, tira 2d6 (en lugar de 2d4), y así
+Tensión extendida
+sucesivamente.
+Prerrequisito: talento Reclamación de luz tormentosa
+Activación: 8
+Maestría de tejidos
+Tus infusiones de Tensión gastan la luz tormentosa con mucha
+Prerrequisito: Tensión 2 o más; talento
+menos rapidez.
+Armamento trucado
+Cuando infundes Tensión en un objeto, en lugar de que la
+Activación: 8
+infusión gaste 1 punto de Investidura por ronda, gasta 1
+Al infundir tensión en materiales blandos, estos se contorsionan
+punto de Investidura durante un número de rondas igual
+para convertirse exactamente en lo que imaginas.
+a tus grados en Tensión. Por ejemplo, si tienes 3 grados
+Cuando usas Tensión para crear un objeto o arma, puedes
+en Tensión, esas infusiones gastan Investidura una vez
+remodelarlo automáticamente antes de que se vuelva rígido
+cada 3 rondas.
+sin usar acciones ni tiempo adicional. Cuando lo haces, mol-
+Además, mientras tengas 1 o más puntos de Investidura,
+deas instantáneamente el material blando en un objeto tan
+podrás mantener infusiones de Tensión en objetos que estés
+elaborado, intrincado y complejo como quieres. Por ejemplo,
+sosteniendo o usando sin que ni tú ni la infusión gastéis
+puedes convertir una lona grande en una mesa o una silla,
+Investidura.
+dar forma a una capa alrededor de su portador como un
+traje que sirva de armadura de placas y malla, hacer que un
+Urdidor
+garfio de escalada atado a una cuerda se asegure a una repi-
+Prerrequisito: talento Maestría de tejidos o Tensión
+sa superior o crear formas o imágenes intrincadas.
+superficial
+Activación: 8
+Parada de tensión
+Las armas y armaduras improvisadas que creas con Tensión son
+Prerrequisito: pronunciar el Primer Ideal
+tan poderosas que rivalizan con las propias hojas y armaduras
+Activación: r
+esquirladas.
+Endureces tu ropa para bloquear ataques.
+Cuando infundes Tensión para otorgarle a un personaje el
+Antes de que un aliado en tu cercanía o tú sufráis un impac-
+efecto Defensa endurecida, su Defensa física aumenta en 4
+to o rasguño por parte de un ataque contra la Defensa física,
+(en lugar de 2).
+puedes usar esta reacción para infundir Tensión en la ropa
+Además, cuando creas temporalmente un arma con
+del objetivo o en un material suave que envuelves a su alre-
+Tensión (consulta “Creación de objetos y armas”), esta
+dedor, gastando Investidura como de costumbre. El objetivo
+obtiene un d4 de daño adicional (por ejemplo, un hacha
+obtiene el efecto de Defensa endurecida, que aumenta su
+creada de esta manera inflige 1d6 + 1d4 de daño por lacera-
+Defensa física en 2 mientras dura el efecto, incluso contra el
+ción). La magnitud de este dado aumenta con tus grados en
+ataque desencadenante. Si el ataque impacta, este aumento
+Tensión; con 2 grados, el dado adicional se convierte en un
+puede convertirlo en un fallo. Si el ataque hace un rasguño,
+d6 (en lugar de un d4), y así sucesivamente.
+el objetivo ignora sus efectos.
+Capítulo 6: Potencias 233
+
+--- Página 238 ---
+Determina qué categoría se corresponde mejor con el mate-
+rial original y luego elige en qué categoría quieres transfor-
+marlo. Si lo estás transformando en un material que no está
+a más de una categoría de distancia, realiza una prueba de
+Transformación CD 10. Esta CD aumenta en 5 por cada
+categoría adicional que se aleja, como se muestra en la tabla
+Clases de dificultad de Transformación; para usar esta ta-
+bla, busca la celda que se interseca con tu material original
+y con el material de destino. Por ejemplo, moldear piedra
+Transformación
+para convertirla en metal es significativamente más fácil
+voluntad
+(CD 10) que moldear almas para crear metal a partir del
+La potencia de Transformación transforma un material en
+aire (CD 25).
+otro. Esta potencia, a menudo conocida como moldeado
+Transformación con éxito. Si superas la prueba de
+de almas, cambia tu percepción del objeto que quieres
+Transformación, obligas al material a transformarse. Gasta
+transformar, permitiéndote ver y comunicarte con su aspec-
+una cantidad de Investidura igual a los grados requeri-
+to cognitivo.
+dos para transformar un objeto de ese tamaño: 1 punto
+Investidura para un objeto Pequeño, 2 puntos para uno
+Potencia de Transformación
+Mediano, 3 para uno Grande, 4 para uno Enorme y 5
+Órdenes Radiantes: Nominadores de lo Otro,
+para uno Gargantuesco. Tu objetivo se transforma en esa
+Tejedores de Luz
+sustancia.
+Activación: 2
+Transformación fallida. Si fracasas en la prueba,
+Para llevar a cabo un moldeado de alma sobre un material,
+no transformas a tu objetivo y no gastas Investidura en el
+elige un objeto no vivo o una porción de una superficie que
+intento. Como no has podido obligar a ese material a trans-
+esté en tu cercanía y hace una prueba de Transformación
+formarse, no puedes intentar moldear el alma de ese mismo
+(consulta “Clases de dificultad de Transformación” más
+objeto nuevamente durante esta escena.
+abajo). Para ello, debes tener una mano libre y tocar el ob-
+Clase de dificultad de Transformación
+jetivo, que no puede superar la magnitud de potencia de tus
+grados en Transformación.
+Aire
+Sólidos Orgánicos Líquidos Vapores limpio Llamas*
+No puedes usar esta potencia en objetos Investidos
+(como una armadura esquirlada) u objetos que han sido
+Sólidos 10 10 15 20 25 30
+infundidos con luz tormentosa (como esferas infusas u
+Orgánicos 10 10 10 15 20 25
+objetos afectados por potencias). Además, inicialmente no
+Líquidos 15 10 10 10 15 20
+puedes usar el moldeado de almas en materiales vivos, in-
+Vapores 20 15 10 10 10 15
+cluidos personajes y plantas (aunque los talentos pueden
+Aire limpio 25 20 15 10 10 10
+permitírtelo).
+LLamas* 30 25 20 15 10 —
+CD de Transformación. Moldear el alma de un mate-
+rial a otro similar es relativamente sencillo, pero cuanto más
+* La categoría Llamas solo está disponible para personajes con el
+cambias su Esencia, más habilidad hace falta. Cada material
+talento Moldeado de llamas.
+encaja con una de las seis categorías siguientes:
+1. Sólidos como el metal, la piedra y el vidrio
+2. Orgánicos como la carne, el hueso y la pulpa
+3. Líquidos como la sangre, el agua y el aceite
+4. Vapores como el humo y el gas
+5. Aire limpio
+6. Llamas (solo disponible para
+los personajes con el talento
+Moldeado de llamas)
+L
+L
+E
+T
+R
+A
+H
+N
+I
+T
+S
+U
+A
+223344
+
+--- Página 239 ---
+Cómo usar la Transformación
+transformación
+Además de las reglas básicas de potencia mencionadas ante-
+riormente, esta sección ofrece más orientación sobre cómo
+↻ Defensa moldeadora 2 M oldeado de almas
+usar o interactuar con esta potencia en el juego.
+de almas viviente
+Prerrequisito: pronunciar el Prerrequisito: pronunciar el
+La Transformación sobre los demás
+Primer Ideal Primer Ideal
+Si bien no puedes moldear las almas de personajes vivos con
+Antes de que tú o un aliado sufra Gastas 1 punto de Investidura y
+la potencia básica de la Transformación, puedes usar crea-
+el impacto de un proyectil, gasta 1 haces un ataque cuerpo a cuer-
+tivamente tus habilidades para ser útil y peligroso en com-
+punto de Investidura para realizar po de Transformación contra
+bate. Puedes crear una niebla capaz de ocultar a partir de la
+una prueba de Transformación Espiritual de un organismo vivo
+nada, lo que impone una desventaja a los atacantes. Puedes
+(CD igual al ataque). Si fracasas, tirando 3d4 de daño espiritual.
+crear cobertura para protegerte, o incluso podrías convertir
+el proyectil hace un rasguño. Si Si queda a 0 puntos de salud, el
+la superas, el proyectil falla y se objetivo muere.
+el suelo bajo los pies de tu oponente en líquido, lo que haría
+convierte en una Esencia.
+que quedara Tumbado.
+De la DJ y de ti depende cómo resolver estos usos creati-
+vos. En general, si tu moldeado de almas requiere que el
+∞ Parada moldeadora 2 Moldeado de sangre
+oponente realice una prueba (como permanecer de pie), su
+de almas Gastas 1 punto de Investidura
+Puedes usar la Defensa y haces una prueba de
+CD es igual al resultado de tu prueba de Transformación.
+Moldeadora de almas contra Transformación (CD 15) para lim-
+ataques cuerpo a cuerpo. piar todo el veneno del objetivo
+Asomarse a Shadesmar
+y reducir el tiempo de recupera-
+ción de una lesión en 5 días.
+La potencia de Transformación otorga una capacidad limi-
+tada para asomarse al Reino Cognitivo. Para ello, puedes
+gastar 2 puntos de Investidura y Usar una habilidad para
+∞ Potenciación distante ∞ Moldeado de llamas
+realizar una prueba de Transformación. Si la superas, puedes
+Usas tus potencias y sus talentos Obtienes “Llama” como sexta
+usar un efecto de la potencia de Transportación (consulta
+como si tu cercanía fuera de 6 categoría después de “Limpiar
+“Transportación”) para percibir 3 metros a tu alrededor en la
+metros. aire” (CD 30 para transformar
+la piedra en llama). Cuando
+ubicación correspondiente de Shadesmar.
+moldees llamas, ataca a los per-
+sonajes situados a 1,5 metros o
+menos usando Transformación
+Talentos de Transformación
+contra Física, tirando 2d4 de
+Los talentos que siguen, presentados en orden alfabético,
+daño por energía.
+aparecen en el árbol de talentos de Transformación para los
+caminos de Nominador de lo Otro y Tejedor de Luz.
+∞ Transformación ∞ Transmutación
+persistente expansiva
+Defensa moldeadora de almas
+Prerrequisito: Transformación Moldear materiales no orgáni-
+Prerrequisito: pronunciar el Primer Ideal
+2 o más cos cuesta 2 puntos menos de
+Activación: r
+Cuando transformas objetos Investidura.
+Moldeas almas casi instintivamente, pudiendo transformar pro-
+inanimados, tu CD máxima es
+yectiles en pleno vuelo.
+15. Además, puedes volver a
+intentar moldear almas, pero, si
+Antes de que un aliado en tu cercanía o tú sufráis el impacto
+tienes éxito, debes gastar 1 pun-
+de un proyectil de un ataque a distancia, puedes usar esta
+to de Investidura adicional por
+reacción y gastar 1 punto de Investidura para realizar una
+cada fracaso reciente al moldear
+prueba de Transformación. La CD de esta prueba es igual al
+almas.
+resultado de la prueba del ataque que la desencadenó; pue-
+des elegir si usar esta reacción después de saber la CD.
+Si fallas la prueba, el ataque hace un rasguño en lugar de
+impactar. Si la superas, el ataque falla y no puede hacer un
+rasguño, y además transformas el proyectil en un material
+de tu elección. Si eliges un material no sólido, el proyectil
+se destruye.
+Capítulo 6: Potencias 235

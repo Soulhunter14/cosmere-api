@@ -12,7 +12,5 @@ public class CampaignEntity
     public UserEntity GmUser { get; set; } = null!;
     public ICollection<CampaignMemberEntity> Members { get; set; } = [];
     public ICollection<CharacterEntity> Characters { get; set; } = [];
-    public ICollection<MatchEntity> Matches { get; set; } = [];
-    public ICollection<SideQuestEntity> SideQuests { get; set; } = [];
     public ICollection<SessionEntity> Sessions { get; set; } = [];
 }
