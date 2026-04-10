@@ -1,0 +1,798 @@
+﻿
+--- Página 123 ---
+Cuando un enemigo se resiste a tu influencia mientras está
+Asalto sincronizado
+en la cercanía de tu arma, queda Desorientado hasta el final
+Prerrequisito: Liderazgo 3 o más, talento Autoridad
+de su siguiente turno.
+Activación: 3
+Detectas un punto débil en la posición de tu oponente, luego
+Resiliencia heroica
+ordenas a tu escuadra que concentre todo su poder sobre un úni-
+Prerrequisito: Atletismo 3 o más, talento Postura resuelta
+co enemigo.
+Activación: r
+Gasta 2 puntos de concentración para hacer una prueba de
+Recurres a tus últimas reser vas y sigues adelante a pesar de las
+Liderazgo contra la Defensa cognitiva de un enemigo al que
+graves heridas.
+puedes sentir. Si la superas, elige una cantidad de aliados
+Una vez por escena, antes de que tu salud quede reducida a
+hasta tus grados en Liderazgo. Si fracasas, elige un aliado al
+0, podrás usar esta reacción para pasar a tener tantos puntos
+que puedes influir. En el siguiente turno de los aliados elegi-
+de salud como tu modificador de Atletismo.
+dos, estos obtienen una 1 que solo se puede gastar para usar
+Robusto
+Acometida contra ese enemigo. Esta Acometida no cuenta
+Prerrequisito: talento Intervención valiente
+para el número permitido de acciones de Acometida para las
+Activación: 8
+manos que sostienen esa arma.
+Has entrenado tu cuerpo para soportar el dolor y la fatiga, lo
+Abastecimiento adecuado
+que te mantiene en la lucha hasta el aciago final.
+Prerrequisito: Persuasión 2 o más, talento Compostura
+Cuando adquieres este talento, tu salud máxima y actual
+Activación: *
+aumenta en 1 por nivel. Esto se aplica a todos los niveles
+Mueves hábilmente las piezas de la maquinaria militar para
+anteriores y futuros; por ejemplo, si eliges este talento en el
+adquirir los suministros necesarios que mantienen tu unidad en
+nivel 6, aumenta retroactivamente tu salud en 6.
+plena forma para el combate.
+Cuando haces una prueba para solicitar o asignar recursos,
+Especialidad de Oficial
+puedes gastar 2 puntos de concentración para agregar una
+Los talentos que siguen, presentados en orden alfabético,
+Oportunidad al resultado.
+aparecen en la especialidad de Oficial en el árbol de talen-
+Además, cuando adquieres este talento, obtienes la peri-
+tos de Líder.
+cia de utilidad Logística militar.
+A través de la refriega
+Prerrequisito: Persuasión 1 o más, talento principal
+Mando decisivo
+Activación: 1
+Detectas hábilmente oportunidades para obtener ventaja, coordi-
+nándote con tus aliados cuando entran en acción.
+Elige un aliado al que puedes influir situado a 6 metros o
+menos. Antes del final de tu turno, puede usar Destrabarse u
+Obtener ventaja como r.
+Autoridad
+Prerrequisito: tener un título que te otorgue mando sobre,
+al menos, 5 personas; talento Mando confiado
+Activación: 8
+Tu experiencia de mando te ayuda a coordinar grupos más
+grandes y a mayor distancia.
+Tus talentos de líder que afectan a aliados duplican su al-
+cance (si lo tienen) y pueden afectar hasta el doble de alia-
+dos de lo habitual.
+V
+E
+N
+E
+P
+R
+A
+T
+E
+P
+
+--- Página 124 ---
+Compostura
+Especialidad de Político
+Prerrequisito: talento principal Mando decisivo
+Los talentos que siguen, presentados en orden alfabético,
+Activación: 8
+aparecen en la especialidad de Político en el árbol de talen-
+Mediante la práctica de la compostura, superas tus límites sin
+tos de Líder.
+distraerte ni perder de vista las amenazas.
+Ardid táctico
+Cuando adquieres este talento, tu concentración máxima
+Prerrequisito: talento principal Mando decisivo
+y actual aumentan en una cantidad equivalente a tu rango.
+Activación: 1
+Cuando tu rango aumenta en 1, tu concentración máxima y
+Mediante omisiones inteligentes y falsas insinuaciones, minas
+actual también lo hacen.
+la confianza de tu enemigo y le obligas a cuestionar sus pro-
+Mando confiado
+pias defensas.
+Prerrequisito: Liderazgo 2 o más, talento Vestimenta
+Haz una prueba de Engaño contra la Defensa cognitiva de
+tradicional
+un enemigo al que puedas influir. Si la superas, tu objetivo
+Activación: *
+pierde una r, y sufre una desventaja en su siguiente prueba
+Pronuncias tus palabras con cuidado y convicción, dejan-
+cognitiva o espiritual.
+do que resuenen en los corazones de quienes se encuentran
+Un objetivo puede resistirse a esta influencia, pero
+bajo tu mando.
+después de que lo hace, obtienes una ventaja en tu si-
+guiente prueba con él como objetivo antes del final de tu
+Antes de realizar una prueba de Intimidación, Liderazgo o
+siguiente turno.
+Persuasión, puedes gastar 1 punto de concentración para
+tirar tu dado de mando y añadir su resultado al de tu ti-
+Difundir rumores
+rada de d20.
+Prerrequisito: contar con un patrocinador; talento
+Además, cuando adquieres este talento, incrementas la
+Tácticas despiadadas
+magnitud de tu dado de mando en un paso (por ejemplo,
+Activación: *
+de d4 a d6).
+En los círculos sociales donde los rumores se arremolinan
+Marcha implacable
+y abundan, el nombre de tu patrocinador tiene una gran
+Prerrequisito: Persuasión 3 o más, talento
+repercusión.
+Mando confiado
+Cuando realizas una prueba para difundir desinformación o
+Activación: 8
+enterarte de rumores, puedes gastar 2 puntos de concentra-
+Fortaleces tus tropas, ayudándolas a superar el miedo, el dolor y
+ción para añadir una Oportunidad al resultado.
+el agotamiento en las peores condiciones.
+Además, cuando adquieres este talento, obtienes la peri-
+cia de utilidad Escándalos.
+Después de usar Mando decisivo sobre un aliado, hasta el
+final de su siguiente turno, su valor de movimiento aumen-
+Elegante
+ta en 3 metros e ignora los efectos de los estados Agotado,
+Prerrequisito: talento Difundir rumores
+Ralentizado y Sorprendido.
+Activación: *
+Vestimenta tradicional
+Combinas tus atuendos hábilmente según la ocasión, logrando
+Prerrequisito: talento A través de la refriega
+siempre la declaración perfecta.
+Activación: 8
+Mientras vistes una armadura Presentable o ropa a la
+Has llevado puesto tu uniforme o ropa tradicional durante tanto
+moda de manera visible, obtienes una ventaja en la primera
+tiempo que parece una segunda piel, lo cual libera tus movi-
+prueba de Engaño, Liderazgo o Persuasión que haces en
+mientos y te otorga gran confianza.
+cada escena.
+Además, cuando adquieres este talento, obtienes la peri-
+Mientras llevas puesta una armadura Presentable o ropa
+cia cultural Moda.
+apropiada para tu posición de forma visible, tus Defensas
+física y espiritual aumentan en 2.
+120 Capítulo 4: Caminos heroicos
+
+--- Página 125 ---
+Un objetivo puede resistirse a esta influencia, pero pierde
+Gran engaño
+una cantidad de concentración adicional equivalente a tus
+Prerrequisito: Engaño 3 o más, talento Mando astuto
+grados en Liderazgo. Si solo algunos de los objetivos se re-
+Activación: 3
+sisten a la influencia, los demás siguen siendo hostiles, pero
+Con gran previsión y astucia, difundes un rumor que incluso tus
+su conflicto podría volverse más fácil de resolver.
+aliados creen que es cierto. Cuando finalmente revelas la verdad
+que se esconde detrás de la artimaña, tus enemigos quedan su-
+Tácticas despiadadas
+midos en el caos.
+Prerrequisito: Engaño 1 o más, talento principal
+Mando decisivo
+Gasta 3 puntos de concentración para realizar una prueba
+Activación: *
+de Engaño CD 15. Si la superas, elige un detalle que has
+establecido desde el inicio de la escena anterior y revela que
+Has aprendido que debes aceptar riesgos si quieres obtener resul-
+en realidad era una artimaña. Dicha artimaña debe ser creí-
+tados. Cuando informas a tus aliados, a veces restas importan-
+ble. Por ejemplo, es razonable revelar que escondiste un po-
+cia al peligro para aumentar su confianza y las posibilidades de
+deroso artefacto en un lugar diferente del que mencionaste
+que prevalezcan.
+anteriormente o que desplazaste a tu ejército al este en lugar
+Antes de que un aliado tire tu dado de mando en una prue-
+de al oeste. No es razonable decir que un objeto mundano
+ba, podrá optar por subir la apuesta. Si lo hace y sufre una
+es, en realidad, un artefacto de valor incalculable ni declarar
+Complicación, recuperas 1 punto de concentración.
+de repente que has reclutado un ejército cuando anterior-
+Torvo
+mente dijiste que no tenías aliados en la región. La DJ tiene
+Prerrequisito: talento Difundir rumores
+la última palabra sobre qué artimaña puedes revelar.
+Activación: 8
+Mando astuto
+Con una mirada severa, quiebras la determinación de todos tus
+Prerrequisito: Liderazgo 2 o más, talento
+adversarios, excepto los más serenos.
+Difundir rumores
+Para resistir tu influencia, un personaje debe gastar una can-
+Activación: *
+tidad de concentración equivalente a tu rango.
+Con una palabra mordaz o una mirada estratégica, llegas al
+corazón de una conversación.
+Antes de realizar una prueba de Engaño, Liderazgo o
+Perspicacia, puedes gastar 1 punto de concentración para
+tirar tu dado de mando y añadir su resultado al de tu ti-
+rada de d20.
+Además, cuando adquieres este talento, incrementas la
+magnitud de tu dado de mando en un paso (por ejemplo,
+de d4 a d6).
+Poner en desacuerdo
+Prerrequisito: Liderazgo 3 o más, talento Torvo
+Activación: 2
+Envidia, codicia, sospecha... para ti, son meras herramientas,
+útiles para avivar rencillas entre facciones rivales o dividir a tus
+enemigos en el calor de la batalla.
+Elige dos o más personajes a los que puedes influir y gasta
+esa misma cantidad de puntos de concentración para sem-
+brar la división entre ellos. Describe una fuente potencial de
+conflicto (como sospechas o celos) y luego haz una prueba
+de Liderazgo (la CD es igual a la mayor Defensa espiritual
+de los objetivos). Si la superas, influyes sobre todos los ob-
+jetivos para que se vuelvan hostiles hacia los demás, lo cual
+provoca una discusión, combate u otro conflicto hasta que
+O
+encuentran una forma de resolverlo.
+T
+L
+A
+T
+N
+O
+M
+A
+E
+R
+D
+N
+A
+Capítulo 4: Caminos heroicos 121
+
+--- Página 126 ---
+
+--- Página 127 ---
+CORE RULEBOOK VERSION NOI SREV K OOBEL UR ER OC
+capítulo 5
+Caminos radiantes
+as diez órdenes de los antiguos Caballeros
+Cómo elegir un talento
+Radiantes manejaban poderes maravillosos para pro-
+de Primer Ideal
+teger a la humanidad. Sus miembros formaban víncu-
+LL
+Debes ser de nivel 2 o superior para elegir un talento principal
+los con los fragmentos de Investidura inteligente conocidos
+de Primer Ideal. Sin embargo, incluso antes de subir de nivel
+como spren, y a través de esta poderosa simbiosis, cada orden
+y elegir ese talento, puedes hablar con la DJ sobre introducir
+Radiante obtenía acceso a dos de las diez potencias, capacida-
+un spren Radiante con el que comenzar a establecer un vín-
+des extraordinarias alimentadas por la luz tormentosa. Durante
+culo (consulta “Cómo jugar como un Radiante” para obtener
+milenios, los Caballeros Radiantes usaron estas potencias para
+instrucciones sobre cómo atraer a un spren, y consulta “Cómo
+defender a la humanidad de los sucesos cataclísmicos conoci-
+jugar con un spren” para conocer las reglas sobre cómo inte-
+dos como Desolaciones... pero un día, los Radiantes abandona-
+ractuar con ellos una vez ya se ha establecido el vínculo).
+ron a la humanidad misteriosamente, renunciaron a sus
+Cuando eliges tu talento de Primer Ideal, esto confir-
+poderes y dejaron indefensa a su gente en Roshar.
+ma a la DJ que estás interesado en convertirte en Radiante
+Ahora, por primera vez en más de dos mil años, los spren
+de una orden concreta. Sin embargo, tu personaje aún no
+vuelven a responder. Se han jurado Ideales y establecido
+ha “pronunciado las Palabras” ni jurado ese Ideal. En cam-
+nuevos vínculos. Los Radiantes recorren Roshar una vez
+bio, este talento tiene dos efectos: te otorga acceso inme-
+más, siguiendo los Ideales de las diez antiguas órdenes.
+diato a la Investidura y te otorga una meta: “Pronunciar el
+Primer Ideal”.
+Cómo usar los
+Cómo desbloquear la Investidura
+caminos radiantes
+El talento de Primer Ideal representa que has atraído la
+Los caminos Radiantes de este capítulo funcionan de ma-
+atención de un spren Radiante. Inmediatamente obtienes
+nera muy similar a los caminos heroicos, siguiendo las reglas
+acceso a la Investidura en forma de luz tormentosa, y junto
+de la sección “Cómo usar los caminos y talentos” del capí-
+con ella, acceso a tres acciones: Absorber luz tormentosa,
+tulo 4. Sin embargo, como se describe en la sección de más
+Aumentar y Revitalizar (consulta “Acciones de luz tormen-
+adelante “Cómo jugar como Radiante”, ser un Caballero
+tosa” en la siguiente página).
+Radiante conlleva mucha más responsabilidad que simple-
+Además de sanar tu cuerpo y potenciar tus atributos,
+mente anotar un talento en la hoja de personaje.
+eventualmente podrás usar Investidura para alimentar
+las dos potencias de tu orden Radiante (detalladas en el
+Opciones de caminos Radiantes
+capítulo 6).
+Este capítulo presenta nueve caminos Radiantes jugables (así
+como información sobre la excepcional décima orden, los
+Cómo desbloquear las potencias
+Forjadores de Vínculos). De la misma manera que los cami-
+Tu talento de Primer Ideal no te otorga acceso inmediato
+nos heroicos tienen tres especialidades, cada camino Radiante
+a las potencias de tu posible orden Radiante. En cambio,
+otorga acceso a tres árboles de talentos: uno para tu vínculo
+a medida que continúes con tus aventuras, trabajarás para
+spren y dos para las potencias que maneja tu orden Radiante.
+alcanzar tu nueva meta, “Pronunciar el Primer Ideal”, que
+Los talentos para el vínculo spren de cada camino se presen-
+probablemente completarás antes de alcanzar el siguiente
+tan en este capítulo, mientras que el capítulo 6 detalla las ha-
+nivel. Después de completarla, serás recompensado con las
+bilidades de potencia y sus talentos correspondientes.
+dos potencias de tu talento de Primer Ideal. Consulta la
+La sección “Órdenes de Caballeros Radiantes” que sigue
+sección “Cómo jugar como un Radiante” más adelante para
+a continuación resume cada orden y los árboles de talentos a
+obtener más detalles sobre cómo alcanzar dicha meta.
+los que tiene acceso.
+Investidura y luz tormentosa
+La Investidura es la energía que inunda el Cosmere, la esen-
+cia divina que alimenta las Artes Investidas. Las almas del
+Iluminada y Radiante,
+A
+Cosmere empiezan su vida con cierta cantidad natural de
+R
+U
+Shallan se acerca a
+Investidura, pero normalmente no son capaces de manipu-
+D
+A
+larla. Los personajes con un valor de Investidura han obteni-
+N
+Y
+Re-Shephir con su mano
+T
+do la capacidad de manejar esa energía.
+S
+U
+J
+segura expuesta.
+Capítulo 5: Caminos radiantes 123
+
+--- Página 128 ---
+En Roshar, la Investidura se manifiesta principalmente las esferas infusas son extremadamente valiosas para los
+como luz tormentosa: la energía que emite destellos a través Radiantes.
+de la alta tormenta, que brilla dentro de cada broam y que Durante el combate, puedes usar la acción Absorber luz
+otorga a los Caballeros Radiantes sus maravillosos poderes. tormentosa de la sección que sigue, drenando una esfera
+infusa y obteniendo su luz tormentosa. Por lo general, co-
+Cómo gastar Investidura
+mienzas las escenas con la Investidura completa; al igual que
+La Investidura es un recurso espiritual que, en cuanto a
+desenvainar tu arma antes de una pelea, se supone que si
+mecánicas, funciona de forma muy similar a la concentra-
+no estás Sorprendido cuando comienza una escena, ya has
+ción. Para un personaje Radiante, la luz tormentosa es su
+usado instintivamente Absorber luz tormentosa (no requiere
+fuente de Investidura, y su reserva de Investidura refleja la
+acción). Sin embargo, si comienzas una escena con el estado
+cantidad que puede absorber y usar de manera eficiente.
+Sorprendido, solo comienzas con 1 punto de Investidura, la
+Al crear el personaje, dejarás el campo de Investidura de
+suficiente como para mantener de forma pasiva cualquier
+la hoja en blanco. Sin embargo, una vez que hayas elegido
+poder Investido activo.
+el talento principal Primer Ideal de un camino Radiante,
+obtendrás un valor máximo de Investidura (consulta Luz y antiluz
+“Investidura” en el capítulo 3). Durante tus aventuras, utilizarás principalmente luz tormen-
+Puedes gastar Investidura para activar tus potencias y tus tosa, pero la Investidura también puede aparecer de formas
+talentos de potencia (presentados en el capítulo 6), junto más raras, como luz de vida o luz del vacío, o incluso híbri-
+con tus talentos de vínculo spren (presentados más adelante das, como luz de torre.
+en este mismo capítulo). Además, puedes usar las tres accio- Cada forma de luz también tiene su inversa (como la an-
+nes de luz tormentosa en la siguiente sección: Absorber luz tiluz tormentosa). Estas luces brillan de manera diferente y
+tormentosa, Aumentar y Revitalizar. son terriblemente destructivas cuando se encuentran con su
+La Investidura también mantiene activo cualquier efecto opuesta. La antiluz no puede alimentar tus potencias de la
+Investido que utiliza tu luz tormentosa. Como resultado, misma manera que lo hace la luz tormentosa; si bien algunas
+si tu Investidura actual alguna vez baja a 0, temporalmente personas empuñan armas que utilizan antiluz, hacerlo es ex-
+pasas a estar no Investido y no puedes mantener tus efectos tremadamente peligroso para ellas y sus spren. Ten cuidado
+de Investidura activos (como las infusiones) más allá de sus si te encuentras con antiluz tormentosa en tus viajes.
+duraciones restantes.
+Acciones de luz tormentosa
+Cómo recuperar luz tormentosa
+Además de alimentar las potencias, tener luz tormentosa
+Roshar es un mundo rico en Investidura. La mayoría de
+absorbida te permite utilizar poderes como la curación, la
+las personas usa gemas incrustadas en esferas de vidrio
+fuerza y la velocidad mejoradas. Cuando eliges un talento de
+como moneda (consulta “Esferas” en el capítulo 7). Dado
+Primer ideal, obtienes acceso a las siguientes tres acciones,
+que sirven como baterías para almacenar luz tormentosa,
+que siguen las reglas habituales de la sección “Acciones y
+reacciones” del capítulo 10.
+Consejo para la DJ:
+Absorber luz tormentosa (2)
+cómo gestionar la luz tormentosa
+Atraes luz tormentosa hacia tu interior desde esferas infusas
+situadas a 1,5 metros o menos; si tienes suficientes esferas,
+Los jugadores Radiantes necesitan esferas para almacenar
+Investidura en forma de luz tormentosa, que pueden absor-
+recuperas Investidura hasta tu máximo.
+ber para alimentar sus poderes. Si bien los jugadores pueden
+En tiempos normales, las esferas opacas se pueden
+llevar una cuenta exacta de cuántas esferas tienen, infusas y
+intercambiar fácilmente por esferas infusas, ya que las altas
+opacas (pudiendo solo volver a infundirlas cuando están en
+tormentas se suceden con regularidad. Si tienes al menos
+altas tormentas) llevar tal registro es tedioso.
+tres veces más marcos que tu total de Investidura, se supone
+Te animamos a suponer que los PJs tendrán suficiente luz
+que tienes suficientes esferas infusas de las que extraer luz
+tormentosa para alimentar sus capacidades, siempre que
+tormentosa.
+puedan acceder a las altas tormentas que pasen y lleven enci-
+En algunas situaciones, la DJ puede pedirte que lleves
+ma una cantidad de marcos equivalente a al menos tres veces
+un registro de cuántas de tus esferas están infusas. En esas
+su total de Investidura. No te preocupes por llevar un registro
+ocasiones, recuperas 1 punto de Investidura por cada marco
+de si sus esferas son técnicamente chips, marcos o broams
+o broam infuso que drenas.
+(consulta “Esferas” en el capítulo 7).
+Puedes realizar esta acción incluso si estás Inconsciente o
+Sin embargo, si la historia hace que un PJ pierda todas sus
+esferas, o no tenga acceso a una alta tormenta durante perio-
+si no puedes realizar acciones de ninguna otra manera.
+dos extensos, podrás aumentar la tensión narrativa pidiendo
+a los jugadores que lleven un registro de sus marcos y broams
+infusos.
+124 Capítulo 5: Caminos radiantes
+
+--- Página 129 ---
+anima a la DJ y a ti a que colaboréis para introducir un spren
+Aumentar (1)
+Radiante en el relato con tiempo; de este modo, cuando, más
+Gasta 1 punto de Investidura para pasar a estar Mejorado
+adelante, elijas el talento de Primer Ideal, reflejará tu vínculo
+[Fuerza +1] y Mejorado [Velocidad +1] hasta el final de
+fortalecido y tu nueva capacidad para controlar Investidura.
+tu siguiente turno. Al final de ese turno, y de cada uno de
+Depende de la DJ y de ti decidir cómo entretejeréis las
+tus turnos siguientes, puedes gastar 1 punto de Investidura
+reglas, las cadencias y la narrativa del talento. Por ejem-
+como 0 para mantener estos estados hasta el final de tu si-
+plo, algunos jugadores quieren continuar (o empezar)
+guiente turno.
+desarrollando su vínculo spren después de elegir el talento
+Revitalizar (0)
+de Primer Ideal; en este caso, podrás retrasar el uso de
+Gasta 1 punto de Investidura para recuperar salud equiva-
+Investidura hasta que se ajuste a la narrativa, aunque tu ta-
+lente a 1d6 + tu rango actual; por ejemplo, un personaje de
+lento te permita usarla antes.
+rango 2 recupera 1d6 + 2 de salud.
+Independientemente de si inicias el proceso de vincula-
+Puedes realizar esta acción gratuita incluso si es-
+ción antes o después de elegir el talento, la DJ tiene la última
+tás Inconsciente o si no puedes realizar acciones de
+palabra sobre si tienes éxito en el progreso de tu vínculo
+otra manera.
+spren. En algunas situaciones, puede que descubras que tus
+ideales personales no son adecuados para esa orden concreta.
+Unirte con tu yo espiritual
+Atraer un spren
+Existes en los tres reinos: el Físico, el Cognitivo y el Espiritual.
+—¿Los vientospren se sienten atraídos por el viento —preguntó
+Incluso si tu cuerpo físico está herido, tu ser espiritual podría
+en voz baja—, o lo crean?
+estar intacto y completo. Cuando te sanas con Investidura,
+simplemente estás transformando tu cuerpo físico para que
+Los Caballeros Radiantes obtienen sus habilidades a través
+se alinee con tu cuerpo espiritual. Esto puede tener efectos
+de su vínculo spren, que los eruditos llaman el “vínculo
+en tu cuerpo más allá de recuperar salud; por ejemplo, las
+Nahel”. Este vínculo es una unión de espíritus, una relación
+personas que tienen una identidad o un sentido de sí mismas
+simbiótica que otorga beneficios a ambas partes: el spren
+diferente pueden ver que sus cuerpos se transforman para
+obtiene la capacidad de manifestarse en el Reino Físico sin
+coincidir con su identidad espiritual, incluso llegando a cam-
+perder su sapiencia o memoria, y la persona adquiere la
+biar de características sexuales y de apariencia.
+Potenciación y la capacidad de absorber luz tormentosa. No
+obstante, antes de que se pueda formar este vínculo, el spren
+primero deberá sentirse atraído por el posible Radiante.
+Cómo jugar como
+En general, cuando te comportas de una manera que
+atrae a un cierto tipo de spren o que se alinea con los Ideales
+un Radiante
+de una orden concreta, un spren Radiante puede sentirse
+Una vez que tu personaje alcanza el nivel 2 o superior,
+atraído por ti. Hay nueve tipos comunes de spren Radiantes
+puedes elegir unirte a una de las órdenes de los Caballeros
+que pueden vincularse con humanos y cantores, y cada uno
+Radiantes. Sin embargo, convertirse en un Radiante no es
+corresponde a una orden de Caballeros Radiantes; la décima
+simplemente una cuestión de elegir el talento principal de
+orden Radiante funciona de manera un poco diferente. Los
+Primer Ideal y obtener acceso a vigorosas potencias, sino
+spren individuales varían en motivos y preferencias, al igual
+que representa tu profundo compromiso con un conjunto de
+que las personas de carne y hueso, pero al seleccionar posibles
+Ideales y tu creciente relación con un spren inteligente que
+Radiantes, cada tipo de spren tiende a seguir ciertos patrones
+elige vincularse contigo.
+(como se detalla en la sección de cada orden, más adelante).
+Esta sección te guía sobre cómo usar la narración para
+apoyar tu relación con tu spren y la orden Radiante, tanto in-
+Tu spren y tú
+terpretando el papel de tu personaje como colaborando con
+Como jugador, sé abierto con la DJ acerca de qué tipo de
+la DJ. También incluye reglas para interactuar con tu spren.
+spren esperas que tu personaje atraiga (incluso si tu perso-
+naje no es personalmente consciente de estar haciéndolo).
+Antes de elegir un
+Animamos a la DJ a utilizar spren Radiantes como PNJs,
+camino Radiante
+y a comunicar cuándo las acciones heroicas de un PJ han
+atraído la atención y aprobación de un spren. Sin embargo,
+Mucho antes de que subas un nivel y elijas un talento de
+a veces puede ser abrumador para la DJ realizar un segui-
+Primer Ideal, sería buena idea hablar con la DJ sobre tu in-
+miento de todos los tipos de spren y de si un personaje se
+tención de seguir un camino Radiante. Esto ayuda a la DJ a
+está comportando de una manera que atraería a uno. Tus
+darte oportunidades para estar a la altura de los Ideales de
+compañeros de juego y tú podéis ayudarla a estar atenta a los
+tu futura orden.
+momentos específicos en los que encarnas los Ideales o pre-
+De manera similar, no tienes que esperar hasta elegir el ta-
+ferencias de un spren. Consulta la sección “Cómo jugar con
+lento de Primer Ideal para comenzar a atraer un spren. Se os
+Capítulo 5: Caminos radiantes 125
+
+--- Página 130 ---
+un spren” más adelante para obtener más sugerencias sobre Cada vez que des un paso como los descritos anteriormente,
+cómo desarrollar y representar tu relación con tu spren. de una manera dramática o narrativamente satisfactoria,
+En tu hoja de personaje. Una vez que hayas atraído a pregúntale a la DJ si puedes marcar una casilla de hito.
+un spren Radiante (ya sea antes o después de elegir tu pri- Además, podrás marcar un hito después de una acción sig-
+mer talento Radiante), podrás anotar su nombre y tipo en la nificativa que se alinee con la filosofía central de tu futura
+sección “Conexiones” de la hoja de personaje. orden (como “Protegeré” para los Corredores del Viento).
+Puedes encontrar la filosofía central de cada una de las
+Juramento de ideales
+órdenes en la sección “Órdenes de Caballeros Radiantes”,
+más adelante.
+Cada orden Radiante tiene cinco Ideales, como se describe
+en la sección de cada orden, más adelante. Estas Palabras
+Pronunciar las Palabras
+Inmortales son su ética y credo, y guían a los miembros de
+Normalmente jurarás un Ideal “delante de cámara” du-
+la misma en todo lo que hacen.
+rante una escena, idealmente en el clímax de un arco na-
+Una vez que pronuncias un Ideal debes seguirlo y aban-
+rrativo. Una vez que has marcado las tres casillas de hito,
+donarlo puede tener consecuencias funestas. No obstante,
+puedes colaborar con la DJ para planificar un momento
+pronunciar un Ideal no se reduce a algo tan simple como
+apropiado (o cuando el momento parezca adecuado, la DJ
+decir algunas palabras en voz alta. Debes comprender las
+o tú mismo podéis sugerir jurar un Ideal durante esa es-
+Palabras y sentir su significado y propósito en lo más pro-
+cena). Si ambos estáis de acuerdo, la DJ te pide que “pro-
+fundo de tu alma; un proceso que requiere mucho tiempo,
+nuncies las Palabras” de ese Ideal. Después de hacerlo, la
+crecimiento y dedicación.
+Ideales y metas
+Este juego sigue tu progreso a través de cada Ideal mediante
+las metas de Ideal especiales (consulta el capítulo 8), que
+adquieres a partir del talento de Ideal correspondiente de tu
+camino Radiante.
+Empezando por el Primer Ideal, seguirás trabajando
+para conseguir tu meta actual encarnando la filosofía de tu
+orden Radiante. A medida que logres hitos personales signi-
+ficativos, la DJ te hará marcar casillas de hito en tu hoja de
+personaje (consulta “Progresar en el Primer Ideal” para ver
+algunos ejemplos de hitos).
+Una vez que hayas marcado las tres casillas de hito para
+alcanzar tu meta de Ideal, las reglas de tu talento te permi-
+tirán pronunciar las Palabras, pero es posible que quieras
+esperar hasta un momento adecuado en la historia (consulta
+la sección “Pronunciar las Palabras”, más adelante).
+Progresar en el Primer Ideal
+Aunque cada orden Radiante jura votos diferentes, todas
+ellas comparten el Primer Ideal: “Vida antes que muerte.
+Fuerza antes que debilidad. Viaje antes que destino”. Las in-
+terpretaciones de estas palabras varían, pero cada Radiante
+que jura estos votos se compromete con su crecimiento per-
+sonal al servicio de los demás.
+Una vez que elijas tu talento principal de Primer Ideal,
+necesitarás progresar en tu nueva meta con el tiempo. Por
+ejemplo, podrías:
+◆
+Priorizar salvar vidas en lugar de causar muertes.
+◆
+Mostrar una gran fortaleza física, mental o emocional en
+A
+N
+medio de enormes desafíos, especialmente aquellos re-
+U
+L
+lacionados con el obstáculo que elegiste durante la crea-
+C
+I
+C
+ción del personaje.
+S
+A
+◆
+R
+Permanecer en el momento presente y centrarte en las
+PRIMER IDEAL
+D
+N
+tareas y las personas que tienes frente a ti, en lugar de las
+A
+E
+D
+ambiciones en un futuro lejano.
+126 Capítulo 5: Caminos radiantes
+
+--- Página 131 ---
+DJ responde “Esas Palabras son aceptadas” y tu meta está
+Juramento de Ideales más elevados
+completada.
+Para obtener algunas de las habilidades Radiantes más im-
+Cada vez que completas una meta de Ideal, tu personaje
+portantes e icónicas, como la hoja esquirlada, primero debes
+se ilumina con poder. Como se indica en el talento de cada
+jurar Ideales más elevados. Una vez que estés listo para que
+Ideal, quedas Empoderado hasta el final de la escena actual
+tu personaje empiece a trabajar para alcanzar el siguiente
+y desbloqueas los beneficios restantes de ese talento.
+Ideal (y una vez que cumplas los prerrequisitos para ese ta-
+lento en tu árbol de vínculos spren), podrás elegir ese talen-
+Juramento del Primer Ideal
+to cuando subas de nivel.
+Cuando juras el Primer Ideal, tu personaje se compromete
+Al igual que tu talento de Primer Ideal, tu nuevo talento
+con una orden de Caballeros Radiantes. Al completar esta
+de Ideal no otorga inmediatamente todos sus beneficios,
+meta, desbloqueas los beneficios restantes de tu talento de
+sino que obtienes una nueva meta que eventualmente te
+Primer Ideal: quedas Empoderado y obtienes acceso a las
+permite jurar su Ideal correspondiente.
+dos habilidades de potencia de tu orden.
+A medida que trabajas para alcanzar tus tres hitos para
+En tu hoja de personaje. Cuando completes tu meta
+cada nueva meta de Ideal, tu vínculo spren se va fortale-
+de Primer Ideal, escribe los nombres de las dos potencias de
+ciendo mientras te enfrentas a dificultades que hacen que
+tu orden en las líneas en blanco que hay debajo de tu lista
+demuestres crecimiento hacia tu Ideal, y así ser digno de él.
+de habilidades; obtienes un grado de habilidad gratuito en
+Al igual que hiciste con el Primer Ideal, cuando tus acciones
+ambas habilidades de potencia. A medida que tu personaje
+ejemplifiquen esta nueva meta, pregúntale a la DJ si puedes
+gana niveles, puedes mejorar tus habilidades de potencia
+marcar otra casilla de hito.
+como cualquier otra habilidad.
+SEgUNDO IDEAL TERcER IDEAL cUARTO IDEAL
+Capítulo 5: Caminos radiantes 127
+
+--- Página 132 ---
+Cuando estés listo, volverás a pronunciar las Palabras
+Intercambio de talentos de Primer Ideal
+durante una escena (consulta la sección “Pronunciar las
+Palabras” más arriba), desbloqueando así una nueva ca-
+En tu viaje para pronunciar el Primer Ideal, la DJ o tú podríais
+llegar a la conclusión de que tu personaje no es compatible con
+pacidad para ese Ideal. La sección “Filosofía” de tu orden
+la filosofía de la orden a la que inicialmente querías unirte. Si
+Radiante sugiere formas de avanzar en tus metas de Ideales
+ya has elegido un talento de Primer Ideal cuando eso sucede,
+más elevados.
+puedes cambiar tu talento actual de Primer Ideal después
+Para los Ideales más elevados, las Palabras difieren para
+de un descanso largo y elegir en su lugar una orden diferente
+cada persona y orden. Algunas órdenes tienen temáticas más
+que pueda ser más adecuada para ti. Desde una perspectiva
+estructuradas, mientras que otras son completamente perso-
+narrativa, esto atrae a un spren Radiante de un tipo diferente.
+nalizadas para cada Radiante. La sección de tu orden descri-
+Sin embargo, cuando cambias, puedes mantener cualquier
+be los juramentos y las ideas habituales que hay detrás de
+hito que ya hubieras anotado para tu meta “Pronunciar el
+cada Ideal; sin embargo, no dudes en dar forma a tus pro-
+Primer Ideal”.
+pias Palabras de manera creativa para que casen con tu per-
+sonaje, siempre que sigan representando las filosofías
+Escuderos
+principales del Ideal.
+Una vez que pronuncies el Tercer Ideal, podrás elegir el ta-
+lento Adoptar escudero. Esto te permite designar aliados de
+El Quinto Ideal
+confianza como escuderos, otorgándoles una parte de tus
+poderes Radiantes sin que necesiten vincularse con un spren.
+Solo un puñado de Caballeros Radiantes modernos ha jurado
+el Cuarto Ideal. Si bien cada orden de Radiantes tiene también
+Cómo obtener tus propios escuderos
+un Quinto Ideal, ninguna persona viva lo ha pronunciado desde
+Cuando el talento Adoptar escudero te otorga la capaci-
+hace más de dos mil años. Aquellas Palabras se perdieron en el
+dad de adoptar escuderos, podrás hacerlo con PNJs que
+tiempo, y los personajes de este juego no pueden lograrlo (aún).
+conozcas y en los que confíes. Si obtienes un compañero
+como recompensa (consulta “Compañeros” en el capítulo
+8), puedes convertirlo en escudero y otorgarle la capacidad
+Abandono de tus Ideales
+de Escudero que se describe a continuación. Los escuderos
+Cuando te unes a una orden, juras seguir sus Ideales de por
+no se limitan a compañeros; incluso un personaje jugador
+vida, encarnándolos y viviéndolos lo mejor posible. Si comien-
+que no sea Radiante podrá convertirse en tu escudero, si
+zas a actuar en contra de tus votos, el vínculo con tu spren
+así lo desea.
+puede verse dañado, provocando que pierdas el acceso a las
+potencias e incluso potencialmente la muerte de tu spren:
+Capacidad de escudero
+Para que un PNJ o personaje jugador se pueda convertir
+◆
+La primera vez que actúas en contra de tus Ideales no
+en escudero, deberá haber pasado suficiente tiempo con su
+sucede nada. Nadie es perfecto y los errores pueden ser
+Radiante para formar un vínculo de confianza, y ya deberá
+perdonados.
+estar beneficiándose de la tutoría o el entrenamiento del
+◆
+Si actúas en contra de tus Ideales una segunda vez antes
+Radiante en tareas más mundanas. Este vínculo de confian-
+de poder demostrar que estás progresando, tu vínculo se
+za no se crea de la noche a la mañana, y puede requerir mu-
+debilita: pierdes el acceso a tu Ideal más elevado y sus be-
+cho tiempo o tener que compartir circunstancias extremas.
+neficios, y pierdes el acceso a cualquier talento que tiene
+Los personajes jugadores o PNJs que son elegidos como
+ese Ideal como prerrequisito.
+escudero de un Radiante obtienen la siguiente capacidad:
+◆
+Si tus acciones no cambian, estas pérdidas continuarán,
+eliminando tu talento Ideal más elevado de los restantes,
+* Escudero . Si te encuentras a 80 kilómetros o menos del
+hasta que no te quede ninguno.
+Radiante que te nombró su escudero, tienes la capacidad de ab-
+◆
+Después de esto, romper de manera continua tu jura-
+sorber luz tormentosa, dispones de un máximo de 2 puntos de
+mento te excluirá permanentemente del camino y de los
+Investidura y puedes usar las acciones Absorber luz tormentosa,
+talentos de esa orden y podrá llegar a herir gravemente o
+Aumentar y Revitalizar. Además, cuando tu Radiante te nombra
+incluso matar a tu spren si compartís un vínculo particu-
+su escudero, puede elegir darte acceso a una o ambas de sus
+larmente fuerte.
+potencias, incluido 1 grado en una de ellas; estas duran mientras
+seas su escudero. No obtienes acceso a ninguno de sus talentos
+Sin embargo, antes de llegar tan lejos, ¡puedes reparar tu
+Radiantes y, durante el progreso del personaje, no puedes obte-
+vínculo! Cuando demuestres que, una vez más, estás dedica-
+S
+O
+ner grados en esas habilidades de potencia.
+do a tus Ideales y que tus infracciones quedaron atrás, rever-
+T
+N
+Dejas de ser el escudero de este Radiante, si así lo eliges, si
+A
+tirás cualquier daño sufrido por tu vínculo spren. Depende
+S
+S
+tu Radiante te rechaza, si te conviertes en escudero de otro
+de la DJ y de ti decidir cómo esta situación se amolda a ti,
+O
+D
+Radiante o si te vinculas con un spren Radiante y obtienes tus
+pero volver a dedicarte a tus Ideales es una elección personal
+N
+A
+propias capacidades Radiantes.
+D
+que va mucho más allá de la mera palabrería.
+128 Capítulo 5: Caminos radiantes

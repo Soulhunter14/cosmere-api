@@ -1,0 +1,4016 @@
+﻿
+--- Página 72 ---
+
+--- Página 73 ---
+CORE RULEBOOK VERSION NOI SREV K OOBEL UR ER OC
+capítulo 4
+Caminos heroicos
+os personajes de las campañas del Archivo de lAs Agente. Operativo con talento que resuelve problemas con
+tormentas son héroes: ayudan a los necesitados, sal- una mente aplicada o con mano izquierda. Las especiali-
+LL
+van vidas inocentes y luchan contra el poder cre- dades de Agente son: Investigador, Espía y Ladrón.
+ciente de Odium. Los seis caminos heroicos presentados en Cazador. Persona con buena puntería y a quien le gusta
+este capítulo representan las competencias mundanas que estar al aire libre; busca y elimina problemas. Las especia-
+cada héroe utiliza para dejar su huella en el mundo. Ya seas lidades de Cazador son: Arquero, Asesino y Rastreador.
+un hábil Agente, un sabio Erudito o un indomable Enviado. Negociador perspicaz que ejerce hábilmente
+Guerrero, tu camino y sus talentos representan la combina- su influencia sobre los demás. Las especialidades de
+ción singular de trucos y técnicas que utilizas para desenvol- Enviado son: Fiel, Diplomático y Mentor.
+verte en Roshar. Erudito. Pensador diestro que se distingue por su pericia
+en la planificación y la construcción. Las especialidades
+de Erudito son: Artifabriano, Estratega y Cirujano.
+Cómo usar los
+Guerrero. Luchador que confía en su habilidad, fuerza bru-
+caminos y talentos
+ta o voluntad indómita. Las especialidades de Guerrero
+Como personaje jugador, las capacidades de la hoja de per-
+son: Duelista, Portador de esquirlada y Soldado.
+sonaje provienen principalmente de tus talentos (consulta
+Líder. Comandante sereno que dirige y guía a los demás
+“Cómo usar los talentos” más adelante en esta sección).
+para que saquen lo mejor de sí mismos. Las especialida-
+Obtendrás tu primer talento durante la creación del perso-
+des de Líder son: Campeón, Oficial y Político.
+naje, y luego elegirás más a medida que subas de nivel.
+Algunos personajes permanecen centrados en estos caminos
+Tu camino te proporciona una estructura para elegir los
+heroicos, pero a medida que se desarrolla la narrativa y van
+talentos. Todo comienza con un talento principal que, una
+subiendo de nivel, muchos otros acaban vinculándose a un
+vez elegido, desbloquea el acceso a los talentos de las tres
+spren, juran su Primer Ideal y se convierten en Radiantes.
+especialidades de ese camino. Por ejemplo, cuando eliges
+Como se detalla en los capítulos 5 y 6, los caminos
+el talento Posición vigilante (principal de Guerrero), obtie-
+Radiantes enumeran los poderes y habilidades que un perso-
+nes acceso a las especialidades Duelista, Portador de esquir-
+naje puede obtener a través de su vínculo spren, incluidas las
+lada y Soldado dentro del camino de Guerrero.
+potencias, las hojas esquirladas Radiantes y más.
+Caminos heroicos y Radiantes
+Cómo crear tu héroe
+A lo largo de su carrera aventurera, los personajes jugadores
+La entrada de cada camino heroico comienza con una in-
+pueden elegir (de hecho, la mayoría lo hace) talentos de
+troducción que describe sus tres especialidades, recomienda
+varios caminos y especialidades. Esto puede incluir caminos
+qué características priorizar durante la creación del perso-
+heroicos adicionales o un camino Radiante. También es
+naje, y sugiere varios personajes icónicos de El Archivo de las
+posible que puedas elegir talentos únicos de otras fuentes,
+Tormentas que podrías crear con dicho camino. El resto de
+como el árbol de talentos de cantor en el capítulo 2.
+cada entrada presenta los talentos para ese camino, dividi-
+Todos los personajes jugadores comienzan eligiendo un
+dos por especialidad.
+camino heroico y obteniendo un talento de él. Este capítu-
+Consulta el capítulo 1 para obtener instrucciones sobre
+lo presenta seis caminos heroicos:
+cómo crear tu personaje y elegir tu primer camino heroico.
+Consejos para la creación
+Al crear tu personaje, asegúrate de tener en cuenta cómo
+encajará su configuración en todos los tipos de escenas, no
+solo en combate (consulta “Escenas” en el capítulo 9).
+Adolin Kholin, el joven
+Puedes crear personajes de cualquier camino con casi
+guerrero con más talento
+cualquier combinación de atributos, habilidades y talentos,
+pero hay algunas combinaciones que funcionan especialmen-
+V
+de todo Alezkar.
+E
+te bien. Los consejos generales en la introducción de cada
+N
+E
+P
+camino pueden ayudarte a empezar, pero las posibilidades
+R
+A
+son infinitas y estos consejos podrían no aplicarse al papel
+T
+E
+P
+específico que imaginas que desempeñará tu personaje.
+Capítulo 4: Caminos heroicos 69
+
+--- Página 74 ---
+Resúmenes de talentos
+Cómo progresar por un camino
+Los árboles de cada camino incluyen un breve resumen de
+Cada camino incluye un árbol de talentos completo para
+sus talentos. Estos se proporcionan para consultas rápidas,
+sus especialidades. Tu personaje puede progresar por un
+pero, para aprender todas sus reglas asociadas, necesitarás
+árbol de talentos subiendo de nivel y, con ello, obteniendo
+leer el texto completo del talento.
+un nuevo talento. Cuando adquieres uno de esos talentos,
+desbloqueas el acceso a otros más potentes en las partes más
+Cómo usar los talentos
+profundas de ese camino.
+Los talentos representan una habilidad específica u otro
+Talento principal
+beneficio que has adquirido a través de tu experiencia o
+Al elegir un nuevo talento, el talento principal (el primero
+entrenamiento. Puede ser una capacidad que puedes activar
+de cada camino) siempre está disponible, si cumples con los
+(como un nuevo ataque), una bonificación permanente a tus
+prerrequisitos (consulta “Prerrequisitos” al final del capítulo
+características (como un aumento a tu Defensa cognitiva), o
+1). Obtener este talento principal desbloquea el acceso a las
+incluso un efecto que te permite darle forma a la historia de
+especialidades de ese camino.
+maneras especiales.
+Podrás seguir tantos caminos heroicos y especialidades
+Anatomía de un talento
+como desees. Incluso podrías decidir seguir un poderoso ca-
+Todos los talentos (incluidos los de otros capítulos) presen-
+mino Radiante (consulta el capítulo 5); si es así, puedes elegir
+tan los siguientes elementos:
+su talento principal al igual que los de los caminos heroicos.
+Nombre. El nombre del talento.
+Cómo acceder a otros talentos
+Prerrequisito. Para elegir un talento, debe ser un talento
+También puedes elegir talentos que se encuentran en niveles
+principal o ya debes haber obtenido otro vinculado a él
+más profundos de tus caminos existentes, si cumples con
+en el árbol (consulta “Cómo progresar por un camino”).
+sus prerrequisitos. Dichos talentos aparecen debajo o al lado
+Además, algunos talentos indican otros prerrequisitos
+del talento que los desbloquea, conectados por una línea;
+que debes cumplir antes de poder elegirlos (consulta
+tienes acceso a cualquier talento conectado a otro que ya has
+“Prerrequisitos” al final del capítulo 1). Estos podrían
+obtenido. (Además de las líneas visuales en el árbol, puedes
+incluir obtener grados en habilidad o lograr ciertas ambi-
+consultar el texto de cada uno de los talentos para ver qué
+ciones dentro de la historia, como, por ejemplo, obtener
+otros lo desbloquean).
+el apoyo de un mecenas.
+Talentos con objetivos
+Activación. Cada talento indica un tiempo de activación,
+Si un talento te propone un objetivo en particular, antes
+que representa cuánto tiempo lleva iniciar o lograr la
+de elegir talentos posteriores en ese árbol debes comple-
+capacidad otorgada por ese talento (consulta la sección
+tar dicho objetivo. Por ejemplo, si elegiste previamente el
+“Activación de talentos” más abajo). Para facilitar las
+talento Tercer ideal de un camino Radiante, pero no has
+consultas, el árbol de talentos muestra el ícono corres-
+completado su objetivo “Jurar el Tercer Ideal”, todavía no
+pondiente para ese tipo de activación al lado del nombre
+puedes elegir los talentos Cuarto ideal, Vínculo estrechado o
+del talento.
+Adoptar escudero.
+Descripción narrativa. Cada talento describe brevemen-
+te cómo su efecto podría encajar en la historia. Esto no
+Talentos con nombres duplicados
+afecta sus reglas, pero proporciona contexto y ambien-
+Algunos talentos de diferentes caminos comparten el mis-
+tación para ayudaros a imaginar cómo esa capacidad
+mo nombre (por ejemplo, el talento Robusto aparece en los
+podría representarse a nivel narrativo. Tienes carta blanca
+caminos Agente, Cazador, Guerrero y Líder). Si ya dispones
+para ambientar las descripciones de otra manera para
+de un talento con el mismo nombre, se considera que lo
+que se adapten a tu personaje o a la situación.
+tienes en todos los caminos, por lo que puedes (y debes) sal-
+Descripción del efecto. Cada talento incluye al menos
+tarte ese talento duplicado en el árbol.
+una nueva capacidad u otro efecto mecánico que interac-
+Camino inicial y habilidad inicial
+túa con las características y capacidades de tu personaje.
+En este juego, cuando creas tu personaje, eliges tu camino
+El talento explica las nuevas reglas para dicho efecto
+inicial. Este primer camino te otorga un grado gratuito en
+(como, por ejemplo, una nueva forma de gastar tu con-
+la habilidad inicial que aparece en la parte superior.
+centración), cualquier prueba que los personajes pueden
+Si más adelante te ramificas en otros caminos, no obtie-
+tener que realizar para conseguirlo, cómo resolver el re-
+nes su habilidad inicial, ya que no son tu camino inicial. Sin
+sultado, y otras consideraciones relevantes.
+embargo, a medida que subes de nivel, obtienes más grados
+en habilidad de tu elección; las habilidades asociadas con tus
+caminos son una gran opción para asignar estos grados.
+70 Capítulo 4: Caminos heroicos
+
+--- Página 75 ---
+Activación de talentos
+Términos de capítulos posteriores
+Cada talento indica su tipo de activación después de sus
+Este capítulo utiliza términos de todo el libro para describir
+prerrequisitos. Estos tipos de activación son los siguientes:
+cómo funcionan los talentos, por lo que si lo estás leyendo an-
+Acción (1). Muchos talentos requieren el uso de una o más
+tes de explorar los capítulos restantes, es posible que algunos
+acciones para activar su efecto. Para activar dichos efec-
+de esos términos no te resulten familiares. Si deseas conti-
+tos, sigue las reglas habituales para las acciones (consulta
+nuar leyendo, esta barra lateral te indica las reglas más impor-
+“Acciones y reacciones” en el capítulo 10).
+tantes que afectan a tus talentos (además de las presentadas
+en capítulos anteriores).
+Acción gratuita (0). Algunos talentos requieren ser activa-
+El capítulo 9 contiene reglas generales para ir de aventuras.
+dos durante tu turno, pero como son acciones gratuitas,
+Presta especial atención a estas secciones:
+no te impiden poder hacer otras cosas. Siguen las reglas
+◆
+habituales para acciones gratuitas (consulta “Acciones y
+Estados . Algunos talentos aplican un efecto perjudicial o
+reacciones” en el capítulo 10).
+beneficioso que dura poco tiempo. Por ejemplo, el estado
+Reacción (r). Algunos talentos solo se pueden usar como
+Aturdido reduce temporalmente a la mitad el valor de mo-
+respuesta a un detonante: un efecto indicado por el pro-
+vimiento del objetivo.
+◆
+pio talento. No estás obligado a usarlo, pero, si lo haces,
+Daño, lesiones y muerte . El daño reduce tu salud, aunque
+sigue las reglas habituales para las reacciones (consulta
+algunos tipos de daño pueden afectarte más que otros. Si
+“Acciones y reacciones” en el capítulo 10). Algunos ta-
+tu salud cae a 0, se te impone el estado Inconsciente y co-
+lentos te permiten usar una reacción para activar una ca-
+rres el riesgo de sufrir lesiones o morir.
+◆
+pacidad separada que normalmente requiere una acción;
+Descanso . Cuando te tomas un descanso de la aventura,
+si eso sucede, sigue todas las reglas de esa capacidad,
+puedes recuperar salud, salir en busca de recursos u obte-
+excepto su tiempo de activación.
+ner otros beneficios.
+Activación especial ( *). Hay talentos que no necesa-
+El capítulo 10 contiene reglas para el combate y situaciones
+riamente se activan mediante una acción o reacción;
+similares en las que el tiempo es oro. Presta especial atención
+sino que eres tú quien elige activarlos de otras formas
+a estas secciones:
+específicas, como tomándote un descanso corto o largo,
+◆
+Rondas y turnos . El combate se divide en rondas. En cada
+gastando concentración como parte de otra acción, o
+ronda, eliges si quieres jugar un turno rápido o uno lento.
+simplemente eligiendo volver a tirar un dado (no requiere
+Un turno rápido te permite actuar antes que tus oponen-
+acción). Puedes encontrar las reglas para activar estos
+tes, mientras que un turno lento te otorga más acciones.
+talentos en su descripción; si no se menciona ningún tipo
+◆
+Acciones y reacciones . En cada ronda, controlas lo que
+de acción en particular, puedes activar libremente el efec-
+hace tu personaje. Normalmente, en tu turno, realizas
+to si tienen lugar las circunstancias descritas.
+acciones, pero algunas reacciones especiales te permiten
+Siempre activo ( 8). Algunos talentos siempre afectan
+actuar durante el turno de otro personaje.
+a tu personaje. A veces se los conoce como efectos “pa-
+◆
+Ataques . Puedes reducir la salud de un enemigo atacán-
+sivos” o “permanentes”, y no requieren que uses una
+dolo con un arma cuerpo a cuerpo, un arma a distancia,
+acción o hagas nada más para beneficiarte de ellos. Por
+potencias Radiantes y más.
+ejemplo, un talento que aumenta permanentemente tu
+◆
+Objetivos y alcance . Cuando designas a un personaje
+salud está siempre activo y no necesitas elegir cuándo
+como objetivo en combate, puedes enfrentarte a restriccio-
+beneficiarte de él. Por el contrario, si un talento requiere
+nes como su ubicación, su distancia respecto a ti o el hecho
+una elección consciente, como volver a tirar un dado, se
+de que puedas sentirlo, o no.
+considera una activación especial ( *), aunque podrás
+◆
+Movimiento y posicionamiento . Tu capacidad para mover-
+hacerlo en cualquier momento que te encuentres con esa
+te por el campo de batalla está determinada por tu valor de
+situación.
+movimiento, el terreno cercano, el tamaño de tus oponen-
+tes, y más.
+El capítulo 11 contiene reglas para las escenas que se cen-
+tran en la interacción social. Presta especial atención a estas
+“No desprecies tus propios talentos
+secciones:
+por envidiar los ajenos”.
+◆
+Cómo resistirse a la influencia . Cuando superas una prue-
+ba de habilidad para influir socialmente sobre un perso-
+naje, este puede gastar concentración para resistirse a tu
+influencia.
+Capítulo 4: Caminos heroicos 71
+
+--- Página 76 ---
+por completo el ataque (incluida la reducción de tu sa-
+Cómo usar los talentos
+lud), y luego aplicas el efecto.
+fuera del combate
+Mientras. Si un efecto ocurre “mientras” algo sucede,
+Aunque las acciones y las reacciones se suelen usar en com-
+significa que solo se aplica durante las circunstancias es-
+bate, tus talentos también se aplican en otras circunstancias.
+pecificadas y termina cuando dichas circunstancias tam-
+En estas escenas que no son de combate, la DJ puede otor-
+bién lo hacen. Por ejemplo, si un efecto ocurre “mientras
+garte el efecto completo del talento o adaptarlo para que se
+mantienes un Enlace básico”, permanece activo mientras
+ajuste a la situación.
+mantienes dicho Enlace, y luego se detiene en el momen-
+En empeños y conversaciones (consulta los capítulos 11 y
+to en que tu Enlace termina.
+12), los efectos de talento que requieren una acción o reac-
+Hasta. Si un efecto ocurre “hasta” un momento o deto-
+ción pueden usarse como una contribución única, mientras
+nante específico, significa que termina cuando también
+que los que requieren una acción gratuita pueden usarse en
+lo hace la duración establecida. Por ejemplo, si un efecto
+cualquier momento. La mayoría de los talentos de activación
+ocurre “hasta el final de tu próximo turno”, permanece
+especial también pueden usarse, a discreción de la DJ.
+activo hasta ese momento y luego termina.
+En escenas que no son de combate, la DJ es quien deter-
+Si dos o más de tus capacidades ocurren durante el mismo
+mina la cantidad de tiempo que hace falta para poder usar
+intervalo de tiempo, tú eliges en qué orden resolverlas.
+un talento.
+Acumulación de talentos y efectos
+Objetivos de talentos
+Las reglas que siguen determinan si un talento u otro efecto
+Algunos talentos solo te afectan a ti, mientras que otros te
+puede aplicarse varias veces.
+permiten interactuar de maneras especiales con otros per-
+sonajes, objetos o el entorno. Los efectos que afectan a per-
+Elección de talentos duplicados
+sonajes y objetos siguen las reglas de la sección “Objetivos y
+Algunos nombres de talentos aparecen en varios caminos,
+alcance” del capítulo 10.
+no obstante, no pueden elegirse dos veces. Consulta la sec-
+ción anterior “Cómo progresar por un camino” para obtener
+Cuándo activar talentos y efectos
+instrucciones acerca de cómo saltarte dichos talentos.
+Los talentos, las capacidades de los PNJs y otros efectos se
+resuelven en distintos intervalos de tiempo. Puedes deter-
+Nombres de efectos duplicados
+minar cuándo empieza y termina un efecto buscando los
+Si dos efectos similares provienen de capacidades con
+términos siguientes:
+nombres diferentes, pueden acumularse sobre un mismo
+objetivo. Sin embargo, si dos efectos similares provienen
+Cuando. Si un efecto ocurre “cuando” algo sucede, signifi-
+de capacidades con el mismo nombre, no pueden afectar
+ca que se activa durante la resolución de su detonante. A
+simultáneamente al mismo objetivo, incluso si provienen de
+veces se utilizan “antes” y “después” (ver más abajo) para
+caminos diferentes. Por ejemplo, si dos personajes usan un
+aclarar aún más dicho momento. Si un efecto cuenta con
+talento para otorgarte una ventaja en una prueba, obtienes
+pasos distintos, el jugador que lo controla decide cuándo
+dos ventajas si tienen nombres diferentes; sin embargo, si
+resolverlo. Por ejemplo, si un efecto ocurre “cuando ata-
+tienen el mismo nombre, solo puedes obtener una ventaja.
+cas”, puedes resolverlo en cualquier momento del ataque.
+Si dos capacidades tienen el mismo nombre, pero sus
+Sin embargo, si dice “cuando atacas, antes de resolver el
+efectos tienen duraciones o intensidades diferentes, aplica
+daño”, debes resolverlo en cualquier momento entre que
+el talento con el efecto más significativo. Por ejemplo, si un
+declaras tu ataque y tu objetivo ve reducida su salud.
+personaje te otorga una bonificación de +2 y otro personaje
+Antes. Si un efecto ocurre “antes” de algo, significa que se
+te otorga una bonificación de +3, solo obtienes una bonifi-
+aplica después de que se haya declarado su detonante,
+cación de +3.
+pero antes de que alguien comienza a resolverlo. Por
+ejemplo, si un efecto ocurre “antes de que un ataque
+Pericias duplicadas
+con arma impacte contra ti”, lo resuelves una vez que
+Muchos talentos otorgan pericias. Si un talento otorga una
+N
+el atacante tiene éxito en su prueba de ataque contra ti,
+E
+pericia cultural, de utilidad, en arma o en armadura que ya
+N
+Ö
+pero antes de que tu salud queda reducida o aplicas otros
+K
+tienes, puedes elegir en su lugar otra pericia de la misma ca-
+T
+efectos de ese impacto.
+Y
+tegoría (con el permiso de la DJ).
+R
+Después. Si un efecto ocurre “después” de algo, significa
+I
+M
+A
+que se aplica inmediatamente después de resolver su de-
+S
+Y
+Y
+tonante. Por ejemplo, si un efecto ocurre “después de que
+E
+N
+un ataque con arma impacte contra ti”, primero resuelves
+E
+E
+W
+S
+C
+M
+N
+E
+B
+72 Capítulo 4: Caminos heroicos
+
+--- Página 77 ---
+
+--- Página 78 ---
+Agentes de Roshar
+Si quieres inspirarte en El Archivo de las Tormentas, sopesa
+Agente
+estas configuraciones de personaje para Agentes icónicos.
+Camino heroico
+Alguacil azishiano
+Los alguaciles azishianos viajan regularmente por Azir para
+hacer cumplir la ley. Están autorizados a determinar la ino-
+Artistas de la duplicidad y el sabotaje, los Agentes agarran
+cencia y la culpabilidad de las personas, aunque la corrup-
+los hilos del destino en sus manos y esperan el momento
+ción o la insensibilidad pueden resultar en graves injusticias.
+perfecto para tirar y desenmarañar los planes cuidadosa-
+Las asignaciones regionales funcionan en ciclos por todo
+mente trazados de los demás. Los Agentes pueden engañar
+Azir, y están condicionadas por viajes obligatorios a centros
+incluso a los más prudentes con sus astutas artimañas, sus
+designados para recibir educación sobre la legislación más
+movimientos veloces y sus ataques calculados.
+reciente. En raras ocasiones, se envían alguaciles a otros es-
+A los Agentes les importa bien poco la educación formal.
+tados miembros del Imperio azishiano por asuntos de gran
+La mayoría son ferozmente observadores y autodidactas, o
+importancia.
+entrenados sobre el terreno por su cuadrilla. Las regulacio-
+Cómo crear un alguacil. Elige la ascendencia humana
+nes y normas de entidades externas no son más que juguetes
+y las pericias culturales Azishiana y Peregrina. Comienza
+para sortear o ignorar por completo; los Agentes solo res-
+con un alto nivel de Intelecto y Voluntad. Además del grado
+ponden ante su propio código. Afrontan tareas imposibles
+de habilidad de Perspicacia que obtienes por ser Agente,
+con una sonrisa maliciosa y un ingenio agudo, y viven por la
+asigna 2 grados a Deducción y 1 a Armamento ligero y
+emoción de engañar a la muerte, una y otra vez.
+Perspicacia.
+Además del talento Oportunista (principal de Agente),
+Especialidades de agente
+usa tu ascendencia humana para elegir el talento Haz que
+hablen en la especialidad de Investigador. Por último, elige
+El camino de Agente presenta talentos en tres especialidades:
+el equipo inicial de Académico.
+Espía. Para conseguir lo que necesitan, los Espías se po-
+A medida que subes de nivel, considera la opción de ob-
+nen en situaciones complicadas, listos para desviar o
+tener los talentos Recopilar pruebas e Instintos de sabueso.
+reducir las sospechas cuando, inevitablemente, se posan
+sobre ellos.
+Niño de la calle
+Investigador. Las corazonadas tienden a ser poco fiables,
+Abandonados por la sociedad, los niños de la calle apren-
+pero los Investigadores cultivan instintos infalibles,
+den pronto que el riesgo es sinónimo de supervivencia. Las
+aprendiendo a escuchar, colaborar y buscar respuestas a
+circunstancias nunca les han sido agradables, así que crean
+preguntas que a los demás no se les ocurren.
+su propia suerte y su propia amabilidad. Algunos roban solo
+Ladrón. Aunque una mente rápida es un activo de valor
+para subsistir, otros por diversión; sea como sea, los niños de
+incalculable, los Ladrones entrenan su cuerpo para seguir
+la calle hacen lo que deben para seguir adelante. En las pro-
+el ritmo. Ya sea por necesidad o por ambición, lo arries-
+fundidades de la penuria y la miseria, la esperanza parpadea
+gan todo para superar las dificultades imposibles que se
+como una esfera que se desvanece, pero ellos siguen luchan-
+interponen entre ellos y su premio.
+do para vivir otro día.
+Cómo crear un niño de la calle. Elige cualquier
+ascendencia y dos pericias culturales. Comienza con
+Cómo crear un agente
+Velocidad y Voluntad altas. Además del grado de habilidad
+La sección “Agentes de Roshar”, que se presenta a conti-
+de Perspicacia que obtienes por ser Agente, asigna 2 rangos
+nuación, sugiere ejemplos de personajes icónicos. Si tienes
+a Hurto y 1 a Armamento ligero y Sigilo.
+una idea diferente en mente, ten en cuenta estos consejos
+Además del talento Oportunista (principal de Agente), si
+genéricos para crear un Agente efectivo:
+eres humano, elige el talento Golpe bajo en la especialidad
+Atributos. Suele ser buena idea priorizar Discernimiento,
+Ladrón. Si eres cantor, elige los talentos de cantor Cambiar
+Intelecto y Velocidad.
+de forma y Formas de delicadeza, y luego adquiere Golpe
+Habilidades. Algunas habilidades útiles son Agilidad,
+bajo. Por último, elige entre los equipos iniciales de Bajos
+Armamento ligero, Deducción, Engaño, Hurto y
+fondos o Prisionero.
+Perspicacia.
+A medida que subes de nivel, considera la opción de
+Otros caminos heroicos. Los caminos de Cazador y Erudito
+obtener los talentos Comportamiento arriesgado, Paso som-
+son excelentes opciones si se opta por varios caminos.
+F
+H
+brío y Mano embaucadora.
+H
+Recompensas. Al elegir recompensas, siempre acertarás
+L
+U
+con un compañero guardaespaldas y patrocinadores del
+R
+I
+M
+mundo criminal o de la alta sociedad.
+A
+74 Capítulo 4: Caminos heroicos
+
+--- Página 79 ---
+ascendencia cantora para elegir el talento de cantor Formas
+Forma de trabajo de
+de determinación y comenzar en forma de trabajo. Por últi-
+incógnito (oyente)
+mo, elige el equipo inicial de Bajos fondos.
+Los humanos confunden fácilmente a los oyentes en forma
+A medida que subes de nivel, elige el talento Excusa
+de trabajo con los “parshmenios”, explotados y esclavizados
+plausible de la especialidad Espía y considera la opción de
+durante mucho tiempo por los humanos de Roshar. Un oyen-
+obtener Fachada volátil.
+te puede usar esto a su favor yendo de incógnito en forma de
+trabajo y recopilando información mientras reprime su dolo-
+Talento principal de agente
+rosa indignación. Solo en un nuevo lugar, observa a otros que
+El talento principal de Agente, Oportunista, desbloquea el
+se parecen a él trabajar sin fin, atrapados en la forma esclava.
+acceso a sus especialidades.
+Algunos humanos tratan de ser caritativos, pero desprecian
+Habilidad inicial: Perspicacia. Si eliges Agente como
+e infravaloran por ignorancia. Más a menudo, los oyentes en
+tu camino inicial, obtienes un grado de habilidad gratuito en
+forma de trabajo encuentran sospecha y desprecio surcando
+Perspicacia.
+de manera exagerada el delgado caparazón de los rostros
+humanos. Manteniendo una cautelosa vigilancia, los oyentes
+Oportunista (principal de Agente)
+esperan ansiosamente el día para poder reclamar su libertad,
+Prerrequisitos: ninguno
+afirmar su individualidad y exigir justicia para su pueblo.
+Activación: *
+Cómo crear una forma de trabajo de incógnito.
+Percibes los momentos importantes de manera instintiva. En esos
+Elige la ascendencia cantora, la pericia cultural Oyente y
+momentos en los que la balanza oscila entre el desastre y la gloria,
+una cultura humana en la que vivas de incógnito. Empieza con
+puedes esforzarte (y forzar tu suerte) para inclinar el resultado
+un nivel alto de Discernimiento y Presencia. Además del grado
+a tu favor.
+de habilidad de Perspicacia que obtienes por ser Agente, asig-
+Una vez por ronda, cuando tiras un dado de trama, puedes
+na 2 rangos a Engaño, y 1 a Armamento ligero y Perspicacia.
+repetir la tirada. La tirada original no tiene efecto y debes
+Además del talento Oportunista (principal de Agente)
+utilizar el nuevo resultado.
+y el talento Cambiar de forma (principal de cantor), usa tu
+
+--- Página 80 ---
+* Oportunista (principal de agente)
+Una vez por ronda, puedes volver a tirar tu dado de trama.
+investigador
+↻ Ojo avizor 2 Haz que hablen
+Prerrequisito: Deducción 1 o más Prerrequisito: Perspicacia 2 o más
+Usa Oportunista sobre el dado de Gasta 1 punto de concentración para
+trama de un aliado dispuesto a que realizar una prueba de Deducción
+lo hagas y que se encuentre a 6 me- contra Espiritual para averiguar las
+tros o menos de ti. motivaciones del objetivo. Durante
+esta escena, puedes subir la apuesta
+en las pruebas para aprovecharte de
+esas motivaciones.
+▷ Análisis rápido ∞ Torvo
+Gasta 2 puntos de concentración Para resistirse a tu influencia, un
+para obtener 2 para pruebas cogni- personaje debe gastar tanta con-
+tivas con los talentos Usar una habi- centración adicional como tu rango.
+lidad, Obtener ventaja o un talento
+de Agente.
+∞ Recopilar pruebas ∞ Robusto
+Prerrequisito: Perspicacia 2 o más
+Obtienes +1 de salud máxima
+Obtienes pericia en Códigos legales.
+por nivel (incluyendo los niveles
+Cuando superas una prueba cogniti-
+anteriores).
+va contra un objetivo, pasas a estar
+Concentrado.
+∞ Instintos de sabueso 3 Cerrar el caso
+Prerrequisito: Deducción 3 o más Prerrequisito: Deducción 3 o más
+Obtienes una ventaja en pruebas Gasta 3 puntos de concentra-
+cognitivas contra personajes de los ción para realizar una prueba de
+que conoces su motivación; sabes Deducción contra Cognitiva; obtie-
+cuándo te están mintiendo. nes una ventaja si conoces las moti-
+vaciones del objetivo. Si fracasas, el
+objetivo obtiene una ventaja contra
+ti. Si la superas, se echa atrás.
+T
+T
+O
+C
+S
+E
+R
+P
+E
+V
+E
+T
+S
+76 Capítulo 4: Caminos heroicos
+
+--- Página 81 ---
+AGENTE
+Camino heroico
+espía ladrón
+★ Desenlace seguro ↻ Excusa plausible ★ Comportamiento 1 Golpe bajo
+Prerrequisito: Perspicacia 2 o más Prerrequisito: Engaño 1 o más arriesgado
+Gasta 1 punto de concentración
+Prerrequisito: Perspicacia 2 o más
+Cuando uses Oportunista, gasta Obtienes pericia en Juegos de
+para hacer un ataque sin armas
+Gasta 1 punto de concentración
+2 puntos de concentración para manos. Si te descubren mero-
+contra Cognitiva, subiendo la
+O C C para subir la apuesta de tu
+cambiar a 4, o cualquier deando de manera sospechosa,
+apuesta. Si impactas, el objetivo
+O prueba.
+a . gasta 2 puntos de concentración
+queda Aturdido.
+para fingir inocencia.
+★ Obstinarse ∞ Paso firme
+∞ Serenidad ∞ Tapadera
+Puedes volver a tirar con Tu valor de movimiento se incre-
+Aumenta tus Defensas cognitiva Obtienes una identidad falsa y
+C
+Oportunista, pero si sacas , pier- menta en 3. Reduce el daño por
+y espiritual en 2. una pericia cultural relevante.
+des 2 puntos de concentración. caídas y terreno peligroso en el
+doble de tu rango.
+2 Derribo sutil ∞ Poderoso
+Prerrequisito: Perspicacia 3 o
+Cuando impactas con un arma o
+★ Contactos en los ▷ Paso sombrío
+más un ataque sin armas, por cada 1
+bajos fondos Prerrequisito: Hurto 3 o más
+Haz un ataque sin armas con gastada, inflige daño adicional
+Prerrequisito: Patrocinador o
+Después de Destrabarte, gasta
+Perspicacia contra Cognitiva de equivalente a 1 + tu rango.
+seguidor de los bajos fondos de
+2 puntos de concentración para
+un objetivo que no se lo espera,
+la delincuencia
+realizar una prueba de Hurto
+subiendo la apuesta. Si impac-
+Obtienes pericia en Grupos
+contra Cognitiva de cada enemi-
+tas, no se puede comunicar.
+delictivos. Gasta 2 puntos de con-
+go para ocultarte de ellos. Si es-
+O
+centración para añadir a una
+tás a cubierto u oculto, obtienes
+prueba social contra delincuentes.
+una ventaja.
+★ Fachada volátil ★ Contactos en la alta
+Prerrequisito: Engaño 3 o más sociedad
+Prerrequisito: Patrocinador de
+Disfrázate usando Engaño sin
+la alta sociedad
+necesidad de suministros físicos.
+▷ Charlatanería ▷ Mano embaucadora
+Obtienes pericia en Alta socie-
+El primer personaje que te des-
+Prerrequisito: Perspicacia 3 o Prerrequisito: Hurto 3 o más
+dad. Gasta 2 puntos de con-
+cubra, quedará Sorprendido.
+más
+Gasta 2 puntos de concentra-
+O
+centración para añadir a una
+Gasta 2 puntos de concentración
+ción para obtener 2 para prue-
+prueba para interactuar con la
+para obtener 2 para pruebas
+bas físicas con los talentos Usar
+alta sociedad.
+espirituales con los talentos Usar
+una habilidad, Obtener ventaja o
+una habilidad, Obtener ventaja o
+un talento de Agente.
+un talento de Agente.
+icono significado
+1 1 acción
+2 2 acciones
+3 3 acciones
+0 Acción gratuita
+r Reacción
+* Activación especial
+8 Siempre activo
+
+--- Página 82 ---
+Haz un ataque sin armas usando Perspicacia contra la Defensa
+Especialidad de Espía
+cognitiva de un personaje que esté Sorprendido, que no te sienta
+Los talentos que siguen, presentados en orden alfabético, apare-
+o que no te vea como una amenaza (por ejemplo, si estás disfraza-
+cen en la especialidad de Espía en el árbol de talentos de Agente.
+do). El objetivo debe ser de tu tamaño o menor. Sube la apuesta
+en esta prueba de ataque. Si impactas, el objetivo tampoco puede
+Contactos en la alta sociedad
+comunicarse hasta el final de su próximo turno. Además, si im-
+Prerrequisito: tener un patrocinador que pertenezca a la
+pactas, puedes gastar una Oportunidad para Agarrar como 0, lo
+alta sociedad; talento Tapadera
+que automáticamente hace que superes la prueba; mientras esté
+Activación: *
+Retenido por este agarre, también estará Tumbado.
+El nombre de tu patrocinador te abre puertas, incluso en lugares
+que desconoces. Al invocar su nombre o red de contactos en el
+Desenlace seguro
+contexto adecuado, puedes expandir tu influencia aún más.
+Prerrequisito: Perspicacia 2 o más, talento principal
+Cuando realizas una prueba para interactuar socialmente en
+Oportunista
+la alta sociedad, puedes gastar 2 puntos de concentración
+Activación: *
+para añadir una Oportunidad al resultado.
+La mejor apuesta es aquella que, sin que nadie lo sepa, no es una
+Además, cuando adquieres este talento, obtienes pericia
+apuesta en absoluto. Tu perspicacia a veces revela que sucesos
+en Alta sociedad.
+aparentemente aleatorios forman parte del plan de alguien.
+Cuando usas tu talento Oportunista, en lugar de volver a
+Derribo sutil
+tirar el dado de trama, puedes gastar 2 puntos de concentra-
+Prerrequisito: Perspicacia 3 o más, talento Tapadera
+ción para que dicho dado muestre un resultado específico.
+Activación: 2
+O C
+Si el dado mostraba , dale la vuelta a 4. Si mostraba
+Atacas rápidamente a tu objetivo en la garganta, las rodillas u
+C O
+cualquier , dale la vuelta a .
+otra zona vulnerable; queda silenciado antes de poder gritar.
+
+--- Página 83 ---
+Excusa plausible Tapadera
+Prerrequisito: Engaño 1 o más, talento principal Prerrequisito: talento Excusa plausible
+Oportunista Activación: ∞
+Activación: r
+Al convertir rumores vagos en chismes populares, has creado una
+Años de operaciones encubiertas te han enseñado a disimular en identidad falsa en la que habitar.
+el acto, inventando una excusa razonable para el comportamien-
+Cuando adquieres este talento, le das los toques finales a
+to más incriminatorio.
+una identidad falsa para ti. Habla de los detalles de esta
+Después de ser descubierto mientras te escondes o mero- identidad con la DJ, incluidas las comunidades en las que te
+deas por ahí, puedes usar esta reacción y gastar 2 puntos de vales de ella para moverte, y cuál es su reputación dentro de
+concentración para hacerte pasar por alguien que hace algo dichas comunidades.
+inocente. Influyes en los personajes que puedan sentirte Además, cuando adquieres este talento, obtienes una pe-
+para que se traguen tu excusa. ricia cultural relevante para la cultura de tu identidad falsa.
+Un personaje puede resistirse a esta influencia, pero, des-
+Especialidad de Investigador
+pués de hacerlo, pierde una concentración adicional igual a
+tus grados en Engaño.
+Los talentos que siguen, presentados en orden alfabético,
+Además, cuando adquieres este talento, obtienes pericia
+aparecen en la especialidad de Investigador en el árbol de
+en Juego de manos.
+talentos de Agente.
+Fachada volátil
+Análisis rápido
+Prerrequisito: Engaño 3 o más, talento Derribo sutil
+Prerrequisito: talento Ojo avizor
+Activación: *
+Activación: 0
+Sabes que el aplomo es esencial para que cualquier disfraz fun-
+Tu mente archiva y organiza datos rápidamente, y usas esa in-
+cione, y puedes cambiar tu personalidad percibida simplemente
+formación con celeridad cuando estás bajo presión.
+modificando tu forma de andar y tu presencia.
+Gasta 2 puntos de concentración para obtener 2, que
+Cuando tratas de disfrazarte, puedes usar Engaño en lugar
+solo puedes usar para realizar pruebas de habilidades
+de Hurto. Puedes hacerlo incluso si no cuentas con material
+cognitivas mediante las siguientes acciones: Usar una ha-
+para un disfraz físico.
+bilidad, Obtener ventaja o una acción de cualquier talento
+El primer personaje que se dé cuenta de tu engaño (o
+de Agente.
+a quien elijas sorprender revelando tu identidad) quedará
+Durante una conversación o empeño, a discreción de la
+Sorprendido hasta el final de tu siguiente turno.
+DJ, puedes usar ambas 2 para ofrecer una contribución
+adicional durante esa ronda.
+Poderoso
+Prerrequisito: talento Tapadera
+Cerrar el caso
+Activación: ∞
+Prerrequisito: Deducción 3 o más, talento Robusto
+Asestas golpes, puñetazos y patadas con eficiencia entrenada.
+Activación: 3
+Cuando golpeas con un arma o con un ataque sin armas,
+Has recopilado información sobre los motivos y las circunstancias
+por cada 1 que has usado en la acción de ese ataque, au-
+de tu objetivo. Ahora, al ejercer presión sobre sus deseos, debilida-
+mentas el daño que infliges en 1 + tu rango. Por ejemplo,
+des o culpa, puedes convencerlo de que se eche atrás.
+si eres de nivel 6 y realizas un ataque que cuesta 2, cada
+Una vez por escena, gasta 3 puntos de concentración para
+1 inflige 1 + 2 de daño adicional, para un total de 6 pun-
+realizar una prueba de Deducción contra la Defensa cog-
+tos de daño.
+nitiva de un personaje al que puedes influir. Obtienes una
+ventaja si conoces las motivaciones actuales del objetivo, y
+Serenidad
+sufres una desventaja si no las conoces.
+Prerrequisito: talento Desenlace seguro
+Si fracasas, el objetivo obtiene una ventaja en todas las
+Activación: ∞
+pruebas contra ti hasta el final de su siguiente turno.
+Mantienes la atención puesta en tus objetivos inmediatos sin
+Si tienes éxito, influyes en el objetivo para que se eche
+perder de vista tus valores más profundos, lo que te mantiene en
+atrás. Dejará de oponerse a tus propósitos inmediatos en
+equilibrio en medio del caos.
+esta escena e incluso podría abandonarla. Un objetivo puede
+Cuando adquieres este talento, aumentas tu Defensa cogni-
+resistirse a esta influencia, pero después de hacerlo, sufre
+I
+R
+tiva y tu Defensa espiritual en 2.
+A
+una desventaja en todas las pruebas hasta el final de su si-
+A
+S
+O
+guiente turno.
+K
+A
+H
+I
+T
+T
+N
+A
+Capítulo 4: Caminos heroicos 79
+
+--- Página 84 ---
+Haz que hablen Recopilar pruebas
+Prerrequisito: Perspicacia 2 o más, talento principal Prerrequisito: Perspicacia 2 o más, talento Análisis rápido
+Oportunista Activación: ∞
+Activación: 2
+Obser vando las pistas de tu entorno, poco a poco, pero con
+Con una pregunta capciosa, o un comentario cortante, incitas a seguridad, construirás un modelo mental de los misterios que
+los demás a revelar sus motivos. tienes ante ti.
+Gasta 1 punto de concentración para realizar una prueba Después de tener éxito en una prueba cognitiva contra otro
+de Deducción contra la Defensa espiritual de un personaje personaje, pasas a estar Concentrado hasta el final de tu si-
+al que puedes influir. Si tienes éxito, descubres las moti- guiente turno.
+vaciones del objetivo para estar en la escena. Hasta el final Además, cuando adquieres este talento, obtienes pericia
+de la escena, cuando realizas una prueba para aprovechar en Códigos legales.
+esta motivación contra el propio objetivo, puedes subir
+Robusto
+la apuesta.
+Prerrequisito: talento Torvo
+Instintos de sabueso Activación: ∞
+Prerrequisito: Deducción 3 o más, talento Robusto
+Has entrenado tu cuerpo para soportar el dolor y la fatiga, lo
+Activación: ∞
+que te mantiene en la lucha hasta el aciago final.
+Al resolver misterios, sabes que el “por qué” puede ser tan impor-
+Cuando adquieres este talento, tu salud máxima y actual
+tante como el “quién” o el “cómo”. Una vez que entiendes las
+aumenta en 1 por nivel. Esto se aplica a todos los niveles
+motivaciones, los demás detalles encajan fácilmente.
+anteriores y futuros; por ejemplo, si eliges este talento en el
+Obtienes una ventaja en las pruebas cognitivas contra un nivel 6, aumenta retroactivamente tu salud en 6.
+personaje cuyas motivaciones conoces; puedes averiguar di-
+Torvo
+chas motivaciones a partir del talento Haz que hablen o
+Prerrequisito: talento Haz que hablen
+de otras actividades como, por ejemplo, investigarlo.
+Activación: ∞
+Además, después de que un personaje cuyas motivacio-
+Con una mirada severa, quiebras la determinación de todos tus
+nes conoces te mienta, automáticamente sabrás que te está
+adversarios, exceptuando los más serenos.
+engañando (pero no en qué exactamente).
+Para resistir tu influencia, un personaje debe gastar una can-
+Ojo avizor
+tidad de concentración adicional equivalente a tu rango.
+Prerrequisito: Deducción 1 o más, talento principal
+Oportunista
+Especialidad de ladrón
+Activación: r
+Los talentos que siguen, presentados en orden alfabético,
+Los aliados pueden ser una ventaja o una desventaja, así que
+aparecen en la especialidad de Ladrón en el árbol de talen-
+debes vigilarlos para su protección… y la tuya.
+tos de Agente.
+Cuando un aliado al que puedes influir (y se encuentra a
+Charlatanería
+menos de 6 metros de ti) lanza un dado de trama, puedes
+Prerrequisito: Perspicacia 3 o más, talento Obstinarse
+usar esta reacción para usar Oportunista sobre ese dado
+Activación: 0
+como si fuera tuyo.
+Hablar rápidamente te ayuda a salir de los problemas con la
+misma frecuencia que te mete en ellos, y nunca pierdes la opor-
+tunidad de abrir la boca.
+Gasta 2 puntos de concentración para obtener 2 que
+solo puedes usar para realizar pruebas de habilidad espi-
+rituales a través de las siguientes acciones: Usar una habi-
+lidad, Obtener ventaja o una acción de cualquier talento
+de Agente.
+Durante una conversación o empeño, a discreción de la
+DJ, puedes usar ambas 2 para ofrecer una contribución
+adicional durante esa ronda.
+80 Capítulo 4: Caminos heroicos
+
+--- Página 85 ---
+Durante una conversación o empeño, a discreción de la
+Comportamiento arriesgado
+DJ, puedes usar ambas 2 para ofrecer una contribución
+Prerrequisito: talento principal Oportunista
+adicional durante esa ronda.
+Activación: *
+Sabes que el riesgo y la recompensa son compañeros de viaje in-
+Obstinarse
+separables, y te encanta ver hasta dónde te lleva esta pareja.
+Prerrequisito: talento Comportamiento arriesgado
+Activación: *
+Antes de realizar una prueba, puedes gastar 1 punto de con-
+centración para subir la apuesta.
+Cuando decides correr un riesgo, te comprometes del todo en bus-
+ca de la mayor recompensa posible.
+Contactos en los bajos fondos
+Después de usar tu talento Oportunista, puedes volver a ti-
+Prerrequisito: tener un patrocinador o seguidor que per-
+rar el dado una vez más. Debes usar este resultado final, y si
+tenezca a los bajos fondos de la delincuencia; talento
+C
+este muestra una , pierdes 2 puntos de concentración.
+Obstinarse
+Activación: *
+Paso firme
+Cuando te mueves en círculos de mala reputación, el nombre de
+Prerrequisito: talento Golpe bajo
+tu patrocinador o seguidor ejerce una influencia notable.
+Activación: ∞
+Cuando realizas una prueba para interactuar socialmente
+Te mueves por terrenos traicioneros con confianza y velocidad.
+con criminales, ya sean individuos o grupos, puedes gastar
+Cuando adquieres este talento, aumentas tu valor de movi-
+2 puntos de concentración para añadir una Oportunidad al
+miento en 3.
+resultado.
+Además, antes de sufrir daño por terreno peligroso o por
+Además, cuando adquieres este talento, obtienes pericia
+caída, redúcelo en un valor equivalente al doble de tu rango.
+en Grupos delictivos.
+Paso sombrío
+Golpe bajo
+Prerrequisito: Hurto 3 o más, talento Paso firme
+Prerrequisito: talento principal Oportunista
+Activación: 0
+Activación: 1
+Conoces todos los trucos de los estafadores para evitar recibir su
+Sabes exactamente dónde golpear para dejar a tu enemigo tam-
+merecido, y puedes esfumarte con facilidad.
+baleándose de dolor. Algunos podrían verlo como algo antide-
+Después de Destrabarte, puedes gastar 2 puntos de con-
+portivo, pero funciona.
+centración para realizar una prueba de Hurto y comparar
+Mientras tienes una mano libre, gasta 1 punto de concentra-
+el resultado con la Defensa cognitiva de cada enemigo que
+ción para hacer un ataque sin armas usando Hurto contra
+pueda sentirte. Si estás a cubierto o en una zona donde el
+la Defensa cognitiva de un enemigo de tu tamaño o menor;
+sentido principal de tu objetivo está ofuscado (como la os-
+cuando lo haces, sube la apuesta. Con un impacto, el obje-
+curidad), obtienes una ventaja para esta prueba.
+tivo también queda Aturdido hasta el final de su siguiente
+Si tienes éxito contra un enemigo, estás oculto como si
+turno. Con un impacto o un rasguño, también puedes gastar
+hubieras tenido éxito en una prueba de Sigilo para escon-
+una Oportunidad para robar un objeto al objetivo, si no lo
+derte de él.
+está sosteniendo o empuñando. El objeto concreto que pue-
+des robar queda a discreción de la DJ.
+Mano embaucadora
+Prerrequisito: Hurto 3 o más, talento Paso firme
+“No te sientas insultado porque te
+Activación: 0
+Llevas a cabo tus actos de traición con tanta sutileza y destreza
+llamen ladrón. Lo decía como un
+que a tus objetivos les cuesta darse cuenta.
+cumplido”.
+Gasta 2 puntos de concentración para obtener 2 que solo
+puedes usar para realizar pruebas de habilidad físicas a tra-
+vés de las siguientes acciones: Usar una habilidad, Obtener
+ventaja o una acción de cualquier talento de Agente.
+Capítulo 4: Caminos heroicos 81
+
+--- Página 86 ---
+Cazadores de Roshar
+Si quieres inspirarte en El Archivo de las Tormentas, sopesa
+Cazador
+estas configuraciones de personaje para Cazadores icónicos.
+Camino heroico
+Recluta emuli
+Cuando el ejército emuli recluta nuevos soldados para lu-
+char en la Guerra de los Ochenta les da poco más que un
+La emoción de perseguir resuena en la mente de un
+arco y flechas. La amenaza de los despiadados invasores
+Cazador mientras vigila pacientemente. No hay detalle de-
+tukari acecha día y noche, pero el coraje de los reclutas sigue
+masiado pequeño ni demasiado insignificante como para
+siendo inquebrantable. Estos emuli deberán despachar a los
+ignorarlo. La experiencia siempre enseña la más importante
+enemigos antes de que se acerquen lo suficiente para domi-
+de las lecciones: no tienes por qué ser más poderoso que tu
+narlos, no solo por su propio bien, sino por el derecho de su
+presa, si estás mejor preparado.
+reino a su sagrada capital, Sesemalex Dar. Los inquebranta-
+Mediante una planificación cuidadosa, los Cazadores eli-
+bles reclutas recuerdan a todo Roshar que la camaradería y
+gen cuándo y dónde atacar, asegurándose la ventaja mediante
+el patriotismo de los emuli no son algo con lo que jugar.
+el uso inteligente de trampas, terreno elevado y el factor sor-
+Cómo crear un recluta. Elige la ascendencia humana
+presa. Si todo va bien, la presa no percibirá a su agresor hasta
+y las pericias culturales Azishiana y Tashikki. Empieza con
+que sea demasiado tarde. Algunos Cazadores prefieren una
+un nivel alto de Discernimiento y Fuerza. Además del grado
+muerte limpia desde lejos. Otros hacen de su trabajo algo per-
+de habilidad de Percepción que obtienes por ser Cazador,
+sonal, atacando a corta distancia y disfrutando del pánico vis-
+asigna 2 grados a Armamento pesado y 1 a Agilidad y
+ceral de su presa; nada resulta más dulce que una preparación
+Percepción.
+metódica que culmina en una arremetida emocionante.
+Además del talento Buscar presa (principal de Cazador),
+usa tu ascendencia humana para elegir el talento Disparo de
+Especialidades de cazador
+seguimiento de la especialidad Arquero. Por último, elige el
+equipo inicial de Militar.
+El camino de Cazador presenta talentos en tres especialidades:
+A medida que subes de nivel, considera la opción de ob-
+Arquero. Los Arqueros apuntan a las zonas débiles del
+tener el talento Salva implacable.
+ejército enemigo en pleno asalto y dan forma al campo
+de batalla antes del enfrentamiento en primera línea.
+Agente de los Sangre Espectral
+Desatan un torrente constante de flechas para dispersar y
+Los agentes de los misteriosos Sangre Espectral se sienten
+aterrorizar a los enemigos.
+tentados por los secretos que ofrece su orden, como la infor-
+Asesino. Ya sea porque son contratados para matar o por
+mación sobre otros mundos. Decididos a lograr los objetivos
+estar motivados por sus propios intereses, los Asesinos
+de sus superiores, los agentes ven a quienes se interponen
+explotan las debilidades de su presa para incapacitarla
+en su camino como daños colaterales. Mantienen sus es-
+rápidamente.
+caramuzas en las sombras y evitan hábilmente llamar la
+Rastreador. En las zonas salvajes, nadie es más capaz que
+atención. Dentro de la orden, los agentes siguen una estricta
+los Rastreadores. Con fieles compañeros animales a su
+cadena de mando y a menudo son auditados por miembros
+lado, buscan provisiones, cruzan terrenos hostiles con pe-
+de mayor rango. La lealtad debe demostrarse con regulari-
+ricia y colocan trampas peligrosas.
+dad; solo así, un cazador de los Sangre Espectral no se con-
+vertirá en presa.
+Cómo crear un Sangre Espectral. Elige la ascen-
+Cómo crear un Cazador
+dencia humana, la pericia cultural Peregrina y otra pericia
+La sección “Cazadores de Roshar”, que se presenta a conti-
+cultural. Empieza con un nivel alto de Fuerza y Velocidad.
+nuación, sugiere ejemplos de personajes icónicos. Si tienes
+Además del grado de habilidad de Percepción que obtienes
+una idea diferente en mente, ten en cuenta estos consejos
+por ser Cazador, asigna 2 grados a Armamento ligero y 1 a
+genéricos para crear un Cazador efectivo:
+Percepción y Sigilo.
+Atributos. Suele ser buena idea priorizar Discernimiento,
+Además del talento Buscar presa (principal de Cazador),
+Fuerza y Velocidad.
+usa tu ascendencia humana para elegir el talento Golpe
+Habilidades. Algunas habilidades útiles son Agilidad,
+sorprendente de la especialidad Asesino. Por último, elige el
+Percepción, Sigilo, Supervivencia y otra más entre
+equipo inicial de Bajos fondos.
+Armamento ligero y Armamento pesado.
+A medida que subes de nivel y aumentan tus grados en
+Otros caminos heroicos. Los caminos de Agente y Guerrero
+Percepción, considera la opción de elegir el talento Estocada
+son excelentes opciones si se opta por varios caminos.
+fatal, y luego progresar para obtener Poderoso y Eludir. Ten
+Recompensas. Al elegir recompensas, siempre acertarás con
+un compañero animal, un gran arco o una hoja esquirlada.
+82 Capítulo 4: Caminos heroicos
+
+--- Página 87 ---
+en cuenta también los talentos de la especialidad Espía en el obtienes un compañero animal como recompensa, elige
+camino de Agente. también Caza en manada.
+Kaluk’i’iki unkalaki
+Talento principal de Cazador
+Conocidas en los Picos Comecuernos como guías de élite
+El talento principal de Cazador, Buscar presa, desbloquea el
+de los dioses, las kaluk’i’iki son expertas en desenvolverse en
+acceso a sus especialidades.
+condiciones inhóspitas. Estas mujeres son responsables de
+Habilidad inicial: Percepción. Si eliges Cazador como
+liderar expediciones de caza de chulls, así como de escoltar a
+tu camino inicial, obtienes un grado de habilidad gratuito en
+los extranjeros de manera segura por las laderas de las mon-
+Percepción.
+tañas cubiertas de hielo. Hay una regla que sigue siendo un
+salvavidas imprescindible para los unkalaki que osan aventu-
+Buscar presa (principal de Enviado)
+rarse más allá de la seguridad de las aldeas oceánicas: nunca
+Prerrequisitos: ninguno
+ignores las advertencias de una kaluk’i’iki, especialmente si
+Activación: *
+no parecen tener sentido.
+Una vez que hayas encontrado el rastro de tu presa, la persegui-
+Cómo crear una kaluk’i’iki. Elige la ascendencia hu-
+rás sin descanso y estudiarás sus movimientos en el más duro de
+mana y las pericias culturales Unkalaki y Peregrina. Empieza
+los terrenos.
+con un nivel alto de Discernimiento y Fuerza. Además
+Después de pasar 1 minuto preparándote mentalmente, ele-
+del grado de habilidad de Percepción que obtienes por ser
+girás un personaje al que puedas sentir o con el que te hayas
+Cazadora, asigna 2 grados a Supervivencia y 1 a Armamento
+encontrado anteriormente. Ese personaje se convertirá en
+pesado y Percepción.
+tu presa hasta que elijas dar por concluido este efecto (0) o
+Además del talento Buscar presa (principal de Cazador),
+seleccionar una nueva presa.
+L
+usa tu ascendencia humana para elegir el talento Trampa
+O
+Además, obtienes una ventaja en las pruebas realizadas
+S
+D
+mortal de la especialidad Rastreador. Por último, elige el
+R
+para encontrar, atacar o estudiar a tu presa (como, por ejem-
+O
+equipo inicial de Cortesano.
+N
+plo, la acción Obtener ventaja).
+A
+A medida que subes de nivel, considera la opción de
+N
+I
+R
+obtener los talentos Paso firme y Ventaja del cazador; si
+I
+Capítulo 4: Caminos heroicos 83
+
+--- Página 88 ---
+* Buscar presa (principal de Cazador)
+Elige un personaje para que sea tu presa; obtienes una
+ventaja en todas las pruebas para encontrarla, atacarla y
+estudiarla.
+arquero
+3 Disparo de ★ Entrenamiento de
+seguimiento combate
+Prerrequisito: Percepción 2 o Obtienes pericia en un arma, en
+más una armadura y en Vida militar.
+Muévete 1,5 metros y haz un Una vez por ronda, haces un ras-
+ataque a distancia. Si impactas o guño sin gastar concentración.
+haces un rasguño, el objetivo se
+convierte en tu presa.
+★ Ojo agudo 1 Puntería firme
+Observa a un objetivo y luego Prerrequisito: Agilidad 1 o más
+realiza una prueba de Percepción Aumenta el alcance de tu arma
+contra Cognitiva para averiguar en la mitad de su valor e inflige
+cuál es su defensa o atributo más una cantidad de daño adicional
+bajo, o si su salud, concentración igual a tus rangos en Percepción.
+o Investidura están por debajo
+de la mitad.
+▷ Explotar debilidad ▷ Paso atrás
+Prerrequisito: Percepción 3 o Prerrequisito: Agilidad 2 o más
+más Después de hacer un ataque
+Obtienes ventaja sobre tu presa a distancia, gasta 2 puntos
+sin gastar ▶. de concentración para usar
+Destrabarse sin gastar 1, y usar
+Prevenirse si entras en una zona
+a cubierto o sin visión clara.
+∞ Salva implacable ∞ Robusto
+Prerrequisito: Agilidad 3 o más Obtienes +1 de salud máxima
+Puedes usar Acometida contra por nivel (incluyendo los niveles
+tu presa más de una vez por anteriores).
+turno con la misma arma a
+distancia.
+T
+T
+O
+C
+S
+E
+R
+P
+E
+V
+E
+T
+S
+84 Capítulo 4: Caminos heroicos
+
+--- Página 89 ---
+Cazador
+Camino heroico
+asesino rastreador
+1 Golpe sorprendente ∞ Filo asesino 2 Trampa mortal ★ Vínculo animal
+Prerrequisito: Sigilo 1 o más Prerrequisito: Percepción 2 o Prerrequisito: Supervivencia 1 Prerrequisito: Compañero
+Haz un ataque sin armas o con más o más animal
+un arma improvisada contra Obtienes pericia en Cuchillo y Ocultas una trampa de 1,5 me- Mientras tu compañero se en-
+Cognitiva. Con un impacto o Honda. Estas armas obtienen tros para enredar o empalar. cuentre a 3 metros o menos de
+un rasguño, el objetivo queda los rasgos de experto Mortífera y ti, tus defensas aumentarán en
+Trampa enredadora: prueba de
+Sorprendido. Preparación rápida. 1. Usa 0 para otorgar 1 o 2 a tu
+Supervivencia contra Cognitiva,
+compañero en tu turno. Puede
+tira 2d4 de daño por golpe. El ob-
+usar Rastreo como 2: un obje-
+jetivo queda Inmovilizado y la zona
+2 Estocada fatal ★ Seguimiento
+tivo al alcance de tu compañero
+se convierte en terreno difícil.
+Prerrequisito: Percepción 3 o Prerrequisito: Sigilo 2 o más
+se convierte en tu presa.
+Trampa de empalamiento: prue-
+más Tu presa sufre una desventaja
+ba de Supervivencia contra Física,
+Ataca a un objetivo desprevenido para sentirte y tú obtienes una
+tira 2d4 de daño por laceración.
+con un arma cuerpo a cuerpo ventaja para evitar que te detec-
+El objetivo queda Afligido [daño
+contra Cognitiva. Añades 4d4 de te. Cuando tienes éxito contra
+vital igual a 3 + tus grados en
+daño y obtienes dos ventajas si Espiritual mientras estás a cu-
+Supervivencia].
+el arma es Discreta. Las tiradas bierto u oculto, gasta 3 puntos
+de daño máximo aplican una pe- de concentración para designar a
+nalización a la tirada de lesión. dicho objetivo como tu presa.
+★ Trampero experimentado 1 Vínculo protector
+Prerrequisito: Percepción 2 o más Tu compañero animal protege a
+Consigues recursos fácilmente un aliado que está a 9 metros o
+∞ Poderoso ∞ Mirada fría
+para una cantidad de personajes menos de ti, y dicho aliado ob-
+Cuando impactas con un arma o Después de derrotar a tu presa,
+equivalente a tus grados en tiene tu bonificación de Vínculo
+un ataque sin armas, por cada 1 recupera 1 punto de concentra-
+Supervivencia. Puedes crear animal en lugar de ti.
+gastada, inflige daño adicional ción y elige una nueva.
+herramientas naturales con
+equivalente a 1 o más tu rango.
+Supervivencia. Tus Trampas mor-
+tales aumentan a 2d6 de daño y
+∞ Conexión salvaje
+2 rondas de duración.
+1 Acometidas rápidas ★ Eludir
+Prerrequisito: Supervivencia
+Gasta 1 punto de concentra- Prerrequisito: Sigilo 3 o más
+2 o más
+ción para realizar una segunda Obtienes una r adicional para ∞ Paso firme
+Obtienes pericia en Cuidado de
+Acometida con la misma arma. Esquivar si no llevas puesta una Tu valor de movimiento se incre-
+animales. La salud de tu compa-
+armadura con valor de desvío 2 menta en 3. Reduce el daño por
+ñero animal aumenta en 5 veces
+o superior. caídas y terreno peligroso en el
+tu rango, sus defensas aumen-
+doble de tu rango.
+tan en 2 y sus pruebas obtienen
+una bonificación equivalente a
+tus grados en Supervivencia.
+icono significado
+∞ Ventaja del cazador ↻ Caza en manada
+1 1 acción
+Prerrequisito: Supervivencia 3 Prerrequisito: Percepción 3 o
+2 2 acciones
+o más más
+3 3 acciones
+Tu compañero animal obtiene Gasta 1 punto de concentra-
+0 Acción gratuita
+una ventaja contra tu presa. Tus ción para añadir tus grados en
+r Reacción
+Trampas mortales aumentan Supervivencia a un ataque o ti-
+* Activación especial
+a 2d8 de daño y 3 rondas de rada de daño que tu aliado hace
+8 Siempre activo
+duración. contra tu presa.
+
+--- Página 90 ---
+Paso atrás
+Especialidad de Arquero
+Prerrequisito: Agilidad 2 o más, talento Puntería firme
+Los talentos que siguen, presentados en orden alfabético,
+Activación: 0
+aparecen en la especialidad de Arquero en el árbol de talen-
+Has aprendido a disparar y luego desaparecer en los duros cam-
+tos de Cazador.
+pos de batalla de Roshar, manteniéndote a una distancia segura
+Disparo de seguimiento
+de enemigos fuertemente armados que podrían obligarte a parti-
+Prerrequisito: Percepción 2 o más, talento principal
+cipar en un combate cuerpo a cuerpo.
+Buscar presa
+Después de hacer un ataque a distancia, gasta 2 puntos de
+Activación: 3
+concentración para usar Destrabarse como una 0. Si luego
+Tu disparo cuidadoso hiere al objetivo, lo que hace que deje un
+terminas tu turno a cubierto o en una zona donde los senti-
+rastro de sangre, pisadas tambaleantes u otras marcas a su paso.
+dos de tu enemigo están ofuscados, obtienes el beneficio de
+Muévete hasta 1,5 metros y haz un ataque con arma a dis-
+la acción Prevenirse.
+tancia contra la Defensa física de un objetivo. Si impactas o
+Puntería firme
+haces un rasguño, también conviertes al objetivo en tu presa
+Prerrequisito: Agilidad 1 o más, talento Entrenamiento
+para tu talento Buscar presa.
+de combate
+Entrenamiento de combate
+Activación: 1
+Prerrequisito: talento principal Buscar presa
+Tu disparo da en el blanco incluso a distancias vertiginosas.
+Activación: *
+Hasta el final de tu turno, tanto el alcance corto como largo
+Has sido entrenado en los conceptos básicos de armamento y
+de tus armas a distancia aumenta en la mitad de su valor, y
+tácticas de batalla elementales.
+cuando impactas con un ataque de arma a distancia infliges
+Una vez por ronda, cuando fallas un ataque con arma, pue-
+un daño adicional equivalente a tus grados en Percepción.
+des hacer un rasguño a un objetivo sin gastar concentración.
+Robusto
+Además, cuando adquieres este talento, obtienes pericia
+Prerrequisito: talento Puntería firme
+en un arma, en una armadura y en Vida militar.
+Activación: ∞
+Explotar debilidad
+Has entrenado tu cuerpo para soportar el dolor y la fatiga, lo
+Prerrequisito: Percepción 3 o más, talento Ojo agudo
+que te mantiene en la lucha hasta el aciago final.
+Activación: 0
+Cuando adquieres este talento, tu salud máxima y actual
+Estudias la forma de andar, la postura y los movimientos de tu
+aumenta en 1 por nivel. Esto se aplica a todos los niveles
+presa, concentrándote en sus debilidades para derrotarla de una
+anteriores y futuros; por ejemplo, si eliges este talento en el
+vez por todas.
+nivel 6, aumenta retroactivamente tu salud en 6.
+Usa la acción Obtener ventaja como 0, apuntando solo
+Salva implacable
+a tu presa.
+Prerrequisito: Agilidad 3 o más, talento Robusto
+Ojo agudo
+Activación: ∞
+Prerrequisito: talento Disparo de seguimiento
+Tensas la cuerda del arco con una velocidad impresionante y dis-
+Activación: *
+paras de nuevo, valiéndote de la trayectoria de tu primera flecha
+Tu ojo experto discierne las fortalezas y vulnerabilidades de tus
+como guía.
+enemigos, especialmente las de tu presa elegida.
+Puedes usar la misma arma a distancia para atacar a tu presa
+Después de gastar una 1 observando a tu presa, o después
+más de una vez por turno, en lugar de estar limitado a una
+de observar a otro personaje durante al menos 1 minuto,
+Acometida por cada mano.
+realiza una prueba de Percepción contra su Defensa cogniti-
+va. Si tienes éxito, averiguas una de las siguientes opciones a
+tu elección:
+◆
+Su puntuación de atributo más baja.
+◆
+Su defensa más baja.
+◆
+Si ha perdido más de la mitad de su salud máxima, con-
+centración o Investidura (elige una).
+86 Capítulo 4: Caminos heroicos
+
+--- Página 91 ---
+Filo asesino
+Especialidad de Asesino
+Prerrequisito: Percepción 2 o más, talento principal
+Los talentos que siguen, presentados en orden alfabético,
+Buscar presa
+aparecen en la especialidad de Asesino en el árbol de talen-
+Activación: ∞
+tos de Cazador.
+Tus armas más sencillas parecen humildes al lado de reliquias
+Acometidas rápidas
+antiguas o armas de guerra, pero, en tus manos, incluso un cu-
+Prerrequisito: talento Mirada fría
+chillo oxidado o una honda agujereada son tan letales como el
+Activación: 1
+mejor acero.
+Sigues el ritmo de la batalla de manera instintiva, manteniendo
+Cuando adquieres este talento, obtienes pericia en Cuchillo
+la presión sobre tus enemigos en los momentos críticos.
+y en Honda.
+Gasta 1 punto de concentración para realizar una segunda
+Además, mientras manejas un cuchillo o una honda,
+acción de Acometida con una mano que ya hayas usado para
+para ti también tiene los rasgos de experto Mortífera y
+una Acometida en este turno.
+Preparación rápida.
+Eludir
+Golpe sorprendente
+Prerrequisito: Sigilo 3 o más, talento Seguimiento
+Prerrequisito: Sigilo 1 o más, talento principal
+Activación: *
+Buscar presa
+Deslizándote como una sombra, esquivas los ataques de tus ene-
+Activación: 1
+migos y eludes golpes que parecen que vayan a acertar con toda
+Atacas inesperadamente el punto débil de tu objetivo, descon-
+seguridad.
+certándolo y creando una ventana de oportunidad para tu si-
+Obtienes una r adicional al comienzo del combate y al
+guiente ataque.
+comienzo de cada uno de tus turnos, que solo puedes usar
+Haz un ataque sin armas o con arma improvisada contra
+para Esquivar. No puedes beneficiarte de este talento si
+la Defensa cognitiva de un objetivo de tu tamaño o menor.
+llevas puesta una armadura con un valor de desvío de 2
+Si consigues un impacto o un rasguño, el objetivo también
+o superior.
+queda Sorprendido hasta el final de tu siguiente turno.
+Estocada fatal
+Mirada fría
+Prerrequisito: Percepción 3 o más, talento Golpe
+Prerrequisito: talento Seguimiento
+sorprendente
+Activación: ∞
+Activación: 2
+Cuando eliminas a un objetivo, tu mirada se desvía instintiva-
+Apuntas a los órganos vitales de tu enemigo con cruel delicadeza
+mente hacia la siguiente amenaza.
+y la esperanza de poner fin a la pelea antes de que empiece.
+Después de matar o incapacitar a un enemigo que sea tu
+Usando un arma ligera, harás un ataque cuerpo a cuer-
+presa, recuperarás 1 punto de concentración y podrás desig-
+po contra la Defensa cognitiva de un objetivo que esté
+nar a otro enemigo al que puedas sentir como presa para tu
+Sorprendido, que no te sienta o no te vea como una ame-
+talento Buscar presa. A discreción de la DJ, es posible que
+naza (por ejemplo, si estás disfrazado). Si esta arma tiene el
+no puedas usar este talento sobre algunos personajes, como
+rasgo Discreto, obtienes dos ventajas en la prueba.
+los que no representan una amenaza.
+Cuando tiras el daño para este ataque, suma 4d4 de daño
+Poderoso
+adicional y luego cuenta el número de los dados de daño
+Prerrequisito: talento Mirada fría
+que han obtenido su valor máximo (incluido el daño habi-
+Activación: ∞]
+tual del arma más el daño adicional). Por cada dado que
+Asestas golpes, puñetazos y patadas con eficiencia entrenada.
+obtenga su máximo, el objetivo deberá restar 2 a cualquier
+tirada de lesión que haga para ese ataque. Por ejemplo, si ti-
+Cuando golpeas con un arma o con un ataque desarmado,
+ras 1d6 más 4d4 y dos dados obtienen su valor máximo (un
+por cada 1 que has usado en la acción de ese ataque, au-
+6 en el d6 de tu arma y un 4 en un d4 adicional), tu objetivo
+mentas el daño que infliges en 1 + tu rango. Por ejemplo,
+resta 4 a su tirada de lesión.
+si eres de nivel 6 y haces un ataque que cuesta 2, cada
+Este talento se vuelve más poderoso a medida que au-
+1 inflige 1 + 2 de daño adicional, para un total de 6 pun-
+menta tu rango: a rango 3, obtienes 6d4 de daño adicional
+tos de daño.
+(en lugar de 4d4); a rango 4, obtienes 8d4 de daño adicio-
+nal; y a rango 5, obtienes 10d4 de daño adicional.
+Capítulo 4: Caminos heroicos 87
+
+--- Página 92 ---
+Seguimiento Trampa mortal
+Prerrequisito: Sigilo 2 o más, talento Filo asesino Prerrequisito: Supervivencia 1 o más, talento principal
+Activación: * Buscar presa
+Activación: 2
+Te acercas sigilosamente a tu objetivo, valiéndote de cobertura,
+multitudes u otras clases de camuflaje para permanecer invisible Sabes cómo construir trampas y lazos para atrapar animales
+hasta que es demasiado tarde. salvajes, o incluso presas más letales.
+Obtienes una ventaja en las pruebas para evitar que tu presa Usando suministros recolectados o equipo especializado,
+te sienta, y tu presa sufre una desventaja en las pruebas para creas y ocultas una trampa en tu cercanía. Elige una trampa
+sentirte a ti. enredadora o una trampa de empalamiento:
+Además, cuando tienes éxito en una prueba contra la
+Trampa enredadora (Supervivencia contra Defensa
+Defensa espiritual de un enemigo mientras estás a cubierto
+cognitiva). Creas una trampa con cuerda, escombros
+o en un área donde los sentidos de tu objetivo están ofusca-
+u otros objetos que puedan atrapar a algo. Con un im-
+dos, puedes gastar 3 puntos de concentración para designar
+pacto, el objetivo sufre 2d4 de daño por golpe y queda
+a ese objetivo como presa para tu talento Buscar presa.
+Inmovilizado durante 1 ronda, luego la zona de la trampa
+se convierte en terreno difícil hasta el final de la escena.
+Especialidad de Rastreador
+Trampa de empalamiento (Supervivencia contra
+Los talentos que siguen, presentados en orden alfabético,
+Defensa física). Creas una trampa con abrojos, púas u
+aparecen en la especialidad de Rastreador en el árbol de ta-
+otros objetos afilados. Con un impacto, el objetivo sufre
+lentos de Cazador.
+2d4 de daño por laceración y queda Afligido [daño vital
+igual a 3 + tus grados en Supervivencia] durante 1 ronda,
+Caza en manada
+y puedes gastar O para infligir una lesión al objetivo.
+Prerrequisito: Percepción 3 o más, talento Vínculo protector
+Activación: r Esta trampa cubre un círculo de 1,5 metros de diámetro en
+el suelo u otra superficie que la oculta; la trampa permanece
+Como un depredador que caza en grupo, expones las debilidades
+hasta que se activa, luego se gasta. Cuando un personaje
+de tu presa, lo que permite a tus aliados luchar junto a ti con
+toca esta superficie, la trampa se activa. Haz un ataque
+una coordinación aterradora.
+usando tu Supervivencia contra la defensa indicada para esa
+Cuando un aliado en tu línea de efecto ataca a tu presa,
+trampa, obteniendo una ventaja si el objetivo es tu presa.
+puedes usar esta reacción y gastar 1 punto de concentración
+Con un impacto, el objetivo sufre los efectos de la trampa.
+para añadir tus grados en Supervivencia al resultado de su
+Este ataque no puede hacer un rasguño.
+prueba de ataque o tirada de daño (a tu elección).
+Puedes tener un número máximo de trampas activas
+Conexión salvaje
+igual a tus grados en Supervivencia. No puedes superponer
+Prerrequisito: Supervivencia 2 o más, talento
+las zonas de trampas activas. Si otro personaje realiza una
+Vínculo protector
+prueba para buscar o desactivar una trampa, la CD es igual
+Activación: 8
+a tu Defensa espiritual.
+Tu compañero animal se ha hecho fuerte bajo tu cuidado y ha
+Trampero experimentado
+aprendido a confiar en tus instintos tanto como en los suyos.
+Prerrequisito: Percepción 2 o más, talento Trampa mortal
+Cuando adquieres este talento, la salud máxima y actual de
+Activación: *
+tu compañero animal aumenta en 5 veces tu rango; cuando tu
+Eres experto en vivir de la tierra, cazando confiadamente con tus
+rango aumenta, la salud de tu compañero también lo hace.
+trampas y buscando recursos.
+También aumentan sus Defensas física, cognitiva y espiritual
+Cuando buscas comida como parte de un descanso corto,
+en 2 cada una. Cuando tu compañero animal realiza una prue-
+no requiere toda tu atención, por lo que puedes tirar tu dado
+ba, añade una bonificación igual a tus grados en Supervivencia.
+de recuperación o participar en otras actividades de mane-
+Además, cuando adquieres este talento, obtienes pericia
+ra habitual. Cuando realizas una prueba de Supervivencia
+en Cuidado de animales.
+para buscar comida y agua, tienes éxito automáticamente si
+Paso firme
+los hay en tu entorno y nada te impide ir a conseguirlos. Tu
+Prerrequisito: talento Trampero experimentado
+búsqueda de comida puede sustentar a un número de perso-
+Activación: ∞
+najes equivalente a tus grados en Supervivencia.
+Además, después de un descanso largo en las tierras
+Te mueves por terrenos traicioneros con confianza y velocidad.
+salvajes, puedes fabricar una herramienta a partir de mate-
+Cuando adquieres este talento, aumentas tu valor de movi-
+riales naturales usando tu modificador de Supervivencia en
+miento en 3.
+lugar del de Manufactura (ver “Manufactura” en el capítulo
+Además, antes de sufrir daño por terreno peligroso o por
+7). Esta herramienta podría ser una lanza, una honda, una
+caída, redúcelo en un valor equivalente al doble de tu rango.
+88 Capítulo 4: Caminos heroicos
+
+--- Página 93 ---
+tienda de campaña u otro utensilio de supervivencia que se
+puede fabricar con materiales encontrados por la zona, se-
+gún determine la DJ.
+Finalmente, cuando adquieres este talento, el daño de
+UN SABUESO-HAcHA
+tu talento Trampa mortal aumenta de 2d4 a 2d6, y cuan-
+AMISTOSO
+do ese talento aplica un estado, su duración aumenta de 1
+a 2 rondas.
+Ventaja del cazador
+Prerrequisito: Supervivencia 3 o más, talento Trampero
+experimentado
+Activación: ∞
+Aprovechas al máximo tus trampas y a tu compañero animal,
+infligiendo heridas devastadoras con todas las herramientas
+de tu arsenal.
+Tu compañero animal obtiene una ventaja en las
+pruebas contra tu presa.
+Además, cuando adquieres este talento, el daño
+de tu talento Trampa mortal aumenta de 2d6 a 2d8,
+y cuando ese talento aplica un estado, su duración aumenta
+de 2 a 3 rondas.
+Vínculo animal
+Prerrequisito: tener un compañero animal, talento princi-
+pal Buscar presa
+Activación: *
+Tu compañero animal es más que un amigo o bestia de trabajo: es
+tu colaborador. Te advierte del peligro, se anticipa a tus necesida-
+des y sigue tus órdenes... al menos la mayor parte del tiempo.
+animal puede sentir en su cercanía. El objetivo se convierte en la
+Cuando lo adquieres, este talento mejora a un compañe-
+presa del Cazador para su talento Buscar presa.
+ro animal que has obtenido como recompensa (consulta
+“Compañeros” en el capítulo 8).
+Si tu compañero animal cae a 0 puntos de salud, no queda
+Puedes comunicarte con compañero animal a través de
+inconsciente, pero deja de luchar y se retira a un lugar se-
+conceptos simples, y generalmente trata de ayudarte cuan-
+guro. (Sin embargo, tu compañero animal aún podría morir
+do se lo pides. Cuando una escena requiere su conjunto
+a causa de heridas o por razones narrativas). Si alguna vez
+de características, consulta el apéndice A, “Compañeros
+pierdes a tu compañero animal, podrás vincularte con un
+animales”.
+nuevo animal cuando la DJ lo considere apropiado.
+Tu compañero animal te alerta del peligro que se aproxi-
+Vínculo protector
+ma. Mientras se mantiene a 3 metros de ti, puedes sentirlo y
+Prerrequisito: talento Vínculo animal
+cada una de tus defensas aumenta en 1. Cuando te mueves,
+Activación: 1
+tu compañero animal se mueve contigo automáticamente.
+Con una palabra o un gesto, ordenas a tu compañero animal
+Durante el combate, tu compañero animal sigue las re-
+que defienda a otros.
+glas para los PNJs aliados (consulta “Rondas y turnos” en
+Ordenas a tu compañero animal que proteja a un aliado
+el capítulo 10). Sin embargo, si tu compañero animal no ha
+situado a 9 metros o menos de ti, y tu compañero se mueve
+actuado aún en esta ronda, puedes usar una 0 para permitir
+a su lado. Mientras tu compañero animal permanezca en la
+que actúe durante tu turno. Cuando lo hagas, obtendrá 1
+cercanía de dicho aliado, perderás la bonificación a tus de-
+o 2 (a tu elección) para usar inmediatamente las acciones
+fensas de tu talento Vínculo animal, y será el aliado quien se
+que elijas, y luego, al comienzo de su siguiente turno, se le
+beneficiara de ella.
+restará esa misma cantidad a sus 1 habituales.
+Puedes finalizar este efecto como una 1 si estás a 9 me-
+Además de las acciones del capítulo 10 y de su conjunto
+E
+L
+tros o menos de tu compañero animal y le puedes influir,
+de características, tu compañero animal puede usar la acción
+A
+S
+A
+momento en el cual regresa a tu lado. De lo contrario, este
+especial Rastrear:
+C
+A
+efecto termina al final de la escena.
+2 Rastrear . El compañero animal ayuda a su Cazador a rastrear
+I
+R
+E
+L
+a un personaje elegido por este último y que el compañero
+A
+V
+Capítulo 4: Caminos heroicos 89
+
+--- Página 94 ---
+Enviados de Roshar
+Si quieres inspirarte en El Archivo de las Tormentas, sopesa
+Enviado
+estas configuraciones de personaje para Enviados icónicos.
+Camino heroico
+Mercader azishiano
+En lugar de servir a un gobierno o una religión, los mer-
+caderes de Roshar predican el buen nombre del comercio,
+En Roshar hay organizaciones prominentes que designan
+llevando productos de máxima calidad a naciones tanto cer-
+Enviados que rivalizan por recursos, buscan favores u ofre-
+canas como lejanas. Los mercaderes deben ser conocedores
+cen servicios en nombre de la organización. Estos represen-
+de las culturas internacionales, de las tendencias sociales y
+tantes amplían diligentemente el alcance de sus ideologías
+de los gustos individuales. Adornados con ropas ricamente
+a través de una retórica precisa, de una presencia paciente y
+estampadas, los mercaderes azishianos venden productos
+de un fervor incesante.
+provenientes de todo el imperio y regiones vecinas: alfombras
+Los Enviados generalmente están de acuerdo con creen-
+marati, joyas tukari y moda liaforana. Sirvan a los señores co-
+cias bien establecidas y se cuidan de no alterar la integridad
+merciantes de Steen o a los visires de Azir, estos mercaderes
+de esos principios con deseos y ambiciones personales.
+son astutos negociadores, entrenados para identificar solucio-
+Dondequiera que va, un Enviado se mantiene firme en su
+nes mutuamente beneficiosas.
+ética a través de su fuerte conexión con el estamento al que
+Cómo crear un mercader. Elige la ascendencia huma-
+sirve. Aunque un Enviado se considera parte de algo mucho
+na y las pericias culturales Azishiana y Peregrina. Empieza
+más grande, su personalidad moldea el modo en que cumple
+con un nivel alto de Intelecto y Presencia. Además del grado
+con su deber y, por lo tanto, también moldea la organización
+de habilidad de Disciplina que obtienes por ser Enviado,
+a la que sirve.
+asigna 2 grados a Persuasión y 1 a Saber y Perspicacia.
+Además del talento Presencia imponente (principal de
+Especialidades de Enviado
+Enviado), usa tu ascendencia humana para elegir el talento
+Desafío inalterable de la especialidad Diplomático. Por últi-
+El camino de Enviado presenta talentos en tres especialidades:
+mo, elige el equipo inicial de Académico.
+Diplomático. Los Diplomáticos, destinados en el extranje-
+A medida que subes de nivel, considera la opción de
+ro, son expertos en desenvolverse en la política de la cor-
+obtener los talentos Llamamiento a la calma, Serenidad y
+te. Utilizan lo que aprenden sobre sus países anfitriones
+Solución sosegada.
+para buscar un tratamiento más favorable para el suyo.
+Fiel. Para los Fieles, el culto a lo divino impregna toda su
+Guardián de las canciones (oyente)
+vida. Se dedican en cuerpo y alma a las tradiciones de su
+Toda sociedad cuenta con Enviados que atienden las nece-
+fe, demostrando sus convicciones a los demás mediante
+sidades espirituales de sus gentes. Los oyentes confían en
+palabras o hechos.
+los guardianes de las canciones para recordar su historia,
+Mentor. Los Mentores, más interesados en el individuo que
+sus formas y su identidad, que se ocultaron cuando sus an-
+en el todo, se dedican en cuerpo y alma a sus pupilos.
+tepasados desafiaron valientemente a Odium y rechazaron
+Con paciencia, guían a otros hacia la grandeza, viendo
+las formas de poder. Aprender las canciones de los oyentes
+más allá de las dudas y los déficits para avivar el potencial
+y transmitirlas es una tarea importante que suele pasar de
+de cada persona.
+padres a hijos. Solo los guardianes más diligentes pueden
+recitar todas las canciones a la perfección.
+Cómo crear un guardián de las canciones. Elige la
+Cómo crear un Enviado
+ascendencia cantora y la pericia cultural Oyente. Empieza con
+La sección “Enviados de Roshar”, que se presenta a conti-
+un nivel alto de Discernimiento y Fuerza. Además del grado
+nuación, sugiere ejemplos de personajes icónicos. Si tienes
+de habilidad de Disciplina que obtienes por ser Enviado, asig-
+una idea diferente en mente, ten en cuenta estos consejos
+na 2 grados a Liderazgo y 1 a Armamento ligero y Disciplina.
+genéricos para crear un Enviado efectivo:
+Además de los talentos Presencia imponente (principal
+Atributos. Suele ser buena idea priorizar Presencia
+de Enviado) y Cambiar de forma (principal de cantor),
+y Voluntad.
+usa tu ascendencia cantora para elegir el talento de cantor
+Habilidades. La Disciplina es una habilidad esencial para
+Formas de sabiduría y poder acabar adoptando la forma sa-
+la mayoría de los Enviados. Otras habilidades útiles son
+bia. Si obtienes al menos una pericia, elige Música y asigna
+Engaño, Liderazgo, Persuasión y Saber.
+grados en habilidad a Disciplina o Liderazgo. Por último,
+Otros caminos heroicos. Los caminos de Erudito y Líder
+elige el equipo inicial de Artesano.
+son excelentes opciones si se opta por varios caminos.
+A medida que subes de nivel, considera la opción de ob-
+Recompensas. Al elegir recompensas, siempre acertarás
+tener los talentos Grito de guerra e Infundir confianza de la
+con patrocinadores influyentes.
+especialidad Mentor.
+90 Capítulo 4: Caminos heroicos
+
+--- Página 95 ---
+Fervor inspirado, añadiéndole Compostura para tener con-
+Fervoroso vorin
+centración adicional.
+Entre el fervor vorin, los sacerdotes llevan a cabo ceremo-
+nias y rituales para adorar al Todopoderoso y a los Heraldos
+Talento principal de Enviado
+en nombre de la casa o nación a la que sirven. Sus deberes
+El talento principal de Enviado, Presencia imponente, des-
+incluyen quemar glifoguardas en oración y realizar otros ri-
+bloquea el acceso a sus especialidades.
+tuales para que la nobleza a la que sirven no tenga que sufrir
+Habilidad inicial: Disciplina. Si eliges Enviado como
+cargas innecesarias. Cada fervoroso pertenece a un devota-
+tu camino inicial, obtienes un grado de habilidad gratuito en
+rio y sigue sus preceptos. Sin las restricciones típicas de roles
+Disciplina.
+de género vorin, los fervorosos de todos los géneros pueden
+dedicarse a diversas artes y estudios, que enseñan a otros si
+Presencia imponente
+se lo piden.
+(principal de Enviado)
+Cómo crear un fervoroso. Elige la ascendencia huma-
+Prerrequisitos: ninguno
+na y las pericias culturales Alezi y Veden. Empieza con un ni-
+Activación: 1
+vel alto de Discernimiento e Intelecto. Además del grado de
+Inspiras a los demás a dar lo mejor de sí mismos solo con un ges-
+habilidad de Disciplina que obtienes por ser Enviado, asigna
+to, una expresión facial o unas pocas palabras.
+2 grados a Saber y 1 a Armamento ligero y Disciplina.
+Elige un aliado al que puedes influir. Pasará a estar Resuelto
+Además del talento Presencia imponente (principal de
+K
+hasta que se beneficie de ese estado o hasta que termine
+Enviado), usa tu ascendencia humana para elegir el talento
+U
+I
+N
+la escena.
+Galvanizar de la especialidad Fiel. Por último, elige el equi-
+Y
+Z
+A
+po inicial de Académico.
+P
+A
+A medida que subes de nivel, considera la opción de
+N
+N
+A
+elegir Vestimenta tradicional y luego progresar para obtener
+Capítulo 4: Caminos heroicos 91
+
+--- Página 96 ---
+1 Presencia imponente (principal de enviado)
+Un aliado está Resuelto hasta el final de la escena.
+diplomático
+1 Desafío inalterable ∞ Serenidad
+Prerrequisito: Disciplina 1 o Aumenta tus Defensas cognitiva
+más y espiritual en 2.
+Gasta 1 punto de concentración
+para realizar una prueba de
+Disciplina contra Espiritual de un
+enemigo. Si tienes éxito, queda
+Desorientado y sufre una desven-
+taja en pruebas contra ti.
+↻ Réplica fulminante ★ Elegante
+Prerrequisito: Disciplina 2 o
+Obtienes pericia en Moda.
+más
+Mientras lleves puesta una ar-
+Usa tu Desafío inalterable antes
+madura Presentable o ropa a la
+de un ataque e incrementa tu
+moda, obtendrás una ventaja en
+desvío en un valor equivalente a
+tu primera prueba de Engaño,
+tus grados en Disciplina para ese
+Liderazgo o Persuasión.
+ataque.
+★ Llamamiento a la calma ★ Contactos en la alta
+Prerrequisito: Disciplina 2 o sociedad
+más Prerrequisito: Patrocinador de
+Cuando tu Desafío inalterable la alta sociedad
+haga que un objetivo quede Obtienes pericia en Alta socie-
+Desorientado, gasta 1 punto de dad. Gasta 2 puntos de con-
+O
+concentración para hacer que centración para añadir a una
+se calme. Resistirse a tu Desafío prueba para interactuar con la
+inalterable cuesta una concen- alta sociedad.
+tración adicional equivalente a
+tus grados en Disciplina.
+▷ Solución sosegada ★ Oratoria ensayada
+Prerrequisito: Disciplina 3 o Prerrequisito: Persuasión 3 o
+más más
+Si todos los enemigos no subor- Cuando uses tu Presencia impo-
+dinados están calmados, rebajas nente o tu Desafío inalterable,
+las tensiones y haces que termi- gasta concentración hasta
+ne el combate. tus grados en Persuasión para
+añadir esa misma cantidad de
+T
+T
+objetivos. O
+C
+S
+E
+R
+P
+E
+V
+E
+T
+S
+92 Capítulo 4: Caminos heroicos
+
+--- Página 97 ---
+Enviado
+Camino heroico
+fiel mentor
+∞ Vestimenta 2 Galvanizar ↻ Buen consejo ▷ D emostración
+tradicional Un aliado tira su dado de recu- Gasta 1 punto de concentración práctica
+Mientras lleves puesta una ar- peración y recupera esa misma para usar Presencia imponente Prerrequisito: Liderazgo 1 o
+madura Presentable o ropa apro- cantidad de concentración sobre un aliado que haya fallado más
+piada, aumentarás tus Defensas una prueba de habilidad. Cuando uses Obtener ventaja
+espiritual y física en 2. o impactes con un ataque, usa
+tu Presencia imponente como
+una ▷.
+★ Presencia devota ∞ Compostura
+∞ Lecciones de paciencia
+Prerrequisito: Saber 1 o más Aumenta tu concentración
+∞ Poderoso
+Prerrequisito: Disciplina 2 o
+Cuando uses Presencia imponen- máxima y actual en una cantidad
+Cuando impactas con un arma o
+más
+te, gasta 1 punto de concentración equivalente a tu rango.
+Obtienes pericia en Discurso mo- un ataque sin armas, por cada 1
+para eliminar los estados Aturdido,
+tivador. Cuando usas Presencia
+gastada, inflige daño adicional
+Ralentizado, Sorprendido y
+imponente, tu objetivo recupera
+Tumbado de tu objetivo. equivalente a 1 o más tu rango.
+1 punto de concentración.
+★ Presencia incondicional ∞ Motivación aplicada
+Prerrequisito: Disciplina 2 o Prerrequisito: Disciplina 2 o ★ Infundir confianza ∞ Alocución
+más más Prerrequisito: un compañero orientadora
+Cuando uses Presencia impo- Cuando haces que un personaje Presencia imponente puede hacer Prerrequisito: Liderazgo 2 o
+nente, gasta 1 punto de concen- recupere concentración, recupe- que un aliado esté Concentrado más
+tración para aumentar una de las ra una cantidad adicional equi- en lugar de Resuelto. Después de que uses Obtener
+defensas de tu objetivo en 2. valente a la mitad de tus grados ventaja, un aliado a 3 metros o
+en Saber. menos de tu objetivo obtendrá
+una ventaja en su siguiente
+prueba contra tu objetivo.
+★ Consejo sabio ★ Fervor inspirado
+Prerrequisito: Saber 3 o más Prerrequisito: Disciplina 3 o
+Cuando Ayudas a un personaje, más
+∞ Presciencia ∞ Grito de guerra
+gasta 1 punto de concentra- Cuando un aliado use Resuelto,
+Prerrequisito: Disciplina 3 o Prerrequisito: Liderazgo 3 o
+ción para otorgarle Presencia elige otros aliados para que recu-
+más más
+imponente. peren 1 punto de concentración
+Presencia imponente puede re-
+Obtienes una r adicional cada
+hasta un máximo equivalente a
+animar a un aliado Inconsciente
+turno.
+tus grados en Disciplina.
+y, si tiene 0 puntos de salud, re-
+cupera una cantidad equivalente
+a su dado de recuperación + tus
+grados en Liderazgo.
+icono significado
+1 1 acción
+2 2 acciones
+3 3 acciones
+0 Acción gratuita
+r Reacción
+* Activación especial
+8 Siempre activo
+
+--- Página 98 ---
+Desafío inalterable
+Especialidad de Diplomático
+Prerrequisito: Disciplina 1 o más, talento principal
+Los talentos que siguen, presentados en orden alfabético,
+Presencia imponente
+aparecen en la especialidad de Diplomático en el árbol de
+Activación: 1
+talentos de Enviado.
+Te mantienes firme, miras fijamente a tu oponente y le lanzas un
+Contactos en la alta sociedad
+desafío con una calma desconcertante.
+Prerrequisito: Patrocinador que forme parte de la alta so-
+Gasta 1 punto de concentración para realizar una prueba de
+ciedad, talento Elegante
+Disciplina contra la Defensa espiritual de un enemigo al que
+Activación: *
+puedes influir. Si tienes éxito, queda Desorientado y obtiene
+El nombre de tu patrocinador te abre puertas, incluso en lugares
+una desventaja en las pruebas contra ti hasta el final de su
+que desconoces. Al invocar su nombre o red de contactos en el
+siguiente turno.
+contexto adecuado, puedes expandir tu influencia aún más.
+Elegante
+Cuando realizas una prueba para interactuar socialmente en
+Prerrequisito: talento Desafío inalterable
+la alta sociedad, puedes gastar 2 puntos de concentración
+Activación: *
+para añadir una Oportunidad al resultado.
+Combinas tus atuendos hábilmente con cada ocasión, siempre
+Además, cuando adquieres este talento, obtienes pericia
+logrando la declaración perfecta.
+en Alta sociedad.
+Mientras vistes una armadura Presentable o ropa a la moda
+de manera visible, obtienes una ventaja en la primera prue-
+ba de Engaño, Liderazgo o Persuasión que realizas durante
+cada escena.
+Además, cuando adquieres este talento, obtienes peri-
+cia en Moda.
+Llamamiento a la calma
+Prerrequisito: Disciplina 2 o más, talento Réplica
+fulminante
+Activación: *
+Te focalizas en el deseo innato de tu enemigo de vivir y seguir
+persiguiendo sus objetivos. Siembras semillas de duda y lo ani-
+mas a llegar a un acuerdo.
+Cuando tu Desafío inalterable hace que un personaje quede
+Desorientado, también puedes gastar 1 punto de concentra-
+ción para calmarlo hasta el final de esta escena. Un persona-
+je calmado no hará ataques ni acciones hostiles similares sin
+que le provoquen. Sin embargo, si un aliado tuyo o tú lo ata-
+cáis o actuáis de manera hostil, o si uno de sus aliados sufre
+una lesión o muere, el personaje calmado deja de estarlo.
+Además, después de que un objetivo se resista a la in-
+fluencia de tu Desafío inalterable, perderá tanta concentra-
+ción adicional como tus grados en Disciplina.
+“Todo el mundo quiere algo. Todo el
+mundo tiene necesidades. Mi trabajo
+es conectar las necesidades con
+la gente”.
+I
+K
+S
+V
+E
+L
+A
+V
+O
+K
+A
+I
+N
+
+--- Página 99 ---
+Oratoria ensayada
+Especialidad de Fiel
+Prerrequisito: Persuasión 3 o más, talento Contactos en la
+Los talentos que siguen, presentados en orden alfabético,
+alta sociedad
+aparecen en la especialidad de Fiel en el árbol de talentos
+Activación: *
+de Enviado.
+Gracias a tu estudio de la historia de la retórica, elaboras con
+Compostura
+confianza tus discursos para que causen un gran impacto.
+Prerrequisito: talento Galvanizar
+Cuando usas tu Presencia imponente o Desafío inalterable,
+Activación: ∞
+puedes gastar concentración, hasta tus grados en Persuasión,
+Mediante la práctica de la compostura, superas tus límites sin
+para influir en esa misma cantidad de objetivos adicionales.
+distraerte ni perder de vista las amenazas.
+Réplica fulminante
+Cuando adquieres este talento, tu concentración máxima
+Prerrequisito: Disciplina 2 o más, talento Desafío
+y actual aumentan en una cantidad equivalente a tu rango.
+inalterable
+Cuando tu rango aumenta en 1, tu concentración máxima y
+Activación: r
+actual también lo hacen.
+Te enfrentas sin pestañear incluso a los ataques más violentos.
+Consejo sabio
+Antes de que pases a ser el objetivo de una prueba de ataque
+Prerrequisito: Saber 3 o más, talento Presencia
+por parte de un personaje al que puedas sentir, podrás usar
+incondicional
+tu Desafío inalterable como r. Cuando lo hagas, aumenta
+Activación: *
+también tu valor de desvío contra este ataque en la misma
+Ofreces orientación tranquilizadora junto con asistencia física,
+cantidad que tus grados en Disciplina.
+lo que hace que tus aliados confíen en tu aprobación.
+Serenidad
+Después de usar la reacción Ayudar sobre un aliado, gasta 1
+Prerrequisito: talento principal Presencia imponente
+punto de concentración para otorgarle los beneficios de tu
+Activación: ∞
+Presencia imponente (no requiere acción).
+Mantienes la atención puesta en tus objetivos inmediatos sin
+Fervor inspirado
+perder de vista tus valores más profundos, lo que te mantiene en
+Prerrequisito: Disciplina 3 o más, uno de estos dos talen-
+equilibrio en medio del caos.
+tos: Motivación aplicada o Presencia incondicional
+Cuando adquieres este talento, aumentas tus Defensas cog-
+Activación: *
+nitiva y espiritual en 2.
+Cuando un aliado alcanza nuevas cotas, tus proclamas acerca
+Solución sosegada
+de su éxito inspiran a quienes te rodean.
+Prerrequisito: Disciplina 3 o más, talento Llamamiento
+Después de que un aliado que puedes sentir usa su estado
+a la calma
+Resuelto para añadir una Oportunidad a una prueba, pue-
+Activación: 0
+des elegir una cantidad de otros aliados a los que puedes in-
+La mejor batalla es aquella en la que no tienes que luchar. Si tus
+fluir hasta tus grados en Disciplina. Cada objetivo recupera
+llamamientos a la calma se encuentran con corazones dispuestos
+1 punto de concentración (no requiere acción).
+a escucharlos, prefieres que el conflicto termine pacíficamente.
+Galvanizar
+En combate, si todos los enemigos no subordinados están
+Prerrequisito: talento principal Presencia imponente
+calmados (por ejemplo, gracias a Llamamiento a la calma)
+Activación: 2
+y todos los demás personajes no subordinados están de
+Te diriges a un aliado con fer vor contagioso, renovando su con-
+acuerdo en cesar las hostilidades, puedes aliviar las tensio-
+centración en vuestros objetivos compartidos.
+nes. El combate termina inmediatamente y se pasa a una
+Una vez por escena, elige un aliado al que puedes influir.
+conversación.
+Puede tirar su dado de recuperación (no requiere acción) y
+A discreción de la DJ, puedes usar este talento en escenas
+recuperar tanta concentración como el resultado.
+que no son de combate.
+Capítulo 4: Caminos heroicos 95
+
+--- Página 100 ---
+Motivación aplicada Presencia incondicional
+Prerrequisito: Disciplina 2 o más, talento Galvanizar Prerrequisito: Disciplina 2 o más, talento Presencia devota
+Activación: ∞ Activación: *
+Motivas hábilmente a los demás con tus palabras para mante- Tus palabras transmiten la certeza de tus creencias, reforzando la
+nerlos concentrados en el objetivo final. resiliencia incluso de aquellos que no comparten tu fe.
+Cuando haces que un personaje recupere concentración, Cuando usas tu Presencia imponente, puedes gastar 1 punto
+este recupera una concentración adicional equivalente a la de concentración para aumentar una de las defensas del ob-
+mitad de tus grados en Saber (redondeando hacia arriba). jetivo (a tu elección) en 2 hasta el final de la siguiente ronda.
+Presencia devota Vestimenta tradicional
+Prerrequisito: Saber 1 o más, talento Vestimenta Prerrequisito: talento principal Presencia imponente
+tradicional Activación: ∞
+Activación: *
+Has llevado puesto tu uniforme o ropa tradicional durante tanto
+Tus palabras llenan de propósito a tus compatriotas, ayudándo- tiempo que parece una segunda piel, lo cual libera tus movimien-
+los a ignorar la incomodidad o la sorpresa. tos y te otorga gran confianza.
+Cuando usas tu Presencia imponente sobre uno o más Mientras llevas puesta una armadura Presentable o ropa
+aliados, podrás gastar 1 punto de concentración por cada apropiada para tu posición de forma visible, tus Defensas
+uno de los objetivos para eliminar cualquier cantidad de es- física y espiritual aumentan en 2.
+tos estados que tengan: Aturdido, Ralentizado, Sorprendido
+Especialidad de Mentor
+y Tumbado.
+Los talentos que siguen, presentados en orden alfabético,
+aparecen en la especialidad de Mentor en el árbol de talen-
+tos de Enviado.
+Alocución orientadora
+Prerrequisito: Liderazgo 2 o más, talento Poderoso
+Activación: ∞
+Tu comunicación rápida y eficaz permite a tus aliados aprove-
+char tus acciones al máximo.
+Después de tener éxito en una prueba para Obtener ventaja,
+puedes elegir un aliado al que puedas influir a 3 metros o
+menos de tu objetivo. Hasta el final de su siguiente turno,
+dicho aliado obtiene una ventaja en su siguiente prueba con-
+tra tu objetivo.
+Buen consejo
+Prerrequisito: talento principal Presencia imponente
+Activación: r
+Sabes que el fracaso puede ser un excelente maestro, pero solo si
+se comprende su origen, por lo que animas a tus aliados a crecer
+a partir de sus inevitables contratiempos.
+Después de que un aliado al que puedes influir falla una
+prueba de habilidad, puedes gastar 1 punto de concentra-
+ción para usar tu Presencia imponente sobre él como r.
+Demostración práctica
+Prerrequisito: Liderazgo 1 o más, talento principal
+Presencia imponente
+Activación: 0
+Tus lecciones son funcionales y directas, y brindan un excelente
+ejemplo para que los demás lo sigan.
+Después de tener éxito en una prueba para atacar u Obtener
+R
+O
+ventaja, puedes usar tu Presencia imponente como 0.
+L
+A
+G
+
+--- Página 101 ---
+Grito de guerra
+Prerrequisito: Liderazgo 3 o más, talento Alocución
+orientadora
+Activación: ∞
+Tus palabras atraviesan el dolor, la fatiga e incluso la incons-
+ciencia, ayudando a tus aliados a recuperarse en momen-
+tos críticos.
+Cuando usas tu Presencia imponente, puedes elegir como
+objetivo a un aliado Inconsciente al que puedas sentir.
+Cuando lo haces, el objetivo deja de estar Inconsciente y, si
+tiene 0 puntos de salud, tira su dado de recuperación y re-
+cupera una cantidad de salud equivalente al resultado + tus
+grados en Liderazgo.
+Infundir confianza
+Prerrequisito: tener un compañero, talento Lecciones
+de paciencia
+Activación: *
+Tu presencia aporta claridad y aliento, y mantiene al resto con-
+centrados en su objetivo.
+Cuando utilizas tu Presencia imponente, en lugar de que el
+objetivo esté Resuelto, podrás hacer que esté Concentrado
+hasta el final de la escena.
+Lecciones de paciencia
+Prerrequisito: Disciplina 2 o más, talento Buen consejo
+Activación: ∞
+En medio de las incertidumbres de la vida, animas a los demás
+a perseguir sus objetivos de forma lenta y persistente en lugar de
+esforzándose hasta el agotamiento.
+Después de usar tu Presencia imponente, el objetivo recupe-
+ra 1 punto de concentración.
+Además, cuando adquieres este talento, obtienes pericia
+en Discurso motivador.
+Poderoso
+Prerrequisito: talento Demostración práctica
+Activación: ∞
+Asestas golpes, puñetazos y patadas con eficiencia entrenada.
+Cuando golpeas con un arma o con un ataque sin armas, por
+cada 1 que has usado en la acción de ese ataque, aumentas
+Cuchillo contra lanza. Adolin
+el daño que infliges en 1 + tu rango. Por ejemplo, si eres de
+respiró. […] Trató de recordar las
+nivel 6 y realizas un ataque que cuesta 2, cada 1 inflige 1 +
+lecciones de Zahel, los días en el
+2 de daño adicional, para un total de 6 puntos de daño.
+patio de prácticas en los que habían
+Presciencia
+entrenado esa combinación exacta.
+Prerrequisito: Disciplina 3 o más, talento
+Infundir confianza
+Activación: ∞
+A raíz de las duras experiencias personales que te ha tocado
+vivir, has aprendido a permanecer alerta y despierto incluso
+A
+cuando tu entorno parece seguro.
+R
+R
+A
+Obtienes una r adicional al inicio del combate y de cada
+B
+I
+I
+R
+uno de tus turnos.
+A
+Capítulo 4: Caminos heroicos 97
+
+--- Página 102 ---
+Eruditos de Roshar
+Si quieres inspirarte en El Archivo de las Tormentas, sopesa
+Erudito
+estas configuraciones de personaje para Eruditos icónicos.
+Camino heroico
+Cirujano kharbranthiano
+Los cirujanos de los hospitales de la Ciudad de las
+Campanas, formados en la Gran Academia de Kharbranth,
+La creatividad, la perspicacia y la paciencia son característi-
+tienen a su disposición los mejores medicamentos y he-
+cas distintivas de los Eruditos legendarios. Cada vez que una
+rramientas. Comparten sus investigaciones y avances li-
+Desolación arrasa con siglos de progreso y avance científico,
+bremente con sus colegas y todos ponen de su parte para
+los Eruditos se alzan para reconstruir Roshar de nuevo.
+mantener la venerada reputación de la ciudad. Financiados
+Para un Erudito, cada misterio es un desafío con un premio
+en su totalidad por el Palaneo de la ciudad, los cirujanos
+apropiado. Algunos dedican su investigación a las hambrunas,
+de Kharbranth tienen como objetivo brindar una atención
+las tierras estériles y las crisis alimentarias derivadas de ambas.
+ejemplar a cualquier persona que pasa por sus pabellones,
+Otros estudian el cuerpo, cómo funciona y cómo sanarlo des-
+tratando enfermedades fisiológicas y abordando problemas
+pués de lesiones y enfermedades. Pero no todos se ocupan de
+de salud mental de forma gratuita. La práctica médica no
+mejorar la sociedad; algunos, por el contrario, se dedican a las
+empieza ni termina con la identificación del problema; las
+herramientas de destrucción. Los Eruditos militares a menudo
+personas son más que su diagnóstico, por lo que un cirujano
+idean nuevos instrumentos de guerra y calculan cómo presio-
+experto se centra en convertirse en cuidador y sanador de la
+nar mejor a las fuerzas enemigas.
+persona a todos los niveles.
+No importa cuál sea su campo de estudio, los Eruditos
+Cómo crear un cirujano kharbranthiano. Elige la
+usan su incansable hambre de conocimiento para cambiar
+ascendencia humana, la pericia cultural Kharbranthiana y
+el mundo, para bien o para mal, descubrimiento brillante a
+otra pericia cultural. Empieza con un nivel alto de Intelecto
+descubrimiento brillante.
+y Voluntad. Además del grado de habilidad de Saber que
+obtienes por ser Erudito, asigna 2 grados a Medicina, y 1
+Especialidades de Erudito
+grado a Saber y Atletismo.
+Para el talento Ilustración (principal de Erudito), elige tu
+El camino de Erudito presenta talentos en tres especialidades:
+campo de medicina preferido (como, por ejemplo, Pediatría,
+Artifabriano. Combinando ciencia, ingeniería y arte,
+Psiquiatría, Diagnóstico o Cirugía) como pericia adicio-
+los artifabrianos utilizan piedrabases y carcasas de
+nal, y asigna los grados en habilidad adicionales a Saber y
+metal para construir fabriales que llevan a cabo funcio-
+Medicina. Usa tu ascendencia humana para elegir el talento
+nes precisas.
+Medicina de campo de la especialidad Cirujano. Por último,
+Cirujano. Los Cirujanos cualificados aplican sus conocimien-
+elige el equipo inicial de Artesano.
+tos y su empatía para curar a los enfermos y salvar vidas.
+A medida que subes de nivel, considera la opción de ele-
+Estratega. Los Estrategas siempre van tres pasos por delante.
+gir el talento Inteligencia emocional (asignando el grado de
+Saben que el tiempo lo es todo y lo hacen correr a su favor.
+habilidad adicional a Perspicacia) y luego trata de obtener
+Atención continuada.
+Cómo crear un Erudito
+Ingeniero Vriztl
+La sección “Eruditos de Roshar”, que se presenta a conti-
+Los ingenieros de Thaylenah son de los artesanos más dota-
+nuación, sugiere ejemplos de personajes icónicos. Si tienes
+dos de Roshar, gracias a su pasión y persistencia sin límites.
+una idea diferente en mente, ten en cuenta estos consejos
+Sus gremios secretos, como el Gremio Vriztl, protegen las
+genéricos para crear un Erudito efectivo:
+innovaciones más modernas en la construcción de fabriales.
+Atributos. Suele ser buena idea priorizar el Intelecto por
+Los ingenieros Vriztl toman copiosas notas sobre sus fraca-
+encima de todo y, a continuación, Presencia y, o bien
+sos, ya que creen que estos registros guardan pistas vitales
+Fuerza o bien Velocidad (dependiendo de la funcionali-
+para futuros éxitos. Después de muchas generaciones llevan-
+dad de combate que prefieras).
+do a cabo esta práctica diligentemente, el Gremio Vriztl ha
+Habilidades. Las habilidades útiles son Deducción,
+obtenido una ventaja significativa en el campo del desarrollo
+Manufactura, Medicina y Saber.
+de fabriales, y sus ingenieros amplían su legado con cada
+Otros caminos heroicos. Los caminos de Agente y
+fabrial que fabrican.
+Enviado son excelentes opciones si se opta por va-
+Cómo crear un ingeniero Vriztl. Elige la ascendencia
+rios caminos.
+humana, la pericia cultural Thayleña y otra pericia cul-
+Recompensas. Al elegir recompensas, siempre acertarás
+tural. Empieza con un nivel alto de Intelecto y Velocidad.
+con los fabriales, un compañero al que enseñar y un mol-
+Además del grado de habilidad de Saber que obtienes por
+deador de almas.
+ser Erudito, asigna 2 grados a Manufactura, 1 grado a Saber
+98 Capítulo 4: Caminos heroicos
+
+--- Página 103 ---
+y, o bien 1 grado a Agilidad o bien 1 grado a Armamento
+Artifabrianos
+ligero (dependiendo del fabrial que quieras crear; consulta “
+Invención de fabriales únicos ” en el capítulo 7).
+Los artifabrianos son creadores, eruditos, reparadores y pla-
+nificadores que solo se encuentran en Roshar. Suelen ser tan
+Para tu talento Ilustración (principal de Erudito), elige
+curiosos y divergentes en su manera de pensar como estruc-
+Manufactura de equipo como pericia adicional y asigna tus
+turados en sus procesos y meticulosos en sus anotaciones.
+grados en habilidad adicionales a Saber y Manufactura. Usa
+Algunos disfrutan rodeándose de otras personas con ideas
+tu ascendencia humana para elegir el talento Adquisición
+afines, mientras que otros prefieren la discreción, especial-
+preciada de la especialidad Artifabriano. Por último, elige el
+mente cuando se trata de sus maquinaciones.
+equipo inicial de Académico.
+Los artifabrianos provienen de todos los ámbitos y posi-
+A medida que subes de nivel, considera la opción de
+ciones sociales, pero muchos dependen de un mecenas rico
+obtener los talentos Diseño inventivo, Sobrecargar y Trasteo
+o actúan como tal ellos mismos. Algunos artifabrianos son
+experimental.
+visionarios que dirigen a un grupo de fervorosos y eruditos
+para crear el futuro, mientras que otros disfrutan de un enfo-
+Predicetormentas
+que más práctico y cercano en su trabajo.
+Los predicetormentas, ataviados con túnicas cubiertas de
+Conocidos como increíbles solucionadores de problemas,
+glifos, a menudo trabajan para los gobiernos de Roshar. Su
+disfrutan poniendo a prueba su intelecto y creatividad con-
+habilidad para predecir tormentas es un arte enigmático y
+tra todos los desafíos que el mundo les puede plantear. Al
+complejo apreciado por todo el mundo, excepto los vorin
+manipular a su voluntad el metal y los spren, buscan cam-
+más estrictos. Para aumentar su atractivo, llevan a cabo su
+biar el mundo de maneras tanto mundanas como gloriosas.
+tarea en una escritura secreta basada en glifos que solo ellos
+La mayoría de los artifabrianos centran su arte en ciertos
+tipos de fabriales, y gradualmente aprenden a modificar los
+pueden descifrar. Por desgracia, hay charlatanes que venden
+ya existentes de maneras novedosas; sin embargo, todos
+gráficos calculados al azar en las plazas de las ciudades, bur-
+sueñan con dejar huella en Roshar creando un fabrial com-
+lándose de los extraordinarios descubrimientos en matemá-
+pletamente nuevo, como nunca antes se haya visto.
+N
+ticas, ecología y geografía que utilizan los predicetormentas
+É
+H
+bien formados.
+T
+I
+L
+A
+D
+N
+I
+L
+Capítulo 4: Caminos heroicos 99
+
+--- Página 104 ---
+Cómo crear un predicetormentas. Elige la ascen-
+Abrumar con detalles
+dencia humana y las pericias culturales Alezi y Peregrina.
+Prerrequisito: Saber 3 o más, talento Trasteo experimental
+Empieza con un nivel alto de Intelecto y Velocidad. Además
+Activación: *
+del grado de habilidad de Saber que obtienes por ser
+Cuando hablas sobre un tema que te apasiona, lo haces con una
+Erudito, asigna 2 grados a Armamento ligero y Deducción.
+autoridad sin igual y durante largo rato. Los no iniciados rara
+Para tu talento Ilustración (principal de Erudito), elige
+vez pueden soportar tal torrente de información sin perderse en-
+Meteorología como pericia adicional y asigna tus grados
+tre la enorme cantidad de datos.
+en habilidad adicionales a Saber y Deducción. Usa tu as-
+Gasta 2 puntos de concentración para realizar una prueba
+cendencia humana para elegir el talento Planificar de la
+cognitiva o espiritual usando tu modificador de Saber en lu-
+especialidad Estratega. Por último, elige el equipo inicial de
+gar del modificador de habilidad habitual para esa prueba.
+Académico.
+A medida que subes de nivel, considera la opción de ele-
+Adquisición preciada
+gir el talento Cuerpo y mente (asignando el grado de habili-
+Prerrequisito: talento principal Ilustración
+dad adicional a Armamento ligero) y luego intenta obtener
+Activación: *
+Conoce tu momento, Contemplación profunda y Punto de
+Gracias a la buena suerte, o al trabajo duro, has adquirido una
+inflexión.
+gema de calidad suficiente para practicar la fabricación de fabriales.
+Cuando adquieres este talento, obtienes la pericia especiali-
+Talento principal de Erudito
+zada Fabricación de fabriales.
+El talento principal de Erudito, Ilustración, desbloquea el
+Además, obtienes una gema especialmente tallada y puedes
+acceso a sus especialidades.
+usarla para fabricar un fabrial (consulta “Manufactura” en el
+Habilidad inicial: Saber. Si eliges Erudito como
+capítulo 7). La primera vez que intentas fabricar uno con esta
+tu camino inicial, obtienes un grado de habilidad gratui-
+gema, ignoras los requisitos de tiempo habituales para atraer a
+to en Saber.
+un spren y fabricar el fabrial, gracias al estudio y la experimen-
+tación previos, aunque necesitas materias primas.
+Ilustración (principal de Erudito)
+Esta gema cumple con el requisito de gema para un fabrial
+Prerrequisitos: ninguno
+único con un rango equivalente al rango actual de tu personaje.
+Activación: *
+¡No soportas la idea de vender o intercambiar esta gema,
+Has condicionado tu mente para asimilar, archivar y recordar
+ya que resulta vital para tu trabajo! Si por alguna razón la
+información rápidamente. Después de un estudio breve pero
+pierdes, normalmente puedes encontrar un reemplazo apro-
+intensivo, puedes explorar tus nuevas áreas de enfoque con una
+piado después de un descanso largo, aunque la DJ es quien
+habilidad impresionante.
+decide cuándo puedes reemplazarla. Durante el periodo de
+Cuando adquieres este talento, te vuelves hábil en la orga-
+reposo, puedes desmantelar tu fabrial para recuperar esta
+nización mental. Elegirás una pericia cultural o de utilidad
+gema, que luego puedes usar en un nuevo fabrial (ignorando
+que no tengas y dos habilidades cognitivas diferentes que no
+la regla de fabricación que impide la reutilización de gemas).
+sean habilidades de potencia.
+Cuando hagas una prueba, se considerará como si tuvie-
+Destreza refinada
+ras la pericia elegida y un grado adicional de cada una de las
+Prerrequisito: talento Ingeniería eficiente
+habilidades elegidas.
+Activación: *
+Puedes usar este talento para obtener grados en habilidad
+Tu dedicación a la calidad y tu amor por la innovación garanti-
+incluso si superan tu máximo habitual. La pericia y los gra-
+zarán que tus diseños destaquen por encima del resto.
+dos en habilidad de este talento son temporales y no cuen-
+Cuando creas un objeto o inventas un fabrial, puedes gastar
+tan para los prerrequisitos.
+una mejora para aplicar una característica avanzada, en lu-
+Después de un descanso largo durante el cual has tenido
+gar de gastar dos mejoras. Solo puedes beneficiarte de este
+acceso a una biblioteca, puedes reasignar cualquier pericia y
+talento una vez por objeto.
+grado de habilidad otorgados por este talento. Sigue las mis-
+Diseño inventivo
+mas reglas para elegirlos que cuando adquiriste este talento.
+Prerrequisito: Manufactura 2 o más, talento
+Especialidad de Artifabriano
+Adquisición preciada
+Activación: ∞
+Los talentos que siguen, presentados en orden alfabético,
+aparecen en la especialidad de Artifabriano en el árbol de
+Tus fabriales personalizados suelen integrar funciones novedosas
+talentos de Erudito.
+gracias a tu profundo conocimiento de la piedra con la que tra-
+bajas más habitualmente.
+100 Capítulo 4: Caminos heroicos
+
+--- Página 105 ---
+Cuando creas un fabrial con la gema de tu Adquisición pre- Una vez por turno, cuando realizas una prueba de ataque
+ciada, puedes seleccionar un efecto de 1 rango más alto que usando un fabrial, puedes subir la apuesta.
+O
+el rango que estás creando actualmente. Puedes gastar de esta prueba para usar la acción
+Acometida con ese fabrial como una 0 en el mismo turno;
+Estudio profundo
+esa Acometida no cuenta para tu número permitido de
+Prerrequisito: talento Ingeniería eficiente
+Acometidas para las manos que sostienen esa arma.
+Activación: ∞
+C
+La DJ puede gastar de esta prueba para agregar un
+Impulsado por la investigación académica, nada te gusta más que
+nuevo inconveniente a ese fabrial. Este inconveniente per-
+perderte en un archivo de libros, pergaminos y secretos polvorientos.
+manece activo hasta que resuelves el inesperado problema
+Cuando adquieres este talento, tu talento Ilustración te otor-
+al tener éxito en una prueba de Manufactura CD 15 reali-
+ga una pericia cultural o de utilidad adicional, y te otorga
+zada como 2.
+dos habilidades cognitivas adicionales que no sean habili-
+Trasteo experimental
+dades de potencia. Puedes reasignarlas de la misma manera
+Prerrequisito: talento Destreza refinada
+que las otras que obtuviste de ese talento.
+Activación: *
+Ingeniería eficiente
+Has perfeccionado tu instinto para saber cuándo sacrificar una
+Prerrequisito: Manufactura 1 o más, talento principal
+característica para mejorar otra; al fin y al cabo, la invención no
+Ilustración
+solo depende de los logros ingeniosos, sino también de sacrificios
+Activación: ∞
+cuidadosamente equilibrados.
+El trabajo bien hecho comienza con la práctica y los fundamen-
+Cuando fabricas un objeto o inventas un fabrial, tu rango de
+tos, como, por ejemplo, medirlo todo dos veces antes de cada corte.
+Oportunidad en esas pruebas se amplía en 1, y tu tiempo de
+Has dedicado horas, sudor, lágrimas y sangre (en alguna oca-
+fabricación se reduce a la mitad.
+sión) para aprender los trucos básicos de algún oficio.
+Además, puedes renunciar a los beneficios habituales de
+Cuando adquieres este talento, obtienes la pericia de uti-
+un descanso largo para pasar ese tiempo trasteando con un
+lidad Fabricación de armaduras, Fabricación de equipo o
+fabrial que usa tu gema de Adquisición preciada. Después
+Fabricación de armas. También obtienes uno de los siguien-
+de dicho descanso, puedes intentar reconfigurarlo para crear
+tes fabriales que aparecen en el capítulo 7:
+uno diferente del mismo nivel o inferior; esto sigue el proce-
+so de fabricación normal, excepto que no necesitas nuevos
+◆
+Un dolorial aumentador
+materiales e ignoras el requisito de tiempo habitual para
+◆
+Un dolorial reductor
+atraer a un spren y fabricar el fabrial. Si tu prueba de Saber
+◆
+Un par de vinculacañas más un brazalete emocional
+para atrapar un spren fracasa, tu fabrial anterior permanece
+Además, cuando intentas fabricar un objeto o inventar un
+intacto, pero no puedes usar este talento para reconfigurar
+fabrial (consulta “Manufactura” en el capítulo 7), tu rango
+un fabrial nuevamente hasta tu próximo descanso largo.
+de Oportunidad en esas pruebas se amplía en 2 y cualquier
+Después de que terminas de crear un nuevo fabrial usando
+coste para adquirir materias primas se reduce a la mitad.
+este talento, el antiguo se pierde.
+Sobrecargar
+Prerrequisito: Manufactura 3 o más, talento
+Adquisición preciada
+Activación: *
+Llevas los fabriales al límite, sobrecargándolos más allá del uso
+convencional o la práctica segura.
+Ella siempre aseguraba que no era una
+erudita. […] Cualquiera que viese
+la luz de sus ojos mientras sacaba
+N
+otro papel y bosquejaba su idea con
+E
+N
+Ö
+K más detalle sabría que estaba siendo
+T
+Y
+R
+demasiado modesta.
+I
+M
+A
+S
+Capítulo 4: Caminos heroicos 101
+
+--- Página 106 ---
+* Ilustración (principal de Erudito)
+Obtienes, temporalmente, una pericia cultural o de utilidad y un grado
+en dos habilidades cognitivas que no son de potencia. Reasígnalos
+todos tras un descanso largo con acceso a una biblioteca.
+artifabriano
+∞ Ingeniería eficiente ★ Adquisición preciada
+Prerrequisito: Manufactura 1 Obtienes pericia en Fabricación
+o más de fabriales. Obtienes una
+Obtienes pericia en Fabricación gema especial que puedes usar
+de armaduras, Fabricación de inmediatamente para fabricar
+equipo o Fabricación de armas y un fabrial de tu rango. Puedes
+obtienes un fabrial. Al fabricar, el reutilizar esta gema para otros
+rango de Oportunidad se amplía fabriales.
+en 2 y el coste de materiales se
+reduce a la mitad.
+∞ Estudio profundo ∞ Diseño inventivo
+Ilustración te otorga una pericia Prerrequisito: Manufactura 2
+cultural o de utilidad adicional y o más
+dos habilidades cognitivas que El fabrial de tu Adquisición
+no son de potencia adicionales. preciada puede tener un efecto
+1 rango por encima del rango
+que estás fabricando en este
+momento.
+★ Destreza refinada ★ Sobrecargar
+Al fabricar, las características Prerrequisito: Manufactura 3
+avanzadas solo cuestan una me- o más
+jora, en lugar de dos. Una vez por turno, puedes subir
+la apuesta en un ataque con
+O
+fabrial y luego gastar para
+usar Acometida con dicho fabrial
+como una 0.
+★ Trasteo experimental * Abrumar con detalles
+Al fabricar, el rango de Prerrequisito: Saber 3 o más
+Oportunidad se amplía en 1 y el Gasta 2 puntos de concentra-
+tiempo de fabricación se reduce ción para usar tu modificador de
+a la mitad. Durante un descanso Saber para otra prueba cognitiva
+largo, puedes reconfigurar tu o espiritual.
+fabrial de Adquisición preciada a
+otro distinto.
+T
+T
+O
+C
+S
+E
+R
+P
+E
+V
+E
+T
+S
+102 Capítulo 4: Caminos heroicos
+
+--- Página 107 ---
+Erudito
+Camino heroico
+estratega cirujano
+★ Planificar ∞ Cuerpo y mente 1 Medicina de campo ∞ Inteligencia
+Prerrequisito: Deducción 1 o Obtienes una pericia en arma. Prerrequisito: Medicina +1 emocional
+más Obtienes una habilidad adicional Gasta 1 punto de concentración Obtienes pericia en Diagnóstico.
+Después de Obtener venta- de Ilustración. Ahora puedes y hace una prueba de Medicina Obtienes una habilidad adicional
+ja usando una habilidad de elegir habilidades físicas con (CD 15) para curar a un perso- de Ilustración. Ahora puedes ele-
+Ilustración, otorga esa ventaja a Ilustración. naje consciente. Si la superas, gir habilidades espirituales con
+un aliado. También puedes gas- añade tus grados en Medicina a Ilustración.
+tar 2 puntos de concentración su dado de recuperación.
+para prevenir que el objetivo use
+reacciones contra dicho aliado.
+★ Conocimientos de ∞ Serenidad
+anatomía Aumenta tus Defensas cognitiva
+∞ Compostura ∞ Conoce tu momento
+Al impactar con un ataque sin y espiritual en 2.
+Aumenta tu concentración Prerrequisito: Deducción 2 o
+armas, gasta 1 punto de concen-
+máxima y actual en una cantidad más
+O
+tración u para que el objetivo
+equivalente a tu rango. Tus defensas aumentan en 2
+quede Agotado [– la mitad de tus
+desde el inicio de cada ronda
+grados en Medicina].
+hasta que es tu turno.
+▷ Sanación ágil ∞ Medicina aplicada
+2 C ontemplación ∞ Conocimientos
+Prerrequisito: Medicina 2 o Prerrequisito: Saber 2 o más
+profunda aplicados
+más Tus capacidades sanadoras
+Prerrequisito: Saber 2 o más Después de que Obtengas ven-
+Usa Medicina de campo como devuelven una cantidad de salud
+Reasigna hasta 2 habilidades y taja, el objetivo deberá resistirse
+0. Tus capacidades sanadoras adicional igual a tus grados en
+pericias de Ilustración. a tu influencia o sufrir una des-
+devuelven una cantidad de salud Saber.
+ventaja en su próxima prueba.
+adicional igual a tus grados en
+Medicina.
+↻ Contingencia 2 Punto de inflexión
+Prerrequisito: Saber 3 o más Prerrequisito: Deducción 3 o
+★ Cuidados continuos ★ Resucitación
+Gasta 2 puntos de concentra- más
+Prerrequisito: Saber 3 o más Prerrequisito: Medicina 3 o
+C
+ción para retirar de la prueba Gasta 2 puntos de concentra-
+Obtienes pericia en Cuidados más
+de un aliado situado a 6 metros ción para realizar una prueba de
+en salud mental. Durante un
+Gasta 3 puntos de concentra-
+o menos. Deducción contra Cognitiva del lí-
+descanso, haz una prueba de
+ción al usar Medicina de campo
+der enemigo; obtienes una venta-
+Medicina (CD 10) para tratar a
+para revivir a un personaje
+ja si estás en un turno lento. Si la
+un aliado, eliminando un estado
+Inconsciente o a uno que ha
+superas, tus aliados y tú obtenéis
+provocado por su lesión.
+muerto recientemente.
+1 en vuestro siguiente turno.
+icono significado
+1 1 acción
+2 2 acciones
+3 3 acciones
+0 Acción gratuita
+r Reacción
+* Activación especial
+8 Siempre activo
+
+--- Página 108 ---
+Medicina aplicada
+Especialidad de Cirujano
+Prerrequisito: Saber 2 o más, talento Serenidad
+Los talentos que siguen, presentados en orden alfabético,
+Activación: 8
+aparecen en la especialidad de Cirujano en el árbol de talen-
+Has estudiado química, anatomía, comportamiento social y mu-
+tos de Erudito.
+cho más. Gracias a esta amplia base, practicas el complejo arte
+Conocimientos de anatomía
+de la sanación con flexibilidad y confianza.
+Prerrequisito: talento Medicina de campo
+Cuando haces que un personaje recupere salud, recupera
+Activación: *
+una cantidad adicional equivalente a tus grados de Saber.
+Tus conocimientos de anatomía te ayudan a atacar puntos vi-
+Medicina de campo
+tales para incapacitar a los enemigos a la vez que minimizas el
+Prerrequisito: Medicina 1 o más, talento principal
+daño permanente.
+Ilustración
+Cuando impactas a un objetivo de tu tamaño o menor con
+Activación: 1
+un ataque sin armas, puedes gastar 1 punto de concentra-
+Tratas una herida menor vendando un corte, aplicando ungüen-
+O
+ción u para aplicar el estado Agotado a tu objetivo. La pe-
+tos o restableciendo una articulación dislocada.
+nalización aplicada por dicho estado equivale a la mitad de
+tus grados en Medicina, redondeando hacia arriba.
+Gasta 1 punto de concentración para realizar una prueba
+de Medicina CD 15 para tratar a un personaje consciente,
+Cuidados continuos
+dispuesto, y que está en tu cercanía, y tira su dado de recupe-
+Prerrequisito: Saber 3 o más, talento Sanación ágil
+ración como parte de la prueba. Sufres una desventaja si te
+Activación: *
+estás tratando a ti mismo. Si la superas, el objetivo recupera
+La atención médica puede ser un proceso arduo que requiere pa-
+una cantidad de salud igual al resultado de su dado de recu-
+ciencia y una reevaluación periódica. Has estudiado la conexión
+peración + tus grados en Medicina. Si fallas, el objetivo solo
+entre la salud física y mental, y has aprendido a entender ambas
+recupera salud igual al resultado de su dado de recuperación.
+en el largo camino hacia la recuperación.
+Resucitación
+Puedes renunciar a los beneficios habituales de un descanso
+Prerrequisito: Medicina 3 o más, talento Sanación ágil
+corto o largo para, en su lugar, pasar ese tiempo tratando a
+Activación: *
+un aliado que está en tu cercanía. Después de ese descanso,
+Tratas de manera rápida y eficiente a una criatura herida de
+haz una prueba de Medicina CD 10, aumentando la dificul-
+muerte, intentando alejarla del abismo aplicando un torniquete,
+tad en 5 por cada lesión más allá de la primera. Si la supe-
+administrando un antídoto o incluso volviendo a hacer funcio-
+ras, eliminas un solo estado o efecto similar causado por una
+nar órganos dañados.
+de las lesiones del objetivo (pero esta persiste hasta que se
+cura). Un objetivo no puede beneficiarse de este talento más
+Puedes usar el talento Medicina de campo para intentar
+de una vez cada 24 horas.
+resucitar a un personaje caído. Gasta 3 puntos de concentra-
+Además, cuando adquieres este talento, obtienes la peri-
+ción (en lugar de 1) para seleccionar a un personaje situado
+cia de utilidad Cuidados en salud mental.
+en tu cercanía que está Inconsciente o que lleva muerto un
+número de rondas igual o menor a tus grados en Medicina.
+Inteligencia emocional
+La CD de esta prueba aumenta en 5 por cada lesión que
+Prerrequisito: talento principal Ilustración
+tiene el objetivo más allá de la primera. Si fallas, el objetivo
+Activación: 8
+no recupera salud. Si tienes éxito, recupera salud de la ma-
+Perfeccionas tu intuición y comprensión de los demás, lo que te
+nera habitual para ese talento y, si estaba muerto, vuelve a
+permite detectar señales de síntomas ocultos y sentimientos com-
+la vida. Si estaba Inconsciente, puede eliminar ese estado, si
+plicados fáciles de pasar por alto.
+así lo desea.
+Cuando adquieres este talento, tu talento Ilustración te
+Sanación ágil
+otorga una habilidad adicional y puedes usar Ilustración
+Prerrequisito: Medicina 2 o más, talento
+para elegir habilidades espirituales que no son de potencia.
+Medicina de campo
+Además, obtienes la pericia de utilidad Diagnóstico.
+Activación: 0
+Tus manos expertas curan rápidamente las heridas, incluso
+mientras el fragor de la batalla se desarrolla a tu alrededor.
+Puedes usar Medicina de campo como 0.
+Además, cuando adquieres este talento, te vuelves más
+hábil en la sanación. Cuando usas una habilidad que restau-
+ra la salud a otro personaje, este recupera una cantidad de
+salud adicional igual a tus grados en Medicina.
+104 Capítulo 4: Caminos heroicos
+
+--- Página 109 ---
+Serenidad Contingencia
+Prerrequisito: talento Inteligencia emocional Prerrequisito: Saber 3 o más, talento Compostura
+Activación: 8 Activación: r
+Mantienes la atención puesta en tus objetivos inmediatos sin La historia está llena de los restos de quienes no aprendieron del
+perder de vista tus valores más profundos, lo que te mantiene en pasado. Estás decidido a no unirte a ellos, así que te preparas para
+equilibrio en medio del caos. cualquier percance que puede hacer que tus planes descarrilen.
+Cuando adquieres este talento, aumentas tus Defensas cog- Después de que un aliado al que puedas influir situado a
+nitiva y espiritual en 2. 6 metros o menos saque una Complicación en una tirada,
+podrás usar esta reacción y gastar 2 puntos de concentración
+Especialidad de Estratega
+para eliminar una Complicación de su prueba.
+Los talentos que siguen, presentados en orden alfabético,
+Cuerpo y mente
+aparecen en la especialidad de Estratega en el árbol de talen-
+Prerrequisito: talento principal Ilustración
+tos de Erudito.
+Activación: 8
+Compostura
+Amplías tus estudios intensivos para incluir artes marciales y
+Prerrequisito: talento Planificar
+forma física, además de las artes cerebrales.
+Activación: 8
+Cuando adquieres este talento, tu talento Ilustración te otor-
+Mediante la práctica de la compostura, superas tus límites sin
+ga una habilidad adicional y puedes usar Ilustración para
+distraerte ni perder de vista las amenazas.
+elegir habilidades físicas que no son de potencia.
+Además, obtienes una pericia en arma de tu elección.
+Cuando adquieres este talento, tu concentración máxima
+y actual aumentan en una cantidad equivalente a tu rango.
+Planificar
+Cuando tu rango aumenta en 1, tu concentración máxima y
+Prerrequisito: Deducción 1 o más, talento principal
+actual también lo hacen.
+Ilustración
+Activación: *
+Conoce tu momento
+Prerrequisito: Deducción 2 o más, talento
+Obser vas y evalúas cuidadosamente tu problema desde ángulos
+Cuerpo y mente
+novedosos, creando un plan astuto para eliminar un obstáculo,
+Activación: 8
+obtener la ventaja o contrarrestar el siguiente movimiento de
+un enemigo.
+El conflicto sigue su propio ritmo, aumentando y disminuyendo
+a medida que los bandos luchan por el dominio. Tu conocimiento
+Después de que superes una prueba para Obtener ventaja
+de la estrategia, la retórica y la historia te guían sobre cuándo
+usando una habilidad obtenida de tu Erudición, podrás ele-
+actuar para lograr el mayor efecto.
+gir un aliado al que puedas influir. Ese aliado obtiene los be-
+neficios de tu acción Obtener ventaja en lugar de ti. Cuando
+Después del comienzo de cada ronda, cada una de tus de-
+usas este talento, también puedes gastar 2 puntos de con-
+fensas aumenta en 2 hasta el comienzo de tu turno.
+centración para evitar que el objetivo de tu acción Obtener
+Conocimientos aplicados
+ventaja use reacciones contra el aliado que has elegido hasta
+Prerrequisito: talento Contemplación profunda
+el final de tu siguiente turno.
+Activación: 8
+Punto de inflexión
+Todos tenemos debilidades, y tú tienes un don para descubrirlas
+Prerrequisito: Deducción 3 o más, talento Contingencia
+y explotarlas.
+Activación: 2
+Después de superar una prueba para Obtener ventaja, te
+Las batallas suelen girar en torno a un único momento crucial.
+aprovechas de uno de los rasgos, fortalezas o defectos cru-
+Al estudiar la historia de la guerra, aprendes a identificar esas
+ciales de tu objetivo. A menos que el objetivo se resista a tu
+oportunidades y a sacar ventaja.
+influencia, sufrirá una desventaja en su próxima prueba du-
+Una vez por escena, puedes gastar 2 puntos de concentra-
+rante este encuentro.
+ción para encontrar una debilidad en la estrategia de un
+Contemplación profunda
+grupo enemigo. Haz una prueba de Deducción contra la
+Prerrequisito: Saber 2 o más, talento Compostura
+Defensa cognitiva del líder enemigo de mayor rango en esta
+Activación: 2
+escena. Para designar a este líder como objetivo, debes po-
+Buscas metódicamente en tus archivos mentales hechos e infor-
+der sentirlo. Si estás realizando un turno lento, obtienes una
+mación que te ayudan a resolver tu situación actual.
+ventaja. Si tienes éxito, tú y tus aliados a los que puedes in-
+Reasigna hasta 2 de las habilidades y pericias adquiridas con
+fluir obtenéis una 1 adicional en vuestros próximos turnos.
+Ilustración.
+Capítulo 4: Caminos heroicos 105
+
+--- Página 110 ---
+Guerreros de Roshar
+Si quieres inspirarte en El Archivo de las Tormentas, sopesa
+Guerrero
+estas configuraciones de personaje para Guerreros icónicos.
+Camino heroico
+Compañero de pareja de
+guerra (oyente)
+En la cultura de los oyentes, “guerrero” es menos una profe-
+Roshar es un mundo desgarrado por el conflicto, y muchos
+sión y más un rol que uno desempeña en tiempos de conflic-
+de sus habitantes, para bien o para mal, siguen la senda del
+to. Hasta hace poco, la voluntad y la técnica necesarias para
+Guerrero. Un Guerrero puede considerar la lucha como una
+atraer a los spren para adoptar la forma de guerra habían
+vocación, una creencia, una profesión o, simplemente, una
+quedado perdidos en el tiempo (ver “Ascendencia cantora”
+necesidad incómoda para sobrevivir, pero en todos los casos,
+en el capítulo 2). Sin embargo, los conflictos recientes han
+la batalla sigue al Guerrero como una sombra.
+empujado a muchos oyentes a poner su uso en práctica.
+Quienes sobreviven el tiempo suficiente para convertirse
+La mayoría de oyentes se lanzan a la batalla en parejas de
+en luchadores expertos tienden a ser duros, resistentes y há-
+guerra asociados con otro oyente con el que comparten un
+biles a la hora de infligir daño. Un Guerrero experimentado
+vínculo. Este suele ser quien fue su pareja, pero podría ser
+sabe desenvolverse en cualquier situación marcial peligrosa,
+otro oyente muy cercano.
+ya sea un duelo formal, una pelea en un callejón o un aterra-
+Cómo crear un compañero de pareja de guerra.
+dor choque de ejércitos.
+Elige la ascendencia cantora y las pericias culturales Alezi
+y Oyente. Empieza con un nivel alto de Fuerza y Velocidad.
+Especialidades de Guerrero
+Además del grado de habilidad en Atletismo que obtienes
+El camino de Guerrero presenta talentos en tres
+por ser Guerrero, asigna 2 grados a Armamento pesado e
+especialidades:
+Intimidación.
+Además de los talentos Posición vigilante (principal de
+Duelista. En los círculos íntimos de la élite, los hábiles
+Guerrero) y Cambiar de forma (principal de cantor), usa tu
+Duelistas compiten por la gloria y la influencia política,
+ascendencia cantora para elegir el talento Formas de deter-
+manejando sus armas con gracia despiadada.
+minación de cantor y empezar en forma de guerra.
+Portador de esquirlada. Los guerreros que tienen la
+A medida que subes de nivel, decántate por el talento
+suerte de tener hojas y armaduras esquirladas en propie-
+Posición de fuego de la especialidad Duelista. Considera
+dad (o tomarlas prestadas) sirven como Portadores de
+también la opción de obtener los talentos Arma distintiva y
+esquirlada. Utilizan estas armas y armaduras de antigua
+A la desesperada.
+procedencia para dominar el campo de batalla gracias a
+su poder mítico.
+Corredor de puente
+Soldado. Los Soldados, la fuerza de combate más co-
+En Alezkar, no todos los guerreros forman parte de la élite.
+mún, forman la mayor parte de los enormes ejércitos
+Siempre que estalla una guerra, se alistan (o son reclutados)
+de Roshar. Dominan las tácticas necesarias para luchar
+ciudadanos de todos los rangos para servir en los ejércitos. La
+eficazmente en unidades y permanecer con vida en un
+iniciativa militar más reciente de Alezkar es la llamada Guerra
+mundo mortífero.
+de la Venganza contra los oyentes de las Llanuras Quebradas.
+En ambos bandos de este conflicto, innumerables soldados se
+Cómo crear un Guerrero
+han convertido en participantes involuntarios de una guerra
+que no quieren. Los menos afortunados son reclutados en las
+La sección “Guerreros de Roshar”, que se presenta a conti-
+cuadrillas de los puentes, que transportan pesados puentes de
+nuación, sugiere ejemplos de personajes icónicos. Si tienes
+madera para cruzar los abismos de las Llanuras Quebradas.
+una idea diferente en mente, ten en cuenta estos consejos
+Cómo crear un corredor de puente. Elige la ascen-
+genéricos para crear un Guerrero efectivo:
+dencia humana, la pericia cultural Alezi y otra pericia cultural.
+Atributos. Suele ser buena idea priorizar Fuerza, y Velocidad,
+Empieza con un nivel alto de Fuerza y Velocidad. Además del
+y luego tener en cuenta Discernimiento y Voluntad.
+grado de habilidad de Atletismo que obtienes por ser Guerrero,
+Habilidades. Las habilidades útiles incluyen Atletismo,
+asigna 2 grados a Disciplina, 1 grado a Atletismo y 1 grado a
+Armamento ligero, Armamento pesado, Intimidación,
+Armamento ligero, Armamento pesado o Supervivencia.
+Liderazgo y Persuasión.
+Además del talento Posición vigilante (principal de
+Otros caminos heroicos. Los caminos de Cazador y Líder
+Guerrero), usa tu ascendencia humana para elegir el talento
+son excelentes opciones si se opta por varios caminos.
+Avance cauteloso de la especialidad Soldado. Por último,
+Recompensas. Al elegir recompensas, siempre acertarás
+elige el equipo inicial de Militar o Prisionero.
+con una hoja esquirlada, una armadura esquirlada y un
+A medida que subes de nivel, considera la opción de
+título militar sofisticado.
+obtener los talentos Entrenamiento de combate y Ejercicios
+106 Capítulo 4: Caminos heroicos
+
+--- Página 111 ---
+de formación, y luego añadir Robusto para conseguir salud
+Talento principal de Guerrero
+adicional.
+El talento principal de Guerrero, Posición vigilante, desblo-
+quea el acceso a sus especialidades.
+Duelista alezi
+Habilidad inicial: Atletismo. Si eliges Guerrero como
+En Alezkar, la habilidad marcial se considera un requisito
+tu camino inicial, obtienes un grado de habilidad gratuito en
+para el liderazgo, y muchos brillantes señores ataviados
+Atletismo.
+con armadura esquirlada acuden a la arena o al campo de
+batalla para demostrar su poder y aplastar a sus enemigos.
+Posición vigilante (principal
+Algunos se especializan en duelos, donde las esquirlas a
+de Guerrero)
+menudo son objeto de apuestas, un premio especialmente
+Prerrequisitos: ninguno
+tentador para el duelista que confía en armaduras esquirla-
+Activación: 1
+das prestadas. Un duelo victorioso genera vastas riquezas y
+Estudias estilos de lucha especiales para enfrentarte a diferentes
+aclamación, ya sea para el ganador o para el alto príncipe al
+enemigos y estrategias. La más básica de estas posiciones enfatiza
+que sirve.
+la alerta y las respuestas rápidas a las amenazas que se aproximan.
+Cómo crear un duelista alezi. Elige la ascendencia
+Cuando adquieres este talento, aprendes a utilizar las posi-
+humana, la pericia cultural Alezi y otra pericia cultural.
+ciones. Comienzas con Posición vigilante, que puedes adop-
+Empieza con un nivel alto de Fuerza y Voluntad. Además
+tar como 0:
+del grado de habilidad en Atletismo que obtienes por ser
+Guerrero, asigna 2 grados a Armamento pesado y 1 grado a
+Posición vigilante. Mientras estás en esta posición, redu-
+Atletismo y Percepción.
+ces el coste de concentración de tus reacciones Esquivar
+Además del talento Posición vigilante (principal de
+y Acometida reactiva en 1. Además, podrás adoptar otra
+Guerrero), usa tu ascendencia humana para elegir el talento
+posición que conozcas como 0.
+Posición de la piedra de la especialidad Portador de esquir-
+Puedes entrar en una posición que conoces gastando el núme-
+lada. Por último, elige el equipo inicial de Militar.
+ro de acciones indicado por ese talento. Tu posición termina
+A medida que subes de nivel, considera la opción de
+C
+si así lo quieres como 0, si pasas a otra posición o si finaliza
+I
+V
+obtener los talentos Poderoso y Golpe demoledor. Cuando
+O
+la escena. Mientras estás en una posición, obtienes tempo-
+N
+A
+consigas tu propia hoja o armadura esquirlada (consulta
+J
+ralmente cualquier acción, bonificaciones y otros efectos que
+O
+T “Recompensas” en el capítulo 8), podrás elegir el talento
+S
+otorga; dichos efectos terminan cuando lo hace la posición.
+O
+Entre namiento de esquirlada para poder utilizar ambas con
+K
+Por defecto, solo puedes usar posiciones durante el com-
+R
+A garantías.
+D
+bate, no durante otras escenas.
+Capítulo 4: Caminos heroicos 107
+
+--- Página 112 ---
+1 Posición vigilante (principal de Guerrero)
+Puedes adoptar la Posición vigilante: reduces el coste en concentra-
+ción de Esquivar y Acometida reactiva en 1, y puedes adoptar otras
+posiciones con 0.
+duelista
+★ Kata entrenada 1 Posición de fuego
+Ahora podrás usar posiciones en Prerrequisito: Intimidación 1
+conversaciones y empeños y, a o más
+menos que estés Sorprendido, Puedes adoptar la Posición de
+podrás empezar todas las esce- fuego: obtienes una ventaja en
+nas en Posición vigilante. Gasta Intimidación y, cuando solo tie-
+1 punto de concentración para nes un enemigo y ningún aliado
+adoptar una posición en mitad en tu cercanía, obtienes 1 para
+de una conversación o empeño. atacar u Obtener ventaja.
+1 Posición de hierro ∞ Arma distintiva
+Prerrequisito: Atletismo 2 o Obtienes una pericia en arma.
+más Elige una de tus pericias en
+Puedes adoptar la Posición de arma y amplía su rango de
+hierro: obtienes una ventaja en Oportunidad en 1.
+Perspicacia y, cuando alguien
+te hace un rasguño o falla en un
+ataque contra ti, puedes hacer
+1 Acometida con finta
+una Acometida reactiva en su
+Prerrequisito: Intimidación 2
+contra.
+o más
+Gasta 2 puntos de concentra-
+∞ Paso firme ción para hacer un ataque con
+Tu valor de movimiento se incre- arma cuerpo a cuerpo contra
+menta en 3. Reduce el daño por Cognitiva. Si impactas, el objeti-
+caída y terreno peligroso en el vo pierde r y tantos puntos de
+doble de tu rango. concentración como tus grados
+en Intimidación. Si le haces un
+rasguño, pierde la mitad de
+concentración.
+1 P osición de la 2 A la desesperada
+enredadera Prerrequisito: Intimidación 3
+Prerrequisito: Atletismo 3 o o más
+más Gasta 1 punto de concentración
+Puedes adoptar la Posición de para desplazarte la mitad de tu
+la enredadera: tus Defensas valor de movimiento y luego ha-
+física y cognitiva aumentan en 1. cer un ataque con arma cuerpo
+Después de que alguien te haga a cuerpo contra Cognitiva de un
+un rasguño o impacte en un ata- objetivo que tiene 0 puntos de
+T
+T
+que contra ti, habrás de gastar concentración. Este ataque ig- O
+C
+S
+r para realizar una prueba de nora desvío, inflige 4d6 de daño
+E
+R
+Atletismo contra Cognitiva a fin adicional y no puede hacer un
+P
+E
+de hacer que el atacante pierda rasguño.
+V
+E
+T
+1d4 puntos de concentración y
+S
+empujarlo.
+108 Capítulo 4: Caminos heroicos
+
+--- Página 113 ---
+Guerrero
+Camino heroico
+portador de esquirlada soldado
+★ Entrenamiento de 1 Posición de la piedra 2 Avance cauteloso ★ Entrenamiento de
+esquirlada Puedes adoptar la Posición de la Prerrequisito: Disciplina 1 o combate
+Prerrequisito: acceso a una piedra: tu desvío aumenta en 1 y más Obtienes pericia en un arma, en
+hoja o armadura esquirlada los enemigos en tu cercanía de- Puedes desplazarte hasta la una armadura y en Vida militar.
+Obtienes pericia en Armadura es- ben gastar una 1 adicional para mitad de tu valor de movimiento Una vez por ronda, rasguñas sin
+quirlada y eliges entre obtener pe- atacar a tus aliados que no están ignorando el terreno difícil, luego gastar concentración.
+ricia en Gran arco, Hoja esquirlada en la Posición de la piedra. obtienes 2 para usar Prevenirse
+o Martillo de guerra. Tu armadura u Obtener ventaja.
+esquirlada tiene 2 cargas adicio-
+nales. Tus Acometidas con hoja
+∞ Posición defensiva 2 Golpe devastador
+esquirlada hacen un rasguño a la
+Prerrequisito: Atletismo 2 o Prerrequisito: Atletismo 3 o
+misma cantidad de objetivos que
+más más
+los grados en la habilidad que usas.
+La acción Prevenirse añade dos Realiza un ataque con arma
+desventajas a los ataques contra cuerpo a cuerpo contra Física,
+1 Posición de viento ∞ Poderoso
+ti, en lugar de una, y los aliados tirando 2d8 de daño adicional.
+Prerrequisito: Percepción 1 o más Cuando impactas con un arma
+pueden usar Prevenirse tras tu
+Puedes adoptar la Posición de o un ataque sin armas, por cada
+escudo.
+viento: obtienes una ventaja 1 gastada, inflige un daño adi-
+en Agilidad. Mientras tengas a cional equivalente a 1 o más tu
+∞ Ejercicios de ∞ Robusto
+varios enemigos en tu cercanía, rango.
+formación Obtienes +1 de salud máxima
+usarás 0 para obtener 1 con la
+Prerrequisito: Disciplina 2 o por nivel (incluyendo los niveles
+que usar Destrabarse o atacar.
+más anteriores).
+Los aliados situados a 3 metros
+★ Golpe demoledor 1 Posición de la sangre
+o menos que usan Prevenirse
+Prerrequisito: Percepción 2 o Prerrequisito: Percepción 2 o
+obtienen los beneficios de tu
+más más
+Posición defensiva.
+Cuando impactas en un ataque Puedes adoptar la Posición de la
+cuerpo a cuerpo, gasta 2 puntos sangre: tu rango de Oportunidad
+∞ Precaución 1 Acometidas veloces
+de concentración para quitar 1 para ataques y pruebas físicas se
+Prerrequisito: Disciplina 3 o Gasta 1 punto de concentra-
+carga de la armadura de tu obje- amplía en 2, pero tus Defensas
+más ción para hacer una segunda
+tivo, y empujar 1,5 metros a todos cognitiva, espiritual y física dis-
+No puedes quedar Sorprendido Acometida con la misma arma.
+los objetivos que sufren daño. minuyen en 2.
+si te queda concentración.
+Cuando pierdes concentración
+↻ Parada precisa 2 Salto meteórico
+de manera involuntaria, reduce
+Prerrequisito: Percepción 3 o Prerrequisito: Atletismo 3 o
+la cantidad perdida en tus gra-
+más más
+dos en Disciplina.
+Antes de sufrir un impacto cuerpo Gasta 2 puntos de concentra-
+a cuerpo, gasta 1 punto de con- ción para saltar un cuarto de tu
+icono significado
+centración para intentar que pase valor de movimiento y hacer un
+1 1 acción
+a ser un rasguño. Si no vas arma- ataque sin armas contra Física
+2 2 acciones
+do, haz una prueba de Atletismo de varios objetivos, duplicando
+3 3 acciones
+contra el ataque con desventaja, el daño y haciendo que los más
+0 Acción gratuita
+si no te atacan con una hoja es- débiles queden Tumbados.
+r Reacción
+quirlada. Si vas armado, haz una Obtienes una ventaja si vistes
+prueba de Armamento ligero/ armadura esquirlada.
+* Activación especial
+pesado contra el ataque.
+8 Siempre activo
+
+--- Página 114 ---
+Kata entrenada
+Especialidad de Duelista
+Prerrequisito: talento principal Posición vigilante
+Los talentos que siguen, presentados en orden alfabético,
+Activación: *
+aparecen en la especialidad de Duelista en el árbol de talen-
+Tu estudio de katas marciales y otras formas te ha enseñado que
+tos de Guerrero.
+tu posición en una conversación es tan importante como en la
+A la desesperada
+batalla. Con aplomo entrenado, proyectas la actitud exacta que
+Prerrequisito: Intimidación 3 o más, talento
+deseas a través del lenguaje corporal y la posición.
+Acometida con finta
+Cuando adquieres este talento, puedes usar posiciones de
+Activación: 2
+lucha en escenas de conversación y empeño, además de en
+Las batallas se ganan y se pierden en breves momentos de distrac-
+combate. Activar o cambiar de posición durante una conver-
+ción o agotamiento. Creas y aprovechas estas oportunidades espe-
+sación o empeño cuesta 1 punto de concentración y cuenta
+rando pacientemente para vencer a tu enemigo de un solo golpe.
+como tu contribución para esa ronda.
+Gasta 1 punto de concentración para desplazarte hasta la
+Además, si no estás Sorprendido cuando comienza una
+mitad de tu valor de movimiento, luego haz un ataque con
+escena de combate, de conversación o de empeño, puedes
+arma cuerpo a cuerpo contra la Defensa cognitiva de un
+adoptar la Posición vigilante al comienzo de esa escena (no
+objetivo que tiene 0 puntos de concentración. Este ataque
+requiere acción).
+ignora su valor de desvío y causa 4d6 de daño adicional si
+Paso firme
+impacta. No puede hacer un rasguño: solo fallar o impactar.
+Prerrequisito: talento Posición de hierro
+Este talento se vuelve más poderoso a medida que tu ran-
+Activación: 8
+go aumenta: en el rango 3, obtienes 6d6 de daño adicional
+Te mueves por terrenos traicioneros con confianza y velocidad.
+(en lugar de 4d6); en el rango 4, obtienes en su lugar 8d6 de
+daño adicional; y en el rango 5, obtienes en su lugar 10d6 de
+Cuando adquieres este talento, aumentas tu valor de movi-
+daño adicional.
+miento en 3.
+Además, antes de sufrir daño por terreno peligroso o por
+Acometida con finta
+caída, redúcelo en un valor equivalente al doble de tu rango.
+Prerrequisito: Intimidación 2 o más, talento
+Posición de fuego
+Posición de la enredadera
+Activación: 1
+Prerrequisito: Atletismo 3 o más, talento
+Acometida con finta
+Presionas de forma intimidatoria las defensas de tu oponente (y
+Activación: 1
+su temple) con la esperanza de exponer una brecha fatal.
+Adoptas una posición flexible, lo que te permite cambiar rápi-
+Gasta 2 puntos de concentración para realizar un ataque
+damente entre avances inexorables y reacciones rápidas para
+con arma cuerpo a cuerpo contra la Defensa cognitiva de
+desgastar a tu enemigo.
+un objetivo. Si impactas, el objetivo también pierde una
+r y una cantidad de concentración igual a tus grados en
+Cuando adquieres este talento, aprendes una nueva posi-
+Intimidación. Con un rasguño, no pierde r y solo pierde la
+ción, a la que puedes acceder mediante 1:
+mitad de concentración (redondeando hacia arriba).
+Posición de la enredadera. Tus Defensas física y cognitiva
+O
+Puedes gastar de esta prueba para obtener 2, que solo
+aumentan en 1. Además, después de sufrir un impacto o
+puedes usar para usar Acometida o activar una posición.
+rasguño de un ataque cuerpo a cuerpo, puedes usar r
+para hacer una prueba de Atletismo contra la Defensa
+Arma distintiva
+cognitiva de tu atacante. Si la superas, tu objetivo pierde
+Prerrequisito: talento Posición de fuego
+1d4 de concentración y puedes empujarlo horizontal-
+Activación: 8
+mente hasta 1,5 metros x tus grados en Atletismo.
+Has entrenado ampliamente con un arma en particular y pue-
+des aprovechar todas las ventajas que ofrece.
+Posición de fuego
+Cuando adquieres este talento, obtienes pericia en un arma.
+Prerrequisito: Intimidación 1 o más, talento principal
+Luego elige un tipo de arma en el que tienes pericia y anótalo,
+Posición vigilante
+entre paréntesis, después del nombre de este talento en tu hoja
+Activación: 1
+de personaje; por ejemplo, “Arma distintiva (Lanza larga)”.
+Adoptas una posición agresiva y equilibrada que favorece ráfa-
+Tu rango de oportunidad para las pruebas que usan este
+gas rápidas de golpes decisivos.
+tipo de arma se amplía en 1. Cuando alcanzas el rango 3,
+este rango de oportunidad se amplía en 2.
+110 Capítulo 4: Caminos heroicos
+
+--- Página 115 ---
+Cuando adquieres este talento, aprendes una nueva posi-
+Especialidad de Portador
+ción, a la que puedes acceder mediante 1:
+de esquirlada
+Posición de fuego. Mientras estás en esta posición, obtie-
+Los talentos que siguen, presentados en orden alfabético,
+nes una ventaja en las pruebas de Intimidación. Además,
+aparecen en la especialidad de Portador de esquirlada en el
+mientras hay exactamente un enemigo en tu cercanía
+árbol de talentos de Guerrero.
+y ninguno de tus aliados está dentro de la cercanía de
+ese enemigo o de ti, puedes usar 0 para obtener 1, que
+Entrenamiento de esquirlada
+puedes gastar solo para Obtener ventaja o usar una
+Prerrequisito: acceso a una hoja o armadura esquirlada
+acción que incluye una prueba de ataque dirigida a
+para poder entrenar; talento principal Posición vigilante
+ese enemigo.
+Activación: *
+Dada la escasez de hojas y de armaduras esquirladas, es excep-
+Posición de hierro
+cionalmente difícil adquirir experiencia de primera mano con
+Prerrequisito: Atletismo 2 o más, talento Kata entrenada
+estas reliquias. Has logrado esta hazaña, aprendiendo a dar gol-
+Activación: 1
+pes para obtener el máximo efecto y a detenerlos de la manera
+Mantienes tu arma en alto, preparado para asestar un golpe
+más eficiente posible.
+demoledor hacia abajo si tu oponente muestra cualquier signo de
+Una vez por ronda, cuando usas la acción Acometida para
+debilidad.
+atacar con una hoja esquirlada, puedes elegir una cantidad de
+Cuando adquieres este talento, aprendes una nueva posición
+enemigos adicionales de hasta tus grados en la habilidad usada
+a la que puedes acceder mediante 1:
+para esa Acometida. Todos los objetivos deben estar en la cer-
+canía de la hoja esquirlada. Sin gastar concentración, haces un
+Posición de hierro. Mientras estás en esta posición, obtie-
+rasguño a todos los objetivos adicionales cuya Defensa física es
+nes una ventaja en las pruebas de Perspicacia. Además,
+igual o inferior al resultado de la prueba de tu Acometida.
+cuando un personaje en tu cercanía falla o te hace un
+O
+I
+D
+Además, cuando adquieres este talento, obtienes la peri-
+rasguño con un ataque, puedes usar Acometida reac-
+U
+T
+cia especializada Armadura esquirlada y otra pericia especia-
+S
+tiva en su contra como si hubiera salido de tu cercanía
+X
+E
+lizada a elegir entre Gran arco, Hoja esquirlada o Martillo
+voluntariamente.
+L
+F
+R
+de guerra.
+E
+D
+Finalmente, mientras vistes una armadura esquirlada, tie-
+N
+O
+ne 2 cargas adicionales.
+S
+Capítulo 4: Caminos heroicos 111
+
+--- Página 116 ---
+Golpe demoledor Poderoso
+Prerrequisito: Percepción 2 o más, talento Prerrequisito: talento Posición de la piedra
+Posición de viento Activación: 8
+Activación: *
+Asestas golpes, puñetazos y patadas con eficiencia entrenada.
+Tanto si te enfrentas a una puerta asegurada, a un portador de
+Cuando golpeas con un arma o con un ataque desarmado,
+esquirlada o a un desventurado enemigo en el campo de batalla,
+por cada 1 que has usado en la acción de ese ataque, au-
+siempre sabes cómo encontrar puntos débiles o hacer que los ene-
+mentas el daño que infliges en 1 + tu rango. Por ejemplo,
+migos salgan despedidos con un golpe preciso a dos manos.
+si eres de nivel 6 y realizas un ataque que cuesta 2, cada
+Cuando impactas a un objetivo con un ataque cuerpo a cuer- 1 inflige 1 + 2 de daño adicional, para un total de 6 pun-
+po, si usas un arma a dos manos o tienes una mano libre, tos de daño.
+puedes gastar 2 puntos de concentración para golpear con
+Posición de la piedra
+una fuerza impresionante. Antes de resolver el daño de este
+Prerrequisito: talento principal Posición vigilante
+ataque, si el objetivo viste una armadura con cargas (como
+Activación: 1
+una armadura esquirlada o una semiesquirla), pierde 1 carga.
+Adoptas una posición sólida y lanzas golpes potentes sin ceder
+A continuación, todos los objetivos que han perdido sa-
+terreno ante el enemigo.
+lud a causa del ataque salen despedidos 1,5 metros horizon-
+Cuando adquieres este talento, aprendes una nueva posi-
+talmente, alejándose de ti. Si tu valor de Fuerza es superior
+ción, a la que puedes acceder mediante 1:
+a 5, se alejan 1,5 metros más por cada punto adicional; por
+ejemplo, si tienes Fuerza 7, se alejan 3 metros adicionales,
+Posición de la piedra. Mientras estás en esta posición, au-
+hasta un total de 4,5 metros. Si un objetivo golpea contra
+menta tu valor de desvío en 1. Además, antes de que un
+un objeto Mediano o de mayor tamaño en este movimiento
+enemigo dentro de la cercanía de tu arma cuerpo a cuer-
+forzado, sufre daño como si hubiera caído la distancia que
+po gaste una o más 1 para atacar a uno de tus aliados
+se ha alejado (1d6 de daño por golpe por cada 3 metros); a
+que no esté en Posición de la piedra, ese enemigo deberá
+discreción de la DJ, el objeto también podría sufrir daño.
+gastar una 1 adicional.
+Parada precisa
+Posición de la sangre
+Prerrequisito: Percepción 3 o más, talento
+Prerrequisito: Atletismo 2 o más, talento Poderoso o
+Golpe demoledor
+Entrenamiento de esquirlada
+Activación: r
+Activación: 1
+Un portador de esquirlada debe saber cuándo desviar un golpe
+Adoptas una posición imprudente y violenta que intercambia
+entrante, detenerlo con la armadura esquirlada o esquivarlo. En
+defensa por poder letal.
+casos extremos, un luchador desesperado podría incluso atrapar
+Cuando adquieres este talento, aprendes una nueva posi-
+una hoja esquirlada entre sus manos desnudas en una maniobra
+ción, a la que puedes acceder mediante 1:
+desesperada llamada “palmada”.
+Posición de la sangre. Mientras estás en esta posición, tu
+Antes de sufrir un impacto de un ataque cuerpo a cuerpo,
+rango de oportunidad para pruebas de ataque y pruebas
+puedes usar esta reacción y gastar 1 punto de concentra-
+físicas se amplía en 2, pero tus Defensas cognitiva, espiri-
+ción para intentar parar el golpe. Dependiendo de si estás
+tual y física disminuyen en 2.
+desarmado o empuñas un arma, haz una de las siguien-
+tes pruebas:
+Posición de viento
+Desarmado. Haz una prueba de Atletismo, sufriendo
+Prerrequisito: Percepción 1 o más, talento Entrenamiento
+una desventaja si no te atacan con una hoja esquirlada.
+de esquirlada
+O
+Puedes gastar para desarmar a tu oponente, tomando
+Activación: 1
+el control de su arma (y empuñándola, si así lo deseas).
+Adoptas una posición móvil que maximiza tu zona de ataque,
+Empuñando un arma. Realiza una prueba de Armamento
+lanzando barridos amplios que atraviesan grupos de enemigos.
+ligero o de Armamento pesado (según el arma que uti-
+Cuando adquieres este talento, aprendes una nueva posi-
+lizas). Si empuñas una hoja esquirlada y el arma de tu
+ción, a la que puedes acceder mediante 1:
+O
+oponente no está infusa, puedes gastar para destruirla.
+Posición de viento. Mientras estás en esta posición, ob-
+La CD de esta prueba es igual al resultado de la prueba de
+tienes una ventaja en las pruebas de Agilidad. Además,
+ataque que te impacta. Si tienes éxito, ese impacto contra ti
+si hay dos o más enemigos en tu cercanía, puedes usar
+pasa a ser un rasguño.
+0 para obtener 1, que puedes gastar solo para usar
+Destrabarse o una acción que incluye una prueba de ata-
+que dirigida a uno o más de esos enemigos.
+112 Capítulo 4: Caminos heroicos
+
+--- Página 117 ---
+Una vez por ronda, cuando fallas un ataque con arma, pue-
+Salto meteórico
+des hacer un rasguño a un objetivo sin gastar concentración.
+Prerrequisito: Atletismo 3 o más, talento Posición
+Además, cuando adquieres este talento, obtienes pericia
+de la sangre
+en un arma, pericia en una armadura y la pericia cultural
+Activación: 2
+Vida militar.
+Saltas agresivamente por encima de tus enemigos y los embistes
+con todo tu peso, un salto que resulta aún más aterrador por la
+Golpe devastador
+inquebrantable armadura esquirlada.
+Prerrequisito: Atletismo 3 o más, talento Entrenamiento
+de combate
+Gasta 2 puntos de concentración para saltar hasta una cuar-
+Activación: 2
+ta parte de tu valor de movimiento y luego haz un ataque sin
+armas contra la Defensa física de todos los personajes que
+Asestar un golpe letal no solo requiere habilidad, sino también
+eliges en tu cercanía. Si llevas puesta una armadura esquir-
+determinación. Has aprendido a ignorar cualquier aversión
+lada, obtienes una ventaja en esta prueba. Tira el doble de
+natural a causar daño a los demás, y cuando atacas para matar,
+los dados de daño habituales para este ataque. Si impactas,
+lo haces sin piedad ni vacilación.
+todos los objetivos cuyo valor de Fuerza sea inferior al tuyo
+Realiza un ataque con arma cuerpo a cuerpo contra la
+también quedan Tumbados.
+Defensa física de un objetivo. Añade 2d8 de daño adicional
+a la tirada de daño para este ataque.
+Especialidad de Soldado
+Este talento se vuelve más poderoso a medida que tu ni-
+Los talentos que siguen, presentados en orden alfabético,
+vel aumenta: en el rango 3, tiras 3d8 de daño adicional (en
+aparecen en la especialidad de Soldado en el árbol de talen-
+lugar de 2d8); en el rango 4, tiras 4d8 de daño adicional; y
+tos de Guerrero.
+en el rango 5, tiras 5d8 de daño adicional.
+Acometidas veloces
+Precaución
+Prerrequisito: talento Robusto
+Prerrequisito: Disciplina 3 o más, talento
+Activación: 1
+Posición defensiva
+Sigues instintivamente el ritmo de la batalla, manteniendo la
+Activación: 8
+presión sobre tus enemigos en los momentos críticos.
+Gracias a tu experiencia viviendo en lugares peligrosos, has
+Gasta 1 punto de concentración para realizar una segunda
+aprendido a mantenerte la concentración y a responder rápida-
+acción de Acometida con una mano que ya has usado para
+mente a peligros inesperados.
+una Acometida este turno.
+Mientras tengas 1 o más puntos de concentración, no po-
+drás quedar Sorprendido. Además, cuando te resistes a la
+Avance cauteloso
+influencia o pierdes concentración de manera involuntaria,
+Prerrequisito: Disciplina 1 o más, talento principal
+reduces la cantidad de concentración perdida en tus grados
+Posición vigilante
+en Disciplina (hasta un mínimo de 1 punto de concentra-
+Activación: 2
+ción perdido).
+Comprendes los peligros de tu entorno y el flujo del combate, lo que
+te ayuda a encontrar el camino más seguro en el campo de batalla.
+Posición defensiva
+Activación: 8
+Te desplazas hasta la mitad de tu valor de movimiento, igno-
+rando el terreno difícil, luego obtienes 2 que solo se pue-
+Has aprendido a saber cuándo retirarte y cuándo comprometerte
+den gastar en las acciones Prevenirse u Obtener ventaja.
+en una posición, manteniéndola con firmeza.
+La acción Prepararse añade dos desventajas a los ataques
+Ejercicios de formación
+contra ti, en lugar de una.
+Prerrequisito: Disciplina 2 o más, talento
+Además, mientras usas un escudo para Prevenirte,
+Posición defensiva
+los aliados situados a 1,5 metros o menos pueden usar
+Activación: 8
+Prevenirse como si tuvieran cobertura o un escudo.
+Coordinas a tus aliados para que marchen en formación defen-
+siva junto a ti.
+Robusto
+Prerrequisito: talento Entrenamiento de combate
+Cuando un aliado situado a 3 metros o menos se beneficia
+Activación: 8
+de la acción Prevenirse, también se beneficia de tu Posición
+defensiva como si tuviera ese talento.
+Has entrenado tu cuerpo para soportar el dolor y la fatiga, lo
+que te mantiene en la lucha hasta el aciago final.
+Entrenamiento de combate
+Cuando adquieres este talento, tu salud máxima y actual
+Prerrequisito: talento principal Posición vigilante
+aumenta en 1 por nivel. Esto se aplica a todos los niveles
+Activación: *
+anteriores y futuros; por ejemplo, si eliges este talento en el
+Has sido entrenado en los conceptos básicos de armamento y
+nivel 6, aumenta retroactivamente tu salud en 6.
+tácticas de batalla elementales.
+Capítulo 4: Caminos heroicos 113
+
+--- Página 118 ---
+Líderes de Roshar
+Si quieres inspirarte en El Archivo de las Tormentas, sopesa
+Líder
+estas configuraciones de personaje para Líderes icónicos.
+Camino heroico
+Comandante en forma
+de guerra (oyente)
+Saltando a través de abismos con gracia y vigor incompara-
+Los Líderes, ejemplos de estímulo y dirección, supervisan
+bles, los comandantes en forma de guerra exudan tenacidad.
+los esfuerzos de los demás. Algunos nacen con una sed in-
+Evitan enfrentarse a ejércitos humanos si no hay nada que
+saciable de poder e influencia; otros aceptan solemnemente
+ganar, ya que los oyentes suelen estar en inferioridad nu-
+su llamada por sentido del deber. Sea como sea, el lideraz-
+mérica y no están especialmente interesados en el derrama-
+go capaz requiere tanto aptitud natural como aprendizaje
+miento de sangre. Cuando luchan, contrarrestan la malicia
+dedicado. Los errores son inevitables y la indecisión es un
+de los alezi con una competencia feroz y tácticas que enfati-
+obstáculo costoso.
+zan la estrecha coordinación entre aliados. Los comandantes
+Cuando el empeoramiento de las condiciones hace que
+en forma de guerra no se dejan intimidar por las muche-
+los seguidores duden, los Líderes están a la altura de las
+dumbres de enemigos, y aprovechan cada mínima oportuni-
+circunstancias, reforzando la camaradería y la determina-
+dad que se les presenta de extraer una gema corazón de una
+ción de seguir adelante. Aunque desempeñar este papel a
+crisálida de abismoide y dejar atrás a sus rivales derrotados.
+menudo resulta solitario y pesado, los Líderes pueden cam-
+Cómo crear un comandante en forma de guerra.
+biar gloriosamente el rumbo del destino y prevalecer contra
+Elige la ascendencia cantora y las pericias culturales Alezi
+fuerzas superiores.
+y Oyente. Empieza con un nivel alto de Fuerza y Voluntad.
+Además del grado de habilidad de Liderazgo que obtie-
+Especialidades de Líder
+nes por ser Líder, asigna 2 grados a Atletismo y 1 grado a
+El camino de Líder presenta talentos en tres especialidades:
+Armamento pesado y Liderazgo.
+Además de los talentos Mando decisivo (principal de
+Campeón. Los Campeones inspiran a los demás con su co-
+Líder) y Cambiar de forma (principal de cantor), usa tu as-
+raje inquebrantable y atacan ferozmente a sus enemigos.
+cendencia cantora para elegir el talento Formas de determi-
+Su impulso es magnético y anima a los aliados cercanos a
+nación de cantor y empieza en forma de guerra. Por último,
+seguir adelante.
+elige el equipo inicial de Militar.
+Oficial. Los Oficiales mantienen el orden con frialdad en
+A medida que subes de nivel, considera la opción de
+medio del caos más absoluto. Asignan recursos y emiten
+obtener los talentos Resiliencia heroica y Poderoso de la es-
+órdenes, orquestando la marcha hacia la victoria.
+pecialidad de Campeón. Considera también los talentos de
+Político. Con cierta inclinación hacia la exageración, los
+la especialidad Estratega de Erudito y los de la especialidad
+Políticos buscan favores y prestigio mientras socavan su-
+Soldado de Guerrero.
+tilmente a sus enemigos.
+Sargento veden
+Cómo crear un Líder
+Los sargentos veden valoran la sinergia por encima de la
+fuerza bruta y la utilizan con efectos devastadores al servi-
+La sección “Líderes de Roshar”, que se presenta a continua-
+cio de sus altos príncipes. Son famosos por sus ejércitos de
+ción, sugiere ejemplos de personajes icónicos. Si tienes una
+asaltantes coordinados con destreza. Incluso en las batallas
+idea diferente en mente, ten en cuenta estos consejos genéri-
+más duras, los sargentos veden confían en la obediencia de
+cos para crear un Líder efectivo:
+sus tropas, lo cual les permite ejecutar asaltos desafiantes y
+Atributos. Suele ser buena idea priorizar Fuerza, Presencia
+ganar la batalla.
+y Voluntad.
+Cómo crear un sargento veden. Elige la ascenden-
+Habilidades. Las habilidades útiles son Armamento pe-
+cia humana y las pericias culturales Veden y Vida militar.
+sado, Atletismo, Engaño, Intimidación, Liderazgo y
+Empieza con un nivel alto de Presencia y Voluntad. Además
+Persuasión.
+del grado de habilidad en Liderazgo que obtienes por ser
+Otros caminos heroicos. Los caminos de Enviado y
+Líder, asigna 2 grados a Persuasión, 1 grado a Liderazgo y
+Guerrero son excelentes opciones si se opta por va-
+luego elige entre Armamento ligero y Armamento pesado
+rios caminos.
+para asignar el último grado disponible.
+Recompensas. Al elegir recompensas, siempre acertarás
+Además del talento Mando decisivo (principal de Líder),
+con una montura como compañero, un título militar
+usa tu ascendencia humana para elegir el talento A través
+de alto rango y, posiblemente, incluso una armadura
+de la refriega de la especialidad Oficial. Por último, elige el
+esquirlada.
+equipo inicial de Militar.
+114 Capítulo 4: Caminos heroicos
+
+--- Página 119 ---
+A medida que subes de nivel, considera la opción de
+Talento principal de Líder
+obtener el talento Asalto sincronizado, y luego añadir
+El talento principal de Líder, Mando decisivo, desbloquea el
+Compostura para obtener concentración adicional.
+acceso a sus especialidades.
+Habilidad inicial: Liderazgo. Si eliges Líder como tu
+Visir azishiano
+camino inicial, obtienes un grado de habilidad gratuito en
+Los visires, que ocupan el segundo lugar después del Aqasix
+Liderazgo.
+Supremo, son el corazón palpitante de la burocracia azishia-
+na. Además de seleccionar y asesorar al Aqasix Supremo, es-
+Mando decisivo (principal de Líder)
+tos reverenciados escribas redactan leyes, gestionan recursos
+Prerrequisitos: ninguno
+como las hojas esquirladas imperiales por todo el imperio,
+Activación: 1
+educan a los alguaciles y mucho más. Independientemente
+Tu voz transmite la certeza del acero y tu visión táctica es re-
+del estatus de nacimiento, convertirse en visir otorga un aire
+conocida en todas partes. Esta sabiduría obtenida en batalla
+de dignidad y logro. Las intrincadas túnicas y el elegante
+beneficia a quienes te escuchan.
+sombrero también son buenas ventajas.
+Cuando adquieres este talento, obtienes un dado de mando,
+Cómo crear un visir. Elige la ascendencia humana y las
+que comienza como un d4.
+pericias culturales azishiana y de la alta sociedad. Empieza
+Gasta 1 punto de concentración para elegir un aliado al
+con un nivel alto de Intelecto y Voluntad. Además del grado
+que puedes influir situado a 6 metros o menos. La próxima
+de habilidad en Liderazgo que obtienes por ser Líder, asigna
+vez que realice una prueba antes del final de su siguiente
+1 grado a Saber, Deducción, Engaño y Liderazgo.
+turno, podrá tirar tu dado de mando junto con los demás
+Además del talento Mando decisivo (principal de Líder),
+dados. Después de la tirada, podrá elegir el resultado de un
+usa tu ascendencia humana para elegir el talento Tácticas
+dado de esa prueba (menos el de trama) y añadirle el resul-
+despiadadas de la especialidad Político. Por último, elige el
+L
+L
+tado del dado de mando.
+I
+equipo inicial de Cortesano.
+E
+N
+Algunos talentos de Líder te permiten usar tu dado de
+’
+A medida que subes de nivel, considera la opción de ob-
+O
+N
+mando de otras maneras; puedes hacerlo incluso si un aliado
+tener los talentos Elegante y Mando astuto.
+I
+V
+E
+dispone de uno de tus dados de mando.
+K
+Capítulo 4: Caminos heroicos 115
+
+--- Página 120 ---
+1 Mando decisivo (principal de Líder)
+Gasta 1 punto de concentración para otorgar a un aliado situa-
+do a 6 metros o menos un dado de mando d4. Puede añadirlo
+al resultado de uno de sus dados de su próxima prueba.
+campeón
+0 C oordinación en 1 Intervención valiente
+combate Prerrequisito: Atletismo 1 o más
+Prerrequisito: Liderazgo 2 o Gasta 1 punto de concentración
+más para moverte 3 metros, y luego
+Después de una de tus haz una prueba de Atletismo
+Acometidas, usa Mando decisivo contra Espiritual para imponer
+sin gastar 1. Si tu Acometida una desventaja a un objetivo en
+impacta, tampoco gastas sus pruebas contra tus aliados.
+concentración.
+8 Posición formidable 8 Robusto
+Prerrequisito: Atletismo 2 o Obtienes +1 de salud máxima
+más por nivel (incluyendo los niveles
+Después de que un enemigo se anteriores).
+resista a tu influencia mientras
+está en la cercanía de tu arma,
+quedará Desorientado.
+* Postura resuelta
+Prerrequisito: Atletismo 1 o más
+8 Poderoso
+Intervención valiente previene
+Cuando impactas con un arma
+las Acometidas reactivas. Gasta
+o un ataque sin armas, por cada
+una cantidad de concentración
+1 gastada, inflige un daño adi-
+igual a tus grados en Liderazgo
+cional equivalente a 1 o más tu
+para añadir la misma cantidad
+rango.
+de objetivos para Intervención
+valiente.
+r Resiliencia heroica * Mando demostrativo
+Prerrequisito: Atletismo 3 o Prerrequisito: Liderazgo 2 o
+más más
+Antes de que tu salud baje a 0, Incrementa la magnitud de tu
+pasarás a tener tantos puntos dado de mando. Gasta 1 punto
+de salud como tu modificador en de concentración para añadir su
+Atletismo. resultado a las tiradas de d20 de
+Agilidad, Atletismo o Liderazgo.
+icono significado
+1 1 acción
+2 2 acciones
+T
+T
+3 3 acciones
+O
+C
+0 Acción gratuita
+S
+E
+R
+r Reacción
+P
+E
+* Activación especial
+V
+E
+T
+8 Siempre activo
+S
+116 Capítulo 4: Caminos heroicos
+
+--- Página 121 ---
+Líder
+Camino heroico
+oficial político
+8 Compostura 1 A través de la refriega * Tácticas despiadadas 1 Ardid táctico
+Aumenta tu concentración Prerrequisito: Persuasión 1 o Prerrequisito: Engaño 1 o más Haz una prueba de Engaño
+máxima y actual en una cantidad más Tu aliado puede subir la apuesta contra Cognitiva para que tu
+equivalente a tu rango. Un aliado situado a 6 metros o en lugar de tirar tu dado de man- objetivo pierda una r y obtenga
+C
+menos puede usar Destrabarse do; si sufre , recuperas 1 punto una desventaja en su próxima
+u Obtener ventaja como r. de concentración. prueba cognitiva o espiritual.
+* Abastecimiento 8 V estimenta
+* Difundir rumores * Elegante
+adecuado tradicional
+Prerrequisito: un patrocinador Obtienes pericia en Moda. Si
+Prerrequisito: Persuasión 2 o Si llevas puesta una armadura
+Obtienes pericia en Escándalos. llevas puesta una armadura
+más Presentable o ropa apropiada,
+Gasta 2 puntos de concentra- Presentable o ropa a la moda,
+Obtienes pericia en Logística aumenta tus Defensas espiritual
+O
+ción para añadir a tus pruebas obtienes una ventaja en tu
+militar. Gasta 2 puntos de con- y física en 2.
+para difundir desinformación o primera prueba de Engaño,
+O
+centración para añadir a tu
+enterarte de rumores. Liderazgo o Persuasión.
+prueba para un requerimiento de
+recursos.
+8 Torvo 2 Poner en desacuerdo
+8 Marcha implacable * Mando confiado
+Para resistirse a tu influencia, Prerrequisito: Liderazgo 3 o
+Prerrequisito: Persuasión 3 o Prerrequisito: Liderazgo 2 o
+un personaje debe gastar tanta más
+más más
+concentración adicional como Gasta una cantidad de con-
+Mando decisivo incrementa el Incrementa la magnitud de tu
+tu rango. centración igual al número de
+movimiento de tu objetivo en dado de mando. Gasta 1 punto
+objetivos entre los que quieres
+3 metros y hace que ignore los de concentración para añadir su
+sembrar división. Haz una
+estados Agotado, Ralentizado y resultado a las tiradas de d20
+prueba de Liderazgo contra su
+Sorprendido. de Intimidación, Liderazgo o
+Espiritual más alta para hacer
+Persuasión.
+que se enfrenten unos a otros.
+3 Asalto sincronizado 8 Autoridad
+* Mando astuto 3 Gran engaño
+Prerrequisito: Liderazgo 3 o Prerrequisito: un título que te
+Prerrequisito: Liderazgo 2 o Prerrequisito: Engaño 3 o más
+más ponga al mando de 5 o más
+más Gasta 3 puntos de concentra-
+Gasta 2 puntos de concentra- personas
+Incrementa la magnitud de tu ción para hacer una prueba de
+ción para realizar una prueba de Duplica el alcance de los ta-
+dado de mando. Gasta 1 punto Engaño (CD 15) que desvele una
+Liderazgo contra Cognitiva del lentos de Líder que afectan a
+de concentración para añadir su treta que cambie un detalle.
+enemigo. Si la superas, una can- aliados y duplica el número de
+resultado a las tiradas de d20 de
+tidad de aliados hasta tus grados aliados que se ven afectados por
+Engaño, Liderazgo o Perspicacia.
+en Liderazgo obtienen 1 para dichos talentos.
+una Acometida adicional contra
+dicho objetivo. Si fracasas, solo
+uno de esos aliados obtiene 1.
+
+--- Página 122 ---
+Especialidad de Campeón
+Los talentos que siguen, presentados en orden alfabético,
+aparecen en la especialidad de Campeón en el árbol de ta-
+lentos de Líder.
+Coordinación en combate
+Prerrequisito: Liderazgo 2 o más, talento principal
+Mando decisivo
+Activación: 0
+Lideras mediante la acción, reforzando a tus aliados con el im-
+pulso de tus golpes.
+Después de usar la acción Acometida, usa Mando decisivo
+como 0. Si tu Acometida no impacta, tampoco tienes que
+gastar la concentración habitual para Mando decisivo.
+Intervención valiente
+Prerrequisito: Atletismo 1 o más, talento principal
+Mando decisivo
+Activación: 1
+Te acercas a tu oponente sin miedo, desafiándolo a que te ignore
+por su cuenta y riesgo.
+Gasta 1 punto de concentración para moverte hasta 3 me-
+tros, luego haz una prueba de Atletismo contra la Defensa
+espiritual de un enemigo en el que puedes influir. Si la su-
+peras, sufre una desventaja en las pruebas contra tus aliados
+hasta el final de su siguiente turno.
+Un objetivo podrá resistirse a esta influencia, pero des-
+pués de que lo haga, obtendrás una ventaja en tu siguiente
+prueba contra él hasta el final de tu siguiente turno.
+Mando demostrativo
+1 inflige 1 + 2 de daño adicional, para un total de 6 pun-
+Prerrequisito: Liderazgo 2 o más, talento Postura resuelta
+tos de daño.
+Activación: *
+Postura resuelta
+Das ejemplo desde el frente, aplicando tus consejos a tus pro-
+Prerrequisito: Atletismo 1 o más, talento Robusto
+pias acciones.
+Activación: *
+Antes de realizar una prueba de Agilidad, Atletismo o
+Proyectas determinación, incluso a grupos poderosos de oponen-
+Liderazgo, puedes gastar 1 punto de concentración para
+tes les resulta difícil centrar su atención en otra cosa.
+tirar tu dado de mando y añadir su resultado al de tu ti-
+Cuando usas Intervención valiente, puedes gastar concen-
+rada de d20.
+tración hasta tus grados en Liderazgo para considerar como
+Además, cuando adquieres este talento, incrementas la
+objetivos a esa misma cantidad de personajes adicionales.
+magnitud de tu dado de mando en un paso (por ejemplo,
+Además, después de afectar a un objetivo con
+de d4 a d6).
+Intervención valiente, este no puede realizar Acometidas re-
+Poderoso
+activas contra tus aliados hasta el final del su siguiente turno.
+Prerrequisito: talento Posición formidable
+Activación: 8
+Posición formidable
+Asestas golpes, puñetazos y patadas con eficiencia entrenada.
+Prerrequisito: Atletismo 2 o más, talento Coordinación
+Cuando golpeas con un arma o con un ataque desarmado,
+en combate
+por cada 1 que has usado en la acción de ese ataque, au-
+Activación: 8
+mentas el daño que infliges en 1 + tu rango. Por ejemplo,
+Dentro y fuera del campo de batalla, tu poderoso físico envía un
+si eres de nivel 6 y haces un ataque que cuesta 2, cada
+mensaje claro a tus enemigos.
+A
+R
+R
+A
+B
+I
+I
+R
+A
+118 Capítulo 4: Caminos heroicos

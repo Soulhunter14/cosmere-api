@@ -64,6 +64,15 @@ public class CharacterEntity
     public string HabilidadPersonalizada3 { get; set; } = string.Empty;
     public int HabilidadPersonalizada3Valor { get; set; } = 0;
     public string HabilidadPersonalizada3Atributo { get; set; } = string.Empty;
+    public string HabilidadPersonalizada4 { get; set; } = string.Empty;
+    public int HabilidadPersonalizada4Valor { get; set; } = 0;
+    public string HabilidadPersonalizada4Atributo { get; set; } = string.Empty;
+    public string HabilidadPersonalizada5 { get; set; } = string.Empty;
+    public int HabilidadPersonalizada5Valor { get; set; } = 0;
+    public string HabilidadPersonalizada5Atributo { get; set; } = string.Empty;
+    public string HabilidadPersonalizada6 { get; set; } = string.Empty;
+    public int HabilidadPersonalizada6Valor { get; set; } = 0;
+    public string HabilidadPersonalizada6Atributo { get; set; } = string.Empty;
 
     // Roleplay
     public string Proposito { get; set; } = string.Empty;

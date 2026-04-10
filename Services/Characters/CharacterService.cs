@@ -105,6 +105,13 @@ public class CharacterService(CosmereContext db) : ICharacterService
         if (!isGm && character.OwnerId != userId)
             throw new UnauthorizedAccessException("You can only edit your own character.");
 
+        if (!isGm)
+        {
+            request.Name = character.Name;
+            request.CaminoHeroico = character.CaminoHeroico;
+            request.CaminoRadiante = character.CaminoRadiante;
+        }
+
         ValidateCaminos(request.CaminoHeroico, request.CaminoRadiante, request.Ascendencia);
         ApplyUpdate(character, request);
         character.UpdatedAt = DateTime.UtcNow;
@@ -178,6 +185,9 @@ public class CharacterService(CosmereContext db) : ICharacterService
         c.HabilidadPersonalizada1 = r.HabilidadPersonalizada1; c.HabilidadPersonalizada1Valor = r.HabilidadPersonalizada1Valor; c.HabilidadPersonalizada1Atributo = r.HabilidadPersonalizada1Atributo;
         c.HabilidadPersonalizada2 = r.HabilidadPersonalizada2; c.HabilidadPersonalizada2Valor = r.HabilidadPersonalizada2Valor; c.HabilidadPersonalizada2Atributo = r.HabilidadPersonalizada2Atributo;
         c.HabilidadPersonalizada3 = r.HabilidadPersonalizada3; c.HabilidadPersonalizada3Valor = r.HabilidadPersonalizada3Valor; c.HabilidadPersonalizada3Atributo = r.HabilidadPersonalizada3Atributo;
+        c.HabilidadPersonalizada4 = r.HabilidadPersonalizada4; c.HabilidadPersonalizada4Valor = r.HabilidadPersonalizada4Valor; c.HabilidadPersonalizada4Atributo = r.HabilidadPersonalizada4Atributo;
+        c.HabilidadPersonalizada5 = r.HabilidadPersonalizada5; c.HabilidadPersonalizada5Valor = r.HabilidadPersonalizada5Valor; c.HabilidadPersonalizada5Atributo = r.HabilidadPersonalizada5Atributo;
+        c.HabilidadPersonalizada6 = r.HabilidadPersonalizada6; c.HabilidadPersonalizada6Valor = r.HabilidadPersonalizada6Valor; c.HabilidadPersonalizada6Atributo = r.HabilidadPersonalizada6Atributo;
         c.Proposito = r.Proposito; c.Obstaculo = r.Obstaculo; c.Metas = r.Metas;
         c.Talentos = r.Talentos; c.Apariencia = r.Apariencia; c.Notas = r.Notas; c.Conexiones = r.Conexiones;
         c.Weapons = r.Weapons; c.Armor = r.Armor; c.Spells = r.Spells; c.Equipment = r.Equipment;
@@ -205,6 +215,9 @@ public class CharacterService(CosmereContext db) : ICharacterService
         HabilidadPersonalizada1 = c.HabilidadPersonalizada1, HabilidadPersonalizada1Valor = c.HabilidadPersonalizada1Valor, HabilidadPersonalizada1Atributo = c.HabilidadPersonalizada1Atributo,
         HabilidadPersonalizada2 = c.HabilidadPersonalizada2, HabilidadPersonalizada2Valor = c.HabilidadPersonalizada2Valor, HabilidadPersonalizada2Atributo = c.HabilidadPersonalizada2Atributo,
         HabilidadPersonalizada3 = c.HabilidadPersonalizada3, HabilidadPersonalizada3Valor = c.HabilidadPersonalizada3Valor, HabilidadPersonalizada3Atributo = c.HabilidadPersonalizada3Atributo,
+        HabilidadPersonalizada4 = c.HabilidadPersonalizada4, HabilidadPersonalizada4Valor = c.HabilidadPersonalizada4Valor, HabilidadPersonalizada4Atributo = c.HabilidadPersonalizada4Atributo,
+        HabilidadPersonalizada5 = c.HabilidadPersonalizada5, HabilidadPersonalizada5Valor = c.HabilidadPersonalizada5Valor, HabilidadPersonalizada5Atributo = c.HabilidadPersonalizada5Atributo,
+        HabilidadPersonalizada6 = c.HabilidadPersonalizada6, HabilidadPersonalizada6Valor = c.HabilidadPersonalizada6Valor, HabilidadPersonalizada6Atributo = c.HabilidadPersonalizada6Atributo,
         Proposito = c.Proposito, Obstaculo = c.Obstaculo, Metas = c.Metas, Talentos = c.Talentos,
         Apariencia = c.Apariencia, Notas = c.Notas, Conexiones = c.Conexiones,
         Weapons = c.Weapons, Armor = c.Armor, Spells = c.Spells, Equipment = c.Equipment,
