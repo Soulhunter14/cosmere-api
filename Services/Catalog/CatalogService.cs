@@ -1,5 +1,7 @@
 using Infrastructure.Data;
+using Messages.Catalog.In;
 using Messages.Catalog.Out;
+using Messages.Database.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Services.Catalog;
@@ -12,14 +14,14 @@ public class CatalogService(CosmereContext db) : ICatalogService
             Id = w.Id, Name = w.Name, WeaponTypeId = w.WeaponTypeId, SkillId = w.SkillId,
             DamageDiceCount = w.DamageDiceCount, DamageDiceValue = w.DamageDiceValue,
             DamageTypeId = w.DamageTypeId, RangeId = w.RangeId,
-            TraitIds = w.TraitIds, ExpertTraitIds = w.ExpertTraitIds
+            TraitIds = w.TraitIds, ExpertTraitIds = w.ExpertTraitIds, IsCustom = w.IsCustom
         }).ToListAsync();
 
     public async Task<List<ArmorCatalogResponse>> GetArmorAsync() =>
         await db.ArmorCatalog.Select(a => new ArmorCatalogResponse
         {
             Id = a.Id, Name = a.Name, ArmorTypeId = a.ArmorTypeId, Desvio = a.Desvio,
-            TraitIds = a.TraitIds, ExpertTraitIds = a.ExpertTraitIds
+            TraitIds = a.TraitIds, ExpertTraitIds = a.ExpertTraitIds, IsCustom = a.IsCustom
         }).ToListAsync();
 
     public async Task<List<GearItemResponse>> GetGearAsync() =>
@@ -34,14 +36,72 @@ public class CatalogService(CosmereContext db) : ICatalogService
             .Select(o => new CatalogOptionResponse { Id = o.Id, Name = o.Name, Description = o.Description })
             .ToListAsync();
 
-    public async Task ReimportAsync()
+    public async Task<WeaponCatalogResponse> CreateWeaponAsync(CreateWeaponRequest request)
     {
-        db.CatalogOptions.RemoveRange(db.CatalogOptions);
-        db.WeaponCatalog.RemoveRange(db.WeaponCatalog);
-        db.ArmorCatalog.RemoveRange(db.ArmorCatalog);
-        db.GearItems.RemoveRange(db.GearItems);
+        var entity = new WeaponCatalogEntity
+        {
+            Name = request.Name,
+            WeaponTypeId = request.WeaponTypeId,
+            SkillId = request.SkillId,
+            DamageDiceCount = request.DamageDiceCount,
+            DamageDiceValue = request.DamageDiceValue,
+            DamageTypeId = request.DamageTypeId,
+            RangeId = request.RangeId,
+            TraitIds = request.TraitIds,
+            ExpertTraitIds = request.ExpertTraitIds,
+            IsCustom = true,
+        };
+        db.WeaponCatalog.Add(entity);
         await db.SaveChangesAsync();
-        SeedData.SeedCatalog(db);
-        await db.SaveChangesAsync();
+        return new WeaponCatalogResponse
+        {
+            Id = entity.Id, Name = entity.Name,
+            WeaponTypeId = entity.WeaponTypeId, SkillId = entity.SkillId,
+            DamageDiceCount = entity.DamageDiceCount, DamageDiceValue = entity.DamageDiceValue,
+            DamageTypeId = entity.DamageTypeId, RangeId = entity.RangeId,
+            TraitIds = entity.TraitIds, ExpertTraitIds = entity.ExpertTraitIds, IsCustom = entity.IsCustom,
+        };
     }
+
+    public async Task<ArmorCatalogResponse> CreateArmorAsync(CreateArmorRequest request)
+    {
+        var entity = new ArmorCatalogEntity
+        {
+            Name = request.Name,
+            ArmorTypeId = request.ArmorTypeId,
+            Desvio = request.Desvio,
+            TraitIds = request.TraitIds,
+            ExpertTraitIds = request.ExpertTraitIds,
+            IsCustom = true,
+        };
+        db.ArmorCatalog.Add(entity);
+        await db.SaveChangesAsync();
+        return new ArmorCatalogResponse
+        {
+            Id = entity.Id, Name = entity.Name,
+            ArmorTypeId = entity.ArmorTypeId, Desvio = entity.Desvio,
+            TraitIds = entity.TraitIds, ExpertTraitIds = entity.ExpertTraitIds, IsCustom = entity.IsCustom,
+        };
+    }
+
+    public async Task<bool> DeleteWeaponAsync(long id)
+    {
+        var entity = await db.WeaponCatalog.FindAsync(id);
+        if (entity is null) return false;
+        if (!entity.IsCustom) throw new InvalidOperationException("Cannot delete a seeded catalog item.");
+        db.WeaponCatalog.Remove(entity);
+        await db.SaveChangesAsync();
+        return true;
+    }
+
+    public async Task<bool> DeleteArmorAsync(long id)
+    {
+        var entity = await db.ArmorCatalog.FindAsync(id);
+        if (entity is null) return false;
+        if (!entity.IsCustom) throw new InvalidOperationException("Cannot delete a seeded catalog item.");
+        db.ArmorCatalog.Remove(entity);
+        await db.SaveChangesAsync();
+        return true;
+    }
+
 }

@@ -12,6 +12,7 @@ public class WeaponCatalogResponse
     public int RangeId { get; set; }
     public List<int> TraitIds { get; set; } = [];
     public List<int> ExpertTraitIds { get; set; } = [];
+    public bool IsCustom { get; set; }
 }
 
 public class ArmorCatalogResponse
@@ -22,6 +23,7 @@ public class ArmorCatalogResponse
     public int Desvio { get; set; }
     public List<int> TraitIds { get; set; } = [];
     public List<int> ExpertTraitIds { get; set; } = [];
+    public bool IsCustom { get; set; }
 }
 
 public class GearItemResponse

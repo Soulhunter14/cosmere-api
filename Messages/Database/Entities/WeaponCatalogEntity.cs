@@ -12,6 +12,7 @@ public class WeaponCatalogEntity
     public int RangeId { get; set; }
     public List<int> TraitIds { get; set; } = [];
     public List<int> ExpertTraitIds { get; set; } = [];
+    public bool IsCustom { get; set; }
 }
 
 public class ArmorCatalogEntity
@@ -22,6 +23,7 @@ public class ArmorCatalogEntity
     public int Desvio { get; set; }
     public List<int> TraitIds { get; set; } = [];
     public List<int> ExpertTraitIds { get; set; } = [];
+    public bool IsCustom { get; set; }
 }
 
 public class GearItemEntity

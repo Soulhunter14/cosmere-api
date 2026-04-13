@@ -111,7 +111,8 @@ public class CampaignService(CosmereContext db) : ICampaignService
         });
         await db.SaveChangesAsync();
 
-        return new CampaignResponse { Id = campaign.Id, Name = campaign.Name, Role = "player", CreatedAt = campaign.CreatedAt };
+        var member = await db.CampaignMembers.FirstAsync(m => m.CampaignId == campaign.Id && m.UserId == userId);
+        return new CampaignResponse { Id = campaign.Id, Name = campaign.Name, Role = member.Role, CreatedAt = campaign.CreatedAt };
     }
 
     public async Task UpdateInviteAsync(long campaignId, UpdateInviteRequest request, long userId)
