@@ -63,4 +63,25 @@ public class CatalogController(ICatalogService catalogService) : ControllerBase
         }
     }
 
+    [HttpPut("weapons/{id:long}/description")]
+    public async Task<IActionResult> UpdateWeaponDescription(long id, [FromBody] UpdateDescriptionRequest request)
+    {
+        var found = await catalogService.UpdateWeaponDescriptionAsync(id, request.Description);
+        return found ? NoContent() : NotFound();
+    }
+
+    [HttpPut("armor/{id:long}/description")]
+    public async Task<IActionResult> UpdateArmorDescription(long id, [FromBody] UpdateDescriptionRequest request)
+    {
+        var found = await catalogService.UpdateArmorDescriptionAsync(id, request.Description);
+        return found ? NoContent() : NotFound();
+    }
+
+    [HttpPut("gear/{id:long}/description")]
+    public async Task<IActionResult> UpdateGearDescription(long id, [FromBody] UpdateDescriptionRequest request)
+    {
+        var found = await catalogService.UpdateGearDescriptionAsync(id, request.Description);
+        return found ? NoContent() : NotFound();
+    }
+
 }

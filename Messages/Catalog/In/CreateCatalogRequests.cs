@@ -11,6 +11,8 @@ public class CreateWeaponRequest
     public int RangeId { get; set; }
     public List<int> TraitIds { get; set; } = [];
     public List<int> ExpertTraitIds { get; set; } = [];
+    public string Description { get; set; } = string.Empty;
+    public double Weight { get; set; }
 }
 
 public class CreateArmorRequest
@@ -20,4 +22,11 @@ public class CreateArmorRequest
     public int Desvio { get; set; }
     public List<int> TraitIds { get; set; } = [];
     public List<int> ExpertTraitIds { get; set; } = [];
+    public string Description { get; set; } = string.Empty;
+    public double Weight { get; set; }
+}
+
+public class UpdateDescriptionRequest
+{
+    public string Description { get; set; } = string.Empty;
 }

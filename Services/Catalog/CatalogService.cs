@@ -14,14 +14,16 @@ public class CatalogService(CosmereContext db) : ICatalogService
             Id = w.Id, Name = w.Name, WeaponTypeId = w.WeaponTypeId, SkillId = w.SkillId,
             DamageDiceCount = w.DamageDiceCount, DamageDiceValue = w.DamageDiceValue,
             DamageTypeId = w.DamageTypeId, RangeId = w.RangeId,
-            TraitIds = w.TraitIds, ExpertTraitIds = w.ExpertTraitIds, IsCustom = w.IsCustom
+            TraitIds = w.TraitIds, ExpertTraitIds = w.ExpertTraitIds, IsCustom = w.IsCustom,
+            Description = w.Description, Weight = w.Weight
         }).ToListAsync();
 
     public async Task<List<ArmorCatalogResponse>> GetArmorAsync() =>
         await db.ArmorCatalog.Select(a => new ArmorCatalogResponse
         {
             Id = a.Id, Name = a.Name, ArmorTypeId = a.ArmorTypeId, Desvio = a.Desvio,
-            TraitIds = a.TraitIds, ExpertTraitIds = a.ExpertTraitIds, IsCustom = a.IsCustom
+            TraitIds = a.TraitIds, ExpertTraitIds = a.ExpertTraitIds, IsCustom = a.IsCustom,
+            Description = a.Description, Weight = a.Weight
         }).ToListAsync();
 
     public async Task<List<GearItemResponse>> GetGearAsync() =>
@@ -50,6 +52,8 @@ public class CatalogService(CosmereContext db) : ICatalogService
             TraitIds = request.TraitIds,
             ExpertTraitIds = request.ExpertTraitIds,
             IsCustom = true,
+            Description = request.Description,
+            Weight = request.Weight,
         };
         db.WeaponCatalog.Add(entity);
         await db.SaveChangesAsync();
@@ -60,6 +64,7 @@ public class CatalogService(CosmereContext db) : ICatalogService
             DamageDiceCount = entity.DamageDiceCount, DamageDiceValue = entity.DamageDiceValue,
             DamageTypeId = entity.DamageTypeId, RangeId = entity.RangeId,
             TraitIds = entity.TraitIds, ExpertTraitIds = entity.ExpertTraitIds, IsCustom = entity.IsCustom,
+            Description = entity.Description, Weight = entity.Weight,
         };
     }
 
@@ -73,6 +78,8 @@ public class CatalogService(CosmereContext db) : ICatalogService
             TraitIds = request.TraitIds,
             ExpertTraitIds = request.ExpertTraitIds,
             IsCustom = true,
+            Description = request.Description,
+            Weight = request.Weight,
         };
         db.ArmorCatalog.Add(entity);
         await db.SaveChangesAsync();
@@ -81,6 +88,7 @@ public class CatalogService(CosmereContext db) : ICatalogService
             Id = entity.Id, Name = entity.Name,
             ArmorTypeId = entity.ArmorTypeId, Desvio = entity.Desvio,
             TraitIds = entity.TraitIds, ExpertTraitIds = entity.ExpertTraitIds, IsCustom = entity.IsCustom,
+            Description = entity.Description, Weight = entity.Weight,
         };
     }
 
@@ -100,6 +108,33 @@ public class CatalogService(CosmereContext db) : ICatalogService
         if (entity is null) return false;
         if (!entity.IsCustom) throw new InvalidOperationException("Cannot delete a seeded catalog item.");
         db.ArmorCatalog.Remove(entity);
+        await db.SaveChangesAsync();
+        return true;
+    }
+
+    public async Task<bool> UpdateWeaponDescriptionAsync(long id, string description)
+    {
+        var entity = await db.WeaponCatalog.FindAsync(id);
+        if (entity is null) return false;
+        entity.Description = description;
+        await db.SaveChangesAsync();
+        return true;
+    }
+
+    public async Task<bool> UpdateArmorDescriptionAsync(long id, string description)
+    {
+        var entity = await db.ArmorCatalog.FindAsync(id);
+        if (entity is null) return false;
+        entity.Description = description;
+        await db.SaveChangesAsync();
+        return true;
+    }
+
+    public async Task<bool> UpdateGearDescriptionAsync(long id, string description)
+    {
+        var entity = await db.GearItems.FindAsync(id);
+        if (entity is null) return false;
+        entity.Description = description;
         await db.SaveChangesAsync();
         return true;
     }

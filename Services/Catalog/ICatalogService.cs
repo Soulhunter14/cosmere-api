@@ -13,4 +13,7 @@ public interface ICatalogService
     Task<ArmorCatalogResponse> CreateArmorAsync(CreateArmorRequest request);
     Task<bool> DeleteWeaponAsync(long id);
     Task<bool> DeleteArmorAsync(long id);
+    Task<bool> UpdateWeaponDescriptionAsync(long id, string description);
+    Task<bool> UpdateArmorDescriptionAsync(long id, string description);
+    Task<bool> UpdateGearDescriptionAsync(long id, string description);
 }

@@ -13,6 +13,8 @@ public class WeaponCatalogEntity
     public List<int> TraitIds { get; set; } = [];
     public List<int> ExpertTraitIds { get; set; } = [];
     public bool IsCustom { get; set; }
+    public string Description { get; set; } = string.Empty;
+    public double Weight { get; set; }
 }
 
 public class ArmorCatalogEntity
@@ -24,6 +26,8 @@ public class ArmorCatalogEntity
     public List<int> TraitIds { get; set; } = [];
     public List<int> ExpertTraitIds { get; set; } = [];
     public bool IsCustom { get; set; }
+    public string Description { get; set; } = string.Empty;
+    public double Weight { get; set; }
 }
 
 public class GearItemEntity
