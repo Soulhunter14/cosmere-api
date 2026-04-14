@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -12,9 +13,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(CosmereContext))]
-    partial class CosmereContextModelSnapshot : ModelSnapshot
+    [Migration("20260413131645_AddMetas")]
+    partial class AddMetas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -289,6 +292,9 @@ namespace Infrastructure.Migrations
                     b.Property<int>("HabilidadPersonalizada6Valor")
                         .HasColumnType("integer");
 
+                    b.Property<int>("Health")
+                        .HasColumnType("integer");
+
                     b.Property<int>("Hurto")
                         .HasColumnType("integer");
 
@@ -561,40 +567,6 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("GlobalNpcs");
-                });
-
-            modelBuilder.Entity("Messages.Database.Entities.LockedDayEntity", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
-
-                    b.Property<long>("CampaignId")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateOnly>("Date")
-                        .HasColumnType("date");
-
-                    b.Property<string>("Note")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<long>("UserId")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.HasIndex("CampaignId", "UserId", "Date")
-                        .IsUnique();
-
-                    b.ToTable("LockedDays");
                 });
 
             modelBuilder.Entity("Messages.Database.Entities.MetaEntity", b =>
@@ -967,25 +939,6 @@ namespace Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Campaign");
-                });
-
-            modelBuilder.Entity("Messages.Database.Entities.LockedDayEntity", b =>
-                {
-                    b.HasOne("Messages.Database.Entities.CampaignEntity", "Campaign")
-                        .WithMany()
-                        .HasForeignKey("CampaignId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Messages.Database.Entities.UserEntity", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Campaign");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Messages.Database.Entities.MetaEntity", b =>

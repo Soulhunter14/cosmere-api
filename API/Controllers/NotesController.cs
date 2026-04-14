@@ -17,7 +17,7 @@ public class NotesController(INoteService noteService) : ControllerBase
         => Ok(await noteService.GetNotesAsync(campaignId, JwtHelper.GetUserId(User)));
 
     [HttpPost]
-    public async Task<ActionResult<NoteResponse>> CreateNote(long campaignId, [FromBody] CreateNoteRequest request)
+    public async Task<ActionResult<List<NoteResponse>>> CreateNote(long campaignId, [FromBody] CreateNoteRequest request)
         => Ok(await noteService.CreateNoteAsync(campaignId, request, JwtHelper.GetUserId(User)));
 
     [HttpPut("{noteId:long}/read")]

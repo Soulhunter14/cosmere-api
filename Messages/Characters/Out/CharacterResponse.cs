@@ -1,3 +1,5 @@
+using Messages.Metas.Out;
+
 namespace Messages.Characters.Out;
 
 public class CharacterResponse
@@ -20,7 +22,6 @@ public class CharacterResponse
     public int Discernimiento { get; set; }
     public int Presencia { get; set; }
 
-    public int Health { get; set; }
     public int MaxHealth { get; set; }
     public int MaxConcentration { get; set; }
     public int MaxInvestiture { get; set; }
@@ -67,7 +68,6 @@ public class CharacterResponse
 
     public string Proposito { get; set; } = string.Empty;
     public string Obstaculo { get; set; } = string.Empty;
-    public string Metas { get; set; } = string.Empty;
     public string Talentos { get; set; } = string.Empty;
     public string Apariencia { get; set; } = string.Empty;
     public string Notas { get; set; } = string.Empty;
@@ -78,6 +78,8 @@ public class CharacterResponse
     public List<string> Spells { get; set; } = [];
     public List<string> Equipment { get; set; } = [];
     public string EquippedArmor { get; set; } = string.Empty;
+
+    public List<MetaResponse> Metas { get; set; } = [];
 
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }

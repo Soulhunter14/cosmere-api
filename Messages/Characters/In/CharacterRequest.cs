@@ -35,7 +35,6 @@ public class UpdateCharacterRequest
     public int Presencia { get; set; }
 
     // Resources
-    public int Health { get; set; }
     public int MaxHealth { get; set; }
     public int MaxConcentration { get; set; }
     public int MaxInvestiture { get; set; }
@@ -84,7 +83,6 @@ public class UpdateCharacterRequest
     // Roleplay
     public string Proposito { get; set; } = string.Empty;
     public string Obstaculo { get; set; } = string.Empty;
-    public string Metas { get; set; } = string.Empty;
     public string Talentos { get; set; } = string.Empty;
     public string Apariencia { get; set; } = string.Empty;
     public string Notas { get; set; } = string.Empty;

@@ -13,4 +13,5 @@ public class CampaignEntity
     public ICollection<CampaignMemberEntity> Members { get; set; } = [];
     public ICollection<CharacterEntity> Characters { get; set; } = [];
     public ICollection<SessionEntity> Sessions { get; set; } = [];
+    public ICollection<SessionProposalEntity> Proposals { get; set; } = [];
 }

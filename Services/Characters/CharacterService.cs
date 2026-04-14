@@ -2,6 +2,7 @@ using Infrastructure.Data;
 using Messages.Characters.In;
 using Messages.Characters.Out;
 using Messages.Database.Entities;
+using Messages.Metas.Out;
 using Microsoft.EntityFrameworkCore;
 
 namespace Services.Characters;
@@ -51,6 +52,7 @@ public class CharacterService(CosmereContext db) : ICharacterService
         var isGm = await IsGmAsync(campaignId, userId);
 
         var character = await db.Characters
+            .Include(c => c.Metas)
             .FirstOrDefaultAsync(c => c.Id == characterId && c.CampaignId == campaignId && !c.IsNpc)
             ?? throw new KeyNotFoundException("Character not found.");
 
@@ -172,7 +174,7 @@ public class CharacterService(CosmereContext db) : ICharacterService
         c.CaminoHeroico = r.CaminoHeroico; c.CaminoRadiante = r.CaminoRadiante; c.Ascendencia = r.Ascendencia;
         c.Fuerza = r.Fuerza; c.Velocidad = r.Velocidad; c.Intelecto = r.Intelecto;
         c.Voluntad = r.Voluntad; c.Discernimiento = r.Discernimiento; c.Presencia = r.Presencia;
-        c.Health = r.Health; c.MaxHealth = r.MaxHealth;
+        c.MaxHealth = r.MaxHealth;
         c.MaxConcentration = r.MaxConcentration;
         c.MaxInvestiture = r.MaxInvestiture; c.Desvio = r.Desvio;
         c.MarcosInfusas = r.MarcosInfusas; c.MarcosOpacas = r.MarcosOpacas;
@@ -188,7 +190,7 @@ public class CharacterService(CosmereContext db) : ICharacterService
         c.HabilidadPersonalizada4 = r.HabilidadPersonalizada4; c.HabilidadPersonalizada4Valor = r.HabilidadPersonalizada4Valor; c.HabilidadPersonalizada4Atributo = r.HabilidadPersonalizada4Atributo;
         c.HabilidadPersonalizada5 = r.HabilidadPersonalizada5; c.HabilidadPersonalizada5Valor = r.HabilidadPersonalizada5Valor; c.HabilidadPersonalizada5Atributo = r.HabilidadPersonalizada5Atributo;
         c.HabilidadPersonalizada6 = r.HabilidadPersonalizada6; c.HabilidadPersonalizada6Valor = r.HabilidadPersonalizada6Valor; c.HabilidadPersonalizada6Atributo = r.HabilidadPersonalizada6Atributo;
-        c.Proposito = r.Proposito; c.Obstaculo = r.Obstaculo; c.Metas = r.Metas;
+        c.Proposito = r.Proposito; c.Obstaculo = r.Obstaculo;
         c.Talentos = r.Talentos; c.Apariencia = r.Apariencia; c.Notas = r.Notas; c.Conexiones = r.Conexiones;
         c.Weapons = r.Weapons; c.Armor = r.Armor; c.Spells = r.Spells; c.Equipment = r.Equipment;
         c.EquippedArmor = r.Armor.Contains(r.EquippedArmor) ? r.EquippedArmor : string.Empty;
@@ -202,7 +204,7 @@ public class CharacterService(CosmereContext db) : ICharacterService
         CaminoRadiante = c.CaminoRadiante, Ascendencia = c.Ascendencia,
         Fuerza = c.Fuerza, Velocidad = c.Velocidad, Intelecto = c.Intelecto,
         Voluntad = c.Voluntad, Discernimiento = c.Discernimiento, Presencia = c.Presencia,
-        Health = c.Health, MaxHealth = c.MaxHealth,
+        MaxHealth = c.MaxHealth,
         MaxConcentration = c.MaxConcentration,
         MaxInvestiture = c.MaxInvestiture, Desvio = c.Desvio,
         MarcosInfusas = c.MarcosInfusas, MarcosOpacas = c.MarcosOpacas,
@@ -218,7 +220,14 @@ public class CharacterService(CosmereContext db) : ICharacterService
         HabilidadPersonalizada4 = c.HabilidadPersonalizada4, HabilidadPersonalizada4Valor = c.HabilidadPersonalizada4Valor, HabilidadPersonalizada4Atributo = c.HabilidadPersonalizada4Atributo,
         HabilidadPersonalizada5 = c.HabilidadPersonalizada5, HabilidadPersonalizada5Valor = c.HabilidadPersonalizada5Valor, HabilidadPersonalizada5Atributo = c.HabilidadPersonalizada5Atributo,
         HabilidadPersonalizada6 = c.HabilidadPersonalizada6, HabilidadPersonalizada6Valor = c.HabilidadPersonalizada6Valor, HabilidadPersonalizada6Atributo = c.HabilidadPersonalizada6Atributo,
-        Proposito = c.Proposito, Obstaculo = c.Obstaculo, Metas = c.Metas, Talentos = c.Talentos,
+        Proposito = c.Proposito, Obstaculo = c.Obstaculo, Talentos = c.Talentos,
+        Metas = c.Metas.Select(m => new MetaResponse
+        {
+            Id = m.Id, CharacterId = m.CharacterId, Titulo = m.Titulo,
+            Descripcion = m.Descripcion, Hitos = m.Hitos, Estado = m.Estado,
+            TipoConclusion = m.TipoConclusion, NotasConclusion = m.NotasConclusion,
+            CreatedAt = m.CreatedAt,
+        }).ToList(),
         Apariencia = c.Apariencia, Notas = c.Notas, Conexiones = c.Conexiones,
         Weapons = c.Weapons, Armor = c.Armor, Spells = c.Spells, Equipment = c.Equipment,
         EquippedArmor = c.EquippedArmor,

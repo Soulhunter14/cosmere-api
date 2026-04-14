@@ -28,7 +28,6 @@ public class CharacterEntity
     public int Presencia { get; set; } = 0;
 
     // Resources
-    public int Health { get; set; } = 10;
     public int MaxHealth { get; set; } = 10;
     public int MaxConcentration { get; set; } = 0;
     public int MaxInvestiture { get; set; } = 0;
@@ -77,7 +76,6 @@ public class CharacterEntity
     // Roleplay
     public string Proposito { get; set; } = string.Empty;
     public string Obstaculo { get; set; } = string.Empty;
-    public string Metas { get; set; } = string.Empty;
     public string Talentos { get; set; } = string.Empty;
     public string Apariencia { get; set; } = string.Empty;
     public string Notas { get; set; } = string.Empty;
@@ -94,4 +92,5 @@ public class CharacterEntity
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
     public CampaignEntity Campaign { get; set; } = null!;
+    public List<MetaEntity> Metas { get; set; } = [];
 }

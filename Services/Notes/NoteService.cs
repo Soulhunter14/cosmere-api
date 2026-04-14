@@ -32,29 +32,41 @@ public class NoteService(CosmereContext db) : INoteService
         return notes.Select(MapToResponse).ToList();
     }
 
-    public async Task<NoteResponse> CreateNoteAsync(long campaignId, CreateNoteRequest request, long userId)
+    public async Task<List<NoteResponse>> CreateNoteAsync(long campaignId, CreateNoteRequest request, long userId)
     {
         await EnsureGmAsync(campaignId, userId);
 
-        var targetIsMember = await db.CampaignMembers
-            .AnyAsync(m => m.CampaignId == campaignId && m.UserId == request.ToUserId);
-        if (!targetIsMember) throw new KeyNotFoundException("Target player not found in campaign.");
+        if (request.ToUserIds.Count == 0)
+            throw new ArgumentException("At least one recipient is required.");
 
-        var note = new NoteEntity
+        var memberIds = await db.CampaignMembers
+            .Where(m => m.CampaignId == campaignId && request.ToUserIds.Contains(m.UserId))
+            .Select(m => m.UserId)
+            .ToListAsync();
+
+        var missing = request.ToUserIds.Except(memberIds).ToList();
+        if (missing.Count > 0)
+            throw new KeyNotFoundException("One or more target players not found in campaign.");
+
+        var notes = request.ToUserIds.Select(toId => new NoteEntity
         {
             CampaignId = campaignId,
             FromUserId = userId,
-            ToUserId = request.ToUserId,
+            ToUserId = toId,
             Content = request.Content,
-        };
+        }).ToList();
 
-        db.Notes.Add(note);
+        db.Notes.AddRange(notes);
         await db.SaveChangesAsync();
 
-        await db.Entry(note).Reference(n => n.FromUser).LoadAsync();
-        await db.Entry(note).Reference(n => n.ToUser).LoadAsync();
+        var noteIds = notes.Select(n => n.Id).ToList();
+        var saved = await db.Notes
+            .Include(n => n.FromUser)
+            .Include(n => n.ToUser)
+            .Where(n => noteIds.Contains(n.Id))
+            .ToListAsync();
 
-        return MapToResponse(note);
+        return saved.Select(MapToResponse).ToList();
     }
 
     public async Task MarkAsReadAsync(long noteId, long campaignId, long userId)

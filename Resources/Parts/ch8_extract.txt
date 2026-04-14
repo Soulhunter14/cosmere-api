@@ -1,0 +1,1310 @@
+﻿
+--- Página 273 ---
+tabla Mejoras e inconvenientes para fabriales para deter-
+Paso 4: Haz una prueba
+minar un inconveniente de manera aleatoria (si el requisito
+de manufactura
+que aparece no se corresponde con tu fabrial, repite la
+Una vez que captures al spren, podrás realizar y resolver una
+tirada). La DJ también puede decidir asignarte un incon-
+prueba de Manufactura. Esto requiere un día de reposo por
+veniente creativo o inventarse otra cosa para una de tus
+cada rango de fabrial a crear. Sin embargo, este periodo pue-
+Complicaciones.
+de verse modificado por Oportunidades o Complicaciones
+durante el proceso de elaboración: cada Oportunidad que
+Prueba de manufactura para fabriales
+obtengas durante la prueba de Manufactura reduce el tiempo
+Resultado Calidad del objeto
+de creación en un 25%, mientras que cada Complicación que
+1 a 5 Fracaso absoluto . A pesar del tiempo y esfuerzo dedica-
+sufres lo aumenta en la misma cantidad.
+dos, no consigues producir un fabrial útil. Debes volver
+Haz una prueba de Manufactura y sube la apuesta.
+a empezar de cero. La gema del núcleo del fabrial sigue
+Consulta la tabla Prueba de Manufactura para fabriales para
+intacta, pero pierdes el resto de materiales y también al
+determinar cómo afecta a tu elaboración el resultado de
+spren que habías capturado.
+la prueba.
+6 a 10 Creación chapucera . La creación de este fabrial te lleva
+un día adicional, y el proceso resulta inusualmente com-
+Paso 5: Aplicación de mejoras
+plicado. Llegas a crear el fabrial con un efecto, ninguna
+e inconvenientes
+mejora y un inconveniente.
+Por cada mejora que hayas obtenido como parte de la prue-
+11 a 20 Creación típica . La manufactura ha salido tal y como se
+ba de Manufactura, elige una mejora que aparezca junto al
+esperaba. Creas el fabrial con un efecto, una mejora y un
+efecto fabrial que hayas elegido (de la sección “Efectos de
+inconveniente.
+fabriales únicos”) o cualquier mejora que cumpla los requi-
+21 a 25 Creación de calidad . ¡Todo sale a pedir de boca! Creas el
+sitos de la tabla Mejoras e inconvenientes para fabriales. Si
+fabrial con un efecto, dos mejoras y un inconveniente.
+has obtenido dos mejoras, puedes elegir (si quieres) de la
+26 o más ¡Creación excepcional! Mientras creabas el fabrial haces
+sección “Características avanzadas de fabriales”.
+un gran descubrimiento. Creas el fabrial con un efecto,
+Por cada inconveniente que hayas sufrido, podrás elegir
+tres mejoras y ningún inconveniente.
+el que aparece junto a tu fabrial elegido, o tirar un d8 en la
+Mejoras e inconvenientes para fabriales
+d8 Inconvenientes generales Mejoras generales Requisitos
+1 Mermado . Los ataques realizados con este fa- Amplificado . Los ataques realizados con este fabrial Solo se puede aplicar a fabriales con
+brial sufren una desventaja. obtienen una ventaja. los que se puede atacar.
+O
+2 Delicado . La DJ puede gastar para desactivar Fiable . Cuando realices pruebas con este fabrial, igno- Solo se puede aplicar a fabriales
+O
+el fabrial hasta que sea reparado con una prueba ra la primera que saques en cada escena. Cuando que requieren pruebas de ataque o
+de Manufactura CD 15. sucede, no obtienes ninguna bonificación por ello. de habilidad.
+O O
+Solo se puede aplicar a fabriales
+3 Peligroso . La DJ puede gastar para hacer que Bien ajustado . Puedes gastar para recuperar 1 pun-
+que requieren pruebas de ataque o
+el fabrial os inflija 1d6 de daño a ti y a los perso- tos de concentración.
+de habilidad.
+najes situados a 1,5 metros.
+O
+4 Ineficiente . Cuando sacas una cuando estás Eficiente . Cuando sacas una O al estar a menos de 1,5 Solo se puede aplicar a fabriales
+a menos de 1,5 metros del fabrial activado, la DJ metros del fabrial activado, puedes usarla para recupe- que gastan cargas.
+puede usarla para que gaste una carga adicional. rar una carga.
+5 Baja capacidad . Reduce las cargas máximas del Alta capacidad . Aumenta las cargas máximas del Solo se puede aplicar a fabriales
+fabrial en 1. fabrial en 1. que gastan cargas.
+6 Alcance corto . El alcance del fabrial se reduce Alcance largo . El alcance del fabrial se duplica. Solo se puede aplicar a fabriales
+a la mitad. que tienen un alcance o radio de
+acción.
+7 Más lento . Reduce el valor de movimiento del Más rápido . Aumenta el valor de movimiento del efec- Solo se puede aplicar a fabriales
+efecto en un 50%. to en un 50%. que te otorgan un valor de movi-
+miento o hacen que te desplaces.
+8 Menos dañino . Reduce el daño infligido o sa- Más dañino . Aumenta el daño infligido o sanado en Solo se puede aplicar a fabriales
+nado en una magnitud de dado (por ejemplo, una magnitud de dado (por ejemplo, incrementando que infligen daño o lo sanan.
+reduciendo un d20 a un d12). un d4 a un d6).
+Capítulo 7: Objetos 269
+
+--- Página 274 ---
+Características avanzadas Efectos de fabriales únicos
+Esta sección presenta los efectos que puedes seleccionar para
+de fabriales
+tu fabrial único. La tabla los enumera por rango y, a continua-
+En circunstancias excepcionales, los artifabrianos pueden
+ción, el texto que sigue describe los efectos en orden alfabético.
+generar dos mejoras durante el proceso de manufactura.
+Cuando esto sucede, puedes optar por gastar ambas me-
+Efectos de fabriales únicos
+joras para aplicar una característica de tu elección de la tabla
+Rango Tipo Cargas
+Características avanzadas de fabriales.
+1 Compresor 3
+Características avanzadas de fabriales
+1 Cremrial 5
+Característica Efecto
+1 Cultivador 3
+Capacidad Si el fabrial tiene cargas, aumenta su número máxi-
+1 Vínculorial (zona) 3
+expandida mo en 3.
+1 Vínculorial (uno mismo) 5
+Zona amplia Si el fabrial tiene un ataque u otro tipo de efecto que
+2 Acelerador 3
+se aplica a un objetivo, podrás gastar 2 puntos de
+2 Ascensor 5
+concentración para hacer que afecte a cada ene-
+2 Aumentador de armadura 2
+migo, aliado o personaje situado a 1,5 metros de tu
+objetivo. Si estás dentro del alcance, podrás elegir
+2 Dolorial (aumentador / reductor) 3
+que te afecte a ti también, junto con tus aliados.
+2 Drenador 5
+Cerrojo de El fabrial solo puede ser utilizado por personajes
+2 Lumirial 3
+seguridad que conocen el mecanismo de seguridad (por
+2 Proyectil 5
+ejemplo, un botón escondido que se debe pulsar, o
+2 Vidarial 3
+una palanca secreta que hay que activar). Al crear
+el fabrial, decides cómo es dicho mecanismo.
+3 Alterador 4
+Activación rápida Una vez por escena, el usuario del fabrial puede
+4 Fabrial de potencia 4
+gastar 1 punto de concentración para reducir el
+coste de activación en acciones en 1 (o, si ya es 1,
+Acelerador
+pasa a ser 0).
+Efecto de fabrial único de rango 2
+Activación Al usar la acción Prepararse con el fabrial, puedes
+Este fabrial reduce la fricción de tu cuerpo. Como 0, gas-
+programada activar un mecanismo de temporizador interno
+ta 1 carga para moverte hasta tu valor de movimiento en
+para un intervalo a elegir (por ejemplo, 1 ronda, 1
+línea recta.
+minuto o 1 hora). Después de haber transcurrido
+dicho intervalo, el fabrial se activa (o se desactiva
+Cargas. Tiene 3 cargas.
+si ya estaba activo).
+Inconveniente. Debes hacer una prueba de Agilidad CD
+Efecto adicional Añade un efecto de fabrial único al fabrial. Debes
+15 cada vez que usas este fabrial. Si la fallas, quedas
+(solo fabriales gastar una gema adicional del rango del efecto
+Tumbado al final de tu movimiento.
+únicos) para añadirlo. Ambos efectos llevan la cuenta de
+Mejora. Cuando usas este fabrial no estás obligado a mo-
+sus cargas por separado.
+verte en línea recta.
+Alterador
+Efecto de fabrial único de rango 3
+El guante quedó fijado. Liberó
+Este fabrial desintegra objetos con un toque. Como 1, gasta
+uno de los pesos lejanos
+1 carga para tocar con este fabrial un objeto Pequeño (0,75
+metros). Si ese objeto no está supervisado, lo destruyes.
+y, muy poco a poco, relajó
+Si lo sostiene o transporta un personaje, debes hacer una
+N
+el puño para que aquel peso
+E
+N
+prueba de Agilidad contra su Defensa física, y destruyes el
+Ö
+K
+empezara a descender despacio.
+objeto si la superas. No puedes usar este fabrial con objetos
+T
+Y
+R
+Investidos o infusos.
+Navani se elevó.
+I
+M
+A
+Cargas. Tiene 4 cargas.
+S
+Y
+Inconveniente. Solo puedes declarar como objetivo objetos
+R
+E
+G
+no supervisados.
+R
+E
+Mejora. También puedes usar este fabrial contra perso-
+B
+E
+E
+najes. Con 1, gasta 2 cargas para realizar un ataque de
+S
+E
+I
+Disciplina contra la Defensa espiritual de un objetivo que
+R
+A
+M
+esté en tu cercanía. Tira 2d6 de daño espiritual.
+270 Capítulo 7: Objetos
+
+--- Página 275 ---
+Ascensor Compresor
+Efecto de fabrial único de rango 2 Efecto de fabrial único de rango 1
+Este fabrial te impulsa por el aire. Como 0, gasta 1 carga Este fabrial puede hacer que los objetos flexibles que toca se
+para activarlo y obtener un valor de vuelo de 9 metros hasta el vuelvan rígidos. Como 1, haz una prueba de Agilidad contra
+final de tu siguiente turno. Si al fabrial aún le quedan cargas la Defensa física de un objetivo en tu cercanía. Si la superas,
+después de que finalice tu valor de vuelo, podrás usar 0 (sin podrás gastar 1 o más cargas para hacer que el objetivo que-
+gastar cargas) para quedarte flotando donde estás o descen- de Ralentizado y sufra una desventaja en todas las pruebas
+der hasta el suelo. Si el fabrial se queda con 0 cargas mientras físicas durante esa misma cantidad de rondas.
+estás en el aire, caes y sufres daño de la manera habitual.
+Cargas. Tiene 3 cargas.
+Cargas. Tiene 5 cargas. Inconveniente. Al quedar Ralentizado de esta manera, la
+Inconveniente. Para terminar de fabricar este fabrial, de- Defensa física del objetivo aumenta en 2.
+bes gastar 1.000 marcos adicionales para construir un Mejora. En lugar de quedar Ralentizado, el objetivo queda
+complejo sistema de contrapesos unidos al ascensor. Una Inmovilizado.
+vez por día de uso, dichos contrapesos deben restablecer-
+Cremrial
+se para que el ascensor se pueda usar al día siguiente.
+Efecto de fabrial único de rango 1
+Mejora. Este fabrial también puede afectar a otros. Como
+1, realiza una prueba de Agilidad contra la Defensa física
+Este fabrial puede hacer que la piedra se vuelva tan blan-
+de un objetivo en tu cercanía. En caso de impacto, gasta
+da como el crem. Con 1, gasta 1 carga y elige una zona
+1 carga para alejar con un empujón al objetivo hasta 9
+Mediana (1,5 metros) de piedra en tu cercanía, convirtién-
+metros en línea recta.
+dola en arcilla blanda. Al final de tu turno, el área vuelve a
+ser de piedra y los enemigos en ella deben conseguir Evitar
+Aumentador de armadura
+peligro o quedan Inmovilizados (prueba de Atletismo CD
+Efecto de fabrial único de rango 2
+15 para escapar).
+Este fabrial mejora la fuerza de una pieza de armadura no
+Cargas. Tiene 5 cargas.
+Investida a la que está adherida permanentemente cuando
+Inconveniente. Hasta el final de tu próximo turno, cuando
+se crea. Como 1, gasta 1 carga para aumentar el valor de
+sufres una Complicación mientras estás a 1,5 metros o
+desvío de la armadura en 2 hasta el final de la escena.
+menos de la zona afectada por este fabrial, la DJ puede
+Cargas. Tiene 2 cargas. gastarla para hacer que tú también te hundas en la piedra
+Inconveniente. La armadura obtiene el rasgo Voluminosa y quedes Inmovilizado hasta el final de tu próximo turno.
+[3] mientras el fabrial está activo. Mejora. Este fabrial afecta una zona Grande (3 metros) en
+Mejora. Puedes gastar una carga adicional para aumentar lugar de una Mediana.
+también la Defensa física en 1 hasta el final de la escena.
+
+--- Página 276 ---
+Cultivador Fabrial de potencia
+Efecto de fabrial único de rango 1 Efecto de fabrial único de rango 4
+Este fabrial puede hacer que las plantas crezcan rápidamen- Has descubierto cómo crear un fabrial que puede imitar la
+te. Con 1, gasta 1 carga para hacer que cualquier planta que potenciación de los Radiantes. Cuando lo fabricas, elige una
+toque crezca hasta un tamaño Mediano (1,5 metros). Estas potencia Radiante. Puedes usar el fabrial para activar esa
+plantas se pueden usar para bloquear la línea de efecto, crear potencia, usando sus reglas y tiempo de activación habitua-
+barreras o cobertura, o crear algo por donde trepar. les, con los siguientes cambios:
+◆
+Cargas. Tiene 3 cargas. Puedes gastar cargas de este fabrial en lugar de
+C
+Inconveniente. Cuando sacas mientras estás a 1,5 me- Investidura para la potencia.
+◆
+tros o menos de una planta afectada por este fabrial, la Si no tienes grados en la habilidad de potencia corres-
+DJ puede gastarla para hacer que la planta crezca a tu pondiente, considera que tienes 1 grado cuando hay que
+alrededor. Quedas Retenido hasta que rompes la planta determinar efectos.
+◆
+superando una prueba de Atletismo CD 12. Al hacer una prueba, puedes usar la habilidad de poten-
+Mejora. Puedes hacer que las plantas lleguen a crecer hasta cia correspondiente (si la tienes) o tu valor de atributo de
+un tamaño Grande (3 metros). Voluntad (sin ningún grado en una habilidad).
+Si tu personaje no Radiante practica con este fabrial el
+Dolorial (aumentador/reductor)
+tiempo suficiente, la DJ puede permitirte, al subir de nivel,
+Efecto de fabrial único de rango 2
+invertir grados de habilidad en la habilidad correspondien-
+Este fabrial almacena dolor y luego lo libera sobre un ob-
+te, pero sin poder usar dicha habilidad si no dispones de
+jetivo. Es un arma cuerpo a cuerpo que usa la habilidad
+este fabrial.
+Armamento ligero y causa 1d6 de daño vital. Si impactas,
+Cargas. Tiene 4 cargas.
+puedes gastar 1 carga para añadir tu modificador de habili-
+Inconveniente. Solo tú puedes utilizar este fabrial.
+dad al daño una vez más.
+Mejora. Si practicas con este fabrial, puedes elegir talentos
+Cargas. Tiene 3 cargas.
+del árbol de la potencia correspondiente cuando subes
+C
+Inconveniente. La DJ puede gastar de este ataque para
+de nivel. No puedes usar dichos talentos sin este fabrial,
+hacer que el fabrial pierda 1 carga y te inflija 1d6 de daño
+pero puedes reemplazarlos mediante la actividad
+vital a ti.
+de periodo de reposo Autorreflexión, descrita en el
+Mejora. Antes de que sufras daño por parte de un ene-
+capítulo 9.
+migo, si este fabrial no está completamente cargado,
+puedes usar r para reducir dicho daño en 1d6 y recupe-
+Lumirial
+rar 1 carga.
+Efecto de fabrial único de rango 2
+Este fabrial produce una deslumbrante explosión de luz
+Drenador
+o sonido. Como 1, haz una prueba de Engaño contra la
+Efecto de fabrial único de rango 2
+Defensa cognitiva de un objetivo situado a 9 metros o me-
+Este fabrial drena la luz tormentosa de esferas, otros fa-
+nos. Si la superas, puedes gastar 1 carga para hacer que el
+briales e incluso Radiantes. Como 1, toca con este fabrial
+objetivo pierda 3 puntos de concentración. Si fallas, puedes
+a un objeto o personaje Investido o infuso. Si el fabrial no
+gastar 1 carga para hacer que pierda 1 punto de concentra-
+está completamente cargado, el objetivo pierde 1 punto de
+ción. Si este fabrial reduce los puntos de concentración del
+Investidura o 1 carga, y el fabrial obtiene 1 carga. Una vez
+objetivo a 0, este queda Desorientado hasta el final de tu
+que está completamente cargado, el fabrial puede vaciarse
+siguiente turno.
+con un diapasón, con un Radiante que recupera 1 punto de
+Cargas. Tiene 3 cargas.
+Investidura por carga, o permitiendo que la Investidura se
+C
+Inconveniente. La DJ puede gastar derivados del uso de
+desvanezca al cabo de 5 días.
+este fabrial para hacer que tú quedes Desorientado hasta
+Cargas. Tiene 5 cargas.
+el final de tu siguiente turno.
+Inconveniente. Mientras llevas este fabrial, cuando sufres
+O
+Mejora. Puedes gastar derivados del uso de este fabrial
+una Complicación en cualquier prueba que implica a
+para, además, infligir 1d6 de daño vital al objetivo.
+otro objeto o personaje Investido, la DJ puede gastar
+C
+para drenar 1 punto de Investidura de ese objeto o
+personaje.
+Mejora. Este fabrial drena 2 puntos de Investidura en
+lugar de 1.
+272 Capítulo 7: Objetos
+
+--- Página 277 ---
+Proyectil Vínculorial (uno mismo)
+Efecto de fabrial único de rango 2 Efecto de fabrial único de rango 1
+Este dispositivo experimental utiliza una novedosa com- Este fabrial te permite pegar pies o manos a superficies, tre-
+binación de elementos fabriales para lanzar un proyectil pando por casi cualquier lugar con facilidad. Como 0, gasta
+a una velocidad increíblemente alta. Gasta 1 carga para 1 carga para activarlo, lo que te otorga la habilidad de trepar
+usarlo como un arma a distancia [9/36] que usa la habilidad por cualquier superficie durante 1 ronda. Al trepar de esta
+Armamento ligero, tiene el rasgo Mano secundaria y causa manera no quedas Ralentizado, y puedes permanecer en el
+1d10 de daño por golpe. mismo lugar después de esa ronda sin gastar una carga adi-
+cional. Si el fabrial se queda sin cargas, te caes de la superfi-
+Cargas. Tiene 5 cargas.
+cie y sufres daño por la caída de la manera habitual.
+Inconveniente. Tiene el rasgo Cargada [1].
+Mejora. Puedes gastar una carga adicional para atacar a Cargas. Tiene 5 cargas.
+dos objetivos en lugar de uno. Inconveniente. Al trepar de esta manera quedas
+Ralentizado.
+Vidarial
+Mejora. Como 1, haz una prueba de Agilidad contra la
+Efecto de fabrial único de rango 2
+Defensa física de un objetivo en tu cercanía. En caso de
+impacto, gasta 1 carga para Inmovilizar al objetivo duran-
+Este fabrial sana heridas. Como 1, gasta 1 carga para cu-
+te 1 ronda.
+rarte a ti mismo o a un objetivo en tu cercanía. El objetivo
+recupera 1d6 de salud.
+Vínculorial (zona)
+Cargas. Tiene 3 cargas.
+Efecto de fabrial único de rango 1
+Inconveniente. Usar este fabrial te cuesta 2 en lugar de 1.
+Este fabrial hace que todo lo que está cerca se adhiera al
+Mejora. Puedes gastar 1 carga para eliminar una lesión del
+suelo. Como 1, gasta 1 carga para activarlo, lo que hace que
+objetivo (tú eliges si este efecto sustituye a la sanación
+todos los objetos y personajes (excepto tú) situados a 1,5 me-
+original, o si quieres gastar 1 carga adicional para obtener
+tros o menos queden inmovilizados. Hasta que se desactiva, el
+ambos efectos).
+fabrial gasta 1 carga al inicio de cada uno de tus turnos.
+Cargas. Tiene 3 cargas.
+Inconveniente. También quedas Inmovilizado por
+el fabrial.
+Mejora. El fabrial afecta a todo lo que se encuentra a 3
+metros de él.
+DOLORIALES
+T
+I
+A
+R
+T
+U
+D
+T
+N
+E
+C
+N
+I
+V
+Capítulo 7: Objetos 273
+
+--- Página 278 ---
+
+--- Página 279 ---
+CORE RULEBOOK VERSION NOI SREV K OOBEL UR ER OC
+capítulo 8
+Metas y Recompensas
+medida que tu personaje vive aventuras en
+Propósito
+Roshar, no solo creces subiendo de nivel (consul-
+Tu propósito es tu necesidad principal. No puedes evitar
+tar “Progreso de los personajes” en el capítulo 1),
+AA
+encarnarlo y actuar en consecuencia y, si lo alimentas, puede
+sino también cumpliendo metas. Al hacerlo, obtienes recom-
+convertirse en tu mayor fortaleza. ¿Qué es lo más impor-
+pensas que te otorgan objetos, relaciones o capacidades de
+tante e instintivo que quieres hacer con tu vida? ¿Salvar
+gran poder.
+personas? ¿Impartir justicia? ¿Hacer un descubrimiento
+Aunque todo el grupo puede estar trabajando para
+importante?
+lograr un objetivo más amplio, cada meta y su recompensa
+Elige un propósito que sea una fuerza impulsora constan-
+posterior son personales para ti y tu historia. Un personaje
+te en tu vida, no una meta concreta y alcanzable. Esto es in-
+podría estar tratando de obtener una hoja esquirlada en
+trínseco a tu personaje, completamente inmutable a menos
+un duelo, preferiblemente contra su rival más feroz. Otro
+que tu personaje atraviese una crisis importante o tenga una
+podría ser un Radiante que intenta encontrar las Palabras
+epifanía. Es probable que tu personaje no sea consciente de
+para jurar el Tercer Ideal de su orden. Otro podría estar
+este propósito, pero tú (como persona que juega) sí lo co-
+tratando de ganarse el favor del misterioso Thaidakar, líder
+noces, y puedes usar esa información para tomar muchas de
+de los Sangre Espectral.
+tus decisiones.
+Puedes elegir cualquier propósito, pero recuerda que
+Propósito y obstáculo
+estás contando una historia colaborativa con otras personas.
+Aunque puedes perseguir muchas metas diferentes a lo largo
+La historia se desarrollará mejor si tu personaje está motiva-
+de tus aventuras, siempre hay una fuerza impulsora que te
+do para emprender aventuras y permanecer con su equipo.
+empuja hacia adelante y una fuerza contra la que luchas.
+Ejemplos de propósitos
+Estas fuerzas están representadas por tu propósito, que im-
+He aquí algunos ejemplos de propósitos que pueden impul-
+pulsa y motiva tus acciones, y por tu obstáculo, que te pone
+sar tus aventuras en Roshar:
+en dificultades.
+Para algunas personas, el propósito y el obstáculo son
+Salvar a los demás. Sientes una necesidad acuciante de de-
+dos caras de la misma moneda. Piensa en quién eres en tu
+fender a quienes no pueden protegerse a sí mismos.
+mejor momento: ¿qué sucede si ese aspecto se lleva dema-
+Buscar la verdad. Te impulsa una curiosidad innata que
+siado lejos? Quizás te sientas impulsado a salvar a otros,
+puede saciarse, aunque nunca apagarse por completo.
+pero, mientras lo haces, ignoras tus propias necesidades y te
+Esforzarte por alcanzar nuevas cotas. Deseas descubrir
+agotas rápidamente. O puede que tu búsqueda de la verdad
+tus propios límites físicos o mentales y superarlos.
+te lleve a despreciar a aquellos que ven el mundo de manera
+Encontrar la conexión. Te defines por tus conexiones con
+distinta a la tuya.
+los demás y buscas intencionadamente a personas a las
+Tu propósito y tu obstáculo no te conducen directamente
+que cuidar y con las que rodearte.
+a las recompensas. Sin embargo, son la base de tu personali-
+Buscar justicia. En tu opinión, la injusticia es algo intole-
+dad y te ayudan a elegir qué metas quieres perseguir, lo cual,
+rable y aspiras a ver a quienes se aprovechan de los de-
+a su vez, desbloquea poderosas recompensas. Cuando elijas
+más ser reprendidos debidamente.
+tu propósito y obstáculo durante el paso 7 de la creación del
+Preservar la vida. Crees que toda vida tiene un valor
+personaje, ten en consideración las pautas que siguen.
+intrínseco y actúas para preservar la mayor cantidad de
+ella posible.
+“Así que hoy tus hombres y tú os sacrificasteis
+para comprarme dos mil seiscientas vidas
+E
+sin precio. Y todo lo que tuve que hacer para
+K
+O
+O
+reparar la deuda fue una sola espada sin
+R
+N
+A
+precio. Yo diría que es una ganga”.
+M
+N
+E
+D
+Capítulo 8: Metas y Recompensas 275
+
+--- Página 280 ---
+Obstáculo
+Un obstáculo se interpone de manera persistente en la in-
+tención de cumplir con tu propósito o perseguir tus metas.
+Podría tratarse de un rasgo personal que has mostrado toda
+la vida o de algo que surgió en tu pasado; sea como sea,
+las dificultades que representa son una parte importante
+de tu vida. ¿Qué obstáculo te impide alcanzar tu máximo
+potencial? ¿Eres impulsivo? ¿Codicioso? ¿Te obsesionas con
+tus errores?
+Al igual que tu propósito, tu obstáculo es inmutable. No
+te define y puedes aprender gradualmente a compensarlo y
+cultivar nuevas fortalezas mientras lo haces, pero siempre te
+influirá de alguna manera. Dado que este obstáculo será una
+gran parte del viaje de tu personaje, debe ser algo que tú
+(como persona que juega) quieres explorar durante el jue-
+go. A veces, tu personaje puede mostrar una gran mejora y
+luego cometer errores. El crecimiento personal no es lineal.
+Los retrocesos, las dudas sobre uno mismo, los errores de
+juicio y las esperanzas renovadas son los ingredientes de una
+narración convincente.
+Ejemplos de obstáculos
+He aquí algunos ejemplos de obstáculos que pueden desa-
+fiarte durante tus aventuras:
+Arrepentimiento profundo. Has hecho algo que te pesa
+mucho. Tal vez quieres poder cambiarlo, o tal vez sim-
+plemente te carcome la conciencia cuando tu mente
+está ociosa.
+Miedo específico. Tienes un miedo particular que vuelve
+sin que lo hayas pedido, independientemente de cuáles
+son tus logros.
+Rencor. Tiendes a guardar rencores mezquinos y a comu-
+nicarte a la defensiva. A veces, tu temperamento volátil
+hace que actúes impulsivamente.
+Inseguridad. Tienes problemas para creer en ti mismo y, a
+menudo, buscas refugio en situaciones en las que destacas.
+Desconfianza hacia los demás. Tienes problemas para
+confiar en otras personas. En el pasado, has alejado a los
+Cómo usar los propósitos y los obstáculos
+demás para evitar el riesgo de que te decepcionen o te
+traicionen.
+Los propósitos y los obstáculos no tienen reglas específicas,
+pero son fundamentales para tu personaje. A medida que te
+enfrentas a diferentes desafíos a lo largo del juego, tu perso-
+Metas
+naje es puesto a prueba. A menudo, lo que tú, como persona
+Una vez que sabes el propósito y el obstáculo de tu persona-
+que juega, ves como el enfoque “óptimo” es lo opuesto a lo
+je, estos pueden ayudarte a determinar las metas que per-
+que haría tu personaje para seguir su propósito, o quizá tu en-
+sigues. En este juego, las metas tienen dos propósitos: para
+foque podría verse bloqueado por su obstáculo.
+empezar, son objetivos concretos que tu personaje quiere
+En estos momentos, intenta ponerte en la piel de tu per-
+lograr. Además, también son un medio para seguir el desa-
+sonaje: acepta la elección menos óptima para ser más fiel a
+rrollo de personajes a lo largo de una historia a medida que
+quién es. En estos casos, la DJ a menudo te recompensará
+I
+R
+subiendo la apuesta por jugar siendo fiel a tu personaje en un
+el tuyo trata de alcanzar esas metas.
+A
+A
+momento crítico.
+S
+O
+K
+A
+H
+I
+T
+T
+N
+A
+276 Capítulo 8: Metas y Recompensas
+
+--- Página 281 ---
+Empiezas con una o dos metas y, a medida que el juego
+Ejemplos de metas
+avanza, puedes lograr más. En tu hoja de personaje, cada
+He aquí algunos ejemplos de metas con formas concretas de
+meta incluye tres casillas de hito, que representan tu pro-
+conseguirlas:
+greso hacia su finalización. De la DJ y de ti depende decidir
+Formar parte de la nobleza. Aspiras a la riqueza y el po-
+juntos cómo se considera que esa meta ha sido alcanzada.
+der de las casas nobles de Roshar. Estás decidido a unirte
+Cuando completas una meta, recibes una recompensa
+a sus filas.
+(consulta “Recompensas”, más adelante en este capítulo).
+Encontrar a una persona desaparecida. Estás buscando
+Completar una meta puede significar alcanzarla, pero tam-
+desesperadamente a alguien a quien conocías.
+bién puede significar dejarla atrás, descubrir algo que la
+Cumplir un juramento específico. Has jurado lograr
+reemplaza con una nueva, o lograr otra cosa que hace que
+un objetivo particular y conseguirlo es muy importan-
+tu personaje se dé cuenta de que es más importante que la
+te para ti.
+meta original.
+Saldar una deuda de gratitud. Sientes una gran respon-
+sabilidad hacia otra persona o grupo y deseas retornar su
+Creación de metas
+benevolencia.
+Puedes añadir una nueva meta a tu personaje en cualquier
+Obtener venganza. Estás buscando venganza contra una
+momento en el que aceptes una nueva oportunidad de cre-
+persona específica por alguna fechoría del pasado.
+cimiento o logro personal. La DJ puede sugerirte una nueva
+meta, puedes decidirla tú mismo o puede que un talento u
+Cómo hacer avanzar las metas
+otro efecto te otorguen una. En ese caso (incluso durante la
+Cuando tu personaje toma decisiones que ayudan a avanzar
+creación del personaje), colabora con la DJ para dar forma a
+en tu meta, la DJ te indicará que añadas un hito (colocando
+la meta y ten en cuenta las siguientes preguntas:
+una marca junto a la meta en tu hoja de personaje).
+Meta del personaje. ¿Cómo entiende tu personaje
+Por lo general, puedes avanzar en cada una de tus metas
+esta meta?
+una vez por sesión de juego, aproximadamente. En ocasio-
+Meta del jugador. ¿Qué quiero yo, la persona que juega,
+nes especialmente trascendentales, la DJ podría hacer que
+que mi personaje haga, aprenda o experimente al tratar
+avances una meta dos veces. Al final de cada sesión de juego,
+de lograr esta meta?
+si no has puesto una marca junto a una meta, considera si
+Hacer avanzar tu meta. ¿Cuáles son algunas formas con-
+tu personaje ha hecho algo para avanzar en la meta; si es
+cretas de progresar hacia esa meta?
+así, coméntalo con la DJ. También puedes usar los periodos
+Antes de decidir una meta (ver “Ejemplos de metas” a
+de reposo para perseguir metas (consulta “Reposo” en el
+continuación), háblalo con la DJ para asegurarte de que se
+capítulo 9).
+adapta bien a la historia compartida de tu campaña. Una vez
+Cómo aprovechar las metas
+que la DJ y tú os pongáis de acuerdo, anota la meta en el re-
+al máximo al jugar
+verso de la hoja de personaje; además, la DJ también debería
+Desde la perspectiva del jugador, las metas son una herra-
+registrarlo en sus notas, junto con cualquier sugerencia tuya
+mienta útil para decirle a la DJ el tipo de historias en las que
+sobre cómo se puede cumplir dicha meta.
+quieres que tu personaje participe. Las metas también son
+A medida que una campaña avanza, puedes concluir tus
+una forma de seguir el progreso de tu personaje a lo largo de
+metas existentes y no tener ninguna otra durante un breve
+una historia.
+periodo de tiempo (si encaja con la historia). Sin embargo,
+Intenta tomar la iniciativa en la consecución de metas. Si
+piensa siempre en una meta nueva y no dejes pasar demasia-
+ves una oportunidad de perseguir una de ellas, consúltalo
+do tiempo antes de empezar a intentar conseguirla.
+con la DJ, pero recuerda que hay que compartir el protago-
+Aunque la mayoría de los personajes trabajan activamen-
+nismo con los demás jugadores. Si tu personaje conoce la
+te para lograr sus metas, es posible que el tuyo no sea cons-
+meta de otro, puedes incluso ayudarlo a perseguirla.
+ciente de ella o no esté dispuesto a admitirla; por ejemplo,
+Por último, cada vez que marcas un hito, considera la
+tal vez esté cerca de jurar el Primer Ideal, aunque no se dé
+posibilidad de anotar lo sucedido en la sección “Notas” de
+cuenta. Puede que incluso quieras contar el relato trágico de
+la hoja de personaje, ya que te permitirá contemplar su arco
+alguien que nunca se da cuenta de todo su potencial y se ve
+argumental cuando finalmente logres la meta.
+empantanado por decisiones cada vez más terribles, aunque
+Es probable que no avances en las metas en todas las
+sería prudente considerar si jugar así sería una experiencia
+sesiones, pero si notas que no has progresado en una
+satisfactoria para ti (y para el resto de tus compañeros de
+meta en particular durante varias sesiones, habla con la
+juego). Si eliges una meta que crees que tu personaje nunca
+DJ para ver cómo se podría integrar en la historia más
+alcanzará, consulta “Consecución de metas” para obtener
+adelante o reelaborarla para que se adapte mejor a la
+pautas sobre cómo resolver esa tensión.
+narrativa en curso.
+Capítulo 8: Metas y Recompensas 277
+
+--- Página 282 ---
+recompensa (consulta la sección “Recompensas”, más aba-
+Cómo aprovechar las metas
+jo) y pasarás a otras metas. Esta es tu oportunidad de disfru-
+al máximo al dirigir
+tar de la emocionante recompensa que se ha ido forjando a
+Desde la perspectiva de la DJ, las metas son la manera en la
+medida que avanzabas en los hitos de tu meta.
+que tus jugadores te comunican qué quieren que sus perso-
+Tanto la DJ como tú debéis aportar ideas sobre cómo
+najes hagan durante el relato. En cada sesión, intenta dar a
+concluir la meta dentro de la historia, en función de los hi-
+cada personaje al menos una oportunidad de perseguir una
+tos que hayas logrado a lo largo del camino. Si la conclusión
+de sus metas.
+es principalmente interna a tu personaje, es posible que ten-
+Puedes hacer avanzar las metas durante la sesión o al
+gas más poder de decisión al respecto, mientras que si afecta
+finalizarla. El final de cada sesión de juego es un buen mo-
+significativamente al mundo del juego, la DJ podría tener
+mento para tener en cuenta qué han hecho los personajes. Si
+más poder de decisión. Sea como sea, esto siempre debería
+ha habido momentos relacionados con la meta de un perso-
+ser una conversación entre ambas partes, aunque será la DJ
+naje que te han llamado la atención, dile a ese jugador que
+quien decida cómo resolver cualquier duda.
+avance en la meta y hazle saber por qué.
+Concluir una meta no significa necesariamente que la
+Sugerir metas
+hayas alcanzado dentro de la narrativa. En lugar de concluir
+Como DJ, puede que tengas ideas sobre nuevas metas para
+una meta a través del éxito, es posible que crezcas como per-
+los personajes; no dudes en sugerirlas a los jugadores. En
+sonaje o incluso que la concluyas mediante el fracaso.
+especial, cuando un personaje no tiene una meta (porque ya
+Conclusión mediante el éxito
+ha completado una anterior), esto puede ayudar a empezar
+La forma más sencilla de concluir una meta es lográndola
+un nuevo arco narrativo y alentar al personaje a crecer en
+dentro del marco narrativo. Has hecho lo que te propusiste
+ciertas direcciones. Por ejemplo, después de salvar la vida de
+hacer. Tal vez te has vengado, redimido tu reputación man-
+un noble poderoso, puedes ofrecerle una meta para ganar-
+cillada o salvado la granja familiar. Independientemente
+se su confianza y protección como patrocinador (consulta
+de lo conseguido, disfruta de un momento de respiro, ce-
+“Recompensas” más adelante en este capítulo).
+lebra la victoria o, como mínimo, consigue pasar página.
+Si un jugador no quiere una meta que le ofreces, no hay
+Mañana tendrás que responder a la difícil pregunta de “¿y
+problema. Puede usarla como inspiración para una meta
+ahora, qué?”.
+distinta o sugerir algo de su propia cosecha. En última ins-
+tancia, es el jugador quien controla qué metas asume su per-
+Conclusión mediante el crecimiento
+sonaje (si es que tiene alguna), pero no tengas reparos en
+El éxito no siempre es la mejor forma de concluir una meta
+animarlo.
+a nivel narrativo. Es posible que hayas elegido intenciona-
+damente una meta imposible de conseguir, simplemente
+Metas de ideales para Radiantes
+para que tu personaje la explore dentro de la historia, o que
+decidas que triunfar no es la mejor opción en este momento.
+Para avanzar en una orden Radiante jurando uno de sus
+Tu personaje podría dejar atrás una meta al darse cuenta de
+Ideales, debes completar una meta (consulta “Juramento de
+que es dañina o insostenible. O podría determinar que dicha
+Ideales” en el capítulo 5). A diferencia de otras metas, estas
+meta no era más que una manifestación de otra motivación
+no las otorga la DJ, sino un talento que eliges. Cuando com-
+que aún no comprende del todo. Llegar a estas conmove-
+pletas una meta de Ideal, obtienes las poderosas capacidades
+de ese talento y el potencial para progresar aún más en tu
+doras conclusiones puede ser tan dramático como triunfar
+orden Radiante.
+y, sin duda, puede considerarse como el cumplimiento
+de una meta.
+Conclusión mediante el fracaso
+Conclusión de metas
+Tal vez parezca contradictorio que tu personaje también
+Cuando una de tus metas alcanza tres hitos (indicados con
+pueda concluir una meta fracasando en su empeño. A veces,
+marcas en las casillas), puedes informar a la DJ (ya sea en
+tanto en Roshar como en nuestro mundo, la gente fracasa en
+esa misma sesión o entre sesiones) que quieres concluir di-
+sus aspiraciones, pero el fracaso también puede ser un gran
+cha meta. No tienes que hacerlo inmediatamente después de
+maestro y un importante factor de motivación. Fracasar
+obtener tu tercera marca; no tengas reparos en pedirle a la
+definitivamente en una meta puede ayudar a dar forma a la
+DJ que espere a un momento dramático más apropiado.
+próxima, a centrar el crecimiento personal de tu personaje o
+Después de informar a la DJ que quieres concluir una
+a moldearlo de cualquier otra forma en que también lo hu-
+meta, habla con ella acerca de cómo tu personaje lo va a
+biera podido hacer el éxito. Piensa en cómo podría tu perso-
+hacer en el marco de la historia. Este es un esfuerzo colabo-
+naje crecer frente al fracaso y qué nueva meta podría elegir a
+rativo que debería proporcionar un clímax para el arco de tu
+partir de ahora.
+personaje. Una vez que se concluya una meta, recibirás una
+278 Capítulo 8: Metas y Recompensas
+
+--- Página 283 ---
+Recompensas espontáneas
+Consejo para la DJ: cuándo concluir una meta
+A discreción de la DJ, a veces se puede otorgar una
+Si estás dirigiendo y uno de tus jugadores quiere concluir una
+recompensa espontánea si ello tiene sentido dentro de la
+meta durante una sesión de juego, considera si dicha meta
+historia. Por ejemplo, los duelos en Alezkar suelen tener
+debe completarse en esta sesión o si necesitas más tiempo
+apuestas (como, por ejemplo, apuestas de esquirlas), y el
+para incorporar un momento dramático adecuado en el flujo
+ganador se lo lleva todo. Si ganas un duelo de este tipo,
+natural de la historia. En este último caso, haz que concluir
+es posible que te encuentres en posesión de una hoja
+la meta se convierta en una prioridad para la próxima sesión.
+esquirlada o una armadura esquirlada sin necesidad de
+A veces, es más satisfactorio a nivel dramático concluir una
+meta en ese mismo momento, mientras que otras, puede
+concluir una meta.
+resultar demasiado disruptivo para la historia actual. Como
+Sin embargo, si la DJ sabe de antemano que quieres
+siempre, aplica tu mejor criterio y no te sientas obligada a ra-
+ganar una esquirla en un duelo, es posible que quiera cola-
+lentizar o acelerar las cosas.
+borar contigo para establecer una meta con varios pasos a
+seguir (como encontrar un oponente, incitarlo a aceptar una
+apuesta arriesgada y luego ganar el propio duelo).
+Recompensas
+Las recompensas son los beneficios importantes que
+Conexiones
+un personaje recibe dentro de la historia. Pueden variar
+Muchas recompensas adoptan la forma de una conexión
+enormemente: algunas son regalos materiales, mientras
+con otro ser: un compañero fiel, un patrocinador servicial,
+que otras otorgan patrocinadores, aliados o incluso nuevas
+o incluso un spren con el que tienes un profundo vínculo
+capacidades Radiantes. Las recompensas se pueden otorgar
+espiritual. Puedes anotar cada una de estas recompensas en
+al concluir metas, como se explica antes en este capítulo,
+la sección “Conexiones” de la hoja de personaje, junto con
+pero la DJ también puede otorgarlas cuando un suceso
+cualquier otra conexión significativa establecida con otros
+narrativo específico genera, como resultado lógico, esa
+personajes durante tus aventuras.
+recompensa.
+Recompensas de meta
+Consejo para la DJ: ofrecer recompensas
+Cuando concluyes una meta, obtienes una recompensa
+significativas
+basada en tus actos mientras te esforzabas por alcanzarla.
+A veces, resulta obvio qué recompensa quiere un jugador para
+En algunos casos, la recompensa que recibes resulta obvia;
+su personaje, y es posible que ya lo haya discutido contigo. En
+si la meta era jurar un Ideal de los Caballeros Radiantes, tu
+estos casos, ofrecer una recompensa está bien.
+recompensa es pronunciar las Palabras y obtener nuevas ca-
+En otras ocasiones, es posible que quieras sorprender a un
+pacidades de tu talento de Ideal.
+jugador con una recompensa. A menos que estés segura de
+A veces, la recompensa solo está conectada con la con-
+que estará encantado con ella, ofrece opciones de dos cate-
+clusión de la meta de manera abstracta. Por ejemplo, si
+gorías diferentes. Esto garantiza que el jugador participa en
+las recompensas que obtiene su personaje, pero también te
+tu objetivo era recuperar una hoja esquirlada legendaria
+da a ti la oportunidad de ofrecer recompensas inesperadas.
+que uno de tus antepasados perdió en un duelo, es posible
+Cuanto más a menudo los personajes reciban recompensas
+que tu personaje experimente un conflicto interior cuando
+espontáneas (o esperen recibirlas), menos motivados pueden
+descubra la verdad que se esconde detrás de las hojas es-
+estar algunos jugadores para perseguir sus metas. Si sabes
+quirladas. Si ya no tiene sentido que tu personaje acepte la
+que un jugador quiere una determinada recompensa, puedes
+hoja, no pierdes tu oportunidad de obtener una recompensa;
+alentarlo a establecer una meta relacionada con ella.
+más bien, al concluir tu meta, es posible que obtengas un
+patrocinador poderoso que ha quedado impresionado con tu
+manera de actuar.
+En otros casos, una meta podría no tener asociada una
+“Ves las Conexiones que tiene toda
+recompensa obvia. Resolver un misterio, o lograr crecer a
+nivel personal, puede no traer consigo ninguna compensa-
+la gente: con otros, con spren, con
+ción material, pero la DJ puede usar estos momentos en la
+el tiempo y la realidad misma.
+historia para introducir una recompensa significativa para tu
+Todo está Conectado, Dalinar, por
+personaje.
+una inmensa red de interacciones,
+Incluso cuando una recompensa difiere de lo que tu per-
+sonaje esperaba, debería permitirte destacar su desarrollo y
+pasiones, pensamientos, destinos.
+crear oportunidades para perseguir metas futuras.
+Capítulo 8: Metas y Recompensas 279
+
+--- Página 284 ---
+manera que tiene sentido para ellos. Dependiendo del indi-
+Categorías de recompensa
+viduo, la lealtad de un compañero puede abarcar desde rea-
+Las recompensas podrán adoptar casi cualquier forma que
+lizar pequeñas tareas u obtener información hasta arriesgar
+la DJ y los jugadores elijan, pero la mayoría de ellas se po-
+su vida por ti. Un compañero puede ser una persona, un
+drán clasificar en una de las categorías que se enumeran a
+animal o, a discreción de la DJ, cualquier otro personaje. Si
+continuación. Cada una de ellas sugiere rangos recomenda-
+un compañero es un humano, un cantor u otro ser inteli-
+dos de personaje para varias recompensas.
+gente, debería ser un igual, aliado, contacto u otro individuo
+que tiene una relación equilibrada con tu personaje.
+Compañeros
+Actividades de compañero
+Los compañeros son PNJs dentro de la historia que están
+Un compañero podría viajar contigo si tiene sentido, pero
+dedicados a tu personaje de alguna manera. Siguen teniendo
+también podría vivir en un lugar concreto y simplemente
+sus propias vidas y motivaciones dentro del mundo, pero ge-
+estar disponible cuando le pides ayuda. Los compañeros
+neralmente actúan para ayudar a tu personaje de cualquier
+suelen tomar la iniciativa para ayudarte cuando resulta
+apropiado, pero dicha ayuda puede adoptar muchas formas,
+desde asistirte directamente hasta enviar cartas con informa-
+ción importante o adquirir suministros en tu nombre. Por
+ejemplo, un guardaespaldas o un escriba pueden quedarse
+a tu lado para brindarte ayuda, mientras que un agente en-
+cubierto puede operar lejos de ti, y solo enviar información
+vital a medida que la recibe. Un compañero cuyo vínculo
+contigo está impulsado más por su relación respecto a ti que
+por su empleo (un amigo, un interés romántico, un rival)
+puede perseguir sus propias motivaciones la mayor parte del
+tiempo, y luego ocasionalmente reunirse contigo y ayudarte
+cuando es narrativamente apropiado.
+Los compañeros en las escenas
+Tanto en combate como en otros tipos de escena, es la DJ
+quien controla a todos los compañeros, aunque estos sue-
+len escucharte si ello no entra en conflicto con objetivos
+más fundamentales (como, por ejemplo, la supervivencia).
+Cuando necesites características para un compañero, co-
+labora con la DJ para elegir un perfil de PNJ adecuado del
+apéndice “Compañeros animales” de este libro o del capítu-
+lo 8 de la Guía del mundo del Archivo de las Tormentas.
+La tabla Ejemplos de compañeros por rango sugiere ca-
+racterísticas de PNJ que la DJ podría usar para varios rangos
+de personaje, incluido el papel sugerido del compañero (ver
+“Configuración de las escenas de combate” en el capítulo
+13), ejemplos de perfiles, y bonificaciones que podrían obte-
+ner a medida que el grupo sube de nivel. Los perfiles dispo-
+nibles en el apéndice “Compañeros animales” de este libro
+están marcados con un asterisco (*); los demás perfiles se
+encuentran en el capítulo 8 de la Guía del mundo del Archivo
+de las Tormentas.
+Varios compañeros. En rangos superiores, puedes con-
+tar con más de un compañero a la vez, tal y como se sugiere
+en la columna “Papel y número” junto al tipo de PNJ.
+Bonificaciones de desarrollo. Si cualquiera de tus
+I
+R
+compañeros es de un rango inferior al tuyo, sus característi-
+A
+A
+S
+cas aumentan. Aplica las bonificaciones que se indican en la
+O
+K
+A
+columna “Bonificaciones de desarrollo” de la tabla. Esto se
+H
+I
+aplica no solo a los nuevos compañeros obtenidos, sino tam-
+T
+T
+N
+bién a los que ya tienes.
+A
+
+--- Página 285 ---
+Ejemplos de compañeros por rango
+Rango
+de PJ Papel y número Ejemplos de perfil de PNJ Bonificaciones de desarrollo
+1 1 Secuaz Sabueso-hacha*, chull*, soldado o cualquier —
+PNJ de rango 1 o inferior
+2 2 Secuaces o 1 Estándar Caballo*, guardia, ciudadano o cualquier PNJ Secuaz: +2 a todas las pruebas, +10 salud
+de rango 2 o inferior
+3 3 Secuaces o 1 Estándar Corcel ryshadio, Insomne o cualquier PNJ no Secuaz: +4 a todas las pruebas, +20 salud
+Jefe de rango 3 o inferior Estándar: +2 a todas las pruebas, +10 salud
+4 5 Secuaces o 2 Estándar o 1 Jefe Abismoide o cualquier PNJ de cualquier rango Secuaz: +6 a todas las pruebas, +40 salud
+Estándar: +4 a todas las pruebas, +20 salud
+*Consultar el apéndice “Compañeros animales”
+Por ejemplo, si tu compañero es un Secuaz de rango 1, Hay muchos otros animales que también son excelentes
+pero tú acabas de subir a rango 2, otórgale las bonificaciones compañeros, algunos por sus habilidades prácticas y otros
+indicadas en la fila rango 2 de la tabla. simplemente por su fiel compañía.
+Perfil. El apéndice “Compañeros animales” ofrece perfi-
+Ejemplo de compañero:
+les para varios compañeros animales, así como una guía para
+guardaespaldas
+personalizar el tuyo. En el rango 1, una bestia de carga típica
+Las habilidades de lucha son difíciles de adquirir, y es posi-
+podría ser un chull (ver el apéndice “Compañeros anima-
+ble que sea más adecuado confiar en un protector durante
+les”) que tira de un carro.
+los enfrentamientos físicos. Los guardaespaldas brindan
+En el rango 2, un personaje incluso podría ganarse la
+protección y vigilancia adicionales contra el peligro, incluso
+confianza de un corcel ryshadio (consulta el capítulo 8 de la
+a las personas más entrenadas en artes marciales.
+Guía del mundo del Archivo de las Tormentas).
+Perfil. En el rango 2, un guardaespaldas típico podría
+usar el conjunto de características de guardia.
+Fabriales y gemas
+Ejemplo de compañero: guía de alta calidad
+Un guía tiene conocimientos o experiencia especializados
+Como se describe en el capítulo 7, los fabriales son mecanis-
+de los que tú careces, especialmente sobre una región o un
+mos maravillosos creados con gemas y alimentados con luz
+tema poco conocido. Este compañero podría no viajar con el
+tormentosa. La tabla Ejemplos de recompensas de fabriales
+grupo todo el tiempo, pero sí aparecer cuando necesitas ayu-
+sugiere recompensas de gemas y fabriales adecuadas para
+da para resolver un problema que se ajusta a sus habilidades.
+personajes de cada rango. (Consulta el capítulo 7 para cono-
+Perfil. En el rango 1, un guía típico podría usar el con-
+cer las características de los fabriales y las reglas del uso de
+junto de características de experto.
+gemas para crearlos).
+Ejemplo de compañero: escriba
+Fabriales únicos como recompensas
+En algunas regiones (como Alezkar), la alfabetización es una
+En el caso de los fabriales únicos otorgados como recom-
+habilidad especializada y no todo el mundo sabe leer. Sin em-
+pensa, la DJ puede darte un fabrial completo, o puede dejar-
+bargo, para avanzar en la sociedad, es crucial tener acceso a
+te elegir el efecto y las mejoras mientras que ella selecciona
+alguien que sepa leer y escribir. Tu escriba puede ser una ami-
+los inconvenientes. A discreción de la DJ, también podría
+ga cercana, una empleada o formar parte de la familia; alguien
+ajustar el número de estos inconvenientes y mejoras.
+en quien confías. Al fin y al cabo, estás poniendo tu capacidad
+Gemas como recompensas
+de comunicarte con el mundo exterior en manos de tu escriba,
+Las gemas de la calidad necesaria para crear fabriales son
+confiando en que transmitirá los detalles con precisión.
+adquisiciones raras por sí mismas. En lugar de un fabrial
+Perfil. En el rango 1, una escriba típica podría usar el
+completo, la DJ podría ofrecerte una gema como recompen-
+conjunto de características de experto.
+sa, especialmente si quieres llevar a cabo tu propia manu-
+Ejemplo de compañero: animal
+factura de fabriales. Lo más habitual es que te otorgue una
+Los animales de carga y de montar son comunes en muchas
+gema de un rango coincidente con el tuyo, aunque siempre
+sociedades de Roshar, desde criaturas raras como los ágiles
+depende de lo que se ajuste más a la historia.
+caballos hasta animales más comunes como los lentos chulls.
+Los animales pueden resultar indispensables, ya que propor-
+cionan transporte y fuerza bruta.
+Capítulo 8: Metas y Recompensas 281
+
+--- Página 286 ---
+Ejemplos de recompensas de fabriales
+Rango
+de PJ Gema Fabrial existente Fabrial único (elige uno)
+1 Gema de Semiesquirla, repulsor, mol- Fabrial único de rango 1 con 1 inconveniente y 1 mejora
+rango 1 deador de almas (una Esencia)
+2 Gema de Gran arco, moldeador de Fabrial único de rango 1 con 1 mejora; o fabrial único de rango 2 con 1 inconveniente y 1 mejora
+rango 2 almas (dos Esencias)
+3 Gema de Moldeador de Almas Fabrial único de rango 1 con 2 mejoras; fabrial único de rango 2 con 1 mejora; o fabrial único de
+rango 3 (tres Esencias) rango 3 con 1 inconveniente y 1 mejora
+4 Gema de moldeador de almas Fabrial único de rango 1 con 3 mejoras; fabrial único de rango 2 con 2 mejoras; fabrial único de
+rango 4 (cuatro Esencias o más) rango 3 con 1 mejora; o fabrial único de rango 4 con 1 inconveniente y 1 mejora
+Ideales
+NAVANI KHOLIN
+Para obtener poderes Radiantes, debes atraer la atención de
+un spren y, en última instancia, pronunciar las Palabras de
+tu orden Radiante, afirmando tu alineación con sus Ideales.
+Como se describe en el capítulo 5, subes por el escalafón de
+tu orden al completar metas para jurar cada Ideal.
+Cuando eliges el talento principal Primer Ideal de un
+camino Radiante, obtienes inmediatamente una meta:
+“Pronunciar el Primer Ideal”. A diferencia de otras metas,
+no puedes establecer una meta para pronunciar un Ideal ex-
+cepto al elegir un talento que te la otorga.
+Cuando completas una meta de Ideal al pronunciar las
+Palabras de tu orden Radiante, obtienes inmediatamente la
+recompensa indicada en ese talento. Además, una vez que
+juras un Ideal, cumples los prerrequisitos para futuros talen-
+tos que requieren ese Ideal.
+Patrocinadores
+Los patrocinadores son PNJs dentro de la historia
+que confían en ti y, a cambio, te brindan apoyo mate-
+rial, orientación y recursos para llevar a cabo tus tareas.
+Generalmente, un patrocinador tiene acceso a recursos que
+tú no tienes, ya se trate de armas, riqueza, información, in-
+fluencia u otros activos.
+Expectativas de los patrocinadores
+El apoyo de un patrocinador también conlleva unas expec-
+tativas de que obtengas resultados. Por ejemplo, si un alto
+príncipe pone su autoridad a disposición de tus esfuerzos
+para exponer a un espía entre sus subordinados, espera que
+expongas al espía antes de que se pueda filtrar información
+sensible. Si no lo haces, el alto príncipe esperará que te
+expliques, y que demuestres que no eres un incompetente
+o indigno de recibir más apoyo. Después de repetidos fraca-
+sos, un alto príncipe podría reasignarte a una tarea menos
+atractiva.
+Tu patrocinador generalmente te permitirá acceder a
+R
+E
+G
+sus recursos siempre que persigas objetivos que estén ali-
+R
+E
+neados con los suyos. A medida que aumenta el rango de
+B
+E
+E
+tu personaje, tu patrocinador está dispuesto a brindarte
+S
+E
+más recursos.
+I
+R
+A
+M
+282 Capítulo 8: Metas y Recompensas
+
+--- Página 287 ---
+Cuanto más poderoso sea un patrocinador, más impre-
+Ejemplo de patrocinador:
+sionante será el apoyo que puede ofrecer, pero si aún no has
+Caballero Radiante
+demostrado tu valía, incluso el más poderoso de los altos
+Los Caballeros Radiantes son guerreros míticos de Roshar,
+príncipes podría no confiarte sus recursos más significativos.
+y en esta era de incertidumbre y tormentas devastadoras,
+su regreso es otra señal de la agitación que se avecina. Si
+Beneficios de patrocinadores
+superas tu inquietud y te unes a un miembro de las órdenes
+Si obtienes un patrocinador como recompensa, generalmen-
+Radiantes, podrías convertirte en un aliado cercano de este
+te te proporcionará dos beneficios. Cada uno de ellos otorga
+campeón. Además, a veces, aquellos cercanos a un Caballero
+una bonificación específica, como se describe en su entrada.
+Radiante comienzan a mostrar signos de su poder: lumi-
+Además, cuando te encuentres en una situación en la que
+niscencia misteriosa, recuperación milagrosa de heridas y
+el patrocinador o sus agentes tengan influencia, también
+capacidades aún más especializadas. Al convertirte en el
+podrían otorgaros a tus compañeros y a ti comodidades de
+escudero de un Radiante, das tu primer paso por un antiguo
+viaje (consulta “Viajes” en el capítulo 7), como se indica
+camino. Como aspirante, debes comenzar a tratar con los
+en la tabla Comodidades de patrocinador por rango. Sin
+Ideales de tu orden mientras aprendes a controlar tus nuevas
+embargo, no siempre tendrás acceso a dichas comodidades,
+capacidades.
+solamente en situaciones en las que tu patrocinador lo con-
+Escudero vinculado. Después de pasar un mes o
+sidere factible y apropiado.
+más con tu patrocinador, te conviertes en escudero de ese
+Esta sección presenta tres ejemplos de patrocinadores,
+Caballero Radiante (consulta “Escuderos” en el capítulo 5).
+pero puedes encontrar muchos más en el capítulo 5 de la
+Guía del mundo del Archivo de las Tormentas.
+Ejemplo de patrocinador:
+comerciante acaudalado
+Comodidades de patrocinador por rango
+El poder de la moneda es una fuerza a tener en cuenta
+Rango de PJ Comodidades
+en cualquier mundo, incluido Roshar. Desde los
+1 Viaje y alojamiento Confortable
+mercaderes thayleños que viajan en grandes barcos
+2 Viaje y alojamiento Lujoso
+hasta los principales comerciantes de las Islas Reshi, hay
+3 Viaje y alojamiento Aristocrático
+muchas personas influyentes cuya principal fuente de
+4 Viaje y alojamiento Aristocrático con comodidades
+poder son las sólidas finanzas, la perspicacia, o ambas. Sin
+personalizadas como, por ejemplo, un recadero local
+embargo, el respaldo de un individuo de esta clase suele ir
+acompañado de una expectativa de beneficios, ya sean en
+forma de ganancias, conexiones valiosas en nuevos lugares
+Ejemplo de patrocinador:
+o influencia política que se puede aprovechar para futuros
+alto príncipe alezi
+acuerdos comerciales.
+Como los señores de la guerra más poderosos que gobiernan
+Respaldo económico. Además de las comodidades,
+Alezkar, los altos príncipes tienen recursos que pocos ciuda-
+el comerciante está dispuesto a invertir en tus empresas.
+danos alcanzan a imaginar. Con el respaldo de un alto prín-
+Siempre que uno o más personajes jugadores emprendan
+cipe, habrá pocas ambiciones que no puedas perseguir.
+un plan con el permiso del comerciante que respalde sus
+Autoridad del alto príncipe. Además de las comodi-
+objetivos, el comerciante concederá al grupo un presupuesto
+dades, la autoridad del alto príncipe se extiende en parte a ti.
+para realizar las compras necesarias o asegurar servicios, en-
+En los lugares donde tiene influencia política, puedes invocar
+tre otros, como se indica en la tabla Respaldo económico. Si
+su patrocinio para obtener una ventaja en varias pruebas,
+varios personajes del grupo tienen el mismo patrocinador, el
+como se enumera, por rango, en la tabla Autoridad del
+grupo recibe el presupuesto solo una vez.
+alto príncipe.
+Sin embargo, cuando añades estas ventajas a una prueba,
+Respaldo económico
+la DJ puede gastar una Complicación para que tu uso del
+Rango de PJ Presupuesto
+nombre del patrocinador plantee otros desafíos, como atraer
+1 1000 mc
+la atención de sus muchos y poderosos enemigos.
+2 5000 mc
+Autoridad del alto príncipe
+3 10 000 mc
+Rango de PJ Pruebas Bonificación
+4 o más 50 000 o más mc
+1 Persuasión Una ventaja
+2 Intimidación, Persuasión Una ventaja
+3 Intimidación, Liderazgo, Dos ventajas
+Persuasión
+4 o más Engaño, Intimidación, Dos ventajas
+Liderazgo, Persuasión
+Capítulo 8: Metas y Recompensas 283
+
+--- Página 288 ---
+Esquirlas como recompensas
+Esquirlas
+Obtener una sola esquirla es una meta digna que puede
+A lo largo de la historia de Roshar, las esquirlas han sido
+requerir numerosas sesiones de juego para completarse,
+uno de los mayores símbolos y manifestaciones de poder.
+y llegar a adquirir tanto la armadura como la hoja
+Una vez vestido con una armadura esquirlada y empuñando
+podría llevar una campaña entera. La tabla Esquirlas por
+una hoja esquirlada, un guerrero mortal avanza por el cam-
+rango sugiere un rango mínimo para cada recompensa
+po de batalla como un gran héroe mitológico. Un solo sol-
+de esquirla.
+dado con armadura y espada puede acabar con formaciones
+Las hojas y armaduras esquirladas se detallan en las sec-
+enemigas, romper por sí solo posiciones reforzadas como
+ciones “Armas” y “Armaduras” del capítulo 7.
+fortalezas o enfrentarse a probabilidades insuperables, por lo
+que la mejor manera de matar a un portador de esquirlada
+Esquirlas por rango
+en el campo de batalla es con otro portador de esquirlada.
+Rango de PJ Esquirlas
+El corcel ryshadio, una raza legendaria de caballos lo
+1 —
+suficientemente poderosa como para llevar a un portador
+2 Hoja esquirlada
+de esquirlada con armadura, a veces recibe el nombre de
+3 Armadura esquirlada
+“tercera esquirla”. Para obtener información sobre cómo
+dar un ryshadio como recompensa, consulta la sección
+“Compañeros”, más arriba.
+Títulos
+Maneras de obtener esquirlas
+En las distintas sociedades de Roshar se pueden otorgar
+Además de cumplir su función como increíbles activos mi-
+diversos títulos de rango o nobleza como recompensa por
+litares, las hojas esquirladas y las armaduras esquirladas son
+las hazañas. En muchas sociedades, los títulos conllevan pri-
+excepcionalmente raras. No se pueden comprar solo con
+vilegios y responsabilidades políticas, propiedades y fincas,
+dinero, aunque a veces se intercambian para ayudar a sellar
+o incluso puestos formales en el ejército o el gobierno. La
+alianzas políticas (como matrimonios), para pagar deudas
+tabla Títulos por rango proporciona ejemplos de títulos y sus
+personales que no se pueden medir en marcos o para ter-
+beneficios.
+minar guerras antes de que empiecen. Las esquirlas son
+La autoridad y jurisdicción de un título dependen de
+escasas, incluso en Alezkar (que cuenta con una cantidad
+sus particularidades y su esfera de influencia. Por ejemplo,
+inusualmente alta de esquirlas en comparación con otros
+un personaje al que se le da un mando militar dispone de
+países). Un alto príncipe se consideraría afortunado de tener
+recursos muy diferentes a los de uno que dirige un grupo
+más de dos conjuntos de armadura esquirlada y un puñado
+delictivo, pero ambos cuentan con subordinados, posesiones
+de hojas. Sin embargo, algunos de los individuos más po-
+y responsabilidades que tanto sus superiores como sus su-
+derosos de Roshar tienen suficientes conjuntos completos
+bordinados esperarán que atiendan.
+para prestárselos a sus mejores vasallos o ciudadanos que los
+Además, a discreción de la DJ, ciertos títulos pueden
+necesitan para los duelos.
+otorgar una pericia de utilidad o cultural apropiadas. Un
+Cada hoja esquirlada y armadura esquirlada es única, y
+maestro espía puede adquirir pericia en Códigos secretos,
+cada una de ellas lleva consigo un legado histórico, contado
+mientras que un investigador puede adquirirla en un tipo
+a través de generaciones de generales, usurpadores y go-
+poco común de fabriales.
+bernantes. Algunas están relacionadas intrínsecamente con
+Ejemplo de título: capitán
+familias o grupos específicos, mientras que otras han pasado
+Un líder de una unidad militar en Alezkar normalmente
+por muchas manos a lo largo de los siglos y a través de cam-
+dirige un pelotón de cincuenta soldados. Este rol requiere
+pos de batalla lejanos. Un personaje jugador podría tener
+mantener el orden y la moral en el seno de la unidad, con-
+una conexión familiar con una hoja esquirlada específica si
+servarla en forma para el combate y entrenarla en nuevas
+fue utilizada por (o en contra de) sus antepasados.
+técnicas de batalla. Un capitán eficaz puede esperar la con-
+A veces, las esquirlas se pueden ganar en duelos, pero,
+fianza y la obediencia de sus tropas en el campo de batalla.
+por lo general, nadie que tenga una aceptará un duelo de
+Cuadro leal. Tienes cincuenta soldados bajo tu man-
+este tipo contra alguien que no se juegue su propia esquirla.
+do, aunque generalmente están demasiado ocupados con
+Esto hace que adquirir una esquirla sea extremadamente
+sus responsabilidades diarias como para ayudarte perso-
+difícil para cualquiera que no sea ya propietario de una. La
+nalmente (podrás encontrar aliados que probablemente
+costumbre dicta que cualquiera que mata a un portador de
+te acompañen en la sección “Compañeros”, más arriba).
+esquirlada en el campo de batalla gana sus esquirlas, pero,
+en realidad, llevar a cabo tal hazaña requiere una combina-
+ción de habilidad impecable y fortuna asombrosa. La ma-
+yoría de los que se enfrentan en combate a un portador de
+esquirlada simplemente mueren.
+284 Capítulo 8: Metas y Recompensas

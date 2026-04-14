@@ -2,6 +2,6 @@ namespace Messages.Notes.In;
 
 public class CreateNoteRequest
 {
-    public long ToUserId { get; set; }
+    public List<long> ToUserIds { get; set; } = [];
     public required string Content { get; set; }
 }
