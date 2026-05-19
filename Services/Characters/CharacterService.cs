@@ -43,10 +43,11 @@ public class CharacterService(CosmereContext db) : ICharacterService
         if (!isGm)
             query = query.Where(c => c.OwnerId == userId);
 
-        return await query.Select(c => MapToResponse(c)).ToListAsync();
+        var entities = await query.Include(c => c.Metas).ToListAsync();
+        return entities.Select(c => MapToResponse(c, new ContextoJuego())).ToList();
     }
 
-    public async Task<CharacterResponse> GetCharacterAsync(long characterId, long campaignId, long userId)
+    public async Task<CharacterResponse> GetCharacterAsync(long characterId, long campaignId, long userId, ContextoJuego ctx)
     {
         await EnsureMemberAsync(campaignId, userId);
         var isGm = await IsGmAsync(campaignId, userId);
@@ -59,7 +60,7 @@ public class CharacterService(CosmereContext db) : ICharacterService
         if (!isGm && character.OwnerId != userId)
             throw new UnauthorizedAccessException("You can only view your own character.");
 
-        return MapToResponse(character);
+        return MapToResponse(character, ctx);
     }
 
     public async Task<CharacterResponse> CreateCharacterAsync(long campaignId, CreateCharacterRequest request, long userId)
@@ -196,41 +197,123 @@ public class CharacterService(CosmereContext db) : ICharacterService
         c.EquippedArmor = r.Armor.Contains(r.EquippedArmor) ? r.EquippedArmor : string.Empty;
     }
 
-    internal static CharacterResponse MapToResponse(CharacterEntity c) => new()
+    // ── Helpers de cálculo de reservas ───────────────────────────────────────
+
+    private static List<StatLinea> BuildConcLineas(CharacterEntity c)
     {
-        Id = c.Id, CampaignId = c.CampaignId, OwnerId = c.OwnerId,
-        Name = c.Name, PlayerName = c.PlayerName,
-        Level = c.Level, Experience = c.Experience, CaminoHeroico = c.CaminoHeroico,
-        CaminoRadiante = c.CaminoRadiante, Ascendencia = c.Ascendencia,
-        Fuerza = c.Fuerza, Velocidad = c.Velocidad, Intelecto = c.Intelecto,
-        Voluntad = c.Voluntad, Discernimiento = c.Discernimiento, Presencia = c.Presencia,
-        MaxHealth = c.MaxHealth,
-        MaxConcentration = c.MaxConcentration,
-        MaxInvestiture = c.MaxInvestiture, Desvio = c.Desvio,
-        MarcosInfusas = c.MarcosInfusas, MarcosOpacas = c.MarcosOpacas,
-        Agilidad = c.Agilidad, ArmasLigeras = c.ArmasLigeras, ArmasPesadas = c.ArmasPesadas,
-        Atletismo = c.Atletismo, Hurto = c.Hurto, Sigilo = c.Sigilo, Deduccion = c.Deduccion,
-        Disciplina = c.Disciplina, Intimidacion = c.Intimidacion, Manufactura = c.Manufactura,
-        Medicina = c.Medicina, Conocimiento = c.Conocimiento, Engano = c.Engano,
-        Liderazgo = c.Liderazgo, Percepcion = c.Percepcion, Perspicacia = c.Perspicacia,
-        Persuasion = c.Persuasion, Supervivencia = c.Supervivencia,
-        HabilidadPersonalizada1 = c.HabilidadPersonalizada1, HabilidadPersonalizada1Valor = c.HabilidadPersonalizada1Valor, HabilidadPersonalizada1Atributo = c.HabilidadPersonalizada1Atributo,
-        HabilidadPersonalizada2 = c.HabilidadPersonalizada2, HabilidadPersonalizada2Valor = c.HabilidadPersonalizada2Valor, HabilidadPersonalizada2Atributo = c.HabilidadPersonalizada2Atributo,
-        HabilidadPersonalizada3 = c.HabilidadPersonalizada3, HabilidadPersonalizada3Valor = c.HabilidadPersonalizada3Valor, HabilidadPersonalizada3Atributo = c.HabilidadPersonalizada3Atributo,
-        HabilidadPersonalizada4 = c.HabilidadPersonalizada4, HabilidadPersonalizada4Valor = c.HabilidadPersonalizada4Valor, HabilidadPersonalizada4Atributo = c.HabilidadPersonalizada4Atributo,
-        HabilidadPersonalizada5 = c.HabilidadPersonalizada5, HabilidadPersonalizada5Valor = c.HabilidadPersonalizada5Valor, HabilidadPersonalizada5Atributo = c.HabilidadPersonalizada5Atributo,
-        HabilidadPersonalizada6 = c.HabilidadPersonalizada6, HabilidadPersonalizada6Valor = c.HabilidadPersonalizada6Valor, HabilidadPersonalizada6Atributo = c.HabilidadPersonalizada6Atributo,
-        Proposito = c.Proposito, Obstaculo = c.Obstaculo, Talentos = c.Talentos,
-        Metas = c.Metas.Select(m => new MetaResponse
+        var lineas = new List<StatLinea>
         {
-            Id = m.Id, CharacterId = m.CharacterId, Titulo = m.Titulo,
-            Descripcion = m.Descripcion, Hitos = m.Hitos, Estado = m.Estado,
-            TipoConclusion = m.TipoConclusion, NotasConclusion = m.NotasConclusion,
-            CreatedAt = m.CreatedAt,
-        }).ToList(),
-        Apariencia = c.Apariencia, Notas = c.Notas, Conexiones = c.Conexiones,
-        Weapons = c.Weapons, Armor = c.Armor, Spells = c.Spells, Equipment = c.Equipment,
-        EquippedArmor = c.EquippedArmor,
-        CreatedAt = c.CreatedAt, UpdatedAt = c.UpdatedAt
-    };
+            new() { Concepto = "Base",     Valor = 2 },
+            new() { Concepto = "Voluntad", Valor = c.Voluntad },
+        };
+        if (c.MaxConcentration > 0)
+            lineas.Add(new() { Concepto = "Bonus", Valor = c.MaxConcentration });
+        return lineas;
+    }
+
+    private static List<StatLinea> BuildInvLineas(CharacterEntity c)
+    {
+        // Personajes sin camino Radiante no tienen Investidura
+        if (string.IsNullOrEmpty(c.CaminoRadiante))
+            return [new() { Concepto = "Base", Valor = 0 }];
+
+        var atributo  = c.Discernimiento >= c.Presencia ? "Discernimiento" : "Presencia";
+        var valorAtrib = Math.Max(c.Discernimiento, c.Presencia);
+        var lineas = new List<StatLinea>
+        {
+            new() { Concepto = "Base",    Valor = 2 },
+            new() { Concepto = atributo,  Valor = valorAtrib },
+        };
+        if (c.MaxInvestiture > 0)
+            lineas.Add(new() { Concepto = "Bonus", Valor = c.MaxInvestiture });
+        return lineas;
+    }
+
+    private static List<string> ParseTalentos(string? raw)
+    {
+        if (string.IsNullOrWhiteSpace(raw)) return [];
+        try { return System.Text.Json.JsonSerializer.Deserialize<List<string>>(raw) ?? []; }
+        catch { return []; }
+    }
+
+    internal static CharacterResponse MapToResponse(CharacterEntity c, ContextoJuego? ctx = null)
+    {
+        ctx ??= new ContextoJuego();
+        var talentos = ParseTalentos(c.Talentos);
+
+        return new CharacterResponse
+        {
+            Id = c.Id, CampaignId = c.CampaignId, OwnerId = c.OwnerId,
+            Name = c.Name, PlayerName = c.PlayerName,
+            Level = c.Level, Experience = c.Experience, CaminoHeroico = c.CaminoHeroico,
+            CaminoRadiante = c.CaminoRadiante, Ascendencia = c.Ascendencia,
+            Fuerza = c.Fuerza, Velocidad = c.Velocidad, Intelecto = c.Intelecto,
+            Voluntad = c.Voluntad, Discernimiento = c.Discernimiento, Presencia = c.Presencia,
+            MaxHealth = c.MaxHealth, MaxConcentration = c.MaxConcentration,
+            MaxInvestiture = c.MaxInvestiture, Desvio = c.Desvio,
+            MarcosInfusas = c.MarcosInfusas, MarcosOpacas = c.MarcosOpacas,
+
+            // ── Stats calculadas ──────────────────────────────────────────────
+            Concentracion = TalentosReglas.Calcular(
+                StatAfectada.MaxConcentracion,
+                BuildConcLineas(c),
+                c, ctx, talentos),
+
+            DefensaFisica = TalentosReglas.Calcular(
+                StatAfectada.DefensaFisica,
+                [new() { Concepto = "Base", Valor = 10 }, new() { Concepto = "Fuerza", Valor = c.Fuerza }, new() { Concepto = "Velocidad", Valor = c.Velocidad }],
+                c, ctx, talentos),
+
+            DefensaCognitiva = TalentosReglas.Calcular(
+                StatAfectada.DefensaCognitiva,
+                [new() { Concepto = "Base", Valor = 10 }, new() { Concepto = "Intelecto", Valor = c.Intelecto }, new() { Concepto = "Voluntad", Valor = c.Voluntad }],
+                c, ctx, talentos),
+
+            DefensaEspiritual = TalentosReglas.Calcular(
+                StatAfectada.DefensaEspiritual,
+                [new() { Concepto = "Base", Valor = 10 }, new() { Concepto = "Discernimiento", Valor = c.Discernimiento }, new() { Concepto = "Presencia", Valor = c.Presencia }],
+                c, ctx, talentos),
+
+            Salud = TalentosReglas.Calcular(
+                StatAfectada.MaxSalud,
+                [new() { Concepto = "Base", Valor = c.MaxHealth }],
+                c, ctx, talentos),
+
+            Investidura = TalentosReglas.Calcular(
+                StatAfectada.MaxInvestidura,
+                BuildInvLineas(c),
+                c, ctx, talentos),
+
+            Movimiento = TalentosReglas.Calcular(
+                StatAfectada.Movimiento,
+                [new() { Concepto = $"Velocidad ({c.Velocidad})", Valor = TalentosReglas.MovimientoBase(c.Velocidad) }],
+                c, ctx, talentos, unidad: "m"),
+
+            // ── Resto de campos ───────────────────────────────────────────────
+            Agilidad = c.Agilidad, ArmasLigeras = c.ArmasLigeras, ArmasPesadas = c.ArmasPesadas,
+            Atletismo = c.Atletismo, Hurto = c.Hurto, Sigilo = c.Sigilo, Deduccion = c.Deduccion,
+            Disciplina = c.Disciplina, Intimidacion = c.Intimidacion, Manufactura = c.Manufactura,
+            Medicina = c.Medicina, Conocimiento = c.Conocimiento, Engano = c.Engano,
+            Liderazgo = c.Liderazgo, Percepcion = c.Percepcion, Perspicacia = c.Perspicacia,
+            Persuasion = c.Persuasion, Supervivencia = c.Supervivencia,
+            HabilidadPersonalizada1 = c.HabilidadPersonalizada1, HabilidadPersonalizada1Valor = c.HabilidadPersonalizada1Valor, HabilidadPersonalizada1Atributo = c.HabilidadPersonalizada1Atributo,
+            HabilidadPersonalizada2 = c.HabilidadPersonalizada2, HabilidadPersonalizada2Valor = c.HabilidadPersonalizada2Valor, HabilidadPersonalizada2Atributo = c.HabilidadPersonalizada2Atributo,
+            HabilidadPersonalizada3 = c.HabilidadPersonalizada3, HabilidadPersonalizada3Valor = c.HabilidadPersonalizada3Valor, HabilidadPersonalizada3Atributo = c.HabilidadPersonalizada3Atributo,
+            HabilidadPersonalizada4 = c.HabilidadPersonalizada4, HabilidadPersonalizada4Valor = c.HabilidadPersonalizada4Valor, HabilidadPersonalizada4Atributo = c.HabilidadPersonalizada4Atributo,
+            HabilidadPersonalizada5 = c.HabilidadPersonalizada5, HabilidadPersonalizada5Valor = c.HabilidadPersonalizada5Valor, HabilidadPersonalizada5Atributo = c.HabilidadPersonalizada5Atributo,
+            HabilidadPersonalizada6 = c.HabilidadPersonalizada6, HabilidadPersonalizada6Valor = c.HabilidadPersonalizada6Valor, HabilidadPersonalizada6Atributo = c.HabilidadPersonalizada6Atributo,
+            Proposito = c.Proposito, Obstaculo = c.Obstaculo, Talentos = c.Talentos,
+            Metas = c.Metas.Select(m => new MetaResponse
+            {
+                Id = m.Id, CharacterId = m.CharacterId, Titulo = m.Titulo,
+                Descripcion = m.Descripcion, Hitos = m.Hitos, Estado = m.Estado,
+                TipoConclusion = m.TipoConclusion, NotasConclusion = m.NotasConclusion,
+                CreatedAt = m.CreatedAt,
+            }).ToList(),
+            Apariencia = c.Apariencia, Notas = c.Notas, Conexiones = c.Conexiones,
+            Weapons = c.Weapons, Armor = c.Armor, Spells = c.Spells, Equipment = c.Equipment,
+            EquippedArmor = c.EquippedArmor,
+            CreatedAt = c.CreatedAt, UpdatedAt = c.UpdatedAt,
+        };
+    }
 }

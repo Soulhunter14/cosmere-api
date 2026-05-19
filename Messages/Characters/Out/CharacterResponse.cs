@@ -22,10 +22,19 @@ public class CharacterResponse
     public int Discernimiento { get; set; }
     public int Presencia { get; set; }
 
-    public int MaxHealth { get; set; }
-    public int MaxConcentration { get; set; }
-    public int MaxInvestiture { get; set; }
+    public int MaxHealth { get; set; }       // base editable
+    public int MaxConcentration { get; set; } // campo heredado, no se usa en display
+    public int MaxInvestiture { get; set; }   // base editable
     public int Desvio { get; set; }
+
+    // Stats calculadas por el motor de reglas
+    public StatDesglose Concentracion    { get; set; } = new();
+    public StatDesglose DefensaFisica    { get; set; } = new();
+    public StatDesglose DefensaCognitiva { get; set; } = new();
+    public StatDesglose DefensaEspiritual { get; set; } = new();
+    public StatDesglose Salud            { get; set; } = new();
+    public StatDesglose Investidura      { get; set; } = new();
+    public StatDesglose Movimiento       { get; set; } = new();
     public int MarcosInfusas { get; set; }
     public int MarcosOpacas { get; set; }
 

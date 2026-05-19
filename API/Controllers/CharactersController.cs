@@ -17,8 +17,13 @@ public class CharactersController(ICharacterService characterService) : Controll
         => Ok(await characterService.GetCharactersAsync(campaignId, JwtHelper.GetUserId(User)));
 
     [HttpGet("{characterId:long}")]
-    public async Task<ActionResult<CharacterResponse>> GetCharacter(long campaignId, long characterId)
-        => Ok(await characterService.GetCharacterAsync(characterId, campaignId, JwtHelper.GetUserId(User)));
+    public async Task<ActionResult<CharacterResponse>> GetCharacter(
+        long campaignId,
+        long characterId,
+        [FromQuery] bool enCombate = false)
+        => Ok(await characterService.GetCharacterAsync(
+            characterId, campaignId, JwtHelper.GetUserId(User),
+            new ContextoJuego { EnCombate = enCombate }));
 
     [HttpPost]
     public async Task<ActionResult<CharacterResponse>> CreateCharacter(long campaignId, [FromBody] CreateCharacterRequest request)
