@@ -229,6 +229,32 @@ public class CharacterService(CosmereContext db) : ICharacterService
         return lineas;
     }
 
+    /// <summary>
+    /// Salud máxima según tabla de progreso (cap. 1, p. 29).
+    /// Nivel 1: 10 + FUE. Rangos 2–5: +5/nivel. Rango 6–10: +4/nivel + FUE.
+    /// Rango 11–15: +3/nivel + FUE. Rango 16–20: +2/nivel + FUE. 21+: +1/nivel.
+    /// </summary>
+    private static List<StatLinea> BuildSaludLineas(CharacterEntity c)
+    {
+        int level  = c.Level;
+        int fuerza = c.Fuerza;
+
+        int flat     = 10;
+        int fueCount = 1;
+
+        if (level >= 2)  flat += (Math.Min(level, 5)  - 1) * 5;
+        if (level >= 6)  { flat += (Math.Min(level, 10) - 5)  * 4; fueCount++; }
+        if (level >= 11) { flat += (Math.Min(level, 15) - 10) * 3; fueCount++; }
+        if (level >= 16) { flat += (Math.Min(level, 20) - 15) * 2; fueCount++; }
+        if (level >= 21) flat += level - 20;
+
+        return
+        [
+            new() { Concepto = "Base",   Valor = flat },
+            new() { Concepto = fueCount > 1 ? $"Fuerza ×{fueCount}" : "Fuerza", Valor = fueCount * fuerza },
+        ];
+    }
+
     private static List<string> ParseTalentos(string? raw)
     {
         if (string.IsNullOrWhiteSpace(raw)) return [];
@@ -276,7 +302,7 @@ public class CharacterService(CosmereContext db) : ICharacterService
 
             Salud = TalentosReglas.Calcular(
                 StatAfectada.MaxSalud,
-                [new() { Concepto = "Base", Valor = c.MaxHealth }],
+                BuildSaludLineas(c),
                 c, ctx, talentos),
 
             Investidura = TalentosReglas.Calcular(
