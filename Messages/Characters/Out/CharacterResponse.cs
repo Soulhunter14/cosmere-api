@@ -23,8 +23,12 @@ public class CharacterResponse
     public int Presencia { get; set; }
 
     public int MaxHealth { get; set; }       // base editable
-    public int MaxConcentration { get; set; } // campo heredado, no se usa en display
-    public int MaxInvestiture { get; set; }   // base editable
+    /// <obsolete>Bonus manual eliminado. Concentración se calcula como 2 + VOL + talentos.</obsolete>
+    [Obsolete("Bonus manual eliminado. Concentración se calcula como 2 + VOL + talentos.")]
+    public int MaxConcentration { get; set; }
+    /// <obsolete>Bonus manual eliminado. Investidura se calcula como 2 + max(DIS,PRE) + talentos.</obsolete>
+    [Obsolete("Bonus manual eliminado. Investidura se calcula como 2 + max(DIS,PRE) + talentos.")]
+    public int MaxInvestiture { get; set; }
     public int Desvio { get; set; }
 
     // Stats calculadas por el motor de reglas

@@ -5,6 +5,7 @@ using Services.Catalog;
 using Services.Characters;
 using Services.GlobalNpcs;
 using Services.NpcNotes;
+using Services.Diary;
 using Services.LockedDays;
 using Services.Metas;
 using Services.Notes;
@@ -27,6 +28,7 @@ public static class Bootstrap
         services.AddScoped<INoteService, NoteService>();
         services.AddScoped<IMetaService, MetaService>();
         services.AddScoped<ILockedDayService, LockedDayService>();
+        services.AddScoped<IDiaryService, DiaryService>();
         return services;
     }
 }

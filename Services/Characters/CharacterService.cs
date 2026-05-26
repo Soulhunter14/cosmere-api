@@ -199,34 +199,27 @@ public class CharacterService(CosmereContext db) : ICharacterService
 
     // ── Helpers de cálculo de reservas ───────────────────────────────────────
 
-    private static List<StatLinea> BuildConcLineas(CharacterEntity c)
-    {
-        var lineas = new List<StatLinea>
-        {
-            new() { Concepto = "Base",     Valor = 2 },
-            new() { Concepto = "Voluntad", Valor = c.Voluntad },
-        };
-        if (c.MaxConcentration > 0)
-            lineas.Add(new() { Concepto = "Bonus", Valor = c.MaxConcentration });
-        return lineas;
-    }
+    // MaxConcentration y MaxInvestiture (bonus manuales) ya no se usan en el cálculo.
+    // Los campos se mantienen en BD por compatibilidad pero están deprecados.
+
+    private static List<StatLinea> BuildConcLineas(CharacterEntity c) =>
+    [
+        new() { Concepto = "Base",     Valor = 2 },
+        new() { Concepto = "Voluntad", Valor = c.Voluntad },
+    ];
 
     private static List<StatLinea> BuildInvLineas(CharacterEntity c)
     {
-        // Personajes sin camino Radiante no tienen Investidura
         if (string.IsNullOrEmpty(c.CaminoRadiante))
             return [new() { Concepto = "Base", Valor = 0 }];
 
-        var atributo  = c.Discernimiento >= c.Presencia ? "Discernimiento" : "Presencia";
+        var atributo   = c.Discernimiento >= c.Presencia ? "Discernimiento" : "Presencia";
         var valorAtrib = Math.Max(c.Discernimiento, c.Presencia);
-        var lineas = new List<StatLinea>
-        {
-            new() { Concepto = "Base",    Valor = 2 },
-            new() { Concepto = atributo,  Valor = valorAtrib },
-        };
-        if (c.MaxInvestiture > 0)
-            lineas.Add(new() { Concepto = "Bonus", Valor = c.MaxInvestiture });
-        return lineas;
+        return
+        [
+            new() { Concepto = "Base",   Valor = 2 },
+            new() { Concepto = atributo, Valor = valorAtrib },
+        ];
     }
 
     /// <summary>
@@ -275,8 +268,12 @@ public class CharacterService(CosmereContext db) : ICharacterService
             CaminoRadiante = c.CaminoRadiante, Ascendencia = c.Ascendencia,
             Fuerza = c.Fuerza, Velocidad = c.Velocidad, Intelecto = c.Intelecto,
             Voluntad = c.Voluntad, Discernimiento = c.Discernimiento, Presencia = c.Presencia,
-            MaxHealth = c.MaxHealth, MaxConcentration = c.MaxConcentration,
-            MaxInvestiture = c.MaxInvestiture, Desvio = c.Desvio,
+            MaxHealth = c.MaxHealth,
+#pragma warning disable CS0618 // campos deprecados — mantenidos por compatibilidad
+            MaxConcentration = c.MaxConcentration,
+            MaxInvestiture   = c.MaxInvestiture,
+#pragma warning restore CS0618
+            Desvio = c.Desvio,
             MarcosInfusas = c.MarcosInfusas, MarcosOpacas = c.MarcosOpacas,
 
             // ── Stats calculadas ──────────────────────────────────────────────

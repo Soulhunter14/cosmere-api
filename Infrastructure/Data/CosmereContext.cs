@@ -22,6 +22,7 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
     public DbSet<GearItemEntity> GearItems { get; set; }
     public DbSet<CatalogOptionEntity> CatalogOptions { get; set; }
     public DbSet<LockedDayEntity> LockedDays { get; set; }
+    public DbSet<DiaryEntryEntity> DiaryEntries { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -182,6 +183,21 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
         // One lock per user per date per campaign
         modelBuilder.Entity<LockedDayEntity>()
             .HasIndex(l => new { l.CampaignId, l.UserId, l.Date })
+            .IsUnique();
+
+        // Campaign → DiaryEntries
+        modelBuilder.Entity<DiaryEntryEntity>()
+            .HasOne(d => d.Campaign)
+            .WithMany()
+            .HasForeignKey(d => d.CampaignId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<DiaryEntryEntity>()
+            .HasIndex(d => new { d.CampaignId, d.Number })
+            .IsUnique();
+
+        modelBuilder.Entity<DiaryEntryEntity>()
+            .HasIndex(d => new { d.CampaignId, d.Slug })
             .IsUnique();
     }
 }
