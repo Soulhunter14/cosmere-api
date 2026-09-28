@@ -23,6 +23,7 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
     public DbSet<CatalogOptionEntity> CatalogOptions { get; set; }
     public DbSet<LockedDayEntity> LockedDays { get; set; }
     public DbSet<DiaryEntryEntity> DiaryEntries { get; set; }
+    public DbSet<DiceRollEntity> DiceRolls { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -199,5 +200,15 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
         modelBuilder.Entity<DiaryEntryEntity>()
             .HasIndex(d => new { d.CampaignId, d.Slug })
             .IsUnique();
+
+        // Campaign → DiceRolls
+        modelBuilder.Entity<DiceRollEntity>()
+            .HasOne(r => r.Campaign)
+            .WithMany()
+            .HasForeignKey(r => r.CampaignId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<DiceRollEntity>()
+            .HasIndex(r => new { r.CampaignId, r.CreatedAt });
     }
 }
