@@ -173,6 +173,7 @@ public class CharacterService(CosmereContext db) : ICharacterService
     {
         c.Name = r.Name; c.PlayerName = r.PlayerName; c.Level = r.Level; c.Experience = r.Experience;
         c.CaminoHeroico = r.CaminoHeroico; c.CaminoRadiante = r.CaminoRadiante; c.Ascendencia = r.Ascendencia;
+        c.IdealesJurados = r.IdealesJurados;
         c.Fuerza = r.Fuerza; c.Velocidad = r.Velocidad; c.Intelecto = r.Intelecto;
         c.Voluntad = r.Voluntad; c.Discernimiento = r.Discernimiento; c.Presencia = r.Presencia;
         c.MaxHealth = r.MaxHealth;
@@ -265,7 +266,7 @@ public class CharacterService(CosmereContext db) : ICharacterService
             Id = c.Id, CampaignId = c.CampaignId, OwnerId = c.OwnerId,
             Name = c.Name, PlayerName = c.PlayerName,
             Level = c.Level, Experience = c.Experience, CaminoHeroico = c.CaminoHeroico,
-            CaminoRadiante = c.CaminoRadiante, Ascendencia = c.Ascendencia,
+            CaminoRadiante = c.CaminoRadiante, Ascendencia = c.Ascendencia, IdealesJurados = c.IdealesJurados,
             Fuerza = c.Fuerza, Velocidad = c.Velocidad, Intelecto = c.Intelecto,
             Voluntad = c.Voluntad, Discernimiento = c.Discernimiento, Presencia = c.Presencia,
             MaxHealth = c.MaxHealth,

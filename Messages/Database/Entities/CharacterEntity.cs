@@ -18,6 +18,7 @@ public class CharacterEntity
     public string CaminoHeroico { get; set; } = string.Empty;
     public string CaminoRadiante { get; set; } = string.Empty;
     public string Ascendencia { get; set; } = string.Empty;
+    public int IdealesJurados { get; set; } = 0;
 
     // Core Attributes (0-5)
     public int Fuerza { get; set; } = 0;

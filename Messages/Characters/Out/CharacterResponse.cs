@@ -14,6 +14,7 @@ public class CharacterResponse
     public string CaminoHeroico { get; set; } = string.Empty;
     public string CaminoRadiante { get; set; } = string.Empty;
     public string Ascendencia { get; set; } = string.Empty;
+    public int IdealesJurados { get; set; }
 
     public int Fuerza { get; set; }
     public int Velocidad { get; set; }

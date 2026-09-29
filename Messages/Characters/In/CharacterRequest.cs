@@ -25,6 +25,7 @@ public class UpdateCharacterRequest
     public string CaminoHeroico { get; set; } = string.Empty;
     public string CaminoRadiante { get; set; } = string.Empty;
     public string Ascendencia { get; set; } = string.Empty;
+    public int IdealesJurados { get; set; }
 
     // Attributes
     public int Fuerza { get; set; }
