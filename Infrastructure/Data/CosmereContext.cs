@@ -179,6 +179,10 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
         modelBuilder.Entity<CatalogOptionEntity>()
             .HasIndex(o => new { o.World, o.Category });
 
+        // Global NPC world filter (M5, AddWorldToGlobalNpcs): the list is filtered by the world of the campaign.
+        modelBuilder.Entity<GlobalNpcEntity>()
+            .HasIndex(n => n.World);
+
         // Campaign → LockedDays
         modelBuilder.Entity<LockedDayEntity>()
             .HasOne(l => l.Campaign)
@@ -242,5 +246,8 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
         modelBuilder.Entity<ArmorCatalogEntity>().Property(a => a.World).HasDefaultValue(WorldIds.Stormlight);
         modelBuilder.Entity<GearItemEntity>().Property(g => g.World).HasDefaultValue(WorldIds.Stormlight);
         modelBuilder.Entity<CatalogOptionEntity>().Property(o => o.World).HasDefaultValue(WorldIds.Stormlight);
+
+        // Global NPCs (M5, AddWorldToGlobalNpcs): the adversaries already stored (Caminapiedras) stay on Stormlight.
+        modelBuilder.Entity<GlobalNpcEntity>().Property(n => n.World).HasDefaultValue(WorldIds.Stormlight);
     }
 }

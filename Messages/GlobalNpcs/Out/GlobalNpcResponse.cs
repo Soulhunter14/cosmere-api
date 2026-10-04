@@ -1,3 +1,5 @@
+using Messages.Worlds;
+
 namespace Messages.GlobalNpcs.Out;
 
 public class GlobalNpcResponse
@@ -41,4 +43,5 @@ public class GlobalNpcResponse
     public string? ImageUrl { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
+    public string World { get; set; } = WorldIds.Stormlight;
 }
