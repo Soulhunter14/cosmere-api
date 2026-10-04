@@ -97,6 +97,17 @@ public class CharacterResponse
 
     public List<MetaResponse> Metas { get; set; } = [];
 
+    // Nacidos de la bruma. En Stormlight: "", "", [], {}, [], {} y {} (o el bono de forma de cantor en BonosAtributos, desde T12).
+    public string CaminoMetal { get; set; } = string.Empty;
+    public string CaminoInicial { get; set; } = string.Empty;
+    public List<PoderPersonaje> Poderes { get; set; } = [];
+    public Dictionary<string, decimal> Recursos { get; set; } = new();
+    public List<string> Bendiciones { get; set; } = [];
+    /// <summary>Derivados propios del mundo (<c>IWorldRules.Derivar</c>, desde T12): <c>alomancia.limite</c>, <c>poder.cobre.cargasMax</c>…</summary>
+    public Dictionary<string, StatDesglose> DerivadosSet { get; set; } = new();
+    /// <summary>Bonos de atributo sin ceros (claves <c>fuerza</c> … <c>presencia</c>; <c>IWorldRules.BonosAtributos</c>, desde T12).</summary>
+    public Dictionary<string, int> BonosAtributos { get; set; } = new();
+
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
 }

@@ -20,6 +20,13 @@ public class CharacterEntity
     public string Ascendencia { get; set; } = string.Empty;
     public int IdealesJurados { get; set; } = 0;
 
+    // Nacidos de la bruma (en Stormlight siempre vacíos). Defaults de BD declarados en CosmereContext.
+    public string CaminoMetal { get; set; } = string.Empty;
+    public string CaminoInicial { get; set; } = string.Empty;   // "" | "heroico" | "metal"
+    public string Poderes { get; set; } = "[]";                 // JSON (camelCase) de List<PoderPersonaje>
+    public string Recursos { get; set; } = "{}";                // JSON de Dictionary<string, decimal>
+    public List<string> Bendiciones { get; set; } = [];         // ids de Bendición kandra
+
     // Core Attributes (0-5)
     public int Fuerza { get; set; } = 0;
     public int Velocidad { get; set; } = 0;

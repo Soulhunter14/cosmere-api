@@ -218,5 +218,12 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
         modelBuilder.Entity<CampaignEntity>()
             .Property(c => c.World)
             .HasDefaultValue(WorldIds.Stormlight);
+
+        // Nacidos de la bruma (M2, AddCharacterMistbornFields): existing characters get empty metalborn data.
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.CaminoMetal).HasDefaultValue("");
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.CaminoInicial).HasDefaultValue("");
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.Poderes).HasDefaultValue("[]");
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.Recursos).HasDefaultValue("{}");
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.Bendiciones).HasDefaultValueSql("'{}'");
     }
 }
