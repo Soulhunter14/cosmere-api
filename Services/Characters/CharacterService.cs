@@ -57,6 +57,10 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
                 throw new KeyNotFoundException("Assigned player is not a campaign member.");
         }
 
+        // Camino inicial coherente con los caminos que llegan (§5.2, P6): se normaliza antes de validar, no se rechaza.
+        request.CaminoMetal ??= string.Empty;
+        request.CaminoInicial = NormalizarCaminoInicial(request.CaminoInicial, request.CaminoMetal, request.CaminoHeroico);
+
         world.ValidarIdentidad(new IdentidadPersonaje(
             request.CaminoHeroico, request.CaminoRadiante, request.CaminoMetal, request.CaminoInicial, request.Ascendencia,
             [], [], new Dictionary<string, decimal>()));
@@ -100,6 +104,11 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             request.CaminoHeroico = character.CaminoHeroico;
             world.RestringirCambiosNoGm(request, character);
         }
+
+        // Camino inicial coherente con los caminos efectivos (§5.2, P6): si el GM borra el camino del que partía, pasa al otro
+        // camino o a "" en lugar de dejar al personaje con un 400 permanente. El servidor no toca Talentos.
+        request.CaminoInicial = NormalizarCaminoInicial(
+            request.CaminoInicial ?? character.CaminoInicial, request.CaminoMetal ?? character.CaminoMetal, request.CaminoHeroico);
 
         // Identidad efectiva (lo que llega o, si es null, lo guardado), con la lista de poderes ya fusionada (§5.3).
         var poderes = CharacterJson.FusionarPoderes(CharacterJson.ParsePoderes(character.Poderes), request.Poderes);
@@ -175,6 +184,21 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             .Where(c => c.Id == campaignId)
             .Select(c => c.World)
             .FirstOrDefaultAsync());
+
+    /// <summary>
+    /// <c>CaminoInicial</c> coherente con los caminos (§5.2, P6): <c>heroico</c> sin camino heroico pasa a <c>metal</c> si hay
+    /// camino de nacido del metal (o a <c>""</c>); <c>metal</c> sin camino de nacido del metal pasa a <c>heroico</c> si hay
+    /// camino heroico (o a <c>""</c>). Los valores fuera de dominio los rechaza después la validación del mundo.
+    /// </summary>
+    private static string NormalizarCaminoInicial(string? caminoInicial, string? caminoMetal, string? caminoHeroico)
+    {
+        var ci = caminoInicial ?? string.Empty;
+        var cm = caminoMetal ?? string.Empty;
+        var ch = caminoHeroico ?? string.Empty;
+        if (ci == "heroico" && ch == "") ci = cm != "" ? "metal" : "";
+        if (ci == "metal" && cm == "") ci = ch != "" ? "heroico" : "";
+        return ci;
+    }
 
     private static void ApplyUpdate(CharacterEntity c, UpdateCharacterRequest r)
     {
@@ -299,18 +323,24 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
     /// Desvío efectivo. El desvío de una forma de cantor «no se acumula al de las armaduras … elige qué valor vas a
     /// usar» (Manual pp. 33–37 del libro), así que se toma el mayor y el otro queda como línea informativa.
     /// Con <paramref name="acumula"/> (un mundo cuyo bono de desvío sí se acumula a la armadura) se suman los dos.
+    /// Con el talento kandra Forma natural (<paramref name="talentos"/>) añade su +5 contra laceración como línea situacional.
     /// </summary>
-    private static (List<StatLinea> Lineas, List<StatLinea> Situacional) BuildDesvioLineas(CharacterEntity c, BonosForma fb, string? forma, bool acumula = false, string? etiquetaBono = null)
+    private static (List<StatLinea> Lineas, List<StatLinea> Situacional) BuildDesvioLineas(CharacterEntity c, BonosForma fb, string? forma, bool acumula = false, string? etiquetaBono = null, IEnumerable<string>? talentos = null)
     {
         var armadura   = new StatLinea { Concepto = string.IsNullOrEmpty(c.EquippedArmor) ? "Base" : $"Armadura: {c.EquippedArmor}", Valor = c.Desvio };
-        if (fb.Desvio <= 0) return ([armadura], []);
+        // «Tu valor de desvío aumenta en 5 contra el daño por laceración» (Forma natural, también bajo Disfraz kandra;
+        // L.35 / PDF 41): visible pero fuera del total.
+        List<StatLinea> talento = talentos?.Contains("Forma natural") == true
+            ? [new() { Concepto = "Forma natural", Valor = 5, DescripcionCondicion = "Contra daño por laceración" }]
+            : [];
+        if (fb.Desvio <= 0) return ([armadura], talento);
 
         var formaLinea = new StatLinea { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = fb.Desvio, EsBono = true };
-        if (acumula) return ([armadura, formaLinea], []);
+        if (acumula) return ([armadura, formaLinea], talento);
         // La línea que no se usa queda como situacional, con la explicación de por qué no suma.
         var (gana, pierde) = fb.Desvio > c.Desvio ? (formaLinea, armadura) : (armadura, formaLinea);
         pierde.DescripcionCondicion = "No se acumula: se usa el mayor entre armadura y forma";
-        return ([gana], pierde.Valor > 0 ? [pierde] : []);
+        return ([gana], pierde.Valor > 0 ? [pierde, .. talento] : talento);
     }
 
     private static List<string> ParseTalentos(string? raw)
@@ -329,11 +359,12 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         var poderes  = CharacterJson.ParsePoderes(c.Poderes);
         var recursos = CharacterJson.ParseRecursos(c.Recursos);
         var fb       = world.BonosAtributos(c, talentos, out var forma);
+        var etiqueta = world.EtiquetaBono(forma);
         var tieneInv = world.TieneInvestidura(c, talentos, poderes);
         var velEff   = c.Velocidad + fb.Velocidad;
-        var desvio   = BuildDesvioLineas(c, fb, forma);
+        var desvio   = BuildDesvioLineas(c, fb, forma, world.DesvioBonoSeAcumula, etiqueta, talentos);
 
-        return new CharacterResponse
+        var response = new CharacterResponse
         {
             Id = c.Id, CampaignId = c.CampaignId, OwnerId = c.OwnerId,
             Name = c.Name, PlayerName = c.PlayerName,
@@ -352,32 +383,32 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             // ── Stats calculadas ──────────────────────────────────────────────
             Concentracion = TalentosReglas.Calcular(
                 StatAfectada.MaxConcentracion,
-                BuildConcLineas(c, fb, forma),
+                BuildConcLineas(c, fb, forma, etiqueta),
                 c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv),
 
             DefensaFisica = TalentosReglas.Calcular(
                 StatAfectada.DefensaFisica,
-                BuildDefensaLineas("Fuerza", c.Fuerza, "Velocidad", c.Velocidad, fb.Fuerza + fb.Velocidad, forma),
+                BuildDefensaLineas("Fuerza", c.Fuerza, "Velocidad", c.Velocidad, fb.Fuerza + fb.Velocidad, forma, etiqueta),
                 c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv),
 
             DefensaCognitiva = TalentosReglas.Calcular(
                 StatAfectada.DefensaCognitiva,
-                BuildDefensaLineas("Intelecto", c.Intelecto, "Voluntad", c.Voluntad, fb.Intelecto + fb.Voluntad, forma),
+                BuildDefensaLineas("Intelecto", c.Intelecto, "Voluntad", c.Voluntad, fb.Intelecto + fb.Voluntad, forma, etiqueta),
                 c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv),
 
             DefensaEspiritual = TalentosReglas.Calcular(
                 StatAfectada.DefensaEspiritual,
-                BuildDefensaLineas("Discernimiento", c.Discernimiento, "Presencia", c.Presencia, fb.Discernimiento + fb.Presencia, forma),
+                BuildDefensaLineas("Discernimiento", c.Discernimiento, "Presencia", c.Presencia, fb.Discernimiento + fb.Presencia, forma, etiqueta),
                 c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv),
 
             Salud = TalentosReglas.Calcular(
                 StatAfectada.MaxSalud,
-                BuildSaludLineas(c, fb, forma),
+                BuildSaludLineas(c, fb, forma, etiqueta),
                 c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv),
 
             Investidura = TalentosReglas.Calcular(
                 StatAfectada.MaxInvestidura,
-                BuildInvLineas(c, fb, forma, tieneInv),
+                BuildInvLineas(c, fb, forma, tieneInv, etiqueta),
                 c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv),
 
             // El movimiento depende de la Velocidad efectiva (con el bono de la forma, si lo hay).
@@ -424,6 +455,27 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             // ── Nacidos de la bruma ───────────────────────────────────────────
             CaminoMetal = c.CaminoMetal, CaminoInicial = c.CaminoInicial,
             Poderes = poderes, Recursos = recursos, Bendiciones = c.Bendiciones,
+            DerivadosSet = world.Derivar(c, talentos, poderes, fb),
+            BonosAtributos = fb.ComoDiccionario(),
         };
+
+        RecortarEstadoDeMesa(response);
+        return response;
+    }
+
+    /// <summary>
+    /// Recorte solo en la salida (no se persiste) del estado de mesa: la Investidura actual a [0, Investidura máxima] y las cargas
+    /// de cada poder a [0, sus cargas máximas], por si el máximo bajó después de escribirlas (p. ej. al reducir Presencia en el
+    /// <c>PUT</c>; §6.2).
+    /// </summary>
+    private static void RecortarEstadoDeMesa(CharacterResponse r)
+    {
+        if (r.Recursos.TryGetValue("investiduraActual", out var actual))
+            r.Recursos["investiduraActual"] = Math.Clamp(actual, 0m, Math.Max(0m, (decimal)r.Investidura.Total));
+        foreach (var p in r.Poderes)
+        {
+            if (r.DerivadosSet.TryGetValue($"poder.{p.Metal}.cargasMax", out var max))
+                p.Cargas = Math.Clamp(p.Cargas, 0, Math.Max(0, (int)max.Total));
+        }
     }
 }
