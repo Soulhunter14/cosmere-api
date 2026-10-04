@@ -1,4 +1,5 @@
 using Messages.Database.Entities;
+using Messages.Worlds;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data;
@@ -210,5 +211,12 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
 
         modelBuilder.Entity<DiceRollEntity>()
             .HasIndex(r => new { r.CampaignId, r.CreatedAt });
+
+        // Database defaults for the world-specific columns. EF does not read the C# initializers when it generates a
+        // migration, so the default is declared here: existing rows (and clients that never send the column) stay on
+        // Stormlight. Later migrations add their own lines to this block.
+        modelBuilder.Entity<CampaignEntity>()
+            .Property(c => c.World)
+            .HasDefaultValue(WorldIds.Stormlight);
     }
 }

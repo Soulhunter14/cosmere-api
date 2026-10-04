@@ -12,6 +12,7 @@ using Services.Metas;
 using Services.Notes;
 using Services.Proposals;
 using Services.Sessions;
+using Services.Worlds;
 namespace Services;
 
 public static class Bootstrap
@@ -31,6 +32,10 @@ public static class Bootstrap
         services.AddScoped<ILockedDayService, LockedDayService>();
         services.AddScoped<IDiaryService, DiaryService>();
         services.AddScoped<IDiceRollService, DiceRollService>();
+        // World rules: stateless and without DB access, hence singletons
+        services.AddSingleton<IWorldRules, StormlightRules>();
+        services.AddSingleton<IWorldRules, MistbornRules>();
+        services.AddSingleton<IWorldRulesProvider, WorldRulesProvider>();
         return services;
     }
 }
