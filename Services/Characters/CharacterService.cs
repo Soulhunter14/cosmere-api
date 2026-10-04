@@ -58,7 +58,8 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         }
 
         world.ValidarIdentidad(new IdentidadPersonaje(
-            request.CaminoHeroico, request.CaminoRadiante, "", "", request.Ascendencia, [], [], new Dictionary<string, decimal>()));
+            request.CaminoHeroico, request.CaminoRadiante, request.CaminoMetal, request.CaminoInicial, request.Ascendencia,
+            [], [], new Dictionary<string, decimal>()));
 
         var character = new CharacterEntity
         {
@@ -70,6 +71,8 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             Ascendencia = request.Ascendencia,
             CaminoHeroico = request.CaminoHeroico,
             CaminoRadiante = request.CaminoRadiante,
+            CaminoMetal = request.CaminoMetal,
+            CaminoInicial = request.CaminoInicial,
             IsNpc = false
         };
 
@@ -98,8 +101,20 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             world.RestringirCambiosNoGm(request, character);
         }
 
+        // Identidad efectiva (lo que llega o, si es null, lo guardado), con la lista de poderes ya fusionada (§5.3).
+        var poderes = CharacterJson.FusionarPoderes(CharacterJson.ParsePoderes(character.Poderes), request.Poderes);
         world.ValidarIdentidad(new IdentidadPersonaje(
-            request.CaminoHeroico, request.CaminoRadiante, "", "", request.Ascendencia, [], [], new Dictionary<string, decimal>()));
+            request.CaminoHeroico, request.CaminoRadiante,
+            request.CaminoMetal ?? character.CaminoMetal, request.CaminoInicial ?? character.CaminoInicial,
+            request.Ascendencia, poderes, request.Bendiciones ?? character.Bendiciones,
+            CharacterJson.ParseRecursos(character.Recursos)));
+
+        // Las reglas del mundo no tienen BD: la meta que enlaza un poder debe ser de este personaje.
+        var metaIds = poderes.Where(p => p.MetaId is not null).Select(p => p.MetaId!.Value).Distinct().ToList();
+        if (metaIds.Count > 0 &&
+            await db.Metas.CountAsync(m => m.CharacterId == characterId && metaIds.Contains(m.Id)) != metaIds.Count)
+            throw new ArgumentException("Invalid metaId in poderes: the meta must belong to this character.");
+
         ApplyUpdate(character, request);
         character.UpdatedAt = DateTime.UtcNow;
         await db.SaveChangesAsync();
@@ -188,6 +203,12 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         c.Talentos = r.Talentos; c.Apariencia = r.Apariencia; c.Notas = r.Notas; c.Conexiones = r.Conexiones;
         c.Weapons = r.Weapons; c.Armor = r.Armor; c.Spells = r.Spells; c.Equipment = r.Equipment;
         c.EquippedArmor = r.Armor.Contains(r.EquippedArmor) ? r.EquippedArmor : string.Empty;
+        // Nacidos de la bruma: null = conservar lo guardado.
+        if (r.CaminoMetal is not null) c.CaminoMetal = r.CaminoMetal;
+        if (r.CaminoInicial is not null) c.CaminoInicial = r.CaminoInicial;
+        if (r.Bendiciones is not null) c.Bendiciones = r.Bendiciones;
+        if (r.Poderes is not null)
+            c.Poderes = CharacterJson.SerializarPoderes(CharacterJson.FusionarPoderes(CharacterJson.ParsePoderes(c.Poderes), r.Poderes));
     }
 
     // ── Helpers de cálculo de reservas ───────────────────────────────────────
@@ -198,6 +219,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
     // Los bonos de la forma activa de un cantor (Manual p. 33 del libro: «aumentos de características … de manera
     // temporal») se aplican a los atributos ANTES de derivar defensas, reservas y movimiento, y se muestran como
     // una línea «Forma X» en cada desglose.
+    // Toda línea de bono de atributo (de cualquier origen) lleva EsBono = true: el cliente la reconoce sin leer el concepto.
 
     private static string ConceptoForma(string? forma) => $"Forma: {forma}";
 
@@ -209,7 +231,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             new() { Concepto = attr1,  Valor = valor1 },
             new() { Concepto = attr2,  Valor = valor2 },
         ];
-        if (bonoForma != 0) lineas.Add(new() { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = bonoForma });
+        if (bonoForma != 0) lineas.Add(new() { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = bonoForma, EsBono = true });
         return lineas;
     }
 
@@ -222,7 +244,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         ];
         // La forma puede subir la Voluntad (→ +1 por punto) y/o dar concentración directa (forma diestra, nocturna: +2).
         var bono = fb.Voluntad + fb.Concentracion;
-        if (bono != 0) lineas.Add(new() { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = bono });
+        if (bono != 0) lineas.Add(new() { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = bono, EsBono = true });
         return lineas;
     }
 
@@ -240,7 +262,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             new() { Concepto = usaDis ? "Discernimiento" : "Presencia", Valor = usaDis ? c.Discernimiento : c.Presencia },
         ];
         var bono = usaDis ? fb.Discernimiento : fb.Presencia;
-        if (bono != 0) lineas.Add(new() { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = bono });
+        if (bono != 0) lineas.Add(new() { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = bono, EsBono = true });
         return lineas;
     }
 
@@ -269,7 +291,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             new() { Concepto = "Base",   Valor = flat },
             new() { Concepto = fueCount > 1 ? $"Fuerza ×{fueCount}" : "Fuerza", Valor = fueCount * fuerza },
         ];
-        if (fb.Fuerza != 0) lineas.Add(new() { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = fueCount * fb.Fuerza });
+        if (fb.Fuerza != 0) lineas.Add(new() { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = fueCount * fb.Fuerza, EsBono = true });
         return lineas;
     }
 
@@ -283,7 +305,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         var armadura   = new StatLinea { Concepto = string.IsNullOrEmpty(c.EquippedArmor) ? "Base" : $"Armadura: {c.EquippedArmor}", Valor = c.Desvio };
         if (fb.Desvio <= 0) return ([armadura], []);
 
-        var formaLinea = new StatLinea { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = fb.Desvio };
+        var formaLinea = new StatLinea { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = fb.Desvio, EsBono = true };
         if (acumula) return ([armadura, formaLinea], []);
         // La línea que no se usa queda como situacional, con la explicación de por qué no suma.
         var (gana, pierde) = fb.Desvio > c.Desvio ? (formaLinea, armadura) : (armadura, formaLinea);
@@ -304,8 +326,10 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         var talentos = ParseTalentos(c.Talentos);
         // Talentos que el cliente concede solos (autoGranted) sin guardarlos y que las reglas del mundo deben contar.
         talentos = talentos.Union(world.TalentosImplicitos(c)).ToList();
+        var poderes  = CharacterJson.ParsePoderes(c.Poderes);
+        var recursos = CharacterJson.ParseRecursos(c.Recursos);
         var fb       = world.BonosAtributos(c, talentos, out var forma);
-        var tieneInv = world.TieneInvestidura(c, talentos, []);
+        var tieneInv = world.TieneInvestidura(c, talentos, poderes);
         var velEff   = c.Velocidad + fb.Velocidad;
         var desvio   = BuildDesvioLineas(c, fb, forma);
 
@@ -396,6 +420,10 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             Weapons = c.Weapons, Armor = c.Armor, Spells = c.Spells, Equipment = c.Equipment,
             EquippedArmor = c.EquippedArmor,
             CreatedAt = c.CreatedAt, UpdatedAt = c.UpdatedAt,
+
+            // ── Nacidos de la bruma ───────────────────────────────────────────
+            CaminoMetal = c.CaminoMetal, CaminoInicial = c.CaminoInicial,
+            Poderes = poderes, Recursos = recursos, Bendiciones = c.Bendiciones,
         };
     }
 }

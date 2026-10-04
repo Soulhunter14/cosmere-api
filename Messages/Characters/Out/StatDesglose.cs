@@ -5,6 +5,8 @@ public class StatLinea
     public string Concepto { get; set; } = string.Empty;
     public double Valor { get; set; }
     public string? DescripcionCondicion { get; set; }
+    /// <summary>Línea de bono de atributo de cualquier origen (forma de cantor, Bendición, talento, clavo), marcada por el servidor.</summary>
+    public bool EsBono { get; set; }
 }
 
 public class StatDesglose
