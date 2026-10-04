@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Messages.Characters;
 using Messages.Characters.In;
 using Messages.Characters.Out;
@@ -9,16 +10,21 @@ namespace Services.Worlds;
 
 /// <summary>
 /// Reglas del mundo «Nacidos de la bruma» (Scadrial): validación de la identidad (§5.3), bloqueo de los cambios de un jugador no
-/// GM (Q6, Q16), condición de Investidura, Resistencia koloss, Bendiciones kandra y talentos de atributo como bonos, y derivados de
-/// las artes metálicas (<c>DerivadosSet</c>). Las listas viven en <see cref="MistbornData"/> y la tabla de progresión en
-/// <see cref="ArtesMetalicas"/>. <c>AplicarAccionMesa</c> sigue delegando en Stormlight (400) hasta T13.
+/// GM (Q6, Q16), condición de Investidura, Resistencia koloss, Bendiciones kandra y talentos de atributo como bonos, derivados de
+/// las artes metálicas (<c>DerivadosSet</c>) y acciones de mesa (<c>PATCH recursos</c>, Beber vial e inicio de escena: T13). Las
+/// listas viven en <see cref="MistbornData"/> y la tabla de progresión en <see cref="ArtesMetalicas"/>.
 /// </summary>
 public sealed class MistbornRules : IWorldRules
 {
-    private static readonly StormlightRules Respaldo = new(); // hasta T13: solo AplicarAccionMesa
-
     // Valores de CaminoInicial (decisión (k), Q7): "" = no decidido.
     private static readonly HashSet<string> CaminosIniciales = ["", "heroico", "metal"];
+
+    // Claves de Recursos (§2) y de DerivadosSet que las acciones de mesa leen o escriben.
+    private const string ClaveInvestidura = "investiduraActual";
+    private const string ClaveCuentasAtium = "cuentasAtium";
+    private const string ClaveArquillas = "arquillas";
+    private const string ClaveCargasMaxArte = "feruquimia.cargasMax";
+    private const string Atium = "atium";
 
     public string Id => WorldIds.Mistborn;
 
@@ -33,7 +39,7 @@ public sealed class MistbornRules : IWorldRules
     public IReadOnlyDictionary<string, List<ReglaTalento>> ReglasTalentos { get; } = TalentosReglas.Efectivas(MistbornData.Reglas);
 
     /// <summary>Investidura actual (L.26 / PDF 32), cuentas de atium (L.176 / PDF 182) y arquillas (L.254 / PDF 260).</summary>
-    public IReadOnlySet<string> RecursosPermitidos { get; } = new HashSet<string> { "investiduraActual", "cuentasAtium", "arquillas" };
+    public IReadOnlySet<string> RecursosPermitidos { get; } = new HashSet<string> { ClaveInvestidura, ClaveCuentasAtium, ClaveArquillas };
 
     /// <summary>Q6: por ahora solo el director cambia el camino de nacido del metal (el libro lo permitiría, L.128 / PDF 134).</summary>
     public bool CaminoInvestidoLoCambiaElDirector => true;
@@ -140,8 +146,247 @@ public sealed class MistbornRules : IWorldRules
         }
     }
 
-    public void AplicarAccionMesa(CharacterEntity c, AccionMesa accion, CharacterResponse estado) =>
-        Respaldo.AplicarAccionMesa(c, accion, estado);
+    // ── Estado de mesa (T13) ─────────────────────────────────────────────────
+
+    /// <summary>
+    /// Acciones de mesa (§5.2; L.129-130 / PDF 135-136): <c>PATCH recursos</c>, Beber vial e inicio de escena. <c>CharacterService</c>
+    /// solo abre la transacción, comprueba permisos y guarda; las reglas están aquí. <paramref name="estado"/> es el
+    /// <c>MapToResponse</c> previo: aporta la Investidura máxima y las cargas de los poderes. Todo se calcula sobre copias y se
+    /// escribe en <paramref name="c"/> al final, así que un error (400, 403, 404) no deja cambios a medias.
+    /// </summary>
+    public void AplicarAccionMesa(CharacterEntity c, AccionMesa accion, CharacterResponse estado)
+    {
+        switch (accion)
+        {
+            case AccionMesa.PatchRecursos patch: PatchRecursos(c, patch.Cuerpo, patch.EsGm, estado); break;
+            case AccionMesa.BeberVial vial: BeberVial(c, vial.Metales, estado); break;
+            case AccionMesa.InicioEscena escena: InicioEscena(c, escena.Sorprendido, estado); break;
+            default: throw new ArgumentException("Table action not available in this world.");
+        }
+    }
+
+    /// <summary>
+    /// <c>PATCH …/recursos</c>: solo se escribe lo no nulo. Claves de recurso fuera de <see cref="RecursosPermitidos"/> → 400 y un
+    /// poder <c>(Arte, Metal)</c> que el personaje no tiene → 404 (<see cref="KeyNotFoundException"/>).
+    /// </summary>
+    private void PatchRecursos(CharacterEntity c, RecursosRequest cuerpo, bool esGm, CharacterResponse estado)
+    {
+        var recursos = CharacterJson.ParseRecursos(c.Recursos);
+        var poderes = CharacterJson.ParsePoderes(c.Poderes);
+
+        if (cuerpo.Recursos is not null)
+        {
+            foreach (var (clave, valor) in cuerpo.Recursos)
+            {
+                if (!RecursosPermitidos.Contains(clave)) throw new ArgumentException($"Invalid Recursos key: '{clave}'.");
+                recursos[clave] = ValorDeRecurso(clave, valor, estado);
+            }
+        }
+
+        if (cuerpo.Poderes is not null)
+        {
+            var talentos = TalentosDe(c);
+            foreach (var cambio in cuerpo.Poderes)
+            {
+                if (cambio is null) throw new ArgumentException("Invalid Poderes: null entry.");
+                var poder = poderes.FirstOrDefault(p => p.Arte == cambio.Arte && p.Metal == cambio.Metal)
+                            ?? throw new KeyNotFoundException($"Poder not found: '{cambio.Arte}:{cambio.Metal}'.");
+                AplicarCambioDePoder(poder, cambio, esGm, estado, talentos);
+            }
+        }
+
+        // Solo se reescribe la columna cuya parte del cuerpo llegó.
+        if (cuerpo.Recursos is not null) c.Recursos = CharacterJson.SerializarRecursos(recursos);
+        if (cuerpo.Poderes is not null) c.Poderes = CharacterJson.SerializarPoderes(poderes);
+    }
+
+    /// <summary>
+    /// Valor que se guarda de un recurso. <c>investiduraActual</c>: entero recortado a [0, Investidura máxima] (L.26 / PDF 32);
+    /// <c>cuentasAtium</c>: entero ≥ 0, aparte de la Investidura (L.176 / PDF 182); <c>arquillas</c>: ≥ 0 con 2 decimales como
+    /// máximo (óbolo 0,01 ar; L.254 / PDF 260). Un valor fuera de dominio da 400 (no se redondea ni se trunca).
+    /// </summary>
+    private static decimal ValorDeRecurso(string clave, decimal valor, CharacterResponse estado)
+    {
+        switch (clave)
+        {
+            case ClaveInvestidura:
+                SoloEntero(clave, valor);
+                return Math.Clamp(valor, 0m, InvestiduraMaxima(estado));
+            case ClaveCuentasAtium:
+                SoloEntero(clave, valor);
+                NoNegativo(clave, valor);
+                return valor;
+            case ClaveArquillas:
+                NoNegativo(clave, valor);
+                if (decimal.Round(valor, 2) != valor)
+                    throw new ArgumentException(FormattableString.Invariant($"Invalid Recursos value for '{clave}': {valor} (at most 2 decimals)."));
+                return valor;
+            default:
+                throw new ArgumentException($"Invalid Recursos key: '{clave}'.");
+        }
+    }
+
+    // Los mensajes llevan el valor recibido con formato invariable (sin coma decimal según la cultura del servidor).
+    private static void SoloEntero(string clave, decimal valor)
+    {
+        if (decimal.Truncate(valor) != valor)
+            throw new ArgumentException(FormattableString.Invariant($"Invalid Recursos value for '{clave}': {valor} (must be an integer)."));
+    }
+
+    private static void NoNegativo(string clave, decimal valor)
+    {
+        if (valor < 0) throw new ArgumentException(FormattableString.Invariant($"Invalid Recursos value for '{clave}': {valor}."));
+    }
+
+    /// <summary>
+    /// Estado de mesa de un poder. Orden de aplicación: <c>completo</c>, <c>ajusteCargasMax</c>, <c>cargas</c>, <c>viales</c> y
+    /// <c>desprovisto</c>; las cargas se recortan al máximo que resulta de los cambios anteriores de la misma petición.
+    /// </summary>
+    private static void AplicarCambioDePoder(PoderPersonaje p, PoderRecursosRequest cambio, bool esGm, CharacterResponse estado,
+        IReadOnlyList<string> talentos)
+    {
+        // Las cargas que veía el jugador antes del cambio (el recorte de salida de MapToResponse).
+        var cargasAntes = Math.Clamp(p.Cargas, 0, CargasMaxDe(p, estado, talentos));
+
+        // Marcar la meta como completada a mano es un atajo de mesa (Q14). Un poder que no viene del camino y la alomancia de
+        // atium nacen completos y no pueden volver a nacientes (L.290 / PDF 296; L.295 / PDF 301; L.177 / PDF 183).
+        if (cambio.Completo is bool completo) p.Completo = completo || NaceCompleto(p);
+
+        if (cambio.AjusteCargasMax is int ajuste)
+        {
+            // Componedor: -1 carga máxima permanente por uso, sin bajar de cero (L.155 / PDF 161).
+            if (ajuste > 0)
+                throw new ArgumentException($"Invalid AjusteCargasMax for '{p.Arte}:{p.Metal}': {ajuste} (must be 0 or negative).");
+            p.AjusteCargasMax = 0;
+            p.AjusteCargasMax = Math.Max(ajuste, -CargasMaxDe(p, estado, talentos));
+        }
+
+        if (cambio.Cargas is int cargas)
+        {
+            int nuevas;
+            if (p.Arte != MistbornData.Feruquimia || !p.Completo)
+            {
+                // Sin mente de metal no hay dónde almacenar: la alomancia no usa cargas y un poder feruquímico naciente todavía no
+                // tiene mente de metal (L.162 / PDF 168; los poderes que no vienen del camino nacen completos).
+                if (cargas > 0)
+                    throw new ArgumentException(p.Arte != MistbornData.Feruquimia
+                        ? $"Invalid Cargas for '{p.Arte}:{p.Metal}': only feruquimia powers store charges."
+                        : $"Invalid Cargas for '{p.Arte}:{p.Metal}': a nascent power has no metalmind and stores no charges.");
+                nuevas = 0;
+            }
+            else nuevas = Math.Clamp(cargas, 0, CargasMaxDe(p, estado, talentos));
+
+            // Almacenar en un medallón no genera cargas y se recarga sustituyéndolo: el jugador solo las gasta (L.293 / PDF 299).
+            if (!esGm && p.Origen == "medallon" && nuevas > cargasAntes)
+                throw new UnauthorizedAccessException("Only the GM can add charges to a medallion.");
+            p.Cargas = nuevas;
+        }
+        else if (cambio.AjusteCargasMax is not null)
+        {
+            // El máximo ha bajado: las cargas guardadas no pueden superarlo.
+            p.Cargas = Math.Clamp(p.Cargas, 0, CargasMaxDe(p, estado, talentos));
+        }
+
+        if (cambio.Viales is int viales)
+        {
+            if (viales < 0) throw new ArgumentException($"Invalid Viales for '{p.Arte}:{p.Metal}': {viales}.");
+            p.Viales = viales;
+        }
+
+        if (cambio.Desprovisto is bool desprovisto) p.Desprovisto = desprovisto;
+    }
+
+    private static bool NaceCompleto(PoderPersonaje p) =>
+        p.Origen != "camino" || (p.Arte == MistbornData.Alomancia && p.Metal == Atium);
+
+    /// <summary>
+    /// Cargas máximas de la mente de metal de un poder con su estado actual: las mismas que <see cref="Derivar"/> emite en
+    /// <c>poder.&lt;metal&gt;.cargasMax</c> (0 si es naciente o no es feruquimia; 8 en un medallón). Se recalcula con
+    /// <see cref="CargasMaxPoder"/> a partir de las líneas del arte de <paramref name="estado"/> porque el poder puede haber
+    /// cambiado (<c>completo</c>, <c>ajusteCargasMax</c>) en la misma petición.
+    /// </summary>
+    private static int CargasMaxDe(PoderPersonaje p, CharacterResponse estado, IReadOnlyList<string> talentos) =>
+        p.Arte == MistbornData.Feruquimia && estado.DerivadosSet.TryGetValue(ClaveCargasMaxArte, out var arte)
+            ? (int)Math.Round(CargasMaxPoder(p, arte.Lineas, talentos).Total)
+            : 0;
+
+    /// <summary>Talentos del personaje como los ve <c>MapToResponse</c>: los guardados más los implícitos de la ascendencia.</summary>
+    private IReadOnlyList<string> TalentosDe(CharacterEntity c)
+    {
+        List<string> guardados = [];
+        if (!string.IsNullOrWhiteSpace(c.Talentos))
+        {
+            try { guardados = JsonSerializer.Deserialize<List<string>>(c.Talentos) ?? []; }
+            catch (JsonException) { /* tolerante, como CharacterService.ParseTalentos */ }
+        }
+        return guardados.Union(TalentosImplicitos(c)).ToList();
+    }
+
+    private static decimal InvestiduraMaxima(CharacterResponse estado) =>
+        Math.Max(0m, (decimal)Math.Round(estado.Investidura.Total));
+
+    /// <summary>
+    /// Beber vial (L.129-130 / PDF 135-136; Q17): <paramref name="metales"/> es el contenido del vial tal cual lo manda el cliente
+    /// (los 8 comunes preseleccionados, pero desmarcables). Cada poder alomántico, salvo el de atium, queda Desprovisto si su
+    /// metal no está en el vial y deja de estarlo si está; por cada metal raro del vial con <c>Viales &gt; 0</c> se gasta un vial
+    /// (sin 409: el recuento es discreción del DJ). La Investidura actual sube al máximo solo si el vial contiene un metal que el
+    /// personaje puede quemar. El atium queda fuera de la regla: no da Investidura y sus cuentas van aparte (L.176 / PDF 182).
+    /// </summary>
+    private void BeberVial(CharacterEntity c, IReadOnlyList<string> metales, CharacterResponse estado)
+    {
+        foreach (var metal in metales)
+        {
+            if (metal is null || !MistbornData.Metales.Contains(metal))
+                throw new ArgumentException($"Invalid Metal in vial: '{metal}'.");
+            if (metal == Atium)
+                throw new ArgumentException("Invalid Metal in vial: 'atium' is not part of a vial (track it with recursos.cuentasAtium).");
+        }
+
+        var poderes = CharacterJson.ParsePoderes(c.Poderes);
+        if (!poderes.Any(p => p.Arte == MistbornData.Alomancia))
+            throw new ArgumentException("This character has no alomantic powers.");
+
+        var delVial = metales.ToHashSet();
+        var quemables = poderes.Where(p => p.Arte == MistbornData.Alomancia && p.Metal != Atium).ToList();
+        foreach (var p in quemables)
+        {
+            var enElVial = delVial.Contains(p.Metal);
+            p.Desprovisto = !enElVial;
+            if (enElVial && !MistbornData.MetalesComunes.Contains(p.Metal) && p.Viales > 0) p.Viales--;
+        }
+
+        if (quemables.Any(p => delVial.Contains(p.Metal)))
+        {
+            var recursos = CharacterJson.ParseRecursos(c.Recursos);
+            recursos[ClaveInvestidura] = InvestiduraMaxima(estado);
+            c.Recursos = CharacterJson.SerializarRecursos(recursos);
+        }
+        c.Poderes = CharacterJson.SerializarPoderes(poderes);
+    }
+
+    /// <summary>
+    /// Inicio de escena (L.129 / PDF 135): la Investidura actual empieza al máximo, o en 1 si empiezas Sorprendido. Sin Sorprendido
+    /// se da por bebido un vial por instinto, así que además se limpia el Desprovisto de los poderes alománticos de metal común
+    /// (los que contiene un vial estándar, L.130 / PDF 136) y los raros conservan su estado, que gobiernan los <c>viales</c>
+    /// [inferido → Q24]. Con Sorprendido no se toca ningún Desprovisto. 400 si el personaje no tiene Investidura.
+    /// </summary>
+    private void InicioEscena(CharacterEntity c, bool sorprendido, CharacterResponse estado)
+    {
+        if (!RecursosPermitidos.Contains(ClaveInvestidura))
+            throw new ArgumentException($"This world has no '{ClaveInvestidura}' resource.");
+        var total = InvestiduraMaxima(estado);
+        if (total == 0) throw new ArgumentException("This character has no Investiture.");
+
+        var recursos = CharacterJson.ParseRecursos(c.Recursos);
+        recursos[ClaveInvestidura] = Math.Min(sorprendido ? 1m : total, total);
+        c.Recursos = CharacterJson.SerializarRecursos(recursos);
+
+        if (sorprendido) return;
+        var poderes = CharacterJson.ParsePoderes(c.Poderes);
+        foreach (var p in poderes.Where(p => p.Arte == MistbornData.Alomancia && p.Metal != Atium && MistbornData.MetalesComunes.Contains(p.Metal)))
+            p.Desprovisto = false;
+        c.Poderes = CharacterJson.SerializarPoderes(poderes);
+    }
 
     // ── Metas de nacido del metal ────────────────────────────────────────────
 
@@ -255,7 +500,7 @@ public sealed class MistbornRules : IWorldRules
             new() { Concepto = "Grados en Feruquimia", Valor = gradosFeruquimia ?? 0 },
         ];
         if (talentos.Contains("Mentes de metal ampliadas")) cargas.Add(new() { Concepto = "Mentes de metal ampliadas", Valor = rango });
-        if (feruquimia) d["feruquimia.cargasMax"] = Desglose(Copia(cargas));
+        if (feruquimia) d[ClaveCargasMaxArte] = Desglose(Copia(cargas));
 
         foreach (var p in poderes.Where(p => p.Arte == MistbornData.Feruquimia))
             d[$"poder.{p.Metal}.cargasMax"] = CargasMaxPoder(p, cargas, talentos);

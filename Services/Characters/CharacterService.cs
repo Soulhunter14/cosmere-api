@@ -163,6 +163,47 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         return MapToResponse(character, world);
     }
 
+    // ── Estado de mesa (T13) ─────────────────────────────────────────────────
+    // Solo infraestructura: transacción con la fila bloqueada, permisos y respuesta. Las reglas (recortes, viales, Desprovisto,
+    // inicio de escena) son del mundo: IWorldRules.AplicarAccionMesa (§5.2, §6.1).
+
+    public Task<CharacterResponse> PatchRecursosAsync(long characterId, long campaignId, RecursosRequest request, long userId) =>
+        AplicarAccionMesaAsync(characterId, campaignId, userId, esGm => new AccionMesa.PatchRecursos(request, esGm));
+
+    public Task<CharacterResponse> BeberVialAsync(long characterId, long campaignId, BeberVialRequest request, long userId) =>
+        AplicarAccionMesaAsync(characterId, campaignId, userId, _ => new AccionMesa.BeberVial(request.Metales ?? []));
+
+    public Task<CharacterResponse> InicioEscenaAsync(long characterId, long campaignId, InicioEscenaRequest request, long userId) =>
+        AplicarAccionMesaAsync(characterId, campaignId, userId, _ => new AccionMesa.InicioEscena(request.Sorprendido));
+
+    private async Task<CharacterResponse> AplicarAccionMesaAsync(long characterId, long campaignId, long userId, Func<bool, AccionMesa> accion)
+    {
+        await EnsureMemberAsync(campaignId, userId);
+        var world = await GetWorldRulesAsync(campaignId);
+        var isGm = await IsGmAsync(campaignId, userId);
+
+        // Las acciones leen la fila, reescriben las columnas JSON (Recursos, Poderes) enteras y devuelven el personaje: la fila se
+        // bloquea hasta el commit para que dos peticiones simultáneas con claves distintas no se pisen. Mismos filtros y mismo
+        // 404/403 que el PUT; nunca FirstAsync (sin filas lanzaría InvalidOperationException, que el middleware da como 409).
+        await using var tx = await db.Database.BeginTransactionAsync();
+        var character = await db.Characters
+            .FromSqlInterpolated($"SELECT * FROM \"Characters\" WHERE \"Id\" = {characterId} AND \"CampaignId\" = {campaignId} AND NOT \"IsNpc\" FOR UPDATE")
+            .FirstOrDefaultAsync()
+            ?? throw new KeyNotFoundException("Character not found.");
+        if (!isGm && character.OwnerId != userId)
+            throw new UnauthorizedAccessException("You can only edit your own character.");
+
+        var estado = MapToResponse(character, world);
+        world.AplicarAccionMesa(character, accion(isGm), estado);
+        character.UpdatedAt = DateTime.UtcNow;
+        await db.SaveChangesAsync();
+        await tx.CommitAsync();
+
+        // Como en GET: la respuesta lleva las metas (la fila se cargó sin Include).
+        await db.Entry(character).Collection(c => c.Metas).LoadAsync();
+        return MapToResponse(character, world);
+    }
+
     private async Task<bool> IsGmAsync(long campaignId, long userId)
         => await db.CampaignMembers.AnyAsync(m => m.CampaignId == campaignId && m.UserId == userId && m.Role == "gm");
 
