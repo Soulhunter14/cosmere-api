@@ -1,3 +1,5 @@
+using Messages.Worlds;
+
 namespace Messages.Campaigns.Out;
 
 public class CampaignResponse
@@ -8,6 +10,8 @@ public class CampaignResponse
     public DateTime CreatedAt { get; set; }
     public DateTime? NextSessionDate { get; set; }
     public string? NextSessionTitle { get; set; }
+    public string World { get; set; } = WorldIds.Stormlight;
+    public string? Era { get; set; }
 }
 
 public class CampaignDetailResponse
@@ -19,6 +23,8 @@ public class CampaignDetailResponse
     public bool InviteActive { get; set; }
     public DateTime CreatedAt { get; set; }
     public List<MemberResponse> Members { get; set; } = [];
+    public string World { get; set; } = WorldIds.Stormlight;
+    public string? Era { get; set; }
 }
 
 public class MemberResponse
