@@ -261,7 +261,8 @@ public static class TalentosReglas
         "Perspicacia"      => c.Perspicacia,
         "Persuasión"       => c.Persuasion,
         "Supervivencia"    => c.Supervivencia,
-        _                  => 0,
+        // Habilidades personalizadas (p. ej. las Investidas Alomancia y Feruquimia), por el nombre de su hueco.
+        _                  => GradosHabilidadPersonalizada(c, habilidad) ?? 0,
     };
 
     /// <summary>Movimiento base según Velocidad (metros).</summary>
@@ -317,5 +318,46 @@ public static class TalentosReglas
         foreach (var (nombre, rs) in propias)
             efectivas.TryAdd(nombre, rs);
         return efectivas;
+    }
+
+    // ── Habilidades personalizadas ───────────────────────────────────────────
+
+    /// <summary>
+    /// Grados del personaje en la habilidad personalizada (<c>HabilidadPersonalizada1..6</c>) cuyo nombre es
+    /// <paramref name="habilidad"/>, sin distinguir mayúsculas ni tildes (el primer hueco que coincida), o <c>null</c> si no
+    /// tiene ese hueco. Lo usan <see cref="GradosDe"/> y los derivados de cada mundo (Alomancia, Feruquimia).
+    /// </summary>
+    public static int? GradosHabilidadPersonalizada(CharacterEntity c, string? habilidad)
+    {
+        if (string.IsNullOrWhiteSpace(habilidad)) return null;
+        var buscada = SinTildes(habilidad.Trim());
+        (string Nombre, int Valor)[] huecos =
+        [
+            (c.HabilidadPersonalizada1, c.HabilidadPersonalizada1Valor),
+            (c.HabilidadPersonalizada2, c.HabilidadPersonalizada2Valor),
+            (c.HabilidadPersonalizada3, c.HabilidadPersonalizada3Valor),
+            (c.HabilidadPersonalizada4, c.HabilidadPersonalizada4Valor),
+            (c.HabilidadPersonalizada5, c.HabilidadPersonalizada5Valor),
+            (c.HabilidadPersonalizada6, c.HabilidadPersonalizada6Valor),
+        ];
+        foreach (var (nombre, valor) in huecos)
+        {
+            if (!string.IsNullOrWhiteSpace(nombre) &&
+                string.Equals(SinTildes(nombre.Trim()), buscada, StringComparison.OrdinalIgnoreCase))
+                return valor;
+        }
+        return null;
+    }
+
+    private static string SinTildes(string texto)
+    {
+        var descompuesto = texto.Normalize(System.Text.NormalizationForm.FormD);
+        var sb = new System.Text.StringBuilder(descompuesto.Length);
+        foreach (var ch in descompuesto)
+        {
+            if (System.Globalization.CharUnicodeInfo.GetUnicodeCategory(ch) != System.Globalization.UnicodeCategory.NonSpacingMark)
+                sb.Append(ch);
+        }
+        return sb.ToString().Normalize(System.Text.NormalizationForm.FormC);
     }
 }
