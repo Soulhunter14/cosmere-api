@@ -1,3 +1,5 @@
+using Messages.Worlds;
+
 namespace Messages.Catalog.Out;
 
 public class WeaponCatalogResponse
@@ -15,6 +17,10 @@ public class WeaponCatalogResponse
     public bool IsCustom { get; set; }
     public string Description { get; set; } = string.Empty;
     public double Weight { get; set; }
+    public string World { get; set; } = WorldIds.Stormlight;
+    public short? Era { get; set; }
+    public bool IsRewardOnly { get; set; }
+    public double? Price { get; set; }
 }
 
 public class ArmorCatalogResponse
@@ -28,6 +34,10 @@ public class ArmorCatalogResponse
     public bool IsCustom { get; set; }
     public string Description { get; set; } = string.Empty;
     public double Weight { get; set; }
+    public string World { get; set; } = WorldIds.Stormlight;
+    public short? Era { get; set; }
+    public bool IsRewardOnly { get; set; }
+    public double? Price { get; set; }
 }
 
 public class GearItemResponse
@@ -37,6 +47,10 @@ public class GearItemResponse
     public double Weight { get; set; }
     public double Price { get; set; }
     public string Description { get; set; } = string.Empty;
+    public string World { get; set; } = WorldIds.Stormlight;
+    public short? Era { get; set; }
+    public bool IsRewardOnly { get; set; }
+    public string? Category { get; set; }
 }
 
 public class CatalogOptionResponse
@@ -44,4 +58,5 @@ public class CatalogOptionResponse
     public int Id { get; set; }
     public required string Name { get; set; }
     public string Description { get; set; } = string.Empty;
+    public string World { get; set; } = WorldIds.Stormlight;
 }

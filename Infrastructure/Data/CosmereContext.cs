@@ -165,9 +165,19 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
             .HasIndex(u => u.Username)
             .IsUnique();
 
-        // CatalogOption category index
+        // Catalog world filters (M3, AddWorldToCatalog): objects are filtered by World and options by (World, Category);
+        // the options index replaces the former category-only index.
+        modelBuilder.Entity<WeaponCatalogEntity>()
+            .HasIndex(w => w.World);
+
+        modelBuilder.Entity<ArmorCatalogEntity>()
+            .HasIndex(a => a.World);
+
+        modelBuilder.Entity<GearItemEntity>()
+            .HasIndex(g => g.World);
+
         modelBuilder.Entity<CatalogOptionEntity>()
-            .HasIndex(o => o.Category);
+            .HasIndex(o => new { o.World, o.Category });
 
         // Campaign → LockedDays
         modelBuilder.Entity<LockedDayEntity>()
@@ -225,5 +235,12 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
         modelBuilder.Entity<CharacterEntity>().Property(c => c.Poderes).HasDefaultValue("[]");
         modelBuilder.Entity<CharacterEntity>().Property(c => c.Recursos).HasDefaultValue("{}");
         modelBuilder.Entity<CharacterEntity>().Property(c => c.Bendiciones).HasDefaultValueSql("'{}'");
+
+        // Catalog (M3, AddWorldToCatalog): existing objects and options stay on Stormlight; the migration itself moves the
+        // options shared by every world to 'cosmere'.
+        modelBuilder.Entity<WeaponCatalogEntity>().Property(w => w.World).HasDefaultValue(WorldIds.Stormlight);
+        modelBuilder.Entity<ArmorCatalogEntity>().Property(a => a.World).HasDefaultValue(WorldIds.Stormlight);
+        modelBuilder.Entity<GearItemEntity>().Property(g => g.World).HasDefaultValue(WorldIds.Stormlight);
+        modelBuilder.Entity<CatalogOptionEntity>().Property(o => o.World).HasDefaultValue(WorldIds.Stormlight);
     }
 }

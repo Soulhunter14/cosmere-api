@@ -13,6 +13,11 @@ public class CreateWeaponRequest
     public List<int> ExpertTraitIds { get; set; } = [];
     public string Description { get; set; } = string.Empty;
     public double Weight { get; set; }
+
+    /// <summary>Campaign the item is created for. Nullable: a cached client without it keeps creating Stormlight items.</summary>
+    public long? CampaignId { get; set; }
+    public double? Price { get; set; }
+    public bool IsRewardOnly { get; set; }
 }
 
 public class CreateArmorRequest
@@ -24,6 +29,11 @@ public class CreateArmorRequest
     public List<int> ExpertTraitIds { get; set; } = [];
     public string Description { get; set; } = string.Empty;
     public double Weight { get; set; }
+
+    /// <summary>Campaign the item is created for. Nullable: a cached client without it keeps creating Stormlight items.</summary>
+    public long? CampaignId { get; set; }
+    public double? Price { get; set; }
+    public bool IsRewardOnly { get; set; }
 }
 
 public class UpdateDescriptionRequest
