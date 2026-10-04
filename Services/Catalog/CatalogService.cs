@@ -15,7 +15,8 @@ public class CatalogService(CosmereContext db) : ICatalogService
             DamageDiceCount = w.DamageDiceCount, DamageDiceValue = w.DamageDiceValue,
             DamageTypeId = w.DamageTypeId, RangeId = w.RangeId,
             TraitIds = w.TraitIds, ExpertTraitIds = w.ExpertTraitIds, IsCustom = w.IsCustom,
-            Description = w.Description, Weight = w.Weight
+            Description = w.Description, Weight = w.Weight,
+            World = w.World, Era = w.Era, IsRewardOnly = w.IsRewardOnly, Price = w.Price
         }).ToListAsync();
 
     public async Task<List<ArmorCatalogResponse>> GetArmorAsync() =>
@@ -23,19 +24,22 @@ public class CatalogService(CosmereContext db) : ICatalogService
         {
             Id = a.Id, Name = a.Name, ArmorTypeId = a.ArmorTypeId, Desvio = a.Desvio,
             TraitIds = a.TraitIds, ExpertTraitIds = a.ExpertTraitIds, IsCustom = a.IsCustom,
-            Description = a.Description, Weight = a.Weight
+            Description = a.Description, Weight = a.Weight,
+            World = a.World, Era = a.Era, IsRewardOnly = a.IsRewardOnly, Price = a.Price
         }).ToListAsync();
 
     public async Task<List<GearItemResponse>> GetGearAsync() =>
         await db.GearItems.Select(g => new GearItemResponse
         {
-            Id = g.Id, Name = g.Name, Weight = g.Weight, Price = g.Price, Description = g.Description
+            Id = g.Id, Name = g.Name, Weight = g.Weight, Price = g.Price, Description = g.Description,
+            World = g.World, Era = g.Era, IsRewardOnly = g.IsRewardOnly, Category = g.Category
         }).ToListAsync();
 
     public async Task<List<CatalogOptionResponse>> GetOptionsByCategory(string category) =>
         await db.CatalogOptions
             .Where(o => o.Category.ToLower() == category.ToLower())
-            .Select(o => new CatalogOptionResponse { Id = o.Id, Name = o.Name, Description = o.Description })
+            .OrderBy(o => o.Id) // M3 rewrites rows with UPDATE, which changes the physical order a query without ORDER BY returns
+            .Select(o => new CatalogOptionResponse { Id = o.Id, Name = o.Name, Description = o.Description, World = o.World })
             .ToListAsync();
 
     public async Task<WeaponCatalogResponse> CreateWeaponAsync(CreateWeaponRequest request)
@@ -54,6 +58,8 @@ public class CatalogService(CosmereContext db) : ICatalogService
             IsCustom = true,
             Description = request.Description,
             Weight = request.Weight,
+            Price = request.Price,
+            IsRewardOnly = request.IsRewardOnly,
         };
         db.WeaponCatalog.Add(entity);
         await db.SaveChangesAsync();
@@ -65,6 +71,7 @@ public class CatalogService(CosmereContext db) : ICatalogService
             DamageTypeId = entity.DamageTypeId, RangeId = entity.RangeId,
             TraitIds = entity.TraitIds, ExpertTraitIds = entity.ExpertTraitIds, IsCustom = entity.IsCustom,
             Description = entity.Description, Weight = entity.Weight,
+            World = entity.World, Era = entity.Era, IsRewardOnly = entity.IsRewardOnly, Price = entity.Price,
         };
     }
 
@@ -80,6 +87,8 @@ public class CatalogService(CosmereContext db) : ICatalogService
             IsCustom = true,
             Description = request.Description,
             Weight = request.Weight,
+            Price = request.Price,
+            IsRewardOnly = request.IsRewardOnly,
         };
         db.ArmorCatalog.Add(entity);
         await db.SaveChangesAsync();
@@ -89,6 +98,7 @@ public class CatalogService(CosmereContext db) : ICatalogService
             ArmorTypeId = entity.ArmorTypeId, Desvio = entity.Desvio,
             TraitIds = entity.TraitIds, ExpertTraitIds = entity.ExpertTraitIds, IsCustom = entity.IsCustom,
             Description = entity.Description, Weight = entity.Weight,
+            World = entity.World, Era = entity.Era, IsRewardOnly = entity.IsRewardOnly, Price = entity.Price,
         };
     }
 

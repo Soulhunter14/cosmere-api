@@ -1,3 +1,5 @@
+using Messages.Worlds;
+
 namespace Messages.Database.Entities;
 
 public class WeaponCatalogEntity
@@ -15,6 +17,12 @@ public class WeaponCatalogEntity
     public bool IsCustom { get; set; }
     public string Description { get; set; } = string.Empty;
     public double Weight { get; set; }
+
+    // World the item belongs to (M3). Era: 1 or 2, null = both eras. Price is in the world's currency (mc | ar), null = none.
+    public string World { get; set; } = WorldIds.Stormlight;
+    public short? Era { get; set; }
+    public bool IsRewardOnly { get; set; }
+    public double? Price { get; set; }
 }
 
 public class ArmorCatalogEntity
@@ -28,6 +36,11 @@ public class ArmorCatalogEntity
     public bool IsCustom { get; set; }
     public string Description { get; set; } = string.Empty;
     public double Weight { get; set; }
+
+    public string World { get; set; } = WorldIds.Stormlight;
+    public short? Era { get; set; }
+    public bool IsRewardOnly { get; set; }
+    public double? Price { get; set; }
 }
 
 public class GearItemEntity
@@ -37,6 +50,11 @@ public class GearItemEntity
     public double Weight { get; set; }
     public double Price { get; set; }
     public string Description { get; set; } = string.Empty;
+
+    public string World { get; set; } = WorldIds.Stormlight;
+    public short? Era { get; set; }
+    public bool IsRewardOnly { get; set; }
+    public string? Category { get; set; } // 'vial' for rare-metal vials; null otherwise
 }
 
 public class CatalogOptionEntity
@@ -45,4 +63,7 @@ public class CatalogOptionEntity
     public required string Category { get; set; } // weapon_type, skill, damage_type, range, weapon_trait, armor_type, armor_trait
     public required string Name { get; set; }
     public string Description { get; set; } = string.Empty;
+
+    // stormlight | mistborn | cosmere (cosmere = shared by every world, WorldIds.Cosmere)
+    public string World { get; set; } = WorldIds.Stormlight;
 }
