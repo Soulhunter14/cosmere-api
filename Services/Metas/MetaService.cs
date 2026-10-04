@@ -3,10 +3,11 @@ using Messages.Database.Entities;
 using Messages.Metas.In;
 using Messages.Metas.Out;
 using Microsoft.EntityFrameworkCore;
+using Services.Worlds;
 
 namespace Services.Metas;
 
-public class MetaService(CosmereContext db) : IMetaService
+public class MetaService(CosmereContext db, IWorldRulesProvider reglas) : IMetaService
 {
     public async Task<List<MetaResponse>> GetMetasAsync(long characterId, long campaignId, long userId)
     {
@@ -62,6 +63,12 @@ public class MetaService(CosmereContext db) : IMetaService
         meta.TipoConclusion = request.TipoConclusion;
         meta.NotasConclusion = request.NotasConclusion;
 
+        // Concluir la meta con cualquier tipo de conclusión da su recompensa (L.284 / PDF 290; Q20): la aplica el mundo de la
+        // campaña (Stormlight no hace nada). La conclusión y el efecto del mundo se guardan juntos, en una sola transacción.
+        var world = await GetWorldRulesAsync(campaignId);
+        var character = await db.Characters.FirstAsync(c => c.Id == characterId);
+        world.AlConcluirMeta(character, meta);
+
         await db.SaveChangesAsync();
         return MapToResponse(meta);
     }
@@ -70,8 +77,21 @@ public class MetaService(CosmereContext db) : IMetaService
     {
         var meta = await GetMetaOrThrowAsync(metaId, characterId, campaignId, userId);
         db.Metas.Remove(meta);
+
+        // Lo que el mundo hubiera enlazado a la meta queda desenlazado (Stormlight no hace nada); se guarda junto al borrado.
+        var world = await GetWorldRulesAsync(campaignId);
+        var character = await db.Characters.FirstAsync(c => c.Id == characterId);
+        world.AlBorrarMeta(character, meta);
+
         await db.SaveChangesAsync();
     }
+
+    /// <summary>Reglas del mundo de la campaña; un mundo nulo o desconocido cae a Stormlight.</summary>
+    private async Task<IWorldRules> GetWorldRulesAsync(long campaignId) =>
+        reglas.Get(await db.Campaigns.AsNoTracking()
+            .Where(c => c.Id == campaignId)
+            .Select(c => c.World)
+            .FirstOrDefaultAsync());
 
     private async Task<MetaEntity> GetMetaOrThrowAsync(long metaId, long characterId, long campaignId, long userId)
     {
