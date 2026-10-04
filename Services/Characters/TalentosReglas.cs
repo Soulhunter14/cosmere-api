@@ -167,23 +167,27 @@ public static class TalentosReglas
     /// Construye un StatDesglose para una stat concreta.
     /// baseLineas son las líneas base (sin talentos) que siempre suman al total.
     /// </summary>
+    /// <param name="reglas">Reglas de talento efectivas del mundo de la campaña (<c>IWorldRules.ReglasTalentos</c>); su orden decide el de las líneas.</param>
+    /// <param name="tieneInvestidura">Si el personaje tiene Investidura según su mundo (<c>IWorldRules.TieneInvestidura</c>); decide <see cref="CondicionRegla.TieneInvestidura"/>.</param>
     public static StatDesglose Calcular(
         StatAfectada stat,
         List<StatLinea> baseLineas,
         CharacterEntity c,
         ContextoJuego ctx,
         List<string> talentos,
+        IReadOnlyDictionary<string, List<ReglaTalento>> reglas,
+        bool tieneInvestidura,
         string? unidad = null,
         List<StatLinea>? situacionalBase = null)
     {
         var lineas      = new List<StatLinea>(baseLineas);
         var situacional = new List<StatLinea>(situacionalBase ?? []);
 
-        foreach (var (nombre, reglas) in Reglas)
+        foreach (var (nombre, rs) in reglas)
         {
             if (!talentos.Contains(nombre)) continue;
 
-            foreach (var regla in reglas.Where(r => r.Stat == stat))
+            foreach (var regla in rs.Where(r => r.Stat == stat))
             {
                 var valor = ComputeValor(regla, c);
                 var linea = new StatLinea
@@ -193,7 +197,7 @@ public static class TalentosReglas
                     DescripcionCondicion = regla.DescripcionCondicion,
                 };
 
-                if (EsActiva(regla, c, ctx))
+                if (EsActiva(regla, c, ctx, tieneInvestidura))
                     lineas.Add(linea);
                 else
                     situacional.Add(linea);
@@ -211,11 +215,11 @@ public static class TalentosReglas
 
     // ── Helpers internos ─────────────────────────────────────────────────────
 
-    private static bool EsActiva(ReglaTalento regla, CharacterEntity c, ContextoJuego ctx) =>
+    private static bool EsActiva(ReglaTalento regla, CharacterEntity c, ContextoJuego ctx, bool tieneInvestidura) =>
         regla.Condicion switch
         {
             CondicionRegla.Siempre          => true,
-            CondicionRegla.TieneInvestidura => !string.IsNullOrEmpty(c.CaminoRadiante),
+            CondicionRegla.TieneInvestidura => tieneInvestidura,
             CondicionRegla.LlevaArmaduraTipo =>
                 !string.IsNullOrEmpty(c.EquippedArmor) &&
                 c.EquippedArmor.Contains(regla.TipoArmadura ?? "", StringComparison.OrdinalIgnoreCase),
@@ -270,4 +274,48 @@ public static class TalentosReglas
         <= 8 => 18.0,
         _    => 24.0,
     };
+
+    // ── Núcleo Cosmere y reglas de Roshar ────────────────────────────────────
+    // El literal Reglas no se edita: sigue siendo la unión de las dos partes. Lo compartido por todos los mundos es
+    // ReglasCosmere; cada mundo aporta sus reglas propias (IWorldRules.ReglasPropias) y usa Efectivas(propias).
+    // Las listas se comparten por referencia y nadie las muta.
+
+    /// <summary>
+    /// Claves de <see cref="Reglas"/> propias de Roshar (cantores, potencias, posturas y reacciones). «Investido» es Cosmere.
+    /// </summary>
+    public static readonly IReadOnlySet<string> ClavesRoshar = new HashSet<string>
+    {
+        "Mente ambiciosa", "Movimiento sin fricción", "Posición de la enredadera", "Posición de la sangre",
+        "Parada de tensión", "Réplica fulminante",
+    };
+
+    /// <summary>Reglas de Roshar: las entradas de <see cref="Reglas"/> cuyas claves están en <see cref="ClavesRoshar"/>.</summary>
+    public static readonly IReadOnlyDictionary<string, List<ReglaTalento>> ReglasRoshar =
+        Reglas.Where(kv => ClavesRoshar.Contains(kv.Key)).ToDictionary(kv => kv.Key, kv => kv.Value);
+
+    /// <summary>
+    /// Núcleo Cosmere: el resto de <see cref="Reglas"/> (Compostura, Robusto, Serenidad, Paso firme, Vestimenta tradicional,
+    /// Presciencia, Investido).
+    /// </summary>
+    public static readonly IReadOnlyDictionary<string, List<ReglaTalento>> ReglasCosmere =
+        Reglas.Where(kv => !ClavesRoshar.Contains(kv.Key)).ToDictionary(kv => kv.Key, kv => kv.Value);
+
+    /// <summary>
+    /// Reglas efectivas de un mundo: recorre <see cref="Reglas"/> en el orden del literal y toma cada clave de las reglas
+    /// propias del mundo o, si no la redefine, del núcleo Cosmere; después añade, en su orden, las propias que no están en el
+    /// literal. El orden del diccionario decide el de las líneas del desglose: <c>Efectivas(ReglasRoshar)</c> reproduce
+    /// <see cref="Reglas"/> clave a clave, con las mismas listas.
+    /// </summary>
+    public static IReadOnlyDictionary<string, List<ReglaTalento>> Efectivas(IReadOnlyDictionary<string, List<ReglaTalento>> propias)
+    {
+        var efectivas = new Dictionary<string, List<ReglaTalento>>();
+        foreach (var nombre in Reglas.Keys)
+        {
+            if (propias.TryGetValue(nombre, out var propia)) efectivas[nombre] = propia;
+            else if (ReglasCosmere.TryGetValue(nombre, out var cosmere)) efectivas[nombre] = cosmere;
+        }
+        foreach (var (nombre, rs) in propias)
+            efectivas.TryAdd(nombre, rs);
+        return efectivas;
+    }
 }
