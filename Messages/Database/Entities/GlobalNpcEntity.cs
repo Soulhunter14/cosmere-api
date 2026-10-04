@@ -1,3 +1,5 @@
+using Messages.Worlds;
+
 namespace Messages.Database.Entities;
 
 public class GlobalNpcEntity
@@ -52,4 +54,7 @@ public class GlobalNpcEntity
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+    // World the adversary belongs to (M5): stormlight | mistborn. The server sets it from the campaign; the client never sends it.
+    public string World { get; set; } = WorldIds.Stormlight;
 }
