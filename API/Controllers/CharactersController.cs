@@ -43,4 +43,17 @@ public class CharactersController(ICharacterService characterService) : Controll
     [HttpPut("{characterId:long}/assign")]
     public async Task<ActionResult<CharacterResponse>> AssignCharacter(long campaignId, long characterId, [FromBody] AssignCharacterRequest request)
         => Ok(await characterService.AssignCharacterAsync(characterId, campaignId, request.OwnerId, JwtHelper.GetUserId(User)));
+
+    // Estado de mesa (T13). Las reglas son del mundo de la campaña; Stormlight responde 400.
+    [HttpPatch("{characterId:long}/recursos")]
+    public async Task<ActionResult<CharacterResponse>> PatchRecursos(long campaignId, long characterId, [FromBody] RecursosRequest request)
+        => Ok(await characterService.PatchRecursosAsync(characterId, campaignId, request, JwtHelper.GetUserId(User)));
+
+    [HttpPost("{characterId:long}/acciones/beber-vial")]
+    public async Task<ActionResult<CharacterResponse>> BeberVial(long campaignId, long characterId, [FromBody] BeberVialRequest request)
+        => Ok(await characterService.BeberVialAsync(characterId, campaignId, request, JwtHelper.GetUserId(User)));
+
+    [HttpPost("{characterId:long}/acciones/inicio-escena")]
+    public async Task<ActionResult<CharacterResponse>> InicioEscena(long campaignId, long characterId, [FromBody] InicioEscenaRequest request)
+        => Ok(await characterService.InicioEscenaAsync(characterId, campaignId, request, JwtHelper.GetUserId(User)));
 }
