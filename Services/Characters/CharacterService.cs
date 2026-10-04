@@ -203,32 +203,62 @@ public class CharacterService(CosmereContext db) : ICharacterService
     // MaxConcentration y MaxInvestiture (bonus manuales) ya no se usan en el cálculo.
     // Los campos se mantienen en BD por compatibilidad pero están deprecados.
 
-    private static List<StatLinea> BuildConcLineas(CharacterEntity c) =>
-    [
-        new() { Concepto = "Base",     Valor = 2 },
-        new() { Concepto = "Voluntad", Valor = c.Voluntad },
-    ];
+    // Los bonos de la forma activa de un cantor (Manual p. 33 del libro: «aumentos de características … de manera
+    // temporal») se aplican a los atributos ANTES de derivar defensas, reservas y movimiento, y se muestran como
+    // una línea «Forma X» en cada desglose.
 
-    private static List<StatLinea> BuildInvLineas(CharacterEntity c)
+    private static string ConceptoForma(string? forma) => $"Forma: {forma}";
+
+    private static List<StatLinea> BuildDefensaLineas(string attr1, int valor1, string attr2, int valor2, int bonoForma, string? forma)
+    {
+        List<StatLinea> lineas =
+        [
+            new() { Concepto = "Base", Valor = 10 },
+            new() { Concepto = attr1,  Valor = valor1 },
+            new() { Concepto = attr2,  Valor = valor2 },
+        ];
+        if (bonoForma != 0) lineas.Add(new() { Concepto = ConceptoForma(forma), Valor = bonoForma });
+        return lineas;
+    }
+
+    private static List<StatLinea> BuildConcLineas(CharacterEntity c, BonosForma fb, string? forma)
+    {
+        List<StatLinea> lineas =
+        [
+            new() { Concepto = "Base",     Valor = 2 },
+            new() { Concepto = "Voluntad", Valor = c.Voluntad },
+        ];
+        // La forma puede subir la Voluntad (→ +1 por punto) y/o dar concentración directa (forma diestra, nocturna: +2).
+        var bono = fb.Voluntad + fb.Concentracion;
+        if (bono != 0) lineas.Add(new() { Concepto = ConceptoForma(forma), Valor = bono });
+        return lineas;
+    }
+
+    private static List<StatLinea> BuildInvLineas(CharacterEntity c, BonosForma fb, string? forma)
     {
         if (string.IsNullOrEmpty(c.CaminoRadiante))
             return [new() { Concepto = "Base", Valor = 0 }];
 
-        var atributo   = c.Discernimiento >= c.Presencia ? "Discernimiento" : "Presencia";
-        var valorAtrib = Math.Max(c.Discernimiento, c.Presencia);
-        return
+        var disEff = c.Discernimiento + fb.Discernimiento;
+        var preEff = c.Presencia + fb.Presencia;
+        var usaDis = disEff >= preEff;
+        List<StatLinea> lineas =
         [
-            new() { Concepto = "Base",   Valor = 2 },
-            new() { Concepto = atributo, Valor = valorAtrib },
+            new() { Concepto = "Base", Valor = 2 },
+            new() { Concepto = usaDis ? "Discernimiento" : "Presencia", Valor = usaDis ? c.Discernimiento : c.Presencia },
         ];
+        var bono = usaDis ? fb.Discernimiento : fb.Presencia;
+        if (bono != 0) lineas.Add(new() { Concepto = ConceptoForma(forma), Valor = bono });
+        return lineas;
     }
 
     /// <summary>
     /// Salud máxima según tabla de progreso (cap. 1, p. 29).
     /// Nivel 1: 10 + FUE. Rangos 2–5: +5/nivel. Rango 6–10: +4/nivel + FUE.
     /// Rango 11–15: +3/nivel + FUE. Rango 16–20: +2/nivel + FUE. 21+: +1/nivel.
+    /// Si la Fuerza cambia (también por una forma), la salud se recalcula con esa misma tabla (p. 54 del libro).
     /// </summary>
-    private static List<StatLinea> BuildSaludLineas(CharacterEntity c)
+    private static List<StatLinea> BuildSaludLineas(CharacterEntity c, BonosForma fb, string? forma)
     {
         int level  = c.Level;
         int fuerza = c.Fuerza;
@@ -242,11 +272,29 @@ public class CharacterService(CosmereContext db) : ICharacterService
         if (level >= 16) { flat += (Math.Min(level, 20) - 15) * 2; fueCount++; }
         if (level >= 21) flat += level - 20;
 
-        return
+        List<StatLinea> lineas =
         [
             new() { Concepto = "Base",   Valor = flat },
             new() { Concepto = fueCount > 1 ? $"Fuerza ×{fueCount}" : "Fuerza", Valor = fueCount * fuerza },
         ];
+        if (fb.Fuerza != 0) lineas.Add(new() { Concepto = ConceptoForma(forma), Valor = fueCount * fb.Fuerza });
+        return lineas;
+    }
+
+    /// <summary>
+    /// Desvío efectivo. El desvío de una forma de cantor «no se acumula al de las armaduras … elige qué valor vas a
+    /// usar» (Manual pp. 33–37 del libro), así que se toma el mayor y el otro queda como línea informativa.
+    /// </summary>
+    private static (List<StatLinea> Lineas, List<StatLinea> Situacional) BuildDesvioLineas(CharacterEntity c, BonosForma fb, string? forma)
+    {
+        var armadura   = new StatLinea { Concepto = string.IsNullOrEmpty(c.EquippedArmor) ? "Base" : $"Armadura: {c.EquippedArmor}", Valor = c.Desvio };
+        if (fb.Desvio <= 0) return ([armadura], []);
+
+        var formaLinea = new StatLinea { Concepto = ConceptoForma(forma), Valor = fb.Desvio };
+        // La línea que no se usa queda como situacional, con la explicación de por qué no suma.
+        var (gana, pierde) = fb.Desvio > c.Desvio ? (formaLinea, armadura) : (armadura, formaLinea);
+        pierde.DescripcionCondicion = "No se acumula: se usa el mayor entre armadura y forma";
+        return ([gana], pierde.Valor > 0 ? [pierde] : []);
     }
 
     private static List<string> ParseTalentos(string? raw)
@@ -260,6 +308,10 @@ public class CharacterService(CosmereContext db) : ICharacterService
     {
         ctx ??= new ContextoJuego();
         var talentos = ParseTalentos(c.Talentos);
+        var forma    = FormasCantor.EsCantor(c.Ascendencia) ? FormasCantor.FormaActiva(talentos) : null;
+        var fb       = FormasCantor.BonosActivos(c.Ascendencia, talentos);
+        var velEff   = c.Velocidad + fb.Velocidad;
+        var desvio   = BuildDesvioLineas(c, fb, forma);
 
         return new CharacterResponse
         {
@@ -280,38 +332,48 @@ public class CharacterService(CosmereContext db) : ICharacterService
             // ── Stats calculadas ──────────────────────────────────────────────
             Concentracion = TalentosReglas.Calcular(
                 StatAfectada.MaxConcentracion,
-                BuildConcLineas(c),
+                BuildConcLineas(c, fb, forma),
                 c, ctx, talentos),
 
             DefensaFisica = TalentosReglas.Calcular(
                 StatAfectada.DefensaFisica,
-                [new() { Concepto = "Base", Valor = 10 }, new() { Concepto = "Fuerza", Valor = c.Fuerza }, new() { Concepto = "Velocidad", Valor = c.Velocidad }],
+                BuildDefensaLineas("Fuerza", c.Fuerza, "Velocidad", c.Velocidad, fb.Fuerza + fb.Velocidad, forma),
                 c, ctx, talentos),
 
             DefensaCognitiva = TalentosReglas.Calcular(
                 StatAfectada.DefensaCognitiva,
-                [new() { Concepto = "Base", Valor = 10 }, new() { Concepto = "Intelecto", Valor = c.Intelecto }, new() { Concepto = "Voluntad", Valor = c.Voluntad }],
+                BuildDefensaLineas("Intelecto", c.Intelecto, "Voluntad", c.Voluntad, fb.Intelecto + fb.Voluntad, forma),
                 c, ctx, talentos),
 
             DefensaEspiritual = TalentosReglas.Calcular(
                 StatAfectada.DefensaEspiritual,
-                [new() { Concepto = "Base", Valor = 10 }, new() { Concepto = "Discernimiento", Valor = c.Discernimiento }, new() { Concepto = "Presencia", Valor = c.Presencia }],
+                BuildDefensaLineas("Discernimiento", c.Discernimiento, "Presencia", c.Presencia, fb.Discernimiento + fb.Presencia, forma),
                 c, ctx, talentos),
 
             Salud = TalentosReglas.Calcular(
                 StatAfectada.MaxSalud,
-                BuildSaludLineas(c),
+                BuildSaludLineas(c, fb, forma),
                 c, ctx, talentos),
 
             Investidura = TalentosReglas.Calcular(
                 StatAfectada.MaxInvestidura,
-                BuildInvLineas(c),
+                BuildInvLineas(c, fb, forma),
                 c, ctx, talentos),
 
+            // El movimiento depende de la Velocidad efectiva (con el bono de la forma, si lo hay).
             Movimiento = TalentosReglas.Calcular(
                 StatAfectada.Movimiento,
-                [new() { Concepto = $"Velocidad ({c.Velocidad})", Valor = TalentosReglas.MovimientoBase(c.Velocidad) }],
+                [new()
+                {
+                    Concepto = fb.Velocidad != 0 ? $"Velocidad ({c.Velocidad} + {fb.Velocidad} de {forma})" : $"Velocidad ({c.Velocidad})",
+                    Valor = TalentosReglas.MovimientoBase(velEff),
+                }],
                 c, ctx, talentos, unidad: "m"),
+
+            DesvioCalculado = TalentosReglas.Calcular(
+                StatAfectada.Desvio,
+                desvio.Lineas,
+                c, ctx, talentos, situacionalBase: desvio.Situacional),
 
             // ── Resto de campos ───────────────────────────────────────────────
             Agilidad = c.Agilidad, ArmasLigeras = c.ArmasLigeras, ArmasPesadas = c.ArmasPesadas,

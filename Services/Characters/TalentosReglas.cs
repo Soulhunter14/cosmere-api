@@ -19,19 +19,21 @@ public enum StatAfectada
 
 public enum TipoFormula
 {
-    Plana,      // valor fijo
-    PorRango,   // ceil(level / 5)  × valor
-    PorNivel,   // level × valor
+    Plana,          // valor fijo
+    PorRango,       // rango (1–5) × valor
+    PorNivel,       // level × valor
+    PorHabilidad,   // grados en la habilidad indicada en Habilidad × valor
 }
 
 public enum CondicionRegla
 {
     Siempre,             // siempre activa → suma al total
-    TieneInvestidura,    // activa si maxInvestiture > 0
+    TieneInvestidura,    // activa si el personaje tiene camino Radiante
     LlevaArmaduraTipo,   // activa si equippedArmor contiene el tipo
     EnCombate,           // activa cuando el toggle "en combate" está ON
     EsPostura,           // requiere activar postura (futuro) → siempre situacional
     EsReaccion,          // se activa como reacción → siempre situacional
+    InfusoAbrasion,      // solo mientras está infundido con Abrasión (gasta Investidura) → siempre situacional
 }
 
 // ── Regla individual ─────────────────────────────────────────────────────────
@@ -43,6 +45,7 @@ public class ReglaTalento
     public double Valor { get; set; } = 1;
     public CondicionRegla Condicion { get; set; } = CondicionRegla.Siempre;
     public string? TipoArmadura { get; set; }           // para LlevaArmaduraTipo
+    public string? Habilidad { get; set; }              // para PorHabilidad (p. ej. "Disciplina")
     public string? DescripcionCondicion { get; set; }   // texto legible para el jugador
 }
 
@@ -94,6 +97,14 @@ public static class TalentosReglas
         // Enviado / Mentor
         ["Presciencia"] = [],   // +1 reacción — no es un stat numérico, se omite por ahora
 
+        // ── Cantores ─────────────────────────────────────────────────────────
+
+        // Manual p. 35 (libro): «Aumenta tu Defensa cognitiva en 2».
+        ["Mente ambiciosa"] =
+        [
+            new() { Stat = StatAfectada.DefensaCognitiva, Formula = TipoFormula.Plana, Valor = 2, Condicion = CondicionRegla.Siempre },
+        ],
+
         // ── Órdenes Radiantes ────────────────────────────────────────────────
 
         ["Investido"] =
@@ -103,13 +114,15 @@ public static class TalentosReglas
 
         // ── Potencias ────────────────────────────────────────────────────────
 
+        // Manual p. 214 (libro): «Mientras estás infundido con Abrasión, tu valor de movimiento aumenta en 3 metros».
+        // Es un efecto temporal que cuesta Investidura, así que nunca suma al total: siempre situacional.
         ["Movimiento sin fricción"] =
         [
             new()
             {
                 Stat = StatAfectada.Movimiento, Formula = TipoFormula.Plana, Valor = 3,
-                Condicion = CondicionRegla.TieneInvestidura,
-                DescripcionCondicion = "Mientras tiene Investidura",
+                Condicion = CondicionRegla.InfusoAbrasion,
+                DescripcionCondicion = "Mientras estás infundido con Abrasión",
             },
         ],
 
@@ -135,9 +148,16 @@ public static class TalentosReglas
             new() { Stat = StatAfectada.DefensaFisica, Formula = TipoFormula.Plana, Valor = 2, Condicion = CondicionRegla.EsReaccion, DescripcionCondicion = "Como reacción a un ataque" },
         ],
 
+        // Manual p. 95 (libro): al usar Desafío inalterable como reacción, «aumenta también tu valor de desvío
+        // contra este ataque en la misma cantidad que tus grados en Disciplina».
         ["Réplica fulminante"] =
         [
-            new() { Stat = StatAfectada.Desvio, Formula = TipoFormula.Plana, Valor = 0, Condicion = CondicionRegla.EsReaccion, DescripcionCondicion = "Añade grados de Disciplina como reacción" },
+            new()
+            {
+                Stat = StatAfectada.Desvio, Formula = TipoFormula.PorHabilidad, Habilidad = "Disciplina",
+                Condicion = CondicionRegla.EsReaccion,
+                DescripcionCondicion = "Contra el ataque al que reaccionas con Desafío inalterable (grados en Disciplina)",
+            },
         ],
     };
 
@@ -153,10 +173,11 @@ public static class TalentosReglas
         CharacterEntity c,
         ContextoJuego ctx,
         List<string> talentos,
-        string? unidad = null)
+        string? unidad = null,
+        List<StatLinea>? situacionalBase = null)
     {
         var lineas      = new List<StatLinea>(baseLineas);
-        var situacional = new List<StatLinea>();
+        var situacional = new List<StatLinea>(situacionalBase ?? []);
 
         foreach (var (nombre, reglas) in Reglas)
         {
@@ -199,17 +220,45 @@ public static class TalentosReglas
                 !string.IsNullOrEmpty(c.EquippedArmor) &&
                 c.EquippedArmor.Contains(regla.TipoArmadura ?? "", StringComparison.OrdinalIgnoreCase),
             CondicionRegla.EnCombate => ctx.EnCombate,
-            _                        => false,  // EsPostura, EsReaccion → siempre situacional
+            _                        => false,  // EsPostura, EsReaccion, InfusoAbrasion → siempre situacional
         };
 
     private static double ComputeValor(ReglaTalento regla, CharacterEntity c) =>
         regla.Formula switch
         {
-            TipoFormula.Plana    => regla.Valor,
-            TipoFormula.PorRango => Math.Ceiling(c.Level / 5.0) * regla.Valor,
-            TipoFormula.PorNivel => c.Level * regla.Valor,
-            _                    => 0,
+            TipoFormula.Plana        => regla.Valor,
+            TipoFormula.PorRango     => Rango(c.Level) * regla.Valor,
+            TipoFormula.PorNivel     => c.Level * regla.Valor,
+            TipoFormula.PorHabilidad => GradosDe(c, regla.Habilidad) * regla.Valor,
+            _                        => 0,
         };
+
+    /// <summary>Rango de juego (Manual p. 24 del libro): niveles 1–5 → 1 … 16–20 → 4, y 21 o más → 5.</summary>
+    public static int Rango(int level) => Math.Clamp((int)Math.Ceiling(level / 5.0), 1, 5);
+
+    /// <summary>Grados del personaje en una habilidad, por su nombre tal y como lo usa el libro.</summary>
+    private static int GradosDe(CharacterEntity c, string? habilidad) => habilidad switch
+    {
+        "Agilidad"         => c.Agilidad,
+        "Armamento ligero" => c.ArmasLigeras,
+        "Armamento pesado" => c.ArmasPesadas,
+        "Atletismo"        => c.Atletismo,
+        "Hurto"            => c.Hurto,
+        "Sigilo"           => c.Sigilo,
+        "Deducción"        => c.Deduccion,
+        "Disciplina"       => c.Disciplina,
+        "Intimidación"     => c.Intimidacion,
+        "Manufactura"      => c.Manufactura,
+        "Medicina"         => c.Medicina,
+        "Saber"            => c.Conocimiento,
+        "Engaño"           => c.Engano,
+        "Liderazgo"        => c.Liderazgo,
+        "Percepción"       => c.Percepcion,
+        "Perspicacia"      => c.Perspicacia,
+        "Persuasión"       => c.Persuasion,
+        "Supervivencia"    => c.Supervivencia,
+        _                  => 0,
+    };
 
     /// <summary>Movimiento base según Velocidad (metros).</summary>
     public static double MovimientoBase(int velocidad) => velocidad switch

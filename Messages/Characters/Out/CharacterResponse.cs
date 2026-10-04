@@ -40,6 +40,8 @@ public class CharacterResponse
     public StatDesglose Salud            { get; set; } = new();
     public StatDesglose Investidura      { get; set; } = new();
     public StatDesglose Movimiento       { get; set; } = new();
+    /// <summary>Desvío efectivo: mayor entre armadura (Desvio) y forma de cantor, más talentos situacionales.</summary>
+    public StatDesglose DesvioCalculado  { get; set; } = new();
     public int MarcosInfusas { get; set; }
     public int MarcosOpacas { get; set; }
 
