@@ -1,3 +1,5 @@
+using Messages.Worlds;
+
 namespace Messages.Database.Entities;
 
 public class CampaignEntity
@@ -8,6 +10,8 @@ public class CampaignEntity
     public required string InviteCode { get; set; }
     public bool InviteActive { get; set; } = true;
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public string World { get; set; } = WorldIds.Stormlight;
+    public string? Era { get; set; }
 
     public UserEntity GmUser { get; set; } = null!;
     public ICollection<CampaignMemberEntity> Members { get; set; } = [];
