@@ -116,7 +116,8 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             request.CaminoHeroico, request.CaminoRadiante,
             request.CaminoMetal ?? character.CaminoMetal, request.CaminoInicial ?? character.CaminoInicial,
             request.Ascendencia, poderes, request.Bendiciones ?? character.Bendiciones,
-            CharacterJson.ParseRecursos(character.Recursos)));
+            CharacterJson.ParseRecursos(character.Recursos),
+            request.Clavos ?? CharacterJson.ParseClavos(character.Clavos)));
 
         // Las reglas del mundo no tienen BD: la meta que enlaza un poder debe ser de este personaje.
         var metaIds = poderes.Where(p => p.MetaId is not null).Select(p => p.MetaId!.Value).Distinct().ToList();
@@ -274,6 +275,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         if (r.Bendiciones is not null) c.Bendiciones = r.Bendiciones;
         if (r.Poderes is not null)
             c.Poderes = CharacterJson.SerializarPoderes(CharacterJson.FusionarPoderes(CharacterJson.ParsePoderes(c.Poderes), r.Poderes));
+        if (r.Clavos is not null) c.Clavos = CharacterJson.SerializarClavos(r.Clavos);
     }
 
     // ── Helpers de cálculo de reservas ───────────────────────────────────────
@@ -405,6 +407,15 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         var velEff   = c.Velocidad + fb.Velocidad;
         var desvio   = BuildDesvioLineas(c, fb, forma, world.DesvioBonoSeAcumula, etiqueta, talentos);
 
+        // Cada desglose lo completa después el mundo con sus líneas propias (T49a: clavos hemalúrgicos en la Defensa espiritual).
+        StatDesglose CalcularDesglose(StatAfectada stat, List<StatLinea> baseLineas, string? unidad = null, List<StatLinea>? situacionalBase = null)
+        {
+            var desglose = TalentosReglas.Calcular(stat, baseLineas, c, ctx, talentos,
+                reglas: world.ReglasTalentos, tieneInvestidura: tieneInv, unidad: unidad, situacionalBase: situacionalBase);
+            world.CompletarDesglose(c, stat, desglose);
+            return desglose;
+        }
+
         var response = new CharacterResponse
         {
             Id = c.Id, CampaignId = c.CampaignId, OwnerId = c.OwnerId,
@@ -422,50 +433,44 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             MarcosInfusas = c.MarcosInfusas, MarcosOpacas = c.MarcosOpacas,
 
             // ── Stats calculadas ──────────────────────────────────────────────
-            Concentracion = TalentosReglas.Calcular(
+            Concentracion = CalcularDesglose(
                 StatAfectada.MaxConcentracion,
-                BuildConcLineas(c, fb, forma, etiqueta),
-                c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv),
+                BuildConcLineas(c, fb, forma, etiqueta)),
 
-            DefensaFisica = TalentosReglas.Calcular(
+            DefensaFisica = CalcularDesglose(
                 StatAfectada.DefensaFisica,
-                BuildDefensaLineas("Fuerza", c.Fuerza, "Velocidad", c.Velocidad, fb.Fuerza + fb.Velocidad, forma, etiqueta),
-                c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv),
+                BuildDefensaLineas("Fuerza", c.Fuerza, "Velocidad", c.Velocidad, fb.Fuerza + fb.Velocidad, forma, etiqueta)),
 
-            DefensaCognitiva = TalentosReglas.Calcular(
+            DefensaCognitiva = CalcularDesglose(
                 StatAfectada.DefensaCognitiva,
-                BuildDefensaLineas("Intelecto", c.Intelecto, "Voluntad", c.Voluntad, fb.Intelecto + fb.Voluntad, forma, etiqueta),
-                c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv),
+                BuildDefensaLineas("Intelecto", c.Intelecto, "Voluntad", c.Voluntad, fb.Intelecto + fb.Voluntad, forma, etiqueta)),
 
-            DefensaEspiritual = TalentosReglas.Calcular(
+            DefensaEspiritual = CalcularDesglose(
                 StatAfectada.DefensaEspiritual,
-                BuildDefensaLineas("Discernimiento", c.Discernimiento, "Presencia", c.Presencia, fb.Discernimiento + fb.Presencia, forma, etiqueta),
-                c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv),
+                BuildDefensaLineas("Discernimiento", c.Discernimiento, "Presencia", c.Presencia, fb.Discernimiento + fb.Presencia, forma, etiqueta)),
 
-            Salud = TalentosReglas.Calcular(
+            Salud = CalcularDesglose(
                 StatAfectada.MaxSalud,
-                BuildSaludLineas(c, fb, forma, etiqueta),
-                c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv),
+                BuildSaludLineas(c, fb, forma, etiqueta)),
 
-            Investidura = TalentosReglas.Calcular(
+            Investidura = CalcularDesglose(
                 StatAfectada.MaxInvestidura,
-                BuildInvLineas(c, fb, forma, tieneInv, etiqueta),
-                c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv),
+                BuildInvLineas(c, fb, forma, tieneInv, etiqueta)),
 
             // El movimiento depende de la Velocidad efectiva (con el bono de la forma, si lo hay).
-            Movimiento = TalentosReglas.Calcular(
+            Movimiento = CalcularDesglose(
                 StatAfectada.Movimiento,
                 [new()
                 {
                     Concepto = fb.Velocidad != 0 ? $"Velocidad ({c.Velocidad} + {fb.Velocidad} de {forma})" : $"Velocidad ({c.Velocidad})",
                     Valor = TalentosReglas.MovimientoBase(velEff),
                 }],
-                c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv, unidad: "m"),
+                unidad: "m"),
 
-            DesvioCalculado = TalentosReglas.Calcular(
+            DesvioCalculado = CalcularDesglose(
                 StatAfectada.Desvio,
                 desvio.Lineas,
-                c, ctx, talentos, reglas: world.ReglasTalentos, tieneInvestidura: tieneInv, situacionalBase: desvio.Situacional),
+                situacionalBase: desvio.Situacional),
 
             // ── Resto de campos ───────────────────────────────────────────────
             Agilidad = c.Agilidad, ArmasLigeras = c.ArmasLigeras, ArmasPesadas = c.ArmasPesadas,
@@ -498,6 +503,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             Poderes = poderes, Recursos = recursos, Bendiciones = c.Bendiciones,
             DerivadosSet = world.Derivar(c, talentos, poderes, fb),
             BonosAtributos = fb.ComoDiccionario(),
+            Clavos = CharacterJson.ParseClavos(c.Clavos),
         };
 
         RecortarEstadoDeMesa(response);

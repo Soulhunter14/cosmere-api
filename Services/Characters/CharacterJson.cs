@@ -4,7 +4,7 @@ using Messages.Characters;
 namespace Services.Characters;
 
 /// <summary>
-/// Lectura y escritura de las columnas JSON del personaje (<c>Poderes</c>, <c>Recursos</c>), compartida por
+/// Lectura y escritura de las columnas JSON del personaje (<c>Poderes</c>, <c>Recursos</c>, <c>Clavos</c>), compartida por
 /// <see cref="CharacterService"/> y las reglas de mundo (mismo ensamblado; <c>MetaService</c> no la usa: delega en los hooks
 /// del mundo). La lectura es tolerante, con el mismo patrón que <c>CharacterService.ParseTalentos</c>: <c>null</c>, <c>""</c>
 /// o JSON inválido devuelven una colección vacía.
@@ -28,9 +28,19 @@ internal static class CharacterJson
         catch { return new(); }
     }
 
+    /// <summary>Clavos hemalúrgicos (T49a): misma tolerancia que <see cref="ParsePoderes"/> ante <c>null</c>, <c>""</c> o JSON inválido.</summary>
+    public static List<ClavoHemalurgico> ParseClavos(string? raw)
+    {
+        if (string.IsNullOrWhiteSpace(raw)) return [];
+        try { return (JsonSerializer.Deserialize<List<ClavoHemalurgico?>>(raw, Json) ?? []).OfType<ClavoHemalurgico>().ToList(); }
+        catch { return []; }
+    }
+
     public static string SerializarPoderes(List<PoderPersonaje> poderes) => JsonSerializer.Serialize(poderes, Json);
 
     public static string SerializarRecursos(Dictionary<string, decimal> recursos) => JsonSerializer.Serialize(recursos, Json);
+
+    public static string SerializarClavos(List<ClavoHemalurgico> clavos) => JsonSerializer.Serialize(clavos, Json);
 
     /// <summary>
     /// Lista de poderes que resulta de un <c>PUT</c> (§5.1). <paramref name="entrantes"/> <c>null</c> conserva la guardada.

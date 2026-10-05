@@ -111,6 +111,53 @@ public static class MistbornData
     };
 
     /// <summary>
+    /// Clavo hemalúrgico de atributo (tabla «Efectos conocidos de los clavos hemalúrgicos», L.291 / PDF 297; recompensa de
+    /// rango 2): cada clavo implantado suma +1 a un atributo y los del mismo metal se acumulan (dos clavos de hierro: Fuerza +2;
+    /// L.288 / PDF 294).
+    /// </summary>
+    public sealed record ClavoAtributo(string Nombre, BonosForma Bono);
+
+    /// <summary>Clavos de atributo por metal: cinc → Voluntad, cobre → Intelecto, estaño → Discernimiento, hierro → Fuerza.</summary>
+    public static readonly IReadOnlyDictionary<string, ClavoAtributo> ClavosAtributo = new Dictionary<string, ClavoAtributo>
+    {
+        ["cinc"]   = new("Clavo de cinc",   new BonosForma(Voluntad: 1)),
+        ["cobre"]  = new("Clavo de cobre",  new BonosForma(Intelecto: 1)),
+        ["estano"] = new("Clavo de estaño", new BonosForma(Discernimiento: 1)),
+        ["hierro"] = new("Clavo de hierro", new BonosForma(Fuerza: 1)),
+    };
+
+    /// <summary>
+    /// Clavo hemalúrgico de poder (L.291 / PDF 297; recompensa de rango 3): otorga un poder de <see cref="Arte"/> a elegir entre
+    /// los cuatro de <see cref="Poderes"/> (ids <c>"{arte}:{metal}"</c>).
+    /// </summary>
+    public sealed record ClavoPoder(string Nombre, string Arte, IReadOnlyList<string> Poderes);
+
+    /// <summary>
+    /// Clavos de poder por metal: acero, bronce, cadmio y electro dan un poder alomántico (físico, mental, temporal y de mejora);
+    /// peltre, latón, oro y bendaleo, uno feruquímico (físico, cognitivo, híbrido y espiritual).
+    /// </summary>
+    public static readonly IReadOnlyDictionary<string, ClavoPoder> ClavosPoder = new Dictionary<string, ClavoPoder>
+    {
+        ["acero"]    = new("Clavo de acero",    Alomancia,  ["alomancia:hierro", "alomancia:peltre", "alomancia:acero", "alomancia:estano"]),
+        ["bronce"]   = new("Clavo de bronce",   Alomancia,  ["alomancia:laton", "alomancia:bronce", "alomancia:cobre", "alomancia:cinc"]),
+        ["cadmio"]   = new("Clavo de cadmio",   Alomancia,  ["alomancia:bendaleo", "alomancia:cadmio", "alomancia:electro", "alomancia:oro"]),
+        ["electro"]  = new("Clavo de electro",  Alomancia,  ["alomancia:aluminio", "alomancia:cromo", "alomancia:duraluminio", "alomancia:nicrosil"]),
+        ["peltre"]   = new("Clavo de peltre",   Feruquimia, ["feruquimia:hierro", "feruquimia:peltre", "feruquimia:acero", "feruquimia:estano"]),
+        ["laton"]    = new("Clavo de latón",    Feruquimia, ["feruquimia:laton", "feruquimia:bronce", "feruquimia:cobre", "feruquimia:cinc"]),
+        ["oro"]      = new("Clavo de oro",      Feruquimia, ["feruquimia:bendaleo", "feruquimia:cadmio", "feruquimia:electro", "feruquimia:oro"]),
+        ["bendaleo"] = new("Clavo de bendaleo", Feruquimia, ["feruquimia:aluminio", "feruquimia:cromo", "feruquimia:duraluminio", "feruquimia:nicrosil"]),
+    };
+
+    /// <summary>Los 12 metales con clavo hemalúrgico; el atium y los metales divinos no tienen (L.291 / PDF 297).</summary>
+    public static bool EsMetalDeClavo(string metal) => ClavosAtributo.ContainsKey(metal) || ClavosPoder.ContainsKey(metal);
+
+    /// <summary>Nombre visible del clavo de un metal: concepto de sus líneas en los desgloses.</summary>
+    public static string NombreClavo(string metal) =>
+        ClavosAtributo.TryGetValue(metal, out var atributo) ? atributo.Nombre
+        : ClavosPoder.TryGetValue(metal, out var poder) ? poder.Nombre
+        : $"Clavo de {metal}";
+
+    /// <summary>
     /// Reglas de talento propias del mundo (<c>IWorldRules.ReglasPropias</c>), que <see cref="TalentosReglas.Efectivas"/> combina
     /// con el núcleo Cosmere. Solo las de Scadrial: las listas del núcleo se comparten por referencia y nadie las muta.
     /// </summary>

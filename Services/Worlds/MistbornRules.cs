@@ -10,8 +10,9 @@ namespace Services.Worlds;
 
 /// <summary>
 /// Reglas del mundo «Nacidos de la bruma» (Scadrial): validación de la identidad (§5.3), bloqueo de los cambios de un jugador no
-/// GM (Q6, Q16), condición de Investidura, Resistencia koloss, Bendiciones kandra y talentos de atributo como bonos, derivados de
-/// las artes metálicas (<c>DerivadosSet</c>) y acciones de mesa (<c>PATCH recursos</c>, Beber vial e inicio de escena: T13). Las
+/// GM (Q6, Q16), condición de Investidura, Resistencia koloss, Bendiciones kandra, talentos de atributo y clavos hemalúrgicos de
+/// atributo como bonos, derivados de las artes metálicas (<c>DerivadosSet</c>), acciones de mesa (<c>PATCH recursos</c>, Beber vial
+/// e inicio de escena: T13) y hemalurgia en la ficha (T49a: clavos, su límite y la perturbación de la Defensa espiritual). Las
 /// listas viven en <see cref="MistbornData"/> y la tabla de progresión en <see cref="ArtesMetalicas"/>.
 /// </summary>
 public sealed class MistbornRules : IWorldRules
@@ -25,6 +26,10 @@ public sealed class MistbornRules : IWorldRules
     private const string ClaveArquillas = "arquillas";
     private const string ClaveCargasMaxArte = "feruquimia.cargasMax";
     private const string Atium = "atium";
+
+    // Hemalurgia (T49a): tantos clavos implantados como el rango, máximo 3 (L.289 / PDF 295).
+    private const int MaxClavos = 3;
+    private const string ConceptoGradoClavo = "Clavo hemalúrgico (poder existente)";
 
     public string Id => WorldIds.Mistborn;
 
@@ -108,6 +113,22 @@ public sealed class MistbornRules : IWorldRules
         if (id.Bendiciones.Count > 0 && id.Ascendencia != MistbornData.Kandra)
             throw new ArgumentException($"Invalid Bendiciones for Ascendencia '{id.Ascendencia}': only a kandra has blessings.");
 
+        // Clavos hemalúrgicos (T49a; L.288-291 / PDF 294-297): el metal es uno de los 12 de la tabla y el poder elegido, si lo hay,
+        // es uno de los cuatro de su metal; un clavo de atributo no otorga poder. Sin tope de clavos: el límite (rango, máximo 3)
+        // lo aconseja el cliente con hemalurgia.clavosMax (P6), como los presupuestos.
+        foreach (var clavo in id.Clavos ?? [])
+        {
+            if (clavo is null)
+                throw new ArgumentException("Invalid Clavos: null entry.");
+            if (clavo.MetalClavo is null || !MistbornData.EsMetalDeClavo(clavo.MetalClavo))
+                throw new ArgumentException($"Invalid MetalClavo in clavos: '{clavo.MetalClavo}'.");
+            if (string.IsNullOrEmpty(clavo.PoderElegido)) continue;
+            if (!MistbornData.ClavosPoder.TryGetValue(clavo.MetalClavo, out var tipo))
+                throw new ArgumentException($"Invalid PoderElegido for MetalClavo '{clavo.MetalClavo}': '{clavo.PoderElegido}' (an attribute spike grants no power).");
+            if (!tipo.Poderes.Contains(clavo.PoderElegido))
+                throw new ArgumentException($"Invalid PoderElegido for MetalClavo '{clavo.MetalClavo}': '{clavo.PoderElegido}'.");
+        }
+
         foreach (var (clave, valor) in id.Recursos)
         {
             if (!RecursosPermitidos.Contains(clave))
@@ -122,12 +143,14 @@ public sealed class MistbornRules : IWorldRules
     /// <c>CaminoMetal</c> y <c>CaminoInicial</c> solo los cambia el director (Q6, Q7); la primera Bendición la fija el jugador y
     /// cualquier otro cambio es del director (Q16; la segunda es una recompensa de rango 3, L.35 / PDF 41); un no-GM no añade ni
     /// quita poderes (clavos, aleación de lerasium y medallones son recompensas del DJ, L.288 / PDF 294): los guardados que falten
-    /// en su lista (copia cacheada de Bolsa o Talentos) se reinyectan y de los existentes solo cambia <c>MetaId</c>.
+    /// en su lista (copia cacheada de Bolsa o Talentos) se reinyectan y de los existentes solo cambia <c>MetaId</c>. Los clavos
+    /// hemalúrgicos (T49a) también son una recompensa del DJ: se ignoran los del cuerpo y se conservan los guardados.
     /// </summary>
     public void RestringirCambiosNoGm(UpdateCharacterRequest request, CharacterEntity character)
     {
         request.CaminoMetal = character.CaminoMetal;
         request.CaminoInicial = character.CaminoInicial;
+        request.Clavos = null;
 
         if (character.Bendiciones.Count > 0) request.Bendiciones = null;
         else if (request.Bendiciones is { Count: > 1 }) throw new UnauthorizedAccessException("Only the GM can grant a second blessing.");
@@ -434,17 +457,18 @@ public sealed class MistbornRules : IWorldRules
         || poderes.Any(p => p.Arte == MistbornData.Alomancia && (p.Origen is "clavo" or "lerasium"));
 
     /// <summary>
-    /// Bonos permanentes de atributo: Bendiciones kandra (L.34-35 / PDF 40-41), Tamaño desmedido (L.39 / PDF 45) y Guardián del
-    /// conocimiento (L.229 / PDF 235). El origen (concepto de las líneas de bono) es el nombre de cada fuente, separados por «, ».
+    /// Bonos permanentes de atributo: Bendiciones kandra (L.34-35 / PDF 40-41), Tamaño desmedido (L.39 / PDF 45), Guardián del
+    /// conocimiento (L.229 / PDF 235) y clavos hemalúrgicos de atributo implantados (+1 por clavo, acumulables por metal;
+    /// L.288 y L.291 / PDF 294 y 297). El origen (concepto de las líneas de bono) es el nombre de cada fuente, separados por «, ».
     /// </summary>
     public BonosForma BonosAtributos(CharacterEntity c, IReadOnlyList<string> talentos, out string? origen)
     {
         int fuerza = 0, velocidad = 0, intelecto = 0, voluntad = 0, discernimiento = 0, presencia = 0, desvio = 0;
         var fuentes = new List<string>();
-        void Sumar(string nombre, BonosForma b)
+        void Sumar(string nombre, BonosForma b, int veces = 1)
         {
-            fuerza += b.Fuerza; velocidad += b.Velocidad; intelecto += b.Intelecto; voluntad += b.Voluntad;
-            discernimiento += b.Discernimiento; presencia += b.Presencia; desvio += b.Desvio;
+            fuerza += b.Fuerza * veces; velocidad += b.Velocidad * veces; intelecto += b.Intelecto * veces; voluntad += b.Voluntad * veces;
+            discernimiento += b.Discernimiento * veces; presencia += b.Presencia * veces; desvio += b.Desvio * veces;
             fuentes.Add(nombre);
         }
 
@@ -455,6 +479,15 @@ public sealed class MistbornRules : IWorldRules
         foreach (var (talento, bonos) in MistbornData.TalentosConBonoAtributo)
         {
             if (talentos.Contains(talento)) Sumar(talento, bonos);
+        }
+        // Clavos de atributo implantados (T49a): cinc Voluntad, cobre Intelecto, estaño Discernimiento y hierro Fuerza, +1 cada
+        // uno; los del mismo metal se acumulan (dos clavos de hierro: Fuerza +2; L.288 / PDF 294). Un clavo de poder no sube ningún
+        // atributo.
+        foreach (var grupo in ClavosImplantados(c).Where(k => MistbornData.ClavosAtributo.ContainsKey(k.MetalClavo)).GroupBy(k => k.MetalClavo))
+        {
+            var tipo = MistbornData.ClavosAtributo[grupo.Key];
+            var cantidad = grupo.Count();
+            Sumar(cantidad > 1 ? $"{tipo.Nombre} ×{cantidad}" : tipo.Nombre, tipo.Bono, cantidad);
         }
 
         origen = fuentes.Count > 0 ? string.Join(", ", fuentes) : null;
@@ -484,12 +517,18 @@ public sealed class MistbornRules : IWorldRules
         var feruquimia = gradosFeruquimia is not null || MistbornData.CaminosFeruquimicos.Contains(c.CaminoMetal)
                          || poderes.Any(p => p.Arte == MistbornData.Feruquimia);
 
+        // Hemalurgia (T49a): los clavos implantados que otorgan un poder que el personaje ya tenía suman un grado por arte.
+        var clavos = CharacterJson.ParseClavos(c.Clavos);
+        var gradosClavo = GradosExtraPorClavos(clavos, poderes);
+        gradosClavo.TryGetValue(MistbornData.Alomancia, out var clavoAlomancia);
+        gradosClavo.TryGetValue(MistbornData.Feruquimia, out var clavoFeruquimia);
+
         // Portentoso: un grado más solo para el alcance de los poderes alománticos (L.136 / PDF 142).
         if (alomancia)
-            ArteDerivada(d, MistbornData.Alomancia, "Alomancia", gradosAlomancia ?? 0, c.Voluntad, "Voluntad", fb.Voluntad,
+            ArteDerivada(d, MistbornData.Alomancia, "Alomancia", gradosAlomancia ?? 0, clavoAlomancia, c.Voluntad, "Voluntad", fb.Voluntad,
                 etiqueta, rango, gradoExtraAlcance: talentos.Contains("Portentoso"));
         if (feruquimia)
-            ArteDerivada(d, MistbornData.Feruquimia, "Feruquimia", gradosFeruquimia ?? 0, c.Intelecto, "Intelecto", fb.Intelecto,
+            ArteDerivada(d, MistbornData.Feruquimia, "Feruquimia", gradosFeruquimia ?? 0, clavoFeruquimia, c.Intelecto, "Intelecto", fb.Intelecto,
                 etiqueta, rango, gradoExtraAlcance: false);
 
         // Cargas máximas de cada mente de metal: 2 + grados en Feruquimia (L.131 / PDF 137) + rango con Mentes de metal
@@ -499,6 +538,7 @@ public sealed class MistbornRules : IWorldRules
             new() { Concepto = "Base", Valor = 2 },
             new() { Concepto = "Grados en Feruquimia", Valor = gradosFeruquimia ?? 0 },
         ];
+        if (clavoFeruquimia != 0) cargas.Add(LineaGradoClavo(clavoFeruquimia));
         if (talentos.Contains("Mentes de metal ampliadas")) cargas.Add(new() { Concepto = "Mentes de metal ampliadas", Valor = rango });
         if (feruquimia) d[ClaveCargasMaxArte] = Desglose(Copia(cargas));
 
@@ -522,37 +562,128 @@ public sealed class MistbornRules : IWorldRules
             d["feruquimia.mentesALaVez"] = Desglose(mentes);
         }
 
+        // Hemalurgia (T49a): tantos clavos implantados como el rango, máximo 3 (L.289 / PDF 295); solo si el personaje tiene algún clavo.
+        if (clavos.Count > 0)
+            d["hemalurgia.clavosMax"] = Desglose([new()
+            {
+                Concepto = rango > MaxClavos ? $"Rango (máximo {MaxClavos})" : "Rango",
+                Valor = Math.Min(rango, MaxClavos),
+            }]);
+
         return d;
     }
 
-    /// <summary>Modificador, límite, dado y alcance de un arte (L.128 / PDF 134; L.163 / PDF 169).</summary>
-    private static void ArteDerivada(Dictionary<string, StatDesglose> d, string arte, string nombreArte, int grados, int atributo,
-        string nombreAtributo, int bonoAtributo, string etiquetaBono, int rango, bool gradoExtraAlcance)
+    /// <summary>
+    /// Hemalurgia en la Defensa espiritual (L.290 / PDF 296): cada clavo implantado perturba la redespíritu, así que el primer
+    /// clavo de cada metal reduce la Defensa espiritual en 2 y los adicionales del mismo metal, en 5 (una línea por clavo, de
+    /// atributo o de poder). Al inicio de cada escena, con al menos un clavo y una Defensa espiritual de 9 o menos, el personaje
+    /// queda Desorientado hasta el final de la escena: línea situacional, sin efecto en el total. Los demás desgloses no cambian.
+    /// Las Bendiciones kandra no son clavos de la lista, así que no perturban nada (L.291 / PDF 297: sin otros clavos tampoco lo
+    /// hacen); su interacción con otros clavos no se modela en v1.
+    /// </summary>
+    public void CompletarDesglose(CharacterEntity c, StatAfectada stat, StatDesglose d)
+    {
+        if (stat != StatAfectada.DefensaEspiritual) return;
+        var clavos = ClavosImplantados(c);
+        if (clavos.Count == 0) return;
+
+        var porMetal = new Dictionary<string, int>();
+        foreach (var clavo in clavos)
+        {
+            var orden = porMetal[clavo.MetalClavo] = porMetal.GetValueOrDefault(clavo.MetalClavo) + 1;
+            var nombre = MistbornData.NombreClavo(clavo.MetalClavo);
+            d.Lineas.Add(orden == 1
+                ? new StatLinea
+                {
+                    Concepto = $"{nombre}: redespíritu perturbada", Valor = -2,
+                    DescripcionCondicion = "El primer clavo de cada metal reduce la Defensa espiritual en 2 (L.290 / PDF 296)",
+                }
+                : new StatLinea
+                {
+                    Concepto = $"{nombre} adicional: redespíritu perturbada", Valor = -5,
+                    DescripcionCondicion = "Cada clavo adicional del mismo metal la reduce en 5 (L.290 / PDF 296)",
+                });
+        }
+        d.Total = d.Lineas.Sum(l => l.Valor);
+
+        if (d.Total <= 9)
+            d.Situacional.Add(new StatLinea
+            {
+                Concepto = "Desorientado al inicio de escena", Valor = 0,
+                DescripcionCondicion = "Con al menos un clavo y Defensa espiritual 9 o menos, quedas Desorientado hasta el final de la escena (L.290 / PDF 296)",
+            });
+    }
+
+    /// <summary>
+    /// Clavos implantados del personaje, en el orden de la lista: un clavo extraído conserva sus datos pero sus efectos terminan
+    /// (L.290 / PDF 296). El clavo secreto (L.289 / PDF 295) es solo informativo en v1 y cuenta como cualquier otro.
+    /// </summary>
+    private static List<ClavoHemalurgico> ClavosImplantados(CharacterEntity c) =>
+        CharacterJson.ParseClavos(c.Clavos).Where(k => k.Implantado && k.MetalClavo is not null).ToList();
+
+    /// <summary>
+    /// «Poder existente» (L.290 / PDF 296): un clavo implantado que otorga un poder que el personaje ya tenía da un grado adicional
+    /// en la habilidad de su arte, que no cuenta para el máximo de grados (por eso se suma al derivar y no se guarda en el hueco de
+    /// la habilidad). El primer clavo que elige un poder de origen «clavo» es el que lo otorga; los demás, y todo clavo que elige un
+    /// poder de otro origen (camino, aleación de lerasium, medallón), dan el grado. Un clavo cuyo poder no figura en
+    /// <paramref name="poderes"/> no da nada [inferido: el cliente envía el poder junto al clavo, T49b]. Devuelve los grados por arte.
+    /// </summary>
+    private static Dictionary<string, int> GradosExtraPorClavos(IReadOnlyList<ClavoHemalurgico> clavos, IReadOnlyList<PoderPersonaje> poderes)
+    {
+        var extra = new Dictionary<string, int>();
+        foreach (var grupo in clavos.Where(k => k.Implantado && !string.IsNullOrEmpty(k.PoderElegido)).GroupBy(k => k.PoderElegido!))
+        {
+            var poder = poderes.FirstOrDefault(p => $"{p.Arte}:{p.Metal}" == grupo.Key);
+            if (poder is null) continue;
+            var grados = poder.Origen == "clavo" ? grupo.Count() - 1 : grupo.Count();
+            if (grados > 0) extra[poder.Arte] = extra.GetValueOrDefault(poder.Arte) + grados;
+        }
+        return extra;
+    }
+
+    private static StatLinea LineaGradoClavo(int grados) => new()
+    {
+        Concepto = ConceptoGradoClavo, Valor = grados,
+        DescripcionCondicion = "Un grado adicional que no cuenta para el máximo de grados (L.290 / PDF 296)",
+    };
+
+    /// <summary>
+    /// Modificador, límite, dado y alcance de un arte (L.128 / PDF 134; L.163 / PDF 169). <paramref name="gradosClavo"/> son los
+    /// grados adicionales de clavos que otorgan un poder que el personaje ya tenía (L.290 / PDF 296): cuentan para todo lo derivado,
+    /// pero no para el máximo de grados (no se guardan en el hueco de la habilidad).
+    /// </summary>
+    private static void ArteDerivada(Dictionary<string, StatDesglose> d, string arte, string nombreArte, int grados, int gradosClavo,
+        int atributo, string nombreAtributo, int bonoAtributo, string etiquetaBono, int rango, bool gradoExtraAlcance)
     {
         var gradosConcepto = $"Grados en {nombreArte}";
+        var efectivos = grados + gradosClavo;
 
-        List<StatLinea> modificador =
-        [
-            new() { Concepto = gradosConcepto, Valor = grados },
-            new() { Concepto = nombreAtributo, Valor = atributo },
-        ];
+        List<StatLinea> modificador = [new() { Concepto = gradosConcepto, Valor = grados }];
+        if (gradosClavo != 0) modificador.Add(LineaGradoClavo(gradosClavo));
+        modificador.Add(new() { Concepto = nombreAtributo, Valor = atributo });
         if (bonoAtributo != 0) modificador.Add(new() { Concepto = etiquetaBono, Valor = bonoAtributo, EsBono = true });
         d[$"{arte}.modificador"] = Desglose(modificador);
 
-        var fila = ArtesMetalicas.Progresion(grados, rango);
+        var fila = ArtesMetalicas.Progresion(efectivos, rango);
         // El límite son los grados (mínimo 1); con 6 o más, «igual al rango».
-        StatLinea limite = grados >= 6 ? new() { Concepto = "Rango", Valor = rango }
-            : grados <= 0 ? new() { Concepto = "Mínimo", Valor = 1 }
-            : new() { Concepto = gradosConcepto, Valor = grados };
-        d[$"{arte}.limite"] = Desglose([limite]);
+        List<StatLinea> limite;
+        if (efectivos >= 6) limite = [new() { Concepto = "Rango", Valor = rango }];
+        else if (efectivos <= 0) limite = [new() { Concepto = "Mínimo", Valor = 1 }];
+        else
+        {
+            limite = [];
+            if (grados != 0) limite.Add(new() { Concepto = gradosConcepto, Valor = grados });
+            if (gradosClavo != 0) limite.Add(LineaGradoClavo(gradosClavo));
+        }
+        d[$"{arte}.limite"] = Desglose(limite);
 
         // Total = caras del dado (1 = «sin tirada»); el cliente lo pinta como d{total} o «—».
         d[$"{arte}.dado"] = Desglose([new() { Concepto = "Dado de artes metálicas", Valor = fila.DadoCaras }], "d");
 
-        List<StatLinea> alcance = [new() { Concepto = $"{gradosConcepto} ({grados})", Valor = fila.AlcanceMetros }];
+        List<StatLinea> alcance = [new() { Concepto = $"{gradosConcepto} ({efectivos})", Valor = fila.AlcanceMetros }];
         if (gradoExtraAlcance)
         {
-            var extra = ArtesMetalicas.Progresion(grados + 1, rango).AlcanceMetros - fila.AlcanceMetros;
+            var extra = ArtesMetalicas.Progresion(efectivos + 1, rango).AlcanceMetros - fila.AlcanceMetros;
             if (extra != 0) alcance.Add(new() { Concepto = "Portentoso", Valor = extra });
         }
         d[$"{arte}.alcance"] = Desglose(alcance, "m");
