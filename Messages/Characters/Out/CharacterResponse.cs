@@ -107,6 +107,8 @@ public class CharacterResponse
     public Dictionary<string, StatDesglose> DerivadosSet { get; set; } = new();
     /// <summary>Bonos de atributo sin ceros (claves <c>fuerza</c> … <c>presencia</c>; <c>IWorldRules.BonosAtributos</c>, desde T12).</summary>
     public Dictionary<string, int> BonosAtributos { get; set; } = new();
+    /// <summary>Clavos hemalúrgicos guardados (T49a); <c>[]</c> en Stormlight y en un personaje sin clavos.</summary>
+    public List<ClavoHemalurgico> Clavos { get; set; } = [];
 
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }

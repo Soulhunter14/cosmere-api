@@ -10,7 +10,7 @@ namespace Services.Worlds;
 /// <summary>
 /// Identidad efectiva de un personaje que valida cada mundo (§5.3). Enumera los campos de identidad de los dos mundos
 /// (Stormlight: <c>CaminoRadiante</c>; Nacidos de la bruma: <c>CaminoMetal</c>, <c>CaminoInicial</c>, <c>Poderes</c>,
-/// <c>Bendiciones</c>, <c>Recursos</c>). Sin BD: la existencia de <c>MetaId</c> la comprueba
+/// <c>Bendiciones</c>, <c>Recursos</c> y, desde T49a, <c>Clavos</c>). Sin BD: la existencia de <c>MetaId</c> la comprueba
 /// <c>CharacterService.UpdateCharacterAsync</c>.
 /// </summary>
 public sealed record IdentidadPersonaje(
@@ -21,7 +21,8 @@ public sealed record IdentidadPersonaje(
     string Ascendencia,
     IReadOnlyList<PoderPersonaje> Poderes,
     IReadOnlyList<string> Bendiciones,
-    IReadOnlyDictionary<string, decimal> Recursos);
+    IReadOnlyDictionary<string, decimal> Recursos,
+    IReadOnlyList<ClavoHemalurgico>? Clavos = null);
 
 /// <summary>
 /// Reglas de un mundo (ambientación) de campaña. Lo compartido es Cosmere y vive en el núcleo (<c>CharacterService</c>,
@@ -62,7 +63,7 @@ public interface IWorldRules
     /// <summary>
     /// Bloqueo no-GM propio del mundo en el <c>PUT</c> (§5.2), tras el del núcleo (<c>Name</c> y <c>CaminoHeroico</c>):
     /// Stormlight conserva <c>CaminoRadiante</c>; Nacidos de la bruma, <c>CaminoMetal</c>, <c>CaminoInicial</c>,
-    /// <c>Bendiciones</c> y la reinyección de poderes.
+    /// <c>Bendiciones</c>, <c>Clavos</c> (T49a) y la reinyección de poderes.
     /// </summary>
     void RestringirCambiosNoGm(UpdateCharacterRequest request, CharacterEntity character);
 
@@ -102,6 +103,14 @@ public interface IWorldRules
 
     /// <summary>Derivados propios del mundo (<c>CharacterResponse.DerivadosSet</c>; Stormlight: vacío).</summary>
     Dictionary<string, StatDesglose> Derivar(CharacterEntity c, IReadOnlyList<string> talentos, IReadOnlyList<PoderPersonaje> poderes, BonosForma fb);
+
+    /// <summary>
+    /// Completa un desglose ya calculado por el motor de talentos (<c>TalentosReglas.Calcular</c>, llamado tras cada cálculo de
+    /// <c>MapToResponse</c>) con líneas propias del mundo que no son reglas de talento (T49a). Nacidos de la bruma añade a la
+    /// Defensa espiritual las líneas de los clavos hemalúrgicos, recalcula el <c>Total</c> y la línea situacional «Desorientado al
+    /// inicio de escena»; Stormlight no hace nada.
+    /// </summary>
+    void CompletarDesglose(CharacterEntity c, StatAfectada stat, StatDesglose d);
 }
 
 /// <summary>Acciones de mesa (§5.2): el núcleo solo las encamina a <see cref="IWorldRules.AplicarAccionMesa"/>.</summary>

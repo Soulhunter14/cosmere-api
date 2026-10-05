@@ -66,7 +66,7 @@ public sealed class StormlightRules : IWorldRules
             throw new ArgumentException($"Invalid CaminoMetal: '{id.CaminoMetal}'.");
         if (!string.IsNullOrEmpty(id.CaminoInicial))
             throw new ArgumentException($"Invalid CaminoInicial: '{id.CaminoInicial}'.");
-        if (id.Poderes.Count > 0 || id.Bendiciones.Count > 0 || id.Recursos.Count > 0)
+        if (id.Poderes.Count > 0 || id.Bendiciones.Count > 0 || id.Recursos.Count > 0 || id.Clavos is { Count: > 0 })
             throw new ArgumentException("This world has no metalborn data.");
     }
 
@@ -97,4 +97,7 @@ public sealed class StormlightRules : IWorldRules
     public string EtiquetaBono(string? origen) => $"Forma: {origen}";
 
     public Dictionary<string, StatDesglose> Derivar(CharacterEntity c, IReadOnlyList<string> talentos, IReadOnlyList<PoderPersonaje> poderes, BonosForma fb) => new();
+
+    /// <summary>Sin líneas propias del mundo: el desglose queda tal como lo calculó el motor de talentos (T49a).</summary>
+    public void CompletarDesglose(CharacterEntity c, StatAfectada stat, StatDesglose d) { }
 }

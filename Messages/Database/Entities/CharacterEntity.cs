@@ -26,6 +26,7 @@ public class CharacterEntity
     public string Poderes { get; set; } = "[]";                 // JSON (camelCase) de List<PoderPersonaje>
     public string Recursos { get; set; } = "{}";                // JSON de Dictionary<string, decimal>
     public List<string> Bendiciones { get; set; } = [];         // ids de Bendición kandra
+    public string Clavos { get; set; } = "[]";                  // JSON (camelCase) de List<ClavoHemalurgico> (hemalurgia, T49a)
 
     // Core Attributes (0-5)
     public int Fuerza { get; set; } = 0;

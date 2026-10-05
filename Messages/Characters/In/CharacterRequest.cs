@@ -105,4 +105,10 @@ public class UpdateCharacterRequest
     public string? CaminoInicial { get; set; }
     public List<PoderPersonaje>? Poderes { get; set; }
     public List<string>? Bendiciones { get; set; }
+
+    // Hemalurgia (T49a): null = conservar los clavos guardados. Los clavos son una recompensa del DJ (L.288 / PDF 294): en Nacidos
+    // de la bruma solo los escribe el director (el servidor ignora los de un jugador no GM) y Stormlight no admite ninguno (400 si
+    // la lista no está vacía). El poder de un clavo de poder viaja en Poderes con Origen = "clavo" (el servidor lo normaliza a
+    // completo).
+    public List<ClavoHemalurgico>? Clavos { get; set; }
 }

@@ -249,5 +249,8 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
 
         // Global NPCs (M5, AddWorldToGlobalNpcs): the adversaries already stored (Caminapiedras) stay on Stormlight.
         modelBuilder.Entity<GlobalNpcEntity>().Property(n => n.World).HasDefaultValue(WorldIds.Stormlight);
+
+        // Hemalurgia (M6, AddCharacterClavos): existing characters have no hemalurgic spikes.
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.Clavos).HasDefaultValue("[]");
     }
 }
