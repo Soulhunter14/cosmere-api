@@ -1,5 +1,6 @@
 using Infrastructure.Data;
 using Messages.Database.Entities;
+using Messages.Proposals;
 using Messages.Proposals.In;
 using Messages.Proposals.Out;
 using Microsoft.EntityFrameworkCore;
@@ -27,16 +28,22 @@ public class ProposalService(CosmereContext db) : IProposalService
     {
         await EnsureGmAsync(campaignId, userId);
 
-        if (request.ProposedDates.Count == 0)
+        // Slots win over plain dates; older clients only send plain dates (no slot).
+        var slots = request.ProposedSlots
+            ?? request.ProposedDates.Select(d => new ProposedSlotRequest { Date = d }).ToList();
+
+        if (slots.Count == 0)
             throw new ArgumentException("At least one proposed date is required.");
+        if (slots.Any(s => !ProposalSlots.IsValid(s.Slot)))
+            throw new ArgumentException("Unknown proposal slot.");
 
         var proposal = new SessionProposalEntity
         {
             CampaignId = campaignId,
             Title = request.Title,
             Notes = request.Notes,
-            ProposedDates = request.ProposedDates
-                .Select(d => new ProposalDateEntity { ProposedDate = d.ToUniversalTime() })
+            ProposedDates = slots
+                .Select(s => new ProposalDateEntity { ProposedDate = s.Date.ToUniversalTime(), Slot = s.Slot })
                 .ToList()
         };
 
@@ -80,9 +87,55 @@ public class ProposalService(CosmereContext db) : IProposalService
         db.Sessions.Add(session);
         await db.SaveChangesAsync();
 
+        chosenDate.Status = "Accepted";
+        chosenDate.SessionId = session.Id;
+        foreach (var d in proposal.ProposedDates.Where(d => d.Status == "Pending"))
+            d.Status = "Rejected";
+
         proposal.Status = "Promoted";
         proposal.ResolvedAt = DateTime.UtcNow;
         proposal.PromotedSessionId = session.Id;
+
+        await db.SaveChangesAsync();
+        return MapToResponse(proposal, userId);
+    }
+
+    public async Task<ProposalResponse> PromoteDateAsync(long campaignId, long proposalId, long dateId, PromoteDateRequest request, long userId)
+    {
+        await EnsureGmAsync(campaignId, userId);
+
+        var proposal = await LoadPendingProposalAsync(campaignId, proposalId);
+        var date = PendingDate(proposal, dateId);
+
+        var session = new SessionEntity
+        {
+            CampaignId = campaignId,
+            Title = request.Title,
+            Date = date.ProposedDate,
+            Location = request.Location,
+            Notes = proposal.Notes,
+        };
+
+        db.Sessions.Add(session);
+        await db.SaveChangesAsync();
+
+        date.Status = "Accepted";
+        date.SessionId = session.Id;
+        ResolveIfDone(proposal);
+
+        await db.SaveChangesAsync();
+        return MapToResponse(proposal, userId);
+    }
+
+    public async Task<ProposalResponse> RejectDateAsync(long campaignId, long proposalId, long dateId, long userId)
+    {
+        await EnsureGmAsync(campaignId, userId);
+
+        var proposal = await LoadPendingProposalAsync(campaignId, proposalId);
+        var date = PendingDate(proposal, dateId);
+
+        date.Status = "Rejected";
+        ResolveIfDone(proposal);
 
         await db.SaveChangesAsync();
         return MapToResponse(proposal, userId);
@@ -101,8 +154,10 @@ public class ProposalService(CosmereContext db) : IProposalService
         if (proposal.Status != "Pending")
             throw new InvalidOperationException("Only pending proposals can be rejected.");
 
-        proposal.Status = "Rejected";
-        proposal.ResolvedAt = DateTime.UtcNow;
+        // Closes the proposal: dates still pending are rejected; dates already promoted keep their session.
+        foreach (var d in proposal.ProposedDates.Where(d => d.Status == "Pending"))
+            d.Status = "Rejected";
+        ResolveIfDone(proposal);
 
         await db.SaveChangesAsync();
         return MapToResponse(proposal, userId);
@@ -125,6 +180,9 @@ public class ProposalService(CosmereContext db) : IProposalService
         var proposalDate = proposal.ProposedDates.FirstOrDefault(d => d.Id == dateId)
             ?? throw new KeyNotFoundException("Proposed date not found.");
 
+        if (proposalDate.Status != "Pending")
+            throw new InvalidOperationException("Cannot vote on a resolved date.");
+
         var existingVote = proposalDate.Votes.FirstOrDefault(v => v.UserId == userId);
         if (existingVote is not null)
         {
@@ -143,6 +201,46 @@ public class ProposalService(CosmereContext db) : IProposalService
 
         await db.SaveChangesAsync();
         return MapToResponse(proposal, userId);
+    }
+
+    private async Task<SessionProposalEntity> LoadPendingProposalAsync(long campaignId, long proposalId)
+    {
+        var proposal = await db.SessionProposals
+            .Include(p => p.ProposedDates)
+                .ThenInclude(d => d.Votes)
+            .FirstOrDefaultAsync(p => p.Id == proposalId && p.CampaignId == campaignId)
+            ?? throw new KeyNotFoundException("Proposal not found.");
+
+        if (proposal.Status != "Pending")
+            throw new InvalidOperationException("The proposal is already resolved.");
+
+        return proposal;
+    }
+
+    private static ProposalDateEntity PendingDate(SessionProposalEntity proposal, long dateId)
+    {
+        var date = proposal.ProposedDates.FirstOrDefault(d => d.Id == dateId)
+            ?? throw new KeyNotFoundException("Proposed date not found in this proposal.");
+
+        if (date.Status != "Pending")
+            throw new InvalidOperationException("This date is already resolved.");
+
+        return date;
+    }
+
+    /// <summary>Closes the proposal once no date is pending: promoted if any date was accepted, rejected otherwise.</summary>
+    private static void ResolveIfDone(SessionProposalEntity proposal)
+    {
+        if (proposal.ProposedDates.Any(d => d.Status == "Pending")) return;
+
+        var accepted = proposal.ProposedDates
+            .Where(d => d.Status == "Accepted")
+            .OrderBy(d => d.ProposedDate)
+            .ToList();
+
+        proposal.Status = accepted.Count > 0 ? "Promoted" : "Rejected";
+        proposal.ResolvedAt = DateTime.UtcNow;
+        proposal.PromotedSessionId ??= accepted.FirstOrDefault()?.SessionId;
     }
 
     private async Task EnsureGmAsync(long campaignId, long userId)
@@ -167,6 +265,9 @@ public class ProposalService(CosmereContext db) : IProposalService
             {
                 Id = d.Id,
                 ProposedDate = d.ProposedDate,
+                Slot = d.Slot,
+                Status = d.Status,
+                SessionId = d.SessionId,
                 CanCount = d.Votes.Count(v => v.CanAttend),
                 CannotCount = d.Votes.Count(v => !v.CanAttend),
                 CurrentUserVote = d.Votes.FirstOrDefault(v => v.UserId == currentUserId)?.CanAttend,

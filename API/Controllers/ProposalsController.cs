@@ -28,6 +28,14 @@ public class ProposalsController(IProposalService proposalService) : ControllerB
     public async Task<ActionResult<ProposalResponse>> RejectProposal(long campaignId, long proposalId)
         => Ok(await proposalService.RejectProposalAsync(campaignId, proposalId, JwtHelper.GetUserId(User)));
 
+    [HttpPost("{proposalId:long}/dates/{dateId:long}/promote")]
+    public async Task<ActionResult<ProposalResponse>> PromoteDate(long campaignId, long proposalId, long dateId, [FromBody] PromoteDateRequest request)
+        => Ok(await proposalService.PromoteDateAsync(campaignId, proposalId, dateId, request, JwtHelper.GetUserId(User)));
+
+    [HttpPost("{proposalId:long}/dates/{dateId:long}/reject")]
+    public async Task<ActionResult<ProposalResponse>> RejectDate(long campaignId, long proposalId, long dateId)
+        => Ok(await proposalService.RejectDateAsync(campaignId, proposalId, dateId, JwtHelper.GetUserId(User)));
+
     [HttpPut("{proposalId:long}/dates/{dateId:long}/vote")]
     public async Task<ActionResult<ProposalResponse>> CastVote(long campaignId, long proposalId, long dateId, [FromBody] CastVoteRequest request)
         => Ok(await proposalService.CastVoteAsync(campaignId, proposalId, dateId, request, JwtHelper.GetUserId(User)));

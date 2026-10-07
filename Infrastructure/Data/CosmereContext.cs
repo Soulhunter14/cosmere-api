@@ -110,6 +110,14 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
             .HasForeignKey(d => d.ProposalId)
             .OnDelete(DeleteBehavior.Cascade);
 
+        // ProposalDate → Session created when that date (or slot) is promoted (optional, no cascade)
+        modelBuilder.Entity<ProposalDateEntity>()
+            .HasOne(d => d.Session)
+            .WithMany()
+            .HasForeignKey(d => d.SessionId)
+            .OnDelete(DeleteBehavior.SetNull)
+            .IsRequired(false);
+
         // ProposalDate → ProposalVotes
         modelBuilder.Entity<ProposalVoteEntity>()
             .HasOne(v => v.ProposalDate)
@@ -252,5 +260,9 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
 
         // Hemalurgia (M6, AddCharacterClavos): existing characters have no hemalurgic spikes.
         modelBuilder.Entity<CharacterEntity>().Property(c => c.Clavos).HasDefaultValue("[]");
+
+        // Proposal slots (AddProposalDateSlots): each proposed date is resolved on its own; existing dates start pending and
+        // the migration backfills the ones of proposals already resolved.
+        modelBuilder.Entity<ProposalDateEntity>().Property(d => d.Status).HasDefaultValue("Pending");
     }
 }
