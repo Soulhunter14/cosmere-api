@@ -150,6 +150,43 @@ public class CampaignService(CosmereContext db, IWorldRulesProvider reglas) : IC
         return campaign.InviteCode;
     }
 
+    public async Task<List<UserCandidateResponse>> GetCandidatesAsync(long campaignId, long userId)
+    {
+        await GetGmCampaignAsync(campaignId, userId);
+        return await db.Users
+            .Where(u => !u.CampaignMemberships.Any(m => m.CampaignId == campaignId))
+            .OrderBy(u => u.DisplayName)
+            .Select(u => new UserCandidateResponse
+            {
+                UserId = u.Id,
+                Username = u.Username,
+                DisplayName = u.DisplayName
+            })
+            .ToListAsync();
+    }
+
+    // Unlike JoinCampaignAsync this does not use the invite code, so it works while invitations are disabled.
+    public async Task AddMemberAsync(long campaignId, AddMemberRequest request, long userId)
+    {
+        await GetGmCampaignAsync(campaignId, userId);
+
+        var userExists = await db.Users.AnyAsync(u => u.Id == request.UserId);
+        if (!userExists)
+            throw new KeyNotFoundException("User not found.");
+
+        var alreadyMember = await db.CampaignMembers.AnyAsync(m => m.CampaignId == campaignId && m.UserId == request.UserId);
+        if (alreadyMember)
+            throw new InvalidOperationException("Already a member of this campaign.");
+
+        db.CampaignMembers.Add(new CampaignMemberEntity
+        {
+            CampaignId = campaignId,
+            UserId = request.UserId,
+            Role = "player"
+        });
+        await db.SaveChangesAsync();
+    }
+
     private async Task<CampaignEntity> GetGmCampaignAsync(long campaignId, long userId)
     {
         var campaign = await db.Campaigns.FirstOrDefaultAsync(c => c.Id == campaignId && c.GmUserId == userId)

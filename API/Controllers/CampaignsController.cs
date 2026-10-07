@@ -45,4 +45,15 @@ public class CampaignsController(ICampaignService campaignService) : ControllerB
     [HttpPost("{campaignId:long}/invite/regenerate")]
     public async Task<ActionResult<string>> RegenerateInviteCode(long campaignId)
         => Ok(await campaignService.RegenerateInviteCodeAsync(campaignId, JwtHelper.GetUserId(User)));
+
+    [HttpGet("{campaignId:long}/members/candidates")]
+    public async Task<ActionResult<List<UserCandidateResponse>>> GetCandidates(long campaignId)
+        => Ok(await campaignService.GetCandidatesAsync(campaignId, JwtHelper.GetUserId(User)));
+
+    [HttpPost("{campaignId:long}/members")]
+    public async Task<IActionResult> AddMember(long campaignId, [FromBody] AddMemberRequest request)
+    {
+        await campaignService.AddMemberAsync(campaignId, request, JwtHelper.GetUserId(User));
+        return NoContent();
+    }
 }

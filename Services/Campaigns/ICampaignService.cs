@@ -12,4 +12,6 @@ public interface ICampaignService
     Task<CampaignResponse> JoinCampaignAsync(JoinCampaignRequest request, long userId);
     Task UpdateInviteAsync(long campaignId, UpdateInviteRequest request, long userId);
     Task<string> RegenerateInviteCodeAsync(long campaignId, long userId);
+    Task<List<UserCandidateResponse>> GetCandidatesAsync(long campaignId, long userId);
+    Task AddMemberAsync(long campaignId, AddMemberRequest request, long userId);
 }
