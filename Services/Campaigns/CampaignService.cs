@@ -3,10 +3,11 @@ using Messages.Campaigns.In;
 using Messages.Campaigns.Out;
 using Messages.Database.Entities;
 using Microsoft.EntityFrameworkCore;
+using Services.Worlds;
 
 namespace Services.Campaigns;
 
-public class CampaignService(CosmereContext db) : ICampaignService
+public class CampaignService(CosmereContext db, IWorldRulesProvider reglas) : ICampaignService
 {
     public async Task<List<CampaignResponse>> GetUserCampaignsAsync(long userId)
     {
@@ -20,6 +21,8 @@ public class CampaignService(CosmereContext db) : ICampaignService
                 Name = m.Campaign.Name,
                 Role = m.Role,
                 CreatedAt = m.Campaign.CreatedAt,
+                World = m.Campaign.World,
+                Era = m.Campaign.Era,
                 NextSessionDate = m.Campaign.Sessions
                     .Where(s => s.Date > now)
                     .OrderBy(s => s.Date)
@@ -53,6 +56,8 @@ public class CampaignService(CosmereContext db) : ICampaignService
             InviteCode = member.Role == "gm" ? campaign.InviteCode : null,
             InviteActive = campaign.InviteActive,
             CreatedAt = campaign.CreatedAt,
+            World = campaign.World,
+            Era = campaign.Era,
             Members = campaign.Members.Select(m => new MemberResponse
             {
                 UserId = m.UserId,
@@ -64,11 +69,18 @@ public class CampaignService(CosmereContext db) : ICampaignService
 
     public async Task<CampaignDetailResponse> CreateCampaignAsync(CreateCampaignRequest request, long userId)
     {
+        // The registered IWorldRules decide which worlds exist and how each one validates its era.
+        if (!reglas.Existe(request.World))
+            throw new ArgumentException($"Invalid World: '{request.World}'.");
+        var era = reglas.Get(request.World).NormalizarEra(request.Era);
+
         var campaign = new CampaignEntity
         {
             Name = request.Name,
             GmUserId = userId,
-            InviteCode = GenerateInviteCode()
+            InviteCode = GenerateInviteCode(),
+            World = request.World,
+            Era = era
         };
 
         db.Campaigns.Add(campaign);
@@ -112,7 +124,15 @@ public class CampaignService(CosmereContext db) : ICampaignService
         await db.SaveChangesAsync();
 
         var member = await db.CampaignMembers.FirstAsync(m => m.CampaignId == campaign.Id && m.UserId == userId);
-        return new CampaignResponse { Id = campaign.Id, Name = campaign.Name, Role = member.Role, CreatedAt = campaign.CreatedAt };
+        return new CampaignResponse
+        {
+            Id = campaign.Id,
+            Name = campaign.Name,
+            Role = member.Role,
+            CreatedAt = campaign.CreatedAt,
+            World = campaign.World,
+            Era = campaign.Era
+        };
     }
 
     public async Task UpdateInviteAsync(long campaignId, UpdateInviteRequest request, long userId)

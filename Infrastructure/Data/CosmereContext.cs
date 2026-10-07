@@ -1,4 +1,5 @@
 using Messages.Database.Entities;
+using Messages.Worlds;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data;
@@ -164,9 +165,23 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
             .HasIndex(u => u.Username)
             .IsUnique();
 
-        // CatalogOption category index
+        // Catalog world filters (M3, AddWorldToCatalog): objects are filtered by World and options by (World, Category);
+        // the options index replaces the former category-only index.
+        modelBuilder.Entity<WeaponCatalogEntity>()
+            .HasIndex(w => w.World);
+
+        modelBuilder.Entity<ArmorCatalogEntity>()
+            .HasIndex(a => a.World);
+
+        modelBuilder.Entity<GearItemEntity>()
+            .HasIndex(g => g.World);
+
         modelBuilder.Entity<CatalogOptionEntity>()
-            .HasIndex(o => o.Category);
+            .HasIndex(o => new { o.World, o.Category });
+
+        // Global NPC world filter (M5, AddWorldToGlobalNpcs): the list is filtered by the world of the campaign.
+        modelBuilder.Entity<GlobalNpcEntity>()
+            .HasIndex(n => n.World);
 
         // Campaign → LockedDays
         modelBuilder.Entity<LockedDayEntity>()
@@ -210,5 +225,32 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
 
         modelBuilder.Entity<DiceRollEntity>()
             .HasIndex(r => new { r.CampaignId, r.CreatedAt });
+
+        // Database defaults for the world-specific columns. EF does not read the C# initializers when it generates a
+        // migration, so the default is declared here: existing rows (and clients that never send the column) stay on
+        // Stormlight. Later migrations add their own lines to this block.
+        modelBuilder.Entity<CampaignEntity>()
+            .Property(c => c.World)
+            .HasDefaultValue(WorldIds.Stormlight);
+
+        // Nacidos de la bruma (M2, AddCharacterMistbornFields): existing characters get empty metalborn data.
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.CaminoMetal).HasDefaultValue("");
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.CaminoInicial).HasDefaultValue("");
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.Poderes).HasDefaultValue("[]");
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.Recursos).HasDefaultValue("{}");
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.Bendiciones).HasDefaultValueSql("'{}'");
+
+        // Catalog (M3, AddWorldToCatalog): existing objects and options stay on Stormlight; the migration itself moves the
+        // options shared by every world to 'cosmere'.
+        modelBuilder.Entity<WeaponCatalogEntity>().Property(w => w.World).HasDefaultValue(WorldIds.Stormlight);
+        modelBuilder.Entity<ArmorCatalogEntity>().Property(a => a.World).HasDefaultValue(WorldIds.Stormlight);
+        modelBuilder.Entity<GearItemEntity>().Property(g => g.World).HasDefaultValue(WorldIds.Stormlight);
+        modelBuilder.Entity<CatalogOptionEntity>().Property(o => o.World).HasDefaultValue(WorldIds.Stormlight);
+
+        // Global NPCs (M5, AddWorldToGlobalNpcs): the adversaries already stored (Caminapiedras) stay on Stormlight.
+        modelBuilder.Entity<GlobalNpcEntity>().Property(n => n.World).HasDefaultValue(WorldIds.Stormlight);
+
+        // Hemalurgia (M6, AddCharacterClavos): existing characters have no hemalurgic spikes.
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.Clavos).HasDefaultValue("[]");
     }
 }

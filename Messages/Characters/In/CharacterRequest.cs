@@ -9,6 +9,8 @@ public class CreateCharacterRequest
     public string CaminoHeroico { get; set; } = string.Empty;
     public string CaminoRadiante { get; set; } = string.Empty;
     public long? OwnerId { get; set; }
+    public string CaminoMetal { get; set; } = string.Empty;
+    public string CaminoInicial { get; set; } = string.Empty;
 }
 
 public class AssignCharacterRequest
@@ -95,4 +97,18 @@ public class UpdateCharacterRequest
     public List<string> Spells { get; set; } = [];
     public List<string> Equipment { get; set; } = [];
     public string EquippedArmor { get; set; } = string.Empty;
+
+    // Nacidos de la bruma: null = conservar el valor guardado (un cliente que no los envía no los pisa). Recursos y el
+    // estado de mesa de los poderes no viajan aquí (PATCH …/recursos); de Poderes solo se escriben Arte, Metal, Origen y
+    // MetaId, y el servidor normaliza el resto (CharacterJson.FusionarPoderes).
+    public string? CaminoMetal { get; set; }
+    public string? CaminoInicial { get; set; }
+    public List<PoderPersonaje>? Poderes { get; set; }
+    public List<string>? Bendiciones { get; set; }
+
+    // Hemalurgia (T49a): null = conservar los clavos guardados. Los clavos son una recompensa del DJ (L.288 / PDF 294): en Nacidos
+    // de la bruma solo los escribe el director (el servidor ignora los de un jugador no GM) y Stormlight no admite ninguno (400 si
+    // la lista no está vacía). El poder de un clavo de poder viaja en Poderes con Origen = "clavo" (el servidor lo normaliza a
+    // completo).
+    public List<ClavoHemalurgico>? Clavos { get; set; }
 }

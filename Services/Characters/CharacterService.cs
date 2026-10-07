@@ -4,37 +4,16 @@ using Messages.Characters.Out;
 using Messages.Database.Entities;
 using Messages.Metas.Out;
 using Microsoft.EntityFrameworkCore;
+using Services.Worlds;
 
 namespace Services.Characters;
 
-public class CharacterService(CosmereContext db) : ICharacterService
+public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : ICharacterService
 {
-    private static readonly HashSet<string> ValidCaminosHeroicos =
-    [
-        "agente", "cazador", "enviado", "erudito", "guerrero", "lider"
-    ];
-
-    private static readonly HashSet<string> ValidCaminosRadiantes =
-    [
-        "windrunners", "skybreakers", "dustbringers", "edgedancers", "truthwatchers",
-        "lightweavers", "elsecallers", "willshapers", "stonewards", "bondsmiths"
-    ];
-
-    private static readonly HashSet<string> ValidAscendencias = ["Humano", "Oyente"];
-
-    private static void ValidateCaminos(string caminoHeroico, string caminoRadiante, string ascendencia)
-    {
-        if (!string.IsNullOrEmpty(caminoHeroico) && !ValidCaminosHeroicos.Contains(caminoHeroico))
-            throw new ArgumentException($"Invalid CaminoHeroico: '{caminoHeroico}'.");
-        if (!string.IsNullOrEmpty(caminoRadiante) && !ValidCaminosRadiantes.Contains(caminoRadiante))
-            throw new ArgumentException($"Invalid CaminoRadiante: '{caminoRadiante}'.");
-        if (!string.IsNullOrEmpty(ascendencia) && !ValidAscendencias.Contains(ascendencia))
-            throw new ArgumentException($"Invalid Ascendencia: '{ascendencia}'.");
-    }
-
     public async Task<List<CharacterResponse>> GetCharactersAsync(long campaignId, long userId)
     {
         await EnsureMemberAsync(campaignId, userId);
+        var world = await GetWorldRulesAsync(campaignId);
         var isGm = await IsGmAsync(campaignId, userId);
 
         var query = db.Characters.Where(c => c.CampaignId == campaignId && !c.IsNpc);
@@ -44,12 +23,13 @@ public class CharacterService(CosmereContext db) : ICharacterService
             query = query.Where(c => c.OwnerId == userId);
 
         var entities = await query.Include(c => c.Metas).ToListAsync();
-        return entities.Select(c => MapToResponse(c, new ContextoJuego())).ToList();
+        return entities.Select(c => MapToResponse(c, world, new ContextoJuego())).ToList();
     }
 
     public async Task<CharacterResponse> GetCharacterAsync(long characterId, long campaignId, long userId, ContextoJuego ctx)
     {
         await EnsureMemberAsync(campaignId, userId);
+        var world = await GetWorldRulesAsync(campaignId);
         var isGm = await IsGmAsync(campaignId, userId);
 
         var character = await db.Characters
@@ -60,12 +40,13 @@ public class CharacterService(CosmereContext db) : ICharacterService
         if (!isGm && character.OwnerId != userId)
             throw new UnauthorizedAccessException("You can only view your own character.");
 
-        return MapToResponse(character, ctx);
+        return MapToResponse(character, world, ctx);
     }
 
     public async Task<CharacterResponse> CreateCharacterAsync(long campaignId, CreateCharacterRequest request, long userId)
     {
         await EnsureGmAsync(campaignId, userId);
+        var world = await GetWorldRulesAsync(campaignId);
 
         // Validate owner is a campaign member (if provided)
         if (request.OwnerId.HasValue)
@@ -76,7 +57,13 @@ public class CharacterService(CosmereContext db) : ICharacterService
                 throw new KeyNotFoundException("Assigned player is not a campaign member.");
         }
 
-        ValidateCaminos(request.CaminoHeroico, request.CaminoRadiante, request.Ascendencia);
+        // Camino inicial coherente con los caminos que llegan (§5.2, P6): se normaliza antes de validar, no se rechaza.
+        request.CaminoMetal ??= string.Empty;
+        request.CaminoInicial = NormalizarCaminoInicial(request.CaminoInicial, request.CaminoMetal, request.CaminoHeroico);
+
+        world.ValidarIdentidad(new IdentidadPersonaje(
+            request.CaminoHeroico, request.CaminoRadiante, request.CaminoMetal, request.CaminoInicial, request.Ascendencia,
+            [], [], new Dictionary<string, decimal>()));
 
         var character = new CharacterEntity
         {
@@ -88,17 +75,20 @@ public class CharacterService(CosmereContext db) : ICharacterService
             Ascendencia = request.Ascendencia,
             CaminoHeroico = request.CaminoHeroico,
             CaminoRadiante = request.CaminoRadiante,
+            CaminoMetal = request.CaminoMetal,
+            CaminoInicial = request.CaminoInicial,
             IsNpc = false
         };
 
         db.Characters.Add(character);
         await db.SaveChangesAsync();
-        return MapToResponse(character);
+        return MapToResponse(character, world);
     }
 
     public async Task<CharacterResponse> UpdateCharacterAsync(long characterId, long campaignId, UpdateCharacterRequest request, long userId)
     {
         await EnsureMemberAsync(campaignId, userId);
+        var world = await GetWorldRulesAsync(campaignId);
 
         var character = await db.Characters
             .FirstOrDefaultAsync(c => c.Id == characterId && c.CampaignId == campaignId && !c.IsNpc)
@@ -112,14 +102,33 @@ public class CharacterService(CosmereContext db) : ICharacterService
         {
             request.Name = character.Name;
             request.CaminoHeroico = character.CaminoHeroico;
-            request.CaminoRadiante = character.CaminoRadiante;
+            world.RestringirCambiosNoGm(request, character);
         }
 
-        ValidateCaminos(request.CaminoHeroico, request.CaminoRadiante, request.Ascendencia);
+        // Camino inicial coherente con los caminos efectivos (§5.2, P6): si el GM borra el camino del que partía, pasa al otro
+        // camino o a "" en lugar de dejar al personaje con un 400 permanente. El servidor no toca Talentos.
+        request.CaminoInicial = NormalizarCaminoInicial(
+            request.CaminoInicial ?? character.CaminoInicial, request.CaminoMetal ?? character.CaminoMetal, request.CaminoHeroico);
+
+        // Identidad efectiva (lo que llega o, si es null, lo guardado), con la lista de poderes ya fusionada (§5.3).
+        var poderes = CharacterJson.FusionarPoderes(CharacterJson.ParsePoderes(character.Poderes), request.Poderes);
+        world.ValidarIdentidad(new IdentidadPersonaje(
+            request.CaminoHeroico, request.CaminoRadiante,
+            request.CaminoMetal ?? character.CaminoMetal, request.CaminoInicial ?? character.CaminoInicial,
+            request.Ascendencia, poderes, request.Bendiciones ?? character.Bendiciones,
+            CharacterJson.ParseRecursos(character.Recursos),
+            request.Clavos ?? CharacterJson.ParseClavos(character.Clavos)));
+
+        // Las reglas del mundo no tienen BD: la meta que enlaza un poder debe ser de este personaje.
+        var metaIds = poderes.Where(p => p.MetaId is not null).Select(p => p.MetaId!.Value).Distinct().ToList();
+        if (metaIds.Count > 0 &&
+            await db.Metas.CountAsync(m => m.CharacterId == characterId && metaIds.Contains(m.Id)) != metaIds.Count)
+            throw new ArgumentException("Invalid metaId in poderes: the meta must belong to this character.");
+
         ApplyUpdate(character, request);
         character.UpdatedAt = DateTime.UtcNow;
         await db.SaveChangesAsync();
-        return MapToResponse(character);
+        return MapToResponse(character, world);
     }
 
     public async Task DeleteCharacterAsync(long characterId, long campaignId, long userId)
@@ -135,6 +144,7 @@ public class CharacterService(CosmereContext db) : ICharacterService
     public async Task<CharacterResponse> AssignCharacterAsync(long characterId, long campaignId, long? ownerId, long userId)
     {
         await EnsureGmAsync(campaignId, userId);
+        var world = await GetWorldRulesAsync(campaignId);
 
         var character = await db.Characters
             .FirstOrDefaultAsync(c => c.Id == characterId && c.CampaignId == campaignId && !c.IsNpc)
@@ -151,7 +161,48 @@ public class CharacterService(CosmereContext db) : ICharacterService
         character.OwnerId = ownerId;
         character.UpdatedAt = DateTime.UtcNow;
         await db.SaveChangesAsync();
-        return MapToResponse(character);
+        return MapToResponse(character, world);
+    }
+
+    // ── Estado de mesa (T13) ─────────────────────────────────────────────────
+    // Solo infraestructura: transacción con la fila bloqueada, permisos y respuesta. Las reglas (recortes, viales, Desprovisto,
+    // inicio de escena) son del mundo: IWorldRules.AplicarAccionMesa (§5.2, §6.1).
+
+    public Task<CharacterResponse> PatchRecursosAsync(long characterId, long campaignId, RecursosRequest request, long userId) =>
+        AplicarAccionMesaAsync(characterId, campaignId, userId, esGm => new AccionMesa.PatchRecursos(request, esGm));
+
+    public Task<CharacterResponse> BeberVialAsync(long characterId, long campaignId, BeberVialRequest request, long userId) =>
+        AplicarAccionMesaAsync(characterId, campaignId, userId, _ => new AccionMesa.BeberVial(request.Metales ?? []));
+
+    public Task<CharacterResponse> InicioEscenaAsync(long characterId, long campaignId, InicioEscenaRequest request, long userId) =>
+        AplicarAccionMesaAsync(characterId, campaignId, userId, _ => new AccionMesa.InicioEscena(request.Sorprendido));
+
+    private async Task<CharacterResponse> AplicarAccionMesaAsync(long characterId, long campaignId, long userId, Func<bool, AccionMesa> accion)
+    {
+        await EnsureMemberAsync(campaignId, userId);
+        var world = await GetWorldRulesAsync(campaignId);
+        var isGm = await IsGmAsync(campaignId, userId);
+
+        // Las acciones leen la fila, reescriben las columnas JSON (Recursos, Poderes) enteras y devuelven el personaje: la fila se
+        // bloquea hasta el commit para que dos peticiones simultáneas con claves distintas no se pisen. Mismos filtros y mismo
+        // 404/403 que el PUT; nunca FirstAsync (sin filas lanzaría InvalidOperationException, que el middleware da como 409).
+        await using var tx = await db.Database.BeginTransactionAsync();
+        var character = await db.Characters
+            .FromSqlInterpolated($"SELECT * FROM \"Characters\" WHERE \"Id\" = {characterId} AND \"CampaignId\" = {campaignId} AND NOT \"IsNpc\" FOR UPDATE")
+            .FirstOrDefaultAsync()
+            ?? throw new KeyNotFoundException("Character not found.");
+        if (!isGm && character.OwnerId != userId)
+            throw new UnauthorizedAccessException("You can only edit your own character.");
+
+        var estado = MapToResponse(character, world);
+        world.AplicarAccionMesa(character, accion(isGm), estado);
+        character.UpdatedAt = DateTime.UtcNow;
+        await db.SaveChangesAsync();
+        await tx.CommitAsync();
+
+        // Como en GET: la respuesta lleva las metas (la fila se cargó sin Include).
+        await db.Entry(character).Collection(c => c.Metas).LoadAsync();
+        return MapToResponse(character, world);
     }
 
     private async Task<bool> IsGmAsync(long campaignId, long userId)
@@ -167,6 +218,28 @@ public class CharacterService(CosmereContext db) : ICharacterService
     {
         if (!await IsGmAsync(campaignId, userId))
             throw new UnauthorizedAccessException("Only the GM can perform this action.");
+    }
+
+    /// <summary>Reglas del mundo de la campaña; un mundo nulo o desconocido cae a Stormlight.</summary>
+    private async Task<IWorldRules> GetWorldRulesAsync(long campaignId) =>
+        reglas.Get(await db.Campaigns.AsNoTracking()
+            .Where(c => c.Id == campaignId)
+            .Select(c => c.World)
+            .FirstOrDefaultAsync());
+
+    /// <summary>
+    /// <c>CaminoInicial</c> coherente con los caminos (§5.2, P6): <c>heroico</c> sin camino heroico pasa a <c>metal</c> si hay
+    /// camino de nacido del metal (o a <c>""</c>); <c>metal</c> sin camino de nacido del metal pasa a <c>heroico</c> si hay
+    /// camino heroico (o a <c>""</c>). Los valores fuera de dominio los rechaza después la validación del mundo.
+    /// </summary>
+    private static string NormalizarCaminoInicial(string? caminoInicial, string? caminoMetal, string? caminoHeroico)
+    {
+        var ci = caminoInicial ?? string.Empty;
+        var cm = caminoMetal ?? string.Empty;
+        var ch = caminoHeroico ?? string.Empty;
+        if (ci == "heroico" && ch == "") ci = cm != "" ? "metal" : "";
+        if (ci == "metal" && cm == "") ci = ch != "" ? "heroico" : "";
+        return ci;
     }
 
     private static void ApplyUpdate(CharacterEntity c, UpdateCharacterRequest r)
@@ -196,6 +269,13 @@ public class CharacterService(CosmereContext db) : ICharacterService
         c.Talentos = r.Talentos; c.Apariencia = r.Apariencia; c.Notas = r.Notas; c.Conexiones = r.Conexiones;
         c.Weapons = r.Weapons; c.Armor = r.Armor; c.Spells = r.Spells; c.Equipment = r.Equipment;
         c.EquippedArmor = r.Armor.Contains(r.EquippedArmor) ? r.EquippedArmor : string.Empty;
+        // Nacidos de la bruma: null = conservar lo guardado.
+        if (r.CaminoMetal is not null) c.CaminoMetal = r.CaminoMetal;
+        if (r.CaminoInicial is not null) c.CaminoInicial = r.CaminoInicial;
+        if (r.Bendiciones is not null) c.Bendiciones = r.Bendiciones;
+        if (r.Poderes is not null)
+            c.Poderes = CharacterJson.SerializarPoderes(CharacterJson.FusionarPoderes(CharacterJson.ParsePoderes(c.Poderes), r.Poderes));
+        if (r.Clavos is not null) c.Clavos = CharacterJson.SerializarClavos(r.Clavos);
     }
 
     // ── Helpers de cálculo de reservas ───────────────────────────────────────
@@ -203,32 +283,63 @@ public class CharacterService(CosmereContext db) : ICharacterService
     // MaxConcentration y MaxInvestiture (bonus manuales) ya no se usan en el cálculo.
     // Los campos se mantienen en BD por compatibilidad pero están deprecados.
 
-    private static List<StatLinea> BuildConcLineas(CharacterEntity c) =>
-    [
-        new() { Concepto = "Base",     Valor = 2 },
-        new() { Concepto = "Voluntad", Valor = c.Voluntad },
-    ];
+    // Los bonos de la forma activa de un cantor (Manual p. 33 del libro: «aumentos de características … de manera
+    // temporal») se aplican a los atributos ANTES de derivar defensas, reservas y movimiento, y se muestran como
+    // una línea «Forma X» en cada desglose.
+    // Toda línea de bono de atributo (de cualquier origen) lleva EsBono = true: el cliente la reconoce sin leer el concepto.
 
-    private static List<StatLinea> BuildInvLineas(CharacterEntity c)
+    private static string ConceptoForma(string? forma) => $"Forma: {forma}";
+
+    private static List<StatLinea> BuildDefensaLineas(string attr1, int valor1, string attr2, int valor2, int bonoForma, string? forma, string? etiquetaBono = null)
     {
-        if (string.IsNullOrEmpty(c.CaminoRadiante))
+        List<StatLinea> lineas =
+        [
+            new() { Concepto = "Base", Valor = 10 },
+            new() { Concepto = attr1,  Valor = valor1 },
+            new() { Concepto = attr2,  Valor = valor2 },
+        ];
+        if (bonoForma != 0) lineas.Add(new() { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = bonoForma, EsBono = true });
+        return lineas;
+    }
+
+    private static List<StatLinea> BuildConcLineas(CharacterEntity c, BonosForma fb, string? forma, string? etiquetaBono = null)
+    {
+        List<StatLinea> lineas =
+        [
+            new() { Concepto = "Base",     Valor = 2 },
+            new() { Concepto = "Voluntad", Valor = c.Voluntad },
+        ];
+        // La forma puede subir la Voluntad (→ +1 por punto) y/o dar concentración directa (forma diestra, nocturna: +2).
+        var bono = fb.Voluntad + fb.Concentracion;
+        if (bono != 0) lineas.Add(new() { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = bono, EsBono = true });
+        return lineas;
+    }
+
+    private static List<StatLinea> BuildInvLineas(CharacterEntity c, BonosForma fb, string? forma, bool tieneInvestidura, string? etiquetaBono = null)
+    {
+        if (!tieneInvestidura)
             return [new() { Concepto = "Base", Valor = 0 }];
 
-        var atributo   = c.Discernimiento >= c.Presencia ? "Discernimiento" : "Presencia";
-        var valorAtrib = Math.Max(c.Discernimiento, c.Presencia);
-        return
+        var disEff = c.Discernimiento + fb.Discernimiento;
+        var preEff = c.Presencia + fb.Presencia;
+        var usaDis = disEff >= preEff;
+        List<StatLinea> lineas =
         [
-            new() { Concepto = "Base",   Valor = 2 },
-            new() { Concepto = atributo, Valor = valorAtrib },
+            new() { Concepto = "Base", Valor = 2 },
+            new() { Concepto = usaDis ? "Discernimiento" : "Presencia", Valor = usaDis ? c.Discernimiento : c.Presencia },
         ];
+        var bono = usaDis ? fb.Discernimiento : fb.Presencia;
+        if (bono != 0) lineas.Add(new() { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = bono, EsBono = true });
+        return lineas;
     }
 
     /// <summary>
     /// Salud máxima según tabla de progreso (cap. 1, p. 29).
     /// Nivel 1: 10 + FUE. Rangos 2–5: +5/nivel. Rango 6–10: +4/nivel + FUE.
     /// Rango 11–15: +3/nivel + FUE. Rango 16–20: +2/nivel + FUE. 21+: +1/nivel.
+    /// Si la Fuerza cambia (también por una forma), la salud se recalcula con esa misma tabla (p. 54 del libro).
     /// </summary>
-    private static List<StatLinea> BuildSaludLineas(CharacterEntity c)
+    private static List<StatLinea> BuildSaludLineas(CharacterEntity c, BonosForma fb, string? forma, string? etiquetaBono = null)
     {
         int level  = c.Level;
         int fuerza = c.Fuerza;
@@ -242,11 +353,37 @@ public class CharacterService(CosmereContext db) : ICharacterService
         if (level >= 16) { flat += (Math.Min(level, 20) - 15) * 2; fueCount++; }
         if (level >= 21) flat += level - 20;
 
-        return
+        List<StatLinea> lineas =
         [
             new() { Concepto = "Base",   Valor = flat },
             new() { Concepto = fueCount > 1 ? $"Fuerza ×{fueCount}" : "Fuerza", Valor = fueCount * fuerza },
         ];
+        if (fb.Fuerza != 0) lineas.Add(new() { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = fueCount * fb.Fuerza, EsBono = true });
+        return lineas;
+    }
+
+    /// <summary>
+    /// Desvío efectivo. El desvío de una forma de cantor «no se acumula al de las armaduras … elige qué valor vas a
+    /// usar» (Manual pp. 33–37 del libro), así que se toma el mayor y el otro queda como línea informativa.
+    /// Con <paramref name="acumula"/> (un mundo cuyo bono de desvío sí se acumula a la armadura) se suman los dos.
+    /// Con el talento kandra Forma natural (<paramref name="talentos"/>) añade su +5 contra laceración como línea situacional.
+    /// </summary>
+    private static (List<StatLinea> Lineas, List<StatLinea> Situacional) BuildDesvioLineas(CharacterEntity c, BonosForma fb, string? forma, bool acumula = false, string? etiquetaBono = null, IEnumerable<string>? talentos = null)
+    {
+        var armadura   = new StatLinea { Concepto = string.IsNullOrEmpty(c.EquippedArmor) ? "Base" : $"Armadura: {c.EquippedArmor}", Valor = c.Desvio };
+        // «Tu valor de desvío aumenta en 5 contra el daño por laceración» (Forma natural, también bajo Disfraz kandra;
+        // L.35 / PDF 41): visible pero fuera del total.
+        List<StatLinea> talento = talentos?.Contains("Forma natural") == true
+            ? [new() { Concepto = "Forma natural", Valor = 5, DescripcionCondicion = "Contra daño por laceración" }]
+            : [];
+        if (fb.Desvio <= 0) return ([armadura], talento);
+
+        var formaLinea = new StatLinea { Concepto = etiquetaBono ?? ConceptoForma(forma), Valor = fb.Desvio, EsBono = true };
+        if (acumula) return ([armadura, formaLinea], talento);
+        // La línea que no se usa queda como situacional, con la explicación de por qué no suma.
+        var (gana, pierde) = fb.Desvio > c.Desvio ? (formaLinea, armadura) : (armadura, formaLinea);
+        pierde.DescripcionCondicion = "No se acumula: se usa el mayor entre armadura y forma";
+        return ([gana], pierde.Valor > 0 ? [pierde, .. talento] : talento);
     }
 
     private static List<string> ParseTalentos(string? raw)
@@ -256,12 +393,30 @@ public class CharacterService(CosmereContext db) : ICharacterService
         catch { return []; }
     }
 
-    internal static CharacterResponse MapToResponse(CharacterEntity c, ContextoJuego? ctx = null)
+    internal static CharacterResponse MapToResponse(CharacterEntity c, IWorldRules world, ContextoJuego? ctx = null)
     {
         ctx ??= new ContextoJuego();
         var talentos = ParseTalentos(c.Talentos);
+        // Talentos que el cliente concede solos (autoGranted) sin guardarlos y que las reglas del mundo deben contar.
+        talentos = talentos.Union(world.TalentosImplicitos(c)).ToList();
+        var poderes  = CharacterJson.ParsePoderes(c.Poderes);
+        var recursos = CharacterJson.ParseRecursos(c.Recursos);
+        var fb       = world.BonosAtributos(c, talentos, out var forma);
+        var etiqueta = world.EtiquetaBono(forma);
+        var tieneInv = world.TieneInvestidura(c, talentos, poderes);
+        var velEff   = c.Velocidad + fb.Velocidad;
+        var desvio   = BuildDesvioLineas(c, fb, forma, world.DesvioBonoSeAcumula, etiqueta, talentos);
 
-        return new CharacterResponse
+        // Cada desglose lo completa después el mundo con sus líneas propias (T49a: clavos hemalúrgicos en la Defensa espiritual).
+        StatDesglose CalcularDesglose(StatAfectada stat, List<StatLinea> baseLineas, string? unidad = null, List<StatLinea>? situacionalBase = null)
+        {
+            var desglose = TalentosReglas.Calcular(stat, baseLineas, c, ctx, talentos,
+                reglas: world.ReglasTalentos, tieneInvestidura: tieneInv, unidad: unidad, situacionalBase: situacionalBase);
+            world.CompletarDesglose(c, stat, desglose);
+            return desglose;
+        }
+
+        var response = new CharacterResponse
         {
             Id = c.Id, CampaignId = c.CampaignId, OwnerId = c.OwnerId,
             Name = c.Name, PlayerName = c.PlayerName,
@@ -278,40 +433,44 @@ public class CharacterService(CosmereContext db) : ICharacterService
             MarcosInfusas = c.MarcosInfusas, MarcosOpacas = c.MarcosOpacas,
 
             // ── Stats calculadas ──────────────────────────────────────────────
-            Concentracion = TalentosReglas.Calcular(
+            Concentracion = CalcularDesglose(
                 StatAfectada.MaxConcentracion,
-                BuildConcLineas(c),
-                c, ctx, talentos),
+                BuildConcLineas(c, fb, forma, etiqueta)),
 
-            DefensaFisica = TalentosReglas.Calcular(
+            DefensaFisica = CalcularDesglose(
                 StatAfectada.DefensaFisica,
-                [new() { Concepto = "Base", Valor = 10 }, new() { Concepto = "Fuerza", Valor = c.Fuerza }, new() { Concepto = "Velocidad", Valor = c.Velocidad }],
-                c, ctx, talentos),
+                BuildDefensaLineas("Fuerza", c.Fuerza, "Velocidad", c.Velocidad, fb.Fuerza + fb.Velocidad, forma, etiqueta)),
 
-            DefensaCognitiva = TalentosReglas.Calcular(
+            DefensaCognitiva = CalcularDesglose(
                 StatAfectada.DefensaCognitiva,
-                [new() { Concepto = "Base", Valor = 10 }, new() { Concepto = "Intelecto", Valor = c.Intelecto }, new() { Concepto = "Voluntad", Valor = c.Voluntad }],
-                c, ctx, talentos),
+                BuildDefensaLineas("Intelecto", c.Intelecto, "Voluntad", c.Voluntad, fb.Intelecto + fb.Voluntad, forma, etiqueta)),
 
-            DefensaEspiritual = TalentosReglas.Calcular(
+            DefensaEspiritual = CalcularDesglose(
                 StatAfectada.DefensaEspiritual,
-                [new() { Concepto = "Base", Valor = 10 }, new() { Concepto = "Discernimiento", Valor = c.Discernimiento }, new() { Concepto = "Presencia", Valor = c.Presencia }],
-                c, ctx, talentos),
+                BuildDefensaLineas("Discernimiento", c.Discernimiento, "Presencia", c.Presencia, fb.Discernimiento + fb.Presencia, forma, etiqueta)),
 
-            Salud = TalentosReglas.Calcular(
+            Salud = CalcularDesglose(
                 StatAfectada.MaxSalud,
-                BuildSaludLineas(c),
-                c, ctx, talentos),
+                BuildSaludLineas(c, fb, forma, etiqueta)),
 
-            Investidura = TalentosReglas.Calcular(
+            Investidura = CalcularDesglose(
                 StatAfectada.MaxInvestidura,
-                BuildInvLineas(c),
-                c, ctx, talentos),
+                BuildInvLineas(c, fb, forma, tieneInv, etiqueta)),
 
-            Movimiento = TalentosReglas.Calcular(
+            // El movimiento depende de la Velocidad efectiva (con el bono de la forma, si lo hay).
+            Movimiento = CalcularDesglose(
                 StatAfectada.Movimiento,
-                [new() { Concepto = $"Velocidad ({c.Velocidad})", Valor = TalentosReglas.MovimientoBase(c.Velocidad) }],
-                c, ctx, talentos, unidad: "m"),
+                [new()
+                {
+                    Concepto = fb.Velocidad != 0 ? $"Velocidad ({c.Velocidad} + {fb.Velocidad} de {forma})" : $"Velocidad ({c.Velocidad})",
+                    Valor = TalentosReglas.MovimientoBase(velEff),
+                }],
+                unidad: "m"),
+
+            DesvioCalculado = CalcularDesglose(
+                StatAfectada.Desvio,
+                desvio.Lineas,
+                situacionalBase: desvio.Situacional),
 
             // ── Resto de campos ───────────────────────────────────────────────
             Agilidad = c.Agilidad, ArmasLigeras = c.ArmasLigeras, ArmasPesadas = c.ArmasPesadas,
@@ -338,6 +497,32 @@ public class CharacterService(CosmereContext db) : ICharacterService
             Weapons = c.Weapons, Armor = c.Armor, Spells = c.Spells, Equipment = c.Equipment,
             EquippedArmor = c.EquippedArmor,
             CreatedAt = c.CreatedAt, UpdatedAt = c.UpdatedAt,
+
+            // ── Nacidos de la bruma ───────────────────────────────────────────
+            CaminoMetal = c.CaminoMetal, CaminoInicial = c.CaminoInicial,
+            Poderes = poderes, Recursos = recursos, Bendiciones = c.Bendiciones,
+            DerivadosSet = world.Derivar(c, talentos, poderes, fb),
+            BonosAtributos = fb.ComoDiccionario(),
+            Clavos = CharacterJson.ParseClavos(c.Clavos),
         };
+
+        RecortarEstadoDeMesa(response);
+        return response;
+    }
+
+    /// <summary>
+    /// Recorte solo en la salida (no se persiste) del estado de mesa: la Investidura actual a [0, Investidura máxima] y las cargas
+    /// de cada poder a [0, sus cargas máximas], por si el máximo bajó después de escribirlas (p. ej. al reducir Presencia en el
+    /// <c>PUT</c>; §6.2).
+    /// </summary>
+    private static void RecortarEstadoDeMesa(CharacterResponse r)
+    {
+        if (r.Recursos.TryGetValue("investiduraActual", out var actual))
+            r.Recursos["investiduraActual"] = Math.Clamp(actual, 0m, Math.Max(0m, (decimal)r.Investidura.Total));
+        foreach (var p in r.Poderes)
+        {
+            if (r.DerivadosSet.TryGetValue($"poder.{p.Metal}.cargasMax", out var max))
+                p.Cargas = Math.Clamp(p.Cargas, 0, Math.Max(0, (int)max.Total));
+        }
     }
 }

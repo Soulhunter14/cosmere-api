@@ -2,44 +2,78 @@ using Infrastructure.Data;
 using Messages.Database.Entities;
 using Messages.GlobalNpcs.In;
 using Messages.GlobalNpcs.Out;
+using Messages.Worlds;
 using Microsoft.EntityFrameworkCore;
 
 namespace Services.GlobalNpcs;
 
 public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
 {
-    public async Task<List<GlobalNpcResponse>> GetAllAsync() =>
-        await db.GlobalNpcs.OrderBy(n => n.Name).Select(n => Map(n)).ToListAsync();
+    public async Task<List<GlobalNpcResponse>> GetAllAsync(long? campaignId, long userId)
+    {
+        var world = await GetWorldAsync(campaignId, userId);
+        return await db.GlobalNpcs.Where(n => n.World == world).OrderBy(n => n.Name).Select(n => Map(n)).ToListAsync();
+    }
 
     public async Task<GlobalNpcResponse> GetByIdAsync(long id) =>
         Map(await db.GlobalNpcs.FindAsync(id) ?? throw new KeyNotFoundException("Global NPC not found."));
 
-    public async Task<GlobalNpcResponse> CreateAsync(GlobalNpcRequest request)
+    public async Task<GlobalNpcResponse> CreateAsync(GlobalNpcRequest request, long? campaignId, long userId)
     {
-        var entity = FromRequest(request);
+        var entity = FromRequest(request, await GetWorldAsync(campaignId, userId));
         db.GlobalNpcs.Add(entity);
         await db.SaveChangesAsync();
         return Map(entity);
     }
 
-    public async Task<GlobalNpcResponse> UpdateAsync(long id, GlobalNpcRequest request)
+    public async Task<GlobalNpcResponse> UpdateAsync(long id, GlobalNpcRequest request, long? campaignId, long userId)
     {
-        var entity = await db.GlobalNpcs.FindAsync(id) ?? throw new KeyNotFoundException("Global NPC not found.");
+        var entity = await FindInWorldAsync(id, campaignId, userId);
         Apply(entity, request);
         entity.UpdatedAt = DateTime.UtcNow;
         await db.SaveChangesAsync();
         return Map(entity);
     }
 
-    public async Task DeleteAsync(long id)
+    public async Task DeleteAsync(long id, long? campaignId, long userId)
     {
-        var entity = await db.GlobalNpcs.FindAsync(id) ?? throw new KeyNotFoundException("Global NPC not found.");
+        var entity = await FindInWorldAsync(id, campaignId, userId);
         db.GlobalNpcs.Remove(entity);
         await db.SaveChangesAsync();
     }
 
-    private static GlobalNpcEntity FromRequest(GlobalNpcRequest r) => new()
+    /// <summary>
+    /// World of the operation: the campaign's world (the caller must belong to the campaign) or, without a campaign,
+    /// Stormlight (clients that predate worlds). The world never comes from the request body.
+    /// </summary>
+    private async Task<string> GetWorldAsync(long? campaignId, long userId)
     {
+        if (campaignId is null) return WorldIds.Stormlight;
+
+        var world = await db.Campaigns.AsNoTracking()
+            .Where(c => c.Id == campaignId)
+            .Select(c => c.World)
+            .FirstOrDefaultAsync()
+            ?? throw new KeyNotFoundException("Campaign not found.");
+
+        var isMember = await db.CampaignMembers.AnyAsync(m => m.CampaignId == campaignId && m.UserId == userId);
+        if (!isMember) throw new UnauthorizedAccessException("You are not a member of this campaign.");
+
+        return world;
+    }
+
+    /// <summary>The NPC to write to; 404 if it does not exist or belongs to a different world than the operation's.</summary>
+    private async Task<GlobalNpcEntity> FindInWorldAsync(long id, long? campaignId, long userId)
+    {
+        var world = await GetWorldAsync(campaignId, userId);
+        var entity = await db.GlobalNpcs.FindAsync(id);
+        if (entity is null || entity.World != world) throw new KeyNotFoundException("Global NPC not found.");
+        return entity;
+    }
+
+    private static GlobalNpcEntity FromRequest(GlobalNpcRequest r, string world) => new()
+    {
+        World = world,
         Name = r.Name, Source = r.Source, Tipo = r.Tipo, Ascendencia = r.Ascendencia, Level = r.Level,
         Fuerza = r.Fuerza, Velocidad = r.Velocidad, Intelecto = r.Intelecto,
         Voluntad = r.Voluntad, Discernimiento = r.Discernimiento, Presencia = r.Presencia,
@@ -82,5 +116,6 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
         Perspicacia = e.Perspicacia, Persuasion = e.Persuasion, Supervivencia = e.Supervivencia,
         Talentos = e.Talentos, Apariencia = e.Apariencia, Notas = e.Notas,
         ImageUrl = e.ImageUrl, CreatedAt = e.CreatedAt, UpdatedAt = e.UpdatedAt,
+        World = e.World,
     };
 }
