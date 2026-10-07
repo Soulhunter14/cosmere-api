@@ -56,4 +56,18 @@ public class CampaignsController(ICampaignService campaignService) : ControllerB
         await campaignService.AddMemberAsync(campaignId, request, JwtHelper.GetUserId(User));
         return NoContent();
     }
+
+    [HttpPost("{campaignId:long}/iniciar")]
+    public async Task<IActionResult> Iniciar(long campaignId)
+    {
+        await campaignService.IniciarAsync(campaignId, JwtHelper.GetUserId(User));
+        return NoContent();
+    }
+
+    [HttpPost("{campaignId:long}/reabrir")]
+    public async Task<IActionResult> Reabrir(long campaignId)
+    {
+        await campaignService.ReabrirAsync(campaignId, JwtHelper.GetUserId(User));
+        return NoContent();
+    }
 }

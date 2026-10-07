@@ -4,6 +4,7 @@ using Messages.Characters.Out;
 using Messages.Database.Entities;
 using Messages.Metas.Out;
 using Microsoft.EntityFrameworkCore;
+using Services.Campaigns;
 using Services.Worlds;
 
 namespace Services.Characters;
@@ -109,6 +110,10 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             request.Name = character.Name;
             request.CaminoHeroico = character.CaminoHeroico;
             world.RestringirCambiosNoGm(request, character);
+            // Campaña iniciada: lo que se cerró al terminar la preparación ya no lo cambia un jugador (CierreCampana).
+            var iniciadaEn = await db.Campaigns.Where(c => c.Id == campaignId).Select(c => c.IniciadaEn).FirstAsync();
+            if (iniciadaEn is not null)
+                CierreCampana.ConservarCampos(request, character);
         }
 
         // Camino inicial coherente con los caminos efectivos (§5.2, P6): si el GM borra el camino del que partía, pasa al otro

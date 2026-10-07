@@ -14,4 +14,8 @@ public interface ICampaignService
     Task<string> RegenerateInviteCodeAsync(long campaignId, long userId);
     Task<List<UserCandidateResponse>> GetCandidatesAsync(long campaignId, long userId);
     Task AddMemberAsync(long campaignId, AddMemberRequest request, long userId);
+    /// <summary>Solo el director: cierra los campos de <c>CierreCampana</c> para los jugadores.</summary>
+    Task IniciarAsync(long campaignId, long userId);
+    /// <summary>Solo el director: vuelve a la preparación (sesión 0).</summary>
+    Task ReabrirAsync(long campaignId, long userId);
 }
