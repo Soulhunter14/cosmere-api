@@ -64,6 +64,10 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         world.ValidarIdentidad(new IdentidadPersonaje(
             request.CaminoHeroico, request.CaminoRadiante, request.CaminoMetal, request.CaminoInicial, request.Ascendencia,
             [], [], new Dictionary<string, decimal>()));
+        ValidarNivel(request.Level);
+
+        // Nivel 0 («El primer paso», ARTO006 PDF 5): los seis atributos empiezan en 1 y la aventura los sube o baja (0 a 3).
+        int atributoInicial = request.Level == 0 ? 1 : 0;
 
         var character = new CharacterEntity
         {
@@ -77,6 +81,8 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             CaminoRadiante = request.CaminoRadiante,
             CaminoMetal = request.CaminoMetal,
             CaminoInicial = request.CaminoInicial,
+            Fuerza = atributoInicial, Velocidad = atributoInicial, Intelecto = atributoInicial,
+            Voluntad = atributoInicial, Discernimiento = atributoInicial, Presencia = atributoInicial,
             IsNpc = false
         };
 
@@ -118,6 +124,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             request.Ascendencia, poderes, request.Bendiciones ?? character.Bendiciones,
             CharacterJson.ParseRecursos(character.Recursos),
             request.Clavos ?? CharacterJson.ParseClavos(character.Clavos)));
+        ValidarNivel(request.Level);
 
         // Las reglas del mundo no tienen BD: la meta que enlaza un poder debe ser de este personaje.
         var metaIds = poderes.Where(p => p.MetaId is not null).Select(p => p.MetaId!.Value).Distinct().ToList();
@@ -226,6 +233,14 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             .Where(c => c.Id == campaignId)
             .Select(c => c.World)
             .FirstOrDefaultAsync());
+
+    /// <summary>
+    /// Nivel 0 es el de «El primer paso» (ARTO006): un personaje sin camino ni talentos que pasa a nivel 1 al final de la aventura.
+    /// </summary>
+    private static void ValidarNivel(int level)
+    {
+        if (level < 0) throw new ArgumentException($"Invalid Level: {level} (0 or more).");
+    }
 
     /// <summary>
     /// <c>CaminoInicial</c> coherente con los caminos (§5.2, P6): <c>heroico</c> sin camino heroico pasa a <c>metal</c> si hay
