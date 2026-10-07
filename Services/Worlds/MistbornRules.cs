@@ -609,7 +609,7 @@ public sealed class MistbornRules : IWorldRules
         if (d.Total <= 9)
             d.Situacional.Add(new StatLinea
             {
-                Concepto = "Desorientado al inicio de escena", Valor = 0,
+                Concepto = "Desorientado al inicio de escena", Valor = 0, SinValor = true,
                 DescripcionCondicion = "Con al menos un clavo y Defensa espiritual 9 o menos, quedas Desorientado hasta el final de la escena (L.290 / PDF 296)",
             });
     }
