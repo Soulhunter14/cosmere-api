@@ -4,6 +4,7 @@ using Messages.Characters.Out;
 using Messages.Database.Entities;
 using Messages.Metas.Out;
 using Microsoft.EntityFrameworkCore;
+using Services.Campaigns;
 using Services.Worlds;
 
 namespace Services.Characters;
@@ -109,6 +110,10 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             request.Name = character.Name;
             request.CaminoHeroico = character.CaminoHeroico;
             world.RestringirCambiosNoGm(request, character);
+            // Campaña iniciada: lo que se cerró al terminar la preparación ya no lo cambia un jugador (CierreCampana).
+            var iniciadaEn = await db.Campaigns.Where(c => c.Id == campaignId).Select(c => c.IniciadaEn).FirstAsync();
+            if (iniciadaEn is not null)
+                CierreCampana.ConservarCampos(request, character);
         }
 
         // Camino inicial coherente con los caminos efectivos (§5.2, P6): si el GM borra el camino del que partía, pasa al otro
@@ -123,7 +128,9 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             request.CaminoMetal ?? character.CaminoMetal, request.CaminoInicial ?? character.CaminoInicial,
             request.Ascendencia, poderes, request.Bendiciones ?? character.Bendiciones,
             CharacterJson.ParseRecursos(character.Recursos),
-            request.Clavos ?? CharacterJson.ParseClavos(character.Clavos)));
+            request.Clavos ?? CharacterJson.ParseClavos(character.Clavos),
+            request.Legado ?? character.Legado,
+            request.LegadoRespuestas ?? character.LegadoRespuestas));
         ValidarNivel(request.Level);
 
         // Las reglas del mundo no tienen BD: la meta que enlaza un poder debe ser de este personaje.
@@ -291,6 +298,8 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         if (r.Poderes is not null)
             c.Poderes = CharacterJson.SerializarPoderes(CharacterJson.FusionarPoderes(CharacterJson.ParsePoderes(c.Poderes), r.Poderes));
         if (r.Clavos is not null) c.Clavos = CharacterJson.SerializarClavos(r.Clavos);
+        if (r.Legado is not null) c.Legado = r.Legado;
+        if (r.LegadoRespuestas is not null) c.LegadoRespuestas = r.LegadoRespuestas;
     }
 
     // ── Helpers de cálculo de reservas ───────────────────────────────────────
@@ -514,7 +523,8 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             CreatedAt = c.CreatedAt, UpdatedAt = c.UpdatedAt,
 
             // ── Nacidos de la bruma ───────────────────────────────────────────
-            CaminoMetal = c.CaminoMetal, CaminoInicial = c.CaminoInicial,
+            CaminoMetal = c.CaminoMetal, CaminoInicial = c.CaminoInicial, Legado = c.Legado,
+            LegadoRespuestas = c.LegadoRespuestas,
             Poderes = poderes, Recursos = recursos, Bendiciones = c.Bendiciones,
             DerivadosSet = world.Derivar(c, talentos, poderes, fb),
             BonosAtributos = fb.ComoDiccionario(),

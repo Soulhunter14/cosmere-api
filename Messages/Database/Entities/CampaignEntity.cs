@@ -12,6 +12,8 @@ public class CampaignEntity
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public string World { get; set; } = WorldIds.Stormlight;
     public string? Era { get; set; }
+    /// <summary>Cuándo el director inició la campaña; <c>null</c> = en preparación (sesión 0). Ver <c>CierreCampana</c>.</summary>
+    public DateTime? IniciadaEn { get; set; }
 
     public UserEntity GmUser { get; set; } = null!;
     public ICollection<CampaignMemberEntity> Members { get; set; } = [];

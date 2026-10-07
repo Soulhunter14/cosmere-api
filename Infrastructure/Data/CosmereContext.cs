@@ -247,6 +247,10 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
         modelBuilder.Entity<CharacterEntity>().Property(c => c.Poderes).HasDefaultValue("[]");
         modelBuilder.Entity<CharacterEntity>().Property(c => c.Recursos).HasDefaultValue("{}");
         modelBuilder.Entity<CharacterEntity>().Property(c => c.Bendiciones).HasDefaultValueSql("'{}'");
+        // Legado (AddCharacterLegado): existing characters have none.
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.Legado).HasDefaultValue("");
+        // Respuestas del legado (AddCharacterLegadoRespuestas): existing characters have none.
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.LegadoRespuestas).HasDefaultValueSql("'{}'");
 
         // Catalog (M3, AddWorldToCatalog): existing objects and options stay on Stormlight; the migration itself moves the
         // options shared by every world to 'cosmere'.

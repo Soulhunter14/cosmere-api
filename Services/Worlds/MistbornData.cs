@@ -59,6 +59,20 @@ public static class MistbornData
     /// <summary>Ascendencias (L.32-39 / PDF 38-45), con la misma capitalización que <c>Humano</c>/<c>Oyente</c> de Stormlight.</summary>
     public static readonly IReadOnlySet<string> Ascendencias = new HashSet<string> { Humano, Kandra, SangreKoloss };
 
+    /// <summary>
+    /// Legados de la aventura «El legado de los nacidos de la bruma» (PDF 22-26): seis de la Era 1 y los seis de la Era 2 con los que
+    /// se conectan. Ids ASCII (P7), los mismos que <c>src/data/mistborn/legados.ts</c> del cliente.
+    /// </summary>
+    public static readonly IReadOnlySet<string> Legados = new HashSet<string>
+    {
+        "convicto", "cronista", "funcionario", "noble", "pilluelo", "veterano",
+        "narrador", "explorador", "vigilante-de-la-ley", "heredero", "emprendedor", "novato",
+    };
+
+    /// <summary>Cada legado tiene dos «Preguntas para el personaje»; cada respuesta, como mucho, esta longitud.</summary>
+    public const int PreguntasLegado = 2;
+    public const int MaxRespuestaLegado = 2000;
+
     /// <summary>Artes metálicas de un poder de personaje; la hemalurgia no lo es en v1 (L.251 / PDF 257).</summary>
     public static readonly IReadOnlySet<string> Artes = new HashSet<string> { Alomancia, Feruquimia };
 

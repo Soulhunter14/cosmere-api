@@ -12,7 +12,7 @@ public class CampaignService(CosmereContext db, IWorldRulesProvider reglas) : IC
     public async Task<List<CampaignResponse>> GetUserCampaignsAsync(long userId)
     {
         var now = DateTime.UtcNow;
-        return await db.CampaignMembers
+        var campanas = await db.CampaignMembers
             .Where(m => m.UserId == userId)
             .Include(m => m.Campaign)
             .Select(m => new CampaignResponse
@@ -23,6 +23,7 @@ public class CampaignService(CosmereContext db, IWorldRulesProvider reglas) : IC
                 CreatedAt = m.Campaign.CreatedAt,
                 World = m.Campaign.World,
                 Era = m.Campaign.Era,
+                IniciadaEn = m.Campaign.IniciadaEn,
                 NextSessionDate = m.Campaign.Sessions
                     .Where(s => s.Date > now)
                     .OrderBy(s => s.Date)
@@ -35,6 +36,8 @@ public class CampaignService(CosmereContext db, IWorldRulesProvider reglas) : IC
                     .FirstOrDefault(),
             })
             .ToListAsync();
+        foreach (var c in campanas) c.CamposDeCierre = [.. CierreCampana.Campos];
+        return campanas;
     }
 
     public async Task<CampaignDetailResponse> GetCampaignDetailAsync(long campaignId, long userId)
@@ -58,6 +61,8 @@ public class CampaignService(CosmereContext db, IWorldRulesProvider reglas) : IC
             CreatedAt = campaign.CreatedAt,
             World = campaign.World,
             Era = campaign.Era,
+            IniciadaEn = campaign.IniciadaEn,
+            CamposDeCierre = [.. CierreCampana.Campos],
             Members = campaign.Members.Select(m => new MemberResponse
             {
                 UserId = m.UserId,
@@ -131,7 +136,9 @@ public class CampaignService(CosmereContext db, IWorldRulesProvider reglas) : IC
             Role = member.Role,
             CreatedAt = campaign.CreatedAt,
             World = campaign.World,
-            Era = campaign.Era
+            Era = campaign.Era,
+            IniciadaEn = campaign.IniciadaEn,
+            CamposDeCierre = [.. CierreCampana.Campos]
         };
     }
 
@@ -184,6 +191,21 @@ public class CampaignService(CosmereContext db, IWorldRulesProvider reglas) : IC
             UserId = request.UserId,
             Role = "player"
         });
+        await db.SaveChangesAsync();
+    }
+
+    // Iniciar es idempotente: una campaña ya iniciada conserva su fecha.
+    public async Task IniciarAsync(long campaignId, long userId)
+    {
+        var campaign = await GetGmCampaignAsync(campaignId, userId);
+        campaign.IniciadaEn ??= DateTime.UtcNow;
+        await db.SaveChangesAsync();
+    }
+
+    public async Task ReabrirAsync(long campaignId, long userId)
+    {
+        var campaign = await GetGmCampaignAsync(campaignId, userId);
+        campaign.IniciadaEn = null;
         await db.SaveChangesAsync();
     }
 
