@@ -66,6 +66,10 @@ public sealed class StormlightRules : IWorldRules
             throw new ArgumentException($"Invalid CaminoMetal: '{id.CaminoMetal}'.");
         if (!string.IsNullOrEmpty(id.CaminoInicial))
             throw new ArgumentException($"Invalid CaminoInicial: '{id.CaminoInicial}'.");
+        if (!string.IsNullOrEmpty(id.Legado))
+            throw new ArgumentException($"Invalid Legado: '{id.Legado}'.");
+        if (id.LegadoRespuestas is { Count: > 0 })
+            throw new ArgumentException("This world has no legado answers.");
         if (id.Poderes.Count > 0 || id.Bendiciones.Count > 0 || id.Recursos.Count > 0 || id.Clavos is { Count: > 0 })
             throw new ArgumentException("This world has no metalborn data.");
     }

@@ -22,7 +22,9 @@ public sealed record IdentidadPersonaje(
     IReadOnlyList<PoderPersonaje> Poderes,
     IReadOnlyList<string> Bendiciones,
     IReadOnlyDictionary<string, decimal> Recursos,
-    IReadOnlyList<ClavoHemalurgico>? Clavos = null);
+    IReadOnlyList<ClavoHemalurgico>? Clavos = null,
+    string Legado = "",
+    IReadOnlyList<string>? LegadoRespuestas = null);
 
 /// <summary>
 /// Reglas de un mundo (ambientación) de campaña. Lo compartido es Cosmere y vive en el núcleo (<c>CharacterService</c>,

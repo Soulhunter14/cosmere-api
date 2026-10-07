@@ -111,4 +111,9 @@ public class UpdateCharacterRequest
     // la lista no está vacía). El poder de un clavo de poder viaja en Poderes con Origen = "clavo" (el servidor lo normaliza a
     // completo).
     public List<ClavoHemalurgico>? Clavos { get; set; }
+
+    // Legado del personaje (aventura «El legado de los nacidos de la bruma», PDF 22-26): null = conservar el guardado, "" = sin legado.
+    public string? Legado { get; set; }
+    // Respuestas a las dos preguntas del legado, en su orden: null = conservar las guardadas.
+    public List<string>? LegadoRespuestas { get; set; }
 }

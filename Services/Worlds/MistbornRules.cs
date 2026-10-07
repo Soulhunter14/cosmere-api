@@ -73,6 +73,16 @@ public sealed class MistbornRules : IWorldRules
             throw new ArgumentException($"Invalid CaminoInicial: '{id.CaminoInicial}'.");
         if (!string.IsNullOrEmpty(id.Ascendencia) && !MistbornData.Ascendencias.Contains(id.Ascendencia))
             throw new ArgumentException($"Invalid Ascendencia: '{id.Ascendencia}'.");
+        if (!string.IsNullOrEmpty(id.Legado) && !MistbornData.Legados.Contains(id.Legado))
+            throw new ArgumentException($"Invalid Legado: '{id.Legado}'.");
+        // Respuestas a las dos preguntas del legado (Legado PDF 23-26): solo con legado, como mucho dos y de longitud acotada.
+        var respuestas = id.LegadoRespuestas ?? [];
+        if (respuestas.Count > 0 && string.IsNullOrEmpty(id.Legado))
+            throw new ArgumentException("Invalid LegadoRespuestas: the character has no legado.");
+        if (respuestas.Count > MistbornData.PreguntasLegado)
+            throw new ArgumentException($"Invalid LegadoRespuestas: {respuestas.Count} answers (at most {MistbornData.PreguntasLegado}).");
+        if (respuestas.Any(r => r is null || r.Length > MistbornData.MaxRespuestaLegado))
+            throw new ArgumentException($"Invalid LegadoRespuestas: every answer is text of at most {MistbornData.MaxRespuestaLegado} characters.");
 
         // Los kandra no pueden tomar talentos de nacido del metal (L.18 / PDF 24); los talentos principales de nacido de la
         // bruma y feruquimista exigen ascendencia humana (L.141 / PDF 147; L.146 / PDF 152).

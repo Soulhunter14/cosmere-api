@@ -109,6 +109,10 @@ public class CharacterResponse
     public Dictionary<string, int> BonosAtributos { get; set; } = new();
     /// <summary>Clavos hemalúrgicos guardados (T49a); <c>[]</c> en Stormlight y en un personaje sin clavos.</summary>
     public List<ClavoHemalurgico> Clavos { get; set; } = [];
+    /// <summary>Id del legado (aventura «El legado de los nacidos de la bruma»); <c>""</c> sin legado y siempre en Stormlight.</summary>
+    public string Legado { get; set; } = string.Empty;
+    /// <summary>Respuestas a las dos preguntas del legado, en su orden (<c>[]</c> sin responder y siempre en Stormlight).</summary>
+    public List<string> LegadoRespuestas { get; set; } = [];
 
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
