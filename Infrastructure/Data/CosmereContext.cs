@@ -25,6 +25,7 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
     public DbSet<LockedDayEntity> LockedDays { get; set; }
     public DbSet<DiaryEntryEntity> DiaryEntries { get; set; }
     public DbSet<DiceRollEntity> DiceRolls { get; set; }
+    public DbSet<GmScreenEntity> GmScreens { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -268,5 +269,17 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
         // Proposal slots (AddProposalDateSlots): each proposed date is resolved on its own; existing dates start pending and
         // the migration backfills the ones of proposals already resolved.
         modelBuilder.Entity<ProposalDateEntity>().Property(d => d.Status).HasDefaultValue("Pending");
+
+        // Pantalla del director (AddGmScreens): one JSON document per campaign, deleted with it. The key is the campaign id
+        // (never generated); Version is a concurrency token so two simultaneous saves of the same version cannot both win.
+        modelBuilder.Entity<GmScreenEntity>().HasKey(g => g.CampaignId);
+        modelBuilder.Entity<GmScreenEntity>().Property(g => g.CampaignId).ValueGeneratedNever();
+        modelBuilder.Entity<GmScreenEntity>()
+            .HasOne(g => g.Campaign)
+            .WithOne()
+            .HasForeignKey<GmScreenEntity>(g => g.CampaignId)
+            .OnDelete(DeleteBehavior.Cascade);
+        modelBuilder.Entity<GmScreenEntity>().Property(g => g.State).HasDefaultValue("{}");
+        modelBuilder.Entity<GmScreenEntity>().Property(g => g.Version).IsConcurrencyToken();
     }
 }

@@ -7,6 +7,7 @@ using Services.GlobalNpcs;
 using Services.NpcNotes;
 using Services.Diary;
 using Services.DiceRolls;
+using Services.GmScreen;
 using Services.LockedDays;
 using Services.Metas;
 using Services.Notes;
@@ -32,6 +33,7 @@ public static class Bootstrap
         services.AddScoped<ILockedDayService, LockedDayService>();
         services.AddScoped<IDiaryService, DiaryService>();
         services.AddScoped<IDiceRollService, DiceRollService>();
+        services.AddScoped<IGmScreenService, GmScreenService>();
         // World rules: stateless and without DB access, hence singletons
         services.AddSingleton<IWorldRules, StormlightRules>();
         services.AddSingleton<IWorldRules, MistbornRules>();

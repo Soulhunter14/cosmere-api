@@ -57,4 +57,8 @@ public class GlobalNpcEntity
 
     // World the adversary belongs to (M5): stormlight | mistborn. The server sets it from the campaign; the client never sends it.
     public string World { get; set; } = WorldIds.Stormlight;
+
+    // Era (AddGlobalNpcEra): 1 or 2 for the adversaries the books tag «ERA 1» / «ERA 2», null = both eras (as the catalog).
+    // A new adversary takes the era of the campaign it is created in; the client never sends it.
+    public short? Era { get; set; }
 }
