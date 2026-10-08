@@ -4,6 +4,7 @@ using Messages.Database.Entities;
 using Messages.GmScreen.In;
 using Messages.GmScreen.Out;
 using Microsoft.EntityFrameworkCore;
+using Npgsql;
 
 namespace Services.GmScreen;
 
@@ -29,6 +30,16 @@ public class GmScreenService(CosmereContext db) : IGmScreenService
         var json = request.State.GetRawText();
         if (json.Length > MaxStateLength)
             throw new ArgumentException("State is too large.");
+        // A lone UTF-16 surrogate (half an emoji, «\ud83d») parses but cannot be written back as JSON: stored, it would make
+        // every later GET and 409 of this campaign fail. Writing it once here finds it before anything is saved.
+        try
+        {
+            JsonSerializer.SerializeToUtf8Bytes(request.State);
+        }
+        catch (Exception e) when (e is JsonException or ArgumentException or InvalidOperationException)
+        {
+            throw new ArgumentException("State contains invalid text.");
+        }
 
         var row = await db.GmScreens.FirstOrDefaultAsync(g => g.CampaignId == campaignId);
         if (row is null)
@@ -55,11 +66,11 @@ public class GmScreenService(CosmereContext db) : IGmScreenService
         {
             await db.SaveChangesAsync();
         }
-        catch (DbUpdateException)
+        catch (DbUpdateException e) when (e is DbUpdateConcurrencyException || e.InnerException is PostgresException { SqlState: PostgresErrorCodes.UniqueViolation })
         {
-            // Lost a race, and nothing of ours was written. Either another save took the version first
-            // (DbUpdateConcurrencyException, a subclass) or two first saves collided on the primary key (plain
-            // DbUpdateException). Answer with what is stored now, as for any other conflict.
+            // Lost a race, and nothing of ours was written: another save took the version first, or two first saves collided
+            // on the primary key. Answer with what is stored now, as for any other conflict. Any other failure (the campaign
+            // deleted meanwhile, a timeout) is not a conflict and goes up as an error.
             db.ChangeTracker.Clear();
             var stored = await db.GmScreens.AsNoTracking().FirstOrDefaultAsync(g => g.CampaignId == campaignId);
             return Conflict(stored);
