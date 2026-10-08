@@ -26,6 +26,7 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
     public DbSet<DiaryEntryEntity> DiaryEntries { get; set; }
     public DbSet<DiceRollEntity> DiceRolls { get; set; }
     public DbSet<GmScreenEntity> GmScreens { get; set; }
+    public DbSet<BookChapterEntity> BookChapters { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -281,5 +282,15 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
             .OnDelete(DeleteBehavior.Cascade);
         modelBuilder.Entity<GmScreenEntity>().Property(g => g.State).HasDefaultValue("{}");
         modelBuilder.Entity<GmScreenEntity>().Property(g => g.Version).IsConcurrencyToken();
+
+        // Libro original (AddBookChapters): the chapters of the adventure book uploaded by the GM, one per number and campaign,
+        // deleted with it
+        modelBuilder.Entity<BookChapterEntity>().HasIndex(c => new { c.CampaignId, c.Number }).IsUnique();
+        modelBuilder.Entity<BookChapterEntity>()
+            .HasOne(c => c.Campaign)
+            .WithMany()
+            .HasForeignKey(c => c.CampaignId)
+            .OnDelete(DeleteBehavior.Cascade);
+        modelBuilder.Entity<BookChapterEntity>().Property(c => c.Md).HasDefaultValue("");
     }
 }
