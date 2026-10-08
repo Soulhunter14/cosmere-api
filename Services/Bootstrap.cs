@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Services.Auth;
+using Services.Book;
 using Services.Campaigns;
 using Services.Catalog;
 using Services.Characters;
@@ -34,6 +35,7 @@ public static class Bootstrap
         services.AddScoped<IDiaryService, DiaryService>();
         services.AddScoped<IDiceRollService, DiceRollService>();
         services.AddScoped<IGmScreenService, GmScreenService>();
+        services.AddScoped<IBookService, BookService>();
         // World rules: stateless and without DB access, hence singletons
         services.AddSingleton<IWorldRules, StormlightRules>();
         services.AddSingleton<IWorldRules, MistbornRules>();
