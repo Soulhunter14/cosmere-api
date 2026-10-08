@@ -23,7 +23,7 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
 
     public async Task<GlobalNpcResponse> CreateAsync(GlobalNpcRequest request, long? campaignId, long userId)
     {
-        var (world, era) = await GetScopeAsync(campaignId, userId);
+        var (world, era) = await GetScopeAsync(campaignId, userId, requireGm: true);
         var entity = FromRequest(request, world);
         entity.Era = era;
         db.GlobalNpcs.Add(entity);
@@ -49,9 +49,10 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
 
     /// <summary>
     /// World and era (catalog number, <see cref="EraIds.Numero"/>) of the operation: the campaign's (the caller must belong to
-    /// the campaign) or, without a campaign, Stormlight and no era (clients that predate worlds). Neither comes from the request body.
+    /// the campaign and, to write, be its GM, as in the catalog) or, without a campaign, Stormlight and no era (clients that predate
+    /// worlds). Neither comes from the request body.
     /// </summary>
-    private async Task<(string World, short? Era)> GetScopeAsync(long? campaignId, long userId)
+    private async Task<(string World, short? Era)> GetScopeAsync(long? campaignId, long userId, bool requireGm = false)
     {
         if (campaignId is null) return (WorldIds.Stormlight, null);
 
@@ -61,18 +62,21 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
             .FirstOrDefaultAsync()
             ?? throw new KeyNotFoundException("Campaign not found.");
 
-        var isMember = await db.CampaignMembers.AnyAsync(m => m.CampaignId == campaignId && m.UserId == userId);
-        if (!isMember) throw new UnauthorizedAccessException("You are not a member of this campaign.");
+        var role = await db.CampaignMembers
+            .Where(m => m.CampaignId == campaignId && m.UserId == userId)
+            .Select(m => m.Role)
+            .FirstOrDefaultAsync();
+        if (role is null) throw new UnauthorizedAccessException("You are not a member of this campaign.");
+        // The adversaries are shared by every campaign of the world: a player of one campaign must not change them for all
+        if (requireGm && role != "gm") throw new UnauthorizedAccessException("Only the GM can perform this action.");
 
         return (campaign.World, EraIds.Numero(campaign.Era));
     }
 
-    private async Task<string> GetWorldAsync(long? campaignId, long userId) => (await GetScopeAsync(campaignId, userId)).World;
-
-    /// <summary>The NPC to write to; 404 if it does not exist or belongs to a different world than the operation's.</summary>
+    /// <summary>The NPC to write to (GM only); 404 if it does not exist or belongs to a different world than the operation's.</summary>
     private async Task<GlobalNpcEntity> FindInWorldAsync(long id, long? campaignId, long userId)
     {
-        var world = await GetWorldAsync(campaignId, userId);
+        var (world, _) = await GetScopeAsync(campaignId, userId, requireGm: true);
         var entity = await db.GlobalNpcs.FindAsync(id);
         if (entity is null || entity.World != world) throw new KeyNotFoundException("Global NPC not found.");
         return entity;
