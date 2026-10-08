@@ -11,8 +11,11 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
 {
     public async Task<List<GlobalNpcResponse>> GetAllAsync(long? campaignId, long userId)
     {
-        var world = await GetWorldAsync(campaignId, userId);
-        return await db.GlobalNpcs.Where(n => n.World == world).OrderBy(n => n.Name).Select(n => Map(n)).ToListAsync();
+        // The campaign's world and, in an era campaign, the adversaries of its era plus those of both eras (Era null)
+        var (world, era) = await GetScopeAsync(campaignId, userId);
+        return await db.GlobalNpcs
+            .Where(n => n.World == world && (era == null || n.Era == null || n.Era == era))
+            .OrderBy(n => n.Name).Select(n => Map(n)).ToListAsync();
     }
 
     public async Task<GlobalNpcResponse> GetByIdAsync(long id) =>
@@ -20,7 +23,9 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
 
     public async Task<GlobalNpcResponse> CreateAsync(GlobalNpcRequest request, long? campaignId, long userId)
     {
-        var entity = FromRequest(request, await GetWorldAsync(campaignId, userId));
+        var (world, era) = await GetScopeAsync(campaignId, userId);
+        var entity = FromRequest(request, world);
+        entity.Era = era;
         db.GlobalNpcs.Add(entity);
         await db.SaveChangesAsync();
         return Map(entity);
@@ -43,24 +48,26 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
     }
 
     /// <summary>
-    /// World of the operation: the campaign's world (the caller must belong to the campaign) or, without a campaign,
-    /// Stormlight (clients that predate worlds). The world never comes from the request body.
+    /// World and era (catalog number, <see cref="EraIds.Numero"/>) of the operation: the campaign's (the caller must belong to
+    /// the campaign) or, without a campaign, Stormlight and no era (clients that predate worlds). Neither comes from the request body.
     /// </summary>
-    private async Task<string> GetWorldAsync(long? campaignId, long userId)
+    private async Task<(string World, short? Era)> GetScopeAsync(long? campaignId, long userId)
     {
-        if (campaignId is null) return WorldIds.Stormlight;
+        if (campaignId is null) return (WorldIds.Stormlight, null);
 
-        var world = await db.Campaigns.AsNoTracking()
+        var campaign = await db.Campaigns.AsNoTracking()
             .Where(c => c.Id == campaignId)
-            .Select(c => c.World)
+            .Select(c => new { c.World, c.Era })
             .FirstOrDefaultAsync()
             ?? throw new KeyNotFoundException("Campaign not found.");
 
         var isMember = await db.CampaignMembers.AnyAsync(m => m.CampaignId == campaignId && m.UserId == userId);
         if (!isMember) throw new UnauthorizedAccessException("You are not a member of this campaign.");
 
-        return world;
+        return (campaign.World, EraIds.Numero(campaign.Era));
     }
+
+    private async Task<string> GetWorldAsync(long? campaignId, long userId) => (await GetScopeAsync(campaignId, userId)).World;
 
     /// <summary>The NPC to write to; 404 if it does not exist or belongs to a different world than the operation's.</summary>
     private async Task<GlobalNpcEntity> FindInWorldAsync(long id, long? campaignId, long userId)
@@ -116,6 +123,6 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
         Perspicacia = e.Perspicacia, Persuasion = e.Persuasion, Supervivencia = e.Supervivencia,
         Talentos = e.Talentos, Apariencia = e.Apariencia, Notas = e.Notas,
         ImageUrl = e.ImageUrl, CreatedAt = e.CreatedAt, UpdatedAt = e.UpdatedAt,
-        World = e.World,
+        World = e.World, Era = e.Era,
     };
 }

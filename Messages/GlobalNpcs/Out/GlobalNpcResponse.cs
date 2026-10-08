@@ -44,4 +44,5 @@ public class GlobalNpcResponse
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
     public string World { get; set; } = WorldIds.Stormlight;
+    public short? Era { get; set; }
 }
