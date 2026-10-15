@@ -46,6 +46,9 @@ public sealed class MistbornRules : IWorldRules
     /// <summary>Investidura actual (L.26 / PDF 32), cuentas de atium (L.176 / PDF 182) y arquillas (L.254 / PDF 260).</summary>
     public IReadOnlySet<string> RecursosPermitidos { get; } = new HashSet<string> { ClaveInvestidura, ClaveCuentasAtium, ClaveArquillas };
 
+    /// <summary>El dinero del personaje son sus arquillas (L.254 / PDF 260): es lo que aporta a la tesorería de la banda.</summary>
+    public string? ClaveDinero => ClaveArquillas;
+
     /// <summary>Q6: por ahora solo el director cambia el camino de nacido del metal (el libro lo permitiría, L.128 / PDF 134).</summary>
     public bool CaminoInvestidoLoCambiaElDirector => true;
 

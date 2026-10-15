@@ -48,6 +48,9 @@ public sealed class StormlightRules : IWorldRules
 
     public IReadOnlySet<string> RecursosPermitidos { get; } = new HashSet<string>();
 
+    /// <summary>Los marcos de Roshar son columnas propias del personaje, no <c>Recursos</c>: no hay aportes a una tesorería de banda.</summary>
+    public string? ClaveDinero => null;
+
     public bool CaminoInvestidoLoCambiaElDirector => true;
 
     public bool DesvioBonoSeAcumula => false;

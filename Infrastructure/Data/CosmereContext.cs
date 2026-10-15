@@ -27,6 +27,7 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
     public DbSet<DiceRollEntity> DiceRolls { get; set; }
     public DbSet<GmScreenEntity> GmScreens { get; set; }
     public DbSet<BookChapterEntity> BookChapters { get; set; }
+    public DbSet<CrewSheetEntity> CrewSheets { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -292,5 +293,20 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
             .HasForeignKey(c => c.CampaignId)
             .OnDelete(DeleteBehavior.Cascade);
         modelBuilder.Entity<BookChapterEntity>().Property(c => c.Md).HasDefaultValue("");
+
+        // La banda (AddCrewSheets): the crew sheet of a campaign as one JSON document plus the GM's private part, one row per
+        // campaign, deleted with it. As in GmScreens, the key is the campaign id and Version is a concurrency token. SharedWith
+        // (bigint[]) lists the players who may read it.
+        modelBuilder.Entity<CrewSheetEntity>().HasKey(c => c.CampaignId);
+        modelBuilder.Entity<CrewSheetEntity>().Property(c => c.CampaignId).ValueGeneratedNever();
+        modelBuilder.Entity<CrewSheetEntity>()
+            .HasOne(c => c.Campaign)
+            .WithOne()
+            .HasForeignKey<CrewSheetEntity>(c => c.CampaignId)
+            .OnDelete(DeleteBehavior.Cascade);
+        modelBuilder.Entity<CrewSheetEntity>().Property(c => c.State).HasDefaultValue("{}");
+        modelBuilder.Entity<CrewSheetEntity>().Property(c => c.GmState).HasDefaultValue("{}");
+        modelBuilder.Entity<CrewSheetEntity>().Property(c => c.SharedWith).HasDefaultValueSql("'{}'");
+        modelBuilder.Entity<CrewSheetEntity>().Property(c => c.Version).IsConcurrencyToken();
     }
 }

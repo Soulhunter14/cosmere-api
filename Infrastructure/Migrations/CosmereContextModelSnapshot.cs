@@ -530,6 +530,41 @@ namespace Infrastructure.Migrations
                     b.ToTable("Characters");
                 });
 
+            modelBuilder.Entity("Messages.Database.Entities.CrewSheetEntity", b =>
+                {
+                    b.Property<long>("CampaignId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("GmState")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text")
+                        .HasDefaultValue("{}");
+
+                    b.Property<List<long>>("SharedWith")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint[]")
+                        .HasDefaultValueSql("'{}'");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text")
+                        .HasDefaultValue("{}");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("Version")
+                        .IsConcurrencyToken()
+                        .HasColumnType("integer");
+
+                    b.HasKey("CampaignId");
+
+                    b.ToTable("CrewSheets");
+                });
+
             modelBuilder.Entity("Messages.Database.Entities.DiaryEntryEntity", b =>
                 {
                     b.Property<long>("Id")
@@ -1291,6 +1326,17 @@ namespace Infrastructure.Migrations
                         .WithMany()
                         .HasForeignKey("OwnerId")
                         .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Campaign");
+                });
+
+            modelBuilder.Entity("Messages.Database.Entities.CrewSheetEntity", b =>
+                {
+                    b.HasOne("Messages.Database.Entities.CampaignEntity", "Campaign")
+                        .WithOne()
+                        .HasForeignKey("Messages.Database.Entities.CrewSheetEntity", "CampaignId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Campaign");
                 });

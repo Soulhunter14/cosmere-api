@@ -56,6 +56,12 @@ public interface IWorldRules
     /// <summary>Claves de <c>Recursos</c> que admite el mundo (Stormlight: ninguna).</summary>
     IReadOnlySet<string> RecursosPermitidos { get; }
 
+    /// <summary>
+    /// Clave de <c>Recursos</c> que guarda el dinero del personaje (Nacidos de la bruma: arquillas), la que mueve un aporte a la tesorería
+    /// de la banda. <c>null</c>: el dinero del mundo no vive en <c>Recursos</c> (Stormlight: sus marcos son columnas propias).
+    /// </summary>
+    string? ClaveDinero { get; }
+
     /// <summary>El camino Investido del mundo (radiante o de nacido del metal) solo lo cambia el director.</summary>
     bool CaminoInvestidoLoCambiaElDirector { get; }
 
