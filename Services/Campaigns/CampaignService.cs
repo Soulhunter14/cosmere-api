@@ -51,6 +51,10 @@ public class CampaignService(CosmereContext db, IWorldRulesProvider reglas) : IC
             .FirstOrDefaultAsync(c => c.Id == campaignId)
             ?? throw new KeyNotFoundException("Campaign not found.");
 
+        // «La banda» is hidden from players until the GM shares the crew sheet with them (CrewSheets.SharedWith)
+        var bandaVisible = member.Role == "gm"
+            || await db.CrewSheets.AnyAsync(c => c.CampaignId == campaignId && c.SharedWith.Contains(userId));
+
         return new CampaignDetailResponse
         {
             Id = campaign.Id,
@@ -63,6 +67,7 @@ public class CampaignService(CosmereContext db, IWorldRulesProvider reglas) : IC
             Era = campaign.Era,
             IniciadaEn = campaign.IniciadaEn,
             CamposDeCierre = [.. CierreCampana.Campos],
+            BandaVisible = bandaVisible,
             Members = campaign.Members.Select(m => new MemberResponse
             {
                 UserId = m.UserId,
