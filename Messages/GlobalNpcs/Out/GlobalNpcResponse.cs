@@ -45,4 +45,6 @@ public class GlobalNpcResponse
     public DateTime UpdatedAt { get; set; }
     public string World { get; set; } = WorldIds.Stormlight;
     public short? Era { get; set; }
+    /// <summary>Book images it has (AddGlobalNpcImages): «ficha», «tacticas», «retrato»; each comes from its own endpoint.</summary>
+    public List<string> BookImages { get; set; } = [];
 }
