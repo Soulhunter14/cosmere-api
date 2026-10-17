@@ -1,5 +1,4 @@
 using Cross.Security;
-using Messages.GlobalNpcs.In;
 using Messages.GlobalNpcs.Out;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -7,6 +6,11 @@ using Services.GlobalNpcs;
 
 namespace API.Controllers;
 
+/// <summary>
+/// The adversaries of each world's catalog, read-only: they are the books', so an erratum or a new adversary comes in a migration
+/// (like SeedMistbornAdversarios), and an enemy is adjusted on its own copy, in an encounter of the GM screen. Only their book
+/// images are written.
+/// </summary>
 [ApiController]
 [Route("global-npcs")]
 [Authorize]
@@ -19,21 +23,6 @@ public class GlobalNpcsController(IGlobalNpcService service) : ControllerBase
     [HttpGet("{id:long}")]
     public async Task<ActionResult<GlobalNpcResponse>> GetById(long id)
         => Ok(await service.GetByIdAsync(id));
-
-    [HttpPost]
-    public async Task<ActionResult<GlobalNpcResponse>> Create([FromBody] GlobalNpcRequest request, [FromQuery] long? campaignId)
-        => Ok(await service.CreateAsync(request, campaignId, JwtHelper.GetUserId(User)));
-
-    [HttpPut("{id:long}")]
-    public async Task<ActionResult<GlobalNpcResponse>> Update(long id, [FromBody] GlobalNpcRequest request, [FromQuery] long? campaignId)
-        => Ok(await service.UpdateAsync(id, request, campaignId, JwtHelper.GetUserId(User)));
-
-    [HttpDelete("{id:long}")]
-    public async Task<IActionResult> Delete(long id, [FromQuery] long? campaignId)
-    {
-        await service.DeleteAsync(id, campaignId, JwtHelper.GetUserId(User));
-        return NoContent();
-    }
 
     /// <summary>
     /// The adversary as its book prints it: «ficha» (stat block), «tacticas» (tactics box) or «retrato» (illustration). Only the
