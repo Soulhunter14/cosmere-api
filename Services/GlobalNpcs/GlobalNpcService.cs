@@ -9,17 +9,21 @@ namespace Services.GlobalNpcs;
 
 public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
 {
+    /// <summary>Largest accepted book image (a stat block cut at 200 dpi weighs 150-600 KB as WebP).</summary>
+    public const int MaxImageBytes = 3 * 1024 * 1024;
+
     public async Task<List<GlobalNpcResponse>> GetAllAsync(long? campaignId, long userId)
     {
         // The campaign's world and, in an era campaign, the adversaries of its era plus those of both eras (Era null)
         var (world, era) = await GetScopeAsync(campaignId, userId);
-        return await db.GlobalNpcs
+        var npcs = await db.GlobalNpcs
             .Where(n => n.World == world && (era == null || n.Era == null || n.Era == era))
             .OrderBy(n => n.Name).Select(n => Map(n)).ToListAsync();
+        return await WithBookImagesAsync(npcs);
     }
 
     public async Task<GlobalNpcResponse> GetByIdAsync(long id) =>
-        Map(await db.GlobalNpcs.FindAsync(id) ?? throw new KeyNotFoundException("Global NPC not found."));
+        (await WithBookImagesAsync([Map(await db.GlobalNpcs.FindAsync(id) ?? throw new KeyNotFoundException("Global NPC not found."))]))[0];
 
     public async Task<GlobalNpcResponse> CreateAsync(GlobalNpcRequest request, long? campaignId, long userId)
     {
@@ -37,7 +41,7 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
         Apply(entity, request);
         entity.UpdatedAt = DateTime.UtcNow;
         await db.SaveChangesAsync();
-        return Map(entity);
+        return (await WithBookImagesAsync([Map(entity)]))[0];
     }
 
     public async Task DeleteAsync(long id, long? campaignId, long userId)
@@ -46,6 +50,81 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
         db.GlobalNpcs.Remove(entity);
         await db.SaveChangesAsync();
     }
+
+    // ── Book images (AddGlobalNpcImages): the stat block, the tactics box and the illustration as the book prints them ──
+    // Only the GM of a campaign of the adversary's world reads or writes them, always through that campaign: without one the
+    // catalog falls back to the old Stormlight path, which checks no GM.
+
+    public async Task<(byte[] Data, string ContentType)> GetBookImageAsync(long id, string kind, long? campaignId, long userId)
+    {
+        CheckKind(kind);
+        await FindInWorldAsync(id, RequireCampaign(campaignId), userId);
+        var image = await db.GlobalNpcImages.AsNoTracking()
+            .Where(i => i.GlobalNpcId == id && i.Kind == kind)
+            .Select(i => new { i.Data, i.ContentType })
+            .FirstOrDefaultAsync()
+            ?? throw new KeyNotFoundException("Image not found.");
+        return (image.Data, image.ContentType);
+    }
+
+    public async Task<GlobalNpcResponse> SaveBookImageAsync(long id, string kind, byte[] data, long? campaignId, long userId)
+    {
+        CheckKind(kind);
+        var npc = await FindInWorldAsync(id, RequireCampaign(campaignId), userId);
+        if (data.Length == 0 || data.Length > MaxImageBytes) throw new ArgumentException($"The image must weigh between 1 byte and {MaxImageBytes / 1024 / 1024} MB.");
+        var type = ImageType(data) ?? throw new ArgumentException("The image must be WebP, PNG or JPEG.");
+
+        var row = await db.GlobalNpcImages.FirstOrDefaultAsync(i => i.GlobalNpcId == id && i.Kind == kind);
+        if (row is null)
+        {
+            db.GlobalNpcImages.Add(new GlobalNpcImageEntity { GlobalNpcId = id, Kind = kind, ContentType = type, Data = data });
+        }
+        else
+        {
+            row.Data = data;
+            row.ContentType = type;
+            row.UpdatedAt = DateTime.UtcNow;
+        }
+        await db.SaveChangesAsync();
+        return (await WithBookImagesAsync([Map(npc)]))[0];
+    }
+
+    public async Task DeleteBookImageAsync(long id, string kind, long? campaignId, long userId)
+    {
+        CheckKind(kind);
+        await FindInWorldAsync(id, RequireCampaign(campaignId), userId);
+        var row = await db.GlobalNpcImages.FirstOrDefaultAsync(i => i.GlobalNpcId == id && i.Kind == kind)
+            ?? throw new KeyNotFoundException("Image not found.");
+        db.GlobalNpcImages.Remove(row);
+        await db.SaveChangesAsync();
+    }
+
+    /// <summary>Which book images each adversary has: one query for the whole list, without loading the images.</summary>
+    private async Task<List<GlobalNpcResponse>> WithBookImagesAsync(List<GlobalNpcResponse> npcs)
+    {
+        var ids = npcs.Select(n => n.Id).ToList();
+        var rows = await db.GlobalNpcImages.AsNoTracking()
+            .Where(i => ids.Contains(i.GlobalNpcId))
+            .Select(i => new { i.GlobalNpcId, i.Kind })
+            .ToListAsync();
+        var kinds = rows.ToLookup(r => r.GlobalNpcId, r => r.Kind);
+        foreach (var n in npcs) n.BookImages = [.. GlobalNpcImageKinds.All.Where(k => kinds[n.Id].Contains(k))];
+        return npcs;
+    }
+
+    private static void CheckKind(string kind)
+    {
+        if (!GlobalNpcImageKinds.All.Contains(kind)) throw new ArgumentException("Unknown image kind.");
+    }
+
+    private static long RequireCampaign(long? campaignId) => campaignId ?? throw new ArgumentException("campaignId is required.");
+
+    /// <summary>The type of an image by its first bytes (the client's Content-Type is not trusted); null = not WebP, PNG or JPEG.</summary>
+    private static string? ImageType(byte[] d) =>
+        d.Length >= 12 && d[0] == 'R' && d[1] == 'I' && d[2] == 'F' && d[3] == 'F' && d[8] == 'W' && d[9] == 'E' && d[10] == 'B' && d[11] == 'P' ? "image/webp"
+        : d.Length >= 8 && d[0] == 0x89 && d[1] == 'P' && d[2] == 'N' && d[3] == 'G' ? "image/png"
+        : d.Length >= 3 && d[0] == 0xFF && d[1] == 0xD8 && d[2] == 0xFF ? "image/jpeg"
+        : null;
 
     /// <summary>
     /// World and era (catalog number, <see cref="EraIds.Numero"/>) of the operation: the campaign's (the caller must belong to

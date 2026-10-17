@@ -28,6 +28,7 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
     public DbSet<GmScreenEntity> GmScreens { get; set; }
     public DbSet<BookChapterEntity> BookChapters { get; set; }
     public DbSet<CrewSheetEntity> CrewSheets { get; set; }
+    public DbSet<GlobalNpcImageEntity> GlobalNpcImages { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -308,5 +309,14 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
         modelBuilder.Entity<CrewSheetEntity>().Property(c => c.GmState).HasDefaultValue("{}");
         modelBuilder.Entity<CrewSheetEntity>().Property(c => c.SharedWith).HasDefaultValueSql("'{}'");
         modelBuilder.Entity<CrewSheetEntity>().Property(c => c.Version).IsConcurrencyToken();
+
+        // Fichas del libro (AddGlobalNpcImages): an adversary's stat block and tactics as its book prints them, one image per kind,
+        // deleted with the adversary. In a table of their own, so listing the catalog never loads the images.
+        modelBuilder.Entity<GlobalNpcImageEntity>().HasIndex(i => new { i.GlobalNpcId, i.Kind }).IsUnique();
+        modelBuilder.Entity<GlobalNpcImageEntity>()
+            .HasOne(i => i.GlobalNpc)
+            .WithMany()
+            .HasForeignKey(i => i.GlobalNpcId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

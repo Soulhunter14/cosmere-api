@@ -852,6 +852,40 @@ namespace Infrastructure.Migrations
                     b.ToTable("GlobalNpcs");
                 });
 
+            modelBuilder.Entity("Messages.Database.Entities.GlobalNpcImageEntity", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("ContentType")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<byte[]>("Data")
+                        .IsRequired()
+                        .HasColumnType("bytea");
+
+                    b.Property<long>("GlobalNpcId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Kind")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GlobalNpcId", "Kind")
+                        .IsUnique();
+
+                    b.ToTable("GlobalNpcImages");
+                });
+
             modelBuilder.Entity("Messages.Database.Entities.GmScreenEntity", b =>
                 {
                     b.Property<long>("CampaignId")
@@ -1361,6 +1395,17 @@ namespace Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Campaign");
+                });
+
+            modelBuilder.Entity("Messages.Database.Entities.GlobalNpcImageEntity", b =>
+                {
+                    b.HasOne("Messages.Database.Entities.GlobalNpcEntity", "GlobalNpc")
+                        .WithMany()
+                        .HasForeignKey("GlobalNpcId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("GlobalNpc");
                 });
 
             modelBuilder.Entity("Messages.Database.Entities.GmScreenEntity", b =>
