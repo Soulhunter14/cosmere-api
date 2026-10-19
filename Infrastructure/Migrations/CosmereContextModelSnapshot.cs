@@ -279,6 +279,12 @@ namespace Infrastructure.Migrations
                     b.Property<long>("CampaignId")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("CausaMuerte")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text")
+                        .HasDefaultValue("");
+
                     b.Property<string>("Clavos")
                         .IsRequired()
                         .ValueGeneratedOnAdd()
@@ -313,6 +319,12 @@ namespace Infrastructure.Migrations
                     b.Property<List<string>>("Equipment")
                         .IsRequired()
                         .HasColumnType("text[]");
+
+                    b.Property<string>("EquipoAlMorir")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text")
+                        .HasDefaultValue("{}");
 
                     b.Property<string>("EquippedArmor")
                         .IsRequired()
@@ -446,6 +458,14 @@ namespace Infrastructure.Migrations
 
                     b.Property<int>("Medicina")
                         .HasColumnType("integer");
+
+                    b.Property<bool>("Muerto")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false);
+
+                    b.Property<DateTime?>("MuertoEn")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
                         .IsRequired()

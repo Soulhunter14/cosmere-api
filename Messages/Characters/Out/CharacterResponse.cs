@@ -114,6 +114,12 @@ public class CharacterResponse
     /// <summary>Respuestas a las dos preguntas del legado, en su orden (<c>[]</c> sin responder y siempre en Stormlight).</summary>
     public List<string> LegadoRespuestas { get; set; } = [];
 
+    // Muerte (núcleo): la ficha de un muerto es de solo lectura; EquipoAlMorir es lo que llevaba (null sin copia).
+    public bool Muerto { get; set; }
+    public DateTime? MuertoEn { get; set; }
+    public string CausaMuerte { get; set; } = string.Empty;
+    public EquipoGuardado? EquipoAlMorir { get; set; }
+
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
 }

@@ -30,6 +30,12 @@ public class CharacterEntity
     public string Legado { get; set; } = string.Empty;          // id de legado de la aventura «El legado de los nacidos de la bruma»; "" = sin legado
     public List<string> LegadoRespuestas { get; set; } = [];    // respuestas a las dos preguntas del legado, en su orden
 
+    // Muerte (núcleo, ambos mundos). Defaults de BD declarados en CosmereContext.
+    public bool Muerto { get; set; } = false;
+    public DateTime? MuertoEn { get; set; }
+    public string CausaMuerte { get; set; } = string.Empty;
+    public string EquipoAlMorir { get; set; } = "{}";           // JSON (camelCase) de EquipoGuardado; "{}" = nada guardado
+
     // Core Attributes (0-5)
     public int Fuerza { get; set; } = 0;
     public int Velocidad { get; set; } = 0;

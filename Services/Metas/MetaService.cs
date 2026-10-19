@@ -3,6 +3,7 @@ using Messages.Database.Entities;
 using Messages.Metas.In;
 using Messages.Metas.Out;
 using Microsoft.EntityFrameworkCore;
+using Services.Characters;
 using Services.Worlds;
 
 namespace Services.Metas;
@@ -22,7 +23,7 @@ public class MetaService(CosmereContext db, IWorldRulesProvider reglas) : IMetaS
 
     public async Task<MetaResponse> CreateMetaAsync(long characterId, long campaignId, CreateMetaRequest request, long userId)
     {
-        await EnsureAccessAsync(characterId, campaignId, userId);
+        await EnsureAccessAsync(characterId, campaignId, userId, escritura: true);
 
         var meta = new MetaEntity
         {
@@ -95,14 +96,18 @@ public class MetaService(CosmereContext db, IWorldRulesProvider reglas) : IMetaS
 
     private async Task<MetaEntity> GetMetaOrThrowAsync(long metaId, long characterId, long campaignId, long userId)
     {
-        await EnsureAccessAsync(characterId, campaignId, userId);
+        await EnsureAccessAsync(characterId, campaignId, userId, escritura: true);
 
         return await db.Metas
             .FirstOrDefaultAsync(m => m.Id == metaId && m.CharacterId == characterId)
             ?? throw new KeyNotFoundException("Meta not found.");
     }
 
-    private async Task EnsureAccessAsync(long characterId, long campaignId, long userId)
+    /// <summary>
+    /// Member of the campaign and, for a player, their own character. <paramref name="escritura"/>: the metas of a dead character are
+    /// read-only (409, <c>MuertePersonaje</c>); reading them is always allowed.
+    /// </summary>
+    private async Task EnsureAccessAsync(long characterId, long campaignId, long userId, bool escritura = false)
     {
         var isMember = await db.CampaignMembers.AnyAsync(m => m.CampaignId == campaignId && m.UserId == userId);
         if (!isMember) throw new KeyNotFoundException("Campaign not found.");
@@ -115,6 +120,7 @@ public class MetaService(CosmereContext db, IWorldRulesProvider reglas) : IMetaS
 
         if (!isGm && character.OwnerId != userId)
             throw new UnauthorizedAccessException("You can only manage your own character's metas.");
+        if (escritura) MuertePersonaje.EnsureVivo(character);
     }
 
     private static MetaResponse MapToResponse(MetaEntity m) => new()

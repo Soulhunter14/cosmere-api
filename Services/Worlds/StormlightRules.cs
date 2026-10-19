@@ -88,6 +88,11 @@ public sealed class StormlightRules : IWorldRules
 
     public void AlBorrarMeta(CharacterEntity c, MetaEntity meta) { }
 
+    // Stormlight keeps all its gear in the core columns (its marcos too)
+    public Dictionary<string, decimal> RetirarEquipo(CharacterEntity c) => [];
+
+    public void DevolverEquipo(CharacterEntity c, IReadOnlyDictionary<string, decimal> guardado) { }
+
     public IEnumerable<string> TalentosImplicitos(CharacterEntity c) => [];
 
     public bool TieneInvestidura(CharacterEntity c, IReadOnlyList<string> talentos, IReadOnlyList<PoderPersonaje> poderes) =>

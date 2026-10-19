@@ -104,6 +104,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         var isGm = await IsGmAsync(campaignId, userId);
         if (!isGm && character.OwnerId != userId)
             throw new UnauthorizedAccessException("You can only edit your own character.");
+        MuertePersonaje.EnsureVivo(character);
 
         if (!isGm)
         {
@@ -207,6 +208,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             ?? throw new KeyNotFoundException("Character not found.");
         if (!isGm && character.OwnerId != userId)
             throw new UnauthorizedAccessException("You can only edit your own character.");
+        MuertePersonaje.EnsureVivo(character);
 
         var estado = MapToResponse(character, world);
         world.AplicarAccionMesa(character, accion(isGm), estado);
@@ -215,6 +217,35 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         await tx.CommitAsync();
 
         // Como en GET: la respuesta lleva las metas (la fila se cargó sin Include).
+        await db.Entry(character).Collection(c => c.Metas).LoadAsync();
+        return MapToResponse(character, world);
+    }
+
+    // ── Muerte (núcleo) ──────────────────────────────────────────────────────
+    // Solo el director: la ficha queda de solo lectura y el equipo pasa a EquipoAlMorir; volver a la vida lo devuelve (MuertePersonaje).
+
+    public Task<CharacterResponse> MorirAsync(long characterId, long campaignId, MuerteRequest request, long userId) =>
+        CambiarMuerteAsync(characterId, campaignId, userId, (c, world) => MuertePersonaje.Morir(c, world, request.Causa));
+
+    public Task<CharacterResponse> RevivirAsync(long characterId, long campaignId, long userId) =>
+        CambiarMuerteAsync(characterId, campaignId, userId, MuertePersonaje.Revivir);
+
+    private async Task<CharacterResponse> CambiarMuerteAsync(long characterId, long campaignId, long userId, Action<CharacterEntity, IWorldRules> cambio)
+    {
+        await EnsureGmAsync(campaignId, userId);
+        var world = await GetWorldRulesAsync(campaignId);
+
+        // The row is locked until the commit, like the table actions: a vial drunk at the same time cannot slip past the death
+        await using var tx = await db.Database.BeginTransactionAsync();
+        var character = await db.Characters
+            .FromSqlInterpolated($"SELECT * FROM \"Characters\" WHERE \"Id\" = {characterId} AND \"CampaignId\" = {campaignId} AND NOT \"IsNpc\" FOR UPDATE")
+            .FirstOrDefaultAsync()
+            ?? throw new KeyNotFoundException("Character not found.");
+
+        cambio(character, world);
+        await db.SaveChangesAsync();
+        await tx.CommitAsync();
+
         await db.Entry(character).Collection(c => c.Metas).LoadAsync();
         return MapToResponse(character, world);
     }
@@ -529,6 +560,10 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             DerivadosSet = world.Derivar(c, talentos, poderes, fb),
             BonosAtributos = fb.ComoDiccionario(),
             Clavos = CharacterJson.ParseClavos(c.Clavos),
+
+            // ── Muerte ────────────────────────────────────────────────────────
+            Muerto = c.Muerto, MuertoEn = c.MuertoEn, CausaMuerte = c.CausaMuerte,
+            EquipoAlMorir = CharacterJson.ParseEquipoGuardado(c.EquipoAlMorir),
         };
 
         RecortarEstadoDeMesa(response);

@@ -56,4 +56,14 @@ public class CharactersController(ICharacterService characterService) : Controll
     [HttpPost("{characterId:long}/acciones/inicio-escena")]
     public async Task<ActionResult<CharacterResponse>> InicioEscena(long campaignId, long characterId, [FromBody] InicioEscenaRequest request)
         => Ok(await characterService.InicioEscenaAsync(characterId, campaignId, request, JwtHelper.GetUserId(User)));
+
+    // Muerte: solo el director. POST marca al personaje como muerto (la ficha queda de solo lectura y pierde su equipo, que se guarda);
+    // DELETE lo devuelve a la vida con lo que llevaba. 409 si ya está (o no está) muerto.
+    [HttpPost("{characterId:long}/muerte")]
+    public async Task<ActionResult<CharacterResponse>> Morir(long campaignId, long characterId, [FromBody] MuerteRequest request)
+        => Ok(await characterService.MorirAsync(characterId, campaignId, request, JwtHelper.GetUserId(User)));
+
+    [HttpDelete("{characterId:long}/muerte")]
+    public async Task<ActionResult<CharacterResponse>> Revivir(long campaignId, long characterId)
+        => Ok(await characterService.RevivirAsync(characterId, campaignId, JwtHelper.GetUserId(User)));
 }
