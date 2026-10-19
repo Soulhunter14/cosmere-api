@@ -20,6 +20,10 @@ public class SessionsController(ISessionService sessionService) : ControllerBase
     public async Task<ActionResult<SessionResponse>> CreateSession(long campaignId, [FromBody] CreateSessionRequest request)
         => Ok(await sessionService.CreateSessionAsync(campaignId, request, JwtHelper.GetUserId(User)));
 
+    [HttpPut("{sessionId:long}")]
+    public async Task<ActionResult<SessionResponse>> UpdateSession(long campaignId, long sessionId, [FromBody] UpdateSessionRequest request)
+        => Ok(await sessionService.UpdateSessionAsync(sessionId, campaignId, request, JwtHelper.GetUserId(User)));
+
     [HttpDelete("{sessionId:long}")]
     public async Task<IActionResult> DeleteSession(long campaignId, long sessionId)
     {

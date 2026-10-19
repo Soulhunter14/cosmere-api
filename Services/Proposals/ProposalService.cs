@@ -21,7 +21,8 @@ public class ProposalService(CosmereContext db) : IProposalService
             .OrderByDescending(p => p.CreatedAt)
             .ToListAsync();
 
-        return proposals.Select(p => MapToResponse(p, userId)).ToList();
+        var playerIds = await LoadPlayerIdsAsync(campaignId);
+        return proposals.Select(p => MapToResponse(p, userId, playerIds)).ToList();
     }
 
     public async Task<ProposalResponse> CreateProposalAsync(long campaignId, CreateProposalRequest request, long userId)
@@ -56,7 +57,7 @@ public class ProposalService(CosmereContext db) : IProposalService
                 .ThenInclude(d => d.Votes)
             .FirstAsync(p => p.Id == proposal.Id);
 
-        return MapToResponse(created, userId);
+        return await ToResponseAsync(created, userId);
     }
 
     public async Task<ProposalResponse> PromoteProposalAsync(long campaignId, long proposalId, PromoteProposalRequest request, long userId)
@@ -97,7 +98,7 @@ public class ProposalService(CosmereContext db) : IProposalService
         proposal.PromotedSessionId = session.Id;
 
         await db.SaveChangesAsync();
-        return MapToResponse(proposal, userId);
+        return await ToResponseAsync(proposal, userId);
     }
 
     public async Task<ProposalResponse> PromoteDateAsync(long campaignId, long proposalId, long dateId, PromoteDateRequest request, long userId)
@@ -124,7 +125,7 @@ public class ProposalService(CosmereContext db) : IProposalService
         ResolveIfDone(proposal);
 
         await db.SaveChangesAsync();
-        return MapToResponse(proposal, userId);
+        return await ToResponseAsync(proposal, userId);
     }
 
     public async Task<ProposalResponse> RejectDateAsync(long campaignId, long proposalId, long dateId, long userId)
@@ -138,7 +139,7 @@ public class ProposalService(CosmereContext db) : IProposalService
         ResolveIfDone(proposal);
 
         await db.SaveChangesAsync();
-        return MapToResponse(proposal, userId);
+        return await ToResponseAsync(proposal, userId);
     }
 
     public async Task<ProposalResponse> RejectProposalAsync(long campaignId, long proposalId, long userId)
@@ -160,13 +161,18 @@ public class ProposalService(CosmereContext db) : IProposalService
         ResolveIfDone(proposal);
 
         await db.SaveChangesAsync();
-        return MapToResponse(proposal, userId);
+        return await ToResponseAsync(proposal, userId);
     }
 
     public async Task<ProposalResponse> CastVoteAsync(long campaignId, long proposalId, long dateId, CastVoteRequest request, long userId)
     {
-        var isMember = await db.CampaignMembers.AnyAsync(m => m.CampaignId == campaignId && m.UserId == userId);
-        if (!isMember) throw new KeyNotFoundException("Campaign not found.");
+        var role = await db.CampaignMembers
+            .Where(m => m.CampaignId == campaignId && m.UserId == userId)
+            .Select(m => m.Role)
+            .FirstOrDefaultAsync()
+            ?? throw new KeyNotFoundException("Campaign not found.");
+        // The GM proposes the dates; only the players say whether they can come.
+        if (role == "gm") throw new UnauthorizedAccessException("The GM does not vote on proposals.");
 
         var proposal = await db.SessionProposals
             .Include(p => p.ProposedDates)
@@ -200,7 +206,7 @@ public class ProposalService(CosmereContext db) : IProposalService
         }
 
         await db.SaveChangesAsync();
-        return MapToResponse(proposal, userId);
+        return await ToResponseAsync(proposal, userId);
     }
 
     private async Task<SessionProposalEntity> LoadPendingProposalAsync(long campaignId, long proposalId)
@@ -249,7 +255,19 @@ public class ProposalService(CosmereContext db) : IProposalService
         if (!isGm) throw new UnauthorizedAccessException("Only the GM can perform this action.");
     }
 
-    private static ProposalResponse MapToResponse(SessionProposalEntity p, long currentUserId) => new()
+    /// <summary>Players of the campaign right now: the votes each slot expects (the GM never votes).</summary>
+    private async Task<HashSet<long>> LoadPlayerIdsAsync(long campaignId) =>
+        (await db.CampaignMembers
+            .Where(m => m.CampaignId == campaignId && m.Role == "player")
+            .Select(m => m.UserId)
+            .ToListAsync())
+        .ToHashSet();
+
+    private async Task<ProposalResponse> ToResponseAsync(SessionProposalEntity p, long currentUserId) =>
+        MapToResponse(p, currentUserId, await LoadPlayerIdsAsync(p.CampaignId));
+
+    /// <summary>Counts only players' votes: an old vote of the GM (from before the GM stopped voting) is ignored, not deleted.</summary>
+    private static ProposalResponse MapToResponse(SessionProposalEntity p, long currentUserId, HashSet<long> playerIds) => new()
     {
         Id = p.Id,
         CampaignId = p.CampaignId,
@@ -268,9 +286,11 @@ public class ProposalService(CosmereContext db) : IProposalService
                 Slot = d.Slot,
                 Status = d.Status,
                 SessionId = d.SessionId,
-                CanCount = d.Votes.Count(v => v.CanAttend),
-                CannotCount = d.Votes.Count(v => !v.CanAttend),
+                CanCount = d.Votes.Count(v => v.CanAttend && playerIds.Contains(v.UserId)),
+                CannotCount = d.Votes.Count(v => !v.CanAttend && playerIds.Contains(v.UserId)),
                 CurrentUserVote = d.Votes.FirstOrDefault(v => v.UserId == currentUserId)?.CanAttend,
+                PlayerCount = playerIds.Count,
+                PendingUserIds = playerIds.Where(id => d.Votes.All(v => v.UserId != id)).OrderBy(id => id).ToList(),
             })
             .ToList()
     };

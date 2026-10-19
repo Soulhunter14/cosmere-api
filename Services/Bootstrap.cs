@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Services.Auth;
 using Services.Book;
+using Services.Calendar;
 using Services.Campaigns;
 using Services.Crew;
 using Services.Catalog;
@@ -34,6 +35,7 @@ public static class Bootstrap
         services.AddScoped<INoteService, NoteService>();
         services.AddScoped<IMetaService, MetaService>();
         services.AddScoped<ILockedDayService, LockedDayService>();
+        services.AddScoped<ICalendarService, CalendarService>();
         services.AddScoped<IDiaryService, DiaryService>();
         services.AddScoped<IDiceRollService, DiceRollService>();
         services.AddScoped<IGmScreenService, GmScreenService>();
