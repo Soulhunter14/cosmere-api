@@ -88,6 +88,15 @@ public interface IWorldRules
     void AlBorrarMeta(CharacterEntity c, MetaEntity meta);
 
     /// <summary>
+    /// Al morir el personaje (núcleo: <c>MuertePersonaje</c>): retira de la ficha el equipo propio del mundo y lo devuelve como claves →
+    /// valores, que se guardan con el equipo común. Nacidos de la bruma: arquillas, cuentas de atium, viales y cargas; Stormlight: nada.
+    /// </summary>
+    Dictionary<string, decimal> RetirarEquipo(CharacterEntity c);
+
+    /// <summary>Al volver a la vida: devuelve lo que <see cref="RetirarEquipo"/> guardó (Stormlight: no-op).</summary>
+    void DevolverEquipo(CharacterEntity c, IReadOnlyDictionary<string, decimal> guardado);
+
+    /// <summary>
     /// Talentos que el cliente concede automáticamente (<c>autoGranted</c>) y no guarda en <c>c.Talentos</c>, pero que las
     /// reglas del servidor deben contar.
     /// </summary>

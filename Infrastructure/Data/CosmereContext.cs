@@ -269,6 +269,11 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
         // Hemalurgia (M6, AddCharacterClavos): existing characters have no hemalurgic spikes.
         modelBuilder.Entity<CharacterEntity>().Property(c => c.Clavos).HasDefaultValue("[]");
 
+        // Muerte (AddCharacterMuerte): existing characters are alive and have no stored gear.
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.Muerto).HasDefaultValue(false);
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.CausaMuerte).HasDefaultValue("");
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.EquipoAlMorir).HasDefaultValue("{}");
+
         // Proposal slots (AddProposalDateSlots): each proposed date is resolved on its own; existing dates start pending and
         // the migration backfills the ones of proposals already resolved.
         modelBuilder.Entity<ProposalDateEntity>().Property(d => d.Status).HasDefaultValue("Pending");

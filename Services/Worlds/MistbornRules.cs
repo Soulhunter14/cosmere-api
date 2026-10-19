@@ -447,6 +447,55 @@ public sealed class MistbornRules : IWorldRules
         c.Poderes = CharacterJson.SerializarPoderes(poderes);
     }
 
+    // Gear of a dead character (núcleo: MuertePersonaje). The money (arquillas), the atium beads, the vials and the charges of the
+    // metalminds leave the sheet; the Investiture goes to 0 and is not stored (table state). The spikes stay: they are not gear.
+    private const string PrefijoViales = "viales:";
+    private const string PrefijoCargas = "cargas:";
+
+    public Dictionary<string, decimal> RetirarEquipo(CharacterEntity c)
+    {
+        var guardado = new Dictionary<string, decimal>();
+
+        var recursos = CharacterJson.ParseRecursos(c.Recursos);
+        foreach (var clave in new[] { ClaveArquillas, ClaveCuentasAtium })
+        {
+            if (recursos.Remove(clave, out var valor) && valor > 0) guardado[clave] = valor;
+        }
+        if (recursos.ContainsKey(ClaveInvestidura)) recursos[ClaveInvestidura] = 0m;
+        c.Recursos = CharacterJson.SerializarRecursos(recursos);
+
+        var poderes = CharacterJson.ParsePoderes(c.Poderes);
+        foreach (var p in poderes)
+        {
+            if (p.Viales > 0) guardado[$"{PrefijoViales}{p.Arte}:{p.Metal}"] = p.Viales;
+            if (p.Cargas > 0) guardado[$"{PrefijoCargas}{p.Arte}:{p.Metal}"] = p.Cargas;
+            p.Viales = 0;
+            p.Cargas = 0;
+        }
+        c.Poderes = CharacterJson.SerializarPoderes(poderes);
+
+        return guardado;
+    }
+
+    public void DevolverEquipo(CharacterEntity c, IReadOnlyDictionary<string, decimal> guardado)
+    {
+        var recursos = CharacterJson.ParseRecursos(c.Recursos);
+        foreach (var clave in new[] { ClaveArquillas, ClaveCuentasAtium })
+        {
+            if (guardado.TryGetValue(clave, out var valor)) recursos[clave] = valor;
+        }
+        c.Recursos = CharacterJson.SerializarRecursos(recursos);
+
+        // A key whose power no longer exists is ignored
+        var poderes = CharacterJson.ParsePoderes(c.Poderes);
+        foreach (var p in poderes)
+        {
+            if (guardado.TryGetValue($"{PrefijoViales}{p.Arte}:{p.Metal}", out var viales)) p.Viales = (int)viales;
+            if (guardado.TryGetValue($"{PrefijoCargas}{p.Arte}:{p.Metal}", out var cargas)) p.Cargas = (int)cargas;
+        }
+        c.Poderes = CharacterJson.SerializarPoderes(poderes);
+    }
+
     // ── Cálculo ──────────────────────────────────────────────────────────────
 
     /// <summary>

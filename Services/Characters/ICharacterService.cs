@@ -16,4 +16,8 @@ public interface ICharacterService
     Task<CharacterResponse> PatchRecursosAsync(long characterId, long campaignId, RecursosRequest request, long userId);
     Task<CharacterResponse> BeberVialAsync(long characterId, long campaignId, BeberVialRequest request, long userId);
     Task<CharacterResponse> InicioEscenaAsync(long characterId, long campaignId, InicioEscenaRequest request, long userId);
+
+    // Muerte (núcleo): solo el director; la ficha de un muerto es de solo lectura y su equipo se guarda aparte.
+    Task<CharacterResponse> MorirAsync(long characterId, long campaignId, MuerteRequest request, long userId);
+    Task<CharacterResponse> RevivirAsync(long characterId, long campaignId, long userId);
 }

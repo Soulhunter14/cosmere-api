@@ -42,6 +42,16 @@ internal static class CharacterJson
 
     public static string SerializarClavos(List<ClavoHemalurgico> clavos) => JsonSerializer.Serialize(clavos, Json);
 
+    /// <summary>Equipo guardado al morir: <c>null</c>, <c>""</c>, <c>"{}"</c> o JSON inválido devuelven <c>null</c> (nada guardado).</summary>
+    public static EquipoGuardado? ParseEquipoGuardado(string? raw)
+    {
+        if (string.IsNullOrWhiteSpace(raw) || raw.Trim() == "{}") return null;
+        try { return JsonSerializer.Deserialize<EquipoGuardado>(raw, Json); }
+        catch { return null; }
+    }
+
+    public static string SerializarEquipoGuardado(EquipoGuardado? equipo) => equipo is null ? "{}" : JsonSerializer.Serialize(equipo, Json);
+
     /// <summary>
     /// Lista de poderes que resulta de un <c>PUT</c> (§5.1). <paramref name="entrantes"/> <c>null</c> conserva la guardada.
     /// Si no, manda la lista del cuerpo, pero de cada poder solo se escriben <c>Arte</c>, <c>Metal</c>, <c>Origen</c> y

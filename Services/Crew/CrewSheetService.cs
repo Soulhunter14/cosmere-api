@@ -322,6 +322,8 @@ public class CrewSheetService(CosmereContext db, IWorldRulesProvider reglas) : I
             ?? throw new KeyNotFoundException("Character not found.");
         if (!esDirector && character.OwnerId != userId)
             throw new UnauthorizedAccessException(soloSuyo);
+        // A dead character's sheet is read-only: no money or goods move to or from it (409)
+        MuertePersonaje.EnsureVivo(character);
         return character;
     }
 
