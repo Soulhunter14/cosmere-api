@@ -29,6 +29,7 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
     public DbSet<BookChapterEntity> BookChapters { get; set; }
     public DbSet<CrewSheetEntity> CrewSheets { get; set; }
     public DbSet<GlobalNpcImageEntity> GlobalNpcImages { get; set; }
+    public DbSet<EncyclopediaOriginalEntity> EncyclopediaOriginals { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -323,5 +324,9 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
             .WithMany()
             .HasForeignKey(i => i.GlobalNpcId)
             .OnDelete(DeleteBehavior.Cascade);
+
+        // Originales de la enciclopedia (AddEncyclopediaOriginals): the book's text and mini-PDF of each encyclopedia entry, one row
+        // per world, section and key, shared by every campaign of the world. Md and Pdf are null until uploaded.
+        modelBuilder.Entity<EncyclopediaOriginalEntity>().HasIndex(o => new { o.World, o.Section, o.Key }).IsUnique();
     }
 }
