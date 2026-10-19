@@ -683,6 +683,47 @@ namespace Infrastructure.Migrations
                     b.ToTable("DiceRolls");
                 });
 
+            modelBuilder.Entity("Messages.Database.Entities.EncyclopediaOriginalEntity", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Md")
+                        .HasColumnType("text");
+
+                    b.Property<byte[]>("Pdf")
+                        .HasColumnType("bytea");
+
+                    b.Property<string>("Section")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("World")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("World", "Section", "Key")
+                        .IsUnique();
+
+                    b.ToTable("EncyclopediaOriginals");
+                });
+
             modelBuilder.Entity("Messages.Database.Entities.GearItemEntity", b =>
                 {
                     b.Property<long>("Id")
