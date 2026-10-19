@@ -39,6 +39,23 @@ public class SessionService(CosmereContext db) : ISessionService
         return MapToResponse(session);
     }
 
+    public async Task<SessionResponse> UpdateSessionAsync(long sessionId, long campaignId, UpdateSessionRequest request, long userId)
+    {
+        await EnsureGmAsync(campaignId, userId);
+
+        var session = await db.Sessions
+            .FirstOrDefaultAsync(s => s.Id == sessionId && s.CampaignId == campaignId)
+            ?? throw new KeyNotFoundException("Session not found.");
+
+        session.Title = request.Title;
+        session.Date = request.Date.ToUniversalTime();
+        session.Location = request.Location;
+        session.Notes = request.Notes;
+
+        await db.SaveChangesAsync();
+        return MapToResponse(session);
+    }
+
     public async Task DeleteSessionAsync(long sessionId, long campaignId, long userId)
     {
         await EnsureGmAsync(campaignId, userId);
