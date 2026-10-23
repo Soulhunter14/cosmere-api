@@ -25,8 +25,9 @@ public class GlobalNpcsController(IGlobalNpcService service) : ControllerBase
         => Ok(await service.GetByIdAsync(id));
 
     /// <summary>
-    /// The adversary as its book prints it: «ficha» (stat block), «tacticas» (tactics box) or «retrato» (illustration). Only the
-    /// GM of a campaign of the adversary's world, given by <paramref name="campaignId"/>.
+    /// The adversary as its book prints it: «ficha» (stat block), «tacticas» (tactics box) or «retrato» (illustration). Through a
+    /// campaign of the adversary's world, given by <paramref name="campaignId"/>: its GM reads the three, any member of it reads
+    /// the «retrato».
     /// </summary>
     [HttpGet("{id:long}/book-images/{kind}")]
     public async Task<IActionResult> GetBookImage(long id, string kind, [FromQuery] long? campaignId)

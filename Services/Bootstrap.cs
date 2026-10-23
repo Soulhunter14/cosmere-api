@@ -13,6 +13,7 @@ using Services.Encyclopedia;
 using Services.DiceRolls;
 using Services.GmScreen;
 using Services.LockedDays;
+using Services.Mesa;
 using Services.Metas;
 using Services.Notes;
 using Services.Proposals;
@@ -39,6 +40,7 @@ public static class Bootstrap
         services.AddScoped<IDiaryService, DiaryService>();
         services.AddScoped<IDiceRollService, DiceRollService>();
         services.AddScoped<IGmScreenService, GmScreenService>();
+        services.AddScoped<IMesaService, MesaService>();
         services.AddScoped<IBookService, BookService>();
         services.AddScoped<ICrewSheetService, CrewSheetService>();
         services.AddScoped<IEncyclopediaService, EncyclopediaService>();

@@ -10,4 +10,6 @@ public class GmScreenResponse
     public int Version { get; set; }
     /// <summary>When the document was last saved; <c>null</c> = never saved.</summary>
     public DateTime? UpdatedAt { get; set; }
+    /// <summary>The public document the players read («La mesa»), a JSON object (<c>{}</c> when nothing was projected yet).</summary>
+    public JsonElement Mesa { get; set; }
 }

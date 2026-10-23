@@ -3,6 +3,7 @@ using Messages.Database.Entities;
 using Messages.GlobalNpcs.Out;
 using Messages.Worlds;
 using Microsoft.EntityFrameworkCore;
+using Services.Images;
 
 namespace Services.GlobalNpcs;
 
@@ -25,14 +26,17 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
         (await WithBookImagesAsync([Map(await db.GlobalNpcs.FindAsync(id) ?? throw new KeyNotFoundException("Global NPC not found."))]))[0];
 
     // ── Book images (AddGlobalNpcImages): the stat block, the tactics box and the illustration as the book prints them ──
-    // The only writes of the catalog: its adversaries come in migrations. Only the GM of a campaign of the adversary's world reads
-    // or writes them, always through that campaign: without one the catalog falls back to the old Stormlight path, which checks no
-    // membership and only serves to read the list.
+    // The only writes of the catalog: its adversaries come in migrations. Always through a campaign of the adversary's world:
+    // without one the catalog falls back to the old Stormlight path, which checks no membership and only serves to read the list.
+    // Only the GM of that campaign writes them or reads the stat block and the tactics box; the illustration («retrato») may also
+    // be read by any member of the campaign, so the GM can show it to the players at the table («La mesa»).
 
     public async Task<(byte[] Data, string ContentType)> GetBookImageAsync(long id, string kind, long? campaignId, long userId)
     {
         CheckKind(kind);
-        await FindInWorldAsync(id, RequireCampaign(campaignId), userId);
+        // «ficha» and «tacticas» are the GM's; «retrato» is public inside the campaign, where a non-member is told nothing (404)
+        var isPortrait = kind == GlobalNpcImageKinds.Retrato;
+        await FindInWorldAsync(id, RequireCampaign(campaignId), userId, requireGm: !isPortrait);
         var image = await db.GlobalNpcImages.AsNoTracking()
             .Where(i => i.GlobalNpcId == id && i.Kind == kind)
             .Select(i => new { i.Data, i.ContentType })
@@ -46,7 +50,7 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
         CheckKind(kind);
         var npc = await FindInWorldAsync(id, RequireCampaign(campaignId), userId);
         if (data.Length == 0 || data.Length > MaxImageBytes) throw new ArgumentException($"The image must weigh between 1 byte and {MaxImageBytes / 1024 / 1024} MB.");
-        var type = ImageType(data) ?? throw new ArgumentException("The image must be WebP, PNG or JPEG.");
+        var type = ImageType.Detect(data) ?? throw new ArgumentException("The image must be WebP, PNG or JPEG.");
 
         var row = await db.GlobalNpcImages.FirstOrDefaultAsync(i => i.GlobalNpcId == id && i.Kind == kind);
         if (row is null)
@@ -93,19 +97,13 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
 
     private static long RequireCampaign(long? campaignId) => campaignId ?? throw new ArgumentException("campaignId is required.");
 
-    /// <summary>The type of an image by its first bytes (the client's Content-Type is not trusted); null = not WebP, PNG or JPEG.</summary>
-    private static string? ImageType(byte[] d) =>
-        d.Length >= 12 && d[0] == 'R' && d[1] == 'I' && d[2] == 'F' && d[3] == 'F' && d[8] == 'W' && d[9] == 'E' && d[10] == 'B' && d[11] == 'P' ? "image/webp"
-        : d.Length >= 8 && d[0] == 0x89 && d[1] == 'P' && d[2] == 'N' && d[3] == 'G' ? "image/png"
-        : d.Length >= 3 && d[0] == 0xFF && d[1] == 0xD8 && d[2] == 0xFF ? "image/jpeg"
-        : null;
-
     /// <summary>
     /// World and era (catalog number, <see cref="EraIds.Numero"/>) of the operation: the campaign's (the caller must belong to
     /// the campaign and, for the book images, be its GM) or, without a campaign, Stormlight and no era (clients that predate
-    /// worlds). Neither comes from the request.
+    /// worlds). Neither comes from the request. A non-member is refused with 403, or with 404 when
+    /// <paramref name="hideFromNonMembers"/> (the campaign is not revealed).
     /// </summary>
-    private async Task<(string World, short? Era)> GetScopeAsync(long? campaignId, long userId, bool requireGm = false)
+    private async Task<(string World, short? Era)> GetScopeAsync(long? campaignId, long userId, bool requireGm = false, bool hideFromNonMembers = false)
     {
         if (campaignId is null) return (WorldIds.Stormlight, null);
 
@@ -119,17 +117,24 @@ public class GlobalNpcService(CosmereContext db) : IGlobalNpcService
             .Where(m => m.CampaignId == campaignId && m.UserId == userId)
             .Select(m => m.Role)
             .FirstOrDefaultAsync();
-        if (role is null) throw new UnauthorizedAccessException("You are not a member of this campaign.");
+        if (role is null)
+        {
+            if (hideFromNonMembers) throw new KeyNotFoundException("Campaign not found.");
+            throw new UnauthorizedAccessException("You are not a member of this campaign.");
+        }
         // The adversaries are shared by every campaign of the world: a player of one campaign must not change them for all
         if (requireGm && role != "gm") throw new UnauthorizedAccessException("Only the GM can perform this action.");
 
         return (campaign.World, EraIds.Numero(campaign.Era));
     }
 
-    /// <summary>The NPC of a book-image operation (GM only); 404 if it does not exist or belongs to a different world than the operation's.</summary>
-    private async Task<GlobalNpcEntity> FindInWorldAsync(long id, long? campaignId, long userId)
+    /// <summary>
+    /// The NPC of a book-image operation; 404 if it does not exist or belongs to a different world than the operation's. GM only,
+    /// unless <paramref name="requireGm"/> is false: then any member of the campaign, and a non-member gets 404, not 403.
+    /// </summary>
+    private async Task<GlobalNpcEntity> FindInWorldAsync(long id, long? campaignId, long userId, bool requireGm = true)
     {
-        var (world, _) = await GetScopeAsync(campaignId, userId, requireGm: true);
+        var (world, _) = await GetScopeAsync(campaignId, userId, requireGm: requireGm, hideFromNonMembers: !requireGm);
         var entity = await db.GlobalNpcs.FindAsync(id);
         if (entity is null || entity.World != world) throw new KeyNotFoundException("Global NPC not found.");
         return entity;

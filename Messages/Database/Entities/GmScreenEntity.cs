@@ -12,6 +12,13 @@ public class GmScreenEntity
     /// <summary>Optimistic concurrency: a save must send the version it read; every save bumps it.</summary>
     public int Version { get; set; }
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+    /// <summary>
+    /// The public document the players read («La mesa»): a JSON object the web derives from the screen and saves together with
+    /// it; the server never reads inside it. `{}` until the GM first projects something.
+    /// </summary>
+    public string Mesa { get; set; } = "{}";
+    /// <summary>When <see cref="Mesa"/> last changed; <c>null</c> = never. A save that sends the same text leaves it as it was.</summary>
+    public DateTime? MesaUpdatedAt { get; set; }
 
     public CampaignEntity Campaign { get; set; } = null!;
 }
