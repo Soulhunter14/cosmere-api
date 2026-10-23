@@ -163,6 +163,43 @@ namespace Infrastructure.Migrations
                     b.ToTable("Campaigns");
                 });
 
+            modelBuilder.Entity("Messages.Database.Entities.CampaignImageEntity", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<int>("Bytes")
+                        .HasColumnType("integer");
+
+                    b.Property<long>("CampaignId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ContentType")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<byte[]>("Data")
+                        .IsRequired()
+                        .HasColumnType("bytea");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("character varying(120)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CampaignId");
+
+                    b.ToTable("CampaignImages");
+                });
+
             modelBuilder.Entity("Messages.Database.Entities.CampaignMemberEntity", b =>
                 {
                     b.Property<long>("CampaignId")
@@ -952,6 +989,15 @@ namespace Infrastructure.Migrations
                     b.Property<long>("CampaignId")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("Mesa")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text")
+                        .HasDefaultValue("{}");
+
+                    b.Property<DateTime?>("MesaUpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("State")
                         .IsRequired()
                         .ValueGeneratedOnAdd()
@@ -1388,6 +1434,17 @@ namespace Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("GmUser");
+                });
+
+            modelBuilder.Entity("Messages.Database.Entities.CampaignImageEntity", b =>
+                {
+                    b.HasOne("Messages.Database.Entities.CampaignEntity", "Campaign")
+                        .WithMany()
+                        .HasForeignKey("CampaignId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Campaign");
                 });
 
             modelBuilder.Entity("Messages.Database.Entities.CampaignMemberEntity", b =>

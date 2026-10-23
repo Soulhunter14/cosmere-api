@@ -30,6 +30,7 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
     public DbSet<CrewSheetEntity> CrewSheets { get; set; }
     public DbSet<GlobalNpcImageEntity> GlobalNpcImages { get; set; }
     public DbSet<EncyclopediaOriginalEntity> EncyclopediaOriginals { get; set; }
+    public DbSet<CampaignImageEntity> CampaignImages { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -290,6 +291,8 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
             .OnDelete(DeleteBehavior.Cascade);
         modelBuilder.Entity<GmScreenEntity>().Property(g => g.State).HasDefaultValue("{}");
         modelBuilder.Entity<GmScreenEntity>().Property(g => g.Version).IsConcurrencyToken();
+        // La mesa (AddGmScreenMesa): existing screens have nothing projected to the players yet.
+        modelBuilder.Entity<GmScreenEntity>().Property(g => g.Mesa).HasDefaultValue("{}");
 
         // Libro original (AddBookChapters): the chapters of the adventure book uploaded by the GM, one per number and campaign,
         // deleted with it
@@ -328,5 +331,15 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
         // Originales de la enciclopedia (AddEncyclopediaOriginals): the book's text and mini-PDF of each encyclopedia entry, one row
         // per world, section and key, shared by every campaign of the world. Md and Pdf are null until uploaded.
         modelBuilder.Entity<EncyclopediaOriginalEntity>().HasIndex(o => new { o.World, o.Section, o.Key }).IsUnique();
+
+        // Imagenes de la mesa (AddCampaignImages): what the GM shows to the players at the table, deleted with the campaign. In a
+        // table of their own, so listing them never loads the bytes.
+        modelBuilder.Entity<CampaignImageEntity>().HasIndex(i => i.CampaignId);
+        modelBuilder.Entity<CampaignImageEntity>()
+            .HasOne(i => i.Campaign)
+            .WithMany()
+            .HasForeignKey(i => i.CampaignId)
+            .OnDelete(DeleteBehavior.Cascade);
+        modelBuilder.Entity<CampaignImageEntity>().Property(i => i.Name).HasMaxLength(120);
     }
 }
