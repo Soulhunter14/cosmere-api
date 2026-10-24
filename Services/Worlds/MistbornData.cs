@@ -69,8 +69,11 @@ public static class MistbornData
         "narrador", "explorador", "vigilante-de-la-ley", "heredero", "emprendedor", "novato",
     };
 
-    /// <summary>Cada legado tiene dos «Preguntas para el personaje»; cada respuesta, como mucho, esta longitud.</summary>
-    public const int PreguntasLegado = 2;
+    /// <summary>
+    /// «Preguntas para el personaje» de un legado: tres en la Era 1 (origen, impulso y meta, propias de la mesa desde el 24-10-2026) y
+    /// las dos del libro en la Era 2; cada respuesta, como mucho, esta longitud.
+    /// </summary>
+    public const int PreguntasLegado = 3;
     public const int MaxRespuestaLegado = 2000;
 
     /// <summary>Artes metálicas de un poder de personaje; la hemalurgia no lo es en v1 (L.251 / PDF 257).</summary>

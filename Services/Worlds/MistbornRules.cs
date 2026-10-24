@@ -78,7 +78,7 @@ public sealed class MistbornRules : IWorldRules
             throw new ArgumentException($"Invalid Ascendencia: '{id.Ascendencia}'.");
         if (!string.IsNullOrEmpty(id.Legado) && !MistbornData.Legados.Contains(id.Legado))
             throw new ArgumentException($"Invalid Legado: '{id.Legado}'.");
-        // Respuestas a las dos preguntas del legado (Legado PDF 23-26): solo con legado, como mucho dos y de longitud acotada.
+        // Respuestas a las preguntas del legado (tres en la Era 1, dos en la Era 2): solo con legado, como mucho tres y de longitud acotada.
         var respuestas = id.LegadoRespuestas ?? [];
         if (respuestas.Count > 0 && string.IsNullOrEmpty(id.Legado))
             throw new ArgumentException("Invalid LegadoRespuestas: the character has no legado.");
