@@ -54,15 +54,15 @@ public sealed class MistbornRules : IWorldRules
     public bool CaminoInvestidoLoCambiaElDirector => true;
 
     /// <summary>
-    /// Creación guiada (26-10-2026): nombre, trasfondo (legado), ascendencia, las tres preguntas del legado (origen, impulso y meta) y
-    /// «¿Quieres ser alomante?» (dato narrativo <c>alomancia</c>, no el camino de nacido del metal, que sigue poniendo el director).
+    /// Creación guiada (26-10-2026): nombre, trasfondo (legado), ascendencia, «¿Quieres ser alomante?» (dato narrativo <c>alomancia</c>, no el
+    /// camino de nacido del metal, que sigue poniendo el director) y las tres preguntas del legado (origen, impulso y meta).
     /// Faltan pasos por definir; se añaden al final de la lista (y en <c>mistborn.ts</c>, <c>creacion.pasos</c>).
     /// </summary>
     public IReadOnlyList<string> PasosCreacion { get; } =
     [
         CreacionGuiada.Nombre, CreacionGuiada.Legado, CreacionGuiada.Ascendencia,
-        CreacionGuiada.Respuesta(0), CreacionGuiada.Respuesta(1), CreacionGuiada.Respuesta(2),
         CreacionGuiada.DatoDe("alomancia"),
+        CreacionGuiada.Respuesta(0), CreacionGuiada.Respuesta(1), CreacionGuiada.Respuesta(2),
     ];
 
     /// <summary>La Bendición de la Fortaleza (Desvío +1) se suma a la armadura [inferido, L.35 / PDF 41 → Q8].</summary>
