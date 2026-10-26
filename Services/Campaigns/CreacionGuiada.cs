@@ -34,10 +34,12 @@ public static class CreacionGuiada
     }
 
     /// <summary>
-    /// <c>PUT</c> de un jugador sobre un personaje en creación: cada campo que la petición cambia debe tener su paso liberado; si no,
-    /// <see cref="ArgumentException"/> (400) que nombra el paso que falta. Un campo que no está en la lista de pasos no entra en la creación
-    /// guiada y sigue las reglas de siempre. <c>Name</c> lo conserva el núcleo para los jugadores salvo en la creación guiada, así que aquí
-    /// se comprueba como los demás.
+    /// <c>PUT</c> de un jugador sobre un personaje en creación: cada campo que la petición responde debe tener su paso liberado; si no,
+    /// <see cref="ArgumentException"/> (400) que nombra el paso que falta. Vaciar un campo se admite siempre, esté o no liberado su paso:
+    /// es lo que hace el jugador al cambiar de trasfondo (reinicia los pasos siguientes) y solo quita lo que él mismo escribió, aunque el
+    /// director haya recogido el paso después, o el dato venga de una versión anterior de la lista de pasos. Un campo que no está en la
+    /// lista de pasos no entra en la creación guiada y sigue las reglas de siempre. <c>Name</c> lo conserva el núcleo para los jugadores
+    /// salvo en la creación guiada, así que aquí se comprueba como los demás.
     /// </summary>
     public static void ValidarCambios(UpdateCharacterRequest r, CharacterEntity c, IReadOnlyList<string> pasos, int pasoLiberado)
     {
@@ -46,9 +48,9 @@ public static class CreacionGuiada
             var campo = pasos[i];
             var cambia = campo switch
             {
-                Nombre => r.Name != c.Name,
-                Legado => r.Legado is not null && r.Legado != c.Legado,
-                Ascendencia => r.Ascendencia != c.Ascendencia,
+                Nombre => Responde(r.Name, c.Name),
+                Legado => Responde(r.Legado, c.Legado),
+                Ascendencia => Responde(r.Ascendencia, c.Ascendencia),
                 _ when campo.StartsWith(RespuestaLegado + ":", StringComparison.Ordinal) =>
                     CambiaRespuesta(r, c, int.Parse(campo[(RespuestaLegado.Length + 1)..])),
                 _ when campo.StartsWith(Dato + ":", StringComparison.Ordinal) => CambiaDato(r, c, campo[(Dato.Length + 1)..]),
@@ -58,6 +60,9 @@ public static class CreacionGuiada
                 throw new ArgumentException($"El director aún no ha liberado el paso {i + 1} de la creación ({campo}).");
         }
     }
+
+    /// <summary>La petición da al campo un valor nuevo y no vacío (vaciarlo no es responder el paso).</summary>
+    private static bool Responde(string? nuevo, string actual) => !string.IsNullOrWhiteSpace(nuevo) && nuevo != actual;
 
     private static int IndiceDe(IReadOnlyList<string> pasos, string campo)
     {
@@ -70,7 +75,7 @@ public static class CreacionGuiada
     {
         if (r.CreacionDatos is null) return false;
         var guardados = CharacterJson.ParseCreacionDatos(c.CreacionDatos);
-        return (r.CreacionDatos.GetValueOrDefault(clave) ?? "") != (guardados.GetValueOrDefault(clave) ?? "");
+        return Responde(r.CreacionDatos.GetValueOrDefault(clave), guardados.GetValueOrDefault(clave) ?? "");
     }
 
     private static bool CambiaRespuesta(UpdateCharacterRequest r, CharacterEntity c, int indice)
@@ -78,6 +83,6 @@ public static class CreacionGuiada
         if (r.LegadoRespuestas is null) return false;
         var nueva = indice < r.LegadoRespuestas.Count ? r.LegadoRespuestas[indice] : "";
         var actual = indice < c.LegadoRespuestas.Count ? c.LegadoRespuestas[indice] : "";
-        return nueva != actual;
+        return Responde(nueva, actual);
     }
 }
