@@ -5,6 +5,7 @@ using Messages.Database.Entities;
 using Messages.Metas.Out;
 using Microsoft.EntityFrameworkCore;
 using Services.Campaigns;
+using Services.Creacion;
 using Services.Worlds;
 
 namespace Services.Characters;
@@ -125,12 +126,16 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         }
 
         // Creación guiada: mientras el personaje la recorre, la ficha sigue a sus pasos (Mistborn: el paso de alomancia pone el camino
-        // Brumoso y su poder; IWorldRules.FichaDeCreacion). Tras el bloqueo no-GM, que devolvería el camino guardado; también para el director.
+        // Brumoso, su poder, la habilidad Alomancia, el talento principal y la meta; IWorldRules.FichaDeCreacion). El camino y el poder van
+        // ya en la petición, para que la validación de identidad vea lo dictado (un kandra deja de ser brumoso sin 400); el flujo entero se
+        // aplica sobre la entidad después de la petición (CreacionFicha), también para el director, y el bloqueo no-GM no lo deshace.
+        FichaDeCreacion? dictado = null;
         if (!character.CreacionCompletada && world.PasosCreacion.Count > 0
             && await db.Campaigns.Where(c => c.Id == campaignId).Select(c => c.IniciadaEn).FirstAsync() is null)
         {
             var datos = request.CreacionDatos ?? CharacterJson.ParseCreacionDatos(character.CreacionDatos);
-            if (world.FichaDeCreacion(datos, request.Ascendencia) is { } dictado)
+            dictado = world.FichaDeCreacion(datos, request.Ascendencia);
+            if (dictado is not null)
             {
                 request.CaminoMetal = dictado.CaminoMetal;
                 request.Poderes = dictado.Poderes;
@@ -161,6 +166,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             throw new ArgumentException("Invalid metaId in poderes: the meta must belong to this character.");
 
         ApplyUpdate(character, request);
+        if (dictado is not null) await CreacionFicha.AplicarAsync(db, character, dictado);
         character.UpdatedAt = DateTime.UtcNow;
         await db.SaveChangesAsync();
         return MapToResponse(character, world);

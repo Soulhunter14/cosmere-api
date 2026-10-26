@@ -74,8 +74,9 @@ public interface IWorldRules
 
     /// <summary>
     /// Lo que los pasos de la creación guiada dictan para la ficha mientras el personaje está en creación (26-10-2026): Nacidos de la bruma
-    /// deriva del paso «¿Qué tipo de brumoso?» el camino de nacido del metal y su poder. <c>null</c> = el mundo no deriva nada de sus pasos
-    /// (Stormlight). Se aplica en el <c>PUT</c> de personajes y, al arrancar, a los personajes que ya respondieron (<c>CreacionSincronizacion</c>).
+    /// deriva de «¿Quieres ser alomante?» y «¿Qué tipo de brumoso?» el camino de nacido del metal, su poder, la habilidad Alomancia, el talento
+    /// principal y la meta de nacido del metal, como el flujo «Al elegir camino» de la ficha. <c>null</c> = el mundo no deriva nada de sus
+    /// pasos (Stormlight). Lo aplica <c>CreacionFicha</c> en el <c>PUT</c> de personajes y, al arrancar, a los que ya respondieron.
     /// </summary>
     FichaDeCreacion? FichaDeCreacion(IReadOnlyDictionary<string, string> datos, string ascendencia);
 
@@ -154,8 +155,28 @@ public abstract record AccionMesa
     public sealed record InicioEscena(bool Sorprendido) : AccionMesa;
 }
 
-/// <summary>Camino de nacido del metal y poderes que la creación guiada dicta para la ficha (<see cref="IWorldRules.FichaDeCreacion"/>).</summary>
-public sealed record FichaDeCreacion(string CaminoMetal, List<PoderPersonaje> Poderes);
+/// <summary>
+/// Lo que la creación guiada dicta para la ficha (<see cref="IWorldRules.FichaDeCreacion"/>): el flujo «Al elegir camino» de la ficha
+/// (caminoMetalFlujo.ts del cliente) en la parte que necesita la creación. <c>CaminoMetal</c> vacío = sin camino: se deshace lo que la
+/// creación hubiera puesto. <c>Habilidad</c> es la habilidad investida del camino (Alomancia, Voluntad, 1 grado; <c>GradoInicial</c> = un
+/// grado gratuito más si el camino es el inicial, L.21 / PDF 27; L.135 / PDF 141). <c>TalentoPrincipal</c> se guarda solo cuando el camino no
+/// es el inicial (si lo es, se concede sin ocupar hueco, L.17-18 / PDF 23-24); <c>TalentosDeCaminos</c> son todos los talentos principales
+/// que la creación puede haber escrito, para quitarlos al cambiar o deshacer. <c>Meta</c> es la meta de nacido del metal que entrena los
+/// poderes nacientes (L.132-133 / PDF 138-139); <c>null</c> cuando no hace falta (alomancia de atium, L.177 / PDF 183).
+/// </summary>
+public sealed record FichaDeCreacion(
+    string CaminoMetal,
+    List<PoderPersonaje> Poderes,
+    HabilidadInvestidaCreacion Habilidad,
+    string? TalentoPrincipal,
+    IReadOnlyList<string> TalentosDeCaminos,
+    MetaCreacion? Meta);
+
+/// <summary>Habilidad investida que da el camino: nombre de la habilidad personalizada, código de su atributo (<c>VOL</c>), arte, grados y si el camino inicial suma uno gratuito.</summary>
+public sealed record HabilidadInvestidaCreacion(string Nombre, string Codigo, string Arte, int Grados, bool GradoInicial);
+
+/// <summary>Meta de nacido del metal que la creación crea (o reutiliza si sigue activa) y enlaza a los poderes nacientes.</summary>
+public sealed record MetaCreacion(string Titulo, string Descripcion);
 
 public interface IWorldRulesProvider
 {
