@@ -101,6 +101,11 @@ public class CreacionService(CosmereContext db, IWorldRulesProvider mundos) : IC
         if (soloDe is not null) consulta = consulta.Where(c => c.OwnerId == soloDe);
         var personajes = await consulta.OrderBy(c => c.Id).ToListAsync();
 
+        // Legados que ya tienen los personajes de los demás (vivos, no PNJ): el aviso al elegir el trasfondo. Al director se le cuentan todos.
+        var deOtros = db.Characters.AsNoTracking().Where(c => c.CampaignId == campaignId && !c.IsNpc && !c.Muerto && c.Legado != "");
+        if (soloDe is not null) deOtros = deOtros.Where(c => c.OwnerId != soloDe);
+        var legadosElegidos = await deOtros.GroupBy(c => c.Legado).Select(g => new { g.Key, N = g.Count() }).ToDictionaryAsync(x => x.Key, x => x.N);
+
         var ownerIds = personajes.Where(c => c.OwnerId is not null).Select(c => c.OwnerId!.Value).Distinct().ToList();
         var nombres = ownerIds.Count == 0
             ? new Dictionary<long, string>()
@@ -112,6 +117,7 @@ public class CreacionService(CosmereContext db, IWorldRulesProvider mundos) : IC
             Pasos = [.. pasos],
             Iniciada = campaign.IniciadaEn is not null,
             Cambiables = [.. campaign.CreacionCambiables],
+            LegadosElegidos = legadosElegidos,
             Personajes = personajes.Select(c => new CreacionPersonajeResponse
             {
                 Id = c.Id,
