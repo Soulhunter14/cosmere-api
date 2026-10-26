@@ -11,6 +11,9 @@ public interface ICreacionService
     /// <summary>Libera o retrocede pasos (director). Retroceder no borra lo escrito.</summary>
     Task<CreacionResponse> SetPasoAsync(long campaignId, int paso, long userId);
 
+    /// <summary>Permite o deniega que los jugadores cambien un paso ya respondido (director).</summary>
+    Task<CreacionResponse> SetCambiableAsync(long campaignId, string paso, bool permitido, long userId);
+
     /// <summary>Ficha nueva asignada a un jugador, con nombre provisional y en creación (director).</summary>
     Task<CreacionResponse> AddPersonajeAsync(long campaignId, long ownerId, long userId);
 

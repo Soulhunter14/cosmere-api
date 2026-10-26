@@ -108,12 +108,13 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
 
         if (!isGm)
         {
-            var campana = await db.Campaigns.Where(c => c.Id == campaignId).Select(c => new { c.IniciadaEn, c.CreacionPaso }).FirstAsync();
-            // Creación guiada (CreacionGuiada): mientras el personaje la recorre, el jugador solo cambia los pasos liberados, y el nombre es
-            // uno de ellos; fuera de ella el núcleo conserva el nombre, como siempre.
+            var campana = await db.Campaigns.Where(c => c.Id == campaignId)
+                .Select(c => new { c.IniciadaEn, c.CreacionPaso, c.CreacionCambiables }).FirstAsync();
+            // Creación guiada (CreacionGuiada): mientras el personaje la recorre, el jugador solo responde los pasos liberados y solo cambia
+            // los respondidos que el director permite; el nombre es uno de ellos. Fuera de ella el núcleo conserva el nombre, como siempre.
             var enCreacion = !character.CreacionCompletada && campana.IniciadaEn is null && world.PasosCreacion.Count > 0;
             if (enCreacion)
-                CreacionGuiada.ValidarCambios(request, character, world.PasosCreacion, campana.CreacionPaso);
+                CreacionGuiada.ValidarCambios(request, character, world.PasosCreacion, campana.CreacionPaso, campana.CreacionCambiables);
             else
                 request.Name = character.Name;
             request.CaminoHeroico = character.CaminoHeroico;

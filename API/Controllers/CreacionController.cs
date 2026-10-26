@@ -10,9 +10,10 @@ using Services.Creacion;
 namespace API.Controllers;
 
 /// <summary>
-/// «Creación de personajes»: el director libera los pasos uno a uno, crea las fichas asignadas a los jugadores y las da por creadas; los
-/// jugadores leen el estado y rellenan su ficha con el <c>PUT</c> de personajes de siempre (el servidor vigila los pasos liberados). Cada
-/// cambio avisa al grupo de la campaña con <c>CreacionUpdated</c> (sin datos: cada cliente relee).
+/// «Creación de personajes»: el director libera los pasos uno a uno, permite o deniega cambiar los ya respondidos, crea las fichas asignadas
+/// a los jugadores y las da por creadas; los jugadores leen el estado y rellenan su ficha con el <c>PUT</c> de personajes de siempre (el
+/// servidor vigila los pasos liberados y los cambiables). Cada cambio avisa al grupo de la campaña con <c>CreacionUpdated</c> (sin datos:
+/// cada cliente relee).
 /// </summary>
 [ApiController]
 [Authorize]
@@ -26,6 +27,10 @@ public class CreacionController(ICreacionService creacion, IHubContext<CampaignH
     [HttpPut("paso")]
     public async Task<ActionResult<CreacionResponse>> SetPaso(long campaignId, [FromBody] CreacionPasoRequest request)
         => Ok(await Avisar(campaignId, await creacion.SetPasoAsync(campaignId, request.Paso, JwtHelper.GetUserId(User))));
+
+    [HttpPut("cambiable")]
+    public async Task<ActionResult<CreacionResponse>> SetCambiable(long campaignId, [FromBody] CreacionCambiableRequest request)
+        => Ok(await Avisar(campaignId, await creacion.SetCambiableAsync(campaignId, request.Paso, request.Permitido, JwtHelper.GetUserId(User))));
 
     [HttpPost("personajes")]
     public async Task<ActionResult<CreacionResponse>> AddPersonaje(long campaignId, [FromBody] CreacionPersonajeRequest request)

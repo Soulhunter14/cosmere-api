@@ -3,14 +3,16 @@ using Messages.Creacion.Out;
 using Messages.Database.Entities;
 using Microsoft.EntityFrameworkCore;
 using Services.Characters;
+using Services.Campaigns;
 using Services.Worlds;
 
 namespace Services.Creacion;
 
 /// <summary>
-/// Creación guiada de personajes (ver <c>CreacionGuiada</c>). El director libera pasos (<c>Campaign.CreacionPaso</c>), crea fichas
-/// asignadas a los jugadores (en creación, con nombre provisional) y las da por creadas; los jugadores rellenan su ficha con el
-/// <c>PUT</c> de personajes, que vigila los pasos liberados. Solo mundos con pasos (<c>IWorldRules.PasosCreacion</c>).
+/// Creación guiada de personajes (ver <c>CreacionGuiada</c>). El director libera pasos (<c>Campaign.CreacionPaso</c>), decide qué pasos
+/// respondidos se pueden cambiar (<c>Campaign.CreacionCambiables</c>), crea fichas asignadas a los jugadores (en creación, con nombre
+/// provisional) y las da por creadas; los jugadores rellenan su ficha con el <c>PUT</c> de personajes, que vigila los pasos liberados y
+/// los cambiables. Solo mundos con pasos (<c>IWorldRules.PasosCreacion</c>).
 /// </summary>
 public class CreacionService(CosmereContext db, IWorldRulesProvider mundos) : ICreacionService
 {
@@ -33,6 +35,19 @@ public class CreacionService(CosmereContext db, IWorldRulesProvider mundos) : IC
         return await BuildAsync(campaignId, null);
     }
 
+    public async Task<CreacionResponse> SetCambiableAsync(long campaignId, string paso, bool permitido, long userId)
+    {
+        var campaign = await GetGmCampaignAsync(campaignId, userId);
+        var pasos = PasosDe(campaign);
+        if (!pasos.Contains(paso))
+            throw new ArgumentException($"Invalid paso: '{paso}'.");
+        // Lista nueva (no la misma instancia) para que EF detecte el cambio; en el orden de los pasos del mundo.
+        var actuales = campaign.CreacionCambiables;
+        campaign.CreacionCambiables = pasos.Where(p => p == paso ? permitido : actuales.Contains(p)).ToList();
+        await db.SaveChangesAsync();
+        return await BuildAsync(campaignId, null);
+    }
+
     public async Task<CreacionResponse> AddPersonajeAsync(long campaignId, long ownerId, long userId)
     {
         var campaign = await GetGmCampaignAsync(campaignId, userId);
@@ -47,7 +62,7 @@ public class CreacionService(CosmereContext db, IWorldRulesProvider mundos) : IC
         {
             CampaignId = campaignId,
             OwnerId = ownerId,
-            Name = $"Personaje de {jugador}",
+            Name = CreacionGuiada.NombreProvisional + jugador,
             PlayerName = jugador,
             Level = 0,
             Ascendencia = string.Empty,
@@ -96,6 +111,7 @@ public class CreacionService(CosmereContext db, IWorldRulesProvider mundos) : IC
             Paso = campaign.CreacionPaso,
             Pasos = [.. pasos],
             Iniciada = campaign.IniciadaEn is not null,
+            Cambiables = [.. campaign.CreacionCambiables],
             Personajes = personajes.Select(c => new CreacionPersonajeResponse
             {
                 Id = c.Id,

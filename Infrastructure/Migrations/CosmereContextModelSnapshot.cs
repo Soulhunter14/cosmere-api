@@ -124,6 +124,12 @@ namespace Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
+                    b.Property<List<string>>("CreacionCambiables")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text[]")
+                        .HasDefaultValueSql("'{}'");
+
                     b.Property<int>("CreacionPaso")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")

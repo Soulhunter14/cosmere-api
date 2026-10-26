@@ -274,6 +274,8 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
         modelBuilder.Entity<CampaignEntity>().Property(c => c.CreacionPaso).HasDefaultValue(0);
         modelBuilder.Entity<CharacterEntity>().Property(c => c.CreacionCompletada).HasDefaultValue(true);
         modelBuilder.Entity<CharacterEntity>().Property(c => c.CreacionDatos).HasDefaultValue("{}");
+        // Pasos cambiables (AddCreacionCambiables): de inicio el director no permite cambiar ningún paso ya respondido.
+        modelBuilder.Entity<CampaignEntity>().Property(c => c.CreacionCambiables).HasDefaultValueSql("'{}'");
 
         // Muerte (AddCharacterMuerte): existing characters are alive and have no stored gear.
         modelBuilder.Entity<CharacterEntity>().Property(c => c.Muerto).HasDefaultValue(false);
