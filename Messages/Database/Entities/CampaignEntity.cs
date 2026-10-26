@@ -19,6 +19,11 @@ public class CampaignEntity
     /// cada mundo (<c>IWorldRules.PasosCreacion</c>); ver <c>CreacionGuiada</c>.
     /// </summary>
     public int CreacionPaso { get; set; }
+    /// <summary>
+    /// Pasos de la creación guiada que el director permite cambiar una vez respondidos (ids de campo de <c>CreacionGuiada</c>, p. ej. «legado»).
+    /// Fuera de esta lista un jugador no cambia un paso que ya respondió (vaciarlo sí puede). El director lo conmuta desde «Creación».
+    /// </summary>
+    public List<string> CreacionCambiables { get; set; } = [];
 
     public UserEntity GmUser { get; set; } = null!;
     public ICollection<CampaignMemberEntity> Members { get; set; } = [];

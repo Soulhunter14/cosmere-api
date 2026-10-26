@@ -13,6 +13,8 @@ public class CreacionResponse
     public List<string> Pasos { get; set; } = [];
     /// <summary>La campaña ya se inició: la creación guiada queda en solo lectura.</summary>
     public bool Iniciada { get; set; }
+    /// <summary>Pasos que el director permite cambiar una vez respondidos (ids de <c>Pasos</c>); los demás quedan como se respondieron.</summary>
+    public List<string> Cambiables { get; set; } = [];
     public List<CreacionPersonajeResponse> Personajes { get; set; } = [];
 }
 
