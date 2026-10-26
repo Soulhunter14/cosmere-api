@@ -89,9 +89,12 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Auto-apply migrations on startup
+// Auto-apply migrations on startup; then the sheets of the characters in guided creation follow their steps (CreacionSincronizacion)
 if (builder.Configuration.GetValue<bool>("AutoMigrate", defaultValue: true))
+{
     Infrastructure.Bootstrap.ApplyMigrations(app.Services);
+    Services.Creacion.CreacionSincronizacion.Sincronizar(app.Services);
+}
 
 app.UseSwagger();
 app.UseSwaggerUI();

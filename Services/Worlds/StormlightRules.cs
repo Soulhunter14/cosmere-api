@@ -56,6 +56,8 @@ public sealed class StormlightRules : IWorldRules
     /// <summary>Sin creación guiada: la ficha de Roshar se rellena como siempre.</summary>
     public IReadOnlyList<string> PasosCreacion => [];
 
+    public FichaDeCreacion? FichaDeCreacion(IReadOnlyDictionary<string, string> datos, string ascendencia) => null;
+
     public bool DesvioBonoSeAcumula => false;
 
     public void ValidarIdentidad(IdentidadPersonaje id)

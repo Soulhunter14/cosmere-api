@@ -124,6 +124,19 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
                 CierreCampana.ConservarCampos(request, character);
         }
 
+        // Creación guiada: mientras el personaje la recorre, la ficha sigue a sus pasos (Mistborn: el paso de alomancia pone el camino
+        // Brumoso y su poder; IWorldRules.FichaDeCreacion). Tras el bloqueo no-GM, que devolvería el camino guardado; también para el director.
+        if (!character.CreacionCompletada && world.PasosCreacion.Count > 0
+            && await db.Campaigns.Where(c => c.Id == campaignId).Select(c => c.IniciadaEn).FirstAsync() is null)
+        {
+            var datos = request.CreacionDatos ?? CharacterJson.ParseCreacionDatos(character.CreacionDatos);
+            if (world.FichaDeCreacion(datos, request.Ascendencia) is { } dictado)
+            {
+                request.CaminoMetal = dictado.CaminoMetal;
+                request.Poderes = dictado.Poderes;
+            }
+        }
+
         // Camino inicial coherente con los caminos efectivos (§5.2, P6): si el GM borra el camino del que partía, pasa al otro
         // camino o a "" en lugar de dejar al personaje con un 400 permanente. El servidor no toca Talentos.
         request.CaminoInicial = NormalizarCaminoInicial(

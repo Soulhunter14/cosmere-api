@@ -72,6 +72,13 @@ public interface IWorldRules
     /// </summary>
     IReadOnlyList<string> PasosCreacion { get; }
 
+    /// <summary>
+    /// Lo que los pasos de la creación guiada dictan para la ficha mientras el personaje está en creación (26-10-2026): Nacidos de la bruma
+    /// deriva del paso «¿Qué tipo de brumoso?» el camino de nacido del metal y su poder. <c>null</c> = el mundo no deriva nada de sus pasos
+    /// (Stormlight). Se aplica en el <c>PUT</c> de personajes y, al arrancar, a los personajes que ya respondieron (<c>CreacionSincronizacion</c>).
+    /// </summary>
+    FichaDeCreacion? FichaDeCreacion(IReadOnlyDictionary<string, string> datos, string ascendencia);
+
     /// <summary>Valida la identidad efectiva del personaje (§5.3); <see cref="ArgumentException"/> → 400.</summary>
     void ValidarIdentidad(IdentidadPersonaje id);
 
@@ -146,6 +153,9 @@ public abstract record AccionMesa
 
     public sealed record InicioEscena(bool Sorprendido) : AccionMesa;
 }
+
+/// <summary>Camino de nacido del metal y poderes que la creación guiada dicta para la ficha (<see cref="IWorldRules.FichaDeCreacion"/>).</summary>
+public sealed record FichaDeCreacion(string CaminoMetal, List<PoderPersonaje> Poderes);
 
 public interface IWorldRulesProvider
 {
