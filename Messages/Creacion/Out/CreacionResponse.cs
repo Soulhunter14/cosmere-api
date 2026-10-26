@@ -15,6 +15,11 @@ public class CreacionResponse
     public bool Iniciada { get; set; }
     /// <summary>Pasos que el director permite cambiar una vez respondidos (ids de <c>Pasos</c>); los demás quedan como se respondieron.</summary>
     public List<string> Cambiables { get; set; } = [];
+    /// <summary>
+    /// Cuántos personajes de los demás miembros (no PNJ, vivos, creados o en creación) tienen cada legado (id → número); para el director,
+    /// todos los personajes. Aviso al elegir el trasfondo («Ya lo ha elegido…»), sin nombres: los personajes en creación son del director.
+    /// </summary>
+    public Dictionary<string, int> LegadosElegidos { get; set; } = new();
     public List<CreacionPersonajeResponse> Personajes { get; set; } = [];
 }
 
