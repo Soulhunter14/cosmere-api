@@ -53,18 +53,48 @@ public sealed class MistbornRules : IWorldRules
     /// <summary>Q6: por ahora solo el director cambia el camino de nacido del metal (el libro lo permitiría, L.128 / PDF 134).</summary>
     public bool CaminoInvestidoLoCambiaElDirector => true;
 
+    /// <summary>Claves de <c>CreacionDatos</c> de los pasos de alomancia: «¿Quieres ser alomante?» (<c>si</c> | <c>no</c>) y «¿Qué tipo de brumoso?».</summary>
+    private const string ClaveAlomante = "alomante";
+    private const string ClaveAlomancia = "alomancia";
+    /// <summary>Valor del paso «¿Qué tipo de brumoso?» para un brumoso: <c>brumoso:&lt;metal&gt;</c>; el otro valor posible es <c>nacido-de-la-bruma</c>.</summary>
+    private const string PrefijoBrumoso = "brumoso:";
+
     /// <summary>
     /// Creación guiada (26-10-2026): nombre, trasfondo (legado), ascendencia, «¿Quieres ser alomante?» (dato <c>alomante</c>: sí o no) y
-    /// «¿Qué tipo de brumoso?» (dato <c>alomancia</c>; datos narrativos, no el camino de nacido del metal, que sigue poniendo el director),
+    /// «¿Qué tipo de brumoso?» (dato <c>alomancia</c>; mientras el personaje está en creación, la ficha lo sigue: <see cref="FichaDeCreacion"/>),
     /// y las tres preguntas del legado (origen, impulso y meta).
     /// Faltan pasos por definir; se añaden al final de la lista (y en <c>mistborn.ts</c>, <c>creacion.pasos</c>).
     /// </summary>
     public IReadOnlyList<string> PasosCreacion { get; } =
     [
         CreacionGuiada.Nombre, CreacionGuiada.Legado, CreacionGuiada.Ascendencia,
-        CreacionGuiada.DatoDe("alomante"), CreacionGuiada.DatoDe("alomancia"),
+        CreacionGuiada.DatoDe(ClaveAlomante), CreacionGuiada.DatoDe(ClaveAlomancia),
         CreacionGuiada.Respuesta(0), CreacionGuiada.Respuesta(1), CreacionGuiada.Respuesta(2),
     ];
+
+    /// <summary>
+    /// Mientras el personaje está en creación, la ficha sigue a los pasos de alomancia (Xavi, 26-10-2026): «brumoso:&lt;metal&gt;» es el
+    /// camino Brumoso con ese poder alomántico de origen camino; «nacido-de-la-bruma», ese camino (sus poderes son implícitos); «no» en
+    /// «¿Quieres ser alomante?», sin respuesta o un valor que no se entiende, ningún camino. Un kandra no puede ser nacido del metal
+    /// (L.18 / PDF 24) y la sangre koloss no puede ser nacido de la bruma (L.141 / PDF 147): en esos casos la ficha queda sin camino, sin
+    /// error, para no bloquear el guardado de los demás pasos (el director lo ve en la ficha). El camino inicial sigue siendo del director.
+    /// </summary>
+    public FichaDeCreacion? FichaDeCreacion(IReadOnlyDictionary<string, string> datos, string ascendencia)
+    {
+        var sinCamino = new FichaDeCreacion(string.Empty, []);
+        if ((datos.GetValueOrDefault(ClaveAlomante) ?? "") == "no" || ascendencia == MistbornData.Kandra) return sinCamino;
+        var eleccion = datos.GetValueOrDefault(ClaveAlomancia) ?? "";
+        if (eleccion.StartsWith(PrefijoBrumoso, StringComparison.Ordinal))
+        {
+            var metal = eleccion[PrefijoBrumoso.Length..];
+            return MistbornData.Metales.Contains(metal)
+                ? new FichaDeCreacion("brumoso", [new PoderPersonaje { Arte = MistbornData.Alomancia, Metal = metal, Origen = "camino" }])
+                : sinCamino;
+        }
+        if (eleccion == "nacido-de-la-bruma" && ascendencia != MistbornData.SangreKoloss)
+            return new FichaDeCreacion("nacido-de-la-bruma", []);
+        return sinCamino;
+    }
 
     /// <summary>La Bendición de la Fortaleza (Desvío +1) se suma a la armadura [inferido, L.35 / PDF 41 → Q8].</summary>
     public bool DesvioBonoSeAcumula => true;
