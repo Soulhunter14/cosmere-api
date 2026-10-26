@@ -65,6 +65,13 @@ public interface IWorldRules
     /// <summary>El camino Investido del mundo (radiante o de nacido del metal) solo lo cambia el director.</summary>
     bool CaminoInvestidoLoCambiaElDirector { get; }
 
+    /// <summary>
+    /// Pasos de la creación guiada de personajes, en orden, como ids de campo de <c>CreacionGuiada</c> (<c>name</c>, <c>legado</c>,
+    /// <c>ascendencia</c>, <c>legadoRespuestas:0</c>…). Vacía: el mundo no tiene creación guiada (Stormlight). Añadir un paso es una línea
+    /// aquí y otra en <c>WorldConfig.creacion.pasos</c> del cliente.
+    /// </summary>
+    IReadOnlyList<string> PasosCreacion { get; }
+
     /// <summary>Valida la identidad efectiva del personaje (§5.3); <see cref="ArgumentException"/> → 400.</summary>
     void ValidarIdentidad(IdentidadPersonaje id);
 

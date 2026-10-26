@@ -40,6 +40,16 @@ internal static class CharacterJson
 
     public static string SerializarRecursos(Dictionary<string, decimal> recursos) => JsonSerializer.Serialize(recursos, Json);
 
+    /// <summary>Datos de la creación guiada (<c>CharacterEntity.CreacionDatos</c>): clave → valor; un JSON ilegible vale como vacío.</summary>
+    public static Dictionary<string, string> ParseCreacionDatos(string? raw)
+    {
+        if (string.IsNullOrWhiteSpace(raw)) return new Dictionary<string, string>();
+        try { return JsonSerializer.Deserialize<Dictionary<string, string>>(raw, Json) ?? new Dictionary<string, string>(); }
+        catch (JsonException) { return new Dictionary<string, string>(); }
+    }
+
+    public static string SerializarCreacionDatos(Dictionary<string, string> datos) => JsonSerializer.Serialize(datos, Json);
+
     public static string SerializarClavos(List<ClavoHemalurgico> clavos) => JsonSerializer.Serialize(clavos, Json);
 
     /// <summary>Equipo guardado al morir: <c>null</c>, <c>""</c>, <c>"{}"</c> o JSON inválido devuelven <c>null</c> (nada guardado).</summary>

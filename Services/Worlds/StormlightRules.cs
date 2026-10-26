@@ -53,6 +53,9 @@ public sealed class StormlightRules : IWorldRules
 
     public bool CaminoInvestidoLoCambiaElDirector => true;
 
+    /// <summary>Sin creación guiada: la ficha de Roshar se rellena como siempre.</summary>
+    public IReadOnlyList<string> PasosCreacion => [];
+
     public bool DesvioBonoSeAcumula => false;
 
     public void ValidarIdentidad(IdentidadPersonaje id)

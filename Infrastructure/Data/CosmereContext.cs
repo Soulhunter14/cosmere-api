@@ -270,6 +270,10 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
 
         // Hemalurgia (M6, AddCharacterClavos): existing characters have no hemalurgic spikes.
         modelBuilder.Entity<CharacterEntity>().Property(c => c.Clavos).HasDefaultValue("[]");
+        // Creación guiada (AddCreacionGuiada): las campañas nacen sin abrirla y las fichas que ya existen cuentan como creadas.
+        modelBuilder.Entity<CampaignEntity>().Property(c => c.CreacionPaso).HasDefaultValue(0);
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.CreacionCompletada).HasDefaultValue(true);
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.CreacionDatos).HasDefaultValue("{}");
 
         // Muerte (AddCharacterMuerte): existing characters are alive and have no stored gear.
         modelBuilder.Entity<CharacterEntity>().Property(c => c.Muerto).HasDefaultValue(false);

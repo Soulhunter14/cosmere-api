@@ -113,6 +113,10 @@ public class CharacterResponse
     public string Legado { get; set; } = string.Empty;
     /// <summary>Respuestas a las dos preguntas del legado, en su orden (<c>[]</c> sin responder y siempre en Stormlight).</summary>
     public List<string> LegadoRespuestas { get; set; } = [];
+    /// <summary>Falso mientras el personaje recorre la creación guiada (sección «Creación de personajes»); las fichas de siempre nacen creadas.</summary>
+    public bool CreacionCompletada { get; set; } = true;
+    /// <summary>Datos de los pasos de la creación guiada que no son campos de la ficha (clave → valor; p. ej. «alomancia»); <c>{}</c> sin ninguno.</summary>
+    public Dictionary<string, string> CreacionDatos { get; set; } = new();
 
     // Muerte (núcleo): la ficha de un muerto es de solo lectura; EquipoAlMorir es lo que llevaba (null sin copia).
     public bool Muerto { get; set; }
