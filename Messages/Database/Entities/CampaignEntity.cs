@@ -14,6 +14,11 @@ public class CampaignEntity
     public string? Era { get; set; }
     /// <summary>Cuándo el director inició la campaña; <c>null</c> = en preparación (sesión 0). Ver <c>CierreCampana</c>.</summary>
     public DateTime? IniciadaEn { get; set; }
+    /// <summary>
+    /// Creación guiada de personajes (sección «Creación de personajes»): pasos liberados por el director, 0 = sin abrir. Los pasos los define
+    /// cada mundo (<c>IWorldRules.PasosCreacion</c>); ver <c>CreacionGuiada</c>.
+    /// </summary>
+    public int CreacionPaso { get; set; }
 
     public UserEntity GmUser { get; set; } = null!;
     public ICollection<CampaignMemberEntity> Members { get; set; } = [];

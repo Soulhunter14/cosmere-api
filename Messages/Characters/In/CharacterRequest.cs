@@ -116,4 +116,6 @@ public class UpdateCharacterRequest
     public string? Legado { get; set; }
     // Respuestas a las dos preguntas del legado, en su orden: null = conservar las guardadas.
     public List<string>? LegadoRespuestas { get; set; }
+    // Datos de los pasos de la creación guiada que no son campos de la ficha (clave → valor; p. ej. «alomancia»): null = conservar los guardados.
+    public Dictionary<string, string>? CreacionDatos { get; set; }
 }

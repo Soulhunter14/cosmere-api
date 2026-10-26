@@ -16,6 +16,8 @@ public class CampaignResponse
     public DateTime? IniciadaEn { get; set; }
     /// <summary>Campos del personaje (camelCase) que se cierran para los jugadores al iniciar la campaña (siempre la lista completa).</summary>
     public List<string> CamposDeCierre { get; set; } = [];
+    /// <summary>Pasos liberados de la creación guiada de personajes (0 = sin abrir); los pasos los da <c>GET …/creacion</c>.</summary>
+    public int CreacionPaso { get; set; }
 }
 
 public class CampaignDetailResponse
@@ -31,6 +33,7 @@ public class CampaignDetailResponse
     public string? Era { get; set; }
     public DateTime? IniciadaEn { get; set; }
     public List<string> CamposDeCierre { get; set; } = [];
+    public int CreacionPaso { get; set; }
     /// <summary>Whether this user may open «La banda»: the GM always; a player only when the GM has shared the crew sheet with them.</summary>
     public bool BandaVisible { get; set; }
 }

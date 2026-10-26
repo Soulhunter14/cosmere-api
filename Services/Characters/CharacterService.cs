@@ -108,12 +108,18 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
 
         if (!isGm)
         {
-            request.Name = character.Name;
+            var campana = await db.Campaigns.Where(c => c.Id == campaignId).Select(c => new { c.IniciadaEn, c.CreacionPaso }).FirstAsync();
+            // Creación guiada (CreacionGuiada): mientras el personaje la recorre, el jugador solo cambia los pasos liberados, y el nombre es
+            // uno de ellos; fuera de ella el núcleo conserva el nombre, como siempre.
+            var enCreacion = !character.CreacionCompletada && campana.IniciadaEn is null && world.PasosCreacion.Count > 0;
+            if (enCreacion)
+                CreacionGuiada.ValidarCambios(request, character, world.PasosCreacion, campana.CreacionPaso);
+            else
+                request.Name = character.Name;
             request.CaminoHeroico = character.CaminoHeroico;
             world.RestringirCambiosNoGm(request, character);
             // Campaña iniciada: lo que se cerró al terminar la preparación ya no lo cambia un jugador (CierreCampana).
-            var iniciadaEn = await db.Campaigns.Where(c => c.Id == campaignId).Select(c => c.IniciadaEn).FirstAsync();
-            if (iniciadaEn is not null)
+            if (campana.IniciadaEn is not null)
                 CierreCampana.ConservarCampos(request, character);
         }
 
@@ -331,6 +337,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         if (r.Clavos is not null) c.Clavos = CharacterJson.SerializarClavos(r.Clavos);
         if (r.Legado is not null) c.Legado = r.Legado;
         if (r.LegadoRespuestas is not null) c.LegadoRespuestas = r.LegadoRespuestas;
+        if (r.CreacionDatos is not null) c.CreacionDatos = CharacterJson.SerializarCreacionDatos(r.CreacionDatos);
     }
 
     // ── Helpers de cálculo de reservas ───────────────────────────────────────
@@ -563,6 +570,8 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
 
             // ── Muerte ────────────────────────────────────────────────────────
             Muerto = c.Muerto, MuertoEn = c.MuertoEn, CausaMuerte = c.CausaMuerte,
+            CreacionCompletada = c.CreacionCompletada,
+            CreacionDatos = CharacterJson.ParseCreacionDatos(c.CreacionDatos),
             EquipoAlMorir = CharacterJson.ParseEquipoGuardado(c.EquipoAlMorir),
         };
 

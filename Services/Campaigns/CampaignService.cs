@@ -24,6 +24,7 @@ public class CampaignService(CosmereContext db, IWorldRulesProvider reglas) : IC
                 World = m.Campaign.World,
                 Era = m.Campaign.Era,
                 IniciadaEn = m.Campaign.IniciadaEn,
+                CreacionPaso = m.Campaign.CreacionPaso,
                 NextSessionDate = m.Campaign.Sessions
                     .Where(s => s.Date > now)
                     .OrderBy(s => s.Date)
@@ -67,6 +68,7 @@ public class CampaignService(CosmereContext db, IWorldRulesProvider reglas) : IC
             Era = campaign.Era,
             IniciadaEn = campaign.IniciadaEn,
             CamposDeCierre = [.. CierreCampana.Campos],
+            CreacionPaso = campaign.CreacionPaso,
             BandaVisible = bandaVisible,
             Members = campaign.Members.Select(m => new MemberResponse
             {
@@ -143,7 +145,8 @@ public class CampaignService(CosmereContext db, IWorldRulesProvider reglas) : IC
             World = campaign.World,
             Era = campaign.Era,
             IniciadaEn = campaign.IniciadaEn,
-            CamposDeCierre = [.. CierreCampana.Campos]
+            CamposDeCierre = [.. CierreCampana.Campos],
+            CreacionPaso = campaign.CreacionPaso,
         };
     }
 

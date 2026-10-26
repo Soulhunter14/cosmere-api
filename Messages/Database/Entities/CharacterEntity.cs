@@ -28,7 +28,9 @@ public class CharacterEntity
     public List<string> Bendiciones { get; set; } = [];         // ids de Bendición kandra
     public string Clavos { get; set; } = "[]";                  // JSON (camelCase) de List<ClavoHemalurgico> (hemalurgia, T49a)
     public string Legado { get; set; } = string.Empty;          // id de legado de la aventura «El legado de los nacidos de la bruma»; "" = sin legado
-    public List<string> LegadoRespuestas { get; set; } = [];    // respuestas a las dos preguntas del legado, en su orden
+    public List<string> LegadoRespuestas { get; set; } = [];    // respuestas a las preguntas del legado, en su orden (tres en la Era 1)
+    public string CreacionDatos { get; set; } = "{}";          // JSON de Dictionary<string, string>: datos de los pasos de la creación guiada que no son campos de la ficha (p. ej. «alomancia»)
+    public bool CreacionCompletada { get; set; } = true;        // false mientras recorre la creación guiada (CreacionGuiada); las fichas de «Personajes» nacen creadas
 
     // Muerte (núcleo, ambos mundos). Defaults de BD declarados en CosmereContext.
     public bool Muerto { get; set; } = false;

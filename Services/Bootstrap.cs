@@ -3,6 +3,7 @@ using Services.Auth;
 using Services.Book;
 using Services.Calendar;
 using Services.Campaigns;
+using Services.Creacion;
 using Services.Crew;
 using Services.Catalog;
 using Services.Characters;
@@ -41,6 +42,7 @@ public static class Bootstrap
         services.AddScoped<IDiceRollService, DiceRollService>();
         services.AddScoped<IGmScreenService, GmScreenService>();
         services.AddScoped<IMesaService, MesaService>();
+        services.AddScoped<ICreacionService, CreacionService>();
         services.AddScoped<IBookService, BookService>();
         services.AddScoped<ICrewSheetService, CrewSheetService>();
         services.AddScoped<IEncyclopediaService, EncyclopediaService>();
