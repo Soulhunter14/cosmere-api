@@ -72,27 +72,44 @@ public sealed class MistbornRules : IWorldRules
         CreacionGuiada.Respuesta(0), CreacionGuiada.Respuesta(1), CreacionGuiada.Respuesta(2),
     ];
 
+    /// <summary>Talentos principales de los caminos que la creación puede escribir en la ficha (L.135 / PDF 141; L.141 / PDF 147).</summary>
+    private const string TalentoBrumoso = "Ruptura de brumoso";
+    private const string TalentoNacidoDeLaBruma = "Ruptura de nacido de la bruma";
+    private static readonly IReadOnlyList<string> TalentosDeCaminos = [TalentoBrumoso, TalentoNacidoDeLaBruma];
+    /// <summary>Alomancia (Voluntad), 1 grado con la Ruptura; el brumoso inicial suma un grado gratuito (L.135 / PDF 141), el nacido de la bruma no (L.141 / PDF 147).</summary>
+    private static readonly HabilidadInvestidaCreacion AlomanciaDeBrumoso = new("Alomancia", "VOL", MistbornData.Alomancia, 1, GradoInicial: true);
+    private static readonly HabilidadInvestidaCreacion AlomanciaDeNacido = new("Alomancia", "VOL", MistbornData.Alomancia, 1, GradoInicial: false);
+    /// <summary>«Entrenar tu poder» (L.132-133 / PDF 138-139; L.135 / PDF 141), con el texto de caminosNacidosDelMetal.ts del cliente.</summary>
+    private static readonly MetaCreacion MetaEntrenar = new(
+        "Entrenar tu poder",
+        "Experimenta con tu poder naciente de formas creativas o practica con él siempre que puedas. Con un mentor, o con un compañero que " +
+        "tenga el mismo poder, avanzas el doble de rápido. Al completarla desbloqueas la versión completa del poder y puedes elegir los " +
+        "talentos de su árbol. La alomancia de atium no necesita esta meta.");
+
     /// <summary>
-    /// Mientras el personaje está en creación, la ficha sigue a los pasos de alomancia (Xavi, 26-10-2026): «brumoso:&lt;metal&gt;» es el
-    /// camino Brumoso con ese poder alomántico de origen camino; «nacido-de-la-bruma», ese camino (sus poderes son implícitos); «no» en
-    /// «¿Quieres ser alomante?», sin respuesta o un valor que no se entiende, ningún camino. Un kandra no puede ser nacido del metal
-    /// (L.18 / PDF 24) y la sangre koloss no puede ser nacido de la bruma (L.141 / PDF 147): en esos casos la ficha queda sin camino, sin
-    /// error, para no bloquear el guardado de los demás pasos (el director lo ve en la ficha). El camino inicial sigue siendo del director.
+    /// Mientras el personaje está en creación, la ficha sigue a los pasos de alomancia (Xavi, 26-10-2026), como el flujo «Al elegir camino»
+    /// de la ficha: «brumoso:&lt;metal&gt;» es el camino Brumoso con ese poder alomántico naciente de origen camino, la habilidad Alomancia
+    /// (con su grado gratuito si el camino es el inicial), el talento Ruptura de brumoso y la meta «Entrenar tu poder» (no con atium, que se
+    /// usa completo: L.177 / PDF 183); «nacido-de-la-bruma», ese camino con Alomancia y su Ruptura (sus poderes y su meta los pone el director:
+    /// la opción está oculta en la mesa). «no» en «¿Quieres ser alomante?», sin respuesta o un valor que no se entiende, ningún camino. Un
+    /// kandra no puede ser nacido del metal (L.18 / PDF 24) y la sangre koloss no puede ser nacido de la bruma (L.141 / PDF 147): en esos
+    /// casos la ficha queda sin camino, sin error, para no bloquear el guardado de los demás pasos (el director lo ve en la ficha).
     /// </summary>
     public FichaDeCreacion? FichaDeCreacion(IReadOnlyDictionary<string, string> datos, string ascendencia)
     {
-        var sinCamino = new FichaDeCreacion(string.Empty, []);
+        var sinCamino = new FichaDeCreacion(string.Empty, [], AlomanciaDeBrumoso, null, TalentosDeCaminos, null);
         if ((datos.GetValueOrDefault(ClaveAlomante) ?? "") == "no" || ascendencia == MistbornData.Kandra) return sinCamino;
         var eleccion = datos.GetValueOrDefault(ClaveAlomancia) ?? "";
         if (eleccion.StartsWith(PrefijoBrumoso, StringComparison.Ordinal))
         {
             var metal = eleccion[PrefijoBrumoso.Length..];
-            return MistbornData.Metales.Contains(metal)
-                ? new FichaDeCreacion("brumoso", [new PoderPersonaje { Arte = MistbornData.Alomancia, Metal = metal, Origen = "camino" }])
-                : sinCamino;
+            if (!MistbornData.Metales.Contains(metal)) return sinCamino;
+            var atium = metal == "atium";
+            var poder = new PoderPersonaje { Arte = MistbornData.Alomancia, Metal = metal, Origen = "camino", Completo = atium };
+            return new FichaDeCreacion("brumoso", [poder], AlomanciaDeBrumoso, TalentoBrumoso, TalentosDeCaminos, atium ? null : MetaEntrenar);
         }
         if (eleccion == "nacido-de-la-bruma" && ascendencia != MistbornData.SangreKoloss)
-            return new FichaDeCreacion("nacido-de-la-bruma", []);
+            return new FichaDeCreacion("nacido-de-la-bruma", [], AlomanciaDeNacido, TalentoNacidoDeLaBruma, TalentosDeCaminos, null);
         return sinCamino;
     }
 
