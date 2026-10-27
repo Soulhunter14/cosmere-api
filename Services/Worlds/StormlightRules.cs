@@ -58,6 +58,8 @@ public sealed class StormlightRules : IWorldRules
 
     public FichaDeCreacion? FichaDeCreacion(IReadOnlyDictionary<string, string> datos, string ascendencia) => null;
 
+    public MetaCreacion? MetaInicial(IReadOnlyList<string> legadoRespuestas) => null;
+
     public bool DesvioBonoSeAcumula => false;
 
     public void ValidarIdentidad(IdentidadPersonaje id)

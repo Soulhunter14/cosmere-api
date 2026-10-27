@@ -81,12 +81,19 @@ public class CreacionService(CosmereContext db, IWorldRulesProvider mundos) : IC
 
     public async Task<CreacionResponse> CompletarAsync(long campaignId, long characterId, bool completada, long userId)
     {
-        await GetGmCampaignAsync(campaignId, userId);
+        var campaign = await GetGmCampaignAsync(campaignId, userId);
         var personaje = await db.Characters
             .FirstOrDefaultAsync(c => c.Id == characterId && c.CampaignId == campaignId && !c.IsNpc)
             ?? throw new KeyNotFoundException("Character not found.");
         personaje.CreacionCompletada = completada;
         personaje.UpdatedAt = DateTime.UtcNow;
+        // Al dar por creado el personaje nace su primera meta, la que dicta la creación (IWorldRules.MetaInicial), una vez por título:
+        // deshacer «Personaje creado» no la borra (el director la quita en «Metas» si quiere) y volver a marcarlo no la duplica.
+        if (completada && mundos.Get(campaign.World).MetaInicial(personaje.LegadoRespuestas) is { } meta
+            && !await db.Metas.AnyAsync(m => m.CharacterId == characterId && m.Estado == "activa" && m.Titulo == meta.Titulo))
+        {
+            db.Metas.Add(new MetaEntity { CharacterId = characterId, Titulo = meta.Titulo, Descripcion = meta.Descripcion });
+        }
         await db.SaveChangesAsync();
         return await BuildAsync(campaignId, null);
     }

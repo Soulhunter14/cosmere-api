@@ -95,6 +95,35 @@ public sealed class MistbornRules : IWorldRules
     /// kandra no puede ser nacido del metal (L.18 / PDF 24) y la sangre koloss no puede ser nacido de la bruma (L.141 / PDF 147): en esos
     /// casos la ficha queda sin camino, sin error, para no bloquear el guardado de los demás pasos (el director lo ve en la ficha).
     /// </summary>
+    /// <summary>
+    /// La última respuesta del legado es la primera meta del personaje (Xavi, 27-10-2026): la pregunta pide un logro, un misterio o una
+    /// deuda, dicho como algo que se pueda tachar (Manual L.23 / PDF 29, «algo que intentes lograr»; El legado L.25 / PDF 28, «al menos
+    /// una meta personal con la que su PJ empiece»). Título: la primera frase, hasta <see cref="MaxTituloMeta"/> caracteres; descripción:
+    /// la respuesta entera si el título no la agota, y de dónde viene.
+    /// </summary>
+    public MetaCreacion? MetaInicial(IReadOnlyList<string> legadoRespuestas)
+    {
+        var indice = MistbornData.PreguntasLegado - 1;
+        var respuesta = indice < legadoRespuestas.Count ? legadoRespuestas[indice].Trim() : "";
+        if (respuesta == "") return null;
+        var titulo = PrimeraFrase(respuesta);
+        var descripcion = titulo == respuesta ? OrigenMetaInicial : respuesta + "\n\n" + OrigenMetaInicial;
+        return new MetaCreacion(titulo, descripcion);
+    }
+
+    private const int MaxTituloMeta = 120;
+    private const string OrigenMetaInicial = "Escrita en la creación del personaje: su primera meta.";
+
+    /// <summary>Hasta el primer punto, signo de cierre o salto de línea; si aun así pasa de <see cref="MaxTituloMeta"/>, se corta en una palabra entera con «…».</summary>
+    private static string PrimeraFrase(string texto)
+    {
+        var corte = texto.IndexOfAny(['.', '!', '?', '\n', '\r']);
+        var frase = (corte > 0 ? texto[..(corte + (texto[corte] is '!' or '?' ? 1 : 0))] : texto).Trim();
+        if (frase.Length <= MaxTituloMeta) return frase;
+        var espacio = frase.LastIndexOf(' ', MaxTituloMeta - 1);
+        return (espacio > 40 ? frase[..espacio] : frase[..(MaxTituloMeta - 1)]).TrimEnd() + "…";
+    }
+
     public FichaDeCreacion? FichaDeCreacion(IReadOnlyDictionary<string, string> datos, string ascendencia)
     {
         var sinCamino = new FichaDeCreacion(string.Empty, [], AlomanciaDeBrumoso, null, TalentosDeCaminos, null);
