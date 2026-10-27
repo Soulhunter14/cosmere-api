@@ -80,6 +80,13 @@ public interface IWorldRules
     /// </summary>
     FichaDeCreacion? FichaDeCreacion(IReadOnlyDictionary<string, string> datos, string ascendencia);
 
+    /// <summary>
+    /// La primera meta que la creación guiada dicta al marcar «Personaje creado» (27-10-2026): Nacidos de la bruma la saca de la última
+    /// respuesta del legado (un logro, un misterio o una deuda «que se pueda tachar»). <c>null</c> = ninguna: respuesta vacía, o el mundo
+    /// no deriva metas de sus pasos (Stormlight). La crea <c>CreacionService.CompletarAsync</c>, una vez por título.
+    /// </summary>
+    MetaCreacion? MetaInicial(IReadOnlyList<string> legadoRespuestas);
+
     /// <summary>Valida la identidad efectiva del personaje (§5.3); <see cref="ArgumentException"/> → 400.</summary>
     void ValidarIdentidad(IdentidadPersonaje id);
 
