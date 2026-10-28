@@ -52,22 +52,41 @@ public static class CreacionGuiada
         for (var i = 0; i < pasos.Count; i++)
         {
             var campo = pasos[i];
-            var (nuevo, actual) = campo switch
-            {
-                Nombre => (r.Name, c.Name),
-                Legado => (r.Legado, c.Legado),
-                Ascendencia => (r.Ascendencia, c.Ascendencia),
-                _ when campo.StartsWith(RespuestaLegado + ":", StringComparison.Ordinal) =>
-                    ValorRespuesta(r, c, int.Parse(campo[(RespuestaLegado.Length + 1)..])),
-                _ when campo.StartsWith(Dato + ":", StringComparison.Ordinal) => ValorDato(r, c, campo[(Dato.Length + 1)..]),
-                _ => (null, string.Empty),
-            };
+            var (nuevo, actual) = Valor(campo, r, c);
             if (!Responde(nuevo, actual)) continue;
             if (i >= pasoLiberado)
                 throw new ArgumentException($"El director aún no ha liberado el paso {i + 1} de la creación ({campo}).");
             if (Respondido(campo, actual) && !cambiables.Contains(campo))
                 throw new ArgumentException($"El director no permite cambiar el paso {i + 1} de la creación ({campo}) una vez respondido.");
         }
+    }
+
+    /// <summary>Valor que la petición pide para un paso (<c>null</c> = no lo toca) y el guardado en el personaje.</summary>
+    public static (string? nuevo, string actual) Valor(string campo, UpdateCharacterRequest r, CharacterEntity c) => campo switch
+    {
+        Nombre => (r.Name, c.Name),
+        Legado => (r.Legado, c.Legado),
+        Ascendencia => (r.Ascendencia, c.Ascendencia),
+        _ when campo.StartsWith(RespuestaLegado + ":", StringComparison.Ordinal) =>
+            ValorRespuesta(r, c, int.Parse(campo[(RespuestaLegado.Length + 1)..])),
+        _ when campo.StartsWith(Dato + ":", StringComparison.Ordinal) => ValorDato(r, c, campo[(Dato.Length + 1)..]),
+        _ => (null, string.Empty),
+    };
+
+    /// <summary>
+    /// Pasos a los que la petición da otro valor (respuesta nueva, cambiada o vaciada), con el valor que queda, para el registro de
+    /// respuestas (<c>RespuestasPersonaje</c>). Se calcula antes de aplicar la petición; el nombre provisional cuenta como vacío.
+    /// </summary>
+    public static List<(string campo, string valor)> Cambios(UpdateCharacterRequest r, CharacterEntity c, IReadOnlyList<string> pasos)
+    {
+        var cambios = new List<(string campo, string valor)>();
+        foreach (var campo in pasos)
+        {
+            var (nuevo, actual) = Valor(campo, r, c);
+            if (nuevo is null || nuevo == actual) continue;
+            cambios.Add((campo, campo == Nombre && EsNombreProvisional(nuevo) ? "" : nuevo.Trim()));
+        }
+        return cambios;
     }
 
     /// <summary>La petición da al campo un valor nuevo y no vacío (vaciarlo no es responder el paso).</summary>

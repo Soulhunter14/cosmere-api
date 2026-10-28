@@ -20,6 +20,8 @@ public class CreacionResponse
     /// todos los personajes. Aviso al elegir el trasfondo («Ya lo ha elegido…»), sin nombres: los personajes en creación son del director.
     /// </summary>
     public Dictionary<string, int> LegadosElegidos { get; set; } = new();
+    /// <summary>La sesión de creación de la campaña (la sesión 0 de la pantalla del director).</summary>
+    public SesionCreacionResponse Sesion { get; set; } = new();
     public List<CreacionPersonajeResponse> Personajes { get; set; } = [];
 }
 
@@ -37,4 +39,6 @@ public class CreacionPersonajeResponse
     /// <summary>«Personaje creado»: la ficha ya está en «Personajes».</summary>
     public bool Completada { get; set; }
     public DateTime UpdatedAt { get; set; }
+    /// <summary>El registro de respuestas: todas para el director; las de la creación para el jugador.</summary>
+    public List<RespuestaResponse> Respuestas { get; set; } = [];
 }

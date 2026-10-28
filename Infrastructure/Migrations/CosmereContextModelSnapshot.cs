@@ -158,6 +158,33 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("SesionCreacionEstado")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text")
+                        .HasDefaultValue("pendiente");
+
+                    b.Property<string>("SesionCreacionGuion")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text")
+                        .HasDefaultValue("");
+
+                    b.Property<DateTime?>("SesionCreacionIniciadaEn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("SesionCreacionMesaId")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text")
+                        .HasDefaultValue("");
+
+                    b.Property<DateTime?>("SesionCreacionPreparadaEn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("SesionCreacionTerminadaEn")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("World")
                         .IsRequired()
                         .ValueGeneratedOnAdd()
@@ -544,6 +571,12 @@ namespace Infrastructure.Migrations
                     b.Property<int>("Percepcion")
                         .HasColumnType("integer");
 
+                    b.Property<List<string>>("Pericias")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text[]")
+                        .HasDefaultValueSql("'{}'");
+
                     b.Property<int>("Perspicacia")
                         .HasColumnType("integer");
 
@@ -607,6 +640,72 @@ namespace Infrastructure.Migrations
                     b.HasIndex("OwnerId");
 
                     b.ToTable("Characters");
+                });
+
+            modelBuilder.Entity("Messages.Database.Entities.CharacterRespuestaEntity", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime?>("AplicadaEn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<long>("CharacterId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Clave")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Detalle")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text")
+                        .HasDefaultValue("{}");
+
+                    b.Property<string>("Origen")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Pregunta")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("RespondidaEn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Respuesta")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("SesionId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("SesionTitulo")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TipoPregunta")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TipoRespuesta")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CharacterId", "Clave")
+                        .IsUnique();
+
+                    b.ToTable("CharacterRespuestas");
                 });
 
             modelBuilder.Entity("Messages.Database.Entities.CrewSheetEntity", b =>
@@ -1504,6 +1603,17 @@ namespace Infrastructure.Migrations
                     b.Navigation("Campaign");
                 });
 
+            modelBuilder.Entity("Messages.Database.Entities.CharacterRespuestaEntity", b =>
+                {
+                    b.HasOne("Messages.Database.Entities.CharacterEntity", "Character")
+                        .WithMany("Respuestas")
+                        .HasForeignKey("CharacterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Character");
+                });
+
             modelBuilder.Entity("Messages.Database.Entities.CrewSheetEntity", b =>
                 {
                     b.HasOne("Messages.Database.Entities.CampaignEntity", "Campaign")
@@ -1715,6 +1825,8 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Messages.Database.Entities.CharacterEntity", b =>
                 {
                     b.Navigation("Metas");
+
+                    b.Navigation("Respuestas");
                 });
 
             modelBuilder.Entity("Messages.Database.Entities.ProposalDateEntity", b =>

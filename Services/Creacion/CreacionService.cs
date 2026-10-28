@@ -1,4 +1,5 @@
 using Infrastructure.Data;
+using Messages.Creacion.In;
 using Messages.Creacion.Out;
 using Messages.Database.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -98,6 +99,15 @@ public class CreacionService(CosmereContext db, IWorldRulesProvider mundos) : IC
         return await BuildAsync(campaignId, null);
     }
 
+    public async Task<CreacionResponse> SesionAsync(long campaignId, string accion, SesionCreacionRequest? request, long userId)
+    {
+        var campaign = await GetGmCampaignAsync(campaignId, userId);
+        PasosDe(campaign);
+        SesionCreacion.Aplicar(campaign, accion, request, DateTime.UtcNow);
+        await db.SaveChangesAsync();
+        return await BuildAsync(campaignId, null);
+    }
+
     /// <summary>El estado: todos los personajes (director) o solo los de <paramref name="soloDe"/> (jugador).</summary>
     private async Task<CreacionResponse> BuildAsync(long campaignId, long? soloDe)
     {
@@ -113,6 +123,12 @@ public class CreacionService(CosmereContext db, IWorldRulesProvider mundos) : IC
         if (soloDe is not null) deOtros = deOtros.Where(c => c.OwnerId != soloDe);
         var legadosElegidos = await deOtros.GroupBy(c => c.Legado).Select(g => new { g.Key, N = g.Count() }).ToDictionaryAsync(x => x.Key, x => x.N);
 
+        // El registro de respuestas de cada personaje: todo para el director; para un jugador, solo lo respondido en la creación.
+        var ids = personajes.Select(c => c.Id).ToList();
+        List<CharacterRespuestaEntity> respuestas = ids.Count == 0 ? [] : await db.CharacterRespuestas.AsNoTracking()
+            .Where(r => ids.Contains(r.CharacterId) && (soloDe == null || r.Origen == RespuestasPersonaje.OrigenCreacion))
+            .OrderBy(r => r.RespondidaEn).ThenBy(r => r.Id).ToListAsync();
+
         var ownerIds = personajes.Where(c => c.OwnerId is not null).Select(c => c.OwnerId!.Value).Distinct().ToList();
         var nombres = ownerIds.Count == 0
             ? new Dictionary<long, string>()
@@ -123,6 +139,7 @@ public class CreacionService(CosmereContext db, IWorldRulesProvider mundos) : IC
             Paso = campaign.CreacionPaso,
             Pasos = [.. pasos],
             Iniciada = campaign.IniciadaEn is not null,
+            Sesion = SesionCreacion.Respuesta(campaign),
             Cambiables = [.. campaign.CreacionCambiables],
             LegadosElegidos = legadosElegidos,
             Personajes = personajes.Select(c => new CreacionPersonajeResponse
@@ -137,6 +154,7 @@ public class CreacionService(CosmereContext db, IWorldRulesProvider mundos) : IC
                 CreacionDatos = CharacterJson.ParseCreacionDatos(c.CreacionDatos),
                 Completada = c.CreacionCompletada,
                 UpdatedAt = c.UpdatedAt,
+                Respuestas = respuestas.Where(r => r.CharacterId == c.Id).Select(RespuestasPersonaje.MapToResponse).ToList(),
             }).ToList(),
         };
     }

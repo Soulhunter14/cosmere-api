@@ -24,6 +24,17 @@ public class CampaignEntity
     /// Fuera de esta lista un jugador no cambia un paso que ya respondió (vaciarlo sí puede). El director lo conmuta desde «Creación».
     /// </summary>
     public List<string> CreacionCambiables { get; set; } = [];
+    /// <summary>
+    /// Sesión de creación (la sesión 0 de la pantalla del director, una por campaña): <c>pendiente</c> → <c>preparando</c> → <c>en-curso</c> →
+    /// <c>jugada</c> (<c>SesionCreacionEstados</c>; transiciones en <c>SesionCreacion</c>). Mientras está en curso, las decisiones que la pantalla
+    /// guarda en los personajes son de la creación. Guion y sesión de mesa con que se jugó, para la trazabilidad.
+    /// </summary>
+    public string SesionCreacionEstado { get; set; } = Creacion.SesionCreacionEstados.Pendiente;
+    public DateTime? SesionCreacionPreparadaEn { get; set; }
+    public DateTime? SesionCreacionIniciadaEn { get; set; }
+    public DateTime? SesionCreacionTerminadaEn { get; set; }
+    public string SesionCreacionGuion { get; set; } = string.Empty;
+    public string SesionCreacionMesaId { get; set; } = string.Empty;
 
     public UserEntity GmUser { get; set; } = null!;
     public ICollection<CampaignMemberEntity> Members { get; set; } = [];

@@ -105,6 +105,8 @@ public class UpdateCharacterRequest
     public string? CaminoInicial { get; set; }
     public List<PoderPersonaje>? Poderes { get; set; }
     public List<string>? Bendiciones { get; set; }
+    // Pericias de la ficha: null = conservar las guardadas; se guardan sin vacíos ni repetidas.
+    public List<string>? Pericias { get; set; }
 
     // Hemalurgia (T49a): null = conservar los clavos guardados. Los clavos son una recompensa del DJ (L.288 / PDF 294): en Nacidos
     // de la bruma solo los escribe el director (el servidor ignora los de un jugador no GM) y Stormlight no admite ninguno (400 si
@@ -118,4 +120,7 @@ public class UpdateCharacterRequest
     public List<string>? LegadoRespuestas { get; set; }
     // Datos de los pasos de la creación guiada que no son campos de la ficha (clave → valor; p. ej. «alomancia»): null = conservar los guardados.
     public Dictionary<string, string>? CreacionDatos { get; set; }
+    // Creación guiada: la pregunta tal como la vio el jugador en cada paso que esta petición responde, para el registro de respuestas
+    // (RespuestasPersonaje). Sin ella, el registro guarda el id del paso como pregunta. Fuera de la creación guiada se ignora.
+    public List<RespuestaPasoRequest>? Respuestas { get; set; }
 }

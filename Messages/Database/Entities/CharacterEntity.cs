@@ -26,6 +26,7 @@ public class CharacterEntity
     public string Poderes { get; set; } = "[]";                 // JSON (camelCase) de List<PoderPersonaje>
     public string Recursos { get; set; } = "{}";                // JSON de Dictionary<string, decimal>
     public List<string> Bendiciones { get; set; } = [];         // ids de Bendición kandra
+    public List<string> Pericias { get; set; } = [];            // pericias de la ficha (culturales, de oficio…), texto libre; las de la sesión de creación llegan con «Aplicar a la ficha»
     public string Clavos { get; set; } = "[]";                  // JSON (camelCase) de List<ClavoHemalurgico> (hemalurgia, T49a)
     public string Legado { get; set; } = string.Empty;          // id de legado de la aventura «El legado de los nacidos de la bruma»; "" = sin legado
     public List<string> LegadoRespuestas { get; set; } = [];    // respuestas a las preguntas del legado, en su orden (tres en la Era 1)
@@ -112,4 +113,6 @@ public class CharacterEntity
 
     public CampaignEntity Campaign { get; set; } = null!;
     public List<MetaEntity> Metas { get; set; } = [];
+    /// <summary>El registro de preguntas y respuestas (creación guiada y decisiones de la mesa); ver <c>CharacterRespuestaEntity</c>.</summary>
+    public List<CharacterRespuestaEntity> Respuestas { get; set; } = [];
 }
