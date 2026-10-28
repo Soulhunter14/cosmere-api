@@ -362,5 +362,7 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
         modelBuilder.Entity<CampaignEntity>().Property(c => c.SesionCreacionEstado).HasDefaultValue(Messages.Creacion.SesionCreacionEstados.Pendiente);
         modelBuilder.Entity<CampaignEntity>().Property(c => c.SesionCreacionGuion).HasDefaultValue("");
         modelBuilder.Entity<CampaignEntity>().Property(c => c.SesionCreacionMesaId).HasDefaultValue("");
+        // Pericias (AddCharacterPericias): existing sheets have none.
+        modelBuilder.Entity<CharacterEntity>().Property(c => c.Pericias).HasDefaultValueSql("'{}'");
     }
 }

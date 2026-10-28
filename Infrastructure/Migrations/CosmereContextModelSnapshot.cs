@@ -571,6 +571,12 @@ namespace Infrastructure.Migrations
                     b.Property<int>("Percepcion")
                         .HasColumnType("integer");
 
+                    b.Property<List<string>>("Pericias")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text[]")
+                        .HasDefaultValueSql("'{}'");
+
                     b.Property<int>("Perspicacia")
                         .HasColumnType("integer");
 

@@ -96,6 +96,38 @@ public class RespuestasService(CosmereContext db) : IRespuestasService
             .Select(r => RespuestasPersonaje.MapToResponse(r)).ToListAsync();
     }
 
+    public async Task<AplicarRespuestasResponse> AplicarAsync(long campaignId, long characterId, AplicarRespuestasRequest request, long userId)
+    {
+        var esGm = await db.CampaignMembers.AnyAsync(m => m.CampaignId == campaignId && m.UserId == userId && m.Role == "gm");
+        if (!esGm) throw new UnauthorizedAccessException("Only the GM can perform this action.");
+        var personaje = await db.Characters.FirstOrDefaultAsync(c => c.Id == characterId && c.CampaignId == campaignId && !c.IsNpc)
+            ?? throw new KeyNotFoundException("Character not found.");
+        var claves = request.Claves.Select(ClaveDecision).Distinct().ToList();
+        if (claves.Count == 0) throw new ArgumentException("No hay decisiones que aplicar.");
+        var filas = await db.CharacterRespuestas
+            .Where(r => r.CharacterId == characterId && r.TipoPregunta == RespuestasPersonaje.TipoDecision && claves.Contains(r.Clave) && r.AplicadaEn == null)
+            .ToListAsync();
+        if (filas.Count == 0) throw new InvalidOperationException("Esas decisiones ya están aplicadas o no existen.");
+
+        var ahora = DateTime.UtcNow;
+        var aplicado = new List<string>();
+        var ignorado = new List<string>();
+        AplicadorFicha.Aplicar(personaje, request, aplicado, ignorado);
+        foreach (var titulo in request.Metas.Select(m => m.Trim()).Where(m => m != "").Distinct())
+        {
+            if (await db.Metas.AnyAsync(m => m.CharacterId == characterId && m.Estado == "activa" && m.Titulo == titulo)) continue;
+            db.Metas.Add(new MetaEntity { CharacterId = characterId, Titulo = titulo, Descripcion = "De la sesión de creación." });
+            aplicado.Add($"Meta «{titulo}»");
+        }
+        foreach (var fila in filas) fila.AplicadaEn = ahora;
+        personaje.UpdatedAt = ahora;
+        await db.SaveChangesAsync();
+
+        var respuestas = await Ordenadas(db.CharacterRespuestas.AsNoTracking().Where(r => r.CharacterId == characterId))
+            .Select(r => RespuestasPersonaje.MapToResponse(r)).ToListAsync();
+        return new AplicarRespuestasResponse { Respuestas = respuestas, Aplicado = aplicado, Ignorado = ignorado };
+    }
+
     private static string ClaveDecision(string clave)
     {
         var c = (clave ?? "").Trim();

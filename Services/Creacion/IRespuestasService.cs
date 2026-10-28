@@ -14,4 +14,10 @@ public interface IRespuestasService
     /// de opción vuelven a quedar sin aplicar. Con la sesión de creación en curso nacen con origen <c>sesion-creacion</c>.
     /// </summary>
     Task<List<RespuestaResponse>> PutDecisionesAsync(long campaignId, long characterId, DecisionesPersonajeRequest request, long userId);
+
+    /// <summary>
+    /// «Aplicar a la ficha» (director): escribe en la ficha lo que dan las decisiones de las claves pedidas que aún no estaban aplicadas
+    /// (<c>AplicadorFicha</c>), crea sus metas y las marca como aplicadas; 409 si ninguna estaba pendiente.
+    /// </summary>
+    Task<AplicarRespuestasResponse> AplicarAsync(long campaignId, long characterId, AplicarRespuestasRequest request, long userId);
 }

@@ -357,6 +357,14 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         if (r.CaminoMetal is not null) c.CaminoMetal = r.CaminoMetal;
         if (r.CaminoInicial is not null) c.CaminoInicial = r.CaminoInicial;
         if (r.Bendiciones is not null) c.Bendiciones = r.Bendiciones;
+        if (r.Pericias is not null)
+        {
+            // Sin vacíos ni repetidas («Luthadel» y «luthadel» son la misma), en el orden en que llegan.
+            var pericias = new List<string>();
+            foreach (var p in r.Pericias.Select(x => x.Trim()).Where(x => x != ""))
+                if (!pericias.Any(x => AplicadorFicha.Igual(x, p))) pericias.Add(p);
+            c.Pericias = pericias;
+        }
         if (r.Poderes is not null)
             c.Poderes = CharacterJson.SerializarPoderes(CharacterJson.FusionarPoderes(CharacterJson.ParsePoderes(c.Poderes), r.Poderes));
         if (r.Clavos is not null) c.Clavos = CharacterJson.SerializarClavos(r.Clavos);
@@ -588,7 +596,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             // ── Nacidos de la bruma ───────────────────────────────────────────
             CaminoMetal = c.CaminoMetal, CaminoInicial = c.CaminoInicial, Legado = c.Legado,
             LegadoRespuestas = c.LegadoRespuestas,
-            Poderes = poderes, Recursos = recursos, Bendiciones = c.Bendiciones,
+            Poderes = poderes, Recursos = recursos, Bendiciones = c.Bendiciones, Pericias = c.Pericias,
             DerivadosSet = world.Derivar(c, talentos, poderes, fb),
             BonosAtributos = fb.ComoDiccionario(),
             Clavos = CharacterJson.ParseClavos(c.Clavos),

@@ -30,4 +30,12 @@ public class RespuestasController(IRespuestasService respuestas, IHubContext<Cam
         await hubContext.Clients.Group(CampaignHub.CampaignGroup(campaignId)).SendAsync("CreacionUpdated", new { campaignId });
         return Ok(lista);
     }
+
+    [HttpPost("aplicar")]
+    public async Task<ActionResult<AplicarRespuestasResponse>> Aplicar(long campaignId, long characterId, [FromBody] AplicarRespuestasRequest request)
+    {
+        var resultado = await respuestas.AplicarAsync(campaignId, characterId, request, JwtHelper.GetUserId(User));
+        await hubContext.Clients.Group(CampaignHub.CampaignGroup(campaignId)).SendAsync("CreacionUpdated", new { campaignId });
+        return Ok(resultado);
+    }
 }

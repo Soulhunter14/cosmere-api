@@ -103,6 +103,8 @@ public class CharacterResponse
     public List<PoderPersonaje> Poderes { get; set; } = [];
     public Dictionary<string, decimal> Recursos { get; set; } = new();
     public List<string> Bendiciones { get; set; } = [];
+    /// <summary>Pericias de la ficha (texto libre); <c>[]</c> sin ninguna.</summary>
+    public List<string> Pericias { get; set; } = [];
     /// <summary>Derivados propios del mundo (<c>IWorldRules.Derivar</c>, desde T12): <c>alomancia.limite</c>, <c>poder.cobre.cargasMax</c>…</summary>
     public Dictionary<string, StatDesglose> DerivadosSet { get; set; } = new();
     /// <summary>Bonos de atributo sin ceros (claves <c>fuerza</c> … <c>presencia</c>; <c>IWorldRules.BonosAtributos</c>, desde T12).</summary>
