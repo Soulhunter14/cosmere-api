@@ -97,6 +97,7 @@ public static class RespuestasPersonaje
         SesionTitulo = r.SesionTitulo,
         RespondidaEn = r.RespondidaEn,
         AplicadaEn = r.AplicadaEn,
+        Aplicado = AplicadorFicha.LeerAplicado(r.Aplicado)?.Hecho,
     };
 
     /// <summary>El JSON guardado como objeto; <c>{}</c> si está vacío o no es JSON válido.</summary>

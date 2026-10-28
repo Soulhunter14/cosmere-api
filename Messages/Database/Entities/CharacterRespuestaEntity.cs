@@ -31,8 +31,10 @@ public class CharacterRespuestaEntity
     public string SesionId { get; set; } = string.Empty;
     public string SesionTitulo { get; set; } = string.Empty;
     public DateTime RespondidaEn { get; set; } = DateTime.UtcNow;
-    /// <summary>Cuándo se aplicó a la ficha lo que da la respuesta; <c>null</c> = aún no (vuelve a <c>null</c> si la respuesta cambia).</summary>
+    /// <summary>Cuándo se aplicó a la ficha lo que da la respuesta; <c>null</c> = aún no (vuelve a <c>null</c> si la respuesta cambia o se deshace).</summary>
     public DateTime? AplicadaEn { get; set; }
+    /// <summary>JSON con lo pedido y lo hecho al aplicarla (<c>AplicadorFicha.RegistroAplicado</c>), para deshacerlo exactamente; <c>{}</c> sin aplicar.</summary>
+    public string Aplicado { get; set; } = "{}";
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     public CharacterEntity Character { get; set; } = null!;
