@@ -358,6 +358,8 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
             .HasForeignKey(r => r.CharacterId)
             .OnDelete(DeleteBehavior.Cascade);
         modelBuilder.Entity<CharacterRespuestaEntity>().Property(r => r.Detalle).HasDefaultValue("{}");
+        // Lo hecho al aplicar (AddRespuestaAplicado): existing rows have nothing recorded.
+        modelBuilder.Entity<CharacterRespuestaEntity>().Property(r => r.Aplicado).HasDefaultValue("{}");
         // Sesión de creación (misma migración): las campañas existentes la tienen pendiente.
         modelBuilder.Entity<CampaignEntity>().Property(c => c.SesionCreacionEstado).HasDefaultValue(Messages.Creacion.SesionCreacionEstados.Pendiente);
         modelBuilder.Entity<CampaignEntity>().Property(c => c.SesionCreacionGuion).HasDefaultValue("");

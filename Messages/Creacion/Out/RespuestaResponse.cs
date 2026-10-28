@@ -19,4 +19,6 @@ public class RespuestaResponse
     public string SesionTitulo { get; set; } = string.Empty;
     public DateTime RespondidaEn { get; set; }
     public DateTime? AplicadaEn { get; set; }
+    /// <summary>Lo que de verdad escribió en la ficha al aplicarse (claves = columnas de la ficha); null sin aplicar.</summary>
+    public EfectosFicha? Aplicado { get; set; }
 }

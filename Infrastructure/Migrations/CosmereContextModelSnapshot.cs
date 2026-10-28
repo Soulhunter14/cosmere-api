@@ -653,6 +653,12 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("AplicadaEn")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<string>("Aplicado")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text")
+                        .HasDefaultValue("{}");
+
                     b.Property<long>("CharacterId")
                         .HasColumnType("bigint");
 
