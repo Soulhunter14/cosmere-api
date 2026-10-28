@@ -118,4 +118,7 @@ public class UpdateCharacterRequest
     public List<string>? LegadoRespuestas { get; set; }
     // Datos de los pasos de la creación guiada que no son campos de la ficha (clave → valor; p. ej. «alomancia»): null = conservar los guardados.
     public Dictionary<string, string>? CreacionDatos { get; set; }
+    // Creación guiada: la pregunta tal como la vio el jugador en cada paso que esta petición responde, para el registro de respuestas
+    // (RespuestasPersonaje). Sin ella, el registro guarda el id del paso como pregunta. Fuera de la creación guiada se ignora.
+    public List<RespuestaPasoRequest>? Respuestas { get; set; }
 }

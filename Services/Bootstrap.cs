@@ -43,6 +43,7 @@ public static class Bootstrap
         services.AddScoped<IGmScreenService, GmScreenService>();
         services.AddScoped<IMesaService, MesaService>();
         services.AddScoped<ICreacionService, CreacionService>();
+        services.AddScoped<IRespuestasService, RespuestasService>();
         services.AddScoped<IBookService, BookService>();
         services.AddScoped<ICrewSheetService, CrewSheetService>();
         services.AddScoped<IEncyclopediaService, EncyclopediaService>();

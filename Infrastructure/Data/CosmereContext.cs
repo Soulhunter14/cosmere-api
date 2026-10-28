@@ -11,6 +11,7 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
     public DbSet<CampaignMemberEntity> CampaignMembers { get; set; }
     public DbSet<CharacterEntity> Characters { get; set; }
     public DbSet<MetaEntity> Metas { get; set; }
+    public DbSet<CharacterRespuestaEntity> CharacterRespuestas { get; set; }
     public DbSet<GlobalNpcEntity> GlobalNpcs { get; set; }
     public DbSet<NpcNoteEntity> NpcNotes { get; set; }
     public DbSet<SessionEntity> Sessions { get; set; }
@@ -347,5 +348,19 @@ public class CosmereContext(DbContextOptions<CosmereContext> options) : DbContex
             .HasForeignKey(i => i.CampaignId)
             .OnDelete(DeleteBehavior.Cascade);
         modelBuilder.Entity<CampaignImageEntity>().Property(i => i.Name).HasMaxLength(120);
+
+        // Respuestas del personaje (AddSesionCreacionYRespuestas): el registro genérico de preguntas y respuestas de la creación guiada
+        // y de las decisiones de la mesa, una fila por pregunta y personaje (clave única), borradas con él.
+        modelBuilder.Entity<CharacterRespuestaEntity>().HasIndex(r => new { r.CharacterId, r.Clave }).IsUnique();
+        modelBuilder.Entity<CharacterRespuestaEntity>()
+            .HasOne(r => r.Character)
+            .WithMany(c => c.Respuestas)
+            .HasForeignKey(r => r.CharacterId)
+            .OnDelete(DeleteBehavior.Cascade);
+        modelBuilder.Entity<CharacterRespuestaEntity>().Property(r => r.Detalle).HasDefaultValue("{}");
+        // Sesión de creación (misma migración): las campañas existentes la tienen pendiente.
+        modelBuilder.Entity<CampaignEntity>().Property(c => c.SesionCreacionEstado).HasDefaultValue(Messages.Creacion.SesionCreacionEstados.Pendiente);
+        modelBuilder.Entity<CampaignEntity>().Property(c => c.SesionCreacionGuion).HasDefaultValue("");
+        modelBuilder.Entity<CampaignEntity>().Property(c => c.SesionCreacionMesaId).HasDefaultValue("");
     }
 }

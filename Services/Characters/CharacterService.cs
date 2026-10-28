@@ -107,13 +107,13 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             throw new UnauthorizedAccessException("You can only edit your own character.");
         MuertePersonaje.EnsureVivo(character);
 
+        var campana = await db.Campaigns.Where(c => c.Id == campaignId)
+            .Select(c => new { c.IniciadaEn, c.CreacionPaso, c.CreacionCambiables }).FirstAsync();
+        // Creación guiada (CreacionGuiada): mientras el personaje la recorre, el jugador solo responde los pasos liberados y solo cambia
+        // los respondidos que el director permite; el nombre es uno de ellos. Fuera de ella el núcleo conserva el nombre, como siempre.
+        var enCreacion = !character.CreacionCompletada && campana.IniciadaEn is null && world.PasosCreacion.Count > 0;
         if (!isGm)
         {
-            var campana = await db.Campaigns.Where(c => c.Id == campaignId)
-                .Select(c => new { c.IniciadaEn, c.CreacionPaso, c.CreacionCambiables }).FirstAsync();
-            // Creación guiada (CreacionGuiada): mientras el personaje la recorre, el jugador solo responde los pasos liberados y solo cambia
-            // los respondidos que el director permite; el nombre es uno de ellos. Fuera de ella el núcleo conserva el nombre, como siempre.
-            var enCreacion = !character.CreacionCompletada && campana.IniciadaEn is null && world.PasosCreacion.Count > 0;
             if (enCreacion)
                 CreacionGuiada.ValidarCambios(request, character, world.PasosCreacion, campana.CreacionPaso, campana.CreacionCambiables);
             else
@@ -130,8 +130,7 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
         // ya en la petición, para que la validación de identidad vea lo dictado (un kandra deja de ser brumoso sin 400); el flujo entero se
         // aplica sobre la entidad después de la petición (CreacionFicha), también para el director, y el bloqueo no-GM no lo deshace.
         FichaDeCreacion? dictado = null;
-        if (!character.CreacionCompletada && world.PasosCreacion.Count > 0
-            && await db.Campaigns.Where(c => c.Id == campaignId).Select(c => c.IniciadaEn).FirstAsync() is null)
+        if (enCreacion)
         {
             var datos = request.CreacionDatos ?? CharacterJson.ParseCreacionDatos(character.CreacionDatos);
             dictado = world.FichaDeCreacion(datos, request.Ascendencia);
@@ -165,9 +164,15 @@ public class CharacterService(CosmereContext db, IWorldRulesProvider reglas) : I
             await db.Metas.CountAsync(m => m.CharacterId == characterId && metaIds.Contains(m.Id)) != metaIds.Count)
             throw new ArgumentException("Invalid metaId in poderes: the meta must belong to this character.");
 
+        // Registro de respuestas de la creación (RespuestasPersonaje): los pasos que esta petición cambia, vistos antes de aplicarla.
+        List<(string campo, string valor)> cambiosDePasos = enCreacion ? CreacionGuiada.Cambios(request, character, world.PasosCreacion) : [];
+        List<CharacterRespuestaEntity> filasDePasos = cambiosDePasos.Count == 0 ? []
+            : await db.CharacterRespuestas.Where(r => r.CharacterId == characterId && r.TipoPregunta == RespuestasPersonaje.TipoPaso).ToListAsync();
+
         ApplyUpdate(character, request);
         if (dictado is not null) await CreacionFicha.AplicarAsync(db, character, dictado);
         character.UpdatedAt = DateTime.UtcNow;
+        RespuestasPersonaje.RegistrarPasos(db, characterId, filasDePasos, cambiosDePasos, request.Respuestas, character.UpdatedAt);
         await db.SaveChangesAsync();
         return MapToResponse(character, world);
     }

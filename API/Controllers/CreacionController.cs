@@ -44,6 +44,18 @@ public class CreacionController(ICreacionService creacion, IHubContext<CampaignH
     public async Task<ActionResult<CreacionResponse>> Deshacer(long campaignId, long characterId)
         => Ok(await Avisar(campaignId, await creacion.CompletarAsync(campaignId, characterId, false, JwtHelper.GetUserId(User))));
 
+    [HttpPost("sesion/preparar")]
+    public async Task<ActionResult<CreacionResponse>> PrepararSesion(long campaignId)
+        => Ok(await Avisar(campaignId, await creacion.SesionAsync(campaignId, SesionCreacion.Preparar, null, JwtHelper.GetUserId(User))));
+
+    [HttpPost("sesion/iniciar")]
+    public async Task<ActionResult<CreacionResponse>> IniciarSesion(long campaignId, [FromBody] SesionCreacionRequest? request)
+        => Ok(await Avisar(campaignId, await creacion.SesionAsync(campaignId, SesionCreacion.Iniciar, request, JwtHelper.GetUserId(User))));
+
+    [HttpPost("sesion/terminar")]
+    public async Task<ActionResult<CreacionResponse>> TerminarSesion(long campaignId)
+        => Ok(await Avisar(campaignId, await creacion.SesionAsync(campaignId, SesionCreacion.Terminar, null, JwtHelper.GetUserId(User))));
+
     private async Task<CreacionResponse> Avisar(long campaignId, CreacionResponse estado)
     {
         await hubContext.Clients.Group(CampaignHub.CampaignGroup(campaignId)).SendAsync("CreacionUpdated", new { campaignId });

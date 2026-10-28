@@ -112,4 +112,6 @@ public class CharacterEntity
 
     public CampaignEntity Campaign { get; set; } = null!;
     public List<MetaEntity> Metas { get; set; } = [];
+    /// <summary>El registro de preguntas y respuestas (creación guiada y decisiones de la mesa); ver <c>CharacterRespuestaEntity</c>.</summary>
+    public List<CharacterRespuestaEntity> Respuestas { get; set; } = [];
 }
