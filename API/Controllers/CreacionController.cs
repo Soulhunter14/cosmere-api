@@ -56,6 +56,10 @@ public class CreacionController(ICreacionService creacion, IHubContext<CampaignH
     public async Task<ActionResult<CreacionResponse>> TerminarSesion(long campaignId)
         => Ok(await Avisar(campaignId, await creacion.SesionAsync(campaignId, SesionCreacion.Terminar, null, JwtHelper.GetUserId(User))));
 
+    [HttpPost("sesion/volver")]
+    public async Task<ActionResult<CreacionResponse>> VolverSesion(long campaignId)
+        => Ok(await Avisar(campaignId, await creacion.SesionAsync(campaignId, SesionCreacion.Volver, null, JwtHelper.GetUserId(User))));
+
     private async Task<CreacionResponse> Avisar(long campaignId, CreacionResponse estado)
     {
         await hubContext.Clients.Group(CampaignHub.CampaignGroup(campaignId)).SendAsync("CreacionUpdated", new { campaignId });

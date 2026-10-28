@@ -20,6 +20,6 @@ public interface ICreacionService
 
     /// <summary>«Personaje creado» (o deshacerlo) (director).</summary>
     Task<CreacionResponse> CompletarAsync(long campaignId, long characterId, bool completada, long userId);
-    /// <summary>La sesión de creación: <c>preparar</c>, <c>iniciar</c> (con la sesión de mesa y el guion) o <c>terminar</c> (director); 409 si el estado no lo admite.</summary>
+    /// <summary>La sesión de creación: <c>preparar</c>, <c>iniciar</c> (con la sesión de mesa y el guion), <c>terminar</c> o <c>volver</c> a la preparación (director); 409 si el estado no lo admite.</summary>
     Task<CreacionResponse> SesionAsync(long campaignId, string accion, SesionCreacionRequest? request, long userId);
 }
